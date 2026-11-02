@@ -83,7 +83,7 @@
       "stem": "A maker of accessories for games consoles cuts its product development lead time from nine months to three. A new console is announced, and none of its rivals can bring out accessories for it for six months. The main advantage to the firm is that it can",
       "options": {
         "A": "Charge a high price until its rivals' products arrive.",
-        "B": "Charge a low price, as its development costs nothing.",
+        "B": "Charge a low price, as its development costs have fallen.",
         "C": "Keep its rivals out of this market for good.",
         "D": "Launch without the risk of faults that rushing brings."
       },
@@ -91,7 +91,7 @@
       "model": {
         "working": "A short lead time means the firm launches before its rivals → no direct competition at first → it can charge a <strong>high price</strong> (price skimming) → higher revenue and profit until rivals arrive.<br />Here that window is about three months: the firm launches after three months, and its rivals after six.",
         "distractors": {
-          "B": "A shorter lead time cuts development costs, because designers are paid for fewer months, but it does not make them zero. And with no rivals yet, there is no need to price low.",
+          "B": "A shorter lead time does cut development costs, but with no rivals yet there is no need to price low.",
           "C": "The advantage lasts only until rivals' products arrive. A short lead time gives a head start, not a permanent monopoly.",
           "D": "Rushing a product out <strong>raises</strong> the risk of faults. That is a cost of short lead times, not an advantage."
         }
@@ -212,9 +212,9 @@
       },
       "answer": "A",
       "model": {
-        "working": "Lower costs give a firm an advantage only if it does better than its rivals. Here every firm cut its costs by the same amount and passed the saving on in lower prices, so no firm wins sales from another: market shares are unchanged, and no firm's margin is wider than before.<br />The saving has passed to <strong>consumers</strong> as lower prices.",
+        "working": "Lower costs give a firm an advantage only if it does better than its rivals. Here every firm cut its costs by the same percentage and passed the saving on in lower prices, so no firm wins sales from another: market shares are unchanged, and no firm's margin is wider than before.<br />The saving has passed to <strong>consumers</strong> as lower prices.",
         "distractors": {
-          "B": "Market shares are unchanged, as the stem says. When every firm cuts its price by the same amount, none wins sales from the others.",
+          "B": "Market shares are unchanged, as the stem says. When every firm cuts its price by the same percentage, none wins sales from the others.",
           "C": "Lean methods are well known, and every firm here has used them, so none has a lead. An advantage lasts only if a firm uses the methods better than its rivals do.",
           "D": "Each firm passed its whole cost saving on as a lower price, so its margin is no wider than before."
         }

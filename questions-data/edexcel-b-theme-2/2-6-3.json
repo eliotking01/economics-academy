@@ -98,17 +98,17 @@
       "stem": "A government puts a carbon tax on cement made in the UK, but not on imported cement. Several UK cement makers close their kilns and supply their customers from their own plants abroad, where there is no such tax. The most likely result is",
       "options": {
         "A": "Fewer UK jobs, and a large fall in global emissions.",
-        "B": "Fewer UK jobs, and little fall in global emissions.",
+        "B": "Fewer UK jobs, and little or no fall in global emissions.",
         "C": "No change in UK jobs, and a large fall in global emissions.",
-        "D": "No change in UK jobs, and little fall in global emissions."
+        "D": "No change in UK jobs, and little or no fall in global emissions."
       },
       "answer": "B",
       "model": {
-        "working": "The tax is meant to cut emissions by making polluting production costlier.<br />Here the firms avoid it by moving production abroad → UK kilns close → <strong>UK jobs are lost</strong>.<br />The same cement is still made, only in another country, and then shipped to the UK. UK emissions fall, but <strong>global emissions barely fall</strong>.<br />This is an <strong>unintended consequence</strong>: production moves to countries with looser rules, and the policy hurts another objective without solving its own problem.",
+        "working": "The tax is meant to cut emissions by making polluting production costlier.<br />Here the firms avoid it by moving production abroad → UK kilns close → <strong>UK jobs are lost</strong>.<br />The same cement is still made, only in another country, and then shipped to the UK. UK emissions fall, but <strong>global emissions fall little, if at all</strong>, once shipping is counted.<br />This is an <strong>unintended consequence</strong>: production moves to countries with looser rules, and the policy hurts another objective without solving its own problem.",
         "distractors": {
           "A": "UK emissions fall, but the cement is still made abroad and shipped in. The emissions have moved, not disappeared.",
           "C": "Closing UK kilns means fewer jobs in the UK. And the emissions move abroad rather than falling.",
-          "D": "Global emissions barely fall, but the kilns that close were employing UK workers, so UK jobs are lost."
+          "D": "Global emissions fall little, if at all, but the kilns that close were employing UK workers, so UK jobs are lost."
         }
       }
     },
@@ -119,18 +119,18 @@
       "sketch": false,
       "stem": "Inflation is well above its 2% target, and the Bank of England raises Bank Rate to bring it down. In the same month, the government cuts income tax and raises its own spending. Compared with the rate rise on its own, inflation is most likely to fall",
       "options": {
-        "A": "Faster, as both policies reduce demand.",
-        "B": "Faster, as lower taxes cut firms' costs.",
-        "C": "More slowly, as fiscal policy adds to demand.",
-        "D": "At the same pace, as fiscal policy has no effect."
+        "A": "At the same pace, as fiscal policy has no effect.",
+        "B": "Faster, as both policies reduce demand.",
+        "C": "Faster, as lower taxes cut firms' costs.",
+        "D": "More slowly, as fiscal policy adds to demand."
       },
-      "answer": "C",
+      "answer": "D",
       "model": {
         "working": "The rate rise lowers aggregate demand: borrowing costs more and saving pays more, so households and firms spend less.<br />The tax cut and the extra government spending are <strong>expansionary fiscal policy</strong>, which raises aggregate demand.<br />The two pull against each other, so demand falls by less than the Bank planned, and inflation comes down <strong>more slowly</strong>. The Bank may have to raise rates further to make up for it.",
         "distractors": {
-          "A": "Only the rate rise reduces demand. Cutting taxes and raising government spending both add to it.",
-          "B": "Income tax is paid by workers on their earnings, not by firms on their costs. A cut leaves people with more to spend, which adds to demand.",
-          "D": "Fiscal policy changes aggregate demand too. Tax cuts and extra spending raise it, and that works against the rate rise."
+          "A": "Fiscal policy changes aggregate demand too. Tax cuts and extra spending raise it, and that works against the rate rise.",
+          "B": "Only the rate rise reduces demand. Cutting taxes and raising government spending both add to it.",
+          "C": "Income tax is paid by workers on their earnings, not by firms on their costs. A cut leaves people with more to spend, which adds to demand."
         }
       }
     },

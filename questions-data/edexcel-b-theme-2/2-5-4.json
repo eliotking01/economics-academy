@@ -190,7 +190,7 @@
       },
       "answer": "A",
       "model": {
-        "working": "Structural unemployment is concentrated in one town, so <strong>local firms suffer most</strong> while firms elsewhere barely notice.<br />The café relies on the plant's workers for most of its custom → the plant closes → those customers disappear at once, and the town's spending falls too → its sales fall by the largest percentage.",
+        "working": "Job losses concentrated in one town hit <strong>local firms</strong> most, while firms elsewhere barely notice.<br />The café relies on the plant's workers for most of its custom → the plant closes → those customers disappear at once, and the town's spending falls too → its sales fall by the largest percentage.",
         "distractors": {
           "B": "The discount store is in the same town, but shoppers whose incomes fall tend to trade down to discount stores. It may lose some sales, but far less than the café, and it could even gain.",
           "C": "The chain's sales in this town will fall, but that town is a small part of its sales across the UK. As a share of its total sales, the fall is small.",
@@ -205,17 +205,17 @@
       "sketch": false,
       "stem": "Two machinists lose their jobs on the same day. One finds similar work three weeks later; the other is still looking two years later. When the second is finally hired, compared with the first, they are most likely to",
       "options": {
-        "A": "Be paid more, as they held out for a better job.",
-        "B": "Be paid the same, as they have the same skills.",
-        "C": "Earn less, as their skills have faded.",
+        "A": "Be paid less, as their skills have faded.",
+        "B": "Be paid more, as they held out for a better job.",
+        "C": "Be paid the same, as they have the same skills.",
         "D": "Need less training, as they have had time to study."
       },
-      "answer": "C",
+      "answer": "A",
       "model": {
         "working": "The longer someone is out of work → the more their skills and confidence fade → the harder it is to get hired → <strong>lower pay</strong> even after they find work.<br />A short gap of three weeks does little lasting harm; two years of <strong>long-term unemployment</strong> is what erodes skills and income.",
         "distractors": {
-          "A": "Two years without work makes a worker less attractive to employers, not more. There is no sign that the second machinist was turning down better offers.",
-          "B": "They had the same skills on the day they lost their jobs, but two years out of work wears skills down. By the time the second is hired, they are no longer equal.",
+          "B": "Two years without work makes a worker less attractive to employers, not more. There is no sign that the second machinist was turning down better offers.",
+          "C": "They had the same skills on the day they lost their jobs, but two years out of work wears skills down. By the time the second is hired, they are no longer equal.",
           "D": "The reverse is more likely. Firms that hire someone after a long spell out of work usually face higher training costs, as skills have faded."
         }
       }

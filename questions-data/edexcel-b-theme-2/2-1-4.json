@@ -155,9 +155,9 @@
       "model": {
         "working": "Profit on each unit = price − average cost. Compare it before and after.<br />Firm 1: £40 − £32 = £8, then £38 − £31 = £7 → <strong>falls</strong>.<br />Firm 2: £60 − £50 = £10, then £48 − £40 = £8 → <strong>falls</strong>.<br />Firm 3: £25 − £20 = £5, then £22 − £16 = £6 → <strong>rises</strong>.<br />Firm 4: £15 − £12 = £3, then £15 − £12.50 = £2.50 → <strong>falls</strong>.<br />Selling online cuts costs, but more price competition cuts prices too. Profit rises only where <strong>cost falls by more than price</strong>, as at Firm 3: cost down £4, price down £3.",
         "distractors": {
-          "A": "Firm 1 cut its price by the smallest amount, £2, but its cost fell by only £1, so its profit per unit fell from £8 to £7.",
+          "A": "Of the firms that cut their price, Firm 1 cut it by the least, £2, but its cost fell by only £1, so its profit per unit fell from £8 to £7.",
           "B": "Firm 2's cost fell by the most, £10, but its price fell by even more, £12. Both fell by 20%, yet the margin shrank from £10 to £8.",
-          "D": "Firm 4 held its price, but selling online raised its average cost, through delivery and returns, from £12 to £12.50. Its margin fell from £3 to £2.50."
+          "D": "Firm 4 held its price, but its average cost rose from £12 to £12.50, so its margin fell from £3 to £2.50."
         }
       }
     },

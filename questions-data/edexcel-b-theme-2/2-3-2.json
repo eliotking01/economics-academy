@@ -49,7 +49,7 @@
       "model": {
         "working": "At 50%, output = 8,000 × 0.5 = 4,000 planters. Fixed cost per planter = £24,000 ÷ 4,000 = <strong>£6.00</strong>.<br />At 75%, output = 8,000 × 0.75 = 6,000 planters. Fixed cost per planter = £24,000 ÷ 6,000 = <strong>£4.00</strong>.<br />Fall = £6.00 − £4.00 = <strong>£2.00</strong>.<br />Total fixed costs have not changed. They are simply spread over more planters.",
         "distractors": {
-          "B": "This is the fixed cost per planter at full capacity, £24,000 ÷ 8,000. The firm is now at 75%, not 100%.",
+          "B": "This is the fall from 50% to full capacity, £6.00 − £3.00, using the 8,000 maximum. The firm has moved to 75%, or 6,000 planters, where fixed cost per planter is £4.00.",
           "C": "This is the new fixed cost per planter, not the fall. It was £6.00 at 50%, so it has fallen by £2.00.",
           "D": "This divides the fixed costs by the change in output, £24,000 ÷ 2,000. Work out fixed cost per unit at each output, then compare the two."
         }
@@ -139,10 +139,10 @@
       "skill": "applied-reasoning",
       "difficulty": "standard",
       "sketch": false,
-      "stem": "A maker of school uniforms has run at about 45% capacity for three years. The number of schools it supplies has fallen, and is expected to keep falling. The way of raising its capacity utilisation that best fits its situation is",
+      "stem": "A maker of school uniforms has run its two factories at about 45% capacity for three years. The number of schools it supplies has fallen, and is expected to keep falling. The way of raising its capacity utilisation that best fits its situation is",
       "options": {
         "A": "Adding a night shift so it can meet future orders.",
-        "B": "Closing one of its two factories and selling the machines.",
+        "B": "Closing one factory and selling its machines.",
         "C": "Cutting its prices only in its quiet months of the year.",
         "D": "Raising its prices to make up for the orders it has lost."
       },
@@ -173,7 +173,7 @@
         "working": "A lower price → more weekday-morning sessions booked → <strong>higher utilisation</strong>.<br />But demand is price inelastic, so the percentage rise in sessions is smaller than the 20% cut in price. Revenue = price × sessions sold, so revenue from those sessions <strong>falls</strong>.<br />Filling capacity with price cuts raises revenue only if demand is price elastic.",
         "distractors": {
           "A": "This would need demand to be price elastic, with sessions rising by more than 20%. Inelastic demand means they rise by less.",
-          "B": "This would need demand to be unit elastic, with sessions rising by exactly enough to offset the 20% price cut. Inelastic demand means they rise by less, so revenue falls.",
+          "B": "This would need demand to be unitary elastic, with sessions rising by exactly enough to offset the 20% price cut. Inelastic demand means they rise by less, so revenue falls.",
           "D": "Price inelastic does not mean demand does not respond at all. Some extra sessions are booked, so utilisation rises, just by less than the price fell."
         }
       }

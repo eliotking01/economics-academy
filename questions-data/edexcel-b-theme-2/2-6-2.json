@@ -184,39 +184,39 @@
       "stem": "The UK's spending on imports rises well above its earnings from exports. The pound floats, and neither the government nor the Bank of England acts. Sketching the market for pounds, the most likely result is that the pound",
       "options": {
         "A": "Falls, making UK exports cheaper abroad.",
-        "B": "Falls, making imports cheaper in the UK.",
-        "C": "Rises, making UK exports cheaper abroad.",
-        "D": "Rises, making imports dearer in the UK."
+        "B": "Rises, making imports cheaper in the UK.",
+        "C": "Rises, making UK exports dearer abroad.",
+        "D": "Stays steady, as no one intervenes."
       },
       "answer": "A",
       "model": {
         "working": "To buy imports, UK buyers sell pounds for foreign currency. Spending on imports rising above export earnings means more pounds are being sold than foreign buyers want to buy.<br />On the sketch, the <strong>supply of pounds shifts right</strong> → the price of the pound falls.<br />A cheaper pound makes UK exports cheaper abroad and imports dearer in the UK, so the gap between them narrows. Under a <strong>floating exchange rate</strong>, this adjustment happens with no action from the government or the Bank.",
         "distractors": {
-          "B": "The pound does fall, but a weaker pound makes imports dearer, not cheaper. Each pound now buys less foreign currency.",
-          "C": "A rising pound would make UK exports dearer abroad, not cheaper. And here more pounds are being sold, which pushes the pound down.",
-          "D": "A rising pound would make imports cheaper, not dearer. And extra spending on imports means more pounds are sold, so the pound falls."
+          "B": "A rising pound would make imports cheaper, but the pound does not rise here. Spending on imports above export earnings means more pounds are sold than foreign buyers want, so the pound falls.",
+          "C": "A rising pound would make UK exports dearer abroad, but here more pounds are sold than foreign buyers want to buy, so the pound falls, not rises.",
+          "D": "Under a floating rate, no one needs to intervene for the pound to move. More pounds are sold than foreign buyers want, so the market pushes the pound down."
         }
       }
     },
     {
       "id": "edexcel-b-2-6-2-q7",
       "skill": "applied-reasoning",
-      "difficulty": "foundation",
+      "difficulty": "standard",
       "sketch": false,
-      "stem": "A government cuts every out-of-work benefit, including those paid to people too ill to work, so that firms with unfilled vacancies find it easier to recruit. The group most likely to be made worse off, with nothing to make up for it, is",
+      "stem": "To help firms fill their vacancies, a government cuts the benefits paid to people who are out of work. The policy is least likely to raise employment in a town where",
       "options": {
-        "A": "Firms that have struggled to fill their vacancies.",
-        "B": "People who move from benefits into a paid job.",
-        "C": "Taxpayers who pay for the benefit system.",
-        "D": "Those unable to work through long-term illness."
+        "A": "Firms have many vacancies that the unemployed could fill.",
+        "B": "Many jobs on offer pay only a little more than benefits.",
+        "C": "Most of the unemployed live close to the firms hiring.",
+        "D": "The few vacancies need skills that the unemployed lack."
       },
       "answer": "D",
       "model": {
-        "working": "Lower benefits widen the gap between income in work and out of work → more people look for jobs → firms find it easier to recruit.<br />People who <strong>cannot work</strong>, through long-term illness for example, cannot respond by taking a job. They simply receive less, so they are poorer with nothing to make up for it.",
+        "working": "Cutting benefits works on the people looking for work: a bigger gap between income in and out of work → more people look for jobs → firms find it easier to recruit.<br />That raises employment only if there are jobs the unemployed can do. Where vacancies are few and need skills the unemployed lack, looking harder creates no jobs and no skills → employment barely rises → the unemployed are simply <strong>left poorer</strong>.<br />Training, not a benefit cut, tackles that kind of mismatch.",
         "distractors": {
-          "A": "These firms are the ones the policy is meant to help. More people looking for work makes their vacancies easier to fill.",
-          "B": "These people lose their benefits, but they gain a wage, which is usually higher. That is the response the policy is designed to produce.",
-          "C": "Taxpayers gain, if anything. Lower benefits and more people in work both cut the cost of the benefit system."
+          "A": "This is where the policy works best. The jobs exist and the unemployed could do them, so a bigger gap between income in and out of work pushes more people to take them.",
+          "B": "This is the case the policy is aimed at. When a job pays little more than benefits, cutting benefits makes working clearly pay, so more people take the jobs.",
+          "C": "Living near the firms that are hiring means nothing stops the unemployed taking those jobs once looking for work pays more. The policy can work here."
         }
       }
     }

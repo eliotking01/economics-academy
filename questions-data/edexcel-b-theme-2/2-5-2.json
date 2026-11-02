@@ -5,8 +5,8 @@
   "spec": "2.5.2",
   "slug": "2-5-2-circular-flow-of-income",
   "title": "Circular Flow of Income, Expenditure and Output",
-  "shortTitle": "Circular Flow of Income, Expenditure and Output",
-  "pageTitle": "Circular Flow of Income, Expenditure and Output Questions — Edexcel B A-Level Economics | Economics Academy",
+  "shortTitle": "Circular Flow of Income",
+  "pageTitle": "Circular Flow of Income Questions — Edexcel B A-Level Economics | Economics Academy",
   "metaDescription": "Six free multiple-choice questions on the circular flow for Edexcel B A-Level Economics: income and output, injections and withdrawals, and what changes AD and AS.",
   "intro": "Six original multiple-choice questions on the circular flow of income: why income, spending and output match, what injections and withdrawals do to the flow, and what changes aggregate demand and aggregate supply.",
   "notesTeaser": "Six original multiple-choice questions on the circular flow of income, injections and withdrawals, and the factors that change aggregate demand and aggregate supply.",
@@ -85,7 +85,7 @@
       "stem": "A UK firm makes industrial ovens, which it sells only to UK bakeries and food factories when they expand. The change most likely to raise its orders is that",
       "options": {
         "A": "Bank Rate rises by one percentage point.",
-        "B": "Food firms expect their sales to grow strongly.",
+        "B": "Food firms expect strong sales growth.",
         "C": "The government raises teachers' pay.",
         "D": "The state pension rises by 5%."
       },
@@ -153,23 +153,52 @@
     },
     {
       "id": "edexcel-b-2-5-2-q6",
-      "skill": "applied-reasoning",
+      "skill": "calculation",
       "difficulty": "stretch",
       "sketch": false,
-      "stem": "A UK supermarket chain buys £50 million of new refrigerated lorries, all of them made in Germany. All other things being equal, the effect of this purchase on UK aggregate demand is that it",
-      "options": {
-        "A": "Falls by £50 million, as imports rise.",
-        "B": "Is unchanged, as I and M both rise by £50 million.",
-        "C": "Rises by £50 million, as investment rises.",
-        "D": "Rises by £100 million, as I and M both rise."
+      "stem": "Table 1 shows how each component of a country's aggregate demand changed over one year.<br />Using Table 1, the change in aggregate demand over the year was",
+      "table": {
+        "caption": "Table 1: Changes in the components of aggregate demand over one year",
+        "head": [
+          "Component",
+          "Change"
+        ],
+        "rows": [
+          [
+            "Consumption (C)",
+            "+£24bn"
+          ],
+          [
+            "Investment (I)",
+            "−£6bn"
+          ],
+          [
+            "Government spending (G)",
+            "+£10bn"
+          ],
+          [
+            "Exports (X)",
+            "−£4bn"
+          ],
+          [
+            "Imports (M)",
+            "+£8bn"
+          ]
+        ]
       },
-      "answer": "B",
+      "options": {
+        "A": "+£16bn",
+        "B": "+£24bn",
+        "C": "+£28bn",
+        "D": "+£32bn"
+      },
+      "answer": "A",
       "model": {
-        "working": "Aggregate demand is total spending on the <strong>UK's</strong> goods and services: AD = C + I + G + (X − M).<br />The lorries are capital goods, so investment (I) rises by £50 million.<br />They are made abroad, so imports (M) also rise by £50 million.<br />AD changes by +£50m − £50m = <strong>£0</strong>. None of the spending is on UK output.",
+        "working": "AD = C + I + G + (X − M), so add the changes in C, I and G, then add the change in net exports.<br />C + I + G: +£24bn − £6bn + £10bn = <strong>+£28bn</strong>.<br />Net exports: exports fall by £4bn and imports rise by £8bn, so X − M changes by −£4bn − £8bn = <strong>−£12bn</strong>.<br />Change in AD = +£28bn − £12bn = <strong>+£16bn</strong>.<br />A rise in imports lowers AD, because that spending goes on goods made abroad.",
         "distractors": {
-          "A": "Imports do rise by £50 million, but so does investment. The two cancel, as the spending is counted in I and then taken away again in M.",
-          "C": "Investment does rise by £50 million, but the lorries come from Germany, so imports rise by the same amount. M is subtracted in AD, which cancels the rise in I.",
-          "D": "This adds imports instead of taking them away. In AD = C + I + G + (X − M), a rise in M reduces AD."
+          "B": "This counts the fall in exports but leaves imports out: +£24bn − £6bn + £10bn − £4bn = +£24bn. Imports are part of AD too, and the £8bn rise in M has to be taken away.",
+          "C": "This adds up C, I and G only, and leaves out net exports. AD includes X − M, which falls by £12bn here.",
+          "D": "This adds the rise in imports instead of taking it away: +£24bn − £6bn + £10bn − £4bn + £8bn. In AD = C + I + G + (X − M), a rise in M reduces AD."
         }
       }
     }

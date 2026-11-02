@@ -71,7 +71,7 @@
       "model": {
         "working": "<strong>Penetration pricing</strong> means launching at a low price to win market share quickly, then raising it. Low launch price → households try the boxes and switch from rivals → more customers and higher output → economies of scale lower unit cost → the firm can raise its price later. The firm aims to win customers, not to drive its rivals out.",
         "distractors": {
-          "A": "Competitive pricing means setting a price at or close to rivals' prices. This firm deliberately launches well below cost, and so well below what rivals can charge.",
+          "A": "Competitive pricing means setting a price at or close to rivals' prices and keeping it there. This firm sets a launch price below its own cost to win customers, and plans to raise it later.",
           "C": "This is the trap. Predatory pricing also sets a price below cost, but its aim is to force rivals out of the market so the firm can raise prices with less competition. This firm expects its rivals to stay.",
           "D": "Price skimming is the opposite: a <strong>high</strong> launch price, lowered over time. This firm starts low and plans to raise its price."
         }
@@ -126,7 +126,7 @@
       },
       "answer": "D",
       "model": {
-        "working": "Price skimming means launching at a high price, then lowering it over time. It needs two things:<br />1. <strong>Price inelastic demand</strong>, so early buyers pay the high price rather than switch.<br />2. A product <strong>rivals cannot copy straight away</strong>, often because it is protected by a patent, so the high price does not simply attract copies.<br />Product 4 is the only one with both: a patent, no close rivals, and a PED of −0.4.",
+        "working": "Price skimming means launching at a high price, then lowering it over time. It needs two things:<br />1. <strong>Price inelastic demand</strong>, so early buyers pay the high price rather than switch.<br />2. A product <strong>rivals cannot copy straight away</strong>, often because it is protected by a patent, so the high price does not simply attract copies.<br />Product 4 is the only one with both: a patent, so rivals cannot copy it straight away, and inelastic demand (PED −0.4). It also has no close rivals at launch.",
         "distractors": {
           "A": "Product 1 has six close rivals, no patent and price elastic demand. A high launch price would send buyers straight to rivals. It suits penetration or competitive pricing.",
           "B": "Product 2 has inelastic demand and no rivals yet, but no patent. The high profits from skimming would draw in rivals who can copy it straight away, so the high price would not last.",

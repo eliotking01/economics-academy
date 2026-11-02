@@ -40,18 +40,18 @@
       "sketch": false,
       "stem": "A firm that makes ice cream and sells it to shops buys a chain of seaside kiosks, which sell its ice cream to the public. Both businesses sell ice cream. The type of integration, and the main gain it is designed to bring, is",
       "options": {
-        "A": "Horizontal, giving it more market power over rival ice-cream makers.",
-        "B": "Backward vertical, securing its supply of ingredients.",
+        "A": "Backward vertical, securing its supply of ingredients.",
+        "B": "Conglomerate, spreading its risk across unrelated markets.",
         "C": "Forward vertical, giving it a guaranteed place to sell.",
-        "D": "Conglomerate, spreading its risk across unrelated markets."
+        "D": "Horizontal, giving it more power over rival makers."
       },
       "answer": "C",
       "model": {
         "working": "Name the type from what the two firms <strong>do</strong>, not from what they both sell. The ice-cream maker produces; the kiosks are its <strong>outlets</strong>, a later stage of the same supply chain, closer to the consumer. Buying a customer or outlet is <strong>forward vertical integration</strong>.<br />Its main gain is a <strong>guaranteed place to sell</strong>, with control over how its ice cream reaches the public, and it keeps the margin the kiosks used to make.",
         "distractors": {
-          "A": "This is the trap in \"both sell ice cream\". Horizontal integration joins two firms at the same stage, and a manufacturer and a retailer are at different stages.",
-          "B": "Backward vertical integration means buying a supplier, such as a dairy. The kiosks are customers, so the integration runs forward.",
-          "D": "Conglomerate integration joins firms in unrelated markets. Making ice cream and selling it are two stages of the same supply chain."
+          "A": "Backward vertical integration means buying a supplier, such as a dairy. The kiosks are customers, so the integration runs forward.",
+          "B": "Conglomerate integration joins firms in unrelated markets. Making ice cream and selling it are two stages of the same supply chain.",
+          "D": "This is the trap in \"both sell ice cream\". Horizontal integration joins two firms at the same stage, and a manufacturer and a retailer are at different stages."
         }
       }
     },
@@ -126,7 +126,7 @@
       },
       "answer": "D",
       "model": {
-        "working": "Buying the motor factory is <strong>backward vertical integration</strong>: it secures supply and gives control over quality and cost. The price is <strong>lost flexibility</strong>. Now that cheaper motors are on offer, a firm that buys from outside can switch, but this one owns a factory whose motors cost more, and leaving it idle would waste the money spent buying it.",
+        "working": "Buying the motor factory is <strong>backward vertical integration</strong>: it secures supply and gives control over quality and cost. The price is <strong>lost flexibility</strong>. Now that cheaper motors are on offer, a firm that buys from outside can simply switch. This one is tied to its own factory, so it either keeps paying more for motors than its rivals do or leaves idle a factory it bought to supply them.",
         "distractors": {
           "A": "Buying a supplier does not change how many firms make appliances. More competition would come from rivals entering, not from this deal.",
           "B": "This is the reverse of what vertical integration does. Owning the factory gives the firm more control over the quality of its motors, not less.",

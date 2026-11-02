@@ -50,7 +50,7 @@
         "working": "Two steps.<br />First, foreign buyers need pounds to pay for UK cars and whisky → demand for pounds rises → the pound <strong>appreciates</strong>.<br />Second, a stronger pound buys more dollars → the retailer's stock, priced in dollars, costs fewer pounds → <strong>lower costs</strong>.",
         "distractors": {
           "A": "The pound does appreciate, but that lowers the retailer's costs. Each pound now buys more dollars, so dollar-priced stock costs fewer pounds.",
-          "B": "Both steps are reversed. More foreign demand for UK goods raises demand for pounds, so the pound appreciates. A depreciation would raise the retailer's costs, but that is not what happens here.",
+          "B": "The first step is reversed. More foreign demand for UK goods raises demand for pounds, so the pound appreciates, not depreciates. A depreciation would raise the retailer's costs, but that is not what happens here.",
           "D": "A depreciation would raise the cost of stock bought in dollars, not lower it. And more demand for UK exports makes the pound appreciate."
         }
       }
@@ -121,7 +121,7 @@
       "skill": "data-table",
       "difficulty": "standard",
       "sketch": false,
-      "stem": "Table 1 shows how much of each of four UK manufacturers' sales are made abroad, and how much of its costs are paid in foreign currencies. The pound then depreciates by 10% against every currency.<br />Using Table 1, the firm most likely to gain the most is",
+      "stem": "Table 1 shows how much of each of four UK manufacturers' sales are made abroad, and how much of its costs are paid in foreign currencies. At every firm, costs are about 80% of sales. The pound then depreciates by 10% against every currency.<br />Using Table 1, the firm most likely to gain the most is",
       "table": {
         "caption": "Table 1: Foreign sales and costs at four UK manufacturers",
         "head": [
@@ -206,7 +206,7 @@
       "model": {
         "working": "The firm does not trade abroad, but its rivals do. The pound falls → imported furniture costs more in pounds → it becomes dearer in UK shops → customers switch to UK-made furniture → <strong>higher sales</strong> for the firm.",
         "distractors": {
-          "A": "Its timber comes from the UK and is paid for in pounds, so a weaker pound does not change its price.",
+          "A": "Its timber is bought in the UK and priced in pounds, so a weaker pound does not directly raise its costs. The clearer effect is on its imported rivals' prices.",
           "C": "This is what happens after an <strong>appreciation</strong>, when imports get cheaper. A depreciation makes imports dearer, so buyers switch away from them.",
           "D": "This is the trap. A firm that does not trade abroad is still affected if it competes with imports, because the exchange rate changes its rivals' prices."
         }

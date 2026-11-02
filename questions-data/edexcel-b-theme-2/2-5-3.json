@@ -85,7 +85,7 @@
       "skill": "calculation",
       "difficulty": "stretch",
       "sketch": false,
-      "stem": "A retired couple's private pension pays a fixed £18,000 a year. Prices then rise by 5% in each of the next three years. Measured in the prices of the start, and to the nearest £100, the real value of the pension at the end of the three years is",
+      "stem": "A retired couple's private pension pays a fixed £18,000 a year. Prices then rise by 5% in each of the next three years. Measured in the prices at the start, and to the nearest £100, the real value of the pension at the end of the three years is",
       "options": {
         "A": "£15,300",
         "B": "£15,500",
@@ -185,7 +185,7 @@
       },
       "answer": "D",
       "model": {
-        "working": "Higher UK inflation costs a UK exporter competitiveness only if it is not offset by a fall in the pound.<br />In pounds, the UK furniture is 6% dearer. Each pound now buys 4% fewer euros, so in euros the price rises by only about 6% − 4% = <strong>2%</strong> (exactly 1.06 × 0.96 ≈ 1.018).<br />German rivals' prices also rise by 2%, so the UK maker's furniture is <strong>about as competitive</strong> as before.",
+        "working": "Higher UK inflation costs a UK exporter competitiveness only if it is not offset by a fall in the pound.<br />In pounds, the UK furniture is 6% dearer. Each pound now buys 4% fewer euros, so in euros the price rises by only about 6% − 4% = <strong>2%</strong> (more precisely, 1.06 × 0.96 = 1.0176).<br />German rivals' prices also rise by 2%, so the UK maker's furniture is <strong>about as competitive</strong> as before.",
         "distractors": {
           "A": "This counts only the fall in the pound and forgets that UK prices rose 4 points faster than German ones. The two effects roughly cancel.",
           "B": "This is the gap between UK and German inflation, 6% − 2%. It ignores the fall in the pound, which makes UK goods cheaper in euros.",

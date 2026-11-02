@@ -27,8 +27,8 @@
       "model": {
         "working": "Successful marketing changes the demand curve in two ways.<br />1. More buyers know about the jerseys and want them → more is demanded at every price → the curve <strong>shifts to the right</strong>.<br />2. Buyers see the jerseys as better than rivals' → fewer close substitutes in their eyes → demand becomes <strong>more price inelastic</strong> → the curve is <strong>steeper</strong>.<br />Together these let the brand sell more at a higher price.",
         "distractors": {
-          "A": "The steeper slope is right, but a successful campaign raises demand at every price, so the curve moves right, not left.",
-          "B": "The shift is right, but a flatter curve means demand is <strong>more</strong> price elastic. Buyers who see the jerseys as better than any rival's are less likely to switch when the price rises, so the curve becomes steeper.",
+          "A": "The steeper slope is correct, but a successful campaign raises demand at every price, so the curve moves right, not left.",
+          "B": "The rightward shift is correct, but a flatter curve means demand is <strong>more</strong> price elastic. Buyers who see the jerseys as better than any rival's are less likely to switch when the price rises, so the curve becomes steeper.",
           "D": "This is half the answer. Demand does become more price inelastic, but the campaign also makes more buyers want the jerseys at every price, which shifts the curve to the right."
         }
       }
@@ -126,7 +126,7 @@
       "skill": "applied-reasoning",
       "difficulty": "standard",
       "sketch": false,
-      "stem": "Three national pizza-delivery chains each double their spending on TV advertising in the same year. Total demand for pizza delivery barely changes. The most likely result for each chain is",
+      "stem": "Three national chains supply almost all pizza deliveries in a country. Each doubles its spending on TV advertising in the same year. Total demand for pizza delivery barely changes. The most likely result for each chain is",
       "options": {
         "A": "A larger market share each, and higher profit.",
         "B": "A smaller market share each, and lower costs.",
@@ -137,7 +137,7 @@
       "model": {
         "working": "Whether promotion pays depends on how rivals respond. Each chain's adverts pull customers one way and its rivals' adverts pull them back → each chain holds on to roughly the share it had → total demand barely changes, so sales barely change → but every chain now pays twice as much for advertising → <strong>higher costs, lower profit</strong>.",
         "distractors": {
-          "A": "All three cannot gain market share at once: the shares add up to the same total. With every rival advertising harder too, each ends up with roughly the share it started with.",
+          "A": "All three cannot gain market share at once: their shares already add up to almost the whole market. With every rival advertising harder too, each ends up with roughly the share it started with.",
           "B": "Doubling advertising spending raises costs, it does not lower them. Nor does any chain lose share, since all three advertised more by the same amount.",
           "C": "Total demand barely changes, so there are no extra sales to spread costs over. Each chain sells about the same number of pizzas while paying more for advertising."
         }

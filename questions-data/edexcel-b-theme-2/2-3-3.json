@@ -117,7 +117,7 @@
         "A": "A £200,000 rise in its profit for the year.",
         "B": "Bigger bulk-buying discounts on its parts.",
         "C": "Less risk of a late delivery halting production.",
-        "D": "More cash free to use, as less is tied up in stock."
+        "D": "More cash free, as less is tied up in stock."
       },
       "answer": "D",
       "model": {
@@ -180,14 +180,14 @@
       "sketch": false,
       "stem": "A maker of paper party plates checks a sample of each day's finished packs and throws away any faulty ones. A consultant advises it to adopt Total Quality Management. The strongest reason for the firm to keep its current system is that",
       "options": {
-        "A": "A faulty plate costs little and harms nobody.",
+        "A": "A faulty plate costs little and carries little risk.",
         "B": "Quality control involves every one of its employees.",
         "C": "Quality control stops faults from being made at all.",
         "D": "TQM would leave it with more scrap and rework than now."
       },
       "answer": "A",
       "model": {
-        "working": "Which quality method suits a firm depends on <strong>the cost of a fault</strong>. A faulty paper plate is cheap and harms nobody, so checking samples at the end and throwing faulty packs away may be enough.<br />TQM needs training and a change of culture, which cost money and are slow, and for a cheap, low-risk product the savings may not cover that. A maker of medicines could not take the same risk.",
+        "working": "Which quality method suits a firm depends on <strong>the cost of a fault</strong>. A faulty paper plate is cheap and carries little risk, so checking samples at the end and throwing faulty packs away may be enough.<br />TQM needs training and a change of culture, which cost money and are slow, and for a cheap, low-risk product the savings may not cover that. A maker of medicines could not take the same risk.",
         "distractors": {
           "B": "This describes TQM, which makes quality everyone's job. Quality control is done by inspectors checking finished products.",
           "C": "This describes quality assurance. Quality control finds faults after the product is made: the faulty plates have already used up materials and time.",

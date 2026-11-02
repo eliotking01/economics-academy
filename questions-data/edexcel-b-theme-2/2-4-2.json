@@ -107,16 +107,16 @@
       "options": {
         "A": "Town X, as its mean income is higher.",
         "B": "Town X, as its two figures are further apart.",
-        "C": "Town Y, as its median income is higher.",
-        "D": "Town Y, as its mean income is lower."
+        "C": "Town Y, as its mean income is lower.",
+        "D": "Town Y, as its median income is higher."
       },
-      "answer": "C",
+      "answer": "D",
       "model": {
         "working": "The <strong>median</strong> is the income of the household in the middle, so it is the better guide to what a typical household has. Town Y's median, £36,000, is higher than Town X's, £30,000.<br />Town X's mean is higher, but it is £22,000 above its median. That wide gap means a few very high incomes are pulling the mean up, while the typical household there has less to spend than in Town Y.",
         "distractors": {
           "A": "The mean is pulled up by a few very high earners. Town X's typical household has £30,000, less than Town Y's £36,000.",
           "B": "A wide gap between mean and median is a sign of inequality, not of a well-off typical household. It is a reason to look past Town X's mean, not to choose it.",
-          "D": "Town Y is the right choice, but not because its mean is lower. A lower mean would on its own point the other way. What counts is that its median is higher."
+          "C": "Town Y is the right choice, but not because its mean is lower. A lower mean would on its own point the other way. What counts is that its median is higher."
         }
       }
     },

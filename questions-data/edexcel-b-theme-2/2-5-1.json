@@ -118,13 +118,13 @@
       "stem": "In a boom, a maker of electric bikes is running its factory at full capacity, and the wait for a new bike has grown from two weeks to ten. If it cannot raise its output, the most likely effect on the firm is that",
       "options": {
         "A": "It cuts its prices to clear the waiting list.",
-        "B": "It loses sales, as some customers buy from rivals.",
-        "C": "Its sales are unaffected, as customers will wait.",
+        "B": "It loses orders, as some buyers go to rivals.",
+        "C": "It keeps every order, as customers will wait.",
         "D": "Its sales rise as fast as its orders do."
       },
       "answer": "B",
       "model": {
-        "working": "At full capacity the firm cannot make more bikes, however many are ordered.<br />Orders outgrow output → delivery times lengthen → some customers will not wait ten weeks and go to rivals → the firm <strong>loses sales</strong> unless it invests or hires to raise its capacity.",
+        "working": "At full capacity the firm cannot make more bikes, however many are ordered.<br />Orders outgrow output → delivery times lengthen → some customers will not wait ten weeks and go to rivals → the firm <strong>loses orders and customers</strong> unless it invests or hires to raise its capacity.",
         "distractors": {
           "A": "Cutting prices would raise orders further, and the firm cannot meet the ones it already has. With demand above what it can supply, it is more likely to raise its prices.",
           "C": "Some customers will wait, but not all of them. A ten-week wait sends some buyers to rivals who can deliver sooner.",

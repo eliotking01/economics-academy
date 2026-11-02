@@ -136,18 +136,18 @@
       "sketch": false,
       "stem": "Two firms make the same paper cups. Firm X runs automated machines, with a few staff to supervise them. Firm Y runs simple machines that many workers feed by hand. Demand for paper cups falls, and both firms cut their output by 30%. Compared with Firm Y, Firm X is most likely to see",
       "options": {
-        "A": "A larger rise in average cost, as most of its costs are fixed.",
+        "A": "A larger rise in average cost, as its costs are mostly fixed.",
         "B": "A larger rise in average cost, as its wage bill is the higher.",
-        "C": "A smaller rise in average cost, as its machines can be switched off.",
-        "D": "A smaller rise in average cost, as its labour productivity is higher."
+        "C": "A smaller rise in average cost, as its labour productivity is higher.",
+        "D": "A smaller rise in average cost, as its machines can be switched off."
       },
       "answer": "A",
       "model": {
         "working": "Firm X is <strong>capital intensive</strong>. Its biggest cost is machinery and its upkeep, which are mostly <strong>fixed costs</strong>. With output down 30% → those fixed costs are spread over far fewer cups → its average cost rises sharply.<br />Firm Y is labour intensive. Its biggest cost is wages, which it can cut along with output by reducing hours, so its average cost rises much less. High fixed costs when demand falls is the main risk of capital-intensive production.",
         "distractors": {
           "B": "Firm X is the capital-intensive firm, so its wage bill is the <strong>lower</strong> of the two. It is Firm Y whose costs are mostly wages.",
-          "C": "Switching machines off saves the power to run them, but the machines' cost and upkeep are fixed. Those costs are now shared across fewer cups.",
-          "D": "Firm X does have the higher output per worker, but that is not what drives this. The fall in output spreads its large fixed costs over fewer cups, so its average cost rises more."
+          "C": "Firm X does have the higher output per worker, but that is not what drives this. The fall in output spreads its large fixed costs over fewer cups, so its average cost rises more.",
+          "D": "Switching machines off saves the power to run them, but the machines' cost and upkeep are fixed. Those costs are now shared across fewer cups."
         }
       }
     },

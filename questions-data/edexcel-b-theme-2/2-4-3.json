@@ -61,17 +61,17 @@
       "stem": "A US maker of washing machines sells across the EU, a trading bloc, but pays a tariff on every machine it ships in. It decides to build a factory in Poland, an EU member. The main reason is that",
       "options": {
         "A": "Machines made in Poland face no tariff inside the EU.",
-        "B": "The EU bans imports of washing machines from outside it.",
-        "C": "The EU pays a grant to every foreign firm that sets up there.",
-        "D": "Wages in Poland are lower than in any other country."
+        "B": "Taxes on company profits are lower in Poland than in the US.",
+        "C": "The EU bans imports of washing machines from outside it.",
+        "D": "The EU pays a grant to every foreign firm that sets up there."
       },
       "answer": "A",
       "model": {
         "working": "A <strong>trading bloc</strong> is a group of countries that reduce or remove barriers to trade between themselves. Firms inside it sell to the other members without tariffs; firms outside it can face tariffs.<br />Machines made in Poland are made inside the bloc → no tariff when they are sold in France or Germany → lower costs than shipping them in from the US. That is why many foreign firms set up inside a bloc to sell to it.",
         "distractors": {
-          "B": "The firm already sells across the EU, paying a tariff on each machine, so imports are not banned. A tariff is a tax on imports, not a ban.",
-          "C": "Nothing about a trading bloc means paying grants to firms that set up there. The bloc's effect is on barriers to trade.",
-          "D": "This is not true: many countries pay lower wages than Poland. And the stem points to the tariff, which setting up inside the bloc removes."
+          "B": "Lower taxes on profits can draw a firm to a country, but nothing in the stem suggests tax is behind this decision. The stem points to the tariff, which setting up inside the bloc removes.",
+          "C": "The firm already sells across the EU, paying a tariff on each machine, so imports are not banned. A tariff is a tax on imports, not a ban.",
+          "D": "Nothing about a trading bloc means paying grants to firms that set up there. The bloc's effect is on barriers to trade."
         }
       }
     },
@@ -124,7 +124,7 @@
       "skill": "applied-reasoning",
       "difficulty": "standard",
       "sketch": false,
-      "stem": "A foreign producer sells steel in the UK below the cost of making it, to win the market from UK steelmakers. For UK firms that use steel to make machinery, the main long-term risk is that",
+      "stem": "A foreign producer sells steel in the UK below the cost of making it, to gain market share from UK steelmakers. For UK firms that use steel to make machinery, the main long-term risk is that",
       "options": {
         "A": "Steel prices rise once UK steelmakers have closed.",
         "B": "Their costs rise at once, as imported steel is dearer.",
@@ -136,7 +136,7 @@
         "working": "Low prices from lower costs or better methods are a genuine gain. Prices kept low by selling <strong>below cost</strong> are different.<br />Steel sold below cost → UK steelmakers lose sales and close → the foreign producer faces little competition → it can <strong>raise its prices</strong> later. The machinery makers gain now, but may pay more in the long run, with fewer suppliers to turn to.",
         "distractors": {
           "B": "In the short run, steel is cheaper, not dearer, so the machinery makers' costs fall. The risk comes later.",
-          "C": "Cheap steel lowers the UK machinery makers' costs, which makes them more competitive against imported machinery, not less. The risk is to the price of steel once the foreign producer has won the market.",
+          "C": "Cheap steel lowers the UK machinery makers' costs, which makes them more competitive against imported machinery, not less. The risk is to the price of steel once the foreign producer dominates the market.",
           "D": "Nothing in the stem says the steel is of lower quality. It is cheap because it is sold below cost."
         }
       }

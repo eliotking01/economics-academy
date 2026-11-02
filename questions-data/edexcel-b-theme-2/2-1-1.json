@@ -136,17 +136,17 @@
       "sketch": false,
       "stem": "A chain of veterinary practices grows from 6 practices to 30. Rather than writing detailed rules for every practice, it relies on staff sharing the founder's values and lets each practice make most of its own decisions. The main way this corporate culture is expected to keep the chain's costs down is that",
       "options": {
-        "A": "Customers trust the chain more, so it can charge higher prices.",
-        "B": "Fewer rules and checks are needed, so decisions are faster.",
-        "C": "Lenders see the chain as safer, so it borrows more cheaply.",
+        "A": "Fewer rules and checks are needed, so supervision costs less.",
+        "B": "Lenders see the chain as safer, so it borrows more cheaply.",
+        "C": "Managers check each practice's work more closely, so mistakes fall.",
         "D": "Staff need no training, as they already share its values."
       },
-      "answer": "B",
+      "answer": "A",
       "model": {
         "working": "Corporate culture is the shared values and habits that shape how people in a business behave. A strong one can <strong>hold a growing firm together</strong>: staff aim at the same goals → fewer rules and checks are needed → decisions can be made lower down, in each practice → <strong>faster, cheaper decisions</strong> and fewer of the communication problems that usually come with growth.",
         "distractors": {
-          "A": "This may well happen, but it raises revenue rather than cutting costs, and the question asks about costs.",
-          "C": "Cheaper borrowing is a financial economy of scale. It comes from the chain's size, not from its culture.",
+          "B": "Cheaper borrowing is a financial economy of scale. It comes from the chain's size, not from its culture.",
+          "C": "A strong culture works by reducing the checks needed, not by adding them.",
           "D": "Shared values do not teach anyone veterinary skills. Culture can cut how many checks are needed, but staff still need training to do the job."
         }
       }
@@ -203,18 +203,18 @@
       "sketch": false,
       "stem": "A chain of 8 dog-grooming salons pays £2,400 a month for adverts on a regional news website. It grows to 20 salons, and the same adverts, at the same price, now promote all of them.<br />The percentage fall in the chain's advertising cost per salon is",
       "options": {
-        "A": "40%",
-        "B": "60%",
-        "C": "150%",
-        "D": "250%"
+        "A": "7.5%",
+        "B": "40%",
+        "C": "60%",
+        "D": "150%"
       },
-      "answer": "B",
+      "answer": "C",
       "model": {
         "working": "This is a <strong>marketing economy of scale</strong>: the advert costs the same however many salons it promotes, so its cost per salon falls as the chain grows.<br />Before: £2,400 ÷ 8 = <strong>£300</strong> per salon.<br />After: £2,400 ÷ 20 = <strong>£120</strong> per salon.<br />Fall: £300 − £120 = £180, measured against the original £300: £180 ÷ £300 × 100 = <strong>60%</strong>.",
         "distractors": {
-          "A": "£120 ÷ £300 = 40% is what is left of the old cost per salon, not how much it has fallen by.",
-          "C": "Two routes give 150%: dividing the £180 fall by the new £120 rather than the original £300, or working out the rise in the number of salons (12 ÷ 8). Neither is the fall in cost per salon.",
-          "D": "This compares salon numbers, 20 ÷ 8 = 2.5, rather than costs. A cost cannot fall by more than 100%."
+          "A": "This measures the £180 fall against the whole £2,400 advertising bill: £180 ÷ £2,400 = 7.5%. The question asks about cost per salon, so compare the £180 fall with the original £300 per salon.",
+          "B": "£120 ÷ £300 = 40% is what is left of the old cost per salon, not how much it has fallen by.",
+          "D": "Two routes give 150%: dividing the £180 fall by the new £120 rather than the original £300, or working out the rise in the number of salons (12 ÷ 8). Neither is the fall in cost per salon."
         }
       }
     }

@@ -16,11 +16,11 @@
       "skill": "calculation",
       "difficulty": "standard",
       "sketch": false,
-      "stem": "Average real incomes fall by 4% in a recession. Over the same period a retailer's monthly sales of hot tubs fall from 250 to 220, with its prices unchanged. Measuring each percentage change against its original value, the income elasticity of demand for its hot tubs is",
+      "stem": "Average real incomes fall by 4% in a recession. Over the same period a retailer's monthly sales of hot tubs fall from 250 to 220, with its prices unchanged. Measuring each percentage change against its original value, and to one decimal place, the income elasticity of demand for its hot tubs is",
       "options": {
         "A": "−3.0",
-        "B": "−0.33",
-        "C": "+0.33",
+        "B": "−0.3",
+        "C": "+0.3",
         "D": "+3.0"
       },
       "answer": "D",
@@ -29,7 +29,7 @@
         "distractors": {
           "A": "The size is right but the sign is wrong. Sales fell, but so did income, and dividing a negative by a negative gives a positive. Keep the sign of YED: a negative value would wrongly make hot tubs an inferior good.",
           "B": "Two errors at once: the formula is inverted (4 ÷ 12) and the sign is wrong. The % change in quantity demanded goes on top, and a fall in sales alongside a fall in income gives a positive YED.",
-          "C": "The formula has been inverted: 4 ÷ 12 = 0.33. The % change in <strong>quantity demanded</strong> goes on top. Read this way, hot tubs would wrongly look like a necessity."
+          "C": "The formula has been inverted: 4 ÷ 12 = 0.3, to one decimal place. The % change in <strong>quantity demanded</strong> goes on top. Read this way, hot tubs would wrongly look like a necessity."
         }
       }
     },
@@ -110,7 +110,7 @@
       "stem": "A travel firm sells luxury safari holidays, with an income elasticity of demand of +2.5, and budget coach holidays in the UK, with an income elasticity of demand of −0.5. Real incomes are forecast to fall for the next two years. The best way for the firm to plan its holiday places is to",
       "options": {
         "A": "Add safari places and cut coach-holiday places.",
-        "B": "Cut both, as all holiday demand falls with incomes.",
+        "B": "Cut both safari and coach-holiday places.",
         "C": "Cut coach-holiday places and keep safari places.",
         "D": "Cut safari places and add coach-holiday places."
       },
@@ -141,7 +141,7 @@
         "working": "YED depends on the <strong>customer's income level</strong>. The same product can be a luxury for low-income households and a necessity for high-income ones. In the low-income country, YED of +2.5 shows a luxury: households buy cars as they get richer. In the high-income country most households already have one, so a rise in income changes car buying only a little: YED of +0.4 shows a <strong>necessity</strong>.",
         "distractors": {
           "B": "An inferior good has a <strong>negative</strong> YED. At +0.4, demand for cars still rises with income, just by less, so cars are a normal good in both countries.",
-          "C": "The number of close substitutes affects how demand responds to a product's <strong>price</strong>, which is PED. It does not explain how demand responds to income.",
+          "C": "Close substitutes matter mainly for PED. For YED, alternatives matter when people swap to something better as they earn more, which makes a good inferior. At +0.4, demand for cars still rises with income. The difference comes from income level: most households in the richer country already own a car.",
           "D": "Share of income is also a factor in PED, not YED. And a car takes up a <strong>smaller</strong> share of a typical income in a richer country, not a larger one."
         }
       }
@@ -173,16 +173,16 @@
       "skill": "calculation",
       "difficulty": "stretch",
       "sketch": false,
-      "stem": "Over a year, money incomes rise by 7% and prices by 3%, so real incomes rise by about 4%. A garden-design firm's sales rise from 150 makeovers to 159 over the same year, with its prices unchanged. To one decimal place, the income elasticity of demand for its makeovers is",
+      "stem": "Over a year, money incomes rise by 7% and prices by 3%, so real incomes rise by 4%. A garden-design firm's sales rise from 150 makeovers to 159 over the same year, with its prices unchanged. To one decimal place, the income elasticity of demand for its makeovers is",
       "options": {
-        "A": "0.7",
-        "B": "0.9",
-        "C": "1.5",
-        "D": "2.0"
+        "A": "+0.7",
+        "B": "+0.9",
+        "C": "+1.5",
+        "D": "+2.0"
       },
       "answer": "C",
       "model": {
-        "working": "% change in quantity demanded = (159 − 150) ÷ 150 × 100 = <strong>+6%</strong>.<br />YED measures the response to <strong>real</strong> income, which rose by about 4%.<br />YED = +6 ÷ +4 = <strong>+1.5</strong>.<br />Above 1, so the makeovers are a luxury: sales grew faster than real income.",
+        "working": "% change in quantity demanded = (159 − 150) ÷ 150 × 100 = <strong>+6%</strong>.<br />YED measures the response to <strong>real</strong> income, which rose by 7% − 3% = <strong>4%</strong>.<br />YED = +6 ÷ +4 = <strong>+1.5</strong>.<br />Above 1, so the makeovers are a luxury: sales grew faster than real income.",
         "distractors": {
           "A": "The formula has been inverted: 4 ÷ 6 = 0.67, or 0.7 to one decimal place. The % change in quantity demanded goes on top.",
           "B": "This divides by the 7% rise in <strong>money</strong> income: 6 ÷ 7 = 0.86. YED uses real income, because only a rise in real income lets people buy more. Using money income here would wrongly make the makeovers look like a necessity.",
