@@ -1,0 +1,185 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-3",
+  "boardName": "Edexcel B Theme 3",
+  "spec": "3.3.2",
+  "slug": "3-3-2-demand-side-factors-in-global-markets",
+  "title": "Demand-Side Factors in Global Markets",
+  "shortTitle": "Demand-Side Factors in Global Markets",
+  "pageTitle": "Demand-Side Factors in Global Markets Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions for Edexcel B A-Level Economics on culture, tastes, language and translation abroad, and adapting for mass and niche markets.",
+  "intro": "Seven original multiple-choice questions on why a product that sells well in the UK can fail abroad: cultural differences, different tastes, language, unintended meanings and poor translations, and how firms in mass and niche markets respond. One is a calculation.",
+  "notesTeaser": "Seven original multiple-choice questions on culture, tastes, language and translation in global markets, and adapting for mass and niche markets, including a calculation.",
+  "questions": [
+    {
+      "id": "edexcel-b-3-3-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A UK clothing brand opens shops in Country M. Its billboards there use the same images as in the UK, of models in swimwear on a beach. Most people in Country M follow a religion whose customs expect clothing to cover the body in public, and the adverts draw a wave of complaints.<br />The demand-side factor the firm has overlooked is",
+      "options": {
+        "A": "Cultural differences.",
+        "B": "Different tastes.",
+        "C": "Unintended meanings.",
+        "D": "Inaccurate translations."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Culture</strong> is the shared beliefs, customs and way of life of a group of people. It shapes what people buy, and also what an advert can show, including how people dress.<br />The images mean the same thing in both countries. What differs is the custom about dress in public, so this is a cultural difference. Ignoring it → the adverts offend local customers → complaints spread → the brand's image is damaged → lower sales.",
+        "distractors": {
+          "B": "Tastes are preferences about the product itself, such as a flavour, a style or a portion size. Nobody here objects to the clothes in the shops. The complaints are about what the adverts show, which is a matter of custom.",
+          "C": "An unintended meaning is a word, gesture or image that means something different in another country. Swimwear on a beach means the same thing in both. It is the custom about dress in public that differs.",
+          "D": "Nothing has been translated. The billboards use images, and the problem is what they show, not any words on them."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-3-2-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 lists problems that four UK food firms met when they launched abroad.<br />Using Table 1, the problem most likely to lead to fines or a product recall is that of",
+      "table": {
+        "caption": "Table 1: Four launch problems",
+        "head": ["", "Problem"],
+        "rows": [
+          ["Firm 1", "Its brand name sounds like the local word for \"lazy\"."],
+          ["Firm 2", "Local buyers find its fruit squash far too sweet."],
+          [
+            "Firm 3",
+            "A word-for-word translation turns its slogan's joke into nonsense."
+          ],
+          [
+            "Firm 4",
+            "Its translated label lists the nuts in its cereal bars as \"seeds\"."
+          ]
+        ]
+      },
+      "options": {
+        "A": "Firm 1.",
+        "B": "Firm 2.",
+        "C": "Firm 3.",
+        "D": "Firm 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A label translated wrongly is the most serious kind of communication mistake. The label misstates an ingredient → it breaks local labelling law, and customers with a nut allergy may eat the bars → fines, a product recall and a damaged brand.<br />The other three problems are likely to cost sales, and perhaps the cost of new packaging and adverts, but none breaks the law or puts customers at risk.",
+        "distractors": {
+          "A": "An unintended meaning can make a brand name laughable, so customers do not take the product seriously. That costs sales and a relaunch, but a silly name breaks no law.",
+          "B": "A squash that is too sweet for local tastes will sell poorly, but there is nothing illegal or unsafe about it. The fix is a new recipe, not a recall.",
+          "C": "A slogan translated word for word can lose its joke, so the adverts fall flat and sales suffer. It is an inaccurate translation, but of an advert, not of safety information."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-3-2-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A UK maker of meat pies launches them in Country G, where most people prefer far spicier food than UK buyers do. To keep its costs down, it sells its UK recipe unchanged.<br />The most likely result for the firm in Country G is",
+      "options": {
+        "A": "Higher average costs, from short production runs.",
+        "B": "Low sales, so it may never recover the cost of entry.",
+        "C": "Recalls and fines, as its labels break local food law.",
+        "D": "Strong sales, as a UK recipe will seem new and exciting."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Tastes differ between countries, here in how spicy food should be. Ignoring them → the product does not suit local tastes → few customers buy it → low sales → the cost of entering the market is never recovered.<br />Keeping the UK recipe saves the cost of adapting, but that saving is worth little if the pies do not sell.",
+        "distractors": {
+          "A": "Short production runs and higher average cost are the cost of adapting a product for each market. This firm has kept one recipe, so it avoids that cost.",
+          "C": "Fines and recalls follow a label that breaks local law or is translated wrongly. Nothing in the stem says the labels are wrong. The problem is the taste of the pies.",
+          "D": "A few buyers may try something new, but most people in Country G prefer far spicier food. A product that does not suit local tastes is unlikely to sell well for long."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-3-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A UK firm is about to launch a range of herbal teas in Country N, where it has never sold before. It wants to cut the risk that the name, the flavours or the slogan put local customers off.<br />The step most likely to achieve this is",
+      "options": {
+        "A": "Asking UK customers which flavours they like best.",
+        "B": "Keeping its UK slogan in English in every advert.",
+        "C": "Testing names and flavours on Country N shoppers.",
+        "D": "Translating its slogan with free online software."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Firms cut the risk of these mistakes with <strong>market research in each country</strong>: testing names, flavours and adverts on local customers before launch, and using native speakers to translate.<br />Only shoppers in Country N can show whether the name sounds odd in their language, whether the flavours suit their tastes and whether the slogan makes sense to them.",
+        "distractors": {
+          "A": "UK customers can say what sells in the UK, but tastes differ between countries. Their answers say nothing about what buyers in Country N want.",
+          "B": "An English slogan cannot be mistranslated, but customers who do not read English will not understand it. Adverts need to work in the local language.",
+          "D": "Word-for-word translation is how slogans lose their meaning, because jokes and sayings rarely carry across. A native speaker should translate it, and local customers should test it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-3-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two UK firms each sell in 30 countries. One makes chocolate biscuits for supermarkets. The other makes specialist cameras for wildlife photographers.<br />The firm more likely to change its product for each region, and the reason, is",
+      "options": {
+        "A": "The biscuit maker, as its buyers' tastes differ by region.",
+        "B": "The biscuit maker, as it sells at a higher margin per unit.",
+        "C": "The camera maker, as its buyers' needs differ by region.",
+        "D": "The camera maker, as its sales in each country are small."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The biscuit maker sells in a <strong>mass market</strong>: millions of customers in many countries, whose tastes in food differ. It keeps one global brand but changes the recipe, pack size or adverts for each region → it fits local tastes while keeping most of its economies of scale → high sales at a low margin.<br />The camera maker sells in a <strong>niche market</strong>. Wildlife photographers want much the same camera wherever they live, so little changes beyond the language.",
+        "distractors": {
+          "B": "It is the other way round. A mass-market product sells in high volumes at a low margin per unit. The niche camera maker is the one with the high margin.",
+          "C": "A niche is defined by its buyers' particular needs, and here those needs are shared across borders. A wildlife photographer in one country wants much the same camera as one in another.",
+          "D": "Small sales in each country are a reason not to adapt, because the extra sales would be too few to cover the cost. That points to the camera maker changing less, not more."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-3-2-q6",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A UK juice firm launched in Country T and forecast sales of 400,000 cartons in its first year. Its brand name turned out to sound like a rude word in the local language, and it sold only 150,000. Each carton earns a contribution of £0.40. Later the same year, the firm spent £35,000 on new packaging and adverts to relaunch. Its other costs were as planned.<br />Compared with its forecast, the mistake reduced the firm's first-year profit in Country T by",
+      "options": {
+        "A": "£95,000",
+        "B": "£100,000",
+        "C": "£135,000",
+        "D": "£195,000"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Total contribution = contribution per unit × sales volume. With other costs as planned, every carton not sold is £0.40 of profit lost.<br />Shortfall in sales: 400,000 − 150,000 = <strong>250,000</strong> cartons.<br />Lost contribution: 250,000 × £0.40 = <strong>£100,000</strong>.<br />Add the relaunch: £100,000 + £35,000 = <strong>£135,000</strong>.<br />This is the full cost of a communication mistake: the lost sales, plus the cost of new packaging and adverts to put it right.",
+        "distractors": {
+          "A": "This uses the cartons that were sold, 150,000 × £0.40 = £60,000, plus £35,000. The loss comes from the 250,000 cartons that were <em>not</em> sold.",
+          "B": "This is the lost contribution, 250,000 × £0.40, but it leaves out the £35,000 spent on the relaunch, which is also a cost of the mistake.",
+          "D": "This treats the whole forecast as lost: 400,000 × £0.40 = £160,000, plus £35,000. The firm still sold 150,000 cartons, and their contribution was earned."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-3-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A UK maker of breakfast spreads sells its standard UK product in many countries. It is considering adapting the recipe, pack and adverts for two more. Country V is small, speaks English widely and shares most UK tastes. Country W is large, speaks a different language and has very different tastes.<br />The most sensible decision is to",
+      "options": {
+        "A": "Adapt for both, as adapting will always raise sales.",
+        "B": "Adapt for neither, as adapting would raise average cost.",
+        "C": "Adapt for V only, as it would cost the least to adapt.",
+        "D": "Adapt for W only, as extra sales should cover the cost."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Whether adapting pays depends on two things.<br /><strong>How different the market is:</strong> Country V shares the language and most tastes, so the standard product already fits → little to gain from adapting. Country W differs in both → the standard product is likely to sell poorly unchanged.<br /><strong>Cost against extra sales:</strong> research, translation and new packaging cost money, and adapting pays only if the extra sales cover that cost. V is small, so any extra sales would be few. W is large, so the extra sales are far more likely to cover the cost.<br />Both point the same way: adapt for W, and sell the standard product in V.",
+        "distractors": {
+          "A": "Adapting raises sales only where the standard product fits local tastes badly. In Country V it already fits, so adapting would add cost for little extra revenue.",
+          "B": "Adapting does raise average cost, but in a large market with very different tastes the standard product is likely to sell poorly. There, the extra sales are likely to outweigh the extra cost.",
+          "C": "V would be cheap to adapt for because so little needs changing, but that is exactly why there is little to gain. Being small, it also offers few extra sales to pay for any change."
+        }
+      }
+    }
+  ]
+}
