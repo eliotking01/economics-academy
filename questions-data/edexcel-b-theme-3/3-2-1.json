@@ -1,0 +1,188 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-3",
+  "boardName": "Edexcel B Theme 3",
+  "spec": "3.2.1",
+  "slug": "3-2-1-conditions-that-prompt-trade",
+  "title": "Conditions That Prompt Trade",
+  "shortTitle": "Conditions That Prompt Trade",
+  "pageTitle": "Conditions That Prompt Trade Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on conditions that prompt trade for Edexcel B A-Level Economics: push and pull factors, offshoring and outsourcing.",
+  "intro": "Seven original multiple-choice questions on why firms start to trade abroad: push and pull factors, offshoring and outsourcing, extending a product's life cycle in new markets and raising capacity utilisation. One is a calculation.",
+  "notesTeaser": "Seven original multiple-choice questions on push and pull factors, offshoring and outsourcing, the product life cycle and capacity utilisation.",
+  "questions": [
+    {
+      "id": "edexcel-b-3-2-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A UK insurance company closes the team in its Leeds office that handled customers' claims. It pays a specialist claims-handling firm based in Manchester to do the work instead.<br />The insurer has",
+      "options": {
+        "A": "Neither offshored nor outsourced its claims handling.",
+        "B": "Offshored and outsourced its claims handling.",
+        "C": "Offshored but not outsourced its claims handling.",
+        "D": "Outsourced but not offshored its claims handling."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Outsourcing</strong> is paying another firm to carry out work the business used to do itself. The insurer used to handle claims with its own staff and now pays a specialist firm to do it, so it has outsourced.<br /><strong>Offshoring</strong> is moving part of a firm's production or services to another country. Manchester is in the UK, so the work has not left the country and nothing has been offshored.<br />Offshoring is about <em>where</em> the work is done; outsourcing is about <em>who</em> does it.",
+        "distractors": {
+          "A": "The work has not moved abroad, but it has moved to another firm. Handing work to an outside firm is outsourcing even when that firm is in the same country.",
+          "B": "Outsourcing and offshoring often go together, as when a UK brand pays a factory abroad to make its goods. Here the new supplier is in Manchester, so there is no offshoring.",
+          "C": "This swaps the two terms. Offshoring means the work moves to another country, which has not happened. Outsourcing means another firm does it, which has."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-2-1-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the reason each of four UK firms gives for starting to sell abroad.<br />Using Table 1, the firms giving push factors are",
+      "table": {
+        "caption": "Table 1: Why four UK firms are starting to sell abroad",
+        "head": ["", "Reason given"],
+        "rows": [
+          ["Firm 1", "Spreading our design and advertising costs over more units will cut our cost per unit."],
+          ["Firm 2", "Rivals in the UK keep cutting their prices, and our profit margin is shrinking."],
+          ["Firm 3", "Sales in other countries would keep our revenue steady if UK demand fell."],
+          ["Firm 4", "Almost everyone in the UK who wants our product has already bought one."]
+        ]
+      },
+      "options": {
+        "A": "Firms 1 and 3.",
+        "B": "Firms 1 and 4.",
+        "C": "Firms 2 and 4.",
+        "D": "Firms 3 and 4."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A <strong>push factor</strong> is a problem in the home market that drives a firm to look for sales abroad. A <strong>pull factor</strong> is a benefit of selling abroad that attracts a firm to expand there.<br />Firm 2 faces <strong>competition</strong>: price cuts by UK rivals are squeezing its margin. Firm 4 faces a <strong>saturated market</strong>: there are few new customers left at home. Both are problems at home, so both are push factors.<br />Firm 1 wants <strong>economies of scale</strong> and Firm 3 wants <strong>risk spreading</strong>. Both are benefits that selling abroad would bring, so both are pull factors.",
+        "distractors": {
+          "A": "This swaps the two definitions. Firms 1 and 3 describe what the firm would gain by selling abroad, lower average cost and steadier revenue, which makes them pull factors.",
+          "B": "Firm 1 is cutting its costs, but the lower cost per unit comes from the larger output that new markets bring. That is a benefit of selling abroad, so it is a pull factor. Firm 2's shrinking margin is the problem at home.",
+          "D": "Firm 3 mentions UK demand falling, but only as a risk it wants protection against. Spreading sales across several countries is a benefit of selling abroad, so it is a pull factor. Firm 2's rivals are the push."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-2-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A UK maker of camping equipment wants to start exporting to one country, mainly to spread its risk. Country X and Country Y are similar in size and average income. Country X's economy depends on different industries from the UK's and rarely moves with it. Country Y's economy usually booms and slumps at the same time as the UK's.<br />The better choice for spreading risk, and the reason, is",
+      "options": {
+        "A": "Country X, as its economy is likely to grow faster.",
+        "B": "Country X, as its sales need not fall with UK sales.",
+        "C": "Country Y, as demand there will be easier to predict.",
+        "D": "Country Y, as its buyers will behave like UK buyers."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A firm that sells in one country depends on that one economy. <strong>Risk spreading</strong> means selling in several, so that a fall in demand in one market can be made up by sales elsewhere.<br />That only works when the markets do not move together. A UK recession → UK sales fall → Country X's economy is on a different cycle, so its sales hold up → revenue and cash flow stay steadier.<br />Country Y slumps when the UK does, so its sales would fall at the same time as the firm's UK sales, and the risk would not be spread at all.",
+        "distractors": {
+          "A": "Nothing in the stem says Country X will grow faster. The two countries are similar in size and income. What differs is whether their economies move with the UK's, and that is what decides how much risk is spread.",
+          "C": "Demand in Country Y may be easier to predict, because it follows the UK's. But it would fall in the same years as UK demand, so the firm's revenue would be just as exposed to a UK downturn.",
+          "D": "Similar buyers may make the product easier to sell, but they also cut back at the same time as UK buyers. Spreading risk needs a market whose sales hold up when the home market falls."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-2-1-q4",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A UK fashion brand can have a jacket made in the UK for £40.00. A factory in Country Z makes the same jacket for £28.00, of which £15.00 is labour, and shipping it to the UK adds £4.00. Wages in Country Z then rise by 40%, with output per worker unchanged. The UK cost stays at £40.00.<br />The saving per jacket from making it in Country Z falls to",
+      "options": {
+        "A": "−£3.20",
+        "B": "£2.00",
+        "C": "£4.80",
+        "D": "£6.00"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Before the wage rise, a jacket from Country Z costs £28.00 + £4.00 shipping = <strong>£32.00</strong>, a saving of £40.00 − £32.00 = £8.00.<br />Output per worker is unchanged, so the labour cost per jacket rises by the same 40% as wages: £15.00 × 1.40 = <strong>£21.00</strong>. The other £13.00 of the factory cost is unchanged.<br />New cost from Country Z: £13.00 + £21.00 + £4.00 = <strong>£38.00</strong>.<br />Saving: £40.00 − £38.00 = <strong>£2.00</strong>.<br />This is why the cost gap may not last. As wages rise in emerging economies, the saving shrinks, and some firms bring work back home.",
+        "distractors": {
+          "A": "This applies the 40% rise to the whole £28.00 factory cost, giving £39.20 + £4.00 = £43.20. Only the £15.00 of labour gets dearer when wages rise.",
+          "C": "This cuts the old £8.00 saving by 40%. The 40% rise applies to wages, not to the saving: labour costs £6.00 more per jacket, so the saving falls by £6.00.",
+          "D": "This leaves out shipping: £40.00 − £34.00. The £4.00 it costs to ship each jacket to the UK is part of the cost of making it abroad."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-2-1-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A UK firm's sales of a bread-making machine began falling in the UK in Year 1. In Year 2 it launched the machine in Country K, where few households had one. Table 1 shows its sales.<br />Using Table 1, in Year 5 the machine is best described as being in",
+      "table": {
+        "caption": "Table 1: Sales of one bread-making machine (thousands of units)",
+        "head": ["", "Year 1", "Year 2", "Year 3", "Year 4", "Year 5"],
+        "rows": [
+          ["UK", "120", "110", "96", "82", "68"],
+          ["Country K", "0", "8", "26", "50", "78"],
+          ["Total", "120", "118", "122", "132", "146"]
+        ]
+      },
+      "options": {
+        "A": "Decline in the UK and growth in Country K.",
+        "B": "Growth in the UK and growth in Country K.",
+        "C": "Maturity in the UK and growth in Country K.",
+        "D": "Maturity in the UK and introduction in Country K."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The product life cycle applies to each market separately. A product can be in decline in one country and only just launching in another.<br />UK sales have fallen every year, from 120,000 to 68,000, so in the UK the machine is in <strong>decline</strong>.<br />In Country K, sales have risen quickly every year since the launch, from 8,000 to 78,000, so it is in <strong>growth</strong>.<br />Launching in Country K is an <strong>extension strategy</strong>: total sales rise again, from a product whose development is already paid for.",
+        "distractors": {
+          "B": "Total sales are growing, but that is because of Country K. UK sales have fallen in every year shown, so the machine is not in growth in the UK.",
+          "C": "Maturity is when sales level off. UK sales are not levelling off: they fall by 10,000 to 14,000 units every year, which is decline.",
+          "D": "Both stages are one step too early. UK sales are falling, not levelling off, and by Year 5 sales in Country K have been rising fast for three years, so it is past introduction and into growth."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-2-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A UK maker of children's sledges is busy from September to December, and its machines stand idle for most of the rest of the year. It wants export orders that will fill its quiet months without needing extra machines in its busy ones.<br />Of the following, the best market to enter is",
+      "options": {
+        "A": "Austria, where incomes are higher than in the UK.",
+        "B": "Canada, where winters are colder than the UK's.",
+        "C": "Chile, whose snow season is June to September.",
+        "D": "Norway, where fewer households already own a sledge."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The firm has <strong>spare capacity</strong> for most of the year. Export orders that arrive in its quiet months → higher output from the same machines → fixed costs spread over more units → lower average cost and higher profit.<br />Chile is in the southern hemisphere, so its winter falls in the UK's summer. Its orders would come in the months when the UK factory is quiet.<br />The other three countries all have their winter at the same time as the UK, so their orders would arrive in the firm's busy months, when it has no machines to spare.",
+        "distractors": {
+          "A": "Higher incomes may mean more sales, but Austria's winter comes at the same time as the UK's. Its orders would land in the busy months and need extra machines.",
+          "B": "Colder winters may mean more demand, but the demand comes at the same time of year as UK demand. It would not fill the quiet months.",
+          "D": "A market that is not saturated has room to grow, but Norway's sledging season is the UK's too. The orders would add to the busy months, not fill the idle ones."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-2-1-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A UK fashion retailer sells styles that change every few weeks. It closes its own UK factory and pays a supplier in a country six weeks' shipping away to make its clothes. The clothes now cost less to make, and checks show their quality is unchanged.<br />The drawback most likely to hurt the retailer's sales is",
+      "options": {
+        "A": "Faulty clothes damaging its brand.",
+        "B": "Lower spending by its former UK staff.",
+        "C": "Rising wages abroad wiping out the saving.",
+        "D": "Slower response to changing fashions."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Offshoring and outsourcing make the <strong>supply chain</strong> much longer. Clothes now take six weeks to arrive, so when a style suddenly sells well or badly, the retailer cannot react quickly.<br />For a firm whose styles change every few weeks, that matters a great deal: popular styles sell out before more arrive, and stock of styles that have fallen out of fashion has to be sold off cheaply. Both cut its sales.",
+        "distractors": {
+          "A": "Less control over quality is a real risk of using a distant supplier, but the stem says checks show quality is unchanged.",
+          "B": "The UK staff lose their jobs and their incomes, but they are a tiny share of the retailer's customers. The effect on its sales is very small.",
+          "C": "The cost gap may shrink as wages rise abroad, but that would raise the retailer's costs, not cut its sales. And it may not happen for years."
+        }
+      }
+    }
+  ]
+}
