@@ -1,0 +1,189 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-3",
+  "boardName": "Edexcel B Theme 3",
+  "spec": "3.6.4",
+  "slug": "3-6-4-redistribution-of-income-and-wealth",
+  "title": "Redistribution of Income and Wealth",
+  "shortTitle": "Redistribution of Income and Wealth",
+  "pageTitle": "Redistribution of Income and Wealth Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions for Edexcel B A-Level Economics on income and wealth, progressive and regressive taxes, the poverty trap and public services.",
+  "intro": "Seven original multiple-choice questions on redistributing income and wealth: the difference between income and wealth, progressive, proportional and regressive taxes, incentives and the poverty trap, and the provision of services. Two are calculations.",
+  "notesTeaser": "Seven original multiple-choice questions on income and wealth, how taxes are classified, the poverty trap and the provision of services, including two calculations.",
+  "questions": [
+    {
+      "id": "edexcel-b-3-6-4-q1",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the finances of one household.<br />Using Table 1, the household's wealth is",
+      "table": {
+        "caption": "Table 1: One household's finances",
+        "head": ["Item", "Value"],
+        "rows": [
+          ["House", "£280,000"],
+          ["Mortgage still to repay on the house", "£190,000"],
+          ["Savings in the bank", "£12,000"],
+          ["Car loan still to repay", "£8,000"],
+          ["Pay received over the past year, after tax", "£36,000"]
+        ]
+      },
+      "options": {
+        "A": "£94,000",
+        "B": "£102,000",
+        "C": "£130,000",
+        "D": "£292,000"
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Wealth</strong> is the stock of assets a household owns at a point in time, <strong>minus any debts</strong>. Pay is <strong>income</strong>, a flow over a period, so it is left out.<br />Assets: house £280,000 + savings £12,000 = £292,000.<br />Debts: mortgage £190,000 + car loan £8,000 = £198,000.<br />Wealth: £292,000 − £198,000 = <strong>£94,000</strong>.",
+        "distractors": {
+          "B": "This subtracts the mortgage but not the car loan: £292,000 − £190,000 = £102,000. Every debt is taken off, so the £8,000 car loan has to go as well.",
+          "C": "This adds the year's pay to wealth: £94,000 + £36,000 = £130,000. Pay is income, a flow over a period. Only the part of it that has been saved, and is already in the £12,000 of savings, counts as wealth.",
+          "D": "£292,000 is the value of the assets alone. Wealth is assets minus debts, and the household still owes £198,000 on its mortgage and car loan."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-4-q2",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A supermarket offers a part-time worker an extra £150 a week of shifts. The worker receives a means-tested benefit. Income tax and National Insurance take 20% of the extra pay, and the benefit falls by 55p for every £1 of extra pay left after tax.<br />The worker's effective tax rate on the extra £150 is",
+      "options": {
+        "A": "36%",
+        "B": "55%",
+        "C": "64%",
+        "D": "75%"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Tax and National Insurance: 20% × £150 = <strong>£30</strong>.<br />Pay after tax: £150 − £30 = <strong>£120</strong>.<br />Benefit lost: 55% × £120 = <strong>£66</strong>.<br />The worker keeps £120 − £66 = <strong>£54</strong> of the extra £150.<br />Effective tax rate: (£150 − £54) ÷ £150 × 100 = £96 ÷ £150 × 100 = <strong>64%</strong>.<br />This is the <strong>poverty trap</strong>: the worker loses almost two-thirds of the extra pay, so turning down the shifts may make sense. For the supermarket, that makes the extra hours harder to fill.",
+        "distractors": {
+          "A": "36% is the share of the extra £150 the worker <strong>keeps</strong>: £54 ÷ £150. The effective tax rate is the share they lose, 100% − 36% = 64%.",
+          "B": "55% is the rate at which the benefit is withdrawn. It leaves out the 20% taken in tax and National Insurance, which comes off first.",
+          "D": "This adds the two rates, 20% + 55%. But the benefit falls by 55p for each £1 left <strong>after</strong> tax, so the 55% applies to £120, not to the full £150."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-4-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows how much of two taxes three households pay in a year.<br />Using Table 1, Tax X and Tax Y respectively are best described as",
+      "table": {
+        "caption": "Table 1: Tax paid by three households in a year",
+        "head": ["Household income", "Tax X paid", "Tax Y paid"],
+        "rows": [
+          ["£15,000", "£1,500", "£1,200"],
+          ["£40,000", "£4,000", "£2,000"],
+          ["£100,000", "£10,000", "£3,000"]
+        ]
+      },
+      "options": {
+        "A": "Progressive and progressive.",
+        "B": "Progressive and regressive.",
+        "C": "Proportional and progressive.",
+        "D": "Proportional and regressive."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Taxes are classified by how the <strong>share of income</strong> paid in tax changes as income rises, not by the amount paid.<br />Tax X: £1,500 ÷ £15,000 = 10%; £4,000 ÷ £40,000 = 10%; £10,000 ÷ £100,000 = 10%. The share stays the same → <strong>proportional</strong>.<br />Tax Y: £1,200 ÷ £15,000 = 8%; £2,000 ÷ £40,000 = 5%; £3,000 ÷ £100,000 = 3%. The share falls as income rises → <strong>regressive</strong>, even though richer households pay more in pounds.",
+        "distractors": {
+          "A": "This judges both taxes by the amount paid, which rises with income for each. Tax X takes 10% of every income, so it is proportional, and Tax Y takes a falling share, so it is regressive.",
+          "B": "Tax Y is regressive, but Tax X takes exactly 10% of every income. A tax is progressive only if the share rises with income, so X is proportional.",
+          "C": "Tax X is proportional, but Tax Y is not progressive just because richer households pay more pounds. Its share of income falls from 8% to 3%, so it is regressive."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-4-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government cuts the rate at which a means-tested benefit is withdrawn, from 60p to 45p for every £1 earned. Tax rates are unchanged.<br />The most likely cost of this change is",
+      "options": {
+        "A": "A rise in relative poverty, as low earners lose benefit faster.",
+        "B": "A stronger poverty trap, as low earners keep less of each extra £1.",
+        "C": "Higher benefit spending, as better-off households now qualify too.",
+        "D": "Lower income tax revenue, as low earners pay a lower tax rate."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Withdrawing the benefit more slowly <strong>weakens the poverty trap</strong>: a low earner now loses 45p rather than 60p of benefit for each extra £1, so working more pays better.<br />The cost: the benefit now runs out at a higher income → households <strong>further up the income scale</strong> still receive some of it → benefit spending rises.<br />That is the trade-off between equity and incentives: a smaller poverty trap costs more.",
+        "distractors": {
+          "A": "Low earners now lose benefit <strong>more slowly</strong>, not faster. They keep more of their income, so relative poverty is more likely to fall than rise.",
+          "B": "This is the wrong way round. A low earner now keeps more of each extra £1, because only 45p of benefit is lost rather than 60p. The poverty trap is weaker.",
+          "D": "Tax rates are unchanged. The change is to the benefit, so it raises spending rather than cutting tax revenue."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-4-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Over five years, house prices in a country rise by 30%. Wages, rents and benefits do not change. Most homes are owned by better-off households, and poorer households mostly rent.<br />The most likely effect is that",
+      "options": {
+        "A": "Income and wealth inequality both widen.",
+        "B": "Income inequality is unchanged, and wealth inequality widens.",
+        "C": "Income inequality widens, and wealth inequality is unchanged.",
+        "D": "Neither changes, as no household's income has changed."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Income</strong> is a flow of money over a period. <strong>Wealth</strong> is the stock of assets owned at a point in time, such as a house.<br />Wages, rents and benefits are unchanged → nobody's income changes → <strong>income inequality is unchanged</strong>.<br />House prices rise by 30% → homeowners' assets are worth more → they become wealthier. Homeowners are mostly better off, and poorer households mostly rent → <strong>wealth inequality widens</strong>.",
+        "distractors": {
+          "A": "A rise in house prices makes homeowners wealthier, but it does not change anyone's income. Wages, rents and benefits are all unchanged, so income inequality stays the same.",
+          "C": "This is the wrong way round. Nobody's income has changed, while the value of the houses owned mostly by better-off households has risen by 30%.",
+          "D": "Income has not changed, but wealth has. Inequality of wealth is measured separately from inequality of income, and the two can move differently."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-4-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A study finds that children from high-income families are twice as likely as children from low-income families to attend their area's best state schools. Homes near those schools cost far more than homes elsewhere.<br />This suggests that free state schooling",
+      "options": {
+        "A": "Does less to narrow the gap, as richer families get the best places.",
+        "B": "Has no effect on inequality, as it is paid for from taxes.",
+        "C": "Narrows the gap fully, as every child is offered the same free place.",
+        "D": "Redistributes wealth, not income, as homes near the schools cost more."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Free schooling redistributes because a school place is worth far more compared with a low income than a high one, and because it lets children's skills depend less on their parents' income.<br />How much it redistributes depends on <strong>quality and access</strong>. Better-off families can afford homes near the best schools → they get more of the best places → the service does not reach everyone equally → it <strong>narrows the gap less</strong> than it would if every child had the same chance of a good school.",
+        "distractors": {
+          "B": "Being paid for from taxes does not stop a service redistributing. Taxes are paid mostly by better-off households, and free schooling is worth far more compared with a low income than a high one.",
+          "C": "Every child is offered a free place, but not an equally good one. The study shows richer families get more of the best places, so the gap is not fully closed.",
+          "D": "The house prices explain how richer families get the best places. They do not change what the schooling does, which is to raise children's skills and so their future incomes."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-4-q7",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A landlord sells a second flat for £90,000 more than it cost eight years earlier. The government taxes part of that £90,000 profit.<br />The tax is",
+      "options": {
+        "A": "Capital gains tax, aimed at wealth.",
+        "B": "Income tax, aimed at the landlord's income.",
+        "C": "Inheritance tax, aimed at wealth.",
+        "D": "VAT, a tax on spending."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Capital gains tax</strong> is a tax on the profit from selling an asset, such as shares or a second home.<br />The landlord has sold a flat for £90,000 more than it cost → that profit is a capital gain → capital gains tax. It is one of the two main taxes aimed at <strong>wealth</strong>, alongside inheritance tax.",
+        "distractors": {
+          "B": "Income tax would apply to the rent the landlord received while letting the flat. The £90,000 is a profit from selling the flat itself, which is a capital gain.",
+          "C": "Inheritance tax is charged on large estates when someone dies. Here the landlord is alive and has sold the flat.",
+          "D": "VAT is a tax on spending on goods and services. The landlord is selling an asset at a profit, not buying something."
+        }
+      }
+    }
+  ]
+}

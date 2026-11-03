@@ -1,0 +1,197 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-3",
+  "boardName": "Edexcel B Theme 3",
+  "spec": "3.6.1",
+  "slug": "3-6-1-poverty-and-inequality",
+  "title": "Poverty and Inequality",
+  "shortTitle": "Poverty and Inequality",
+  "pageTitle": "Poverty and Inequality Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions for Edexcel B A-Level Economics on poverty and inequality: absolute and relative poverty, Lorenz curves and Gini coefficients.",
+  "intro": "Seven original multiple-choice questions on poverty and inequality: absolute and relative poverty, the World Bank poverty line and the Multidimensional Poverty Index, the Lorenz curve and the Gini coefficient. One is a calculation, and one asks you to sketch a Lorenz curve.",
+  "notesTeaser": "Seven original multiple-choice questions on absolute and relative poverty, national and international poverty measures, the Lorenz curve and the Gini coefficient, including a calculation.",
+  "questions": [
+    {
+      "id": "edexcel-b-3-6-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Household X lives in a low-income country. Its income is close to the typical income there, but it often cannot afford clean drinking water, or a doctor when someone falls ill. Household Y lives in a high-income country. It has a home and enough to eat, but its income is 45% of that country's median household income.<br />The two households are best described as being in",
+      "options": {
+        "A": "Absolute poverty for X and relative poverty for Y.",
+        "B": "Absolute poverty in both cases.",
+        "C": "Relative poverty for X and absolute poverty for Y.",
+        "D": "Relative poverty in both cases."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Absolute poverty</strong> is when a household cannot afford the basics needed to survive. <strong>Relative poverty</strong> is when its income is well below the typical income in its own country.<br />Household X cannot always afford clean water or a doctor → it lacks the basics → <strong>absolute poverty</strong>. Its income is close to the typical income in its own country, so it is not in relative poverty.<br />Household Y can afford a home and food, so it is not in absolute poverty. But its income is 45% of its country's median, below the 60% line → <strong>relative poverty</strong>.",
+        "distractors": {
+          "B": "Household Y has a home and enough to eat, so it can afford the basics. Its problem is that its income is far below what is typical in its own country, which is relative poverty.",
+          "C": "This is the wrong way round. Lacking clean water and a doctor is absolute poverty. Having the basics but an income far below the median is relative poverty.",
+          "D": "Household X's income is close to the typical income in its own country, so it is not in relative poverty. Relative poverty is always judged against the country the household lives in. X's problem is that it cannot afford the basics."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-1-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The World Bank counts a person as living in extreme poverty if they live on less than $3.00 a day. Table 1 shows four households in one village. Each household's total income has been adjusted for what money buys in that country.<br />Using Table 1, the number of people in the village living in extreme poverty is",
+      "table": {
+        "caption": "Table 1: Household size and total income per day",
+        "head": ["Household", "Number of people", "Total household income per day"],
+        "rows": [
+          ["P", "1", "$2.80"],
+          ["Q", "3", "$9.60"],
+          ["R", "4", "$11.20"],
+          ["S", "5", "$16.50"]
+        ]
+      },
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "4",
+        "D": "5"
+      },
+      "answer": "D",
+      "model": {
+        "working": "The World Bank line is set <strong>per person</strong>, so divide each household's income by the number of people in it:<br />P: $2.80 ÷ 1 = <strong>$2.80</strong>, below $3.00.<br />Q: $9.60 ÷ 3 = <strong>$3.20</strong>, above $3.00.<br />R: $11.20 ÷ 4 = <strong>$2.80</strong>, below $3.00.<br />S: $16.50 ÷ 5 = <strong>$3.30</strong>, above $3.00.<br />Households P and R are below the line. The number of people in them is 1 + 4 = <strong>5</strong>.",
+        "distractors": {
+          "A": "This compares each household's <strong>total</strong> income with $3.00. Only P's total is below $3.00, and P has one person. But the line is per person, so a large household can be poor on a total that looks high, as R is.",
+          "B": "P and R are the right households, but the question asks for the number of <strong>people</strong>. There are 2 households below the line, with 1 + 4 = 5 people in them.",
+          "C": "This picks the two households with the smallest totals, P and Q, and counts their 1 + 3 = 4 people. Q's $9.60 is shared between 3 people, which is $3.20 each, so Q is above the line. R's larger total is shared between 4 people, which leaves each of them below it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-1-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the Gini coefficient for two countries, and the share of total income received by the poorest 20% and the richest 20% of households in each.<br />Using Table 1, it follows that",
+      "table": {
+        "caption": "Table 1: Income inequality in two countries",
+        "head": ["", "Country J", "Country K"],
+        "rows": [
+          ["Gini coefficient", "0.39", "0.39"],
+          ["Share of income received by the poorest 20%", "3%", "6%"],
+          ["Share of income received by the richest 20%", "44%", "50%"]
+        ]
+      },
+      "options": {
+        "A": "Country K is more unequal, as its richest 20% receive a larger share.",
+        "B": "Income is shared out in the same way in both countries.",
+        "C": "The gap at the bottom is wider in J, and the gap at the top wider in K.",
+        "D": "The gap at the bottom is wider in K, and the gap at the top wider in J."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The two countries have the <strong>same Gini coefficient</strong>, but the shares show the inequality is in different places.<br />The poorest 20% receive only 3% of income in J but 6% in K → the gap at the <strong>bottom</strong> is wider in J.<br />The richest 20% receive 50% of income in K but 44% in J → the gap at the <strong>top</strong> is wider in K.<br />This is a weakness of the Gini coefficient: two Lorenz curves of different shapes can enclose the same area, so one figure hides where the inequality is.",
+        "distractors": {
+          "A": "This judges inequality on one share alone. K's richest 20% do get more, but J's poorest 20% get less, and the two Gini coefficients are the same. Overall, neither country is more unequal than the other.",
+          "B": "The same Gini coefficient does not mean the same distribution. The shares in Table 1 differ at both ends, which is exactly what one Gini figure cannot show.",
+          "D": "This is the wrong way round. The poorest 20% get less in J (3%) than in K (6%), so the bottom gap is wider in J. The richest 20% get more in K (50%) than in J (44%), so the top gap is wider in K."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Over a year, pay and profits fall by about 6% right across an economy, so median household income falls by 6%. No one loses their job. Benefits and pensions stay at the same cash amounts, and prices do not change. Relative poverty is measured as income below 60% of the median.<br />The number of households in relative poverty is most likely to",
+      "options": {
+        "A": "Fall, as the line falls but benefits do not.",
+        "B": "Fall, as the poorest households can now afford more.",
+        "C": "Rise, as incomes across the economy have fallen.",
+        "D": "Stay the same, as benefits have not changed."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The relative poverty line is <strong>60% of the median</strong>, so it moves whenever the median moves.<br />Median income falls by 6% → the poverty line falls by 6% too.<br />Households living on benefits and pensions keep the same income → some of them that were just below the old line are now above the new, lower one → the number in relative poverty <strong>falls</strong>.<br />No one is better off. Relative poverty has fallen because the typical household is worse off, not because the poorest have gained. This is why you should say which measure of poverty a figure uses before judging it.",
+        "distractors": {
+          "B": "The poorest households' incomes are unchanged, and so are prices, so they can afford exactly what they could before. They are not better off. They have only moved closer to the median because the median has fallen.",
+          "C": "Everyone's income has not fallen: benefits and pensions are unchanged. And relative poverty is measured against the median, which has fallen, so the line has come down to meet the poorest households.",
+          "D": "Unchanged benefits would leave <strong>absolute</strong> poverty the same, as the poorest can afford the same as before. Relative poverty also depends on the median, and the median has fallen."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-1-q5",
+      "skill": "data-table",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Table 1 shows three Gini coefficients for one country in the same year.<br />Using Table 1, it follows that",
+      "table": {
+        "caption": "Table 1: Gini coefficients for one country",
+        "head": ["What is measured", "Gini coefficient"],
+        "rows": [
+          ["Household income before taxes and benefits", "0.49"],
+          ["Household income after taxes and benefits", "0.35"],
+          ["Household wealth", "0.61"]
+        ]
+      },
+      "options": {
+        "A": "Taxes and benefits make income less equal.",
+        "B": "Taxes and benefits make income more equal.",
+        "C": "The Lorenz curve for wealth lies closest to the line of perfect equality.",
+        "D": "Wealth is shared out more equally than income."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The Gini coefficient runs from <strong>0</strong> (perfect equality) to <strong>1</strong> (perfect inequality), so a higher figure means more inequality.<br />Income before taxes and benefits has a Gini of 0.49. After them it is 0.35 → a lower figure → taxes and benefits make income <strong>more equal</strong>.<br />Wealth has the highest figure, 0.61, so it is shared far more unequally than income.",
+        "distractors": {
+          "A": "This reads the scale the wrong way. The Gini falls from 0.49 to 0.35 once taxes and benefits are counted, and a lower Gini means a more equal distribution.",
+          "C": "Wealth has the <strong>highest</strong> Gini coefficient, 0.61, so its Lorenz curve sags <strong>furthest</strong> from the line of perfect equality. The curve closest to the line belongs to income after taxes and benefits.",
+          "D": "Wealth's Gini of 0.61 is higher than both income figures, so wealth is shared <strong>less</strong> equally. A higher Gini means more inequality, not less."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "A boom in share prices raises the dividends received by the richest 10% of households in a country. Every other household's income is unchanged.<br />On a Lorenz curve diagram, area A lies between the line of perfect equality and the Lorenz curve. The most likely effect is that",
+      "options": {
+        "A": "Area A falls and the Gini coefficient falls.",
+        "B": "Area A falls and the Gini coefficient rises.",
+        "C": "Area A rises and the Gini coefficient falls.",
+        "D": "Area A rises and the Gini coefficient rises."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Sketch the 45-degree line of perfect equality and a Lorenz curve sagging below it. Area A is the gap between them and area B is the area under the curve.<br />The richest 10% gain and nobody else does → total income rises → every other group's <strong>share</strong> of the total falls → the Lorenz curve sags further from the line at every point.<br />So area A <strong>rises</strong> and area B falls. The Gini coefficient is A ÷ (A + B), so it <strong>rises</strong> too: inequality has increased.",
+        "distractors": {
+          "A": "This is the effect of redistribution towards the poor, which moves the curve towards the line. Here the gains go only to the richest, so the poorer 90% end up with a smaller share of the total, and the curve moves away from the line.",
+          "B": "Area A and the Gini coefficient move in the same direction, because the Gini is A ÷ (A + B). If area A fell, the Gini would fall too. Here the curve sags further from the line, so A rises.",
+          "C": "Area A does rise, but the Gini coefficient is A ÷ (A + B), not B ÷ (A + B). A bigger gap between the curve and the line means a higher Gini and more inequality."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-1-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Over five years, the share of people in Country T living on less than $3.00 a day falls from 30% to 20%, measured against the same World Bank line throughout. Over the same five years, Country T's Multidimensional Poverty Index (MPI) barely changes.<br />The most likely explanation is that",
+      "options": {
+        "A": "Fewer people lack clean water and schooling, which the $3.00 line ignores.",
+        "B": "Incomes rose past the line, but many still lack basics such as clean water.",
+        "C": "The MPI measures inequality, so it cannot pick up a rise in everyone's income.",
+        "D": "The MPI measures relative poverty, which rises whenever average income grows."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The two measures count different things.<br />The <strong>World Bank line</strong> counts people by income alone. Many people's incomes have risen from just below $3.00 to just above it → they no longer count as poor → the share falls from 30% to 20%.<br />The <strong>MPI</strong> counts people who lack several basics at once in health, education and living standards, such as clean water, schooling or electricity. It has barely changed → many people still lack those basics.<br />A small rise in income can move someone over a line without changing how they live, which is why it helps to use both measures.",
+        "distractors": {
+          "A": "If fewer people lacked clean water and schooling, the MPI would have fallen, because those are exactly what it counts. The stem says the MPI barely changed.",
+          "C": "The MPI is a measure of poverty, not inequality. It counts people lacking several basics at once. The Gini coefficient is the measure of inequality.",
+          "D": "The MPI is not a relative measure. It counts whether people have basics such as schooling, clean water and electricity, not how their income compares with the average."
+        }
+      }
+    }
+  ]
+}

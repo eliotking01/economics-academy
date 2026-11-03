@@ -1,0 +1,194 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-3",
+  "boardName": "Edexcel B Theme 3",
+  "spec": "3.6.3",
+  "slug": "3-6-3-the-impact-of-inequality",
+  "title": "The Impact of Inequality on Economic Agents",
+  "shortTitle": "The Impact of Inequality on Economic Agents",
+  "pageTitle": "Impact of Inequality Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions for Edexcel B A-Level Economics on the impact of inequality on individuals, on firms and their productivity, and on the economy.",
+  "intro": "Seven original multiple-choice questions on how inequality affects economic agents: individuals, firms, including the link between low pay and low productivity, and the economy as a whole. One is a calculation.",
+  "notesTeaser": "Seven original multiple-choice questions on how inequality affects individuals, firms and the economy, including the link between low pay and low productivity and a calculation.",
+  "questions": [
+    {
+      "id": "edexcel-b-3-6-3-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "The cleaners at an office firm are paid so little that many of them work a second job and arrive tired. Each cleaner gets through few rooms in a shift, and the firm says it cannot afford to raise their pay.<br />This situation is best described as",
+      "options": {
+        "A": "A brain drain of skilled workers.",
+        "B": "A cycle of low pay and low productivity.",
+        "C": "Derived demand for office cleaning staff.",
+        "D": "Structural unemployment among cleaners."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Low income and low productivity <strong>feed each other</strong>.<br />Low pay → a second job and tiredness → less effort → fewer rooms cleaned per shift, so <strong>low productivity</strong>.<br />Low productivity → the firm says it cannot afford to pay more → pay stays low, and the cycle repeats.<br />A firm can break the cycle by paying more or training its staff, as better-paid workers are often more motivated and stay longer.",
+        "distractors": {
+          "A": "A brain drain is when skilled workers leave a country to work abroad. Nobody here is leaving, and the problem is about pay and output inside one firm.",
+          "C": "The demand for cleaners is derived from the need for clean offices, but that is true of any cleaning job. It does not explain why pay and output here are both low and keep each other low.",
+          "D": "Structural unemployment is when workers' skills or location no longer match the jobs available. These cleaners all have jobs. Their problem is low pay and low output per worker."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-3-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Over ten years, the real incomes of the richest 10% of households rise fast, while the real incomes of most other households fall a little. Table 1 describes four firms.<br />Using Table 1, the firm most likely to lose sales is",
+      "table": {
+        "caption": "Table 1: Four firms",
+        "head": ["Firm", "What it sells"],
+        "rows": [
+          ["Firm 1", "Diamond jewellery and watches costing over £5,000"],
+          ["Firm 2", "Low-priced groceries, through a chain of discount supermarkets"],
+          ["Firm 3", "Water and sewerage, to every home in one region"],
+          ["Firm 4", "Mid-priced clothes and homeware, through a chain of department stores"]
+        ]
+      },
+      "options": {
+        "A": "Firm 1.",
+        "B": "Firm 2.",
+        "C": "Firm 3.",
+        "D": "Firm 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "When incomes at the top rise faster than the rest, <strong>demand splits</strong>.<br />High earners have much more to spend → demand grows for luxury goods.<br />Most other households' real incomes fall → more of them look for low prices → demand grows for discount stores.<br />Firms in the <strong>middle of the market</strong> lose sales from both sides: the better-off trade up and others trade down. Firm 4, the mid-priced department store chain, is the one most likely to lose out.",
+        "distractors": {
+          "A": "The jeweller sells luxury goods to high earners, whose incomes are rising fastest. It is the firm most likely to <strong>gain</strong> sales.",
+          "B": "With most households' real incomes falling, more shoppers look for low prices. Discount supermarkets tend to gain when demand splits, not lose.",
+          "C": "Every home needs water and sewerage whatever its income, so a change in how income is shared out barely changes this firm's sales."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-3-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In Country R, the gap between rich and poor widens sharply over a decade. Protests and crime rise, and the country has three governments in four years.<br />The most likely effect on Country R's economy is",
+      "options": {
+        "A": "Faster growth, as wide gaps reward enterprise.",
+        "B": "Higher productivity, as workers compete harder for jobs.",
+        "C": "Less investment by firms, as unrest raises the risk.",
+        "D": "More consumer spending, as the rich spend most of any extra income."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Very wide gaps bring <strong>social costs</strong>.<br />A sharply widening gap → more crime and protests → political instability, with three governments in four years → firms cannot be confident about future rules, taxes or safety → they <strong>invest less</strong>, and growth slows.",
+        "distractors": {
+          "A": "Some inequality can reward enterprise, but this gap is widening sharply and has brought unrest and instability. Very wide gaps bring more of the costs, and here the instability outweighs any incentive effect.",
+          "B": "Nothing in the stem suggests workers are working harder. Low income tends to lower productivity, through poorer health and stress, rather than raise it.",
+          "D": "High earners save more of any extra income, while low earners spend almost all of it. The more income goes to the top, the <strong>less</strong> is spent, so consumer spending tends to fall."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-3-q4",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows four countries.<br />Using Table 1, the country where children from low-income families are best protected from the effects of inequality is",
+      "table": {
+        "caption": "Table 1: Inequality, public services and social mobility in four countries",
+        "head": [
+          "Country",
+          "Gini coefficient",
+          "Free healthcare and schooling for every child",
+          "Children from the poorest 20% of families who reach the richest 20% as adults"
+        ],
+        "rows": [
+          ["P", "0.30", "No", "4%"],
+          ["Q", "0.36", "Yes", "15%"],
+          ["R", "0.36", "No", "9%"],
+          ["S", "0.44", "Yes", "8%"]
+        ]
+      },
+      "options": {
+        "A": "Country P.",
+        "B": "Country Q.",
+        "C": "Country R.",
+        "D": "Country S."
+      },
+      "answer": "B",
+      "model": {
+        "working": "How much inequality harms people on low incomes depends on more than the size of the gap. It also depends on <strong>public services</strong> and <strong>social mobility</strong>.<br />Country Q has free healthcare and schooling for every child → poorer families are protected from the worst effects on health and education. And 15% of the poorest children reach the richest 20% → a poor start does not fix where they end up.<br />Q has the most mobility of the four, beats R on services, and beats S on the size of the gap. P has a slightly smaller gap, but no free services and very little mobility.",
+        "distractors": {
+          "A": "This judges on the Gini coefficient alone. P's gap is a little smaller, but without free healthcare and schooling poorer children have no protection from it, and only 4% of them move up.",
+          "C": "R has the same Gini as Q, but no free healthcare or schooling, and only 9% of its poorest children move up. Poorer children in R are more exposed to poor health and fewer qualifications.",
+          "D": "S has free services, but a much wider gap, with a Gini of 0.44, and only 8% of its poorest children move up, against 15% in Q. A wider gap with less mobility brings more of the costs of inequality."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-3-q5",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A chain of bowling centres employs 100 staff. Each year 40 of them leave, and recruiting and training each replacement costs £2,500. The chain raises every member of staff's pay by £1,000 a year, and the number who leave each year falls to 10.<br />Before any change in output per worker, the effect on the chain's yearly costs is",
+      "options": {
+        "A": "A fall of £75,000.",
+        "B": "A fall of £25,000.",
+        "C": "A rise of £25,000.",
+        "D": "A rise of £100,000."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Extra pay: 100 staff × £1,000 = <strong>£100,000</strong> a year more.<br />Saving on staff turnover: leavers fall from 40 to 10, so 30 fewer replacements a year. 30 × £2,500 = <strong>£75,000</strong> a year less.<br />Net effect: £100,000 − £75,000 = a <strong>rise of £25,000</strong>.<br />Three-quarters of the extra pay is recovered before counting anything else. If better-paid, more experienced staff also serve more customers an hour, output per worker rises and some or all of the remaining £25,000 is recovered too.",
+        "distractors": {
+          "A": "£75,000 is only the saving on recruitment and training. It ignores the £100,000 the chain now spends on higher pay.",
+          "B": "The two figures are right, but the sign is wrong. The extra pay (£100,000) is larger than the saving (£75,000), so costs rise, not fall.",
+          "D": "£100,000 is the cost of the pay rise alone. It ignores the 30 replacements a year the chain no longer has to recruit and train, which saves £75,000."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-3-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Country E and Country F have the same Gini coefficient. In Country E, most high earners inherited their wealth, and children from poor families rarely reach university. In Country F, most high earners trained for many years or started businesses, and children from poor families often reach well-paid jobs.<br />The country whose long-run growth is likely to suffer more from its inequality is",
+      "options": {
+        "A": "Country E, as able children from poor families are held back.",
+        "B": "Country E, as its high earners save more of their income.",
+        "C": "Country F, as rewards for training and enterprise widen the gap.",
+        "D": "Neither, as both have the same Gini coefficient."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The effect of inequality depends on its <strong>cause</strong>, not just its size.<br />In Country E, inequality comes from background → able children from poor families do not get the education to match their ability → <strong>wasted talent</strong> → a less skilled workforce → lower productivity and slower long-run growth.<br />In Country F, inequality comes from skill and effort → the reward gives others a reason to train and start businesses → more output. Children can still move up, so little talent is wasted.",
+        "distractors": {
+          "B": "High earners do save more, but their savings fund investment through the banks, which supports growth. This is not what makes E's inequality more harmful.",
+          "C": "Rewards for training and enterprise are the incentive side of inequality. They encourage people to gain skills and take risks, which raises output rather than holding growth back.",
+          "D": "The same Gini coefficient means the same overall gap, but it says nothing about where the gap comes from. Inequality from background wastes talent, while inequality from skill and effort can raise output."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-3-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "To narrow the gap between rich and poor, a government caps every worker's pay at three times the average wage.<br />The cost to the economy that this cap is most likely to cause is that",
+      "options": {
+        "A": "Fewer people train for skilled work, as the reward is capped.",
+        "B": "Low earners spend less of their income, so aggregate demand falls.",
+        "C": "More crime and unrest follow, as the gap between rich and poor widens.",
+        "D": "Spending on benefits rises, as more households fall into poverty."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Some inequality acts as an <strong>incentive</strong>. The chance of higher pay → people train for years, work longer hours or start businesses → higher incomes for them and more output for the economy.<br />A cap on pay removes much of that reward → fewer people train for highly skilled work or take risks → <strong>less skill and enterprise</strong>, and slower growth. This is the cost of pushing the narrowing of the gap too far.",
+        "distractors": {
+          "B": "The cap does not touch low earners' pay, so there is no reason for them to spend less. These are the costs of a <strong>wide</strong> gap, and the cap narrows it.",
+          "C": "Crime and unrest are linked to a <strong>widening</strong> gap. The cap narrows the gap between rich and poor, so it would not cause them.",
+          "D": "The cap limits pay at the top. It does not lower anyone's income towards the poverty line, so it gives no reason for more households to fall into poverty."
+        }
+      }
+    }
+  ]
+}
