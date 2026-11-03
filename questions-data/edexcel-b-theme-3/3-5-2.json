@@ -1,0 +1,179 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-3",
+  "boardName": "Edexcel B Theme 3",
+  "spec": "3.5.2",
+  "slug": "3-5-2-wage-rates",
+  "title": "Wage Rates",
+  "shortTitle": "Wage Rates",
+  "pageTitle": "Wage Rates Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions for Edexcel B A-Level Economics on wage rates: labour demand and supply, skills and training, recession and trade unions.",
+  "intro": "Seven original multiple-choice questions on what sets wage rates: the demand for and supply of labour, the pay-off from skills and training, the effects of recession and redundancies, and the power of trade unions and professional bodies. One is a calculation.",
+  "notesTeaser": "Seven original multiple-choice questions on labour demand and supply, skills and training, recession and redundancies, and trade unions and professional bodies, including a calculation.",
+  "questions": [
+    {
+      "id": "edexcel-b-3-5-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "After a winter with very little snow, fewer people book skiing holidays at a mountain resort. Before the next season, its hotels advertise fewer jobs for room cleaners, even though cleaners' pay and the time it takes to clean a room are both unchanged.<br />This shows that the demand for cleaners is",
+      "options": {
+        "A": "Derived from the demand for hotel stays.",
+        "B": "Determined by how many cleaners want work.",
+        "C": "Fixed by the wage, so it moves only when pay does.",
+        "D": "Unrelated to bookings, as rooms need cleaning anyway."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Labour is a <strong>derived demand</strong>: firms want workers for what they help to produce, not for their own sake.<br />Fewer holiday bookings → fewer rooms to clean → hotels need fewer cleaners. Nothing about the cleaners themselves has changed, neither their pay nor how fast they work. The fall comes entirely from the demand for what they help to provide.",
+        "distractors": {
+          "B": "How many cleaners want work is the <strong>supply</strong> of labour, not the demand for it. Nothing in the stem says the number of people looking for cleaning jobs has changed.",
+          "C": "A change in pay moves firms along their demand for labour. But demand can also shift with no change in pay at all, as here, when the demand for the product falls.",
+          "D": "Rooms only need cleaning if guests stay in them. Fewer bookings mean fewer rooms in use, which is exactly why the hotels want fewer cleaners."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-2-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Supermarkets in a town cut the hourly pay of their shelf-stackers. A care home in the same town keeps its pay for care assistants the same.<br />The most likely effect on the supply of labour to the care home is that it",
+      "options": {
+        "A": "Falls, as low-paid work as a whole looks less attractive.",
+        "B": "Rises, as the care home can now afford more staff.",
+        "C": "Rises, as the job now looks better by comparison.",
+        "D": "Stays the same, as the care home's own pay is unchanged."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The supply of labour to a job depends partly on <strong>pay in similar jobs</strong>. Shelf-stacking and care work are both jobs that people can start without long training, so many people choose between them.<br />Supermarket pay falls → care work pays more by comparison → more people apply to the care home at the same wage → the supply of labour to the care home rises.",
+        "distractors": {
+          "A": "Only supermarket pay has fallen. For anyone choosing between the two jobs, the care home now offers relatively more, so it attracts more applicants, not fewer.",
+          "B": "Whether the care home can afford more staff is about its <strong>demand</strong> for labour, and nothing has changed its costs or income. The question asks about supply, which is the number of people willing to work there.",
+          "D": "A change in the care home's own pay would be a movement along its supply curve. But supply also depends on other things, including what similar jobs pay, and that has changed here."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-2-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": true,
+      "stem": "Pipeline firms find that welders who hold a certain certificate make far fewer faulty joints, so each one adds more to revenue. At the same time, the professional body that awards the certificate makes its exams harder, and fewer welders pass.<br />Sketching the labour market for certified welders, the most likely effect is",
+      "options": {
+        "A": "A higher wage, and employment may rise or fall.",
+        "B": "A higher wage, and employment certain to rise.",
+        "C": "A higher wage, and employment certain to fall.",
+        "D": "A lower wage, and employment certain to rise."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Two curves shift.<br /><strong>Demand:</strong> each certified welder adds more to revenue → firms want more of them at every wage → demand shifts right.<br /><strong>Supply:</strong> harder exams → fewer people qualify → supply shifts left.<br />Both shifts push the wage up, so the wage certainly rises. But the demand shift raises employment and the supply shift cuts it, so the effect on employment depends on which shift is bigger. Sketch both and you can draw it either way.<br />This is how skills and entry requirements raise pay from both sides of the market.",
+        "distractors": {
+          "B": "This is the effect of the demand shift alone. The harder exams shift supply to the left, which cuts employment, so a rise is not certain.",
+          "C": "This is the effect of the supply shift alone. Demand has also risen, which raises employment, so a fall is not certain either.",
+          "D": "A lower wage would need supply to rise or demand to fall. Here demand rises and supply falls, and both push the wage up."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In a recession, sales at a chain of family restaurants fall by 15%. Most of its kitchen and waiting staff are paid the minimum wage.<br />The chain's most likely response is to",
+      "options": {
+        "A": "Cut hourly pay by 15%, in line with its sales.",
+        "B": "Cut staff hours and not replace those who leave.",
+        "C": "Keep hours the same and raise its menu prices.",
+        "D": "Take on more staff, as wages fall in a recession."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Labour is a derived demand. Sales fall → the chain needs fewer hours of work → it cuts labour costs.<br />It cannot do that by cutting pay. Most staff are already on the minimum wage, so a cut would be illegal, and firms rarely cut pay in pounds anyway, as it hurts morale. So it cuts <strong>hours</strong>, and lets the workforce shrink as people leave.",
+        "distractors": {
+          "A": "Staff on the minimum wage cannot legally be paid less. Even where pay is above the minimum, firms rarely cut it in pounds, because of the damage to morale.",
+          "C": "Raising prices when customers are already spending less is likely to cut sales further. With 15% fewer customers, the chain also needs fewer hours of work, so keeping hours the same would raise its costs per meal.",
+          "D": "Recessions slow wage growth, but the chain's staff are on the minimum wage, so its wages cannot fall. And with sales down, it needs fewer staff, not more."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A bank closes its call centre in a town and makes 1,200 staff redundant. Two months later most of them are still looking for work, when a delivery firm in the same town advertises 60 warehouse jobs that need no experience.<br />Compared with before the closure, the delivery firm is most likely to",
+      "options": {
+        "A": "Find fewer applicants, as redundancy pay lets people wait.",
+        "B": "Have to raise its pay to tempt the bank's former staff.",
+        "C": "Hire the staff it needs without raising its starting pay.",
+        "D": "See no change, as the job losses were at another firm."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Redundancies</strong> raise the number of people looking for work in the town.<br />1,200 people lose their jobs → many more people apply for each vacancy → the delivery firm can fill its 60 jobs easily → it has no need to raise its pay to attract staff.<br />This is how redundancies hold down wages for new starters, and why workers who keep their jobs often accept smaller pay rises.",
+        "distractors": {
+          "A": "Redundancy pay may let some people wait for a better job, but the stem says most of the 1,200 are still looking for work, twenty times the number of jobs on offer, and the jobs need no experience. The firm is likely to have more applicants, not fewer.",
+          "B": "The bank's former staff have no job to be tempted away from. The firm needs to raise pay only when workers are scarce, and here they have just become more plentiful.",
+          "D": "The bank and the delivery firm hire from the same local labour market. More people looking for work in the town affects every employer there, not only the one that cut jobs."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-2-q6",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A kitchen-fitting firm pays £6,000 to train one of its fitters in a faster method. Afterwards the fitter installs 5 kitchens a month instead of 4, and each kitchen earns the firm £750 in contribution. The firm raises the fitter's pay by £250 a month to reflect the new skill.<br />Ignoring all other costs, the number of months it takes for the training to pay for itself is",
+      "options": {
+        "A": "6",
+        "B": "8",
+        "C": "12",
+        "D": "24"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Training pays off through higher productivity, but skilled workers also cost more.<br />Extra contribution: 1 extra kitchen × £750 = <strong>£750 a month</strong>.<br />Extra pay: <strong>£250 a month</strong>.<br />Net gain to the firm: £750 − £250 = <strong>£500 a month</strong>.<br />Months to pay back the training: £6,000 ÷ £500 = <strong>12</strong>.<br />This is also the firm's risk. If a rival poaches the fitter by paying more before 12 months are up, the firm never gets its £6,000 back.",
+        "distractors": {
+          "A": "This adds the pay rise to the gain: £6,000 ÷ (£750 + £250) = 6. The pay rise is a cost to the firm, so it must be taken away from the extra contribution, not added to it.",
+          "B": "This ignores the pay rise: £6,000 ÷ £750 = 8. The firm keeps only £500 of the extra £750 a month, because it now pays the fitter £250 more.",
+          "D": "This divides by the pay rise instead of the net gain: £6,000 ÷ £250 = 24. The pay rise is what the firm gives away each month, not what it earns back."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-2-q7",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes four trade unions, each about to ask its employer for a large pay rise.<br />Using Table 1, the union most likely to win a large rise without costing its members their jobs is",
+      "table": {
+        "caption": "Table 1: Four trade unions and their employers",
+        "head": ["Union", "Share of the workforce who are members", "Employer's profits", "Could the work be automated or moved abroad?"],
+        "rows": [
+          ["P", "95%", "Falling, as cheap imports take its sales", "Yes, easily"],
+          ["Q", "35%", "Rising strongly", "No"],
+          ["R", "95%", "Rising strongly", "Yes, easily"],
+          ["S", "75%", "Rising strongly", "No"]
+        ]
+      },
+      "options": {
+        "A": "Union P.",
+        "B": "Union Q.",
+        "C": "Union R.",
+        "D": "Union S."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A union's power to raise pay without losing jobs depends on three things, and Union S is the only one with all three in its favour.<br /><strong>Membership:</strong> 75% is high, so a strike would cost the employer a lot of output.<br /><strong>The employer's position:</strong> its profits are rising strongly, so it can afford to pay more.<br /><strong>Replacing the work:</strong> it cannot be automated or moved abroad, so a large pay rise will not lead the employer to cut jobs.",
+        "distractors": {
+          "A": "Union P has the highest membership, but its employer is losing sales to cheap imports and could move the work abroad. A large rise is likely to cost jobs, or not be won at all.",
+          "B": "Union Q's employer can afford more and cannot replace the work. But with only 35% of the workforce as members, a strike would cost the employer little, so its bargaining power is weak.",
+          "C": "Union R would probably win the rise, with high membership and a profitable employer. But the work can easily be automated or moved abroad, so pushing for a large rise risks costing its members their jobs."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-3",
+  "boardName": "Edexcel B Theme 3",
+  "spec": "3.5.3",
+  "slug": "3-5-3-minimum-wage-legislation",
+  "title": "Minimum Wage Legislation",
+  "shortTitle": "Minimum Wage Legislation",
+  "pageTitle": "Minimum Wage Legislation Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions for Edexcel B A-Level Economics on minimum wages: developing and developed countries, skill shortages, migration and inequality.",
+  "intro": "Seven original multiple-choice questions on minimum wage legislation: what a minimum wage does to jobs, how it works in developing and developed countries, skill shortages and international competitiveness, migration, and the effects on inequality and incentives. One is a calculation.",
+  "notesTeaser": "Seven original multiple-choice questions on minimum wages in developing and developed countries, skill shortages, migration, inequality and incentives, including a calculation.",
+  "questions": [
+    {
+      "id": "edexcel-b-3-5-3-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Country L trains doctors in its own universities, paid for by its government. Within five years of qualifying, a third of them have taken jobs in high-income countries, where pay is far higher.<br />For Country L, this is",
+      "options": {
+        "A": "A brain drain, as skilled workers leave.",
+        "B": "A remittance flow, as money is sent home.",
+        "C": "Migration within an economy, as doctors move for pay.",
+        "D": "Structural change, as jobs move between sectors."
+      },
+      "answer": "A",
+      "model": {
+        "working": "When skilled workers such as doctors, engineers and teachers leave a country to work abroad, that country suffers a <strong>brain drain</strong>.<br />Country L has paid to train these doctors, and a third of them now work elsewhere → fewer doctors at home → worse health care and slower growth.",
+        "distractors": {
+          "B": "Remittances are the money migrants send home to their families. The doctors may well do this, but the stem describes them leaving, not sending money back.",
+          "C": "The doctors move to other countries, so this is migration <strong>between</strong> economies. Migration within an economy is a move inside one country, such as from the countryside to a city.",
+          "D": "Structural change is a long-term shift in jobs between sectors, such as from manufacturing to services. The doctors are still doctors. They have changed country, not sector."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-3-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the demand for and supply of warehouse workers in Country M. The government then sets a minimum wage of $14 an hour.<br />Using Table 1, the fall in the number employed and the unemployment that results are",
+      "table": {
+        "caption": "Table 1: The market for warehouse workers in Country M",
+        "head": ["Hourly wage", "Workers firms want to employ", "Workers who want a job"],
+        "rows": [
+          ["$11", "9,000", "5,000"],
+          ["$12", "8,000", "6,000"],
+          ["$13", "7,000", "7,000"],
+          ["$14", "6,000", "8,000"],
+          ["$15", "5,000", "9,000"]
+        ]
+      },
+      "options": {
+        "A": "1,000 and 1,000",
+        "B": "1,000 and 2,000",
+        "C": "2,000 and 1,000",
+        "D": "2,000 and 2,000"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Before the minimum wage, the market wage is where the numbers match: <strong>$13</strong>, with <strong>7,000</strong> employed.<br />At $14, firms want only 6,000 workers. Fall in employment: 7,000 − 6,000 = <strong>1,000</strong>.<br />At $14, 8,000 people want a job, but only 6,000 are hired. Unemployment: 8,000 − 6,000 = <strong>2,000</strong>.<br />Unemployment is bigger than the job losses because the higher wage also draws 1,000 more people into looking for this work.",
+        "distractors": {
+          "A": "The fall in employment is right, but this assumes the only people out of work are the 1,000 who lost their jobs. The higher wage also brings 1,000 more people into the market, so unemployment is 8,000 − 6,000 = 2,000.",
+          "C": "The two figures are the wrong way round. Employment falls from 7,000 to 6,000, by 1,000. The 2,000 is the gap between those who want a job and those hired.",
+          "D": "Unemployment is right, but the fall in employment compares the number hired before and after, 7,000 and 6,000. The gap between 8,000 and 6,000 is unemployment, not job losses."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-3-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes the minimum wage in four countries. Each country sets its minimum wage at about half of its typical wage.<br />Using Table 1, the country whose minimum wage is likely to protect the smallest share of its workers is",
+      "table": {
+        "caption": "Table 1: Minimum wages in four countries",
+        "head": ["Country", "Minimum wage, $ a month", "Share of workers in informal jobs", "Enforcement"],
+        "rows": [
+          ["W", "95", "40%", "Regular inspections and fines"],
+          ["X", "2,400", "5%", "Regular inspections and fines"],
+          ["Y", "1,900", "10%", "Few inspectors"],
+          ["Z", "160", "80%", "Few inspectors"]
+        ]
+      },
+      "options": {
+        "A": "Country W.",
+        "B": "Country X.",
+        "C": "Country Y.",
+        "D": "Country Z."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A minimum wage only protects workers in jobs the law can see and check.<br />In Country Z, <strong>80%</strong> of workers are in the informal economy, in unregistered jobs the law rarely reaches. And with <strong>few inspectors</strong>, even employers in formal jobs are unlikely to be caught paying less.<br />This is typical of a developing country, and is why a minimum wage there can change much less than it seems.",
+        "distractors": {
+          "A": "Country W has the lowest minimum wage in dollars, but that reflects lower prices and productivity: it is still about half the typical wage there. The level in dollars does not decide how many workers the law protects. Its informal economy is half the size of Z's, and the law is enforced.",
+          "B": "Country X has the highest minimum wage, and a formal, well-inspected labour market. Almost every worker is covered and the law is checked, so it protects more workers than in any other country here.",
+          "C": "Country Y has few inspectors, like Z. But 90% of its workers are in registered jobs, so far more of them are covered than in Z, where most work is informal."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Country V raises its minimum wage by 30%. Country W, whose factories make similar toys for the same global brands, keeps its minimum wage unchanged. In both countries most toy workers are paid the minimum wage, and output per worker is the same and does not change.<br />For workers in Country V's toy factories, the most likely result is",
+      "options": {
+        "A": "Higher pay and more jobs, as workers spend more.",
+        "B": "Higher pay for those still employed, but fewer jobs.",
+        "C": "Lower pay, as the brands move orders to Country W.",
+        "D": "No change in pay, as the brands set what they pay."
+      },
+      "answer": "B",
+      "model": {
+        "working": "There are two effects, on different workers.<br /><strong>Workers who keep their jobs:</strong> the law raises their pay by 30%.<br /><strong>Jobs:</strong> wages rise and output per worker does not → unit labour costs rise → Country V's toys become less price competitive → the brands, which compare costs between countries, move some orders to Country W → fewer factory jobs in V.",
+        "distractors": {
+          "A": "Workers in V do spend more, but very little of it is on the toys they make, which are sold to global brands. The brands buy wherever costs are lowest, and V's costs have just risen.",
+          "C": "Orders do move to Country W, but this costs jobs in V, not pay. The workers who stay must legally be paid the new, higher minimum.",
+          "D": "The brands decide where to place orders, but the factories in V employ the workers and must obey V's law. The minimum wage is the lowest pay they can legally give."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-3-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Countries J and K both export software, and both have a shortage of software engineers. Training a new engineer takes four years in each. Firms in J can hire engineers from abroad within weeks, but in K, migration rules mean it takes 18 months.<br />Over the next two years, the country whose international competitiveness is likely to suffer more, and the main reason, is",
+      "options": {
+        "A": "Country J, as migrants will push its wages up.",
+        "B": "Country J, as its firms will train fewer local staff.",
+        "C": "Country K, as its firms will turn down or delay orders.",
+        "D": "Neither, as training takes four years in both."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A <strong>skill shortage</strong> weakens competitiveness. How much damage it does depends on how fast firms can fill the gaps.<br />Training takes four years in both countries, so over two years neither can train its way out. The difference is <strong>migration rules</strong>. J's firms fill the gaps from abroad within weeks. K's cannot, so its jobs stay unfilled → it has to turn orders down or deliver late → overseas customers buy from rivals. K's firms also compete for scarce staff, which pushes wages and unit costs up.",
+        "distractors": {
+          "A": "Migrants add to the supply of engineers in J, which eases the shortage. That holds wages down rather than pushing them up.",
+          "B": "Firms that can hire from abroad may train a little less, but any training started now pays off only after four years. Over the next two years, what matters is which country can fill its jobs.",
+          "D": "Training takes four years in both countries, but firms in J have a faster way to fill the gaps: hiring from abroad. So the shortage does less damage in J than in K."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-3-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government raises its minimum wage by 8%. A study of the workers who get the rise finds that 40% of them live with a partner or parent who earns well above average pay.<br />This finding suggests that the rise in the minimum wage",
+      "options": {
+        "A": "Does little to narrow the gap between low and average pay.",
+        "B": "Reduces the incentive for low-paid people to work.",
+        "C": "Targets household poverty less precisely than benefits do.",
+        "D": "Will cause large job losses among low-paid workers."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A minimum wage raises the pay of low-paid <strong>workers</strong>. But poverty is measured by <strong>household</strong> income.<br />Here 40% of the workers who get the rise live in households with a well-paid partner or parent → those households are not poor → a large part of the gain goes to households that are not in poverty.<br />Benefits are aimed at households by their income, so they target poverty more precisely.",
+        "distractors": {
+          "A": "Every worker on the minimum wage gets the 8% rise, whoever they live with, so the gap between low pay and average pay does narrow. The finding is about households, not about individual pay.",
+          "B": "A higher minimum wage makes a job pay more compared with benefits, so if anything it strengthens the incentive to work. The study says nothing about incentives.",
+          "D": "Job losses depend on how far the minimum wage is above the market wage, not on who the low-paid live with. The study tells us who gains from the rise, not how many jobs it costs."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-3-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In a town, 2,000 people of working age are neither in work nor looking for it, mostly because a job would pay them little more than they receive in benefits. The minimum wage then rises by 10%, and benefits are unchanged.<br />The most likely effect on these 2,000 people is that",
+      "options": {
+        "A": "More of them look for work, raising the supply of labour.",
+        "B": "Fewer of them look for work, as firms want fewer workers.",
+        "C": "None of them change, as they are not in the labour force.",
+        "D": "None of them change, as only cuts to benefits matter."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A minimum wage changes <strong>incentives</strong>. The rise makes a job pay more compared with benefits → working is now worth more than not working → more of these people look for work → the supply of labour rises.",
+        "distractors": {
+          "B": "A higher minimum wage may lead firms to want fewer workers, but that is the demand for labour. The choice to look for work depends on what a job pays compared with not working, and that has risen.",
+          "C": "They are outside the labour force now, but that is a choice that can change. A better return from working is exactly what draws people into the labour force.",
+          "D": "What matters is the gap between pay in work and income out of it. Cutting benefits widens that gap, but so does raising the minimum wage."
+        }
+      }
+    }
+  ]
+}

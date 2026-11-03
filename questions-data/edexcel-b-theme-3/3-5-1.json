@@ -1,0 +1,209 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-3",
+  "boardName": "Edexcel B Theme 3",
+  "spec": "3.5.1",
+  "slug": "3-5-1-employment-patterns",
+  "title": "Employment Patterns",
+  "shortTitle": "Employment Patterns",
+  "pageTitle": "Employment Patterns Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions for Edexcel B A-Level Economics on employment patterns: the global labour force, structural change and linked labour markets.",
+  "intro": "Eight original multiple-choice questions on employment patterns: why the global labour force has grown and who gains from it, the four sectors and structural change, what a closure does to a town, and how labour markets in different countries are linked. One is a calculation.",
+  "notesTeaser": "Eight original multiple-choice questions on the global labour force, the four sectors, structural change and the links between countries' labour markets, including a calculation.",
+  "questions": [
+    {
+      "id": "edexcel-b-3-5-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A company in Cornwall catches fish, smokes and tins part of its catch in its own factory, serves seafood in its restaurant, and runs a laboratory that researches new ways to keep fish fresh, which it licenses to other firms.<br />The tinning and the laboratory work fall in the",
+      "options": {
+        "A": "Primary and quaternary sectors.",
+        "B": "Primary and tertiary sectors.",
+        "C": "Secondary and quaternary sectors.",
+        "D": "Secondary and tertiary sectors."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Classify each activity by what it does.<br />Tinning turns a raw material, the fish, into a good, a tin of fish. That is the <strong>secondary</strong> sector.<br />The laboratory does research and development and sells the knowledge it produces. That is a knowledge-based service, so it is in the <strong>quaternary</strong> sector.<br />For completeness: catching the fish is primary and the restaurant is tertiary.",
+        "distractors": {
+          "A": "The laboratory is right, but tinning is not primary. The primary sector extracts raw materials, as the fishing boats do. Smoking and tinning the catch turns it into a product, which is secondary.",
+          "B": "Both are wrong. Tinning is processing, not catching, so it is secondary. Research and development is a service, but a knowledge-based one, so it goes in the quaternary sector, not the tertiary.",
+          "D": "Tinning is right, but research and development is not an ordinary service like retail or transport. A service built on knowledge, such as R&amp;D, IT or consultancy, is in the quaternary sector."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-1-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows how output and the number of jobs changed in four industries in Country R over 20 years.<br />Using Table 1, the industry whose job losses are best explained by each worker producing more, rather than by a fall in output, is",
+      "table": {
+        "caption": "Table 1: Change in output and jobs in four industries in Country R, 2005 to 2025",
+        "head": ["Industry", "Change in output", "Change in jobs"],
+        "rows": [
+          ["Arable farming", "+10%", "−35%"],
+          ["Car making", "−30%", "−35%"],
+          ["Clothing", "−40%", "−45%"],
+          ["Coal mining", "−80%", "−85%"]
+        ]
+      },
+      "options": {
+        "A": "Arable farming.",
+        "B": "Car making.",
+        "C": "Clothing.",
+        "D": "Coal mining."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Compare the two columns. In arable farming, output <strong>rose</strong> by 10% while jobs fell by 35%. The farms are producing more with far fewer workers, so the job losses cannot come from falling output. They come from higher productivity, such as bigger machines doing work that people used to do.<br />In the other three industries, output fell by almost as much as jobs did. Those job losses are mainly explained by falling output, from causes such as global competition or falling demand.<br />This is one cause of <strong>structural change</strong>: jobs in a sector can fall even when its output does not.",
+        "distractors": {
+          "B": "Car making lost the same share of jobs as farming, 35%. But its output fell by 30%, so most of those jobs went because it makes fewer cars, not because each worker makes more. Read both columns, not only the jobs column.",
+          "C": "Clothing's jobs fell by 45%, but its output fell by 40%. Nearly all of the job losses come from making less, as you would expect if production had moved to lower-cost countries.",
+          "D": "Coal mining has the biggest fall in jobs, but also the biggest fall in output, 80%. The size of the job losses is not the question. The cause is, and here the cause is mainly falling output."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-1-q3",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the number of jobs in Country T in two years.<br />Between 1990 and 2025, the share of all jobs in Country T that are in manufacturing fell by",
+      "table": {
+        "caption": "Table 1: Jobs in Country T",
+        "head": ["Year", "All jobs", "Manufacturing jobs"],
+        "rows": [
+          ["1990", "20 million", "5 million"],
+          ["2025", "25 million", "2.5 million"]
+        ]
+      },
+      "options": {
+        "A": "10 percentage points",
+        "B": "15 percentage points",
+        "C": "50 percentage points",
+        "D": "60 percentage points"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Work out the share in each year, using that year's total.<br />1990: 5 million ÷ 20 million × 100 = <strong>25%</strong>.<br />2025: 2.5 million ÷ 25 million × 100 = <strong>10%</strong>.<br />Fall in the share: 25 − 10 = <strong>15 percentage points</strong>.<br />This is <strong>structural change</strong>: a long-term shift in the share of jobs between sectors. Manufacturing jobs halved while total jobs grew, so manufacturing went from one job in four to one job in ten.",
+        "distractors": {
+          "A": "This uses the 2025 total, 25 million, for both years: 5 ÷ 25 = 20% and 2.5 ÷ 25 = 10%. Each year's share must be worked out from that year's total, and in 1990 there were only 20 million jobs.",
+          "C": "This is the percentage fall in the <strong>number</strong> of manufacturing jobs: (5 − 2.5) ÷ 5 × 100 = 50%. The question asks about the <strong>share</strong> of all jobs, which also depends on total jobs growing from 20 million to 25 million.",
+          "D": "This is the percentage change in the share, (25 − 10) ÷ 25 × 100 = 60%, not the change in percentage points. When a share falls from 25% to 10%, it falls by 15 percentage points, which is a 60% fall in the share itself."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Over 30 years, hundreds of millions of workers in low-wage countries come within reach of global firms. A high-income country has two groups of workers: machinists in its clothing factories, and engineers who design aircraft parts that are sold all over the world.<br />The most likely effect on each group, in jobs and pay, is that",
+      "options": {
+        "A": "Engineers gain and machinists gain.",
+        "B": "Engineers gain and machinists lose.",
+        "C": "Engineers lose and machinists gain.",
+        "D": "Engineers lose and machinists lose."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The growth of the global labour force affects different workers in different ways.<br /><strong>Machinists:</strong> they now compete with workers abroad who cost far less → clothing firms move production overseas or buy from suppliers there → job losses, or lower pay for those who stay.<br /><strong>Engineers:</strong> firms can sell into much bigger global markets → more demand for design and engineering skills, which few people worldwide have → higher wages.<br />This is why an answer should name the group: \"workers lose out\" is too vague.",
+        "distractors": {
+          "A": "Consumers in the high-income country do gain from cheaper clothes, but the question asks about jobs and pay. Machinists face direct competition from much cheaper workers abroad, so their jobs and pay are at risk.",
+          "C": "This is the wrong way round. Low-skilled work that can be moved abroad is the most exposed to cheaper workers. Highly skilled design work gains from selling into bigger global markets.",
+          "D": "The engineers do not lose. Few workers in low-wage countries have their skills, so they face little extra competition, while the global market for what they design grows."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-1-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Video calls and cloud software let a London law firm hire staff to work from any country. It has four kinds of role: cleaning its office, greeting clients at reception, reviewing contracts, which needs a UK legal qualification, and typing up letters that its lawyers have recorded.<br />The role whose pay is most likely to be held down by competition from workers abroad is",
+      "options": {
+        "A": "Cleaning the office, as it needs few skills.",
+        "B": "Greeting clients, as it is low-paid work.",
+        "C": "Reviewing contracts, as it is the best-paid role.",
+        "D": "Typing up letters, as it can be done online."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Digital services link labour markets: work that can be done online from anywhere puts UK staff in competition with workers abroad.<br />Two things decide how exposed a role is. <strong>Can the work move?</strong> Cleaning and reception must be done in the London office. <strong>How specialised is it?</strong> Few people abroad hold a UK legal qualification.<br />Typing up recorded letters can be done online, needs no rare skill and can be checked easily. So the firm can hire someone abroad who costs less, and that holds down the pay it offers for the role in London.",
+        "distractors": {
+          "A": "Cleaning needs few skills, but the cleaner has to be in the London office. Work that has to be done where the customer is cannot be moved abroad, however low-skilled it is.",
+          "B": "Being low-paid does not make a job exposed to competition from abroad. Greeting clients has to be done in person, at the office, so no one abroad can do it.",
+          "C": "A large saving would be tempting, but the role needs a UK legal qualification. The more specialised the job, the fewer people worldwide can do it, so the less its pay is held down by competition from abroad."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Town X and Town Y each have a factory with 2,000 jobs. The factory in Town X closes suddenly. The one in Town Y shrinks to nothing over ten years, as staff who retire or leave are not replaced.<br />Compared with Town Y, Town X is most likely to see",
+      "options": {
+        "A": "Less unemployment, as its workers retrain sooner.",
+        "B": "More unemployment, among the factory's staff only.",
+        "C": "More unemployment, at the factory and in local shops.",
+        "D": "The same unemployment, as the same jobs are lost."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The cost of structural change depends on its <strong>speed</strong>.<br /><strong>Town Y:</strong> jobs go slowly, as people retire or move on by choice. Few people are left without work, and the town has years to adjust.<br /><strong>Town X:</strong> 2,000 people lose their jobs at once → many lack the skills for the jobs that are available or live in the wrong place → structural unemployment. That is the first step.<br />The second step: those workers now spend much less → local shops and cafés lose sales → they cut jobs too. So unemployment rises beyond the factory.",
+        "distractors": {
+          "A": "Being made redundant may push some workers to retrain, but retraining takes time, and not everyone can or will. A sudden closure leaves people stranded. A slow decline lets them retire or retrain without a spell out of work.",
+          "B": "This stops one step too early. When 2,000 wages disappear at once, spending in the town falls, so local firms lose sales and cut jobs as well.",
+          "D": "The same number of jobs goes, but not the same number of people out of work. In Town Y, the jobs disappear as people retire or leave by choice, so few are left unemployed."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-1-q7",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Over 20 years, the number of people of working age in Country W stays the same, but its labour force grows by 15%.<br />The most likely reason is",
+      "options": {
+        "A": "A fall in the number of people who are unemployed.",
+        "B": "A rise in the birth rate during those 20 years.",
+        "C": "A rise in the number of migrants of working age.",
+        "D": "A rise in the share of women who work or seek work."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The <strong>labour force</strong> is everyone of working age who is either in work or actively looking for it.<br />The working-age population has not changed, so the labour force can only grow if a bigger share of those people choose to work or look for work. More women entering paid work does exactly that, and it is one of the main reasons the global labour force has grown.",
+        "distractors": {
+          "A": "Unemployed people are already in the labour force, because they are looking for work. If some of them find jobs, they move from unemployed to employed, and the labour force stays the same size.",
+          "B": "Children born during these 20 years are not yet of working age, so they cannot join the labour force. And the stem says the working-age population is unchanged.",
+          "C": "More working-age migrants would raise the number of people of working age, which the stem says is unchanged. Migration can grow a labour force, but not in this case."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-1-q8",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A distillery in Scotland sells most of its whisky to buyers in the USA. When the USA goes into a recession, the distillery cuts its staff's hours. Two years later, when the recession ends, it restores them.<br />This is best described as",
+      "options": {
+        "A": "Interdependence of labour markets through trade.",
+        "B": "Interdependence of labour markets through firms moving production.",
+        "C": "Structural change, as jobs move from one sector to another.",
+        "D": "Structural unemployment, as skills no longer match jobs."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Labour markets are <strong>interdependent</strong> when a change in one country affects jobs and wages in another.<br />Here the link is <strong>trade</strong>: the USA goes into recession → its buyers import less whisky → the Scottish distillery sells less → it cuts its workers' hours. A downturn in one country has reached workers in another.<br />The hours come back when the recession ends, so this is a temporary effect, not a long-term change.",
+        "distractors": {
+          "B": "Firms moving production is a different link, where an MNC shifts factories to a cheaper country. The distillery has not moved anything. It has lost sales to a country in recession.",
+          "C": "Structural change is a long-term shift in jobs between sectors. Here the hours return after two years, and nothing suggests the whisky industry is shrinking for good.",
+          "D": "Structural unemployment is when workers' skills or location no longer match the jobs available. No one here loses their job, and their skills are still what the distillery needs once sales recover."
+        }
+      }
+    }
+  ]
+}
