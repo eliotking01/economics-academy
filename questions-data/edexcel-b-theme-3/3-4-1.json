@@ -1,0 +1,206 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-3",
+  "boardName": "Edexcel B Theme 3",
+  "spec": "3.4.1",
+  "slug": "3-4-1-the-impact-of-multinational-corporations",
+  "title": "The Impact of Multinational Corporations (MNCs)",
+  "shortTitle": "The Impact of Multinational Corporations (MNCs)",
+  "pageTitle": "Impact of Multinational Corporations Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions for Edexcel B A-Level Economics on how MNCs affect local jobs and firms, the current account, and tax and transfer pricing.",
+  "intro": "Eight original multiple-choice questions on how a multinational affects the area it sets up in and the wider economy: local residents, wages and rivals, FDI, the current account, consumers, business culture, and tax and transfer pricing. One is a calculation.",
+  "notesTeaser": "Eight original multiple-choice questions on how MNCs affect local workers, firms and communities, the national economy, and tax revenues through transfer pricing, including a calculation.",
+  "questions": [
+    {
+      "id": "edexcel-b-3-4-1-q1",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A global online retailer opens a large distribution centre on the edge of a market town. Around 300 lorries a day now use the main road through the town to reach it.<br />The local group most likely to lose out is",
+      "options": {
+        "A": "Cafés near the site, which serve its staff.",
+        "B": "Residents who live along the main road.",
+        "C": "Unemployed people looking for work in the town.",
+        "D": "Van drivers hired to deliver its parcels."
+      },
+      "answer": "B",
+      "model": {
+        "working": "An MNC's site affects the <strong>community and environment</strong> around it, as well as jobs and local firms. Here: 300 lorries a day on one road → more noise and fumes → air quality falls → the health and quality of life of the people living along it suffer.<br />Those residents bear a cost but share in none of the gains, so they are the group most likely to lose out.",
+        "distractors": {
+          "A": "The site's staff spend money nearby, so cafés close to it gain customers. They are one of the local firms that benefit from an MNC's arrival.",
+          "C": "A large distribution centre hires local people, so unemployed people in the town are among those most likely to gain.",
+          "D": "Drivers hired to deliver its parcels have work because of the site. They gain from it, even if they share the busy road."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-1-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A foreign carmaker opens a factory in a town where few people are out of work. To attract staff it pays well above local rates. A hotel in the town never deals with the factory.<br />Over the next year, the hotel's wage costs are most likely to",
+      "options": {
+        "A": "Fall, as fewer people in the town are now out of work.",
+        "B": "Fall, as the factory's workers spend more at the hotel.",
+        "C": "Rise, as it must pay more to keep its staff.",
+        "D": "Stay the same, as it does not trade with the factory."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Few people are out of work, so the factory can only fill its jobs by taking workers from other employers. It pays more than local firms → some hotel staff leave for the factory, and others could → the hotel raises pay to keep them → its wage costs rise.<br />This is how an MNC can raise wages across a whole area, including at firms that never deal with it.",
+        "distractors": {
+          "A": "This gets the labour market the wrong way round. With fewer people out of work, there are fewer people looking for jobs, so employers have to pay more to hire and keep staff, not less.",
+          "B": "More spending at the hotel raises its <em>sales</em>, not its wage costs. The question is about what it pays its staff, which depends on what other employers in the town are offering.",
+          "D": "The hotel does not trade with the factory, but it hires from the same pool of local workers. Competing for staff affects its costs even though it never sells to or buys from the factory."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two foreign MNCs each invest $400 million in Country V. One builds a new factory with new machinery. The other buys an established chocolate maker from its domestic owners and changes nothing about how it runs.<br />The new factory is more likely to raise V's long-run growth, because it",
+      "options": {
+        "A": "Adds new capital to the country's productive capacity.",
+        "B": "Brings more foreign currency into V than the takeover.",
+        "C": "Counts as inward FDI, while the takeover does not.",
+        "D": "Sends no profit back to the MNC's home country."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Long-run growth comes from more productive capacity: more or better capital and labour. The new factory and machinery are capital that did not exist before → V can produce more → potential output rises.<br />The takeover changes who owns the chocolate maker, but not how much it can make. The money goes to the former owners, and the country's productive capacity is the same as before. This is why some FDI adds much less than its size suggests.",
+        "distractors": {
+          "B": "Both MNCs bring in $400 million, so the inflow of foreign currency is the same. The difference is what the money buys: new capital in one case, an existing firm in the other.",
+          "C": "Buying a controlling stake in a domestic firm is also foreign direct investment. Both count as inward FDI. They differ in whether they add new capacity.",
+          "D": "Nothing in the stem says where either MNC's profit goes. A new factory can send its profit home just as a takeover can, so this cannot be what makes the difference."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-1-q4",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A foreign MNC runs four plants in Country R, and each sells all of its output abroad. Table 1 shows each plant's yearly exports, the parts it imports and the profit it sends to the MNC's home country.<br />Counting only these flows, the plant that adds most to Country R's current account each year is",
+      "table": {
+        "caption": "Table 1: Yearly flows at four plants in Country R ($ million)",
+        "head": [
+          "",
+          "Exports",
+          "Imported parts",
+          "Profit sent to home country"
+        ],
+        "rows": [
+          ["Plant 1", "550", "350", "20"],
+          ["Plant 2", "700", "400", "200"],
+          ["Plant 3", "500", "80", "300"],
+          ["Plant 4", "400", "100", "80"]
+        ]
+      },
+      "options": {
+        "A": "Plant 1.",
+        "B": "Plant 2.",
+        "C": "Plant 3.",
+        "D": "Plant 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Exports earn foreign currency, so they are an inflow on the current account. Imported parts and profit sent to the home country are both <strong>outflows</strong>. Each plant's net effect is exports minus both outflows:<br />Plant 1: 550 − 350 − 20 = <strong>+$180m</strong>.<br />Plant 2: 700 − 400 − 200 = <strong>+$100m</strong>.<br />Plant 3: 500 − 80 − 300 = <strong>+$120m</strong>.<br />Plant 4: 400 − 100 − 80 = <strong>+$220m</strong>.<br />Plant 4 exports the least, but it buys few parts abroad and sends little profit home, so more of what it earns stays in the country.",
+        "distractors": {
+          "A": "This subtracts the profit sent home but not the imported parts: 550 − 20 = 530 is the largest on that basis. Imported parts are paid for in foreign currency too, so they are also an outflow.",
+          "B": "Plant 2 has the largest exports, but it also has the largest import bill and sends a lot of profit home. Its net addition is only $100m, the smallest of the four.",
+          "C": "This subtracts the imported parts but not the profit: 500 − 80 = 420 is the largest on that basis. Profit sent to the home country leaves the current account too, and Plant 3 sends the most."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-1-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A global coffee chain opens 40 cafés in a city in Country T. Its economies of scale let it charge less than the city's independent cafés, and over five years many of them close. By then it has few rivals left in the city.<br />Over the five years, the price of a coffee in the city is most likely to",
+      "options": {
+        "A": "Fall at first, and keep falling as the chain grows.",
+        "B": "Fall at first, then rise as competition weakens.",
+        "C": "Rise at first, and stay high as its brand is known.",
+        "D": "Rise at first, then fall as the chain grows."
+      },
+      "answer": "B",
+      "model": {
+        "working": "At first: economies of scale → lower costs → the chain undercuts local cafés → consumers pay less and have more choice.<br />Later: local rivals lose sales and close → competition weakens → the chain has more power over price → it can raise prices with less risk of losing customers.<br />The gain to consumers depends on how much competition is left. Lower prices may last only while the chain still has rivals.",
+        "distractors": {
+          "A": "Lower costs allow lower prices, but a firm only has to pass them on while rivals could take its customers. Once most rivals have closed, there is little pressure to keep cutting.",
+          "C": "The stem says the chain charges less than the independent cafés, so the price does not rise at first. A known brand can let a firm charge more, but this one entered on price.",
+          "D": "This reverses the order. The chain enters with lower prices, and it is only after rivals have closed that it can raise them."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-1-q6",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A foreign MNC opens a chain of hotels in Country K. Unlike most employers there, it refuses to deal with trade unions and sets each worker's pay separately. Within a few years several local hotel groups have done the same.<br />Among an MNC's effects on a national economy, this is best described as a change in",
+      "options": {
+        "A": "Business culture.",
+        "B": "Consumer choice.",
+        "C": "FDI flows.",
+        "D": "Technology and skills transfer."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Business culture</strong> is the way firms in a country are run: how managers deal with staff, unions and suppliers. An MNC brings its own practices, and local firms may copy them.<br />Here a practice that clashes with local custom, refusing to deal with trade unions, spreads from the MNC to local hotel groups. That is a change in business culture, and one usually counted as a cost rather than a benefit.",
+        "distractors": {
+          "B": "Consumer choice is about the goods and services buyers can choose between. Nothing here changes what hotel guests can buy. The change is in how firms treat their staff.",
+          "C": "FDI flows are the money an MNC invests in a country. Opening the hotels is FDI, but what spreads to local firms here is a way of managing workers, not investment.",
+          "D": "Technology and skills transfer is workers and local firms learning new production methods and skills. Refusing to deal with unions is a management practice, not a new method of production."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-1-q7",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An MNC's subsidiary in Country H makes a profit of $8 million a year, taxed at 25%. A sister company in Country L, where profit is taxed at 10%, starts charging it $5 million a year for management services. Nothing else about either company changes.<br />The MNC's total yearly tax bill across the two countries falls by",
+      "options": {
+        "A": "$500,000",
+        "B": "$750,000",
+        "C": "$1,200,000",
+        "D": "$1,250,000"
+      },
+      "answer": "B",
+      "model": {
+        "working": "This is <strong>transfer pricing</strong>: the charge moves $5 million of profit from Country H to Country L. The MNC's total profit is unchanged.<br />Before: $8m × 25% = <strong>$2,000,000</strong> tax in H.<br />After: H's profit falls to $8m − $5m = $3m, taxed at 25% = <strong>$750,000</strong>. L's profit rises by $5m, taxed at 10% = <strong>$500,000</strong>. Total = <strong>$1,250,000</strong>.<br />Fall in the tax bill: $2,000,000 − $1,250,000 = <strong>$750,000</strong>.<br />As a check, each of the $5 million moved is now taxed at 10% instead of 25%: $5m × 15% = $750,000.",
+        "distractors": {
+          "A": "This is the extra tax the MNC now pays in Country L, $5m × 10%. It is part of the working, but it is not the saving.",
+          "C": "This applies the 15-point difference in tax rates to the whole $8 million of profit. Only the $5 million that has been moved is now taxed at the lower rate. The other $3 million is still taxed in H at 25%.",
+          "D": "This is the tax that Country H's government loses, $5m × 25%. It forgets that the $5 million is still taxed in Country L, at 10%, so the MNC saves less than H loses."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-1-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Two chains of sandwich shops compete in the UK, and before any fees each makes £6 million profit a year. One is UK-owned. The other is owned by an MNC, whose sister company in a low-tax country charges the UK chain a large fee to use its brand.<br />Compared with the MNC that owns its rival, the UK-owned chain is most likely to be",
+      "options": {
+        "A": "Better placed, as the MNC pays more tax in total.",
+        "B": "Better placed, as the brand fee raises the MNC's costs.",
+        "C": "Equally placed, as both pay the same rate of UK tax.",
+        "D": "Worse placed, as the MNC keeps more profit after tax."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The brand fee is paid from one part of the MNC to another, so the money never leaves the group. What it does is move profit out of the UK → that profit is taxed at the lower rate abroad → the MNC pays less tax in total on the same £6 million.<br />The UK-owned chain pays the full UK rate on all its profit → the MNC keeps more after tax → it can afford lower prices or more investment → the UK-owned chain competes at a disadvantage.",
+        "distractors": {
+          "A": "It is the other way round. Moving profit to a low-tax country cuts the MNC's total tax bill. That is the reason for setting the fee.",
+          "B": "The fee is a cost to the MNC's UK chain, but it is income for its sister company in the same group. Across the MNC as a whole, nothing is lost, and the lower tax rate leaves it better off.",
+          "C": "Both pay the same rate on the profit they report in the UK, but the MNC reports less profit there. What matters is the total tax paid, and the MNC's is lower."
+        }
+      }
+    }
+  ]
+}
