@@ -1,0 +1,202 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-4",
+  "boardName": "Edexcel B Theme 4",
+  "spec": "4.3.3",
+  "slug": "4-3-3-policies-to-deal-with-market-failure",
+  "title": "Policies to Deal with Market Failure",
+  "shortTitle": "Policies to Deal with Market Failure",
+  "pageTitle": "Policies to Deal with Market Failure Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions for Edexcel B A-Level Economics on government provision, indirect taxes, tradable permits, information and regulation.",
+  "intro": "Seven original multiple-choice questions on policies to deal with market failure: government provision, indirect taxes, subsidies, tradable pollution permits, information and regulation, and their short-term and long-term impact. Two are calculations.",
+  "notesTeaser": "Seven original multiple-choice questions on government provision, indirect taxes, subsidies, tradable permits, information and regulation, including two calculations.",
+  "questions": [
+    {
+      "id": "edexcel-b-4-3-3-q1",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A glassworks must hold one pollution permit for each tonne of carbon dioxide it emits. It holds 4,000 permits and expects to emit 5,000 tonnes this year, and permits can be bought or sold at £70 each. It could instead fit new furnace burners, costing £84,000 a year, which would cut its emissions by 1,500 tonnes.<br />Compared with buying the permits it needs, fitting the burners would change the glassworks' costs for the year by",
+      "options": {
+        "A": "A fall of £21,000.",
+        "B": "A fall of £35,000.",
+        "C": "A rise of £14,000.",
+        "D": "A rise of £49,000."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Without the burners:</strong> it emits 5,000 tonnes but holds 4,000 permits, so it must buy 1,000 × £70 = <strong>£70,000</strong> of permits.<br /><strong>With the burners:</strong> it emits 5,000 − 1,500 = 3,500 tonnes, leaving 500 spare permits to sell for 500 × £70 = £35,000. Net cost = £84,000 − £35,000 = <strong>£49,000</strong>.<br />Change = £49,000 − £70,000 = <strong>a fall of £21,000</strong>.<br />Permits give pollution a price. A firm that can cut emissions for less than the permit price saves money by doing so, and can sell the permits it no longer needs.",
+        "distractors": {
+          "B": "£35,000 is the income from selling the 500 spare permits. It leaves out both the £84,000 cost of the burners and the £70,000 the glassworks would otherwise spend on permits.",
+          "C": "This compares the burners' £84,000 with the £70,000 of permits, but forgets that the burners leave 500 spare permits to sell for £35,000.",
+          "D": "£49,000 is the net cost of the burners. The question asks for the change compared with buying permits, which would itself cost £70,000."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-3-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government runs two subsidies for three years and then ends both. One halves the cost of fitting solar panels to homes. The other halves bus fares.<br />Once both have ended, the effect more likely to last is that of the",
+      "options": {
+        "A": "Bus subsidy, as bus firms will keep fares at the lower level.",
+        "B": "Bus subsidy, as it reached far more households each year.",
+        "C": "Solar subsidy, as the government keeps paying for the panels.",
+        "D": "Solar subsidy, as the panels keep working for years."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A subsidy lowers the price, so more of the good is bought. What happens when it ends depends on what was bought. Solar panels fitted during the three years stay on the roofs and keep generating cleaner electricity for years. Bus fares go back up when the subsidy ends, so bus use is likely to drift back towards where it was. Where a subsidy pays for something that lasts, such as better insulated homes, its effect can outlive the subsidy.",
+        "distractors": {
+          "A": "The subsidy paid half of each fare. Once it ends, the bus firms' costs have not changed, so fares are likely to rise back to their old level.",
+          "B": "How many households a subsidy reaches while it runs says nothing about whether its effect lasts once the payments stop.",
+          "C": "Both subsidies have ended, so the government is no longer paying for anything. The solar effect lasts because the panels already fitted keep working."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-3-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government taxes breakfast cereals that contain more than 20g of sugar per 100g. Table 1 shows the market for cereals before and after the tax.<br />Using Table 1, the most likely reason that sales of high-sugar cereals fell far more in the long run than in the short run is that",
+      "table": {
+        "caption": "Table 1: The market for breakfast cereals before and after the sugar tax",
+        "head": [
+          "",
+          "Average price of a high-sugar cereal",
+          "High-sugar cereals sold (million boxes)",
+          "Low-sugar cereals sold (million boxes)",
+          "Number of high-sugar cereals on sale"
+        ],
+        "rows": [
+          [
+            "The year before the tax",
+            "£3.00",
+            "200",
+            "150",
+            "60"
+          ],
+          [
+            "One year after",
+            "£3.60",
+            "190",
+            "160",
+            "58"
+          ],
+          [
+            "Four years after",
+            "£3.60",
+            "90",
+            "265",
+            "25"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Demand became more price inelastic over time.",
+        "B": "Firms cut the sugar in many of their cereals.",
+        "C": "The price of high-sugar cereals rose further.",
+        "D": "The tax was charged on low-sugar cereals too."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Short run:</strong> the price rose 20% (£3.00 to £3.60) but sales fell only 5% (200 to 190 million boxes), so demand was price inelastic at first and habits barely changed.<br /><strong>Long run:</strong> the price did not change after the first year, yet sales of high-sugar cereals more than halved, from 190 to 90 million boxes. Over the same years the number of high-sugar cereals on sale fell from 58 to 25, and low-sugar sales rose from 160 to 265 million boxes. Total cereal sales hardly moved, so people did not stop eating cereal. Many cereals were changed to come in under the limit.<br />That is the long-term effect of an indirect tax: firms change their products, such as cutting sugar.",
+        "distractors": {
+          "A": "The wrong way round. Over time people quit or switch, so demand becomes more responsive to the price, not less. More inelastic demand would mean sales fell by less.",
+          "C": "Table 1 shows the price stayed at £3.60 from the first year to the fourth. The big fall in sales came with no further price rise.",
+          "D": "Low-sugar sales rose from 160 to 265 million boxes, which is not what a tax on them would cause. The tax applies only above 20g of sugar per 100g."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government spends the same amount on two information campaigns. One warns of the health risks of vaping. The other publishes the fuel cost per mile of every new car model.<br />The car campaign is more likely to change what people buy, because",
+      "options": {
+        "A": "Buying a car is a one-off, not a habit or addiction.",
+        "B": "Cars are demerit goods, so buyers over-consume them.",
+        "C": "Fuel costs are an external cost that buyers ignore.",
+        "D": "The vaping campaign raises the price that vapers pay."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Providing information is cheap, but people may ignore it, especially where a habit or addiction is involved. A vaper told about the health risks may carry on, because nicotine is addictive. A car buyer makes a one-off decision every few years and has no habit to break, so clear figures on running costs are likely to steer the choice. Better information moves choices closer to the social optimum only if people act on it.",
+        "distractors": {
+          "B": "Cars are not demerit goods, and the campaign is not trying to cut car buying overall. It helps buyers compare running costs between models.",
+          "C": "Fuel is a <strong>private</strong> cost: the driver pays for it. The campaign helps buyers judge a private cost they might otherwise misjudge.",
+          "D": "An information campaign does not change prices. It works by changing what people know, which is why its effect depends on whether they act on it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-3-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Scientists find that a chemical used in some garden sprays harms bees even in tiny amounts, and that bee numbers in parts of the country could collapse within two years.<br />The policy most likely to protect the bees quickly and with certainty is",
+      "options": {
+        "A": "A campaign telling gardeners about the risk to bees.",
+        "B": "A tax on garden sprays that contain the chemical.",
+        "C": "Legislation banning the chemical in garden sprays.",
+        "D": "Tradable permits capping how much of it is used."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Laws can ban a harmful activity outright. Where the harm is serious and even small amounts do damage, a ban works quickly and with certainty: once the chemical cannot be used in garden sprays, the harm from them stops. Its costs are enforcement, and the cost to spray makers of changing their products.",
+        "distractors": {
+          "A": "Information is cheap but slow to change behaviour, and some gardeners will ignore it. With a collapse possible within two years, that is too uncertain.",
+          "B": "A tax cuts use only if demand is price elastic enough to respond, and any sprays still bought go on harming bees. It reduces the harm but does not stop it.",
+          "D": "A cap limits the total, but any amount still allowed would harm bees, since even tiny amounts do damage. A cap also takes time to tighten."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-3-q6",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A council runs evening maths courses for adults. Each place costs the council £80 to provide. Learners used to pay £30 a place, and 600 places were taken a year. The council then makes the courses free at the point of use, and 1,500 places are now taken a year.<br />After taking off any fees it collects, the rise in the council's yearly cost of running the courses is",
+      "options": {
+        "A": "£45,000",
+        "B": "£72,000",
+        "C": "£90,000",
+        "D": "£120,000"
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Before:</strong> 600 places × (£80 − £30) = 600 × £50 = <strong>£30,000</strong> a year, after fees.<br /><strong>After:</strong> 1,500 places × £80 = <strong>£120,000</strong> a year, with no fees.<br />Rise = £120,000 − £30,000 = <strong>£90,000</strong>.<br />Education is a merit good, so making it free moves consumption towards the social optimum, here from 600 to 1,500 places. The cost falls on the council, which must pay for it through higher taxes, borrowing or less spending elsewhere.",
+        "distractors": {
+          "A": "This charges the 900 extra places at the old net cost of £50 each. Once the courses are free, the council pays the full £80 for every place and loses the £30 fee on the original 600.",
+          "B": "This counts the 900 extra places at £80, but forgets that the council also loses the £30 fee on each of the original 600 places: 600 × £30 = £18,000 more.",
+          "D": "This is the new yearly cost in full. The council was already spending £30,000 a year after fees, so the rise is smaller."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-3-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government brings in a tradable permit scheme for airlines, with a cap on emissions that falls each year. An airline warns that its costs will rise next year. An environmental group predicts that the industry's emissions will fall sharply over the next decade.<br />Both claims can be true because",
+      "options": {
+        "A": "Emissions fall only once airlines stop paying for permits.",
+        "B": "Permit prices fall as the cap is lowered, so costs rise only briefly.",
+        "C": "The cap fixes the industry's costs, not its emissions.",
+        "D": "The permits cost money at once, but cleaner aircraft take years."
+      },
+      "answer": "D",
+      "model": {
+        "working": "In the short term, pollution now has a price: airlines must hold permits to cover their emissions, so their costs rise straight away and some of the cost is passed on as higher fares. In the long term, that price gives them a reason to invest in cleaner aircraft, and the falling cap fixes a lower total for emissions each year. New aircraft take years to arrive, so the cost comes first and most of the fall in emissions later.",
+        "distractors": {
+          "A": "Airlines need permits for every tonne they emit for as long as the scheme runs. Emissions fall because the cap is lowered, not because the payments stop.",
+          "B": "The wrong way round. A lower cap means fewer permits for the same demand, so permit prices tend to rise, not fall.",
+          "C": "The reverse: the cap fixes total emissions, and it is the permit price, and so firms' costs, that adjusts."
+        }
+      }
+    }
+  ]
+}
