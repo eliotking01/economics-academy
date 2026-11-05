@@ -18,16 +18,16 @@
       "sketch": false,
       "stem": "An electric scooter sold in the UK has its motor made in Japan, its battery cells made in Poland and its frame welded in Turkey, and it is put together in Romania. The scooter shows specialisation by country taking a newer form, in which",
       "options": {
-        "A": "Countries specialise in stages of making one product.",
-        "B": "Countries specialise in different finished products.",
+        "A": "Countries specialise in different finished products.",
+        "B": "Countries specialise in stages of making one product.",
         "C": "One country makes every part where wages are lowest.",
         "D": "Production takes place where the product is sold."
       },
-      "answer": "A",
+      "answer": "B",
       "model": {
         "working": "Specialisation is increasing because it now happens <strong>within a single product</strong> as well as between products. Each country does the stage it does most cheaply, so the parts cross several borders before the scooter is sold.<br />Each country focuses on fewer tasks → workers and firms get better at them and produce on a larger scale → lower unit costs → cheaper goods and more exports.",
         "distractors": {
-          "B": "This is the older form of specialisation, where one country makes cloth and another makes wine. Here no country makes a finished scooter apart from Romania, which only assembles it.",
+          "A": "This is the older form of specialisation, where one country makes cloth and another makes wine. Here no country makes the whole scooter. Romania only assembles parts made in three other countries.",
           "C": "The parts come from four countries, not one. Each is made where that particular stage is done most cheaply, which depends on skills and scale as well as wages.",
           "D": "The scooter is sold in the UK, but none of it is made there. Production has been split up by cost, not placed next to the customer."
         }

@@ -65,8 +65,8 @@
         "caption": "Table 1: Four possible factory sites",
         "head": ["", "Cost of the factory", "Expected annual revenue", "Expected annual profit"],
         "rows": [
-          ["Site 1", "£5m", "£3.0m", "£0.60m"],
-          ["Site 2", "£20m", "£9.0m", "£2.80m"],
+          ["Site 1", "£5m", "£2.0m", "£0.60m"],
+          ["Site 2", "£20m", "£12.0m", "£2.80m"],
           ["Site 3", "£25m", "£17.5m", "£3.25m"],
           ["Site 4", "£40m", "£20.0m", "£4.40m"]
         ]
@@ -81,7 +81,7 @@
       "model": {
         "working": "<strong>Return on investment (ROI)</strong> is the profit an investment earns as a percentage of its cost: ROI = annual profit ÷ cost of investment × 100.<br />Site 1: £0.60m ÷ £5m × 100 = <strong>12%</strong>.<br />Site 2: £2.80m ÷ £20m × 100 = <strong>14%</strong>.<br />Site 3: £3.25m ÷ £25m × 100 = <strong>13%</strong>.<br />Site 4: £4.40m ÷ £40m × 100 = <strong>11%</strong>.<br />Site 2 earns the most profit for each pound spent on it.",
         "distractors": {
-          "A": "Site 1 is the cheapest to build, so it risks the least money. But its £0.60m profit is only 12% of its cost, less than Site 2's 14%.",
+          "A": "Site 1 is the cheapest to build, so it risks the least money. But its £0.60m profit is only 12% of its cost, less than Site 2's 14%. It also has the highest profit margin, 30%, but ROI divides profit by the cost of the investment, not by revenue.",
           "C": "This divides revenue by cost: £17.5m ÷ £25m = 70%, the highest of the four. ROI uses profit, not revenue, and on profit Site 3 returns 13%.",
           "D": "Site 4 earns the most profit, £4.40m. But it costs £40m, so its ROI is 11%, the lowest of the four. ROI compares profit with what was spent to earn it."
         }
@@ -143,7 +143,7 @@
         "rows": [
           ["Country 1", "6%", "3 weeks", "Stable government", "25% higher"],
           ["Country 2", "6%", "3 weeks", "Disputed election; protests closing shops", "Unchanged"],
-          ["Country 3", "6%", "10 months, with the same wait every year", "Stable government", "Unchanged"],
+          ["Country 3", "6%", "10 months, and permits must be renewed every year", "Stable government", "Unchanged"],
           ["Country 4", "4%", "4 weeks", "Stable government", "5% lower"]
         ]
       },

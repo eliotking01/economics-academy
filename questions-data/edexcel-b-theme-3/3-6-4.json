@@ -49,20 +49,20 @@
       "skill": "calculation",
       "difficulty": "stretch",
       "sketch": false,
-      "stem": "A supermarket offers a part-time worker an extra £150 a week of shifts. The worker receives a means-tested benefit. Income tax and National Insurance take 20% of the extra pay, and the benefit falls by 55p for every £1 of extra pay left after tax.<br />The worker's effective tax rate on the extra £150 is",
+      "stem": "A supermarket offers a part-time worker an extra £150 a week of shifts. The worker receives a means-tested benefit. Income tax and National Insurance take 28% of the extra pay, and the benefit falls by 55p for every £1 of extra pay left after tax.<br />To the nearest whole per cent, the worker's effective tax rate on the extra £150 is",
       "options": {
-        "A": "36%",
+        "A": "32%",
         "B": "55%",
-        "C": "64%",
-        "D": "75%"
+        "C": "68%",
+        "D": "83%"
       },
       "answer": "C",
       "model": {
-        "working": "Tax and National Insurance: 20% × £150 = <strong>£30</strong>.<br />Pay after tax: £150 − £30 = <strong>£120</strong>.<br />Benefit lost: 55% × £120 = <strong>£66</strong>.<br />The worker keeps £120 − £66 = <strong>£54</strong> of the extra £150.<br />Effective tax rate: (£150 − £54) ÷ £150 × 100 = £96 ÷ £150 × 100 = <strong>64%</strong>.<br />This is the <strong>poverty trap</strong>: the worker loses almost two-thirds of the extra pay, so turning down the shifts may make sense. For the supermarket, that makes the extra hours harder to fill.",
+        "working": "Tax and National Insurance: 28% × £150 = <strong>£42</strong>.<br />Pay after tax: £150 − £42 = <strong>£108</strong>.<br />Benefit lost: 55% × £108 = <strong>£59.40</strong>.<br />The worker keeps £108 − £59.40 = <strong>£48.60</strong> of the extra £150.<br />Effective tax rate: (£150 − £48.60) ÷ £150 × 100 = £101.40 ÷ £150 × 100 = 67.6%, or <strong>68%</strong> to the nearest whole per cent.<br />This is the <strong>poverty trap</strong>: the worker loses more than two-thirds of the extra pay, so turning down the shifts may make sense. For the supermarket, that makes the extra hours harder to fill.",
         "distractors": {
-          "A": "36% is the share of the extra £150 the worker <strong>keeps</strong>: £54 ÷ £150. The effective tax rate is the share they lose, 100% − 36% = 64%.",
-          "B": "55% is the rate at which the benefit is withdrawn. It leaves out the 20% taken in tax and National Insurance, which comes off first.",
-          "D": "This adds the two rates, 20% + 55%. But the benefit falls by 55p for each £1 left <strong>after</strong> tax, so the 55% applies to £120, not to the full £150."
+          "A": "32% is the share of the extra £150 the worker <strong>keeps</strong>: £48.60 ÷ £150. The effective tax rate is the share they lose, 100% − 32% = 68%.",
+          "B": "55% is the rate at which the benefit is withdrawn. It leaves out the 28% taken in tax and National Insurance, which comes off first.",
+          "D": "This adds the two rates, 28% + 55%. But the benefit falls by 55p for each £1 left <strong>after</strong> tax, so the 55% applies to £108, not to the full £150."
         }
       }
     },

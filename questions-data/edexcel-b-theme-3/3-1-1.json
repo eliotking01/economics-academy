@@ -114,18 +114,18 @@
       "sketch": false,
       "stem": "Emerging economies grow quickly for many years, building up low-cost manufacturing as they do. Of the following UK firms, the one most likely to lose from that growth is",
       "options": {
-        "A": "A firm running English courses for students from abroad.",
+        "A": "A firm making basic towels in the UK, sold on low price.",
         "B": "A firm making machinery it exports to Asian factories.",
         "C": "A firm making scanners it exports to hospitals worldwide.",
-        "D": "A firm making basic towels in the UK, sold on low price."
+        "D": "A firm running English courses for students from abroad."
       },
-      "answer": "D",
+      "answer": "A",
       "model": {
         "working": "The effect of growth abroad on a UK firm depends on what it sells. A firm whose product is wanted in emerging markets gains a bigger market. A firm competing on price with low-cost producers is the one most likely to lose.<br />Basic towels are a simple product that emerging economies can make cheaply → low-cost imports undercut the UK maker → it loses sales, and may close or move production abroad.",
         "distractors": {
-          "A": "Education is income-elastic. As incomes rise in emerging economies, more families can pay for courses abroad, so this firm gains customers.",
           "B": "Factories in growing economies need machines, so this firm gains a bigger export market. Growth abroad is an opportunity for firms whose products those economies want to buy.",
-          "C": "Specialist scanners are not something low-cost producers compete on price for. Growing economies are building more hospitals, so this firm gains new export markets."
+          "C": "Specialist scanners are not something low-cost producers compete on price for. Growing economies are building more hospitals, so this firm gains new export markets.",
+          "D": "Education is income-elastic. As incomes rise in emerging economies, more families can pay for courses abroad, so this firm gains customers."
         }
       }
     },

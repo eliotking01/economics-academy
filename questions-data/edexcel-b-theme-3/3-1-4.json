@@ -203,16 +203,16 @@
       "options": {
         "A": "Each agreement has its own rules, adding paperwork.",
         "B": "It can no longer sell to countries outside them.",
-        "C": "The agreements took longer than WTO talks would.",
-        "D": "Its tools now face higher tariffs in those countries."
+        "C": "Its tools now face higher tariffs in those countries.",
+        "D": "The agreements took longer than WTO talks would."
       },
       "answer": "A",
       "model": {
         "working": "A <strong>bilateral trade agreement</strong> is a deal between two countries to reduce barriers to trade between them.<br />Two countries can agree far faster than the WTO's members, and can tailor the deal to the goods they trade. But each deal has its own rules → a firm trading with many countries must meet a different set for each market → more paperwork and cost.",
         "distractors": {
           "B": "A bilateral agreement cuts barriers with one partner. It does not stop the firm selling to any other country on the terms it had before.",
-          "C": "Speed is an advantage of bilateral deals, not a drawback. Two countries can agree far faster than all the WTO's members; the Doha round, launched in 2001, was never completed.",
-          "D": "Each agreement <strong>cuts</strong> tariffs on the firm's tools. Higher tariffs would come from retaliation, not from a trade deal."
+          "C": "Each agreement <strong>cuts</strong> tariffs on the firm's tools. Higher tariffs would come from retaliation, not from a trade deal.",
+          "D": "Speed is an advantage of bilateral deals, not a drawback. Two countries can agree far faster than all the WTO's members; the Doha round, launched in 2001, was never completed."
         }
       }
     },

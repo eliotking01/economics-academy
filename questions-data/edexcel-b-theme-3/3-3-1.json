@@ -25,9 +25,9 @@
       },
       "answer": "C",
       "model": {
-        "working": "A <strong>polycentric</strong> (international) approach treats each country as a separate market, with its own products and marketing, often run by local managers. That is what this firm does.<br />Its strength is the best fit with local tastes. Its drawback is cost: a different range for each of twelve countries → separate research, design and advertising, and shorter production runs → few economies of scale across markets → higher average cost. The brand can also look different in every country.",
+        "working": "A <strong>polycentric</strong> approach treats each country as a separate market, with its own products and marketing, often run by local managers. That is what this firm does.<br />Its strength is the best fit with local tastes. Its drawback is cost: a different range for each of twelve countries → separate research, design and advertising, and shorter production runs → few economies of scale across markets → higher average cost. The brand can also look different in every country.",
         "distractors": {
-          "A": "A geocentric (mixed) firm keeps one global brand and changes it only where local differences make it worthwhile. This firm has different brand names in every country, so it is not geocentric.",
+          "A": "A geocentric firm keeps one global brand and changes it only where local differences make it worthwhile. This firm has different brand names in every country, so it is not geocentric.",
           "B": "This firm is not geocentric, and it does not ignore local tastes either. Local managers choose everything, so the products fit local tastes closely. Ignoring local tastes is the risk of the ethnocentric approach.",
           "D": "The firm is polycentric, but a polycentric firm fits local tastes best, because each country gets its own products. Low sales from ignoring local tastes is the risk of the ethnocentric approach, which sells the UK product unchanged."
         }
@@ -38,7 +38,7 @@
       "skill": "data-table",
       "difficulty": "standard",
       "sketch": false,
-      "stem": "Table 1 describes how four UK firms sell abroad.<br />Using Table 1, the firm taking a mixed, or geocentric, approach is",
+      "stem": "Table 1 describes how four UK firms sell abroad.<br />Using Table 1, the firm taking a geocentric approach is",
       "table": {
         "caption": "Table 1: How four firms sell in other countries",
         "head": [
@@ -82,10 +82,10 @@
       },
       "answer": "B",
       "model": {
-        "working": "A <strong>geocentric</strong> (mixed) approach treats the world as one market, but adapts the product or marketing where local differences make it worthwhile. This is glocalisation.<br />Firm 2 keeps one global product and one global brand, and changes them only in the two regions where it pays. Head office keeps control, with advice from local managers. That is geocentric.<br />Firm 1 is ethnocentric (domestic), and Firms 3 and 4 are polycentric (international).",
+        "working": "A <strong>geocentric</strong> approach treats the world as one market, but adapts the product or marketing where local differences make it worthwhile. This is glocalisation.<br />Firm 2 keeps one global product and one global brand, and changes them only in the two regions where it pays. Head office keeps control, with advice from local managers. That is geocentric.<br />Firm 1 is ethnocentric, and Firms 3 and 4 are polycentric.",
         "distractors": {
-          "A": "Firm 1 sells its UK product, brand and adverts unchanged, all decided in the UK. That is the domestic, or ethnocentric, approach: no adaptation at all.",
-          "C": "Firm 3 has a separate product, brand and marketing plan for each country, run by local managers. That is the international, or polycentric, approach.",
+          "A": "Firm 1 sells its UK product, brand and adverts unchanged, all decided in the UK. That is the ethnocentric approach: no adaptation at all.",
+          "C": "Firm 3 has a separate product, brand and marketing plan for each country, run by local managers. That is the polycentric approach.",
           "D": "Firm 4 shares one brand name, but every country has its own product and adverts, chosen by a local manager. That is a separate plan for every country, which is polycentric. A geocentric firm changes its global product only where it pays."
         }
       }

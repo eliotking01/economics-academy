@@ -20,16 +20,16 @@
       "options": {
         "A": "Cultural differences.",
         "B": "Different tastes.",
-        "C": "Unintended meanings.",
-        "D": "Inaccurate translations."
+        "C": "Inaccurate translations.",
+        "D": "Unintended meanings."
       },
       "answer": "A",
       "model": {
         "working": "<strong>Culture</strong> is the shared beliefs, customs and way of life of a group of people. It shapes what people buy, and also what an advert can show, including how people dress.<br />The images mean the same thing in both countries. What differs is the custom about dress in public, so this is a cultural difference. Ignoring it → the adverts offend local customers → complaints spread → the brand's image is damaged → lower sales.",
         "distractors": {
           "B": "Tastes are preferences about the product itself, such as a flavour, a style or a portion size. Nobody here objects to the clothes in the shops. The complaints are about what the adverts show, which is a matter of custom.",
-          "C": "An unintended meaning is a word, gesture or image that means something different in another country. Swimwear on a beach means the same thing in both. It is the custom about dress in public that differs.",
-          "D": "Nothing has been translated. The billboards use images, and the problem is what they show, not any words on them."
+          "C": "Nothing has been translated. The billboards use images, and the problem is what they show, not any words on them.",
+          "D": "An unintended meaning is a word, gesture or image that means something different in another country. Swimwear on a beach means the same thing in both. It is the custom about dress in public that differs."
         }
       }
     },

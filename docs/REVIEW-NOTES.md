@@ -2070,3 +2070,27 @@ and judged harmless. It also flags three numeric option sets sharing three
 values with a real AQA option block (`edexcel-1-2-5-q1`, `edexcel-1-2-8-q1`,
 `edexcel-3-6-1-q1`). Those are prompts to compare archetypes, and the
 comparison has not been done yet.
+
+## N-Q26 — the World Bank's $2.15 line survives in two notes pages, two decks and one AQA question (logged 2026-11-05)
+
+Found while writing the Edexcel B 3.6.1 questions, which use the B notes'
+**$3.00 a day**, the World Bank's extreme-poverty line since its June 2025
+update. On Eliot's instruction (unit 3.6 review sheet, Q3), the Edexcel A
+practice question `edexcel-4-2-1-q5` now says $3.00 too. Its own notes page
+still says $2.15, so that question and its page now disagree on the figure.
+The question turns on the line being fixed and international, not on its
+value, so no key depends on it.
+
+Still at $2.15, none of them changed (wording, hard rule 2):
+
+- `notes-data/topics/edexcel-theme-4/4-2-1-absolute-relative-poverty.html`
+  and `notes-data/topics/aqa-a2-micro/1-7-2-the-problem-of-poverty.html`:
+  "World Bank's poverty line of $2.15 per day (2022 PPP)".
+- `flashcards-data/edexcel-a/theme-4.json` and `flashcards-data/aqa/micro.json`:
+  the same sentence.
+- `questions-data/aqa-a2-micro/1-7-2.json`: "The World Bank's international
+  line of $2.15 a day at 2022 purchasing power parity" (a model answer).
+
+Not verified against the World Bank here, so check before acting: as far as I
+know, $2.15 was set at **2017** prices (PPP), adopted in 2022, and $3.00 is
+set at 2021 PPP. If so, "(2022 PPP)" is wrong as well as out of date.

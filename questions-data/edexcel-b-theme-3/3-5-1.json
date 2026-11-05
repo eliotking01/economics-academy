@@ -16,27 +16,27 @@
       "skill": "definition-in-context",
       "difficulty": "foundation",
       "sketch": false,
-      "stem": "A company in Cornwall catches fish, smokes and tins part of its catch in its own factory, serves seafood in its restaurant, and runs a laboratory that researches new ways to keep fish fresh, which it licenses to other firms.<br />The tinning and the laboratory work fall in the",
+      "stem": "A company in Cornwall catches fish, smokes and tins part of its catch in its own factory, delivers the tins to shops in its own lorries, and serves seafood in its restaurant.<br />The tinning and the deliveries fall in the",
       "options": {
-        "A": "Primary and quaternary sectors.",
+        "A": "Primary and secondary sectors.",
         "B": "Primary and tertiary sectors.",
-        "C": "Secondary and quaternary sectors.",
-        "D": "Secondary and tertiary sectors."
+        "C": "Secondary and tertiary sectors.",
+        "D": "Secondary sector only."
       },
       "answer": "C",
       "model": {
-        "working": "Classify each activity by what it does.<br />Tinning turns a raw material, the fish, into a good, a tin of fish. That is the <strong>secondary</strong> sector.<br />The laboratory does research and development and sells the knowledge it produces. That is a knowledge-based service, so it is in the <strong>quaternary</strong> sector.<br />For completeness: catching the fish is primary and the restaurant is tertiary.",
+        "working": "Classify each activity by what it does.<br />Tinning turns a raw material, the fish, into a good, a tin of fish. That is the <strong>secondary</strong> sector.<br />Delivering the tins to shops is transport, which is a service. That is the <strong>tertiary</strong> sector.<br />For completeness: catching the fish is primary and the restaurant is tertiary.",
         "distractors": {
-          "A": "The laboratory is right, but tinning is not primary. The primary sector extracts raw materials, as the fishing boats do. Smoking and tinning the catch turns it into a product, which is secondary.",
-          "B": "Both are wrong. Tinning is processing, not catching, so it is secondary. Research and development is a service, but a knowledge-based one, so it goes in the quaternary sector, not the tertiary.",
-          "D": "Tinning is right, but research and development is not an ordinary service like retail or transport. A service built on knowledge, such as R&amp;D, IT or consultancy, is in the quaternary sector."
+          "A": "Both are wrong. Tinning is processing, not catching, so it is secondary. Delivering the tins makes no new product: it is transport, a service, so it is tertiary.",
+          "B": "The deliveries are right, but tinning is not primary. The primary sector extracts raw materials, as the fishing boats do. Smoking and tinning the catch turns it into a product, which is secondary.",
+          "D": "Tinning is right, but the deliveries are not part of making the product. Moving goods to shops is transport, a service like retail, so it is tertiary, even though the same firm runs the factory."
         }
       }
     },
     {
       "id": "edexcel-b-3-5-1-q2",
       "skill": "data-table",
-      "difficulty": "standard",
+      "difficulty": "foundation",
       "sketch": false,
       "stem": "Table 1 shows how output and the number of jobs changed in four industries in Country R over 20 years.<br />Using Table 1, the industry whose job losses are best explained by each worker producing more, rather than by a fall in output, is",
       "table": {

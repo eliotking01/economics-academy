@@ -38,7 +38,7 @@
       "skill": "calculation",
       "difficulty": "standard",
       "sketch": false,
-      "stem": "Table 1 shows the demand for and supply of warehouse workers in Country M. The government then sets a minimum wage of $14 an hour.<br />Using Table 1, the fall in the number employed and the unemployment that results are",
+      "stem": "Table 1 shows the demand for and supply of warehouse workers in Country M. The government then sets a minimum wage of $14 an hour.<br />Using Table 1, the fall in the number employed and the resulting unemployment, measured as the number who want a job at $14 but cannot get one, are",
       "table": {
         "caption": "Table 1: The market for warehouse workers in Country M",
         "head": ["Hourly wage", "Workers firms want to employ", "Workers who want a job"],
@@ -69,17 +69,17 @@
     {
       "id": "edexcel-b-3-5-3-q3",
       "skill": "data-table",
-      "difficulty": "standard",
+      "difficulty": "foundation",
       "sketch": false,
-      "stem": "Table 1 describes the minimum wage in four countries. Each country sets its minimum wage at about half of its typical wage.<br />Using Table 1, the country whose minimum wage is likely to protect the smallest share of its workers is",
+      "stem": "Table 1 describes the minimum wage in four countries.<br />Using Table 1, the country whose minimum wage is likely to protect the smallest share of its workers is",
       "table": {
         "caption": "Table 1: Minimum wages in four countries",
-        "head": ["Country", "Minimum wage, $ a month", "Share of workers in informal jobs", "Enforcement"],
+        "head": ["Country", "Share of workers in informal jobs", "Enforcement"],
         "rows": [
-          ["W", "95", "40%", "Regular inspections and fines"],
-          ["X", "2,400", "5%", "Regular inspections and fines"],
-          ["Y", "1,900", "10%", "Few inspectors"],
-          ["Z", "160", "80%", "Few inspectors"]
+          ["W", "40%", "Regular inspections and fines"],
+          ["X", "5%", "Regular inspections and fines"],
+          ["Y", "10%", "Few inspectors"],
+          ["Z", "80%", "Few inspectors"]
         ]
       },
       "options": {
@@ -92,8 +92,8 @@
       "model": {
         "working": "A minimum wage only protects workers in jobs the law can see and check.<br />In Country Z, <strong>80%</strong> of workers are in the informal economy, in unregistered jobs the law rarely reaches. And with <strong>few inspectors</strong>, even employers in formal jobs are unlikely to be caught paying less.<br />This is typical of a developing country, and is why a minimum wage there can change much less than it seems.",
         "distractors": {
-          "A": "Country W has the lowest minimum wage in dollars, but that reflects lower prices and productivity: it is still about half the typical wage there. The level in dollars does not decide how many workers the law protects. Its informal economy is half the size of Z's, and the law is enforced.",
-          "B": "Country X has the highest minimum wage, and a formal, well-inspected labour market. Almost every worker is covered and the law is checked, so it protects more workers than in any other country here.",
+          "A": "Country W has a sizeable informal economy, 40% of workers, but that is half the size of Z's. And its law is enforced with regular inspections and fines, so it reaches more workers than in Z.",
+          "B": "Country X has a formal, well-inspected labour market. Almost every worker is covered and the law is checked, so it protects more workers than in any other country here.",
           "C": "Country Y has few inspectors, like Z. But 90% of its workers are in registered jobs, so far more of them are covered than in Z, where most work is informal."
         }
       }

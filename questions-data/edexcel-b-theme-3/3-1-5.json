@@ -149,16 +149,16 @@
       "options": {
         "A": "Cut its own interest rate to weaken its currency.",
         "B": "Let its currency depreciate against other members.",
-        "C": "Put tariffs on imports from the other members.",
-        "D": "Make its wages and prices rise more slowly."
+        "C": "Make its wages and prices rise more slowly.",
+        "D": "Put tariffs on imports from the other members."
       },
-      "answer": "D",
+      "answer": "C",
       "model": {
         "working": "A Eurozone member shares one currency and one monetary policy, so it gives up two tools.<br />It has <strong>no exchange rate to adjust</strong>: it cannot let its currency fall → its exports stay expensive → it can regain competitiveness only by holding its wages and prices down relative to its neighbours.<br />That usually means higher unemployment for years, which is what Greece faced in its debt crisis after 2010.",
         "distractors": {
           "A": "Interest rates for the whole Eurozone are set by the European Central Bank. A member cannot set its own rate, and has no currency of its own to weaken.",
           "B": "Every member uses the euro, so there is no exchange rate between them. This is exactly the tool a member gives up when it joins.",
-          "C": "The Eurozone members are all in the EU single market, so tariffs on trade between them are not allowed."
+          "D": "The Eurozone members are all in the EU single market, so tariffs on trade between them are not allowed."
         }
       }
     },

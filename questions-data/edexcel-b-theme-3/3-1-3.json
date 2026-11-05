@@ -61,18 +61,18 @@
       "sketch": false,
       "stem": "A Dutch building firm cannot find enough qualified electricians in the Netherlands. Compared with belonging only to a free trade area, the main extra benefit to the firm of the Netherlands being in the EU single market is that",
       "options": {
-        "A": "Materials from other members arrive without tariffs.",
-        "B": "Electricians from other members can work for it freely.",
-        "C": "Goods from outside the bloc arrive without tariffs.",
-        "D": "Its prices are protected from rivals in other members."
+        "A": "Electricians from other members can work for it freely.",
+        "B": "Goods from outside the bloc arrive without tariffs.",
+        "C": "Its prices are protected from rivals in other members.",
+        "D": "Materials from other members arrive without tariffs."
       },
-      "answer": "B",
+      "answer": "A",
       "model": {
         "working": "A <strong>free trade area</strong> removes tariffs and quotas on trade between members. A <strong>single market</strong> goes further: services, capital and workers also move freely between members, under one set of product rules.<br />The firm's problem is a shortage of electricians. In a single market, workers can move between members → the firm can fill vacancies from across the bloc → fewer skills shortages and less pressure on wages.",
         "distractors": {
-          "A": "Tariff-free materials from other members are true of a free trade area too, so this is not an <strong>extra</strong> benefit of the single market. It also does nothing about the shortage of electricians.",
-          "C": "No type of bloc removes tariffs on goods from outside it. A single market sets a common external tariff on them.",
-          "D": "A bloc does the opposite. Rivals from other members sell freely in the firm's home market, which pushes its prices down."
+          "B": "No type of bloc removes tariffs on goods from outside it. A single market sets a common external tariff on them.",
+          "C": "A bloc does the opposite. Rivals from other members sell freely in the firm's home market, which pushes its prices down.",
+          "D": "Tariff-free materials from other members are true of a free trade area too, so this is not an <strong>extra</strong> benefit of the single market. It also does nothing about the shortage of electricians."
         }
       }
     },
@@ -155,19 +155,19 @@
       "skill": "applied-reasoning",
       "difficulty": "foundation",
       "sketch": false,
-      "stem": "The UK left the EU single market and customs union at the end of 2020. A UK cheese maker has kept exporting to France, and its cheese meets the rules of origin in the UK's trade deal with the EU. Compared with before 2021, the main change the firm faces is",
+      "stem": "The UK left the EU single market and customs union at the end of 2020. A UK maker of machine parts has kept exporting to France, and its parts meet the rules of origin in the UK's trade deal with the EU. Compared with before 2021, the main change the firm faces is",
       "options": {
-        "A": "A quota limiting how much cheese it can send.",
-        "B": "A tariff on every cheese it sells in France.",
+        "A": "A quota limiting how many parts it can send.",
+        "B": "A tariff on every part it sells in France.",
         "C": "Customs forms and checks, but no tariff.",
         "D": "No change, as the deal keeps it tariff-free."
       },
       "answer": "C",
       "model": {
-        "working": "The UK's trade deal with the EU keeps goods free of tariffs and quotas if they meet the deal's rules of origin. But outside the single market and customs union, exporters now fill in customs declarations and face border checks.<br />So the cheese still enters France tariff-free, but each shipment carries paperwork and the risk of delay. These costs fall hardest on small exporters.",
+        "working": "The UK's trade deal with the EU keeps goods free of tariffs and quotas if they meet the deal's rules of origin. But outside the single market and customs union, exporters now fill in customs declarations and face border checks.<br />So the parts still enter France tariff-free, but each shipment carries paperwork and the risk of delay. These costs fall hardest on small exporters.",
         "distractors": {
-          "A": "The trade deal keeps goods that meet its rules of origin free of quotas as well as tariffs. The firm can send as much cheese as it sells.",
-          "B": "The cheese meets the rules of origin, so it enters France tariff-free under the deal.",
+          "A": "The trade deal keeps goods that meet its rules of origin free of quotas as well as tariffs. The firm can send as many parts as it sells.",
+          "B": "The parts meet the rules of origin, so they enter France tariff-free under the deal.",
           "D": "Tariff-free is not the same as no change. Leaving the single market brought customs declarations and border checks, even for goods that pay no tariff."
         }
       }

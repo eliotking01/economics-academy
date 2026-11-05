@@ -136,16 +136,16 @@
       "options": {
         "A": "Taxes and benefits make income less equal.",
         "B": "Taxes and benefits make income more equal.",
-        "C": "The Lorenz curve for wealth lies closest to the line of perfect equality.",
-        "D": "Wealth is shared out more equally than income."
+        "C": "Wealth is shared out more equally than income.",
+        "D": "Wealth's Lorenz curve lies closest to equality."
       },
       "answer": "B",
       "model": {
         "working": "The Gini coefficient runs from <strong>0</strong> (perfect equality) to <strong>1</strong> (perfect inequality), so a higher figure means more inequality.<br />Income before taxes and benefits has a Gini of 0.49. After them it is 0.35 → a lower figure → taxes and benefits make income <strong>more equal</strong>.<br />Wealth has the highest figure, 0.61, so it is shared far more unequally than income.",
         "distractors": {
           "A": "This reads the scale the wrong way. The Gini falls from 0.49 to 0.35 once taxes and benefits are counted, and a lower Gini means a more equal distribution.",
-          "C": "Wealth has the <strong>highest</strong> Gini coefficient, 0.61, so its Lorenz curve sags <strong>furthest</strong> from the line of perfect equality. The curve closest to the line belongs to income after taxes and benefits.",
-          "D": "Wealth's Gini of 0.61 is higher than both income figures, so wealth is shared <strong>less</strong> equally. A higher Gini means more inequality, not less."
+          "C": "Wealth's Gini of 0.61 is higher than both income figures, so wealth is shared <strong>less</strong> equally. A higher Gini means more inequality, not less.",
+          "D": "Wealth has the <strong>highest</strong> Gini coefficient, 0.61, so its Lorenz curve sags <strong>furthest</strong> from the line of perfect equality. The curve closest to the line belongs to income after taxes and benefits."
         }
       }
     },

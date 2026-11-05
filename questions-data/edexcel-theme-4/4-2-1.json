@@ -124,7 +124,7 @@
       "skill": "definition-in-context",
       "difficulty": "standard",
       "sketch": false,
-      "stem": "Two countries measure absolute poverty against the World Bank's threshold of $2.15 a day and relative poverty against 60% of their own median household income. One country is high-income and the other low-income. It follows that",
+      "stem": "Two countries measure absolute poverty against the World Bank's threshold of $3.00 a day and relative poverty against 60% of their own median household income. One country is high-income and the other low-income. It follows that",
       "options": {
         "A": "Both thresholds are set at the same level in the two countries.",
         "B": "Neither threshold can be compared between the two countries.",
@@ -133,7 +133,7 @@
       },
       "answer": "C",
       "model": {
-        "working": "The two measures are built differently. The absolute threshold is a <strong>fixed international</strong> figure — $2.15 a day — chosen to represent what survival costs, and it does not change from country to country.<br />The relative threshold is <strong>country-specific</strong>, because it is 60% of that country's own median household income. The high-income country's median is far above the low-income country's, so its relative line sits far higher in cash terms.<br />This is why a rich country can have almost no absolute poverty and a substantial rate of relative poverty at the same time.",
+        "working": "The two measures are built differently. The absolute threshold is a <strong>fixed international</strong> figure — $3.00 a day — chosen to represent what survival costs, and it does not change from country to country.<br />The relative threshold is <strong>country-specific</strong>, because it is 60% of that country's own median household income. The high-income country's median is far above the low-income country's, so its relative line sits far higher in cash terms.<br />This is why a rich country can have almost no absolute poverty and a substantial rate of relative poverty at the same time.",
         "distractors": {
           "A": "Only one of them is. The relative threshold is calculated from each country's own median, so two countries with different medians have different relative lines by construction.",
           "B": "The absolute threshold exists precisely so that poverty can be compared internationally. It is the relative measure that resists comparison, because each country is being judged against itself.",
