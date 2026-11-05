@@ -1,0 +1,194 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-4",
+  "boardName": "Edexcel B Theme 4",
+  "spec": "4.4.3",
+  "slug": "4-4-3-supply-side-policies",
+  "title": "Supply-Side Policies",
+  "shortTitle": "Supply-Side Policies",
+  "pageTitle": "Supply-Side Policies Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions for Edexcel B A-Level Economics on market-based and interventionist supply-side policies, their aims and trade-offs.",
+  "intro": "Seven original multiple-choice questions on supply-side policies: market-based and interventionist methods, the aims they serve, how they appear on an AD/AS diagram, and their strengths, weaknesses and trade-offs. One is a calculation.",
+  "notesTeaser": "Seven original multiple-choice questions on market-based and interventionist policies, their aims, the AD/AS diagram and their trade-offs, including one calculation.",
+  "questions": [
+    {
+      "id": "edexcel-b-4-4-3-q1",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government makes two changes. It ends the state-owned operator's monopoly of parcel deliveries, so that private firms can compete for customers. It also pays for 15,000 extra engineering apprenticeships.<br />In that order, the two policies are best described as",
+      "options": {
+        "A": "Interventionist, to promote competition; market-based, to improve skills.",
+        "B": "Market-based, to improve infrastructure; interventionist, to reform the labour market.",
+        "C": "Market-based, to promote competition; interventionist, to improve skills.",
+        "D": "Market-based, to reform the labour market; interventionist, to improve infrastructure."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Ending the monopoly</strong> removes a legal barrier to entry, so it reduces the government's role and lets new firms in: a <strong>market-based</strong> policy to <strong>promote competition</strong>.<br /><strong>Paying for apprenticeships</strong> is the government spending to provide training that firms would provide too little of: an <strong>interventionist</strong> policy to <strong>improve skills</strong>.",
+        "distractors": {
+          "A": "The aims are right but the types are swapped. Opening a market to rivals reduces the government's role, which is market-based; funding training is government spending, which is interventionist.",
+          "B": "The types are right but the aims are not. Parcel firms use the roads, but ending a monopoly is about competition, not infrastructure, and apprenticeships raise skills rather than changing how the labour market works.",
+          "D": "The types are right but the aims are not. Opening parcel delivery to rivals promotes competition, and apprenticeships improve the skills of the labour force."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-3-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": true,
+      "stem": "An economy is in a deep recession. Unemployment is high, and most firms have idle machinery and unsold stock. The government introduces a supply-side policy that raises full capacity output, and aggregate demand does not change.<br />Sketching a Keynesian LRAS curve, the most likely effect is that",
+      "options": {
+        "A": "Real GDP and the price level are both unchanged.",
+        "B": "Real GDP is unchanged and the price level falls.",
+        "C": "Real GDP rises and the price level falls.",
+        "D": "Real GDP rises and the price level is unchanged."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The policy shifts the LRAS curve to the right, so full capacity output rises.<br />But AD crosses the curve on its <strong>flat section</strong>, far below full capacity, where workers and machines are already idle. Shifting the curve right extends that flat section; it does not move the point where AD meets it. With AD unchanged, <strong>real GDP and the price level both stay where they were</strong>.<br />Extra capacity is wasted while demand is weak and firms cannot sell what they already make, so supply-side policy on its own does little in a recession.",
+        "distractors": {
+          "B": "The price level falls only if AD crosses the rising section of the LRAS curve, where extra capacity eases the pressure on costs. On the flat section there is no such pressure to ease.",
+          "C": "This is the result when AD crosses the rising section of the curve, with much of the spare capacity used up. In a deep recession the economy is on the flat section, so neither output nor prices change.",
+          "D": "Output rises only if someone buys it. Firms already have idle machinery and unsold stock, so more capacity does not lead them to produce more while AD is unchanged."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-3-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Small engineering firms in a region say they train few apprentices, because once trained, many leave for larger rivals that offer higher pay.<br />Of the following, the policy most likely to raise the skills of the region's workforce is",
+      "options": {
+        "A": "A cut in corporation tax, so firms keep more of their profit.",
+        "B": "A cut in income tax, so that work pays more.",
+        "C": "Fewer rules on hiring, so firms take on staff more easily.",
+        "D": "State-funded training, as firms will provide too little."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The firms' problem is that the benefit of training leaks to rivals: train an apprentice, and a larger firm may hire them away. So each firm trains too few, and cutting its taxes or its rules does not change that.<br /><strong>State-funded training</strong> is an interventionist policy that fills the gap the market leaves, because the government, not the firm, pays for the skills.",
+        "distractors": {
+          "A": "Firms would have more profit, but they train few apprentices because rivals hire them away, not for lack of money. Extra profit does not fix that.",
+          "B": "Lower income tax strengthens the incentive to work, but it does nothing to make firms train more.",
+          "C": "Easier hiring helps firms take on staff, but it does not give the workforce new skills, and it makes it easier still for rivals to hire away trained staff."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-3-q4",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the main problem that firms report in four UK regions.<br />Using Table 1, the region in which supply-side policy is least likely to raise output is",
+      "table": {
+        "caption": "Table 1: The main problem reported by firms in four regions",
+        "head": [
+          "Region",
+          "Main problem firms report"
+        ],
+        "rows": [
+          [
+            "Region 1",
+            "Vacancies stay unfilled because applicants lack the skills needed"
+          ],
+          [
+            "Region 2",
+            "Orders have fallen, so staff and machines are standing idle"
+          ],
+          [
+            "Region 3",
+            "Deliveries are slow and costly because the main roads are congested"
+          ],
+          [
+            "Region 4",
+            "One firm controls the supply of a key input and charges high prices"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Region 1.",
+        "B": "Region 2.",
+        "C": "Region 3.",
+        "D": "Region 4."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Supply-side policies raise the economy's capacity to produce. They help most where low output comes from a skills gap, poor transport or weak competition.<br />In <strong>Region 2</strong> firms already have idle staff and machines: the problem is weak demand, not too little capacity. Extra capacity would sit unused too, so a demand-side policy fits that region better.",
+        "distractors": {
+          "A": "A skills gap is exactly what spending on training and education is designed to close.",
+          "C": "Congested roads raise firms' costs, which spending on infrastructure can reduce.",
+          "D": "A firm controlling a key input is a competition problem. Lowering barriers to entry, or action by the Competition and Markets Authority, can address it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-3-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "The government begins building a new rail line between two northern cities. Construction will take eight years.<br />Sketching an AD/AS diagram, the most likely pattern of shifts is that",
+      "options": {
+        "A": "AD and LRAS both shift right as soon as building starts.",
+        "B": "AD shifts right during building, and LRAS once it opens.",
+        "C": "LRAS shifts right during building, and AD once it opens.",
+        "D": "Neither curve shifts until the line opens to passengers."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Building the line is government spending, so <strong>AD shifts right as soon as building starts</strong>: contracts go to builders and suppliers, who hire staff.<br />The line adds to productive capacity only once trains run on it, by cutting the cost and time of moving goods and people. So <strong>LRAS shifts right years later, once it opens</strong>.<br />The gap between the two shifts is the policy's time lag.",
+        "distractors": {
+          "A": "AD does shift as building starts, but a half-built line carries no passengers or freight, so it adds nothing to capacity yet.",
+          "C": "The order is reversed. The spending happens during construction, so that is when AD rises; the extra capacity arrives only once the line is in use.",
+          "D": "The government is spending on construction from the start, and that spending is part of AD."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-3-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "To reform the labour market, the government makes it easier for firms to hire staff on flexible contracts with no guaranteed hours. A warehouse operator responds by taking on 300 extra workers on these contracts.<br />The trade-off this best illustrates is that",
+      "options": {
+        "A": "Firms hire more cheaply, but workers' pay is less certain.",
+        "B": "Firms hire more staff, but pay higher wages for each hour.",
+        "C": "Workers gain more job security, but firms' costs rise.",
+        "D": "Workers gain more secure pay, but fewer jobs are created."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Flexible contracts let the warehouse match its staff to its orders, paying only for the hours it needs → <strong>firms hire more cheaply</strong> and take on more staff.<br />With no guaranteed hours, the workers do not know how much they will earn each week → <strong>less predictable pay</strong> and less job security.<br />This is the trade-off between workers and firms in labour market reform.",
+        "distractors": {
+          "B": "The point of the contracts is to lower the cost of hiring, not to raise the hourly wage.",
+          "C": "Contracts with no guaranteed hours give workers less job security, not more, and they lower firms' costs rather than raising them.",
+          "D": "The warehouse has taken on 300 extra workers, so jobs have been created, and pay with no guaranteed hours is less secure, not more."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-3-q7",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A care worker earns £14 an hour and pays income tax at 20% on any extra hours worked. The government cuts this rate of income tax to 16%.<br />Ignoring any other deductions, and to one decimal place, the care worker's take-home pay from each extra hour rises by",
+      "options": {
+        "A": "4.0%",
+        "B": "4.8%",
+        "C": "5.0%",
+        "D": "20.0%"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Before the cut: take-home pay per extra hour = £14 × (1 − 0.20) = <strong>£11.20</strong>.<br />After the cut: £14 × (1 − 0.16) = <strong>£11.76</strong>.<br />Rise = (£11.76 − £11.20) ÷ £11.20 × 100 = £0.56 ÷ £11.20 × 100 = <strong>5.0%</strong>.<br />This is how a market-based policy increases incentives: each extra hour of work pays more, so some people choose to work longer hours or to join the labour force.",
+        "distractors": {
+          "A": "The tax rate falls by 4 percentage points, but that is not the rise in take-home pay. Pay rises by £0.56 on £11.20, which is 5.0%.",
+          "B": "£0.56 ÷ £11.76 = 4.8% divides by the new take-home pay. A percentage change is measured against the original value, £11.20.",
+          "D": "The tax rate has fallen by a fifth, from 20% to 16%, but tax took only a fifth of each hour's pay, so take-home pay rises by much less than a fifth."
+        }
+      }
+    }
+  ]
+}

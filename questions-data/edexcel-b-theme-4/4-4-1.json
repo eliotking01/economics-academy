@@ -1,0 +1,204 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-4",
+  "boardName": "Edexcel B Theme 4",
+  "spec": "4.4.1",
+  "slug": "4-4-1-the-ad-as-model",
+  "title": "The AD/AS Model",
+  "shortTitle": "The AD/AS Model",
+  "pageTitle": "The AD/AS Model Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions for Edexcel B A-Level Economics on shifts in aggregate demand and supply, full capacity output and the multiplier.",
+  "intro": "Seven original multiple-choice questions on the AD/AS model: shifts in aggregate demand and aggregate supply, full capacity output, the effects on inflation and unemployment, and the multiplier effect. Two are calculations.",
+  "notesTeaser": "Seven original multiple-choice questions on shifts in AD and AS, full capacity output, inflation and unemployment, and the multiplier, including two calculations.",
+  "questions": [
+    {
+      "id": "edexcel-b-4-4-1-q1",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A shipyard on the Clyde builds a £40 million research ship for a marine research institute in Norway.<br />In the UK's aggregate demand, the sale counts as part of",
+      "options": {
+        "A": "Consumer spending (C).",
+        "B": "Government spending (G).",
+        "C": "Investment (I).",
+        "D": "Net exports (X − M)."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The ship is made in the UK, so it is UK output, and the buyer is abroad. Spending by foreign buyers on UK-made goods is an <strong>export</strong>, so the sale adds to X and raises <strong>net exports (X − M)</strong>.<br />The ship is a capital good, but what decides the component is <em>who</em> buys it, not what it is.",
+        "distractors": {
+          "A": "Consumer spending is spending by UK households on goods and services. Neither the buyer nor the ship fits that.",
+          "B": "G is spending by the UK government. A research institute in Norway is not part of it, even if it is publicly funded at home.",
+          "C": "The ship is a capital good, which is why investment looks right. But investment in UK aggregate demand is spending on capital by UK firms. This ship is bought from abroad, so it is an export."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-1-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Over a few months the pound rises sharply against the euro and the dollar, and it then stays high. Many UK manufacturers buy their components and raw materials from abroad.<br />All other things being equal, the most likely effect is that",
+      "options": {
+        "A": "AD shifts left and SRAS shifts left.",
+        "B": "AD shifts left and SRAS shifts right.",
+        "C": "AD shifts right and SRAS shifts left.",
+        "D": "AD shifts right and SRAS shifts right."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Two things change at once.<br /><strong>AD:</strong> a stronger pound makes UK goods dearer for overseas buyers and imports cheaper for UK buyers → exports fall and imports rise → net exports fall → <strong>AD shifts left</strong>.<br /><strong>SRAS:</strong> the manufacturers' imported components and raw materials now cost less in pounds → costs fall → <strong>SRAS shifts right</strong>.<br />Both shifts push the price level down. Their effect on real GDP depends on which is larger.",
+        "distractors": {
+          "A": "AD does shift left, but cheaper imported inputs cut firms' costs, so SRAS shifts right, not left. A leftward shift would follow a weaker pound, which makes imported inputs dearer.",
+          "C": "Both directions are reversed. This is the effect of a weaker pound: exports rise, so AD shifts right, and imported inputs cost more, so SRAS shifts left.",
+          "D": "SRAS does shift right, but a stronger pound makes UK exports dearer abroad and imports cheaper at home, so net exports fall and AD shifts left."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-1-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "Table 1 shows the results of a survey of UK firms in four different years.<br />Using Table 1, and sketching a Keynesian LRAS curve, the year in which a rise in government spending would raise real GDP with the smallest rise in the price level is",
+      "table": {
+        "caption": "Table 1: Survey of UK firms in four years",
+        "head": [
+          "",
+          "Firms working at full capacity",
+          "Firms reporting staff shortages",
+          "Real GDP growth in the previous year"
+        ],
+        "rows": [
+          [
+            "Year 1",
+            "71%",
+            "47%",
+            "2.6%"
+          ],
+          [
+            "Year 2",
+            "82%",
+            "64%",
+            "3.1%"
+          ],
+          [
+            "Year 3",
+            "58%",
+            "31%",
+            "1.4%"
+          ],
+          [
+            "Year 4",
+            "35%",
+            "9%",
+            "−1.2%"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Year 1.",
+        "B": "Year 2.",
+        "C": "Year 3.",
+        "D": "Year 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "On a Keynesian LRAS curve, what a rise in AD does depends on how much spare capacity there is.<br />In <strong>Year 4</strong> only 35% of firms are working at full capacity and only 9% report staff shortages, so there are idle workers and machines. Firms can meet the extra spending by bringing them into use, so output rises with little rise in prices: AD shifts along the flat part of the LRAS curve.<br />In every other year more firms are at full capacity and short of staff, so more of the extra spending goes into bidding up wages and prices.",
+        "distractors": {
+          "A": "Year 1 has more spare capacity than Year 2, but far less than Year 4: 71% of firms are already at full capacity and almost half are short of staff. Much of the extra spending would go into higher wages and prices.",
+          "B": "Year 2 had the fastest growth, which can make it look like the best time to spend. But 82% of firms are at full capacity and 64% are short of staff, so the economy is close to the vertical part of the LRAS curve, where extra spending mainly raises the price level.",
+          "C": "Year 3 has some spare capacity, but less than Year 4. The economy is on the rising part of the LRAS curve, so a rise in AD lifts prices as well as output."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-1-q4",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A UK carmaker loses export orders worth £600 million. Out of each extra pound of income, UK households save 8p, pay 20p in tax and spend 12p on imports.<br />All other things being equal, the final fall in the UK's real GDP is",
+      "options": {
+        "A": "£240 million",
+        "B": "£1,000 million",
+        "C": "£1,500 million",
+        "D": "£7,500 million"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Lost exports are a fall in an injection, and the multiplier works in reverse: the carmaker's workers and suppliers lose income and spend less, which cuts other people's incomes, round after round.<br />MPW = MPS + MPT + MPM = 0.08 + 0.20 + 0.12 = <strong>0.4</strong>.<br />Multiplier = 1 ÷ MPW = 1 ÷ 0.4 = <strong>2.5</strong>.<br />Final fall in real GDP = £600 million × 2.5 = <strong>£1,500 million</strong>.",
+        "distractors": {
+          "A": "£600 million × 0.4 = £240 million multiplies the lost orders by the MPW instead of dividing by it. The multiplier is 1 ÷ MPW, and it is always greater than 1.",
+          "B": "This uses 1 ÷ MPC. The MPC is 1 − 0.4 = 0.6, and £600 million ÷ 0.6 = £1,000 million. The formula is 1 ÷ (1 − MPC), which is the same as 1 ÷ MPW.",
+          "D": "1 ÷ 0.08 = 12.5 gives £7,500 million. This treats saving as the only leakage. Tax and spending on imports also leak out of each round, so all three go into the MPW."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-1-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The UK economy is at full capacity output, with every worker and machine already in use. Overseas demand for UK goods then jumps, and exporters across the UK try to hire extra staff to meet their new orders.<br />All other things being equal, the most likely result in the short run for the economy as a whole is that",
+      "options": {
+        "A": "Total output and wages are both unchanged.",
+        "B": "Total output and wages both rise.",
+        "C": "Total output is unchanged and wages rise.",
+        "D": "Total output rises and wages are unchanged."
+      },
+      "answer": "C",
+      "model": {
+        "working": "At <strong>full capacity output</strong> all of the economy's resources are already in use, so total output cannot rise any further in the short run.<br />The exporters can only hire workers who already have jobs elsewhere. They must offer more pay, and other firms must match it to keep their staff → <strong>wages rise</strong>. Whatever extra the exporters produce, other firms produce less → <strong>total output is unchanged</strong>.<br />This is the vertical section of the LRAS curve, where more spending only raises prices.",
+        "distractors": {
+          "A": "Total output cannot rise, but wages do not stay put. With no idle workers, the exporters can only hire by outbidding other employers.",
+          "B": "This is what happens on the rising section of the LRAS curve, where some spare capacity remains. At full capacity there are no idle resources to bring into use, so total output cannot rise.",
+          "D": "This describes an economy with plenty of spare capacity, on the flat section of the LRAS curve, where idle workers can be hired at the going wage."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-1-q6",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "The government pays a contractor £4 billion to build a new rail depot. Economists later estimate that, as a result, the UK's real GDP rose by £10 billion in total. Out of each extra pound of income, households saved 6p and spent 16p on imports.<br />The share of each extra pound of income taken in tax was",
+      "options": {
+        "A": "0.18",
+        "B": "0.22",
+        "C": "0.40",
+        "D": "0.60"
+      },
+      "answer": "A",
+      "model": {
+        "working": "Work back from the multiplier.<br />Multiplier = final change in real GDP ÷ initial injection = £10 billion ÷ £4 billion = <strong>2.5</strong>.<br />Multiplier = 1 ÷ MPW, so MPW = 1 ÷ 2.5 = <strong>0.4</strong>.<br />MPW = MPS + MPT + MPM, so MPT = 0.4 − 0.06 − 0.16 = <strong>0.18</strong>.<br />Check: 0.06 + 0.18 + 0.16 = 0.4, and 1 ÷ 0.4 = 2.5.",
+        "distractors": {
+          "B": "0.06 + 0.16 = 0.22 adds the two leakages the question gives. That is the part of the MPW already known; the tax share is what is left of the MPW once they are taken away.",
+          "C": "0.4 is the whole MPW. It includes the 6p saved and the 16p spent on imports as well as tax, so those must be subtracted.",
+          "D": "0.6 is the MPC, the share of each extra pound spent on UK goods and services: 1 − 0.4. It is the part that stays in the circular flow, not the tax leakage."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-1-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Firms across the UK expect their sales to fall next year, and many postpone buying new machinery and vans.<br />All other things being equal, the most likely effects on unemployment and inflation are",
+      "options": {
+        "A": "Higher unemployment and higher inflation.",
+        "B": "Higher unemployment and lower inflation.",
+        "C": "Lower unemployment and higher inflation.",
+        "D": "Lower unemployment and lower inflation."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Postponed spending on machinery and vans is a fall in <strong>investment (I)</strong>, so AD shifts left.<br />Firms then cut output → they need fewer workers → <strong>unemployment rises</strong>. With spending weaker, firms find it harder to raise prices → <strong>inflation falls</strong>.<br />The multiplier makes the fall larger, as staff at the firms that make machinery and vans lose income and spend less in turn.",
+        "distractors": {
+          "A": "Higher unemployment together with higher inflation is what a leftward shift of SRAS causes, such as a jump in energy costs. Here nothing has happened to costs: the change is in spending, so it is AD that shifts.",
+          "C": "This is the effect of a rise in AD. Postponing investment cuts spending, so AD shifts left, not right.",
+          "D": "Lower inflation is right, but a fall in AD reduces output, and firms producing less need fewer workers, so unemployment rises."
+        }
+      }
+    }
+  ]
+}
