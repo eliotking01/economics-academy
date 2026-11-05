@@ -1,0 +1,209 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-4",
+  "boardName": "Edexcel B Theme 4",
+  "spec": "4.1.1",
+  "slug": "4-1-1-spectrum-of-competition",
+  "title": "Spectrum of Competition",
+  "shortTitle": "Spectrum of Competition",
+  "pageTitle": "Spectrum of Competition Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions for Edexcel B A-Level Economics on market structures, perfect competition and its limits, pricing and non-price competition.",
+  "intro": "Seven original multiple-choice questions on the spectrum of competition: the four market structures, how perfect competition explains markets and where it falls short, pricing and consumers, and non-price competition. One is a calculation.",
+  "notesTeaser": "Seven original multiple-choice questions on market structures, perfect competition and its limits, pricing and non-price competition, including one calculation.",
+  "questions": [
+    {
+      "id": "edexcel-b-4-1-1-q1",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes four markets in one county.<br />Using Table 1, the market in which a firm must predict how its rivals will react before it changes its price is",
+      "table": {
+        "caption": "Table 1: Four markets in one county",
+        "head": [
+          "Market",
+          "Number of sellers",
+          "Largest seller's share of sales",
+          "Products",
+          "Entry for a new firm"
+        ],
+        "rows": [
+          [
+            "Market 1: garden-waste collection",
+            "1",
+            "100%",
+            "No close substitute",
+            "Blocked: one firm holds the council's contract"
+          ],
+          [
+            "Market 2: malting barley",
+            "800 farms",
+            "Under 1%",
+            "Identical",
+            "Free"
+          ],
+          [
+            "Market 3: nail salons",
+            "70",
+            "3%",
+            "Slightly different",
+            "Cheap and quick"
+          ],
+          [
+            "Market 4: builders' merchants",
+            "3",
+            "40%",
+            "Branded",
+            "Costly: depots and stock"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Market 1.",
+        "B": "Market 2.",
+        "C": "Market 3.",
+        "D": "Market 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Market 4 has three sellers, the largest with 40% of sales, and entry is costly → it is an <strong>oligopoly</strong>.<br />Each merchant is big enough for its price to affect its rivals' sales. A price cut is likely to be matched, and a price rise may leave it on its own → before it acts, it must predict how the other two will react. This is <strong>interdependence</strong>.",
+        "distractors": {
+          "A": "Market 1 has a single seller, so it is a monopoly. With no rivals, there is no reaction to predict: it sets its own price.",
+          "B": "Market 2 is close to perfect competition. Each of 800 farms sells an identical crop and has under 1% of sales, so it is a price taker. No farm's choices affect any other farm.",
+          "C": "Market 3 is monopolistic competition. Each salon has about 3% of sales, so a change in its price barely affects any one rival. It keeps its prices close to rivals' but does not need to predict their reaction."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-1-q2",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A town has 25 dog groomers. Each offers its own mix of styles and services, and a new groomer can start with a van and a few tools.<br />The groomers are an example of imperfect competition because",
+      "options": {
+        "A": "Each groomer sells an identical service.",
+        "B": "Each groomer has some power over its price.",
+        "C": "Each groomer's sales depend on its rivals' reactions.",
+        "D": "New groomers face high barriers to entry."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Imperfect competition</strong> is any market that is not perfectly competitive, so firms have some power over their price.<br />Each groomer's service is slightly different → some customers prefer it → it can charge a little more than rivals without losing every customer. With many firms and low barriers, this is <strong>monopolistic competition</strong>, one form of imperfect competition.",
+        "distractors": {
+          "A": "Identical products are a feature of perfect competition, where firms have no power over price. The stem says each groomer offers its own mix of styles and services.",
+          "C": "That is interdependence, the mark of an oligopoly. With 25 small groomers, one firm's price barely affects any single rival.",
+          "D": "The stem says a new groomer needs only a van and a few tools, so barriers are low. Low barriers are typical of monopolistic competition."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": true,
+      "stem": "Very many small fishing boats catch either mackerel or herring, and each can switch between the two from one season to the next. After a change in tastes, the price of mackerel is above the average cost of catching it and the price of herring is below the average cost of catching it.<br />Sketching the two markets, the most likely outcome over the next few seasons is that",
+      "options": {
+        "A": "Herring supply falls and mackerel supply rises, until both earn normal profit.",
+        "B": "Herring supply rises and mackerel supply falls, until both earn normal profit.",
+        "C": "Both prices stay where they are, as every boat is a price taker.",
+        "D": "Mackerel boats keep their supernormal profit, as they are already established."
+      },
+      "answer": "A",
+      "model": {
+        "working": "This is how perfect competition explains the way markets move resources.<br /><strong>Mackerel:</strong> price above average cost → supernormal profit → herring boats switch to mackerel → mackerel supply shifts right → the price falls until it equals average cost → normal profit.<br /><strong>Herring:</strong> price below average cost → losses → boats switch out → herring supply shifts left → the price rises until it equals average cost → normal profit.<br />Boats and crews have moved towards the fish consumers now want more of.",
+        "distractors": {
+          "B": "This has the signals the wrong way round. Supernormal profit attracts boats into mackerel, and losses push them out of herring.",
+          "C": "Each boat takes the market price, but the market price itself moves when supply changes. As boats switch catch, both supply curves shift and both prices move.",
+          "D": "Being established is no protection here. With no barriers to entry, herring boats can switch to mackerel, and supernormal profit is competed away."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In a market close to perfect competition, one apple grower finds a way to store apples that halves the number that spoil. Within a season, every rival grower has copied it.<br />The most likely result for the grower who found it is that",
+      "options": {
+        "A": "It can charge more than rivals, as buyers now prefer its apples.",
+        "B": "It is forced out, as rivals' costs are now lower than its own.",
+        "C": "Its supernormal profit soon ends, leaving little reward for the idea.",
+        "D": "It keeps supernormal profit in the long run, as its costs are lowest."
+      },
+      "answer": "C",
+      "model": {
+        "working": "This is one of the <strong>limitations of perfect competition</strong>.<br />For a short while the grower's costs are below its rivals' → supernormal profit. But information is perfect and there are no barriers → rivals copy the method → everyone's costs fall → supply rises and the price falls to the new, lower average cost → normal profit again.<br />Any idea is copied at once, so firms have neither the profit to fund research nor much reward for doing it.",
+        "distractors": {
+          "A": "Apples of a given grade are homogeneous: one grower's are the same as any other's. The new method cuts spoilage, not the quality buyers see, so there is no reason to pay more for this grower's apples.",
+          "B": "Every rival has copied the same method, so their costs have fallen to the same level as this grower's, not below it.",
+          "D": "Its cost advantage lasts only until rivals copy the method, which takes a single season. After that, entry and copying compete the supernormal profit away."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-1-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Twenty years ago, twelve small glassworks supplied a region with glass bottles. Today two large firms with automated furnaces supply almost all of them, and a new furnace would cost over £100 million. After allowing for inflation, bottles are cheaper than they were twenty years ago.<br />The best explanation is that",
+      "options": {
+        "A": "Their prices are stable, as each fears a price war with the other.",
+        "B": "The threat of new firms entering keeps the two firms' prices down.",
+        "C": "Economies of scale cut costs by more than market power adds to price.",
+        "D": "The two firms are price takers, so they must accept the market price."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Less competition usually means higher prices, but the effect depends on <strong>economies of scale</strong>.<br />Automated furnaces and very large output → much lower average cost than twelve small glassworks could reach → even with a margin added for market power, the price is below what the small firms charged.<br />The two firms have market power, but their costs are so much lower that consumers still pay less.",
+        "distractors": {
+          "A": "Stable prices explain why prices do not change from year to year, not why they are lower than twenty years ago. Prices can be stable at a high level.",
+          "B": "A new furnace costs over £100 million, so entry is slow and costly. The market is not contestable, and the threat of entry is weak.",
+          "D": "Two firms supplying almost a whole region are an oligopoly with power over their price. Price takers are found in perfect competition."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-1-q6",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A chain of climbing centres charges each member £35 a month, and each member costs it £10 a month in staff time and equipment wear. It is considering a loyalty scheme that would cost £36,000 a year to run.<br />To cover the cost of the scheme, the number of members it must keep for a year who would otherwise have left is",
+      "options": {
+        "A": "86",
+        "B": "120",
+        "C": "300",
+        "D": "1,440"
+      },
+      "answer": "B",
+      "model": {
+        "working": "A loyalty scheme is <strong>non-price competition</strong>, and its catch is cost. Each member it keeps adds a contribution, not the whole £35.<br />Contribution per member per month: £35 − £10 = <strong>£25</strong>.<br />Contribution per member per year: £25 × 12 = <strong>£300</strong>.<br />Members needed: £36,000 ÷ £300 = <strong>120</strong>.<br />If the scheme keeps fewer than 120 members who would otherwise have left, it costs more than it brings in.",
+        "distractors": {
+          "A": "This divides by the yearly fee, £35 × 12 = £420, giving 85.7. It forgets that each member also costs £10 a month, so only £25 a month goes towards the scheme.",
+          "C": "This divides by the yearly cost of each member, £10 × 12 = £120. The scheme is paid for out of what each member adds, which is the fee minus that cost.",
+          "D": "This divides £36,000 by the monthly contribution of £25. The scheme costs £36,000 a year, so it has to be set against a full year's contribution, £300."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-1-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "One company runs the only ferry to an island. The island's harbour has a single berth, which the company has leased for 30 years.<br />Compared with a route served by several ferry companies, this company is most likely to",
+      "options": {
+        "A": "Charge fares above cost and keep supernormal profit.",
+        "B": "Charge the market fare, as it is a price taker.",
+        "C": "Keep its fares stable, as rivals would match any cut.",
+        "D": "Set fares close to average cost to deter new entrants."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The company is a <strong>monopoly</strong>: one firm, no close substitute and a 30-year lease that blocks any rival.<br />No close substitutes → the firm sets its own price → it can raise fares above cost → barriers stop rivals entering → it keeps the supernormal profit.<br />Islanders pay more and have no other ferry to switch to.",
+        "distractors": {
+          "B": "A price taker accepts a price set by many sellers in a market. With only one ferry company, there is no market price to take: the company sets the fare.",
+          "C": "Matching price cuts is how rivals behave in an oligopoly. This company has no rivals on the route.",
+          "D": "Firms keep prices close to average cost when entry is easy. Here the only berth is leased for 30 years, so there is no threat of entry to deter."
+        }
+      }
+    }
+  ]
+}

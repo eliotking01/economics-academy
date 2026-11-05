@@ -1,0 +1,258 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-4",
+  "boardName": "Edexcel B Theme 4",
+  "spec": "4.1.3",
+  "slug": "4-1-3-oligopoly",
+  "title": "Oligopoly",
+  "shortTitle": "Oligopoly",
+  "pageTitle": "Oligopoly Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions for Edexcel B A-Level Economics on concentration ratios, interdependence, tacit agreement and price discrimination.",
+  "intro": "Seven original multiple-choice questions on oligopoly: concentration ratios, interdependence and price stability, tacit agreement and price discrimination. Two are calculations.",
+  "notesTeaser": "Seven original multiple-choice questions on concentration ratios, interdependence and stable prices, tacit agreement and price discrimination, including two calculations.",
+  "questions": [
+    {
+      "id": "edexcel-b-4-1-3-q1",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the annual sales of the five largest garden-centre chains in Wales, listed in alphabetical order. Total garden-centre sales in Wales are £240 million a year.<br />Using Table 1, the four-firm concentration ratio is",
+      "table": {
+        "caption": "Table 1: Annual sales of the five largest garden-centre chains in Wales",
+        "head": [
+          "Chain",
+          "Annual sales (£m)"
+        ],
+        "rows": [
+          [
+            "F",
+            "36"
+          ],
+          [
+            "G",
+            "60"
+          ],
+          [
+            "H",
+            "18"
+          ],
+          [
+            "J",
+            "48"
+          ],
+          [
+            "K",
+            "30"
+          ]
+        ]
+      },
+      "options": {
+        "A": "45.0%",
+        "B": "67.5%",
+        "C": "72.5%",
+        "D": "80.0%"
+      },
+      "answer": "C",
+      "model": {
+        "working": "The four-firm concentration ratio is the share of total sales taken by the <strong>four largest</strong> firms, so first sort the chains by size.<br />Largest four: G (£60m), J (£48m), F (£36m) and K (£30m).<br />Their sales: £60m + £48m + £36m + £30m = <strong>£174m</strong>.<br />Ratio: £174m ÷ £240m × 100 = <strong>72.5%</strong>.<br />The four biggest chains take almost three quarters of all sales, so the market is highly concentrated.",
+        "distractors": {
+          "A": "This is the two-firm ratio: (£60m + £48m) ÷ £240m × 100 = 45%. The question asks for the four largest.",
+          "B": "This adds the first four chains in the table, F, G, H and J, to get £162m. The table is in alphabetical order, not order of size, and H (£18m) is the smallest of the five.",
+          "D": "This adds all five chains, £192m. That is the five-firm ratio."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-3-q2",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "In Market J, the four largest firms hold 72%, 4%, 2% and 2% of sales. In Market K, they hold 21%, 20%, 20% and 19%.<br />The most accurate conclusion is that",
+      "options": {
+        "A": "Both have a four-firm ratio of 80%, but Market J is closer to monopoly.",
+        "B": "Both have a four-firm ratio of 80%, so they are equally competitive.",
+        "C": "Market K is more concentrated, as more of its large firms are of equal size.",
+        "D": "Neither market is concentrated, as both leave 20% of sales to smaller firms."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Both four-firm ratios are 80%: 72 + 4 + 2 + 2 = 80 and 21 + 20 + 20 + 19 = 80.<br />But a ratio cannot show how the sales are shared out. In Market J one firm has 72% of the market, so it is close to a monopoly. In Market K four similar-sized firms compete as an oligopoly.<br />This is a <strong>limit of the concentration ratio</strong>: the same figure can describe one giant and three small firms, or four equals.",
+        "distractors": {
+          "B": "The matching ratios hide very different markets. One firm with 72% of sales faces far weaker rivals than any firm in Market K does.",
+          "C": "Both markets have the same four-firm ratio, so neither is more concentrated by that measure. Firms of equal size, if anything, point to more competition, not less.",
+          "D": "A four-firm ratio of 80% means the four biggest firms make four fifths of all sales. That is a concentrated market, in both cases."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-3-q3",
+      "skill": "data-table",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Two firms run escape rooms in the same city, and each must decide whether to advertise heavily this year. Table 1 shows each firm's yearly profit in £000s for each pair of choices. Each firm chooses what is best for itself, knowing the other will do the same.<br />Using Table 1, the most likely outcome is that",
+      "table": {
+        "caption": "Table 1: Yearly profit in £000s, shown as (Firm X, Firm Y)",
+        "head": [
+          "",
+          "Firm Y advertises",
+          "Firm Y does not advertise"
+        ],
+        "rows": [
+          [
+            "Firm X advertises",
+            "50, 20",
+            "60, 30"
+          ],
+          [
+            "Firm X does not advertise",
+            "30, 45",
+            "40, 35"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Both firms advertise.",
+        "B": "Neither firm advertises.",
+        "C": "Only Firm X advertises.",
+        "D": "Only Firm Y advertises."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Work out each firm's best choice for every move the other could make.<br /><strong>Firm X:</strong> if Y advertises, X earns 50 by advertising against 30 by not. If Y does not, X earns 60 against 40. Advertising is better for X <strong>whatever Y does</strong>.<br /><strong>Firm Y:</strong> if X advertises, Y earns 20 by advertising against 30 by not, so it does not. If X does not, Y earns 45 against 35, so it does.<br />Y knows X will advertise whatever happens → Y's best reply is not to → the outcome is <strong>only Firm X advertises</strong>, with profits of £60,000 and £30,000.",
+        "distractors": {
+          "A": "This assumes Y copies X. But if X advertises, Y earns £30,000 by not advertising against £20,000 by advertising, so Y stays out.",
+          "B": "Firm X would never choose this. Whatever Y does, X earns £20,000 more by advertising, so X always advertises.",
+          "D": "Y advertises only if X does not, and X always advertises. Y can predict that, so it will not advertise."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "A paint maker is one of four firms that supply most of the country's household paint. All four have kept their prices unchanged for three years. The paint maker's energy bill then rises, lifting its marginal cost slightly, yet it still leaves its price unchanged.<br />Sketching the kinked demand curve, the best explanation is that",
+      "options": {
+        "A": "Demand below the current price is elastic, so a rise would raise revenue.",
+        "B": "Its MC has risen within the gap in MR, so its best price is unchanged.",
+        "C": "Rivals would follow any price rise, so it gains nothing by moving first.",
+        "D": "The four firms have agreed a price in a cartel, which it must keep to."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Sketch the kinked demand curve. Above the current price demand is elastic, because rivals do not follow a rise. Below it demand is inelastic, because rivals match a cut.<br />The kink makes a <strong>vertical gap in the MR curve</strong> at the current output. The firm maximises profit where MC = MR → a small rise in MC that stays inside the gap still meets MR at the same output → the profit-maximising price is unchanged.<br />So in an oligopoly even a change in costs may leave prices where they are.",
+        "distractors": {
+          "A": "This muddles the two sections. Demand is inelastic below the kink, and elastic above it, and a price rise into the elastic section loses customers and revenue.",
+          "C": "The model assumes the opposite: rivals do not follow a rise. That is why demand above the current price is elastic and a rise loses customers.",
+          "D": "Nothing in the stem suggests an agreement, and cartels are illegal in the UK. The kinked demand curve explains stable prices with no agreement at all."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-3-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In each of four markets, the largest firm changes its price and its rivals usually follow, without any agreement between them. Table 1 describes the four markets.<br />Using Table 1, the market in which this tacit agreement is most likely to hold is",
+      "table": {
+        "caption": "Table 1: Four markets where firms follow a price leader",
+        "head": [
+          "Market",
+          "Number of firms",
+          "Firms' costs",
+          "Barriers to entry",
+          "Demand"
+        ],
+        "rows": [
+          [
+            "Market 1",
+            "3",
+            "Similar",
+            "High",
+            "Falling sharply in a recession"
+          ],
+          [
+            "Market 2",
+            "3",
+            "Very different",
+            "High",
+            "Stable"
+          ],
+          [
+            "Market 3",
+            "4",
+            "Similar",
+            "Low",
+            "Stable"
+          ],
+          [
+            "Market 4",
+            "3",
+            "Similar",
+            "High",
+            "Stable"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Market 1.",
+        "B": "Market 2.",
+        "C": "Market 3.",
+        "D": "Market 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A <strong>tacit agreement</strong> is most likely to hold when there are very few firms, their products and costs are similar, barriers to entry are high and demand is stable.<br />Market 4 meets all four conditions → each firm wants roughly the same price, can easily spot a rival cutting, faces no newcomer to undercut it and has no slump tempting it to win sales. Each of the other markets fails one condition.",
+        "distractors": {
+          "A": "Demand in Market 1 is falling sharply. In a downturn the pull to cut prices and win sales grows stronger, so a firm is likely to break ranks.",
+          "B": "In Market 2 the firms' costs are very different. The low-cost firm would want a lower price than the others, so there is more to disagree about.",
+          "C": "Barriers to entry in Market 3 are low. If the firms hold prices high, a newcomer can enter and undercut them."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-3-q6",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A coach firm runs a daily 50-seat service between two cities. At a single fare of £20, it fills 40 seats. It then charges adults £28 and students £14, checking student cards as passengers board, and sells 25 adult and 25 student seats. Each extra passenger adds £2 to its costs.<br />The change raises the firm's daily profit by",
+      "options": {
+        "A": "£150",
+        "B": "£230",
+        "C": "£250",
+        "D": "£1,030"
+      },
+      "answer": "B",
+      "model": {
+        "working": "This is <strong>third-degree price discrimination</strong>: a higher fare for the group with less price-elastic demand, and a lower one for students, kept apart by checking cards.<br />Revenue before: 40 × £20 = <strong>£800</strong>.<br />Revenue after: (25 × £28) + (25 × £14) = £700 + £350 = <strong>£1,050</strong>.<br />Extra revenue: £1,050 − £800 = <strong>£250</strong>.<br />Extra cost: 10 more passengers × £2 = <strong>£20</strong>.<br />Rise in profit: £250 − £20 = <strong>£230</strong>. The coach also runs full, filling seats that would otherwise have been empty.",
+        "distractors": {
+          "A": "This charges £2 for all 50 passengers (£100). Only the 10 extra passengers add to costs; the first 40 were carried before the change.",
+          "C": "This is the rise in revenue. It leaves out the £20 that the 10 extra passengers add to costs.",
+          "D": "This takes the extra cost from the new revenue, £1,050 − £20. It forgets the £800 the firm was already earning at the single fare."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-3-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Four firms supply most of the UK's cat litter and have charged much the same price for years. One of them installs machinery that cuts its average cost by 30%, well below its rivals'. Its owners want a bigger share of the market, and its rivals have the cash to match a price cut for some time.<br />The most likely result is that",
+      "options": {
+        "A": "It cuts its price; rivals match it, and the weakest may leave.",
+        "B": "It cuts its price; rivals hold theirs, and it takes their customers.",
+        "C": "It holds its price, as any change at all would start a price war.",
+        "D": "It raises its price, as its rivals would not follow a rise."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Price stability in an oligopoly can break down when one firm has <strong>much lower costs</strong>.<br />Its costs are far below its rivals' → it can cut its price and still make a profit → rivals match the cut so as not to lose customers → a <strong>price war</strong>: prices fall across the market → rivals' revenue and profit fall → the weakest, with the highest costs, may be forced out.<br />Consumers gain from lower prices, at least for a while.",
+        "distractors": {
+          "B": "In an oligopoly a price cut is likely to be matched, because each rival's sales depend on what the others charge. Holding their prices would hand customers to the low-cost firm.",
+          "C": "A price war is a risk to firms with similar costs. A firm whose costs are 30% lower can win one, and its owners want market share, which a price cut delivers.",
+          "D": "Raising its price would lose customers, because rivals would not follow a rise. That is the opposite of what the owners want, a bigger share of the market."
+        }
+      }
+    }
+  ]
+}
