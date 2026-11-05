@@ -1,0 +1,246 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-4",
+  "boardName": "Edexcel B Theme 4",
+  "spec": "4.5.3",
+  "slug": "4-5-3-the-role-of-the-central-bank",
+  "title": "The Role of the Central Bank",
+  "shortTitle": "The Role of the Central Bank",
+  "pageTitle": "The Role of the Central Bank Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions for Edexcel B A-Level Economics on the MPC and Bank Rate, the inflation target, the FPC and the lender of last resort.",
+  "intro": "Eight original multiple-choice questions on the role of the central bank: the MPC and Bank Rate, using monetary policy to control inflation, regulation by the Financial Policy Committee, and the lender of last resort. One is a calculation.",
+  "notesTeaser": "Eight original multiple-choice questions on the MPC and Bank Rate, the inflation target, the Financial Policy Committee and the lender of last resort, including one calculation.",
+  "questions": [
+    {
+      "id": "edexcel-b-4-5-3-q1",
+      "skill": "data-table",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Table 1 shows CPI inflation in four separate months. The Bank of England's target is 2%.<br />Using Table 1, the months in which the Governor must write an open letter to the Chancellor are",
+      "table": {
+        "caption": "Table 1: CPI inflation in four months",
+        "head": [
+          "",
+          "CPI inflation"
+        ],
+        "rows": [
+          [
+            "Month 1",
+            "3.4%"
+          ],
+          [
+            "Month 2",
+            "2.8%"
+          ],
+          [
+            "Month 3",
+            "0.7%"
+          ],
+          [
+            "Month 4",
+            "1.6%"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Month 1 only.",
+        "B": "Months 1 and 2.",
+        "C": "Months 1 and 3.",
+        "D": "Months 1, 2, 3 and 4."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The Governor must write an open letter when inflation misses the 2% target by <strong>more than one percentage point either way</strong>, so when it is above 3% or below 1%.<br />Month 1: 3.4% is above 3%, so a letter is needed.<br />Month 2: 2.8% is above target but within one point of it, so no letter.<br />Month 3: 0.7% is below 1%, so a letter is needed.<br />Month 4: 1.6% is within one point of the target, so no letter.<br />The letter explains why inflation has missed the target and what the Bank will do about it.",
+        "distractors": {
+          "A": "This catches inflation that is too high but misses Month 3. The rule works either way: inflation of 0.7% is more than one point <em>below</em> the target, so it needs a letter too.",
+          "B": "This picks every month with inflation above 2%. The letter is needed only when inflation is more than one percentage point away from the target. Month 2 is 0.8 points above it, which is inside that band.",
+          "D": "Every month misses 2% exactly, but the letter is not required for every miss. Months 2 and 4 are within one percentage point of the target."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-3-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "CPI inflation is 3.5%. The MPC's forecast shows it falling to 1.2% in two years' time, as an earlier jump in energy prices drops out and spending weakens.<br />The decision most consistent with the way the MPC sets Bank Rate is to",
+      "options": {
+        "A": "Cut Bank Rate, as a change takes about two years to work fully.",
+        "B": "Cut Bank Rate, as inflation is above its 2% target.",
+        "C": "Raise Bank Rate, as inflation is above its 2% target.",
+        "D": "Raise Bank Rate, as a change takes about two years to work fully."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A change in Bank Rate takes around <strong>18 to 24 months</strong> to have its full effect. So the MPC sets rates for where it expects inflation to be in two years, not where it is today.<br />Inflation is forecast to be 1.2% by then, below the 2% target. A cut lifts demand when inflation is heading below target, so <strong>cutting</strong> is consistent with the remit, even though inflation is above target today. Raising rates now would add to the undershoot just as it arrives.",
+        "distractors": {
+          "B": "The decision is right, but the reason would point the other way. Inflation above target is a reason to <em>raise</em> rates. The case for a cut is the forecast: inflation is expected to be below target by the time the cut takes effect.",
+          "C": "This sets rates for today's inflation. A rise now would have its full effect in about two years, when inflation is already forecast to be below target, so it would push inflation further below 2%.",
+          "D": "The time lag is the right thing to focus on, but it points to a cut. In two years' time inflation is forecast at 1.2%, below target, so the MPC needs to support demand, not reduce it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-3-q3",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The Bank of England raises the rate it pays commercial banks on the money they keep with it overnight, from 4.0% to 4.5%. A high-street bank soon raises the rates it charges on new loans to firms.<br />The main reason is that",
+      "options": {
+        "A": "Higher rates make firms more likely to repay their loans.",
+        "B": "Leaving money at the Bank of England now pays more.",
+        "C": "Savers will move their deposits to the Bank of England.",
+        "D": "The Bank of England sets the rate on every bank loan."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The rate the Bank of England pays on banks' overnight money is <strong>Bank Rate</strong>. It is a safe return: a commercial bank can always earn it by leaving money with the Bank.<br />When Bank Rate rises, lending to a firm has to pay more than that safe return to be worth the risk. So the bank will only lend at higher rates, and rates on mortgages, business loans, overdrafts and savings follow Bank Rate up.",
+        "distractors": {
+          "A": "Higher rates make repayments larger, so if anything firms find it harder to repay. The bank raises its rates because its safe alternative, leaving money at the Bank of England, now pays more.",
+          "C": "Households and firms do not hold accounts at the Bank of England. Commercial banks do, which is why it is called the banker to the banks.",
+          "D": "The MPC sets only Bank Rate. Commercial banks set their own loan rates, and they follow Bank Rate because it changes what they can earn safely, not because they are told to."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-3-q4",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two countries' central banks each target 2% inflation, and in both, inflation has risen to 5%. In Country X, firms and workers expect the central bank to bring inflation back to 2%, so they keep their price and pay rises small. In Country Y, they expect inflation to stay high, and they push for large rises.<br />Compared with Country X, the central bank in Country Y most likely needs",
+      "options": {
+        "A": "No rise at all, since its inflation is expected to persist.",
+        "B": "A smaller rise, since higher prices will cut spending on their own.",
+        "C": "The same rise, since both have the same rate of inflation.",
+        "D": "A larger rise in interest rates to bring inflation back to 2%."
+      },
+      "answer": "D",
+      "model": {
+        "working": "This is about <strong>credibility</strong>. In Country X, people believe the central bank will hit its target, so they set prices and pay claims as if inflation will fall. Inflation then falls with smaller rate rises.<br />In Country Y, large pay and price rises keep inflation high on their own. The central bank must squeeze demand harder to break them, so it needs a <strong>larger</strong> rise in interest rates.",
+        "distractors": {
+          "A": "Expectations of high inflation make the central bank's job harder, not impossible. Doing nothing would let large pay and price rises carry on feeding inflation.",
+          "B": "Inflation does not correct itself here. Large pay and price rises keep it going, so Country Y needs a larger rise in interest rates, not a smaller one.",
+          "C": "The two countries have the same inflation today, but not the same expectations. In Country Y, large pay and price rises keep pushing inflation up, so the same rise would do less."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-3-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A recession begins, and banks' losses on their loans start to rise. The FPC cuts to zero the extra capital buffer it had made banks build up during the boom.<br />The aim of the cut is to",
+      "options": {
+        "A": "Let banks absorb their losses and still keep lending.",
+        "B": "Lower Bank Rate, so that inflation rises to its target.",
+        "C": "Make banks safer before the next lending boom begins.",
+        "D": "Stop banks lending to the riskiest firms and households."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A <strong>capital buffer</strong> is extra capital, money from shareholders that absorbs losses, which the FPC makes banks build up when risks are growing.<br />In a downturn, the FPC can <strong>release</strong> the buffer. Banks can then use that capital to absorb their rising losses without cutting lending to protect themselves → firms and households can still borrow → the recession is less deep.",
+        "distractors": {
+          "B": "Bank Rate is set by the MPC, not the FPC. The FPC's tools are rules on how much capital banks hold and how they lend.",
+          "C": "Building the buffer up during the boom made banks safer. Cutting it now does the opposite job: it lets banks use that capital while losses are rising.",
+          "D": "Cutting the buffer loosens the rules on banks. Stopping risky lending would need tighter rules, such as a higher buffer or limits on risky mortgages."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-3-q6",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The FPC limits the share of new mortgages that lenders can make at 4.5 times or more a borrower's income. Table 1 shows four mortgages one lender agrees in a week.<br />Using Table 1, the mortgages that count towards the limit are",
+      "table": {
+        "caption": "Table 1: Four new mortgages",
+        "head": [
+          "",
+          "Borrower's income",
+          "Amount borrowed"
+        ],
+        "rows": [
+          [
+            "Mortgage P",
+            "£40,000",
+            "£180,000"
+          ],
+          [
+            "Mortgage Q",
+            "£50,000",
+            "£230,000"
+          ],
+          [
+            "Mortgage R",
+            "£60,000",
+            "£264,000"
+          ],
+          [
+            "Mortgage S",
+            "£30,000",
+            "£120,000"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Q only.",
+        "B": "R only.",
+        "C": "P and Q.",
+        "D": "Q and R."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Divide each amount borrowed by the borrower's income:<br />P: £180,000 ÷ £40,000 = <strong>4.5</strong>.<br />Q: £230,000 ÷ £50,000 = <strong>4.6</strong>.<br />R: £264,000 ÷ £60,000 = 4.4.<br />S: £120,000 ÷ £30,000 = 4.0.<br />The limit covers mortgages at 4.5 times income <strong>or more</strong>, so P and Q count. Capping the share of these loans limits how many households take on debts that would be hard to repay if rates rose.",
+        "distractors": {
+          "A": "Q is above 4.5, but P is exactly 4.5 times income. The limit covers mortgages at 4.5 times <em>or more</em>, so P counts too.",
+          "B": "R is the largest loan, but the borrower also has the highest income. It is 4.4 times income, below the limit. The multiple of income is what counts, not the size of the loan.",
+          "D": "Q and R are the two largest loans. The limit is about the loan as a multiple of income: R is 4.4 times, below the limit, while P, a smaller loan, is exactly 4.5 times."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-3-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Two banks ask the Bank of England for emergency loans on the same day. Bank X's loans are sound, but a rumour has led its savers to withdraw money faster than it can pay out. Bank Y has lost so much on bad loans that its losses exceed its capital.<br />As lender of last resort, the Bank of England's role is meant for",
+      "options": {
+        "A": "Neither bank, as any loan to them creates moral hazard.",
+        "B": "Both banks, as either failure could spread to others.",
+        "C": "Bank Y only, as its losses are the larger.",
+        "D": "Bank X only, as it is short of cash, not bust."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A bank lends most of its deposits out for years, so even a sound bank cannot repay every saver at once. Bank X is in a <strong>bank run</strong>: it is short of cash, but its loans would be repaid in time. Lending to it lets it pay out every withdrawal, so the panic subsides.<br />The role is meant for banks with a <strong>cash shortage</strong>, not banks whose loans have gone bad. Bank Y's losses have used up its capital, so a loan would not fix its problem. The Bank of England also lends only against good collateral, which Bank Y's bad loans are not.",
+        "distractors": {
+          "A": "Moral hazard is a real cost, which is why the role comes with regulation from the FPC and PRA. But refusing to help a sound bank in a run would let panic spread to other banks.",
+          "B": "Either failure could spread, but the role is not meant to keep a bank whose losses exceed its capital afloat. Lending to Bank Y would not cure its bad loans, and it has no good collateral to offer.",
+          "C": "Large losses are the reason Bank Y does not qualify. Its loans have gone bad and its capital is used up, so its problem is that it is bust, not short of cash."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-3-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "CPI inflation has been close to 2% for a year. Mortgage lending is growing by 15% a year, and a rising share of new mortgages are at high multiples of borrowers' incomes.<br />The Bank of England response that best fits this situation is that",
+      "options": {
+        "A": "The Bank lends to mortgage lenders as lender of last resort.",
+        "B": "The FPC makes banks hold an extra buffer of capital.",
+        "C": "The MPC cuts Bank Rate to keep inflation at 2%.",
+        "D": "The MPC raises Bank Rate to slow the growth in lending."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The problem is a <strong>lending boom</strong>, a risk to the financial system as a whole, while inflation is on target. That is the job of the <strong>FPC</strong>, which looks for systemic risk and acts to reduce it.<br />Making banks hold an extra capital buffer while risks are building means they have more to absorb losses if the boom ends badly, and it makes credit a little dearer, which slows lending. The MPC's job is inflation, and inflation is already at target.",
+        "distractors": {
+          "A": "Lender of last resort is for a bank that is short of cash and cannot borrow anywhere else. No lender here is short of cash; they are lending too much.",
+          "C": "Inflation is already at 2%, so there is no reason for the MPC to act. A cut would also make borrowing cheaper and feed the lending boom.",
+          "D": "A rise in Bank Rate would slow lending, but it would also push inflation below its target, which is the MPC's remit. A boom in lending with inflation on target is a job for the FPC."
+        }
+      }
+    }
+  ]
+}

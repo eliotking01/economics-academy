@@ -1,0 +1,251 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-4",
+  "boardName": "Edexcel B Theme 4",
+  "spec": "4.5.4",
+  "slug": "4-5-4-the-global-financial-crisis",
+  "title": "The Global Financial Crisis",
+  "shortTitle": "The Global Financial Crisis",
+  "pageTitle": "The Global Financial Crisis Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions for Edexcel B A-Level Economics on the global financial crisis: sub-prime loans, moral hazard, the credit crunch and regulation.",
+  "intro": "Eight original multiple-choice questions on the global financial crisis: sub-prime mortgages, market bubbles, moral hazard, organisational culture, the credit crunch, the role of banking regulation and the impact on households, firms and savers. One is a calculation.",
+  "notesTeaser": "Eight original multiple-choice questions on sub-prime mortgages, bubbles, moral hazard, bank culture, the credit crunch, regulation and the crisis's impact, including one calculation.",
+  "questions": [
+    {
+      "id": "edexcel-b-4-5-4-q1",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "While house prices rise by 10% a year, a mortgage lender finds that the borrowers who stop paying cost it almost nothing.<br />The most likely reason is that",
+      "options": {
+        "A": "Rising prices make fewer borrowers stop paying.",
+        "B": "Each home can be sold for more than is owed on it.",
+        "C": "Rising house prices raise borrowers' incomes.",
+        "D": "The government repays any mortgage that is not paid."
+      },
+      "answer": "B",
+      "model": {
+        "working": "When a borrower stops paying, the lender can sell the home to get its money back. While prices are rising fast, the home is worth more than the loan, so the sale covers what is owed.<br />This is how a <strong>market bubble</strong> made risky lending look safe. Lenders and buyers kept betting that prices would keep rising. When prices fell, borrowers owed more than their homes were worth, and lenders could not get their money back.",
+        "distractors": {
+          "A": "The stem is about what the borrowers who do stop paying cost the lender, not how many there are. Each one costs it little because the home sells for more than the loan.",
+          "C": "House prices and incomes are different things. A rise in the value of a home does not raise the owner's income, and it does not make a borrower who has stopped paying start again.",
+          "D": "No government repays private mortgages that go unpaid. The lender is protected only by the value of the home it can sell."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-4-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A European bank pays $200 million for a security made from 2,000 US sub-prime mortgages of $100,000 each. 15% of the borrowers default, and selling their homes recovers 60% of what each of them owed.<br />Ignoring any interest, the bank's loss as a percentage of what it paid for the security is",
+      "options": {
+        "A": "6.0%",
+        "B": "9.0%",
+        "C": "15.0%",
+        "D": "40.0%"
+      },
+      "answer": "A",
+      "model": {
+        "working": "Borrowers who default: 15% × 2,000 = 300.<br />Amount they owed: 300 × $100,000 = <strong>$30 million</strong>.<br />Recovered by selling their homes: 60% × $30 million = $18 million.<br />Loss: $30 million − $18 million = <strong>$12 million</strong>.<br />As a percentage of what the bank paid: $12 million ÷ $200 million × 100 = <strong>6.0%</strong>.<br />US lenders bundled thousands of mortgages like these into securities and sold them to banks worldwide. Once borrowers defaulted, the losses turned up in banks far from the US.",
+        "distractors": {
+          "B": "15% × 60% = 9.0% is the share of the security that was <em>recovered</em> from defaulted loans. The loss on those loans is the 40% that was not recovered: 15% × 40% = 6.0%.",
+          "C": "15.0% treats every defaulted loan as a total loss. Selling the homes recovers 60% of what those borrowers owed, so the bank loses only 40% of the $30 million.",
+          "D": "40% is the share lost on each <em>defaulted</em> loan. Only 15% of the borrowers defaulted, so the loss on the whole security is 40% of 15%, which is 6.0%."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-4-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A mortgage lender sells every loan it makes to other banks within a month of making it. It earns a fee on each loan it arranges.<br />The most likely effect on the way it lends is that it",
+      "options": {
+        "A": "Charges higher rates, as it carries the risk of default.",
+        "B": "Checks borrowers' incomes less, as others bear losses.",
+        "C": "Checks borrowers' incomes more, to protect its fees.",
+        "D": "Lends less, as it earns nothing once a loan is sold."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The lender earns its fee when it makes the loan. Once the loan is sold, any loss if the borrower defaults falls on whoever bought it.<br />So the lender gains from making as many loans as possible and loses nothing if they go bad → it has <strong>little reason to check whether borrowers can repay</strong>. Before the financial crisis, US lenders sold sub-prime mortgages on in exactly this way, often with little check on income.",
+        "distractors": {
+          "A": "The lender does not carry the risk of default for long: it sells each loan within a month. That is what removes its reason to price or check the risk carefully.",
+          "C": "The fee is earned when the loan is made, whether or not it is later repaid. Checking more carefully would mean making fewer loans and earning fewer fees.",
+          "D": "The lender earns a fee on every loan it arranges, so selling the loans on gives it a reason to make more of them, not fewer."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-4-q4",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows how four banks pay bonuses to the staff who approve their loans.<br />Using Table 1, the bank whose culture is least likely to lead to risky lending is",
+      "table": {
+        "caption": "Table 1: How four banks pay bonuses to loan staff",
+        "head": [
+          "",
+          "Bonus for staff who approve loans"
+        ],
+        "rows": [
+          [
+            "Bank W",
+            "A bonus for each mortgage they sell this year"
+          ],
+          [
+            "Bank X",
+            "A bonus based on the bank's profit this quarter"
+          ],
+          [
+            "Bank Y",
+            "A bonus based on the total value of loans they approve this year"
+          ],
+          [
+            "Bank Z",
+            "A bonus paid three years later, and cancelled if the loans have gone bad"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Bank W.",
+        "B": "Bank X.",
+        "C": "Bank Y.",
+        "D": "Bank Z."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Organisational culture</strong> is the shared values and habits that shape how people in a business behave, and pay is one of the strongest of those habits.<br />Before the financial crisis, staff in many banks were paid bonuses for selling loans and making short-term profit, and lost nothing personally when those loans failed later. Bank Z's staff are paid only if their loans are still being repaid three years on, so they bear part of the cost of a bad loan. They have a reason to check whether borrowers can repay.",
+        "distractors": {
+          "A": "A bonus for each mortgage sold rewards the number of loans made, not whether they are repaid. Staff gain from lending to anyone and lose nothing when the loans fail.",
+          "B": "This quarter's profit includes the interest from new loans long before any of them go bad. Staff are rewarded for lending that looks profitable now, even if it fails later.",
+          "C": "A bonus on the value of loans approved rewards lending more, and lending larger sums, without any check on whether the loans are repaid."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-4-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government passes a law. If a large bank fails, its shareholders and the investors who lent to it must bear the losses before any public money is used.<br />The main aim of the law is to",
+      "options": {
+        "A": "Give the bank's investors a share of any public rescue.",
+        "B": "Lower the interest rates that banks pay to borrow.",
+        "C": "Stop banks taking big risks in the hope of a rescue.",
+        "D": "Stop savers from withdrawing their deposits in a panic."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The largest banks were <strong>too big to fail</strong>: banks expected a rescue if their bets went wrong, so they took bigger risks for bigger profits. That is <strong>moral hazard</strong>.<br />Under this law, the people who own and fund a bank lose their money first if it fails → they can no longer count on taxpayers to cover the losses → they watch more closely the risks the bank takes, and the bank has less reason to take big bets.",
+        "distractors": {
+          "A": "The law does the opposite: shareholders and lenders lose their money first, before any public money is used.",
+          "B": "Investors who know they will bear losses want a higher return for lending to a risky bank, so the law is more likely to raise what banks pay to borrow. That is part of how it works.",
+          "D": "Stopping a panic among savers is the job of the lender of last resort, which lends to a bank that is short of cash. This law is about who bears the losses when a bank fails."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-4-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Banks that have lost money on mortgages cut their lending to firms. Firms then cut their investment and lay off staff.<br />The most likely reason this leads the banks to cut their lending again is that",
+      "options": {
+        "A": "Lower sales at other firms mean more loans go bad.",
+        "B": "Firms want fewer loans, so banks have no one to lend to.",
+        "C": "Job losses cut deposits, so banks have less money to lend.",
+        "D": "The central bank raises Bank Rate, so loans cost more."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A <strong>credit crunch</strong> feeds on itself:<br />Banks cut lending → firms cut investment and jobs → lower incomes and spending → lower sales for other firms → more firms cannot repay their loans → the banks make more losses → they cut lending again.<br />This is how the banking crisis became a recession: losses at the banks reached firms that had nothing to do with mortgages.",
+        "distractors": {
+          "B": "Firms may want fewer loans in a downturn, but that would not make banks <em>cut</em> the credit they offer. Banks cut lending because more of their loans are going bad and they are protecting themselves.",
+          "C": "Banks were not cutting lending because savers had stopped depositing. They were hoarding cash to protect themselves against further losses on their loans.",
+          "D": "In a recession with falling lending, a central bank cuts Bank Rate to support spending; it does not raise it. The cycle here runs through bad loans, not interest rates."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-4-q7",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "The largest UK banking groups must now keep their high-street deposits and lending in a separate company from their investment banking.<br />The problem this change targets is that",
+      "options": {
+        "A": "Banks had too little capital to absorb their losses.",
+        "B": "Banks were not tested against a severe recession.",
+        "C": "No one watched the financial system as a whole.",
+        "D": "Risky investment banking could sink deposits."
+      },
+      "answer": "D",
+      "model": {
+        "working": "This is <strong>ring-fencing</strong>. Before the crisis, a bank's risky trading and investment banking sat in the same company as ordinary customers' savings and loans, so losses on one could bring down the other.<br />Keeping the high-street bank in a separate company means that if the investment bank fails, savers' deposits and lending to households and firms are protected.",
+        "distractors": {
+          "A": "Too little capital was tackled by making banks hold more capital and cash, under the international rules known as Basel III. Ring-fencing separates parts of a bank; it does not change how much capital it holds.",
+          "B": "This was tackled by annual stress tests, which check whether the largest banks could survive a severe recession. Ring-fencing is about keeping risky activities away from savers' money.",
+          "C": "This was tackled by setting up new regulators, including the FPC, to watch the system as a whole. Ring-fencing changes how each banking group is organised."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-4-q8",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "After the financial crisis, the Bank of England cuts Bank Rate to close to zero and keeps it there for years. Table 1 describes four households.<br />Using Table 1, the household most likely to have been made better off by the low Bank Rate is",
+      "table": {
+        "caption": "Table 1: Four households",
+        "head": [
+          "",
+          "Home",
+          "Savings",
+          "Work"
+        ],
+        "rows": [
+          [
+            "Household 1",
+            "Has a large mortgage at a variable rate",
+            "None",
+            "Both adults keep their jobs"
+          ],
+          [
+            "Household 2",
+            "Owns its home outright",
+            "£150,000, living on the interest",
+            "Retired"
+          ],
+          [
+            "Household 3",
+            "Rents, and is saving to buy a first home",
+            "£20,000 towards a deposit",
+            "One adult keeps their job"
+          ],
+          [
+            "Household 4",
+            "Has a mortgage at a rate fixed for five more years",
+            "A small amount",
+            "One adult loses their job"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Household 1.",
+        "B": "Household 2.",
+        "C": "Household 3.",
+        "D": "Household 4."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A cut in Bank Rate soon lowers the rates on variable-rate mortgages. Household 1 has a large variable-rate mortgage and both incomes are safe, so its repayments fall while its income does not. It is <strong>better off</strong>.<br />The impact of the crisis was uneven: <strong>borrowers</strong> on variable-rate mortgages gained from low rates, while <strong>savers</strong>, and anyone hoping to buy, lost out.",
+        "distractors": {
+          "B": "A household living on the interest from its savings loses most from low rates: its savings earn almost nothing, so its income falls.",
+          "C": "This household loses twice. Its savings earn almost nothing, and low rates helped push up house prices, so a first home moves further out of reach. Mortgages were also harder to get after the crisis, especially for first-time buyers.",
+          "D": "A rate fixed for five more years means its repayments do not fall, so it gains nothing from the cut for now. And it has lost an income."
+        }
+      }
+    }
+  ]
+}

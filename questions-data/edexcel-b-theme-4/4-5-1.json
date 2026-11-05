@@ -1,0 +1,190 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-4",
+  "boardName": "Edexcel B Theme 4",
+  "spec": "4.5.1",
+  "slug": "4-5-1-risks-and-uncertainty",
+  "title": "Risks and Uncertainty",
+  "shortTitle": "Risks and Uncertainty",
+  "pageTitle": "Risks and Uncertainty Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions for Edexcel B A-Level Economics on risk and uncertainty, economic shocks, exchange rate risk, forward contracts and insurance.",
+  "intro": "Seven original multiple-choice questions on risks and uncertainty: the difference between the two, the impact of shocks on firms, exchange rate risk and forward markets, and the role of insurance in business. Two are calculations.",
+  "notesTeaser": "Seven original multiple-choice questions on risk and uncertainty, shocks, exchange rate risk, forward contracts and insurance, including two calculations.",
+  "questions": [
+    {
+      "id": "edexcel-b-4-5-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A coffee roaster lists four things it cannot know for sure about next year.<br />The one best described as uncertainty rather than risk is",
+      "options": {
+        "A": "How many of its coffee shipments will be damaged at sea.",
+        "B": "How many staff days will be lost to sickness.",
+        "C": "Whether a fire will damage its roasting plant.",
+        "D": "Whether shoppers will take to its new cold-brew range."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Risk</strong> is an unknown outcome whose chances can be measured from past data. <strong>Uncertainty</strong> is an unknown outcome whose chances cannot be measured, because there is no past record to go on.<br />A new product has never been sold before, so there is no record of how often products like it succeed with these shoppers. No one can put a probability on it, so it is <strong>uncertainty</strong>. The roaster's owners carry it themselves.",
+        "distractors": {
+          "A": "Damage to goods at sea happens often enough, across thousands of shipments, for its chances to be measured. That makes it a risk, and it can be insured.",
+          "B": "Records from this firm and many others show roughly how many days staff lose to sickness each year. The exact days are unknown, but the chances can be measured, so this is a risk.",
+          "C": "No one knows whether this plant will catch fire, but records across thousands of buildings show how often fires happen. That is why insurers will cover it: it is a risk."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-1-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows three threats facing a UK furniture retailer.<br />Using Table 1, the approach that best matches each threat is",
+      "table": {
+        "caption": "Table 1: Three threats facing a furniture retailer",
+        "head": [
+          "",
+          "Threat"
+        ],
+        "rows": [
+          [
+            "Threat 1",
+            "A flood damages the stock in its warehouse"
+          ],
+          [
+            "Threat 2",
+            "It must pay an Italian supplier €80,000 in four months' time"
+          ],
+          [
+            "Threat 3",
+            "Buyers turn away from its style of furniture towards a new fashion"
+          ]
+        ]
+      },
+      "options": {
+        "A": "1: insurance. 2: insurance. 3: cash reserves.",
+        "B": "1: insurance. 2: forward contract. 3: insurance.",
+        "C": "1: insurance. 2: forward contract. 3: cash reserves.",
+        "D": "1: forward contract. 2: insurance. 3: cash reserves."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Threat 1</strong> is a risk: floods happen often enough for an insurer to measure the chance and set a premium, so the retailer can <strong>insure</strong> its stock.<br /><strong>Threat 2</strong> is <strong>exchange rate risk</strong>: if the pound weakens before the payment is due, €80,000 will cost more in pounds. A <strong>forward contract</strong> fixes the exchange rate today, so the retailer knows the cost in pounds now.<br /><strong>Threat 3</strong> is a change in tastes. No one can measure the chance of it, so it is uncertainty and no insurer will cover it. The retailer must rely on its own <strong>cash reserves</strong> while it adapts its range.",
+        "distractors": {
+          "A": "Insurance does not cover currency movements. A payment in a foreign currency on a known date is what a forward contract is for: it fixes the exchange rate now.",
+          "B": "No insurer will pay out because customers' tastes changed. That is uncertainty, not a risk, so the retailer carries it itself and relies on its cash reserves.",
+          "D": "The first two tools are the wrong way round. A forward contract fixes an exchange rate or a commodity price; it cannot pay for flood damage. Insurance covers the flood, and the forward contract covers the payment in euros."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-1-q3",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A UK pottery sells tableware to a retailer in Spain for €126,500, to be paid in three months. On the day of the sale it takes out a forward contract at £1 = €1.15. When the payment arrives, the exchange rate is £1 = €1.10.<br />Compared with not taking out the contract, the pottery is",
+      "options": {
+        "A": "£5,000 better off.",
+        "B": "£5,000 worse off.",
+        "C": "£6,325 better off.",
+        "D": "£6,325 worse off."
+      },
+      "answer": "B",
+      "model": {
+        "working": "To turn euros into pounds, divide by the exchange rate.<br />With the contract: €126,500 ÷ 1.15 = <strong>£110,000</strong>.<br />Without it, at the rate on the day the money arrives: €126,500 ÷ 1.10 = <strong>£115,000</strong>.<br />The pound weakened, so each euro bought more pounds. The contract fixed the old rate, so the pottery received £115,000 − £110,000 = <strong>£5,000 less</strong> than it would have done without it. That is the cost of hedging: in return for knowing its income on the day of the sale, the firm gives up any gain from a favourable move.",
+        "distractors": {
+          "A": "The arithmetic is right but the comparison is the wrong way round. €1.15 is a higher number than €1.10, but a higher euro rate means each pound costs more euros, so the pottery gets fewer pounds. The contract gave it £110,000, not £115,000.",
+          "C": "This multiplies by the exchange rate instead of dividing: €126,500 × 1.15 = 145,475 and €126,500 × 1.10 = 139,150. Multiplying also makes the contract look like the better deal. To turn euros into pounds, divide by the number of euros per pound.",
+          "D": "The direction is right, since a weaker pound helps an exporter and the contract gave that gain up. But the figure comes from multiplying by the exchange rate instead of dividing. Dividing gives £110,000 and £115,000, a gap of £5,000."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two chocolate makers are hit by the same sharp rise in world cocoa prices. One sells a well-known brand with loyal buyers. The other makes own-label bars that supermarkets choose on price alone.<br />The maker more likely to keep its profit margin without losing many sales is",
+      "options": {
+        "A": "The branded maker, since its demand is more price inelastic.",
+        "B": "The branded maker, since its demand is more price elastic.",
+        "C": "The own-label maker, since its demand is more price inelastic.",
+        "D": "The own-label maker, since its demand is more price elastic."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A rise in cocoa prices is a <strong>supply shock</strong>: it raises both firms' unit costs. To keep its profit margin, a firm must raise its price.<br />Loyal buyers of a well-known brand are less willing to switch when its price rises, so its demand is <strong>more price inelastic</strong>. It can pass the higher cost on and keep most of its sales.<br />Supermarkets choose own-label bars on price alone, so demand for them is price elastic. A price rise would lose the contract to a cheaper supplier, so that maker is more likely to hold its price and accept a lower margin.",
+        "distractors": {
+          "B": "The right firm, for the wrong reason. If demand were price elastic, a price rise would lose many sales, which is exactly what the branded maker avoids. Loyal buyers make its demand more price inelastic.",
+          "C": "Buyers who choose on price alone switch easily when the price rises, so demand for own-label bars is the more price elastic of the two, not the more inelastic.",
+          "D": "Own-label demand is the more price elastic, but that is why this maker is worse placed. With elastic demand, raising its price to cover the cocoa cost would lose many sales, so it is more likely to accept a lower margin."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-1-q5",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Each month, a trampoline park takes £50,000 in revenue and pays £24,000 in rent and loan repayments, plus £20,000 in staff and other running costs that vary with the number of visitors. A sudden recession cuts its visitors, its revenue and its running costs by 40%. The rent and loan repayments do not change. It has £60,000 in the bank.<br />If these figures do not change, the number of months before its cash runs out is",
+      "options": {
+        "A": "2.5 months",
+        "B": "3 months",
+        "C": "5 months",
+        "D": "10 months"
+      },
+      "answer": "D",
+      "model": {
+        "working": "After the shock, each month:<br />Revenue: £50,000 × 0.6 = <strong>£30,000</strong>.<br />Running costs: £20,000 × 0.6 = £12,000. Rent and loan repayments stay at £24,000. Total payments: £24,000 + £12,000 = <strong>£36,000</strong>.<br />Cash flow: £30,000 − £36,000 = <strong>−£6,000</strong> a month.<br />Months before the cash runs out: £60,000 ÷ £6,000 = <strong>10 months</strong>.<br />This is why a demand shock hurts: revenue falls while the fixed payments stay the same. Cash reserves decide how long the firm can wait for demand to recover.",
+        "distractors": {
+          "A": "£60,000 ÷ £24,000 = 2.5 treats the rent and loan repayments as the whole monthly shortfall. But the park still takes £30,000 a month, which covers most of its payments.",
+          "B": "£60,000 ÷ £20,000 = 3 divides by the fall in revenue. Running costs fall too, by £8,000, so the monthly shortfall is smaller than the fall in revenue.",
+          "C": "£60,000 ÷ £12,000 = 5 divides by the change in monthly cash flow, from +£6,000 to −£6,000. But only the shortfall after the shock, £6,000 a month, draws on the bank balance."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A bank agrees to lend a farm shop £250,000, secured on the shop's building. It makes the loan on condition that the shop insures the building against fire and flood.<br />The main reason for the condition is that",
+      "options": {
+        "A": "A fire or flood could destroy the loan's security.",
+        "B": "Insurance is required by law before any firm can borrow.",
+        "C": "Paying a premium cuts the shop's costs, so it repays sooner.",
+        "D": "The insurer would repay the loan if the shop's sales fell."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The building is the bank's <strong>collateral</strong>: if the shop cannot repay, the bank can sell it to get its money back. If a fire or flood destroyed an uninsured building, the bank would be left with nothing to sell.<br />Insurance means the insurer would pay to rebuild, so it <strong>protects the bank's collateral</strong>. That is how insurance gives a business <strong>access to finance</strong>: without it, the bank would not lend on these terms.",
+        "distractors": {
+          "B": "The insurance the law requires as soon as a firm takes on staff is employers' liability insurance, which covers claims from injured workers. No law requires insurance before a firm can borrow. Here the condition is the bank's own.",
+          "C": "A premium is a cost, not a saving. Insurance makes costs steadier by swapping a large, unpredictable loss for a fixed premium, but it does not lower them.",
+          "D": "A fall in sales is uncertainty, not a risk: no one can measure its chances, so no insurer will cover it. Fire and flood are risks, which is why they can be insured."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-1-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A UK tile shop imports floor tiles from Italy. It takes out a forward contract to pay for its next order, which is due in three months. Over the following two years, the pound falls by 15% against the euro and stays there.<br />The most likely effect on the pound cost of its tiles is that it",
+      "options": {
+        "A": "Stays fixed for the two years, since the shop has hedged.",
+        "B": "Rises once its orders go beyond the one in the contract.",
+        "C": "Falls, since a weaker pound makes imports cheaper.",
+        "D": "Rises at once, on the order in the contract too."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A forward contract fixes <strong>one sum on one date</strong>. The order in the contract is paid at the rate agreed, so its pound cost does not change.<br />Every order after that is bought at the exchange rate of the day. A weaker pound buys fewer euros, so each later order costs more in pounds. The contract protected the shop for three months. It <strong>cannot protect it from a fall in the pound that lasts for years</strong>, so its costs rise once later orders fall outside it.",
+        "distractors": {
+          "A": "The contract covers only the one order, due in three months. It does not fix the rate on orders the shop has not yet placed, so the shop's costs rise after that.",
+          "C": "This has the effect of the exchange rate the wrong way round. A weaker pound buys fewer euros, so imports priced in euros cost more in pounds, not less.",
+          "D": "Later orders do cost more, but not the hedged one. The forward contract fixed the exchange rate for that order on the day it was agreed, whatever happens to the pound afterwards."
+        }
+      }
+    }
+  ]
+}
