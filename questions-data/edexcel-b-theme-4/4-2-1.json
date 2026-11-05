@@ -1,0 +1,222 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-4",
+  "boardName": "Edexcel B Theme 4",
+  "spec": "4.2.1",
+  "slug": "4-2-1-market-power-and-market-failure",
+  "title": "Market Power and Market Failure",
+  "shortTitle": "Market Power and Market Failure",
+  "pageTitle": "Market Power and Market Failure Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions for Edexcel B A-Level Economics on market power: collusion, restrictive practices, monopsony and natural monopoly.",
+  "intro": "Seven original multiple-choice questions on market power and market failure: collusion and tacit agreement, restrictive practices, monopsony, natural monopoly, power in the labour market, and what it all means for economic agents and governments. Two are calculations.",
+  "notesTeaser": "Seven original multiple-choice questions on collusion, restrictive practices, monopsony, natural monopoly and power in the labour market, including two calculations.",
+  "questions": [
+    {
+      "id": "edexcel-b-4-2-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A firm makes most of the tractors sold in the UK. It will sell a tractor only to farmers who also sign a contract to have it serviced by the firm, so independent repair workshops lose customers.<br />This restrictive practice is best described as",
+      "options": {
+        "A": "Predatory pricing.",
+        "B": "Exclusive dealing.",
+        "C": "Tying.",
+        "D": "Refusal to supply."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Tying</strong> means selling one product only to customers who also buy another. Here the tractor is sold only to farmers who also buy the firm's servicing.<br />It is a restrictive practice because it pushes rivals out of the second market: independent workshops lose customers → fewer firms compete for servicing → the dominant firm can raise its servicing prices later.",
+        "distractors": {
+          "A": "Predatory pricing means pricing below cost until a rival leaves. Nothing in the stem says the firm cuts its prices at all.",
+          "B": "Exclusive dealing means making <strong>retailers</strong> stock only the firm's products. The condition here is placed on the farmers who buy the tractors, and it links two different products.",
+          "D": "Refusal to supply means cutting off shops that also stock a rival's goods. The firm here is willing to sell, as long as the farmer buys a second product as well."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-1-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A competition authority looks at two markets in which prices have risen together. In Market X, emails show managers agreeing the prices they would charge. In Market Y, each firm simply matches the price set by the largest firm, and the firms never contact each other. The authority fines the firms in Market X but takes no action in Market Y.<br />The most likely reason is that, in Market Y,",
+      "options": {
+        "A": "Consumers pay less than a cartel would charge.",
+        "B": "Tacit collusion causes no market failure.",
+        "C": "The firms earn only normal profit.",
+        "D": "There is no agreement to prove."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Market X is <strong>overt collusion</strong>: the emails are evidence of an agreement, so it can be proven and punished.<br />Market Y is <strong>tacit collusion</strong>: the firms coordinate by following a price leader without ever communicating. The result can be the same as a cartel's, but there is no agreement to point to → it is much harder to prove, so the authority has no case to bring.",
+        "distractors": {
+          "A": "Tacit collusion can produce the same high prices as a cartel. The authority's lack of action says nothing about prices being lower in Market Y.",
+          "B": "Either form of collusion has the same effects: firms act together like one monopoly, so prices rise and output falls. That is market failure. The problem with Market Y is proving it, not whether it does harm.",
+          "C": "Nothing in the stem suggests this. Firms that coordinate their prices are likely to earn supernormal profit, whether the coordination is overt or tacit."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-1-q3",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A DIY chain buys most of the garden sheds made by small workshops in one region, and the workshops have nowhere else to sell in bulk. The chain then cuts the price it pays. Table 1 shows one workshop's sales to the chain before and after the cut.<br />Measuring against the original value, the percentage fall in the workshop's profit on these sheds is",
+      "table": {
+        "caption": "Table 1: One workshop's sales of sheds to the DIY chain",
+        "head": [
+          "",
+          "Price paid per shed",
+          "Average cost per shed",
+          "Sheds sold per year"
+        ],
+        "rows": [
+          [
+            "Before the cut",
+            "£400",
+            "£320",
+            "500"
+          ],
+          [
+            "After the cut",
+            "£360",
+            "£320",
+            "500"
+          ]
+        ]
+      },
+      "options": {
+        "A": "10%",
+        "B": "12.5%",
+        "C": "50%",
+        "D": "100%"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Profit = (price − average cost) × quantity.<br />Before: (£400 − £320) × 500 = £80 × 500 = <strong>£40,000</strong>.<br />After: (£360 − £320) × 500 = £40 × 500 = <strong>£20,000</strong>.<br />Fall: £40,000 − £20,000 = £20,000. £20,000 ÷ £40,000 × 100 = <strong>50%</strong>.<br />This is monopsony power at work: the workshop cannot sell elsewhere, so the chain can push its price down. A 10% cut in the price wipes out half of the workshop's profit, because costs have not fallen at all → its margin shrinks from £80 to £40 a shed.",
+        "distractors": {
+          "A": "This is the percentage fall in the <strong>price</strong>: £40 ÷ £400 × 100 = 10%. The question asks about profit, and profit falls much faster because the workshop's costs stay the same.",
+          "B": "This divides the £40 price cut by the £320 average cost. That is not a percentage change in anything the question asks about.",
+          "D": "This divides the £20,000 fall by the new profit of £20,000 instead of the original £40,000. Percentage changes are measured against the original value."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-1-q4",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "One firm supplies gas through pipes to all 500,000 homes in a region. Its network costs £150 million a year to run, however many homes it serves, and each home adds a further £30 a year. The government considers letting a second firm lay its own network beside the first, with identical costs, so that the two firms split the homes equally.<br />With two networks, the average cost per home each year would be",
+      "options": {
+        "A": "£330",
+        "B": "£630",
+        "C": "£660",
+        "D": "£1,230"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Each firm would serve 500,000 ÷ 2 = <strong>250,000</strong> homes, and each still has the full £150 million network cost.<br />Average cost per home for each firm = £150,000,000 ÷ 250,000 + £30 = £600 + £30 = <strong>£630</strong>.<br />With one firm it is £150,000,000 ÷ 500,000 + £30 = £300 + £30 = £330. Two networks almost double the cost of supplying each home, for no gain. That is why this is a <strong>natural monopoly</strong>: one firm can supply the whole market at a lower average cost than two could.",
+        "distractors": {
+          "A": "This is the average cost with <strong>one</strong> firm. With two networks, each firm's £150 million is spread over only half as many homes.",
+          "C": "This doubles the whole one-firm figure, £330 × 2. Only the network cost per home doubles. The £30 for each home is the same however many firms there are.",
+          "D": "This adds both networks' costs, £300 million, and divides them by one firm's 250,000 homes: £1,200 + £30. Each firm pays for only its own network, so its average cost uses its own £150 million."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-1-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes four employers of warehouse staff. Every job needs the same skills.<br />Using Table 1, the employer most able to pay its staff less than a competitive labour market would is",
+      "table": {
+        "caption": "Table 1: Four employers of warehouse staff",
+        "head": [
+          "",
+          "Other warehouses within commuting distance",
+          "Staff in a trade union that bargains over pay"
+        ],
+        "rows": [
+          [
+            "Employer 1",
+            "None",
+            "None"
+          ],
+          [
+            "Employer 2",
+            "Fourteen",
+            "None"
+          ],
+          [
+            "Employer 3",
+            "None",
+            "Almost all"
+          ],
+          [
+            "Employer 4",
+            "Two",
+            "None"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Employer 1.",
+        "B": "Employer 2.",
+        "C": "Employer 3.",
+        "D": "Employer 4."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Employer 1 is a <strong>monopsony employer</strong>: its staff have no other warehouse to go to, so they have to accept the wage on offer. Nor is there a trade union to bargain against it.<br />It can pay less than a competitive market would → lower wages → fewer people take the jobs.",
+        "distractors": {
+          "B": "With fourteen other warehouses nearby, staff paid below the going rate would leave for another employer. This is the closest to a competitive labour market.",
+          "C": "Employer 3 has the same monopsony position as Employer 1, but almost all its staff are in a union. A union can push the wage back up towards the competitive level against a monopsony employer.",
+          "D": "Employer 4 has some power, because its staff have only two other employers to choose from. But Employer 1's staff have no alternative at all, so Employer 1 has more."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Three firms supply all the software that councils use to collect council tax. They secretly agree which of them will win each council's contract, and at what price.<br />For the councils, the most likely result is",
+      "options": {
+        "A": "Higher costs, fully offset by tax on the extra profit.",
+        "B": "Higher costs, leaving less for other services.",
+        "C": "Lower costs, as each firm can plan its workload.",
+        "D": "Lower costs, as the firms share economies of scale."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Agreeing who wins each contract, and at what price, is <strong>collusion</strong>: the firms share out the customers instead of competing for them.<br />Without competition the firms can bid high → councils pay more for the software → less of their budget is left for other services. A government that buys from a dominant supplier, or from firms acting as one, may pay more for what it buys.",
+        "distractors": {
+          "A": "Only part of any extra profit is paid in tax, and it does not go back to the councils. Their spending on the software still rises.",
+          "C": "Easier planning might lower the firms' costs, but nothing makes them pass that saving on. Firms that have stopped competing have no reason to cut their prices.",
+          "D": "Three firms dividing up the contracts do not become one larger producer, so they gain no economies of scale. The agreement is about price, not cost."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-1-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm supplies 85% of the UK market for lift maintenance.<br />Of the following, the finding that would most suggest its market power causes little market failure is that",
+      "options": {
+        "A": "Any new firm could enter quickly at little cost.",
+        "B": "Its customers have no other supplier in most regions.",
+        "C": "It has held its market share for over twenty years.",
+        "D": "It pays most of its profit to its owners as dividends."
+      },
+      "answer": "A",
+      "model": {
+        "working": "How serious a dominant firm's market failure is depends partly on <strong>contestability</strong>. If new firms could enter quickly and cheaply, the threat of entry limits how far the firm can raise its prices. A high market share then does less harm.",
+        "distractors": {
+          "B": "This points the other way. Customers with nowhere else to go have to accept the firm's prices, so the failure is more serious.",
+          "C": "Holding a dominant share for twenty years suggests rivals have not been able to break in. That is a sign of high barriers to entry, not of a harmless monopoly.",
+          "D": "Paying profit out as dividends benefits the owners, but not consumers. Supernormal profit spent on research and new products is what can benefit consumers over time."
+        }
+      }
+    }
+  ]
+}

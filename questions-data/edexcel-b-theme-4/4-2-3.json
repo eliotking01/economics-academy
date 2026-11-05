@@ -1,0 +1,207 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-4",
+  "boardName": "Edexcel B Theme 4",
+  "spec": "4.2.3",
+  "slug": "4-2-3-arguments-for-and-against-regulation",
+  "title": "Arguments For and Against Regulation",
+  "shortTitle": "Arguments For and Against Regulation",
+  "pageTitle": "Arguments For and Against Regulation Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions for Edexcel B A-Level Economics on the benefits and costs of regulation, regulatory capture and when regulation fails.",
+  "intro": "Six original multiple-choice questions on the arguments for and against regulation: its benefits and costs, compliance costs for small firms, regulatory capture, poor information, unintended consequences, and weighing it all up. One is a calculation.",
+  "notesTeaser": "Six original multiple-choice questions on the benefits and costs of regulation, regulatory capture, poor information and unintended consequences, including one calculation.",
+  "questions": [
+    {
+      "id": "edexcel-b-4-2-3-q1",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A new food-labelling rule requires sandwich makers to test and label every recipe they sell. Table 1 shows four makers' yearly cost of following the rule and the number of sandwiches each sells a year.<br />Using Table 1, the rule adds most to average cost at",
+      "table": {
+        "caption": "Table 1: Four sandwich makers' cost of following the labelling rule",
+        "head": [
+          "",
+          "Yearly cost of following the rule",
+          "Sandwiches sold a year"
+        ],
+        "rows": [
+          [
+            "Maker 1",
+            "£8,000",
+            "40,000"
+          ],
+          [
+            "Maker 2",
+            "£15,000",
+            "50,000"
+          ],
+          [
+            "Maker 3",
+            "£45,000",
+            "3,000,000"
+          ],
+          [
+            "Maker 4",
+            "£60,000",
+            "1,200,000"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Maker 1.",
+        "B": "Maker 2.",
+        "C": "Maker 3.",
+        "D": "Maker 4."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The rule adds its yearly cost ÷ sandwiches sold to each maker's average cost:<br />Maker 1: £8,000 ÷ 40,000 = <strong>20p</strong>.<br />Maker 2: £15,000 ÷ 50,000 = <strong>30p</strong>.<br />Maker 3: £45,000 ÷ 3,000,000 = <strong>1.5p</strong>.<br />Maker 4: £60,000 ÷ 1,200,000 = <strong>5p</strong>.<br />Maker 2 is hit hardest. The two small makers face a far bigger rise in average cost than the large ones, which is how compliance costs can act as a <strong>barrier to entry</strong>: the cost of following a rule does not shrink in line with a firm's sales, so a small firm has far fewer sales to spread it over.",
+        "distractors": {
+          "A": "Maker 1 has the fewest sales, but also the lowest cost of following the rule. Its rise in average cost is 20p, less than Maker 2's 30p. The smallest firm is not always hit hardest, so work the figure out.",
+          "C": "Maker 3 has the most sales, so the rule adds the <strong>least</strong> to its average cost, 1.5p. Choosing it comes from dividing sales by cost instead of cost by sales.",
+          "D": "Maker 4 has the highest total cost of following the rule, but it spreads that over 1.2 million sandwiches, so it adds only 5p to each. The question asks about average cost, not the total."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-3-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A regulator sets the landing charges an airport may make, using the airport's own estimate of its future costs. The estimate turns out to be 20% too high, so the airport makes large profits under the cap. There is no sign that the regulator wanted to favour the airport.<br />This failure of regulation is best described as",
+      "options": {
+        "A": "Compliance costs.",
+        "B": "Poor information.",
+        "C": "Regulatory capture.",
+        "D": "Unintended consequences."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The airport knows its own costs better than the regulator does. The regulator had to rely on the airport's estimate, which was too high → the cap was set at the wrong level → the airport kept high charges and large profits.<br />That is <strong>poor information</strong>. The stem rules out capture: the regulator was not trying to serve the airport's interests, it simply had the wrong figures.",
+        "distractors": {
+          "A": "Compliance costs are what firms spend to follow a rule. Nothing in the stem is about the airport's costs of following the cap.",
+          "C": "Regulatory capture is when a regulator comes to serve the interests of the firms it regulates. The stem says there is no sign the regulator wanted to favour the airport.",
+          "D": "An unintended consequence is a firm meeting the letter of a rule but not its purpose. The airport here is not getting round the cap. The cap itself was set too loosely."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-3-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A regulator fines broadband providers for every customer complaint not answered within 48 hours. One provider now sends an automatic reply to every complaint within an hour, saying it is looking into the problem. Its repairs take as long as before.<br />The change to the rule most likely to achieve its purpose is",
+      "options": {
+        "A": "Doubling the fine for each late reply.",
+        "B": "Fining each fault not fixed within a set time.",
+        "C": "Publishing each provider's average reply time.",
+        "D": "Shortening the deadline to 24 hours."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The provider meets the letter of the rule but not its purpose. This is an <strong>unintended consequence</strong>: the rule measures how fast complaints are answered, but what customers need is for faults to be fixed.<br />Fining faults that are not fixed in time targets the purpose directly → an automatic reply no longer avoids the fine → the provider has a reason to speed up its repairs.",
+        "distractors": {
+          "A": "The provider already sends every reply within an hour, so it pays no fines. A bigger fine for late replies changes nothing.",
+          "C": "Publishing reply times would make this provider look good, since its automatic replies are instant. It still says nothing about repairs.",
+          "D": "An automatic reply within an hour meets a 24-hour deadline just as easily. The rule would still measure the wrong thing."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-3-q4",
+      "skill": "calculation",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Table 1 shows a government's estimates of the yearly benefits and costs of a new safety rule for gas boilers.<br />Ignoring any other effects, the net benefit of the rule each year is",
+      "table": {
+        "caption": "Table 1: Estimated yearly benefits and costs of a boiler safety rule",
+        "head": [
+          "",
+          "Benefit or cost",
+          "£ million a year"
+        ],
+        "rows": [
+          [
+            "Fewer injuries",
+            "Benefit",
+            "48"
+          ],
+          [
+            "Less damage to homes",
+            "Benefit",
+            "12"
+          ],
+          [
+            "Firms' compliance costs",
+            "Cost",
+            "35"
+          ],
+          [
+            "Running the inspection service",
+            "Cost",
+            "8"
+          ]
+        ]
+      },
+      "options": {
+        "A": "£5 million",
+        "B": "£13 million",
+        "C": "£17 million",
+        "D": "£25 million"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Total benefits: £48 million + £12 million = <strong>£60 million</strong>.<br />Total costs: £35 million + £8 million = <strong>£43 million</strong>.<br />Net benefit: £60 million − £43 million = <strong>£17 million</strong>.<br />The costs fall on two groups: firms pay to follow the rule, and taxpayers pay for the inspection service. Both have to be counted against the benefits.",
+        "distractors": {
+          "A": "This takes both costs from the injuries benefit only: £48 million − £43 million. It leaves out the £12 million benefit of less damage to homes.",
+          "B": "This compares only the largest benefit with the largest cost: £48 million − £35 million. Every benefit and every cost in the table counts.",
+          "D": "This leaves out the £8 million cost of running the inspection service. Regulators and enforcement have to be paid for, so that is a real cost to taxpayers."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-3-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government can afford to set up one of two new regulators, each costing the same to run. Regulator P would cap the prices of the only firm piping heat to homes in a city. Regulator Q would license the city's 400 window cleaners, a market that anyone can enter and where customers switch easily.<br />The stronger case is for",
+      "options": {
+        "A": "P, as the market failure it would tackle is larger.",
+        "B": "P, as its rules would cost the firm nothing to follow.",
+        "C": "Q, as its rules would cover far more firms.",
+        "D": "Q, as rules cost a small firm less to follow."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Whether regulation is worth its costs depends first on the <strong>size of the market failure</strong>. The heat firm is a monopoly over an essential service: its customers cannot switch, so it could charge high prices. The window-cleaning market is competitive and easy to enter, so there is little failure for a regulator to correct.<br />With the same running cost, P is likely to bring far larger benefits.",
+        "distractors": {
+          "B": "P is the better choice, but not for this reason. A price cap does have costs for the firm, such as lower profit and the work of meeting the regulator's rules.",
+          "C": "Covering more firms is not a benefit in itself. Licensing 400 firms in a competitive market adds compliance costs while correcting very little.",
+          "D": "This is the wrong way round. Rules often cost a small firm as much as a large one, so they weigh more heavily on small firms like window cleaners."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-3-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A government worries that its energy regulator is starting to serve the interests of the firms it oversees, rather than the public's.<br />Of the following, the change most likely to reduce this risk is",
+      "options": {
+        "A": "Cutting the money it spends on its own cost research.",
+        "B": "Letting the firms choose half of the regulator's board.",
+        "C": "Relying more on the firms' own figures for their costs.",
+        "D": "Stopping its staff from taking jobs at those firms."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The risk is <strong>regulatory capture</strong>. It happens because the regulator relies on the firms for information, and because staff often move between the regulator and the firms.<br />Stopping staff from taking jobs at the firms removes one of those causes → staff have less reason to keep the firms happy → the regulator is more independent.",
+        "distractors": {
+          "A": "Less research of its own would leave the regulator more dependent on the firms for information. That makes capture more likely, not less.",
+          "B": "Giving the firms a say over who runs the regulator would bring it closer to them. That is the opposite of independence.",
+          "C": "Relying on the firms for information is one of the causes of capture. It also makes poor information more likely, because the firms know their costs better than the regulator."
+        }
+      }
+    }
+  ]
+}
