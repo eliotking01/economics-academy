@@ -81,16 +81,16 @@
       "stem": "Until recently, a maker of handmade furniture could only reach buyers across the UK by renting showrooms in several cities. Online marketplaces now let a small workshop sell nationally from a website.<br />The most likely effect on the market for handmade furniture is",
       "options": {
         "A": "Fewer firms, as a website is a sunk cost that deters entry.",
-        "B": "More firms, and prices rising as demand for furniture grows.",
-        "C": "More firms, and prices pushed closer to average cost.",
+        "B": "More firms, and prices pushed closer to average cost.",
+        "C": "More firms, and prices rising as demand for furniture grows.",
         "D": "No change, as established firms' brands keep newcomers out."
       },
-      "answer": "C",
+      "answer": "B",
       "model": {
         "working": "This is <strong>technology change</strong> knocking a barrier down.<br />Showrooms in several cities were a large start-up cost → selling online costs far less → more workshops can enter → more competition → supernormal profit is competed down → prices move closer to average cost.",
         "distractors": {
           "A": "A website costs far less than several showrooms, so the sunk cost of entering has fallen, not risen. Lower barriers bring more firms, not fewer.",
-          "B": "Nothing in the stem says demand for furniture has grown. The change is on the supply side: more firms enter, and that pushes prices down, not up.",
+          "C": "Nothing in the stem says demand for furniture has grown. The change is on the supply side: more firms enter, and that pushes prices down, not up.",
           "D": "The stem describes a fall in a start-up cost that kept small firms out. Brands may protect some firms, but a big fall in entry costs makes entry more likely."
         }
       }
@@ -102,18 +102,18 @@
       "sketch": false,
       "stem": "A new energy drink costs 20% less than the market leader, and most shoppers cannot tell the two apart in a blind taste test. Even so, most of them keep buying the market leader.<br />The barrier to entry this new drink faces is best described as",
       "options": {
-        "A": "Economies of scale.",
-        "B": "Branding.",
-        "C": "Start-up costs.",
-        "D": "Intellectual property rights."
+        "A": "Branding.",
+        "B": "Economies of scale.",
+        "C": "Intellectual property rights.",
+        "D": "Start-up costs."
       },
-      "answer": "B",
+      "answer": "A",
       "model": {
         "working": "Shoppers cannot tell the drinks apart, and the new one is cheaper, yet they stay with the leader. What holds them is the leader's name, not anything in the can.<br />That is <strong>branding</strong>: a strong brand builds loyalty, so customers keep buying even when a newcomer is cheaper. The entrant would have to spend heavily on advertising just to be noticed.",
         "distractors": {
-          "A": "Economies of scale would give the market leader lower costs and let it undercut a newcomer. Here the newcomer is the cheaper drink, so cost is not what keeps shoppers away.",
-          "C": "Start-up costs are the spending needed before the first sale, such as a factory. The new drink is already on sale, and cheaper.",
-          "D": "Intellectual property rights stop rivals copying an idea, such as a patented recipe. Nothing stops the new drink being sold: shoppers simply choose not to buy it."
+          "B": "Economies of scale would give the market leader lower costs and let it undercut a newcomer. Here the newcomer is the cheaper drink, so cost is not what keeps shoppers away.",
+          "C": "Intellectual property rights stop rivals copying an idea, such as a patented recipe. Nothing stops the new drink being sold: shoppers simply choose not to buy it.",
+          "D": "Start-up costs are the spending needed before the first sale, such as a factory. The new drink is already on sale, and cheaper."
         }
       }
     },

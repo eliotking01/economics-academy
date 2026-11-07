@@ -18,17 +18,17 @@
       "sketch": false,
       "stem": "While house prices rise by 10% a year, a mortgage lender finds that the borrowers who stop paying cost it almost nothing.<br />The most likely reason is that",
       "options": {
-        "A": "Rising prices make fewer borrowers stop paying.",
-        "B": "Each home can be sold for more than is owed on it.",
-        "C": "Rising house prices raise borrowers' incomes.",
+        "A": "Each home can be sold for more than is owed on it.",
+        "B": "Rising house prices raise borrowers' incomes.",
+        "C": "Rising prices make fewer borrowers stop paying.",
         "D": "The government repays any mortgage that is not paid."
       },
-      "answer": "B",
+      "answer": "A",
       "model": {
         "working": "When a borrower stops paying, the lender can sell the home to get its money back. While prices are rising fast, the home is worth more than the loan, so the sale covers what is owed.<br />This is how a <strong>market bubble</strong> made risky lending look safe. Lenders and buyers kept betting that prices would keep rising. When prices fell, borrowers owed more than their homes were worth, and lenders could not get their money back.",
         "distractors": {
-          "A": "The stem is about what the borrowers who do stop paying cost the lender, not how many there are. Each one costs it little because the home sells for more than the loan.",
-          "C": "House prices and incomes are different things. A rise in the value of a home does not raise the owner's income, and it does not make a borrower who has stopped paying start again.",
+          "B": "House prices and incomes are different things. A rise in the value of a home does not raise the owner's income, and it does not make a borrower who has stopped paying start again.",
+          "C": "The stem is about what the borrowers who do stop paying cost the lender, not how many there are. Each one costs it little because the home sells for more than the loan.",
           "D": "No government repays private mortgages that go unpaid. The lender is protected only by the value of the home it can sell."
         }
       }
@@ -153,17 +153,17 @@
       "sketch": false,
       "stem": "Banks that have lost money on mortgages cut their lending to firms. Firms then cut their investment and lay off staff.<br />The most likely reason this leads the banks to cut their lending again is that",
       "options": {
-        "A": "Lower sales at other firms mean more loans go bad.",
-        "B": "Firms want fewer loans, so banks have no one to lend to.",
-        "C": "Job losses cut deposits, so banks have less money to lend.",
+        "A": "Firms want fewer loans, so banks have no one to lend to.",
+        "B": "Job losses cut deposits, so banks have less money to lend.",
+        "C": "Lower sales at other firms mean more loans go bad.",
         "D": "The central bank raises Bank Rate, so loans cost more."
       },
-      "answer": "A",
+      "answer": "C",
       "model": {
         "working": "A <strong>credit crunch</strong> feeds on itself:<br />Banks cut lending → firms cut investment and jobs → lower incomes and spending → lower sales for other firms → more firms cannot repay their loans → the banks make more losses → they cut lending again.<br />This is how the banking crisis became a recession: losses at the banks reached firms that had nothing to do with mortgages.",
         "distractors": {
-          "B": "Firms may want fewer loans in a downturn, but that would not make banks <em>cut</em> the credit they offer. Banks cut lending because more of their loans are going bad and they are protecting themselves.",
-          "C": "Banks were not cutting lending because savers had stopped depositing. They were hoarding cash to protect themselves against further losses on their loans.",
+          "A": "Firms may want fewer loans in a downturn, but that would not make banks <em>cut</em> the credit they offer. Banks cut lending because more of their loans are going bad and they are protecting themselves.",
+          "B": "Banks were not cutting lending because savers had stopped depositing. They were hoarding cash to protect themselves against further losses on their loans.",
           "D": "In a recession with falling lending, a central bank cuts Bank Rate to support spending; it does not raise it. The cycle here runs through bad loans, not interest rates."
         }
       }

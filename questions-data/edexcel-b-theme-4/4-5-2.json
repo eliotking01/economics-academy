@@ -20,7 +20,7 @@
       "options": {
         "A": "Borrow at lower rates, since households spend less.",
         "B": "Find it harder to raise large loans for investment.",
-        "C": "Find it easier to borrow, since households owe less.",
+        "C": "Get loans more easily, since households owe less.",
         "D": "Invest the same, since households save the same amount."
       },
       "answer": "B",
@@ -158,17 +158,17 @@
       "stem": "During a boom, a country's banks lend to many firms without checking their cash-flow forecasts. Two years later, defaults rise sharply and the banks make heavy losses. An engineering firm in the country has always repaid its loans on time.<br />The most likely effect on the engineering firm is that",
       "options": {
         "A": "It is unaffected, since it has never missed a repayment.",
-        "B": "Its bank lends it more, to make up for the bad loans.",
-        "C": "Its loan rates fall, as defaults leave banks with spare funds.",
-        "D": "Its bank cuts its credit too, as banks lend less to everyone."
+        "B": "Its bank cuts its credit too, as banks lend less to everyone.",
+        "C": "Its bank lends it more, to make up for the bad loans.",
+        "D": "Its loan rates fall, as defaults leave banks with spare funds."
       },
-      "answer": "D",
+      "answer": "B",
       "model": {
         "working": "This is creditor risk <strong>assessed badly</strong>. Loans went to borrowers who could not repay → defaults rose → the banks made losses.<br />Banks making losses have less capital to absorb further losses, so they protect themselves by <strong>cutting lending to everyone</strong>, including sound borrowers. A firm with a perfect record can still find its overdraft reduced or a new loan refused.",
         "distractors": {
           "A": "The firm's own record does not protect it. The banks' losses reduce what they are able and willing to lend to every borrower, including good ones.",
-          "B": "Lending more would not make up for bad loans; it would put more of the banks' money at risk just when they are short of capital. Banks that have made heavy losses lend less overall, not more.",
-          "C": "Defaults leave banks with losses, not spare funds. Banks short of capital lend less and often charge more, to rebuild their finances."
+          "C": "Lending more would not make up for bad loans; it would put more of the banks' money at risk just when they are short of capital. Banks that have made heavy losses lend less overall, not more.",
+          "D": "Defaults leave banks with losses, not spare funds. Banks short of capital lend less and often charge more, to rebuild their finances."
         }
       }
     },

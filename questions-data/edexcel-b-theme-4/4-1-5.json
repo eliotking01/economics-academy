@@ -119,18 +119,18 @@
       "sketch": false,
       "stem": "A warehouse's new manager re-plans the shift rota and the order in which parcels are picked, so that staff rarely wait for work. Output rises with the same staff and equipment.<br />This way of raising productivity is best described as improving",
       "options": {
-        "A": "Technology.",
-        "B": "Human capital.",
-        "C": "The quality of management.",
-        "D": "Market orientation."
+        "A": "Human capital.",
+        "B": "Market orientation.",
+        "C": "Technology.",
+        "D": "The quality of management."
       },
-      "answer": "C",
+      "answer": "D",
       "model": {
         "working": "Better planning of rotas, stock and workflow → less time idle or waiting → more output from the same inputs → lower average cost.<br />Nothing new has been bought and no one has been trained. The gain comes from how the work is organised, which is the <strong>quality of management</strong>.",
         "distractors": {
-          "A": "Improving technology means new machinery or systems, such as an automated sorter. The warehouse uses the same equipment as before.",
-          "B": "Human capital is the skills of the workforce, raised by training and education. The same staff are doing the same jobs, only better organised.",
-          "D": "Market orientation means finding out what consumers want and producing to match. It concerns what is made, not how efficiently the work is done."
+          "A": "Human capital is the skills of the workforce, raised by training and education. The same staff are doing the same jobs, only better organised.",
+          "B": "Market orientation means finding out what consumers want and producing to match. It concerns what is made, not how efficiently the work is done.",
+          "C": "Improving technology means new machinery or systems, such as an automated sorter. The warehouse uses the same equipment as before."
         }
       }
     },

@@ -18,18 +18,18 @@
       "sketch": false,
       "stem": "A firm makes most of the tractors sold in the UK. It will sell a tractor only to farmers who also sign a contract to have it serviced by the firm, so independent repair workshops lose customers.<br />This restrictive practice is best described as",
       "options": {
-        "A": "Predatory pricing.",
-        "B": "Exclusive dealing.",
-        "C": "Tying.",
-        "D": "Refusal to supply."
+        "A": "Exclusive dealing.",
+        "B": "Predatory pricing.",
+        "C": "Refusal to supply.",
+        "D": "Tying."
       },
-      "answer": "C",
+      "answer": "D",
       "model": {
         "working": "<strong>Tying</strong> means selling one product only to customers who also buy another. Here the tractor is sold only to farmers who also buy the firm's servicing.<br />It is a restrictive practice because it pushes rivals out of the second market: independent workshops lose customers → fewer firms compete for servicing → the dominant firm can raise its servicing prices later.",
         "distractors": {
-          "A": "Predatory pricing means pricing below cost until a rival leaves. Nothing in the stem says the firm cuts its prices at all.",
-          "B": "Exclusive dealing means making <strong>retailers</strong> stock only the firm's products. The condition here is placed on the farmers who buy the tractors, and it links two different products.",
-          "D": "Refusal to supply means cutting off shops that also stock a rival's goods. The firm here is willing to sell, as long as the farmer buys a second product as well."
+          "A": "Exclusive dealing means making <strong>retailers</strong> stock only the firm's products. The condition here is placed on the farmers who buy the tractors, and it links two different products.",
+          "B": "Predatory pricing means pricing below cost until a rival leaves. Nothing in the stem says the firm cuts its prices at all.",
+          "C": "Refusal to supply means cutting off shops that also stock a rival's goods. The firm here is willing to sell, as long as the farmer buys a second product as well."
         }
       }
     },
@@ -204,17 +204,17 @@
       "stem": "A firm supplies 85% of the UK market for lift maintenance.<br />Of the following, the finding that would most suggest its market power causes little market failure is that",
       "options": {
         "A": "Any new firm could enter quickly at little cost.",
-        "B": "Its customers have no other supplier in most regions.",
-        "C": "It has held its market share for over twenty years.",
-        "D": "It pays most of its profit to its owners as dividends."
+        "B": "It has held its market share for over twenty years.",
+        "C": "It pays most of its profit to its owners as dividends.",
+        "D": "Its customers have no other supplier in most regions."
       },
       "answer": "A",
       "model": {
         "working": "How serious a dominant firm's market failure is depends partly on <strong>contestability</strong>. If new firms could enter quickly and cheaply, the threat of entry limits how far the firm can raise its prices. A high market share then does less harm.",
         "distractors": {
-          "B": "This points the other way. Customers with nowhere else to go have to accept the firm's prices, so the failure is more serious.",
-          "C": "Holding a dominant share for twenty years suggests rivals have not been able to break in. That is a sign of high barriers to entry, not of a harmless monopoly.",
-          "D": "Paying profit out as dividends benefits the owners, but not consumers. Supernormal profit spent on research and new products is what can benefit consumers over time."
+          "B": "Holding a dominant share for twenty years suggests rivals have not been able to break in. That is a sign of high barriers to entry, not of a harmless monopoly.",
+          "C": "Paying profit out as dividends benefits the owners, but not consumers. Supernormal profit spent on research and new products is what can benefit consumers over time.",
+          "D": "This points the other way. Customers with nowhere else to go have to accept the firm's prices, so the failure is more serious."
         }
       }
     }

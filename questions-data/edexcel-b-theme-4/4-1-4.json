@@ -125,18 +125,18 @@
       "sketch": false,
       "stem": "A tea brand guarantees the farms it buys from a price well above the market price, so that their workers earn enough to live on. It charges more than rivals for similar tea, and accepts a lower profit than it could make by buying at the market price.<br />The brand's objective is best described as",
       "options": {
-        "A": "Profit maximisation.",
-        "B": "Revenue maximisation.",
-        "C": "Survival.",
-        "D": "Ethical or social aims."
+        "A": "Ethical or social aims.",
+        "B": "Profit maximisation.",
+        "C": "Revenue maximisation.",
+        "D": "Survival."
       },
-      "answer": "D",
+      "answer": "A",
       "model": {
         "working": "Paying suppliers a fair price raises the brand's costs → it charges more → it relies on customers who value its stance. It does this knowingly, accepting less profit than it could make.<br />That is an <strong>ethical or social aim</strong>: the firm puts the workers' living standards ahead of the highest possible profit.",
         "distractors": {
-          "A": "A profit maximiser would buy at the market price, the cheapest available. The stem says the brand accepts a lower profit than it could make.",
-          "B": "A revenue maximiser keeps selling while each unit adds revenue, which usually means a lower price and more output. This brand charges more than its rivals.",
-          "C": "A firm aiming for survival cuts prices to keep cash coming in, as in a downturn. Nothing suggests the brand is struggling, and it is raising its costs on purpose."
+          "B": "A profit maximiser would buy at the market price, the cheapest available. The stem says the brand accepts a lower profit than it could make.",
+          "C": "A revenue maximiser keeps selling while each unit adds revenue, which usually means a lower price and more output. This brand charges more than its rivals.",
+          "D": "A firm aiming for survival cuts prices to keep cash coming in, as in a downturn. Nothing suggests the brand is struggling, and it is raising its costs on purpose."
         }
       }
     },
@@ -147,18 +147,18 @@
       "sketch": false,
       "stem": "In a downturn, a hotel cuts its weekday room rate from £90 to £45 to keep cash coming in. Each room it lets costs £20 in cleaning and laundry, and its fixed costs are the same whether or not a room is let.<br />Letting a room at £45 still makes sense because",
       "options": {
-        "A": "The hotel earns more profit per room than it did at £90.",
-        "B": "The hotel's demand is price inelastic, so revenue rises.",
-        "C": "Each room let at £45 covers its share of the fixed costs.",
-        "D": "Each room let adds £25 towards the hotel's fixed costs."
+        "A": "Each room let adds £25 towards the hotel's fixed costs.",
+        "B": "Each room let at £45 covers its share of the fixed costs.",
+        "C": "The hotel earns more profit per room than it did at £90.",
+        "D": "The hotel's demand is price inelastic, so revenue rises."
       },
-      "answer": "D",
+      "answer": "A",
       "model": {
         "working": "This is pricing for <strong>survival</strong>.<br />The fixed costs have to be paid whether a room is let or not. Each extra room let adds £45 to revenue and £20 to costs → it makes a <strong>contribution</strong> of £45 − £20 = £25 towards the fixed costs.<br />As long as price covers variable cost, each sale still helps. An empty room adds nothing.",
         "distractors": {
-          "A": "Profit per room is lower at £45. The rate has halved, and the cost of cleaning a room has not changed.",
-          "B": "If demand were price inelastic, halving the rate would cut revenue, because bookings would rise by proportionally less than the price fell. The reason to let the room is its contribution, not its elasticity.",
-          "C": "Nothing in the stem shows that £45 covers any share of fixed costs, as well as the £20. The point is that it covers the £20 the room adds to costs, so whatever is left helps pay the fixed costs."
+          "B": "Nothing in the stem shows that £45 covers any share of fixed costs, as well as the £20. The point is that it covers the £20 the room adds to costs, so whatever is left helps pay the fixed costs.",
+          "C": "Profit per room is lower at £45. The rate has halved, and the cost of cleaning a room has not changed.",
+          "D": "If demand were price inelastic, halving the rate would cut revenue, because bookings would rise by proportionally less than the price fell. The reason to let the room is its contribution, not its elasticity."
         }
       }
     },

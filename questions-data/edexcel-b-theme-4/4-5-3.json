@@ -67,16 +67,16 @@
       "options": {
         "A": "Cut Bank Rate, as a change takes about two years to work fully.",
         "B": "Cut Bank Rate, as inflation is above its 2% target.",
-        "C": "Raise Bank Rate, as inflation is above its 2% target.",
-        "D": "Raise Bank Rate, as a change takes about two years to work fully."
+        "C": "Raise Bank Rate, as a change takes about two years to work fully.",
+        "D": "Raise Bank Rate, as inflation is above its 2% target."
       },
       "answer": "A",
       "model": {
         "working": "A change in Bank Rate takes around <strong>18 to 24 months</strong> to have its full effect. So the MPC sets rates for where it expects inflation to be in two years, not where it is today.<br />Inflation is forecast to be 1.2% by then, below the 2% target. A cut lifts demand when inflation is heading below target, so <strong>cutting</strong> is consistent with the remit, even though inflation is above target today. Raising rates now would add to the undershoot just as it arrives.",
         "distractors": {
           "B": "The decision is right, but the reason would point the other way. Inflation above target is a reason to <em>raise</em> rates. The case for a cut is the forecast: inflation is expected to be below target by the time the cut takes effect.",
-          "C": "This sets rates for today's inflation. A rise now would have its full effect in about two years, when inflation is already forecast to be below target, so it would push inflation further below 2%.",
-          "D": "The time lag is the right thing to focus on, but it points to a cut. In two years' time inflation is forecast at 1.2%, below target, so the MPC needs to support demand, not reduce it."
+          "C": "The time lag is the right thing to focus on, but it points to a cut. In two years' time inflation is forecast at 1.2%, below target, so the MPC needs to support demand, not reduce it.",
+          "D": "This sets rates for today's inflation. A rise now would have its full effect in about two years, when inflation is already forecast to be below target, so it would push inflation further below 2%."
         }
       }
     },
@@ -112,7 +112,7 @@
         "A": "No rise at all, since its inflation is expected to persist.",
         "B": "A smaller rise, since higher prices will cut spending on their own.",
         "C": "The same rise, since both have the same rate of inflation.",
-        "D": "A larger rise in interest rates to bring inflation back to 2%."
+        "D": "A larger rise, since pay and price rises will keep inflation up."
       },
       "answer": "D",
       "model": {
@@ -205,18 +205,18 @@
       "sketch": false,
       "stem": "Two banks ask the Bank of England for emergency loans on the same day. Bank X's loans are sound, but a rumour has led its savers to withdraw money faster than it can pay out. Bank Y has lost so much on bad loans that its losses exceed its capital.<br />As lender of last resort, the Bank of England's role is meant for",
       "options": {
-        "A": "Neither bank, as any loan to them creates moral hazard.",
-        "B": "Both banks, as either failure could spread to others.",
-        "C": "Bank Y only, as its losses are the larger.",
-        "D": "Bank X only, as it is short of cash, not bust."
+        "A": "Bank X only, as it is short of cash, not bust.",
+        "B": "Bank Y only, as its losses are the larger.",
+        "C": "Both banks, as either failure could spread to others.",
+        "D": "Neither bank, as any loan to them creates moral hazard."
       },
-      "answer": "D",
+      "answer": "A",
       "model": {
         "working": "A bank lends most of its deposits out for years, so even a sound bank cannot repay every saver at once. Bank X is in a <strong>bank run</strong>: it is short of cash, but its loans would be repaid in time. Lending to it lets it pay out every withdrawal, so the panic subsides.<br />The role is meant for banks with a <strong>cash shortage</strong>, not banks whose loans have gone bad. Bank Y's losses have used up its capital, so a loan would not fix its problem. The Bank of England also lends only against good collateral, which Bank Y's bad loans are not.",
         "distractors": {
-          "A": "Moral hazard is a real cost, which is why the role comes with regulation from the FPC and PRA. But refusing to help a sound bank in a run would let panic spread to other banks.",
-          "B": "Either failure could spread, but the role is not meant to keep a bank whose losses exceed its capital afloat. Lending to Bank Y would not cure its bad loans, and it has no good collateral to offer.",
-          "C": "Large losses are the reason Bank Y does not qualify. Its loans have gone bad and its capital is used up, so its problem is that it is bust, not short of cash."
+          "B": "Large losses are the reason Bank Y does not qualify. Its loans have gone bad and its capital is used up, so its problem is that it is bust, not short of cash.",
+          "C": "Either failure could spread, but the role is not meant to keep a bank whose losses exceed its capital afloat. Lending to Bank Y would not cure its bad loans, and it has no good collateral to offer.",
+          "D": "Moral hazard is a real cost, which is why the role comes with regulation from the FPC and PRA. But refusing to help a sound bank in a run would let panic spread to other banks."
         }
       }
     },

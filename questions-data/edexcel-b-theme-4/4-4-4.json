@@ -84,7 +84,7 @@
       "sketch": false,
       "stem": "A government spends £360 million on a scheme to create jobs in one region. The region gains 12,000 jobs, but an evaluation finds that 4,000 of them would have been created anyway, without the scheme.<br />The cost to the government of each extra job the scheme created is",
       "options": {
-        "A": "£20,000",
+        "A": "£22,500",
         "B": "£30,000",
         "C": "£45,000",
         "D": "£90,000"
@@ -93,7 +93,7 @@
       "model": {
         "working": "Only the jobs that would not have existed without the scheme count as its result: 12,000 − 4,000 = <strong>8,000</strong>.<br />Cost per extra job = £360 million ÷ 8,000 = <strong>£45,000</strong>.<br />Judging a policy means comparing it with what would have happened anyway, and then asking what the result cost.",
         "distractors": {
-          "A": "This cuts the cost by a third, to £240 million, and divides by all 12,000 jobs. The full £360 million was spent; it is the number of jobs that should be reduced, not the cost.",
+          "A": "£360 million ÷ 16,000 = £22,500 adds the 4,000 jobs that would have been created anyway, instead of taking them away. Only the 8,000 extra jobs are the scheme's result.",
           "B": "£360 million ÷ 12,000 = £30,000 counts all 12,000 jobs, including the 4,000 that would have been created anyway. That flatters the scheme.",
           "D": "£360 million ÷ 4,000 = £90,000 divides by the jobs that would have been created anyway, which are exactly the ones the scheme did not create."
         }
@@ -104,7 +104,7 @@
       "skill": "data-table",
       "difficulty": "standard",
       "sketch": false,
-      "stem": "A government has £10 billion to spend and wants the largest lasting rise in real GDP. It is willing to wait several years for the result. Table 1 shows forecasts for four policies.<br />Using Table 1, the policy that best meets the government's aim is",
+      "stem": "A government can spend no more than £10 billion, and wants the largest lasting rise in real GDP. It is willing to wait several years for the result. Table 1 shows forecasts for four policies.<br />Using Table 1, the policy that best meets the government's aim is",
       "table": {
         "caption": "Table 1: Forecast effect of four policies on real GDP, compared with no policy",
         "head": [

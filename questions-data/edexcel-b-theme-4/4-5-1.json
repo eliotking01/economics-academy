@@ -171,18 +171,18 @@
       "sketch": false,
       "stem": "A UK tile shop imports floor tiles from Italy. It takes out a forward contract to pay for its next order, which is due in three months. Over the following two years, the pound falls by 15% against the euro and stays there.<br />The most likely effect on the pound cost of its tiles is that it",
       "options": {
-        "A": "Stays fixed for the two years, since the shop has hedged.",
-        "B": "Rises once its orders go beyond the one in the contract.",
-        "C": "Falls, since a weaker pound makes imports cheaper.",
-        "D": "Rises at once, on the order in the contract too."
+        "A": "Falls, since a weaker pound makes imports cheaper.",
+        "B": "Rises at once, on the order in the contract too.",
+        "C": "Rises once its orders go beyond the one in the contract.",
+        "D": "Stays fixed for the two years, since the shop has hedged."
       },
-      "answer": "B",
+      "answer": "C",
       "model": {
         "working": "A forward contract fixes <strong>one sum on one date</strong>. The order in the contract is paid at the rate agreed, so its pound cost does not change.<br />Every order after that is bought at the exchange rate of the day. A weaker pound buys fewer euros, so each later order costs more in pounds. The contract protected the shop for three months. It <strong>cannot protect it from a fall in the pound that lasts for years</strong>, so its costs rise once later orders fall outside it.",
         "distractors": {
-          "A": "The contract covers only the one order, due in three months. It does not fix the rate on orders the shop has not yet placed, so the shop's costs rise after that.",
-          "C": "This has the effect of the exchange rate the wrong way round. A weaker pound buys fewer euros, so imports priced in euros cost more in pounds, not less.",
-          "D": "Later orders do cost more, but not the hedged one. The forward contract fixed the exchange rate for that order on the day it was agreed, whatever happens to the pound afterwards."
+          "A": "This has the effect of the exchange rate the wrong way round. A weaker pound buys fewer euros, so imports priced in euros cost more in pounds, not less.",
+          "B": "Later orders do cost more, but not the hedged one. The forward contract fixed the exchange rate for that order on the day it was agreed, whatever happens to the pound afterwards.",
+          "D": "The contract covers only the one order, due in three months. It does not fix the rate on orders the shop has not yet placed, so the shop's costs rise after that."
         }
       }
     }
