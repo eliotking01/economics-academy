@@ -687,3 +687,27 @@ Format per entry:
 - **Confidence** — high (the SVGs and the deck JSON visibly disagree
   today).
 - **Status** — open.
+
+## 38. Edexcel B 1.4.3 exam tip offers trade credit for paying staff
+
+- **Location** — `revision-notes/edexcel-b-theme-1/1-4-3-types-and-sources-of-credit.html`,
+  "Comparing Sources of Finance", the "Match the finance to what it is for"
+  exam tip (source: `notes-data/topics/edexcel-b-theme-1/1-4-3-types-and-sources-of-credit.html`).
+- **Issue** — the tip reads "A short-term need, such as paying staff while
+  waiting for a customer to pay, suits an overdraft or trade credit." Trade
+  credit comes from suppliers: it defers what a business owes for goods and
+  cannot pay wages. At best it helps indirectly, by freeing up cash that would
+  otherwise go to suppliers. The page's own definition says this ("a supplier
+  lets a business take goods now and pay for them later"). Found by the
+  cold-solver verify pass on Edexcel B flashcards unit 1.4 (`NOTES?` on
+  `edexcel-b-1-4-3-app-01`). The card now says "Overdraft" alone and does
+  not rely on this sentence.
+- **Proposed correction** — either change the example so both sources fit:
+  "A short-term need, such as buying stock or covering a gap while waiting for
+  a customer to pay, suits an overdraft or trade credit." Or keep the example
+  and drop trade credit: "A short-term need, such as paying staff while
+  waiting for a customer to pay, suits an overdraft." The wording is Eliot's
+  call.
+- **Confidence** — medium-high (standard theory; the page's own trade-credit
+  definition). It is a loose example, not a false principle.
+- **Status** — open.

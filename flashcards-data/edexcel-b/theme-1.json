@@ -1868,6 +1868,470 @@
         "origin": "notes-verbatim",
         "verbatim": "a market where sales, products and customer tastes change little from year to year, such as bread, toilet roll or milk."
       }
+    },
+    {
+      "id": "edexcel-b-1-4-1-def-01",
+      "specCode": "1.4.1",
+      "topic": "1.4 The Role of Credit in the Economy",
+      "subtopic": "1-4-1-role-of-banks-in-the-economy",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>financial intermediary</strong>, and explain why savers and firms need one.</p>",
+      "back": "<p><strong>Financial intermediary</strong> — an organisation, such as a bank, that takes in money from savers and lends it to borrowers.</p><p>Savers deposit money and are paid interest on it. The bank lends that money on to firms that want to invest, and charges them interest. Without banks, this would be much harder:</p><ul><li>savers want to be able to take their money out at short notice, while firms want to borrow for years</li><li>one saver lending to one firm could lose everything if that firm failed, whereas a bank spreads its lending across thousands of borrowers</li><li>most savers have no way of judging whether a business is likely to repay.</li></ul><p>Across the economy, savings end up paying for investment, which raises firms' capacity and productivity.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "banks"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-4-1-role-of-banks-in-the-economy.html",
+        "origin": "notes-verbatim",
+        "verbatim": "an organisation, such as a bank, that takes in money from savers and lends it to borrowers."
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-1-def-02",
+      "specCode": "1.4.1",
+      "topic": "1.4 The Role of Credit in the Economy",
+      "subtopic": "1-4-1-role-of-banks-in-the-economy",
+      "cardType": "definition",
+      "front": "<p>Define <strong>credit</strong>. Why do firms borrow, and how does a bank decide whether to lend?</p>",
+      "back": "<p><strong>Credit</strong> — money lent to a household or firm that has to be paid back later, usually with interest.</p><p>Firms borrow to start up before they have any sales, to cover a gap between paying bills and being paid, or to invest in more capacity than their profits can pay for.</p><p>Before lending, a bank checks how likely the borrower is to repay, usually from a business plan, a cash-flow forecast and the firm's credit history.</p><p>Banks make most of their profit from the gap between the interest they charge borrowers and the interest they pay savers. So a bank wants to lend, but only to borrowers it expects to pay it back.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "banks",
+        "credit"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-4-1-role-of-banks-in-the-economy.html",
+        "origin": "notes-verbatim",
+        "verbatim": "money lent to a household or firm that has to be paid back later, usually with interest."
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-1-def-03",
+      "specCode": "1.4.1",
+      "topic": "1.4 The Role of Credit in the Economy",
+      "subtopic": "1-4-1-role-of-banks-in-the-economy",
+      "cardType": "definition",
+      "front": "<p>Define the <strong>interest rate</strong>, and explain how the general level of interest rates affects saving and investment.</p>",
+      "back": "<p><strong>Interest rate</strong> — the cost of borrowing money, or the reward for saving it, shown as a percentage of the amount borrowed or saved per year.</p><p><strong>Low rates</strong> → saving earns little and borrowing is cheap → households save less and firms invest more.</p><p><strong>High rates</strong> do the opposite: saving earns more and borrowing costs more, so households save more and firms invest less.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "interest-rates"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-4-1-role-of-banks-in-the-economy.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the cost of borrowing money, or the reward for saving it, shown as a percentage of the amount borrowed or saved per year."
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-1-calc-01",
+      "specCode": "1.4.1",
+      "topic": "1.4 The Role of Credit in the Economy",
+      "subtopic": "1-4-1-role-of-banks-in-the-economy",
+      "cardType": "calculation",
+      "front": "<p>A firm borrows <strong>£50,000</strong> at an interest rate of <strong>6%</strong> a year. Calculate the interest it pays in the first year. How much more would it pay at 9%?</p>",
+      "back": "<p>Interest = £50,000 × 6% = <strong>£3,000</strong> in the first year, on top of repaying the £50,000 itself.</p><p>At 9%: £50,000 × 9% = £4,500, which is <strong>£1,500 more</strong>.</p><p>The higher the rate, the more each project has to earn to be worth borrowing for.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "interest-rates",
+        "calculation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-4-1-role-of-banks-in-the-economy.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-1-app-01",
+      "specCode": "1.4.1",
+      "topic": "1.4 The Role of Credit in the Economy",
+      "subtopic": "1-4-1-role-of-banks-in-the-economy",
+      "cardType": "application",
+      "front": "<p>For each pair, say which a bank would charge the <strong>higher interest rate</strong>, and why:</p><ol><li>a new café with no track record, or a café chain that has traded for 20 years</li><li>a loan secured on the firm's warehouse, or the same loan with no security</li><li>an overdraft, or a loan</li><li>a new loan taken out before, or after, the Bank of England raises Bank Rate.</li></ol>",
+      "back": "<ol><li><strong>The new café</strong> (risk of the borrower). With no track record it is more likely to default, so the bank charges a higher rate to cover that chance.</li><li><strong>The unsecured loan</strong> (collateral). A secured loan is cheaper, because the bank can recover its money if the borrower fails to pay.</li><li><strong>The overdraft</strong> (type of loan). Overdrafts usually cost more than loans.</li><li><strong>After the rise</strong> (Bank Rate). Banks pay more to borrow themselves, so they charge more on new loans and overdrafts.</li></ol><p>The other factor is the <strong>length</strong> of the loan: money lent for longer is exposed to more things going wrong.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "interest-rates",
+        "application"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-4-1-role-of-banks-in-the-economy.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-1-def-04",
+      "specCode": "1.4.1",
+      "topic": "1.4 The Role of Credit in the Economy",
+      "subtopic": "1-4-1-role-of-banks-in-the-economy",
+      "cardType": "definition",
+      "front": "<p>Define <strong>collateral</strong>. Why does it make borrowing harder for new and small firms?</p>",
+      "back": "<p><strong>Collateral</strong> — an asset a borrower promises to a lender, which the lender can take and sell if the loan is not repaid.</p><p>Property is the most common collateral, but machinery, vehicles and stock can also be used. A loan backed by collateral is a <strong>secured loan</strong>; one without is an <strong>unsecured loan</strong>. Collateral lowers the bank's risk, so it makes lending more likely and cheaper.</p><p>New and small firms have few assets → little to offer as security → the bank asks the owner for a <strong>personal guarantee</strong>, a promise to repay from their own money, sometimes backed by their home → if the business fails, the owner can lose personal assets as well as the business.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "collateral",
+        "credit"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-4-1-role-of-banks-in-the-economy.html",
+        "origin": "notes-verbatim",
+        "verbatim": "an asset a borrower promises to a lender, which the lender can take and sell if the loan is not repaid."
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-2-def-01",
+      "specCode": "1.4.2",
+      "topic": "1.4 The Role of Credit in the Economy",
+      "subtopic": "1-4-2-risk-and-liability",
+      "cardType": "definition",
+      "front": "<p>Define <strong>risk</strong> in business. Why do entrepreneurs accept it?</p>",
+      "back": "<p><strong>Risk</strong> — the chance that a decision turns out worse than expected, so that a business makes a loss or fails.</p><p>Every business takes risks, and starting one is the biggest risk of all: the owner puts in time and money before knowing whether anyone will buy.</p><p>Entrepreneurs accept risk because of the possible reward. <strong>Profit is the return for taking it.</strong> In general, the riskier the venture, the higher the profit needed to make it worth trying.</p><p>Lenders and investors face risk too: a bank may not get its money back, which is why riskier borrowers are charged higher interest.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "risk"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-4-2-risk-and-liability.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the chance that a decision turns out worse than expected, so that a business makes a loss or fails."
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-2-def-02",
+      "specCode": "1.4.2",
+      "topic": "1.4 The Role of Credit in the Economy",
+      "subtopic": "1-4-2-risk-and-liability",
+      "cardType": "definition",
+      "front": "<p>Define <strong>unlimited liability</strong> and <strong>limited liability</strong>. How does a business get limited liability?</p>",
+      "back": "<p><strong>Unlimited liability</strong> — the owners are personally responsible for all of the business's debts, with no limit.</p><p><strong>Limited liability</strong> — the owners can lose no more than the money they have put into the business.</p><p>With unlimited liability, the law treats the owner and the business as the same thing. If the business cannot pay its debts, the people it owes can take the owner's savings, car or house.</p><p>A business gets limited liability by becoming a <strong>company</strong>, a separate legal entity: it owns its own assets, signs its own contracts and owes its own debts. The owners are shareholders. If the company fails, they lose the value of their shares, but its debts are not theirs to pay.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "liability"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-4-2-risk-and-liability.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the owners are personally responsible for all of the business's debts, with no limit."
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-2-def-03",
+      "specCode": "1.4.2",
+      "topic": "1.4 The Role of Credit in the Economy",
+      "subtopic": "1-4-2-risk-and-liability",
+      "cardType": "definition",
+      "front": "<p>Name the <strong>four types of business ownership</strong>, and give the liability and access to finance of each.</p>",
+      "back": "<ul><li><strong>Sole trader:</strong> unlimited liability. One person owns and usually runs the business. Finance comes from the owner's savings, bank loans and overdrafts, so large sums are hard to raise.</li><li><strong>Partnership:</strong> unlimited liability. Two or more partners share ownership, decisions and profit. Each partner can put money in, so more than a sole trader, but still limited.</li><li><strong>Private limited company (Ltd):</strong> limited liability. Shareholders are often family and friends, and shares cannot be offered to the public. It can sell shares to chosen investors, and banks lend more readily to an established company.</li><li><strong>Public limited company (plc):</strong> limited liability. Shareholders can be anyone if the shares are listed on a stock exchange. It can sell shares to the public, and needs at least £50,000 of share capital.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "liability",
+        "business-ownership"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-4-2-risk-and-liability.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-2-chain-01",
+      "specCode": "1.4.2",
+      "topic": "1.4 The Role of Credit in the Economy",
+      "subtopic": "1-4-2-risk-and-liability",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chains of reasoning</strong>: how does limited liability help owners, help firms raise finance, and help the economy?</p>",
+      "back": "<ul><li><strong>Owners:</strong> losses capped at what they put in → they can start and grow a business without betting their home on it → more people are willing to take the risk.</li><li><strong>Raising finance:</strong> the most an investor can lose is what they paid for their shares → people will buy shares in a company they do not run → a company can raise far more outside finance.</li><li><strong>The economy:</strong> the downside is capped → more businesses are started and more money is invested in them → more jobs and growth.</li></ul><p>This is why a business that wants large amounts of outside finance becomes a company.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "liability",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-4-2-risk-and-liability.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-2-eval-01",
+      "specCode": "1.4.2",
+      "topic": "1.4 The Role of Credit in the Economy",
+      "subtopic": "1-4-2-risk-and-liability",
+      "cardType": "evaluation",
+      "front": "<p>Does becoming a limited company make a business <strong>safer</strong>? Evaluate, including what it means for lenders and suppliers.</p>",
+      "back": "<p><strong>Limited liability protects the owners, not the business.</strong> A limited company can still run out of cash and close. What changes is how much the owners lose when it does: what they put in, and no more.</p><p><strong>Risk moves to the people the company owes</strong> → if it fails, they may get back only part of what they are owed → banks often ask the directors of a small company for a personal guarantee, and suppliers may give a new company less time to pay.</p><p><strong>Unlimited liability is simpler:</strong> a sole trader can start straight away, with no forms to file, and keeps their accounts private. But a failed business can leave the owner with debts for years.</p><p>A limited company must file its accounts at Companies House, where anyone can read them. That helps lenders and suppliers judge how safe it is to deal with.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "liability",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-4-2-risk-and-liability.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-3-def-01",
+      "specCode": "1.4.3",
+      "topic": "1.4 The Role of Credit in the Economy",
+      "subtopic": "1-4-3-types-and-sources-of-credit",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>loan</strong> and an <strong>overdraft</strong>, and say what each one suits.</p>",
+      "back": "<p><strong>Loan</strong> — a fixed sum borrowed for an agreed period and repaid in regular instalments, with interest.</p><p><strong>Overdraft</strong> — an arrangement that lets a business take its bank account below zero, up to an agreed limit.</p><ul><li><strong>Loan:</strong> suits a one-off purchase that will earn money over several years, such as a delivery van. The repayments are known in advance, but they must be made every month whatever sales are like, and the bank may want collateral.</li><li><strong>Overdraft:</strong> flexible. The firm pays interest only on what it is overdrawn by, and only while it is overdrawn, so it suits short gaps between paying bills and being paid. But the rate is usually higher than on a loan, and the bank can cut the limit at short notice.</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "sources-of-finance",
+        "credit"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-4-3-types-and-sources-of-credit.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a fixed sum borrowed for an agreed period and repaid in regular instalments, with interest."
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-3-def-02",
+      "specCode": "1.4.3",
+      "topic": "1.4 The Role of Credit in the Economy",
+      "subtopic": "1-4-3-types-and-sources-of-credit",
+      "cardType": "definition",
+      "front": "<p>Define <strong>trade credit</strong>. What are its benefits and its risks?</p>",
+      "back": "<p><strong>Trade credit</strong> — when a supplier lets a business take goods now and pay for them later, often 30 or 60 days later.</p><p><strong>For:</strong> it costs nothing if the bill is paid on time, and a shop can sometimes sell the goods before it has to pay for them.</p><p><strong>Against:</strong> a business that pays late may be charged extra, refused credit next time or lose the supplier altogether.</p><p>Banks are not the only source of credit. Suppliers give trade credit, and specialist finance companies lend for vehicles and equipment, often using the item itself as security.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "sources-of-finance",
+        "credit"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-4-3-types-and-sources-of-credit.html",
+        "origin": "notes-verbatim",
+        "verbatim": "when a supplier lets a business take goods now and pay for them later, often 30 or 60 days later."
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-3-def-03",
+      "specCode": "1.4.3",
+      "topic": "1.4 The Role of Credit in the Economy",
+      "subtopic": "1-4-3-types-and-sources-of-credit",
+      "cardType": "definition",
+      "front": "<p>Define <strong>venture capital</strong>. Which firms use it, and what does it cost them?</p>",
+      "back": "<p><strong>Venture capital</strong> — money that specialist investment firms put into a small, fast-growing business, taking part ownership of it in exchange.</p><p>Venture capitalists back firms that are too risky for a bank but could grow very large, often in technology. They usually bring advice and contacts as well as money.</p><p><strong>The cost:</strong> they take a large stake, and often a say in how the business is run.</p><p>It is not borrowed, so it is an alternative to credit. <strong>Business angels</strong> are similar: wealthy people who invest their own money in small firms for a share of the business.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "sources-of-finance"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-4-3-types-and-sources-of-credit.html",
+        "origin": "notes-verbatim",
+        "verbatim": "money that specialist investment firms put into a small, fast-growing business, taking part ownership of it in exchange."
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-3-def-04",
+      "specCode": "1.4.3",
+      "topic": "1.4 The Role of Credit in the Economy",
+      "subtopic": "1-4-3-types-and-sources-of-credit",
+      "cardType": "definition",
+      "front": "<p>Define <strong>share capital</strong>. What is its main advantage, and what does it cost the owners?</p>",
+      "back": "<p><strong>Share capital</strong> — money raised by selling shares in a company to investors, who become part owners.</p><p><strong>For:</strong> it never has to be repaid and carries no interest.</p><p><strong>The cost is control:</strong> each new shareholder owns part of the business and expects a share of the profit as dividends.</p><p>Only companies can raise it, and only a plc can sell shares to the public.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "sources-of-finance"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-4-3-types-and-sources-of-credit.html",
+        "origin": "notes-verbatim",
+        "verbatim": "money raised by selling shares in a company to investors, who become part owners."
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-3-def-05",
+      "specCode": "1.4.3",
+      "topic": "1.4 The Role of Credit in the Economy",
+      "subtopic": "1-4-3-types-and-sources-of-credit",
+      "cardType": "definition",
+      "front": "<p>Define <strong>leasing</strong>, and give one advantage and one drawback.</p>",
+      "back": "<p><strong>Leasing</strong> — paying to use an asset, such as a vehicle or a photocopier, for a set period without buying it.</p><p><strong>For:</strong> it avoids a large payment up front, and the lease may include repairs.</p><p><strong>Against:</strong> over the life of the asset it usually costs more than buying, and the business never owns it.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "sources-of-finance"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-4-3-types-and-sources-of-credit.html",
+        "origin": "notes-verbatim",
+        "verbatim": "paying to use an asset, such as a vehicle or a photocopier, for a set period without buying it."
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-3-def-06",
+      "specCode": "1.4.3",
+      "topic": "1.4 The Role of Credit in the Economy",
+      "subtopic": "1-4-3-types-and-sources-of-credit",
+      "cardType": "definition",
+      "front": "<p>Define <strong>owner's capital</strong>, and explain the three sources of <strong>internal finance</strong>.</p>",
+      "back": "<p><strong>Owner's capital</strong> — money the owners put into the business themselves.</p><p>Finance is <strong>internal</strong> if it comes from inside the business and <strong>external</strong> if it comes from outside.</p><ul><li><strong>Personal savings:</strong> the most common way to start a small business. There is no interest to pay and no one else to answer to, but most people do not have much, and the owner can lose it all.</li><li><strong>Retained profit:</strong> profit kept in the business rather than paid out to the owners. It is the cheapest finance for an established firm, but a new business has none, and every pound kept is a pound the owners do not receive.</li><li><strong>Sale of assets:</strong> raising money from things the business no longer needs, such as an empty warehouse or old equipment. It can only be done once per asset.</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "sources-of-finance"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-4-3-types-and-sources-of-credit.html",
+        "origin": "notes-verbatim",
+        "verbatim": "money the owners put into the business themselves."
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-3-app-01",
+      "specCode": "1.4.3",
+      "topic": "1.4 The Role of Credit in the Economy",
+      "subtopic": "1-4-3-types-and-sources-of-credit",
+      "cardType": "application",
+      "front": "<p>Recommend a <strong>source of finance</strong> for each business, and justify it:</p><ol><li>a caterer that must pay its staff this month but will not be paid for a wedding until next month</li><li>a profitable printing firm that has traded for 30 years, replacing one of its machines</li><li>a new two-person software start-up with no trading record or profits, which could grow very large</li><li>a manufacturing company building a new factory.</li></ol>",
+      "back": "<ol><li><strong>Overdraft.</strong> A short-term gap needs short-term finance, and an overdraft charges interest only while the firm is overdrawn.</li><li><strong>Retained profit.</strong> It is the cheapest finance for an established firm, and this one has profits to use.</li><li><strong>Venture capital or business angels.</strong> With no trading record, it is too risky for a bank, but its growth potential attracts investors. The price is a share of the business.</li><li><strong>A bank loan or share capital.</strong> A long-term asset suits long-term finance.</li></ol><p>Match the finance to what it is for. A recommendation that is not linked to the firm's situation picks up few evaluation marks.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "sources-of-finance",
+        "application"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-4-3-types-and-sources-of-credit.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-3-chain-01",
+      "specCode": "1.4.3",
+      "topic": "1.4 The Role of Credit in the Economy",
+      "subtopic": "1-4-3-types-and-sources-of-credit",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chain of reasoning</strong>: why do small and new businesses find it hardest to get credit, and where else can they turn?</p>",
+      "back": "<p>A bank wants to know the borrower can repay, and a start-up cannot prove it:</p><ul><li>it has no trading record, credit history or past accounts</li><li>it often has few assets to offer as collateral</li><li>the owner knows far more about the business than the bank does, so the bank cannot easily tell a good plan from a weak one.</li></ul><p>→ the firm may be refused, offered less than it asked for, or charged a high interest rate. Credit is also harder to get when banks are cautious, as in a recession, just when many firms need it most.</p><p><strong>Other routes:</strong> business angels; <strong>crowdfunding</strong>, where many people each put in a small amount over the internet for a reward or a small share of the business; and <strong>peer-to-peer lending</strong>, where individuals lend to a business through a website and are paid interest, with no bank in between.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "credit",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-4-3-types-and-sources-of-credit.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-3-chain-02",
+      "specCode": "1.4.3",
+      "topic": "1.4 The Role of Credit in the Economy",
+      "subtopic": "1-4-3-types-and-sources-of-credit",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chains of reasoning</strong> for the impact of credit on the economy: when it flows easily, when there is too much, and when it dries up. What decides how much a change in credit matters?</p>",
+      "back": "<ul><li><strong>Credit flows easily:</strong> firms borrow to invest in equipment and premises, and households to buy houses and cars → more spending → more demand for other businesses → they hire more workers → investment and growth.</li><li><strong>Too much credit:</strong> households and firms borrow more than they can repay → a rise in interest rates or a fall in income leaves them unable to keep up the payments → spending falls sharply, and the banks that lent to them make losses.</li><li><strong>Credit dries up:</strong> the first chain runs in reverse. A bakery is refused a loan for a second oven: the oven maker loses a sale, and the bakery does not hire the extra baker it needed. When banks turn down thousands of firms at once, spending and jobs fall across the economy.</li></ul><p><strong>It depends on</strong> how much firms rely on borrowing (a firm that can invest out of retained profit barely notices when banks become cautious; a start-up with no profit has no such cushion) and on confidence (easy credit only raises investment if firms expect demand to hold up).</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "credit",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-4-3-types-and-sources-of-credit.html",
+        "origin": "card-authored"
+      }
     }
   ]
 }
