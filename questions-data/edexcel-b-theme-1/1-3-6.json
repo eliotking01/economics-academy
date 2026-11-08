@@ -1,0 +1,239 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-1",
+  "boardName": "Edexcel B Theme 1",
+  "spec": "1.3.6",
+  "slug": "1-3-6-the-competition",
+  "title": "The Competition",
+  "shortTitle": "The Competition",
+  "pageTitle": "The Competition Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on the competition for Edexcel B A-Level Economics: market maps, competitive advantage, differentiation and pricing.",
+  "intro": "Seven original multiple-choice questions on the competition: market maps, competitive advantage, product differentiation, pricing decisions, and stable and dynamic markets.",
+  "notesTeaser": "Seven original multiple-choice questions on market maps, competitive advantage, differentiation, pricing and stable and dynamic markets.",
+  "questions": [
+    {
+      "id": "edexcel-b-1-3-6-q1",
+      "skill": "data-table",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Table 1 shows how a firm has placed six e-bike brands on a market map. A rating above 5 counts as high.<br />Using Table 1, the gap in the market is at",
+      "table": {
+        "caption": "Table 1: Six e-bike brands, rated out of 10",
+        "head": [
+          "",
+          "Price rating",
+          "Quality rating"
+        ],
+        "rows": [
+          [
+            "Brand P",
+            "8",
+            "4"
+          ],
+          [
+            "Brand Q",
+            "2",
+            "2"
+          ],
+          [
+            "Brand R",
+            "3",
+            "7"
+          ],
+          [
+            "Brand S",
+            "7",
+            "3"
+          ],
+          [
+            "Brand T",
+            "1",
+            "3"
+          ],
+          [
+            "Brand U",
+            "4",
+            "6"
+          ]
+        ]
+      },
+      "options": {
+        "A": "High price and high quality.",
+        "B": "High price and low quality.",
+        "C": "Low price and high quality.",
+        "D": "Low price and low quality."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Sort each brand into a quarter of the map.<br />High price, low quality: P and S.<br />Low price, high quality: R and U.<br />Low price, low quality: Q and T.<br />No brand has both a price rating and a quality rating above 5, so the <strong>gap</strong> is at high price and high quality.",
+        "distractors": {
+          "B": "Brands P and S both sit here, with high price ratings and quality ratings below 5.",
+          "C": "Brands R and U both sit here, with low price ratings and quality ratings above 5.",
+          "D": "Brands Q and T both sit here, with low ratings for both."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-6-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm builds a market map of sun creams from a large, recent survey of customers. It shows that no brand offers the highest quality at the lowest price. Before launching a sun cream in that position, the most important thing for the firm to check is",
+      "options": {
+        "A": "Whether a rival could copy its packaging quickly.",
+        "B": "Whether it could cover its costs at that price.",
+        "C": "Whether its brand is better known than its rivals'.",
+        "D": "Whether it has plotted the other brands correctly."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A gap in the market is <strong>not proof of demand</strong>, and it may be empty for a reason. Top quality usually costs more to make, so no firm may be able to sell it at the lowest price and still make a profit. Before launching, the firm needs to know whether it can serve that gap <strong>at a profit</strong>.",
+        "distractors": {
+          "A": "Packaging that is easy to copy is a weak advantage, but that matters only once the firm knows the product can be sold at a profit.",
+          "C": "Brand awareness would help sales, but it does not tell the firm whether it can make money at the lowest price.",
+          "D": "The map is built from a large, recent survey of customers, so the plotting is well founded. Checking it again does not answer whether the gap can be profitable."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-6-q3",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A pushchair maker wants a competitive advantage that rivals will find hardest to copy. The best choice is",
+      "options": {
+        "A": "A free gift with every order this month.",
+        "B": "A patent on its new folding design.",
+        "C": "A price cut of 10% on all its models.",
+        "D": "A two-week advertising campaign on TV."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A competitive advantage is worth most when it is <strong>hard to copy</strong>. A patent gives the firm the legal right to stop rivals using its folding design, so they cannot match it for years.",
+        "distractors": {
+          "A": "A free gift is easy for any rival to match, and this one ends after a month.",
+          "C": "A price cut can be matched by rivals the next day, and it cuts the firm's profit on every pushchair.",
+          "D": "Rivals can run their own campaigns, and this one lasts only two weeks."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-6-q4",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A firm wants to make the most profit it can from a new desk lamp. Table 1 shows its monthly forecasts at four prices.<br />Using Table 1, the price it should choose is",
+      "table": {
+        "caption": "Table 1: Forecast monthly sales and costs for a desk lamp",
+        "head": [
+          "Price per lamp",
+          "Forecast sales",
+          "Total costs"
+        ],
+        "rows": [
+          [
+            "£18",
+            "1,200",
+            "£16,400"
+          ],
+          [
+            "£22",
+            "900",
+            "£12,800"
+          ],
+          [
+            "£26",
+            "600",
+            "£9,200"
+          ],
+          [
+            "£30",
+            "350",
+            "£6,200"
+          ]
+        ]
+      },
+      "options": {
+        "A": "£18",
+        "B": "£22",
+        "C": "£26",
+        "D": "£30"
+      },
+      "answer": "B",
+      "model": {
+        "working": "A firm aiming for the most profit picks the price with the biggest gap between revenue and costs. Revenue is price × forecast sales.<br />£18: £21,600 − £16,400 = £5,200.<br />£22: £19,800 − £12,800 = <strong>£7,000</strong>.<br />£26: £15,600 − £9,200 = £6,400.<br />£30: £10,500 − £6,200 = £4,300.<br />The most profit comes at <strong>£22</strong>.",
+        "distractors": {
+          "A": "£18 gives the most sales and the most revenue, £21,600. That suits a firm chasing market share, but costs are high too, and profit is only £5,200.",
+          "C": "This is the second-highest profit, £6,400. It is easy to pick when profits are only roughly compared, but it is £600 below the profit at £22.",
+          "D": "This picks the biggest profit on each lamp (about £12), but sales are so low that total profit is only £4,300."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-6-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A bike shop starts giving free lifetime servicing with every bike it sells, which no other local shop offers. The most likely benefit to the shop is that",
+      "options": {
+        "A": "Customers switch to rivals more readily if its prices rise.",
+        "B": "It must match rivals' prices more closely than before.",
+        "C": "Its cost of selling each bike falls below rivals'.",
+        "D": "Its sales hold up better when it raises its prices."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Free lifetime servicing is a <strong>unique selling point</strong> that differentiates the shop's bikes. A differentiated product has fewer close substitutes → customers are less likely to switch when its price goes up → the shop can charge more <strong>without losing many sales</strong>.",
+        "distractors": {
+          "A": "This reverses it. Differentiation makes customers less willing to switch, not more.",
+          "B": "A product with no close substitutes gives the shop more freedom to set its own price, not less.",
+          "C": "Free servicing adds to the shop's costs. The benefit comes through what customers will pay, not lower costs."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-6-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Sales of bin bags change little from year to year, and so do the products and what customers want. A bin-bag maker that wants to grow its sales is most likely to have to",
+      "options": {
+        "A": "Launch a new kind of bin bag every few months.",
+        "B": "Rely on rising total sales across the market.",
+        "C": "Wait for tastes in bin bags to change.",
+        "D": "Win customers from rivals on price or brand."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Bin bags are a <strong>stable market</strong>: sales, products and tastes change little. Planning is easy, but growth is hard, because the market itself is not getting bigger. A firm mostly gains sales by <strong>taking them from rivals</strong>, so it competes on cost, price and brand loyalty.",
+        "distractors": {
+          "A": "Constant new products are how firms compete in a <strong>dynamic</strong> market. In a stable one customers want much the same thing every year.",
+          "B": "Total sales are not rising: the stem says they change little from year to year.",
+          "C": "Tastes in a stable market change slowly, if at all. Waiting is not a plan for growth."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-6-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A farm sells standard potatoes through a wholesale market where hundreds of other farms sell potatoes that buyers cannot tell apart. It sets its price 10% above the market price. The most likely result is that",
+      "options": {
+        "A": "Buyers switch to other farms, so it sells very little.",
+        "B": "Its revenue rises, as most of its buyers stay.",
+        "C": "Its sales dip slightly, as loyal buyers stay with it.",
+        "D": "The market price rises to match its new price."
+      },
+      "answer": "A",
+      "model": {
+        "working": "In a market with many firms selling near-identical products, a firm has to <strong>accept the market price</strong> set by demand and supply. Buyers can get the same potatoes from hundreds of other farms at the market price, so almost none will pay 10% more. The farm sells very little.",
+        "distractors": {
+          "B": "Buyers have no reason to stay when identical potatoes are cheaper elsewhere. Only a differentiated product lets a firm raise its price and keep most of its buyers.",
+          "C": "Loyalty comes from a product customers value as different. Buyers cannot tell this farm's potatoes from anyone else's, so they have nothing to be loyal to.",
+          "D": "One farm among hundreds is too small to move the market price. That price is set by demand and supply across the whole market."
+        }
+      }
+    }
+  ]
+}

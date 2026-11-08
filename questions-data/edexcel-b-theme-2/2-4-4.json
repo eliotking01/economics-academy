@@ -1,0 +1,238 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-2",
+  "boardName": "Edexcel B Theme 2",
+  "spec": "2.4.4",
+  "slug": "2-4-4-exchange-rates",
+  "title": "Exchange Rates",
+  "shortTitle": "Exchange Rates",
+  "pageTitle": "Exchange Rates Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on exchange rates for Edexcel B A-Level Economics: why rates change, the impact on firms and effective exchange rates.",
+  "intro": "Eight original multiple-choice questions on exchange rates: why they change, how appreciation and depreciation affect firms, converting prices and reading exchange rate data, and the effective exchange rate. Two are calculations.",
+  "notesTeaser": "Eight original multiple-choice questions on why exchange rates change, their impact on firms, reading exchange rate data, and effective exchange rates.",
+  "questions": [
+    {
+      "id": "edexcel-b-2-4-4-q1",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A UK café chain buys its espresso machines from a US supplier for $4,200 each. Over a year the pound falls from £1 = $1.40 to £1 = $1.20, and the dollar price is unchanged. To the nearest £, the cost of each machine to the chain rises by",
+      "options": {
+        "A": "£429",
+        "B": "£500",
+        "C": "£840",
+        "D": "£3,500"
+      },
+      "answer": "B",
+      "model": {
+        "working": "To convert a dollar price into pounds, divide by the rate.<br />Before: $4,200 ÷ 1.40 = <strong>£3,000</strong>.<br />After: $4,200 ÷ 1.20 = <strong>£3,500</strong>.<br />Rise = £3,500 − £3,000 = <strong>£500</strong>, a 16.7% rise in cost.<br />The pound has depreciated, so each pound buys fewer dollars and the chain needs more pounds to pay the same dollar price.",
+        "distractors": {
+          "A": "This applies the pound's 14.3% fall, (1.40 − 1.20) ÷ 1.40, to the old cost: £3,000 × 14.3% ≈ £429. But the cost in pounds is the dollar price divided by the rate, and it rises by 16.7%, not 14.3%.",
+          "C": "This multiplies the dollar price by the change in the rate: $4,200 × 0.20 = 840. To turn dollars into pounds, divide by the rate instead.",
+          "D": "This is the new cost of each machine, $4,200 ÷ 1.20. The question asks how much the cost has risen, so the old cost of £3,000 must be taken away."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-4-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Foreign demand for UK-made cars and whisky rises strongly. All other things being equal, for a UK clothing retailer that buys its stock from abroad in dollars, the most likely effect is",
+      "options": {
+        "A": "Higher costs, as the pound appreciates.",
+        "B": "Higher costs, as the pound depreciates.",
+        "C": "Lower costs, as the pound appreciates.",
+        "D": "Lower costs, as the pound depreciates."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Two steps.<br />First, foreign buyers need pounds to pay for UK cars and whisky → demand for pounds rises → the pound <strong>appreciates</strong>.<br />Second, a stronger pound buys more dollars → the retailer's stock, priced in dollars, costs fewer pounds → <strong>lower costs</strong>.",
+        "distractors": {
+          "A": "The pound does appreciate, but that lowers the retailer's costs. Each pound now buys more dollars, so dollar-priced stock costs fewer pounds.",
+          "B": "The first step is reversed. More foreign demand for UK goods raises demand for pounds, so the pound appreciates, not depreciates. A depreciation would raise the retailer's costs, but that is not what happens here.",
+          "D": "A depreciation would raise the cost of stock bought in dollars, not lower it. And more demand for UK exports makes the pound appreciate."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-4-q3",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the sterling effective exchange rate at the start of two years. It is an index, with January 2005 = 100.<br />Over Year 1, the pound's average value against the currencies of the UK's trading partners changed by",
+      "table": {
+        "caption": "Table 1: Sterling effective exchange rate (January 2005 = 100)",
+        "head": [
+          "",
+          "Index"
+        ],
+        "rows": [
+          [
+            "Start of Year 1",
+            "90.0"
+          ],
+          [
+            "Start of Year 2",
+            "81.0"
+          ]
+        ]
+      },
+      "options": {
+        "A": "−19.0%",
+        "B": "−11.1%",
+        "C": "−10.0%",
+        "D": "−9.0%"
+      },
+      "answer": "C",
+      "model": {
+        "working": "The <strong>effective exchange rate</strong> measures the pound against a basket of currencies, weighted by how much the UK trades with each. A fall in the index means the pound has depreciated on average.<br />Percentage change = (81.0 − 90.0) ÷ 90.0 × 100 = −9.0 ÷ 90.0 × 100 = <strong>−10.0%</strong>.",
+        "distractors": {
+          "A": "This compares 81.0 with the base of 100, so it is the fall since January 2005, not over Year 1. The change over the year is measured from the start-of-year value, 90.0.",
+          "B": "This divides by the new value: 9.0 ÷ 81.0 × 100 = 11.1%. A percentage change is measured against the original value, 90.0.",
+          "D": "This is the fall in <strong>index points</strong>, 90.0 − 81.0 = 9.0. Points equal percentages only when the starting value is 100."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-4-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Over a year the pound rises by 6% against the dollar, while the sterling effective exchange rate falls by 3%. A UK maker of fishing rods sells only to the US and keeps its prices in pounds unchanged. The change that matters to the firm, and its effect, is",
+      "options": {
+        "A": "The effective rate's fall, making its rods cheaper in the US.",
+        "B": "The effective rate's fall, making its rods dearer in the US.",
+        "C": "The rise against the dollar, making its rods cheaper in the US.",
+        "D": "The rise against the dollar, making its rods dearer in the US."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The effective rate is an average against all the UK's trading partners, so it shows what is happening to UK firms <strong>as a whole</strong>. A single firm needs the rate for the currency it actually trades in. This firm sells only to the US, so the dollar rate is the one that matters.<br />The pound buys 6% more dollars → each rod's unchanged pound price costs US buyers more dollars → its rods are <strong>dearer in the US</strong> and less price competitive.",
+        "distractors": {
+          "A": "The pound has fallen on average, but not against the dollar. A firm selling only to the US is affected by the dollar rate, which has risen.",
+          "B": "This uses the wrong rate, and a fall in the pound would make UK goods cheaper abroad, not dearer.",
+          "C": "The dollar rate is the right one, but the direction is wrong. A stronger pound means each pound price costs more dollars, so the rods become dearer in the US."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-4-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows how much of each of four UK manufacturers' sales are made abroad, and how much of its costs are paid in foreign currencies. At every firm, costs are about 80% of sales. The pound then depreciates by 10% against every currency.<br />Using Table 1, the firm most likely to gain the most is",
+      "table": {
+        "caption": "Table 1: Foreign sales and costs at four UK manufacturers",
+        "head": [
+          "",
+          "Share of sales made abroad",
+          "Share of costs paid in foreign currencies"
+        ],
+        "rows": [
+          [
+            "Firm 1",
+            "80%",
+            "75%"
+          ],
+          [
+            "Firm 2",
+            "60%",
+            "5%"
+          ],
+          [
+            "Firm 3",
+            "0%",
+            "60%"
+          ],
+          [
+            "Firm 4",
+            "15%",
+            "15%"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Firm 1.",
+        "B": "Firm 2.",
+        "C": "Firm 3.",
+        "D": "Firm 4."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A depreciation helps a firm's <strong>exports</strong>, which become cheaper abroad, but raises the cost of anything it <strong>imports</strong>. The net effect depends on which is larger.<br />Firm 2 makes 60% of its sales abroad, but pays only 5% of its costs in foreign currencies. It gets most of the gain in sales and hardly any of the rise in costs.",
+        "distractors": {
+          "A": "This is the trap: the highest share of sales abroad. But three-quarters of its costs are paid in foreign currencies, and these rise in pounds too, so much of the gain is cancelled out.",
+          "C": "Firm 3 sells nothing abroad, but pays 60% of its costs in foreign currencies. A weaker pound raises its costs with no gain in export sales, so it is the most likely to lose.",
+          "D": "Firm 4 trades little either way, and the small gain on its exports is largely offset by the rise in its imported costs."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-4-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The pound depreciates by 10%, and two UK exporters each cut their foreign prices by 10%. One makes standard plastic pallets, whose buyers switch supplier over small price differences. The other makes luxury watches with a strong brand. The one likely to see the larger percentage rise in its foreign sales, and the reason, is",
+      "options": {
+        "A": "The pallet maker, as demand for its pallets is more price elastic.",
+        "B": "The pallet maker, as its pallets are cheaper to make.",
+        "C": "The watchmaker, as demand for its watches is more price inelastic.",
+        "D": "The watchmaker, as its buyers have higher incomes."
+      },
+      "answer": "A",
+      "model": {
+        "working": "How much a lower foreign price raises sales depends on <strong>price elasticity of demand</strong>.<br />The pallet buyers switch supplier over small price differences, so demand is price elastic → a 10% price cut wins a large rise in sales.<br />The watch sells on its brand and quality, so its buyers care less about price → the same cut wins far fewer extra sales. For a strong brand, the exchange rate matters less.",
+        "distractors": {
+          "B": "How cheap a pallet is to make does not decide how much sales respond to a price cut. That depends on how price-sensitive the buyers are.",
+          "C": "This has the effect of price inelastic demand the wrong way round. More price inelastic demand means sales respond <strong>less</strong> to a price cut, so the watchmaker gains fewer extra sales.",
+          "D": "Rich buyers make demand for watches less sensitive to price, not more. A 10% cut matters less to them, so the watchmaker's sales rise by less."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-4-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A UK maker of garden furniture uses only UK timber and sells only in the UK, where it competes with imported furniture. The pound depreciates sharply. The most likely effect on the firm is",
+      "options": {
+        "A": "Higher costs, as its timber gets dearer.",
+        "B": "Higher sales, as imported rivals cost more.",
+        "C": "Lower sales, as buyers switch to imports.",
+        "D": "No effect, as it neither imports nor exports."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The firm does not trade abroad, but its rivals do. The pound falls → imported furniture costs more in pounds → it becomes dearer in UK shops → customers switch to UK-made furniture → <strong>higher sales</strong> for the firm.",
+        "distractors": {
+          "A": "Its timber is bought in the UK and priced in pounds, so a weaker pound does not directly raise its costs. The clearer effect is on its imported rivals' prices.",
+          "C": "This is what happens after an <strong>appreciation</strong>, when imports get cheaper. A depreciation makes imports dearer, so buyers switch away from them.",
+          "D": "This is the trap. A firm that does not trade abroad is still affected if it competes with imports, because the exchange rate changes its rivals' prices."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-4-q8",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A newspaper quotes the exchange rate as the price of one dollar in pounds. It moves from $1 = £0.80 to $1 = £0.75. For the pound, this is",
+      "options": {
+        "A": "A depreciation, as a dollar now buys fewer pounds.",
+        "B": "A depreciation, as the number quoted has fallen.",
+        "C": "An appreciation, as a dollar now buys fewer pounds.",
+        "D": "An appreciation, as a pound now buys fewer dollars."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Check which way round the rate is written. Here it is pounds per dollar, so a <strong>lower</strong> number means a <strong>stronger</strong> pound.<br />Before, a dollar bought £0.80; now it buys only £0.75. Turned round, £1 bought 1 ÷ 0.80 = $1.25 and now buys 1 ÷ 0.75 ≈ $1.33. The pound has <strong>appreciated</strong>.",
+        "distractors": {
+          "A": "The fact is right, but it points the other way. If a dollar buys fewer pounds, the dollar has weakened and the pound has strengthened.",
+          "B": "This reads the rate as if it were written £1 = $. Written as $1 = £, a fall in the number means each dollar buys fewer pounds, so the pound has <strong>appreciated</strong>.",
+          "D": "The conclusion is right, but the reason is false. A pound now buys about $1.33, up from $1.25, so it buys <strong>more</strong> dollars, not fewer."
+        }
+      }
+    }
+  ]
+}

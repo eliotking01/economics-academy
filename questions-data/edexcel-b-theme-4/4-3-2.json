@@ -1,0 +1,189 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-4",
+  "boardName": "Edexcel B Theme 4",
+  "spec": "4.3.2",
+  "slug": "4-3-2-externalities",
+  "title": "Externalities",
+  "shortTitle": "Externalities",
+  "pageTitle": "Externalities Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions for Edexcel B A-Level Economics on externalities: private, external and social costs, prices that leave out external costs.",
+  "intro": "Seven original multiple-choice questions on externalities: private, external and social costs and benefits, what happens when prices leave out external costs, and why environmental externalities are hard to correct. Two are calculations and one asks you to sketch the diagram.",
+  "notesTeaser": "Seven original multiple-choice questions on private, external and social costs, prices that leave out external costs, and environmental externalities, including two calculations.",
+  "questions": [
+    {
+      "id": "edexcel-b-4-3-2-q1",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A delivery firm is choosing between two new vans. Over its working life, an electric van would cost the firm £8,000 more than a diesel one and save it £6,500 in fuel and servicing. Its cleaner exhaust would also spare people living along the firm's routes £4,000 of harm from air pollution.<br />The net gain to society from choosing the electric van rather than the diesel one is",
+      "options": {
+        "A": "−£1,500",
+        "B": "£2,500",
+        "C": "£4,000",
+        "D": "£10,500"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Social benefit = private benefit + external benefit.<br />Private benefit to the firm: <strong>£6,500</strong> of savings. External benefit to residents: <strong>£4,000</strong>. Social benefit = £6,500 + £4,000 = £10,500.<br />Net gain to society = £10,500 − £8,000 = <strong>£2,500</strong>.<br />The firm counts only its own costs and benefits. It sees £6,500 − £8,000 = −£1,500, so it buys the diesel van and society misses out on a £2,500 gain. When buyers pay only for their private benefit, goods with external benefits are under-consumed.",
+        "distractors": {
+          "A": "This is the firm's own net gain, £6,500 − £8,000. It leaves out the £4,000 external benefit to residents, which is exactly the part the market ignores.",
+          "C": "This is the external benefit alone. It leaves out the firm's own savings and the extra cost of the van.",
+          "D": "This is the social benefit, but the question asks for the net gain. The £8,000 extra cost has to be taken off."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-2-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two firms make the same floor tiles. Firm X fits filters to its kilns and Firm Y does not. Table 1 shows each firm's costs for every 100 tiles. Neither firm pays anything for the harm its kilns do, and each sets its price equal to its private cost.<br />Using Table 1, it follows that",
+      "table": {
+        "caption": "Table 1: Each firm's costs for every 100 tiles",
+        "head": [
+          "",
+          "Private cost",
+          "External cost"
+        ],
+        "rows": [
+          [
+            "Firm X",
+            "£62",
+            "£4"
+          ],
+          [
+            "Firm Y",
+            "£54",
+            "£18"
+          ]
+        ]
+      },
+      "options": {
+        "A": "X charges less, and its social cost is higher.",
+        "B": "X charges less, and its social cost is lower.",
+        "C": "Y charges less, and its social cost is higher.",
+        "D": "Y charges less, and its social cost is lower."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Social cost = private cost + external cost.<br />Firm X: £62 + £4 = <strong>£66</strong>. Firm Y: £54 + £18 = <strong>£72</strong>.<br />With prices equal to private cost, Y charges £54 and X charges £62. So <strong>Y charges £8 less</strong>, even though its tiles cost society £6 more.<br />This is how prices that leave out external costs penalise clean firms. The polluter's costs look lower, so it can undercut its clean rival, which loses sales and has less reason to invest.",
+        "distractors": {
+          "A": "X has the higher private cost, so it charges more, not less. Its social cost (£66) is also the lower of the two.",
+          "B": "X's social cost is lower, but it does not charge less. Prices here cover private cost only, and X's private cost is £8 higher.",
+          "D": "Y does charge less, but its social cost is the higher one: £72 against X's £66. Its low price comes from leaving £18 of harm out."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-2-q3",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Using Table 1 in the previous question, the government now makes each firm pay its own external cost. The externalities are internalised, so each firm's price covers the full social cost of its tiles.<br />The difference between the two firms' prices for every 100 tiles is now",
+      "options": {
+        "A": "£6, with Firm X cheaper.",
+        "B": "£8, with Firm Y cheaper.",
+        "C": "£10, with Firm X cheaper.",
+        "D": "£14, with Firm X cheaper."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Internalising an externality makes the producer pay for it, so it becomes part of the firm's private cost and its price.<br />Firm X's price: £62 + £4 = £66. Firm Y's price: £54 + £18 = £72.<br />Difference: £72 − £66 = <strong>£6, with Firm X cheaper</strong>.<br />Before, Y undercut X by £8. Once both pay the full social cost, the cleaner firm is the cheaper one, so the price rewards fitting filters instead of penalising it.",
+        "distractors": {
+          "B": "This is the gap before the change, £62 − £54, when prices covered private cost only.",
+          "C": "This charges only Firm Y: £72 against £62. Firm X must pay its own £4 external cost too.",
+          "D": "This compares the external costs alone, £18 − £4. Each price is private cost plus external cost, so the private costs count too."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Several farms let fertiliser run off their fields into a river. It kills the fish that a fishing business downstream depends on, and the business's catch has halved this year. The farms and the fishing business are in the same county, and no law limits the run-off.<br />The farms keep letting fertiliser run off mainly because",
+      "options": {
+        "A": "The damage crosses a border, so no government can act.",
+        "B": "The damage falls only on future generations.",
+        "C": "The fishing business is paid through the price of crops.",
+        "D": "The river has no owner to charge them for using it."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Nobody owns the river, so no one charges the farms for putting fertiliser into it. They treat it as free to use, and the harm to the fishing business never enters their costs or their prices. This is one reason environmental externalities are hard to correct: with no owner to charge for its use, firms treat clean water as free.",
+        "distractors": {
+          "A": "The stem rules this out: the farms and the fishing business are in the same county, so one government covers both. Crossing borders makes some environmental externalities harder to correct, but not this one.",
+          "B": "The fishing business is losing out now: its catch has halved this year. Some environmental damage falls mostly on future generations, but not this.",
+          "C": "Nothing pays the fishing business. Crop prices cover the farms' private costs only, and the harm to the fishery is an external cost, which is why the market ignores it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government wants to charge firms for each tonne of carbon dioxide they emit, at a rate equal to its external cost. One study puts the harm at £40 a tonne and another at £180 a tonne.<br />The most likely reason the two estimates differ so widely is that",
+      "options": {
+        "A": "Carbon dioxide harms only the firms that emit it.",
+        "B": "Firms already pay for the harm in their private costs.",
+        "C": "Much of the harm is decades away and hard to value.",
+        "D": "The harm from carbon dioxide stays within one country."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Environmental externalities are hard to measure. Putting a money value on a warmer climate involves a lot of guesswork, and much of the harm builds up over time and falls on future generations. Studies that make different assumptions about that future harm reach very different figures. If the government does not know the external cost, the charge may be set at the wrong level.",
+        "distractors": {
+          "A": "If the harm fell only on the firms that emit it, it would be a private cost, and there would be no externality to charge for. Carbon dioxide warms the whole planet.",
+          "B": "If firms already paid for the harm, there would be no external cost to charge for. The government wants a charge because their private costs leave it out.",
+          "D": "The reverse is true: carbon emitted in one country warms the whole planet. Even if it did stay within one country, that would not explain why the estimates differ."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "A waste incinerator charges councils a price that covers only its private costs. Smoke from its chimney means families living nearby spend more on medicine and cleaning, and none of them is paid anything in return.<br />Sketching the market for waste incineration, with marginal social cost above supply, compared with the social optimum",
+      "options": {
+        "A": "Output is too high, and the families' real incomes fall.",
+        "B": "Output is too high, but the families' real incomes are unchanged.",
+        "C": "Output is too low, and the families' real incomes fall.",
+        "D": "Output is too low, but the families' real incomes are unchanged."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Draw demand and supply (MPC), with MSC above supply by the external cost of each unit. The market settles where demand meets supply, at Q1. The social optimum is where demand meets MSC, at Q2, to the left of Q1. So the price is too low and output is <strong>too high</strong>, with a welfare loss on the units between Q2 and Q1.<br />The families are third parties. They pay for the damage through extra spending on medicine and cleaning, which leaves less for everything else, so their <strong>real incomes fall</strong> although they gained nothing from the sale.",
+        "distractors": {
+          "B": "Output is too high, but the families do lose out. They are outside the market, yet they bear its external cost through extra spending, so the same income buys them less.",
+          "C": "The real-income half is right, but output is not too low. The price leaves out the external cost, so it is below the full social cost and more is produced than is best for society.",
+          "D": "Both halves are wrong. Leaving a cost out of the price makes the service too cheap, so too much is produced, and the families who bear the cost are worse off."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Coal-fired power stations in Country X cause acid rain, which falls mostly on forests in Country Y and damages the timber firms there. Country Y's government wants the damage stopped.<br />Compared with pollution from power stations in its own country, this externality is harder for Country Y's government to correct because",
+      "options": {
+        "A": "Acid rain from abroad does less harm to its forests.",
+        "B": "Its timber firms take part in the market for X's electricity.",
+        "C": "The damage cannot be given any money value at all.",
+        "D": "The polluters are outside the reach of its taxes and laws."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The externality crosses a border. Country Y's government bears the damage but has no power to tax or regulate power stations in Country X, while Country X's government, which does have that power, bears little of the damage. No single government can fix it alone, which is one reason environmental externalities are harder to correct.",
+        "distractors": {
+          "A": "Where the acid rain comes from makes no difference to the harm it does. What changes is who has the power to stop it.",
+          "B": "The timber firms are third parties. They are outside the market for X's electricity, which is exactly why their losses are an external cost.",
+          "C": "Environmental damage is hard to value, but not impossible: the timber firms' lost output can be measured. That difficulty would apply to pollution at home too, so it is not what makes this case harder."
+        }
+      }
+    }
+  ]
+}

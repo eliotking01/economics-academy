@@ -1,0 +1,205 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-1",
+  "boardName": "Edexcel B Theme 1",
+  "spec": "1.6.1",
+  "slug": "1-6-1-revenue-and-costs",
+  "title": "Revenue and Costs",
+  "shortTitle": "Revenue and Costs",
+  "pageTitle": "Revenue and Costs Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on revenue and costs for Edexcel B A-Level Economics: sales revenue, fixed, variable and average costs, and percentage change.",
+  "intro": "Six original multiple-choice questions on revenue and costs: sales volume and sales revenue, fixed, variable, total and average costs, and percentage change.",
+  "notesTeaser": "Six original multiple-choice questions on sales revenue, fixed, variable and average costs, and percentage change.",
+  "questions": [
+    {
+      "id": "edexcel-b-1-6-1-q1",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A climbing centre charges £15 for an adult session and £9 for a child session. In one week it sells 240 adult sessions and takes £5,400 in sales revenue. The number of child sessions it sold that week was",
+      "options": {
+        "A": "120",
+        "B": "200",
+        "C": "360",
+        "D": "600"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Sales volume = sales revenue ÷ price, but only for the revenue that came from child sessions.<br />Revenue from adults: 240 × £15 = £3,600.<br />Revenue from children: £5,400 − £3,600 = £1,800.<br />Child sessions: £1,800 ÷ £9 = <strong>200</strong>.",
+        "distractors": {
+          "A": "This divides the £1,800 of child revenue by the adult price, £15, instead of the child price, £9.",
+          "C": "This divides all £5,400 by the child price to get 600 sessions, then takes away the 240 adult sessions. Adults paid £15, not £9, so their revenue cannot be converted at the child price.",
+          "D": "This divides the whole £5,400 by £9, as if every session sold were a child session. The £3,600 that came from adults has to be taken off first."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-1-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A workshop makes wooden chairs. Table 1 shows its costs in two months.<br />Using Table 1, the average cost of a chair in May was",
+      "table": {
+        "caption": "Table 1: A chair workshop's monthly costs",
+        "head": [
+          "",
+          "April",
+          "May"
+        ],
+        "rows": [
+          [
+            "Chairs made",
+            "50",
+            "80"
+          ],
+          [
+            "Rent",
+            "£1,500",
+            "£1,500"
+          ],
+          [
+            "Timber",
+            "£1,600",
+            "£2,560"
+          ],
+          [
+            "Manager's salary",
+            "£2,300",
+            "£2,300"
+          ],
+          [
+            "Screws, glue and varnish",
+            "£400",
+            "£640"
+          ]
+        ]
+      },
+      "options": {
+        "A": "£40.00",
+        "B": "£47.50",
+        "C": "£87.50",
+        "D": "£140.00"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Average cost = total costs ÷ output.<br />Total costs in May: £1,500 + £2,560 + £2,300 + £640 = <strong>£7,000</strong>.<br />Average cost: £7,000 ÷ 80 = <strong>£87.50</strong>.<br />The table also shows which costs are which. Rent and the salary stay the same when output rises, so they are fixed costs (£3,800). Timber and the other materials rise with output, so they are variable costs: £40 a chair in both months.",
+        "distractors": {
+          "A": "This is the variable cost per chair alone: (£2,560 + £640) ÷ 80 = £40. Average cost uses <strong>total</strong> costs, so the rent and the salary must be included.",
+          "B": "This is the fixed costs shared across May's chairs: £3,800 ÷ 80 = £47.50. It leaves out the timber and the other materials.",
+          "D": "This divides May's total costs by April's output: £7,000 ÷ 50. Average cost divides a month's total costs by the output of the same month."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-1-q3",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A holiday park's sales revenue rose from £200,000 in 2024 to £250,000 in 2025. In 2026 it fell back to £200,000. The percentage fall in its sales revenue in 2026 was",
+      "options": {
+        "A": "20%",
+        "B": "25%",
+        "C": "80%",
+        "D": "125%"
+      },
+      "answer": "A",
+      "model": {
+        "working": "Percentage change = (new value − original value) ÷ original value × 100. For the 2026 change, the original value is the 2025 figure.<br />(£200,000 − £250,000) ÷ £250,000 × 100 = −20%, a fall of <strong>20%</strong>.<br />The rise in 2025 was 25%, but the fall is smaller because it is measured from a bigger starting figure.",
+        "distractors": {
+          "B": "This assumes a fall back to the old level must be the same size as the rise before it, or divides the £50,000 change by the new value, £200,000. The 2026 fall is measured against the original value for that year, £250,000.",
+          "C": "This is the new value as a percentage of the original: 200,000 ÷ 250,000 × 100 = 80%. Revenue in 2026 is 80% <em>of</em> the 2025 level, so it has fallen <em>by</em> 20%.",
+          "D": "This divides the original value by the new one: 250,000 ÷ 200,000 × 100 = 125%. It compares the two levels instead of measuring the change, with the wrong figure on the bottom."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An escape-room business pays £7,200 a month in rent, insurance and salaries, and each group that plays costs it £5 in props and cleaning. Bookings rise from 400 groups a month to 600. Its average cost per group",
+      "options": {
+        "A": "Rises, as its total costs are higher.",
+        "B": "Stays the same, as its variable cost per group is unchanged.",
+        "C": "Falls, as its total variable costs are lower.",
+        "D": "Falls, as its fixed costs are spread over more groups."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Average cost = total costs ÷ output.<br />At 400 groups: (£7,200 + 400 × £5) ÷ 400 = £9,200 ÷ 400 = £23.<br />At 600 groups: (£7,200 + 600 × £5) ÷ 600 = £10,200 ÷ 600 = £17.<br />Average cost <strong>falls</strong> by £6. The variable cost stays at £5 a group, but the £7,200 of fixed costs is now shared by 600 groups instead of 400, so each group carries £12 of it instead of £18.",
+        "distractors": {
+          "A": "Total costs do rise, from £9,200 to £10,200, but output rises proportionately more. Average cost is total costs divided by output, so it falls from £23 to £17.",
+          "B": "The variable cost per group is unchanged at £5, but average cost also includes each group's share of the fixed costs, and that share falls as bookings rise.",
+          "C": "Total variable costs rise, from £2,000 to £3,000, because more groups play. Average cost falls for a different reason: the fixed costs are shared across more groups."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-1-q5",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The share of a courier firm's parcels that arrive late rises from 8% to 10%. Measuring against the original value, the percentage change in the share of parcels arriving late is",
+      "options": {
+        "A": "2%",
+        "B": "20%",
+        "C": "25%",
+        "D": "80%"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Percentage change = (new value − original value) ÷ original value × 100.<br />(10 − 8) ÷ 8 × 100 = <strong>25%</strong>.<br />When the figures are already percentages, the gap between them is measured in <strong>percentage points</strong>. The late share has risen by 2 percentage points, which is a 25% increase.",
+        "distractors": {
+          "A": "This is the change in percentage points, 10 − 8 = 2. A percentage change divides that by the original value: 2 ÷ 8 × 100 = 25%.",
+          "B": "This divides the change by the new value: 2 ÷ 10 × 100 = 20%. A percentage change is measured against the original value, 8%.",
+          "D": "This is the original as a percentage of the new value: 8 ÷ 10 × 100 = 80%. It compares the two levels instead of measuring the change."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-1-q6",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows figures for two nail bars in the same month.<br />Using Table 1, the correct statement is",
+      "table": {
+        "caption": "Table 1: Two nail bars, one month",
+        "head": [
+          "",
+          "Price per appointment",
+          "Appointments",
+          "Total costs"
+        ],
+        "rows": [
+          [
+            "Nail bar X",
+            "£60",
+            "300",
+            "£14,000"
+          ],
+          [
+            "Nail bar Y",
+            "£40",
+            "420",
+            "£12,000"
+          ]
+        ]
+      },
+      "options": {
+        "A": "X has both the higher revenue and the higher profit.",
+        "B": "X has the higher revenue, but Y has the higher profit.",
+        "C": "Y has the higher revenue, but X has the higher profit.",
+        "D": "Y has both the higher revenue and the higher profit."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Sales revenue = price × sales volume. Profit = revenue − total costs.<br />X: revenue 300 × £60 = <strong>£18,000</strong>; profit £18,000 − £14,000 = £4,000.<br />Y: revenue 420 × £40 = £16,800; profit £16,800 − £12,000 = <strong>£4,800</strong>.<br />X takes more revenue, but Y keeps more of its revenue as profit.",
+        "distractors": {
+          "A": "X does have the higher revenue, but revenue is not profit. Its costs are £2,000 higher than Y's, which leaves it £800 behind.",
+          "C": "Both halves are the wrong way round. Y's extra appointments do not make up for its lower price, and X's higher revenue is eaten up by its higher costs.",
+          "D": "Y does more appointments, but sales volume is not sales revenue. X's higher price more than makes up for its 120 fewer appointments: £18,000 against £16,800."
+        }
+      }
+    }
+  ]
+}

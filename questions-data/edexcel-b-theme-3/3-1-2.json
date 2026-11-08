@@ -1,0 +1,209 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-3",
+  "boardName": "Edexcel B Theme 3",
+  "spec": "3.1.2",
+  "slug": "3-1-2-trade-and-growth",
+  "title": "Trade and Growth",
+  "shortTitle": "Trade and Growth",
+  "pageTitle": "Trade and Growth Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on trade and growth for Edexcel B A-Level Economics: trade liberalisation, specialisation by country, and FDI and growth.",
+  "intro": "Seven original multiple-choice questions on trade and growth: increasing trade liberalisation, specialisation by country, the routes from liberalisation to economic growth, and how foreign direct investment can raise growth. One is a calculation.",
+  "notesTeaser": "Seven original multiple-choice questions on trade liberalisation, specialisation by country, and how liberalisation and FDI raise growth.",
+  "questions": [
+    {
+      "id": "edexcel-b-3-1-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "An electric scooter sold in the UK has its motor made in Japan, its battery cells made in Poland and its frame welded in Turkey, and it is put together in Romania. The scooter shows specialisation by country taking a newer form, in which",
+      "options": {
+        "A": "Countries specialise in different finished products.",
+        "B": "Countries specialise in stages of making one product.",
+        "C": "One country makes every part where wages are lowest.",
+        "D": "Production takes place where the product is sold."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Specialisation is increasing because it now happens <strong>within a single product</strong> as well as between products. Each country does the stage it does most cheaply, so the parts cross several borders before the scooter is sold.<br />Each country focuses on fewer tasks → workers and firms get better at them and produce on a larger scale → lower unit costs → cheaper goods and more exports.",
+        "distractors": {
+          "A": "This is the older form of specialisation, where one country makes cloth and another makes wine. Here no country makes the whole scooter. Romania only assembles parts made in three other countries.",
+          "C": "The parts come from four countries, not one. Each is made where that particular stage is done most cheaply, which depends on skills and scale as well as wages.",
+          "D": "The scooter is sold in the UK, but none of it is made there. Production has been split up by cost, not placed next to the customer."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-2-q2",
+      "skill": "calculation",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A furniture maker in an emerging economy imports a computer-controlled saw with a world price of £80,000. The government then cuts its tariff on imported machinery from 25% to 5% of the world price.<br />The cost of the saw to the furniture maker falls by",
+      "options": {
+        "A": "£4,000",
+        "B": "£16,000",
+        "C": "£20,000",
+        "D": "£84,000"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Cost with the old tariff: £80,000 × 1.25 = <strong>£100,000</strong>.<br />Cost with the new tariff: £80,000 × 1.05 = <strong>£84,000</strong>.<br />Fall = £100,000 − £84,000 = <strong>£16,000</strong>, which is the 20 percentage-point cut in the tariff applied to the world price.<br />This is the cheaper-inputs route from liberalisation to growth: tariffs on imported machinery fall → firms' costs fall → their goods become more competitive at home and abroad.",
+        "distractors": {
+          "A": "This is the tariff the firm still pays, 5% of £80,000. The question asks how much the cost falls, which is the difference between the old tariff and the new one.",
+          "C": "This is the whole of the old tariff, 25% of £80,000, as if the tariff had been removed. It has only been cut to 5%, so £4,000 of it is still paid.",
+          "D": "This is the new cost of the saw, £80,000 plus the 5% tariff. The fall is found by taking it away from the old cost of £100,000."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-2-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country removes the tariffs that had protected its shoe makers for decades. Within five years its least efficient shoe makers have closed, and their workers and premises have been taken on by more productive firms in other industries. This raises the country's growth mainly because",
+      "options": {
+        "A": "Imports of shoes are counted as part of its GDP.",
+        "B": "Its resources are now used where they produce more.",
+        "C": "Shoe prices rise once the weakest firms have closed.",
+        "D": "The government gains revenue from the extra imports."
+      },
+      "answer": "B",
+      "model": {
+        "working": "This is the competition route from liberalisation to growth.<br />Imports compete with the protected home producers → inefficient firms must cut costs or close → their workers and premises move to firms that use them better → productivity rises, and so does the economy's capacity to grow.<br />The same labour and buildings now produce more than they did making shoes behind a tariff.",
+        "distractors": {
+          "A": "GDP measures what a country produces. Imports are made abroad, so they are taken away when GDP is measured, not added.",
+          "C": "Removing the tariff lets cheaper imports in, so shoe prices are likely to fall, not rise. In any case, higher prices would not raise real output.",
+          "D": "The tariffs have been removed, so the government collects nothing on the extra imports. Lost tariff revenue is a cost of liberalisation, not the source of its growth."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-2-q4",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes four factories that foreign multinationals plan to build in an emerging economy. Each would employ the same number of workers.<br />Using Table 1, the factory likely to add most to the country's long-run growth is",
+      "table": {
+        "caption": "Table 1: Four planned foreign-owned factories",
+        "head": [
+          "",
+          "Parts",
+          "Training",
+          "Profits",
+          "Plans to stay"
+        ],
+        "rows": [
+          [
+            "Factory 1",
+            "Mostly from local firms",
+            "Engineers trained in new methods",
+            "Reinvested in the country",
+            "At least twenty years"
+          ],
+          [
+            "Factory 2",
+            "Mostly imported",
+            "A few days' basic training",
+            "Reinvested in the country",
+            "At least twenty years"
+          ],
+          [
+            "Factory 3",
+            "Mostly from local firms",
+            "Engineers trained in new methods",
+            "Sent to the parent company",
+            "At least twenty years"
+          ],
+          [
+            "Factory 4",
+            "Mostly from local firms",
+            "Engineers trained in new methods",
+            "Reinvested in the country",
+            "Until a five-year tax break ends"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Factory 1.",
+        "B": "Factory 2.",
+        "C": "Factory 3.",
+        "D": "Factory 4."
+      },
+      "answer": "A",
+      "model": {
+        "working": "FDI raises growth through more capital, jobs and incomes, and new technology and skills. How much depends on where the profits go, the type of work, and how long the factory stays.<br />Factory 1 is the only one that does well on all four. Buying from local firms spreads income to local suppliers, training passes new methods on to workers and suppliers, reinvested profits keep the gain in the country, and a long stay keeps the jobs there.",
+        "distractors": {
+          "B": "Factory 2 imports most of its parts and gives only basic training. Simple assembly work like this transfers few skills, and local suppliers gain little.",
+          "C": "Factory 3 sends its profits back to the parent company. Those profits leave the country, so less of the gain from the factory stays at home.",
+          "D": "Factory 4 may leave once its tax break ends, taking the jobs with it. A multinational that can move to a cheaper country adds less to long-run growth."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two countries cut their tariffs and win the same new access to foreign markets. Country K exports mainly copper. Country L uses the access to build up car-parts and software industries. Over the next twenty years, compared with L, K's growth from liberalisation is most likely to be",
+      "options": {
+        "A": "Faster, and less affected by world prices.",
+        "B": "Faster, but more affected by world prices.",
+        "C": "Slower, and less affected by world prices.",
+        "D": "Slower, and more affected by world prices."
+      },
+      "answer": "D",
+      "model": {
+        "working": "How much liberalisation adds to growth depends on what the country can sell.<br />A country that exports mainly raw materials gains less than one that can build manufacturing and services, which offer more scope for economies of scale and rising productivity.<br />Its growth also swings with world prices: when the copper price falls, K's export earnings and output fall with it. L sells a wider range of goods and services, so no single price moves its economy as much.",
+        "distractors": {
+          "A": "Both halves are reversed. Exporting one raw material gives K less scope to grow than L, and ties its growth closely to the copper price.",
+          "B": "This gets the risk right but not the size of the gain. A country selling mainly raw materials gains less from new market access than one building manufacturing and services.",
+          "C": "This gets the size of the gain right but misses the risk. Relying on one commodity makes K's growth <strong>more</strong> exposed to world prices, not less."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A South Korean carmaker is choosing a country for a factory that will import its engines and export most of its cars. Country M has removed its tariffs on imported parts and signed agreements that remove its partners' tariffs on its exports. Country N has kept its trade barriers. M is more attractive mainly because",
+      "options": {
+        "A": "Its government will collect more tariff revenue.",
+        "B": "Its workers will be paid lower wages than in N.",
+        "C": "The carmaker will face no competition there.",
+        "D": "The factory can trade parts and cars freely."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Liberalisation makes FDI easier, because a foreign-owned factory can import its parts and export its output freely.<br />The carmaker's factory depends on both: imported engines and foreign buyers. In M, neither is taxed at the border, so its costs are lower and its cars more competitive abroad. In N, tariffs would raise the cost of every engine, and its cars would face tariffs in the markets it sells to.",
+        "distractors": {
+          "A": "M has removed its tariffs on parts, so it will collect less tariff revenue, not more. And the government's revenue is not what the carmaker is choosing on.",
+          "B": "Nothing in the stem says wages differ between the two countries. Cutting tariffs changes the cost of trading, not what workers are paid.",
+          "C": "Liberalisation brings more competition from imports, not less. The carmaker is attracted by cheaper trade, not by protection from rivals."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A Japanese electronics firm opens a factory in Country P and trains its local engineers in new production methods. Several of them later leave to start their own firms, which supply the factory using the same methods. This raises P's growth mainly through",
+      "options": {
+        "A": "Cheaper imported inputs for its firms.",
+        "B": "Higher spending by the factory's workers.",
+        "C": "New methods spreading to local firms.",
+        "D": "The money spent building the factory."
+      },
+      "answer": "C",
+      "model": {
+        "working": "FDI raises growth through more capital, jobs and incomes, and <strong>technology and skills</strong>. The stem describes the third.<br />The multinational brings new methods and trains its staff → those workers take the methods into new local firms → productivity rises in local firms too, not just in the factory.<br />This is the route that lasts: the skills stay in Country P even if the factory later closes.",
+        "distractors": {
+          "A": "Cheaper inputs come from cutting tariffs on imports. Nothing in the stem involves imports; the engineers' new firms are local suppliers.",
+          "B": "Workers' spending is the jobs-and-incomes route, which works through a multiplier effect. It is real, but the stem is about engineers taking new methods into new firms.",
+          "D": "Building the factory adds capital, which is a separate route. The stem describes what happens after the factory opens, as skills spread beyond it."
+        }
+      }
+    }
+  ]
+}

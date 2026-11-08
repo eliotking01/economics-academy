@@ -1,0 +1,204 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-2",
+  "boardName": "Edexcel B Theme 2",
+  "spec": "2.4.1",
+  "slug": "2-4-1-globalisation",
+  "title": "Globalisation",
+  "shortTitle": "Globalisation",
+  "pageTitle": "Globalisation Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on globalisation for Edexcel B A-Level Economics: FDI, trade as a share of GDP, tariffs, capital flows and transport.",
+  "intro": "Seven original multiple-choice questions on globalisation: its characteristics, foreign direct investment, trade as a share of GDP, and the factors behind it, from trade liberalisation to cheaper transport. One is a calculation.",
+  "notesTeaser": "Seven original multiple-choice questions on the characteristics of globalisation, foreign direct investment, and the factors that have driven it.",
+  "questions": [
+    {
+      "id": "edexcel-b-2-4-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A business report makes four statements about the world economy. The one that describes a <strong>factor</strong> contributing to globalisation, rather than a characteristic of it, is",
+      "options": {
+        "A": "More money is invested across borders each year.",
+        "B": "More of the world's output is now sold across a border.",
+        "C": "More people now live and work outside their country of birth.",
+        "D": "Tariffs on manufactured goods have been cut in WTO talks."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Characteristics</strong> are what globalisation looks like: more investment flows, world trade rising as a share of world GDP, and more migration. <strong>Factors</strong> are the causes.<br />Cutting tariffs is <strong>trade liberalisation</strong>, one of the five factors: imported goods become cheaper and firms face fewer barriers selling abroad → more goods and services cross borders. It explains why trade has grown, rather than describing the growth.",
+        "distractors": {
+          "A": "This is increased investment flows, one of the three characteristics. It describes what globalisation looks like, not why it happened.",
+          "B": "This is world trade rising as a share of world output, a characteristic. Trade liberalisation is one of the reasons for it.",
+          "C": "This is increased migration, a characteristic. It is a sign that the world economy is more connected, not a cause."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-1-q2",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Each of the following involves a UK business and another country. The one that is foreign direct investment into the UK is",
+      "options": {
+        "A": "A Danish toymaker buys and runs a chain of UK toy shops.",
+        "B": "A UK engineering firm sells machinery to a buyer in India.",
+        "C": "A UK supermarket opens twenty stores in Poland.",
+        "D": "A US pension fund buys 1% of the shares in a UK bank."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Foreign direct investment (FDI)</strong> is money a firm invests in another country to set up, buy or expand a business it <strong>controls</strong> there.<br />The Danish toymaker buys the UK shops outright and runs them, so a foreign firm now controls a UK business. Money has flowed <strong>into</strong> the UK as FDI.",
+        "distractors": {
+          "B": "This is an export: a sale of goods, which is trade, not investment. No one has bought or set up a business abroad.",
+          "C": "This is FDI, but in the wrong direction. A UK firm is setting up stores it controls in Poland, so it is FDI <strong>out of</strong> the UK and into Poland.",
+          "D": "Money has come into the UK, but buying 1% of a bank's shares does not give the fund control of it. Buying shares without taking control is not FDI."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-1-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows total output (GDP) and total trade, measured as exports plus imports, for a group of economies.<br />Using Table 1, the only period in which trade fell as a share of GDP was",
+      "table": {
+        "caption": "Table 1: GDP and trade for a group of economies",
+        "head": [
+          "Year",
+          "GDP (£bn)",
+          "Exports plus imports (£bn)"
+        ],
+        "rows": [
+          [
+            "2000",
+            "400",
+            "160"
+          ],
+          [
+            "2005",
+            "440",
+            "198"
+          ],
+          [
+            "2010",
+            "600",
+            "252"
+          ],
+          [
+            "2015",
+            "620",
+            "279"
+          ],
+          [
+            "2020",
+            "650",
+            "299"
+          ]
+        ]
+      },
+      "options": {
+        "A": "2000 to 2005.",
+        "B": "2005 to 2010.",
+        "C": "2010 to 2015.",
+        "D": "2015 to 2020."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Trade as a share of GDP = exports plus imports ÷ GDP × 100.<br />2000: 160 ÷ 400 = <strong>40%</strong>. 2005: 198 ÷ 440 = <strong>45%</strong>. 2010: 252 ÷ 600 = <strong>42%</strong>. 2015: 279 ÷ 620 = <strong>45%</strong>. 2020: 299 ÷ 650 = <strong>46%</strong>.<br />The share fell only between 2005 and 2010, from 45% to 42%. The value of trade rose by £54bn in that period, its biggest rise, but GDP rose faster still: by 36%, against 27% for trade.",
+        "distractors": {
+          "A": "Trade rose from 40% to 45% of GDP. It grew by about 24%, while GDP grew by only 10%.",
+          "C": "GDP grew least in this period, by £20bn, but slow growth in GDP pushes trade's share up, not down. The share rose from 42% to 45%.",
+          "D": "This is the trap: the value of trade rose least here, by £20bn. But GDP rose by only £30bn, so the share still edged up, from 45% to 46%. A share depends on trade <strong>relative to</strong> GDP."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country used to limit how much money could be moved into or out of it. It then removes those controls. For a UK firm thinking of building a factory there, the most important change is that it can now",
+      "options": {
+        "A": "Move money in to build it and take profits out.",
+        "B": "Pay lower wages to the workers it hires there.",
+        "C": "Sell its goods there without paying any tariffs.",
+        "D": "Ship goods there more cheaply than before."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Removing controls on moving money is <strong>capital market liberalisation</strong>. Controls removed → the firm can move money in to build and run the factory, and take its profits out again → investing there becomes worthwhile → more FDI.<br />That is why capital market liberalisation lets firms set up operations overseas.",
+        "distractors": {
+          "B": "Wages depend on the country's labour market. Freeing up the movement of money does not change what workers there are paid.",
+          "C": "Cutting tariffs is trade liberalisation, a different factor. Nothing in the stem says the country has changed its tariffs.",
+          "D": "Cheaper shipping comes from a fall in transport costs, a different factor. Controls on money have nothing to do with the cost of moving goods."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-1-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A US-owned transnational company builds a factory in Wales to make engines. It ships every engine to its own car plant in Spain. For the UK, the factory and its engines show up as",
+      "options": {
+        "A": "An inflow of FDI, followed by higher exports.",
+        "B": "An inflow of FDI, followed by higher imports.",
+        "C": "An outflow of FDI, followed by higher exports.",
+        "D": "An outflow of FDI, followed by higher imports."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Two steps, in order.<br />First, a US firm builds a factory it controls in the UK → money flows <strong>into</strong> the UK as FDI.<br />Second, engines made in Wales are sold to Spain → goods produced in the UK and bought from another country are UK <strong>exports</strong>. They still count as trade even though they move between two sites of the same company.<br />This is why transnationals have driven globalisation: one decision raises both investment flows and trade.",
+        "distractors": {
+          "B": "The FDI is right, but the engines leave the UK, so they are exports. Spain is the country importing them.",
+          "C": "The engines are exports, but the investment comes from a US firm into the UK, so it is an inflow. An outflow would be a UK firm building abroad.",
+          "D": "Both directions are reversed. The money comes into the UK from the US, and the engines go out of the UK to Spain."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The UK and Country Z agree to scrap all tariffs on trade between them. A UK maker of kitchen knives sells in the UK and in Country Z, and Country Z has knife makers of its own. The most likely effect on the UK firm is",
+      "options": {
+        "A": "Higher sales abroad, and less competition at home.",
+        "B": "Higher sales abroad, and more competition at home.",
+        "C": "Lower sales abroad, and less competition at home.",
+        "D": "Lower sales abroad, and more competition at home."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Trade liberalisation works in both directions.<br />Abroad: Country Z's tariff goes → the UK firm's knives become cheaper there → <strong>higher sales in Country Z</strong>.<br />At home: the UK's tariff on Country Z's knives goes too → their knives become cheaper in UK shops → <strong>more competition</strong> for the UK firm's customers.<br />Globalisation lets a firm sell anywhere, but it also lets rivals from anywhere compete for its customers.",
+        "distractors": {
+          "A": "The export side is right, but both countries have scrapped their tariffs. Country Z's knife makers can now sell more cheaply in the UK, so competition at home increases.",
+          "C": "Both halves are reversed. With no tariff, the UK firm's knives are cheaper in Country Z, and Country Z's knives are cheaper in the UK.",
+          "D": "The home side is right, but losing the tariff makes the UK firm's knives cheaper in Country Z, so its sales there should rise."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-1-q7",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A UK furniture retailer can buy a sofa from a UK maker for £350, or import one from Vietnam, where it costs £300 to make, plus shipping. Shipping then falls from £80 a sofa to £20. The retailer always buys from the cheaper source. Its cost per sofa changes by",
+      "options": {
+        "A": "−£60",
+        "B": "−£50",
+        "C": "−£30",
+        "D": "£0"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Before: importing costs £300 + £80 = £380, more than the UK maker's £350. The retailer buys in the UK, at <strong>£350</strong>.<br />After: importing costs £300 + £20 = £320, less than £350. The retailer switches to Vietnam, at <strong>£320</strong>.<br />Change = £320 − £350 = <strong>−£30</strong>.<br />Cheaper transport has turned a sofa that was not worth importing into one that is: more trade, and a lower cost for the retailer.",
+        "distractors": {
+          "A": "This is the fall in the cost of importing, £380 to £320. But at £380 the retailer was not importing: it was paying the UK maker £350.",
+          "B": "This compares the two making costs, £350 and £300, and leaves out shipping. An imported sofa still costs £20 to ship.",
+          "D": "Shipping costs did not affect the retailer before, as it bought in the UK. But the fall is large enough to make importing cheaper, so the retailer switches and its cost falls."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-3",
+  "boardName": "Edexcel B Theme 3",
+  "spec": "3.6.2",
+  "slug": "3-6-2-reducing-poverty",
+  "title": "Reducing Poverty",
+  "shortTitle": "Reducing Poverty",
+  "pageTitle": "Reducing Poverty Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions for Edexcel B A-Level Economics on reducing poverty: growth and development, international aid, NGOs and anti-poverty policies.",
+  "intro": "Eight original multiple-choice questions on reducing poverty: economic growth and economic development, humanitarian and development aid, tied aid, non-governmental organisations (NGOs) and poverty reduction policies. One is a calculation.",
+  "notesTeaser": "Eight original multiple-choice questions on economic growth and development, international aid, NGOs and poverty reduction policies, including a calculation.",
+  "questions": [
+    {
+      "id": "edexcel-b-3-6-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A donor country gives Country M two kinds of help. After an earthquake, it sends tents, food and medical teams. It then lends Country M money for 20 years, at an interest rate of 1%, to build power stations.<br />These two kinds of help are best described as",
+      "options": {
+        "A": "Development aid, then humanitarian aid as a soft loan.",
+        "B": "Humanitarian aid, then development aid as a grant.",
+        "C": "Humanitarian aid, then development aid as a soft loan.",
+        "D": "Humanitarian aid, then foreign direct investment."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Humanitarian aid</strong> is short-term help after a disaster or war, such as food, shelter and medical care. The tents, food and medical teams after the earthquake are humanitarian aid.<br /><strong>Development aid</strong> is longer-term funding for projects such as roads, schools and power supplies. It can be a grant or a <strong>soft loan</strong>, a loan at a low interest rate. Money lent for 20 years at 1% to build power stations is development aid given as a soft loan.",
+        "distractors": {
+          "A": "This is the wrong way round. Emergency help after an earthquake is humanitarian aid. A long-term project such as power stations is development aid.",
+          "B": "The power stations are development aid, but the money is lent, not given. It has to be paid back, at 1% interest, so it is a soft loan rather than a grant.",
+          "D": "Foreign direct investment is when a firm builds or buys a business abroad, hoping to make a profit there. Here a donor government lends money on generous terms to help another country, which is aid."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-2-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A donor country gives Country N $60 million of aid to buy buses, on condition that it buys them from the donor's own makers at $300,000 each. Similar buses are sold by other makers for $240,000 each.<br />Compared with aid it could spend freely, the number of buses Country N loses because the aid is tied is",
+      "options": {
+        "A": "40",
+        "B": "50",
+        "C": "200",
+        "D": "250"
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Tied aid</strong> must be spent on the donor's own goods or firms, which often cost more.<br />Buses bought with the tied aid: $60,000,000 ÷ $300,000 = <strong>200</strong>.<br />Buses the same aid would buy if spent freely: $60,000,000 ÷ $240,000 = <strong>250</strong>.<br />Buses lost: 250 − 200 = <strong>50</strong>.<br />The aid is worth less to Country N than its $60 million face value suggests.",
+        "distractors": {
+          "A": "This takes the price gap as a percentage of the donor's price, $60,000 ÷ $300,000 = 20%, and applies it to the 200 buses bought, giving 40. The loss has to be measured against the 250 buses the aid would buy freely: 250 − 200 = 50.",
+          "C": "200 is the number of buses Country N gets with the tied aid, not the number it loses.",
+          "D": "250 is the number of buses the aid would buy if it could be spent freely. The question asks for the difference between that and the 200 it actually gets."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-2-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "An NGO pays for wells in 40 villages. In each village, a committee chosen by local people decides where the well goes and who looks after it.<br />Compared with a programme run by the government from the capital city, the main strength of this approach is that",
+      "options": {
+        "A": "It can provide schools and hospitals for the whole country.",
+        "B": "It earns a profit that can be spent on more wells.",
+        "C": "Its projects are more likely to suit each village's needs.",
+        "D": "Its spending is certain to continue for many years ahead."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A <strong>non-governmental organisation (NGO)</strong> is a not-for-profit organisation, independent of government, that works on a social or environmental problem.<br />This NGO lets local people decide → each well goes where the village needs it and someone local is responsible for it → the project <strong>suits local needs</strong>, reaches people a distant government might miss, and less money is lost to corruption.",
+        "distractors": {
+          "A": "This is the main <strong>weakness</strong> of NGOs. Each one is small and its projects are local, so it cannot replace a government's schools and hospitals across a whole country.",
+          "B": "An NGO is a not-for-profit organisation. Its money comes mainly from donations and some government aid budgets, not from profit.",
+          "D": "An NGO relies on donations, which can fall or stop. Its funding is less certain than a government's, not more."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-2-q4",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes Country Z, a low-income country. Its government wants a policy that reaches the poorest households.<br />Using Table 1, the policy most likely to do this is",
+      "table": {
+        "caption": "Table 1: Country Z",
+        "head": ["Feature", "Figure"],
+        "rows": [
+          ["Workers in the informal economy, with no contract or payslip", "70%"],
+          ["Poorest households with anyone in a formal job", "5%"],
+          ["Adults who pay income tax", "8%"],
+          ["Children from the poorest households who are not in school", "30%"]
+        ]
+      },
+      "options": {
+        "A": "A cash grant to poor families if children attend school.",
+        "B": "A cut in the basic rate of income tax for low earners.",
+        "C": "A higher minimum wage for workers with formal jobs.",
+        "D": "Cheaper bank loans for firms in the formal economy."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The policy has to reach households that, according to Table 1, almost never have a formal job or pay income tax.<br />A <strong>cash transfer</strong> is paid directly to poor families, whatever kind of work they do → more spent on food and schooling → fewer in absolute poverty. Making it conditional on school attendance also targets the 30% of the poorest children who are out of school, which raises their future earnings.<br />Where most work is informal, direct transfers and public services do more than policies that work through formal jobs or income tax.",
+        "distractors": {
+          "B": "Only 8% of adults pay income tax. The poorest households almost certainly do not, so a tax cut gives them nothing.",
+          "C": "A minimum wage only reaches workers with formal jobs, and only 5% of the poorest households have anyone in one. The informal workers who make up 70% of the workforce are not covered.",
+          "D": "Cheaper loans might create some formal jobs over time, but the benefit goes first to firms and their owners. Very few of the poorest households have anyone in the formal economy, so this is the least direct way to reach them."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Country W's real GDP grows by 7% a year for ten years, almost all of it from offshore oil. The oil fields employ few local workers, and most of the profit goes to foreign owners. The government collects a large tax on oil revenue. The share of households in poverty barely changes.<br />The change most likely to make this growth reduce poverty is",
+      "options": {
+        "A": "Building rural schools and clinics with the oil tax revenue.",
+        "B": "Cutting the tax on oil profits to attract more foreign producers.",
+        "C": "Holding all of the oil tax revenue in a savings fund abroad.",
+        "D": "Raising oil output by a further 10% a year."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Growth reduces poverty through two main routes: more and better-paid jobs, and more tax revenue spent on services for poor households.<br />The oil fields employ few local workers and send most of their profit abroad, so the <strong>jobs route is weak</strong>.<br />That leaves the <strong>tax route</strong>. Spending the oil revenue on schools and clinics → better health and education for poor households → higher productivity and incomes. How the extra revenue is used decides whether growth reaches the poor.",
+        "distractors": {
+          "B": "More foreign oil producers would add to the growth, but oil creates few local jobs and its profits go abroad. A lower tax rate also leaves less revenue for the services that would actually reach poor households.",
+          "C": "Saving the revenue abroad might help in the future, but it spends nothing on poor households now. Poverty will stay where it is while the money sits in the fund.",
+          "D": "More oil means more of the same growth, which has already shown it barely reaches the poor. Faster growth only cuts poverty if the gains reach poor households."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-2-q6",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows changes in two countries over the same ten years.<br />Using Table 1, it follows that",
+      "table": {
+        "caption": "Table 1: Two countries over ten years",
+        "head": ["", "Country X", "Country Y"],
+        "rows": [
+          ["Average growth of real GDP per year", "8%", "3%"],
+          ["Life expectancy at birth", "61 → 62 years", "60 → 66 years"],
+          ["Children completing primary school", "55% → 57%", "50% → 78%"]
+        ]
+      },
+      "options": {
+        "A": "X had faster growth and more development.",
+        "B": "X had faster growth, but Y had more development.",
+        "C": "Y had faster growth and more development.",
+        "D": "Y had faster growth, but X had more development."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Economic growth</strong> is a rise in real GDP. <strong>Economic development</strong> is an improvement in living standards and welfare, measured by health and education as well as income.<br />Growth: X's real GDP grew by 8% a year against Y's 3% → X had <strong>faster growth</strong>.<br />Development: in Y, life expectancy rose by 6 years and primary school completion by 28 percentage points. In X they rose by only 1 year and 2 points → Y had <strong>more development</strong>.<br />Growth can drive development, but it does not guarantee it.",
+        "distractors": {
+          "A": "X did grow faster, but this assumes growth and development are the same thing. X's health and education barely improved, while Y's improved a great deal.",
+          "C": "Y's real GDP grew by only 3% a year, against 8% in X. Y had more development, but slower growth.",
+          "D": "This is the wrong way round. X's real GDP grew faster, while Y's health and education improved far more."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Five years after a government makes primary school free, the share of households in poverty has barely changed. A newspaper calls the policy a failure.<br />The best response is that",
+      "options": {
+        "A": "It has failed, as only cash transfers can reduce poverty.",
+        "B": "It has failed, as schooling does not raise workers' productivity.",
+        "C": "It has worked, as more children in school means fewer poor households now.",
+        "D": "It is too soon to judge, as today's pupils are not yet working."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Free schooling reduces poverty through a long chain: more children learn to read and count → more skilled and productive workers → better-paid jobs → higher household incomes.<br />That last step only happens once today's pupils are adults in work. After five years, most of them are still in school, so poverty would not be expected to fall yet. This <strong>time lag</strong> is why education has to be judged over a much longer period than a cash transfer, which helps at once.",
+        "distractors": {
+          "A": "Cash transfers act faster, but they are not the only policy that works. Education, health spending, jobs and growth all reduce poverty, some of them only after a lag.",
+          "B": "Education is one of the main ways to raise productivity: more skilled workers produce more and earn more. The benefit simply takes years to arrive.",
+          "C": "Children being in school does not yet raise their households' incomes, and the stem says poverty has barely changed. The policy's effect on poverty comes later, when they start work."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-2-q8",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A market trader has no savings or property to offer as security, so the banks refuse to lend. A local lender instead lends the trader $120, repaid weekly over six months, to buy a fridge for selling cold drinks.<br />This is an example of",
+      "options": {
+        "A": "Development aid.",
+        "B": "Foreign direct investment.",
+        "C": "Humanitarian aid.",
+        "D": "Microfinance."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Microfinance</strong> is small loans to people the banks will not lend to.<br />The trader has no savings or property, so the banks say no → a microfinance lender provides $120 → the trader buys a fridge and sells cold drinks → a small business and a steady income, out of which the loan is repaid.",
+        "distractors": {
+          "A": "Development aid is longer-term funding, given or lent on generous terms by one country or an organisation such as the World Bank, for projects such as schools or roads. This is a small loan from a local lender to one trader.",
+          "B": "Foreign direct investment is when a firm builds or buys a business in another country. Nothing here crosses a border.",
+          "C": "Humanitarian aid is short-term help after a disaster or war, such as food and shelter. The trader is borrowing to start a business, and has to pay the money back."
+        }
+      }
+    }
+  ]
+}

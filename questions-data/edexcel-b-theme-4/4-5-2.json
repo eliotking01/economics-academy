@@ -1,0 +1,220 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-4",
+  "boardName": "Edexcel B Theme 4",
+  "spec": "4.5.2",
+  "slug": "4-5-2-the-role-of-the-financial-sector",
+  "title": "The Role of the Financial Sector",
+  "shortTitle": "The Role of the Financial Sector",
+  "pageTitle": "The Role of the Financial Sector Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions for Edexcel B A-Level Economics on the financial sector: lending, creditor risk, forward markets and markets for equities.",
+  "intro": "Eight original multiple-choice questions on the role of the financial sector: mobilising savings, lending to firms and individuals, assessing creditor risk, forward markets and the market for equities. One is a calculation.",
+  "notesTeaser": "Eight original multiple-choice questions on mobilising savings, lending, creditor risk, forward markets and the market for equities, including one calculation.",
+  "questions": [
+    {
+      "id": "edexcel-b-4-5-2-q1",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In Country P, most households keep their savings as cash at home. Country Q is similar in every other way, but there most households keep their savings in banks.<br />Compared with firms in Country Q, firms in Country P are most likely to",
+      "options": {
+        "A": "Borrow at lower rates, since households spend less.",
+        "B": "Find it harder to raise large loans for investment.",
+        "C": "Get loans more easily, since households owe less.",
+        "D": "Invest the same, since households save the same amount."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Each household holds only a few thousand pounds, which on its own would not pay for a factory. When savings are deposited in banks, the banks <strong>pool</strong> them and lend them out in large amounts to firms. That is how the financial sector <strong>mobilises savings for lending</strong>.<br />Cash kept at home is never pooled or lent. So in Country P less of the same saving reaches firms, and they find it harder to borrow large sums to invest.",
+        "distractors": {
+          "A": "Households in both countries save similar amounts, so spending is not lower in P. And with less money deposited, banks in P have less to lend, which tends to make borrowing dearer, not cheaper.",
+          "C": "How much households owe is not what decides how much firms can borrow. What matters is how much saving banks can lend out, and in P most of it is held as cash at home.",
+          "D": "Saving turns into lending only if it passes through banks or other institutions. Cash kept at home is saved but never lent, so the same amount of saving funds less investment in P."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-2-q2",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Before agreeing an overdraft, a bank checks a hair salon's credit history, its cash-flow forecast and the value of the equipment it could offer as collateral.<br />In assessing the salon's creditor risk, the bank is judging",
+      "options": {
+        "A": "How likely the salon is to fail to repay the bank.",
+        "B": "How likely the salon's customers are to pay it late.",
+        "C": "How much interest the bank will earn on the overdraft.",
+        "D": "How much risk the salon takes on by borrowing."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Creditor risk</strong> is the risk to a lender that a borrower does not repay what it owes. The bank is the creditor here. Its three checks each speak to that risk: the credit history shows whether the salon has repaid in the past, the cash-flow forecast shows whether it can afford the repayments, and the collateral shows what the bank could recover if it does not.<br />The bank then decides whether to lend, how much, and at what rate.",
+        "distractors": {
+          "B": "Late payment by the salon's customers would affect its cash flow, which the bank does look at, but that is not what creditor risk means. Creditor risk is the risk the <em>bank</em> runs that the salon does not repay it.",
+          "C": "The bank will set the interest rate after it has judged the risk, charging riskier borrowers more. The interest earned is the result of the assessment, not what is being assessed.",
+          "D": "This is the risk from the borrower's side. Creditor risk is the risk to the lender, so it is about whether the bank gets its money back."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-2-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Lenders sharply cut the amounts they will lend to households through personal loans and credit cards. Household incomes are unchanged.<br />Of the following businesses, the one whose sales are likely to fall furthest is",
+      "options": {
+        "A": "A bakery.",
+        "B": "A barber's shop.",
+        "C": "A conservatory builder.",
+        "D": "A pharmacy."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Lending to individuals lets households buy expensive things now and pay for them over time. A conservatory costs thousands of pounds, so many buyers pay for one with a loan rather than from a month's income. When that credit is cut, many of them have to put the purchase off, so the builder's sales fall sharply.<br />Bread, haircuts and medicines are small, regular purchases paid for out of income. With incomes unchanged, spending on them barely moves.",
+        "distractors": {
+          "A": "Bread is a small, everyday purchase paid for out of income, not with a loan. With incomes unchanged, a bakery's sales barely change.",
+          "B": "A haircut costs little and is paid for out of income, so less credit makes little difference to a barber's sales.",
+          "D": "Medicines and toiletries are small, regular purchases that households keep buying from their unchanged incomes. Few are bought on credit."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-2-q4",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the trading in a food company's shares over one year.<br />Using Table 1, the money the company itself raised from shares during the year is",
+      "table": {
+        "caption": "Table 1: Trading in a food company's shares over one year",
+        "head": [
+          "",
+          "What happened",
+          "Number of shares",
+          "Price per share"
+        ],
+        "rows": [
+          [
+            "March",
+            "The company sells shares to the public for the first time",
+            "4 million",
+            "£2.50"
+          ],
+          [
+            "April to December",
+            "Investors buy and sell the company's shares between themselves on the stock exchange",
+            "9 million",
+            "£2.80 on average"
+          ],
+          [
+            "November",
+            "The company sells further new shares to investors",
+            "1 million",
+            "£3.00"
+          ]
+        ]
+      },
+      "options": {
+        "A": "£10.0 million",
+        "B": "£13.0 million",
+        "C": "£25.2 million",
+        "D": "£38.2 million"
+      },
+      "answer": "B",
+      "model": {
+        "working": "A company raises money only when it sells <strong>new</strong> shares, in the <strong>primary market</strong>.<br />March: 4 million × £2.50 = £10.0 million.<br />November: 1 million × £3.00 = £3.0 million.<br />Total raised: £10.0 million + £3.0 million = <strong>£13.0 million</strong>.<br />The trading from April to December is the <strong>secondary market</strong>: investors swap shares that already exist between themselves, so the money goes from one investor to another and the company receives none of it.",
+        "distractors": {
+          "A": "£10.0 million counts only the first sale. The November sale is also of new shares bought from the company, so it is primary market money too, adding £3.0 million.",
+          "C": "9 million × £2.80 = £25.2 million is the secondary market trading. That money passes between investors, so the company receives none of it.",
+          "D": "This adds all three rows: £10.0 + £25.2 + £3.0 million. The £25.2 million of secondary market trading passes between investors, not to the company."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government proposes a law that would stop anyone reselling shares in a company for five years after the company first sells them.<br />Compared with today, companies selling new shares would most likely",
+      "options": {
+        "A": "Raise more, since investors could not sell out early.",
+        "B": "Raise the same, since they receive nothing from resales.",
+        "C": "Raise less, since their shares would pay lower dividends.",
+        "D": "Raise less, since investors could not sell at will."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The company receives nothing when its shares are resold, but the <strong>secondary market</strong> still matters to it. Investors buy new shares more readily because they know they can sell them whenever they want.<br />If shares could not be resold for five years, money put into them would be tied up for at least that long. Investors would be less willing to buy, or would pay less for each share → companies would raise less from each share issue.",
+        "distractors": {
+          "A": "Being unable to sell does not make investors put in more. Their money would be tied up for five years, so fewer would buy, and companies would raise less.",
+          "B": "It is true that the company receives nothing from resales, but the chance to resell is what makes investors willing to buy new shares in the first place. Remove it, and less is raised.",
+          "C": "Dividends are paid out of the company's profits, and the law does not change those. The problem is that investors could not get their money back by selling when they wished."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "During a boom, a country's banks lend to many firms without checking their cash-flow forecasts. Two years later, defaults rise sharply and the banks make heavy losses. An engineering firm in the country has always repaid its loans on time.<br />The most likely effect on the engineering firm is that",
+      "options": {
+        "A": "It is unaffected, since it has never missed a repayment.",
+        "B": "Its bank cuts its credit too, as banks lend less to everyone.",
+        "C": "Its bank lends it more, to make up for the bad loans.",
+        "D": "Its loan rates fall, as defaults leave banks with spare funds."
+      },
+      "answer": "B",
+      "model": {
+        "working": "This is creditor risk <strong>assessed badly</strong>. Loans went to borrowers who could not repay → defaults rose → the banks made losses.<br />Banks making losses have less capital to absorb further losses, so they protect themselves by <strong>cutting lending to everyone</strong>, including sound borrowers. A firm with a perfect record can still find its overdraft reduced or a new loan refused.",
+        "distractors": {
+          "A": "The firm's own record does not protect it. The banks' losses reduce what they are able and willing to lend to every borrower, including good ones.",
+          "C": "Lending more would not make up for bad loans; it would put more of the banks' money at risk just when they are short of capital. Banks that have made heavy losses lend less overall, not more.",
+          "D": "Defaults leave banks with losses, not spare funds. Banks short of capital lend less and often charge more, to rebuild their finances."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Banks in a country lend an extra £5 billion.<br />The use of this lending most likely to raise the economy's productive capacity is",
+      "options": {
+        "A": "Loans to households to buy homes that already exist.",
+        "B": "Loans to investors to buy shares already traded.",
+        "C": "Loans to manufacturers to buy new machinery.",
+        "D": "Loans to shoppers on credit cards for holidays abroad."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Productive capacity rises when the economy has more or better capital to produce with. Lending to firms for <strong>investment</strong> in new machinery adds capital, so the economy can produce more in future.<br />How much the financial sector helps growth depends on <strong>who gets the credit</strong>. Lending to buy houses and shares that already exist raises their prices without adding to what the economy can produce.",
+        "distractors": {
+          "A": "Buying a home that already exists moves it from one owner to another. The loan tends to raise house prices, but nothing new is built, so capacity is unchanged.",
+          "B": "Shares already traded are bought from other investors, in the secondary market. The company receives nothing, so no new capital is created.",
+          "D": "Spending on holidays abroad is consumption, and it is spent overseas. It adds no capital to the economy, so it does not raise productive capacity."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-2-q8",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A brewery needs 1,000 tonnes of barley next year. It agrees a forward contract to buy 600 tonnes at £240 a tonne, and will buy the rest at the market price when it needs it. When the barley is delivered, the market price is £200 a tonne.<br />The brewery's total cost of barley is",
+      "options": {
+        "A": "£200,000",
+        "B": "£216,000",
+        "C": "£224,000",
+        "D": "£240,000"
+      },
+      "answer": "C",
+      "model": {
+        "working": "The forward contract fixes the price on the 600 tonnes it covers, whatever the market price turns out to be: 600 × £240 = <strong>£144,000</strong>.<br />The other 400 tonnes are bought at the market price on the day: 400 × £200 = <strong>£80,000</strong>.<br />Total: £144,000 + £80,000 = <strong>£224,000</strong>.<br />Fixing part of its cost let the brewery set its prices with confidence, but it paid £40 a tonne more on the hedged barley than the market price turned out to be. That is the downside of a forward contract when the price falls.",
+        "distractors": {
+          "A": "1,000 × £200 = £200,000 prices all the barley at the market rate. But the brewery agreed 600 tonnes at £240, and a forward contract binds it to that price even when the market price falls.",
+          "B": "The two quantities have been swapped: 600 × £200 + 400 × £240 = £216,000. The contract covers 600 tonnes at £240, and the remaining 400 are bought at the market price.",
+          "D": "1,000 × £240 = £240,000 prices all the barley at the forward rate. Only 600 tonnes were in the contract. The other 400 were bought at the £200 market price."
+        }
+      }
+    }
+  ]
+}

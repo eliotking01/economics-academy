@@ -1,0 +1,187 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-4",
+  "boardName": "Edexcel B Theme 4",
+  "spec": "4.4.4",
+  "slug": "4-4-4-the-impact-of-macroeconomic-policies",
+  "title": "The Impact of Macroeconomic Policies",
+  "shortTitle": "The Impact of Macroeconomic Policies",
+  "pageTitle": "The Impact of Macroeconomic Policies Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions for Edexcel B A-Level Economics on comparing macroeconomic policies, criteria for success and judging effectiveness.",
+  "intro": "Six original multiple-choice questions on the impact of macroeconomic policies: comparing alternative approaches, setting criteria for success and evaluating how effective a policy has been. One is a calculation.",
+  "notesTeaser": "Six original multiple-choice questions on comparing policy approaches, criteria for success and evaluating effectiveness, including one calculation.",
+  "questions": [
+    {
+      "id": "edexcel-b-4-4-4-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A government scheme to cut unemployment in a coastal town meets its target of 2,000 new jobs within a year, and the jobs are still there five years later. Each job cost the government £150,000, paid for with extra borrowing.<br />Of the following criteria for success, the one on which the scheme scores worst is",
+      "options": {
+        "A": "Cost.",
+        "B": "Lasting effect.",
+        "C": "Speed.",
+        "D": "Target met."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Take each criterion in turn. <strong>Target met</strong>: yes, 2,000 jobs. <strong>Speed</strong>: within a year. <strong>Lasting effect</strong>: the jobs are still there five years later.<br /><strong>Cost</strong>: £150,000 of borrowing for each job, or 2,000 × £150,000 = £300 million in all, which adds to the national debt. That is where the scheme is weakest.",
+        "distractors": {
+          "B": "The jobs are still there five years later, so the scheme scores well on lasting.",
+          "C": "The target was reached within a year, which is quick.",
+          "D": "The scheme met its target of 2,000 jobs."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-4-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Inflation in a country reaches 9%, driven mainly by a jump in world gas prices. The central bank raises its interest rate several times, and two years later inflation is back at its 2% target. Over the same two years, world gas prices halve.<br />The strongest reason to doubt that the rate rises deserve full credit for the fall in inflation is that",
+      "options": {
+        "A": "Inflation data arrive late and are often revised later.",
+        "B": "Part of the fall came from cheaper gas, not the higher rates.",
+        "C": "Rate rises take far longer than two years to have any effect.",
+        "D": "The rate rises also slowed growth and raised borrowers' costs."
+      },
+      "answer": "B",
+      "model": {
+        "working": "To judge a policy, separate what it did from what would have happened anyway.<br />Higher interest rates work by cutting demand at home; they cannot lower world gas prices. Gas prices halved over the same two years, which on its own would pull inflation down. So <strong>part of the fall in inflation came from cheaper gas</strong>, and the rate rises cannot claim all of it.",
+        "distractors": {
+          "A": "Late and revised data make policy harder to run, but a fall from 9% to 2% over two years is far too large to be a revision. It does not explain why the credit should be shared.",
+          "C": "Monetary policy takes around 18 to 24 months to have its full effect, so rate rises can work within two years.",
+          "D": "These are real side effects, and they count against the policy on cost. But they say nothing about whether the rate rises caused the fall in inflation."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-4-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A sharp rise in energy bills is hitting low-income households hardest. The government wants to help them without adding much to spending across the whole economy.<br />Of the following, the policy best suited to this aim is",
+      "options": {
+        "A": "A cut in Bank Rate, so that loans become cheaper.",
+        "B": "A cut in the basic rate of income tax for all workers.",
+        "C": "A round of quantitative easing to lower long-term rates.",
+        "D": "Payments towards bills for low-income households only."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The aim has two parts: reach one group, and keep the boost to total spending small.<br /><strong>Fiscal policy can be aimed at a group.</strong> Payments to low-income households put the money where the problem is, and because only one group receives them, they add far less to spending across the economy than a policy that reaches everyone.",
+        "distractors": {
+          "A": "Bank Rate is set by the Bank of England's MPC, not the government, and a cut reaches every household and firm alike, so it adds to spending across the whole economy.",
+          "B": "A cut in the basic rate reaches every taxpayer, including high earners, so it adds to spending everywhere rather than helping one group.",
+          "C": "QE is run by the Bank of England and lowers borrowing costs for everyone. It cannot be aimed at low-income households."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-4-q4",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government spends £360 million on a scheme to create jobs in one region. The region gains 12,000 jobs, but an evaluation finds that 4,000 of them would have been created anyway, without the scheme.<br />The cost to the government of each extra job the scheme created is",
+      "options": {
+        "A": "£22,500",
+        "B": "£30,000",
+        "C": "£45,000",
+        "D": "£90,000"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Only the jobs that would not have existed without the scheme count as its result: 12,000 − 4,000 = <strong>8,000</strong>.<br />Cost per extra job = £360 million ÷ 8,000 = <strong>£45,000</strong>.<br />Judging a policy means comparing it with what would have happened anyway, and then asking what the result cost.",
+        "distractors": {
+          "A": "£360 million ÷ 16,000 = £22,500 adds the 4,000 jobs that would have been created anyway, instead of taking them away. Only the 8,000 extra jobs are the scheme's result.",
+          "B": "£360 million ÷ 12,000 = £30,000 counts all 12,000 jobs, including the 4,000 that would have been created anyway. That flatters the scheme.",
+          "D": "£360 million ÷ 4,000 = £90,000 divides by the jobs that would have been created anyway, which are exactly the ones the scheme did not create."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-4-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government can spend no more than £10 billion, and wants the largest lasting rise in real GDP. It is willing to wait several years for the result. Table 1 shows forecasts for four policies.<br />Using Table 1, the policy that best meets the government's aim is",
+      "table": {
+        "caption": "Table 1: Forecast effect of four policies on real GDP, compared with no policy",
+        "head": [
+          "Policy",
+          "Cost to the government",
+          "Year 1",
+          "Year 3",
+          "Year 6"
+        ],
+        "rows": [
+          [
+            "P: one-off cash payment to every household",
+            "£10bn",
+            "+1.2%",
+            "+0.1%",
+            "0.0%"
+          ],
+          [
+            "Q: cut in corporation tax for three years",
+            "£10bn",
+            "+0.3%",
+            "+0.6%",
+            "+0.2%"
+          ],
+          [
+            "R: national adult training programme",
+            "£10bn",
+            "+0.1%",
+            "+0.4%",
+            "+0.7%"
+          ],
+          [
+            "S: new high-speed rail line",
+            "£25bn",
+            "+0.2%",
+            "+0.5%",
+            "+1.0%"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Policy P.",
+        "B": "Policy Q.",
+        "C": "Policy R.",
+        "D": "Policy S."
+      },
+      "answer": "C",
+      "model": {
+        "working": "There are two tests: the policy must cost no more than £10 billion, and it must give the largest rise that <strong>lasts</strong>, which Year 6 shows best.<br />Policy S has the largest Year 6 effect, +1.0%, but costs £25 billion, so it fails the first test.<br />Of the three that cost £10 billion, <strong>Policy R</strong> has by far the largest Year 6 effect, +0.7%. It is slow, but the government is willing to wait. Training raises the economy's capacity, so its effect grows rather than fading.",
+        "distractors": {
+          "A": "Policy P gives the biggest boost in Year 1, but it is a one-off rise in spending and has gone by Year 6. It scores on speed, not on lasting.",
+          "B": "Policy Q has the largest Year 3 effect of the three £10 billion policies, but it fades once the tax cut ends, to +0.2% by Year 6.",
+          "D": "Policy S has the largest lasting effect, but it costs £25 billion, two and a half times what the government has to spend."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-4-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy is in recession, with weak spending by households and firms. Firms also report a long-running shortage of qualified engineers.<br />Of the following, the combination best suited to both problems is",
+      "options": {
+        "A": "Cut Bank Rate now, and fund engineering training.",
+        "B": "Cut Bank Rate now, and raise income tax as well.",
+        "C": "Fund engineering training, and raise Bank Rate.",
+        "D": "Raise Bank Rate now, and cut out-of-work benefits."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The two problems have different causes, so they need two kinds of policy.<br /><strong>Weak spending</strong> is a demand-side problem: a cut in Bank Rate makes borrowing cheaper → more consumption and investment → AD rises, within two years or so.<br /><strong>The engineer shortage</strong> is a supply-side problem: funded training adds to the skills of the labour force and raises capacity over time.<br />This is the usual mix: demand-side policy to steady the economy now, and supply-side policy to raise its growth rate over time.",
+        "distractors": {
+          "B": "The rate cut helps, but raising income tax takes spending out of the economy in a recession, and it does nothing for the engineer shortage.",
+          "C": "Training addresses the skills shortage, but raising Bank Rate cuts spending further when it is already weak.",
+          "D": "Raising Bank Rate cuts spending in a recession, and cutting benefits gives no one engineering skills."
+        }
+      }
+    }
+  ]
+}

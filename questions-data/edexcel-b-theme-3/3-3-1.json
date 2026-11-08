@@ -1,0 +1,204 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-3",
+  "boardName": "Edexcel B Theme 3",
+  "spec": "3.3.1",
+  "slug": "3-3-1-responding-to-global-demand",
+  "title": "Responding to Global Demand",
+  "shortTitle": "Responding to Global Demand",
+  "pageTitle": "Responding to Global Demand Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions for Edexcel B A-Level Economics on globalisation against glocalisation, the three approaches to global markets and branding.",
+  "intro": "Seven original multiple-choice questions on how a firm sells to the world: globalisation against glocalisation, the ethnocentric, geocentric and polycentric approaches, adapting price and marketing, and the strengths and risks of a global brand. One is a calculation.",
+  "notesTeaser": "Seven original multiple-choice questions on globalisation and glocalisation, the three approaches to global markets, and pricing and branding abroad, including a calculation.",
+  "questions": [
+    {
+      "id": "edexcel-b-3-3-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A UK skincare firm sells in twelve countries. In each one, a local manager chooses the product range, the brand names and the adverts, so the firm's products look different in every country.<br />The approach this firm takes to global markets, and its main drawback, is",
+      "options": {
+        "A": "Geocentric, with high costs from few economies of scale.",
+        "B": "Geocentric, with low sales as it ignores local customers' tastes.",
+        "C": "Polycentric, with high costs from few economies of scale.",
+        "D": "Polycentric, with low sales as it ignores local customers' tastes."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A <strong>polycentric</strong> approach treats each country as a separate market, with its own products and marketing, often run by local managers. That is what this firm does.<br />Its strength is the best fit with local tastes. Its drawback is cost: a different range for each of twelve countries → separate research, design and advertising, and shorter production runs → few economies of scale across markets → higher average cost. The brand can also look different in every country.",
+        "distractors": {
+          "A": "A geocentric firm keeps one global brand and changes it only where local differences make it worthwhile. This firm has different brand names in every country, so it is not geocentric.",
+          "B": "This firm is not geocentric, and it does not ignore local tastes either. Local managers choose everything, so the products fit local tastes closely. Ignoring local tastes is the risk of the ethnocentric approach.",
+          "D": "The firm is polycentric, but a polycentric firm fits local tastes best, because each country gets its own products. Low sales from ignoring local tastes is the risk of the ethnocentric approach, which sells the UK product unchanged."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-3-1-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes how four UK firms sell abroad.<br />Using Table 1, the firm taking a geocentric approach is",
+      "table": {
+        "caption": "Table 1: How four firms sell in other countries",
+        "head": [
+          "",
+          "Product",
+          "Brand and advertising",
+          "Who decides the marketing"
+        ],
+        "rows": [
+          [
+            "Firm 1",
+            "The UK product, unchanged",
+            "The UK brand and the UK adverts",
+            "Head office in the UK"
+          ],
+          [
+            "Firm 2",
+            "One global product, changed in two regions",
+            "One global brand; adverts changed in two regions",
+            "Head office, advised by local managers"
+          ],
+          [
+            "Firm 3",
+            "A different product in each country",
+            "A separate brand and adverts in each country",
+            "A local manager in each country"
+          ],
+          [
+            "Firm 4",
+            "A different product in each country",
+            "One brand name; separate adverts in each country",
+            "A local manager in each country"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Firm 1.",
+        "B": "Firm 2.",
+        "C": "Firm 3.",
+        "D": "Firm 4."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A <strong>geocentric</strong> approach treats the world as one market, but adapts the product or marketing where local differences make it worthwhile. This is glocalisation.<br />Firm 2 keeps one global product and one global brand, and changes them only in the two regions where it pays. Head office keeps control, with advice from local managers. That is geocentric.<br />Firm 1 is ethnocentric, and Firms 3 and 4 are polycentric.",
+        "distractors": {
+          "A": "Firm 1 sells its UK product, brand and adverts unchanged, all decided in the UK. That is the ethnocentric approach: no adaptation at all.",
+          "C": "Firm 3 has a separate product, brand and marketing plan for each country, run by local managers. That is the polycentric approach.",
+          "D": "Firm 4 shares one brand name, but every country has its own product and adverts, chosen by a local manager. That is a separate plan for every country, which is polycentric. A geocentric firm changes its global product only where it pays."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-3-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A UK firm plans to sell one product in 25 countries, with the same design, the same brand and the same advertising campaign in every one. Its aim is to gain the most economies of scale.<br />This globalisation strategy is most likely to succeed if the product is",
+      "options": {
+        "A": "Breakfast cereal.",
+        "B": "Greeting cards.",
+        "C": "History textbooks.",
+        "D": "Scientific calculators."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A <strong>globalisation</strong> strategy treats the world as one market: one product made in large numbers → economies of scale in production and advertising → lower average cost → lower prices or higher margins in every market.<br />It works best where tastes barely differ between countries, so the standard product sells about as well as an adapted one would. A scientific calculator does the same job everywhere. Food, language and local custom do not come into it.",
+        "distractors": {
+          "A": "Tastes in food differ between countries, from how sweet a cereal should be to what people eat for breakfast at all. Food usually needs adapting to sell well, which is glocalisation.",
+          "B": "Greeting cards carry words in the local language and are tied to local festivals and customs, so one design would sell poorly in many of the 25 countries.",
+          "C": "A history textbook has to be written in the local language and usually covers that country's own history, so one edition could not sell unchanged everywhere."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-3-1-q4",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A UK maker of frozen desserts is entering Country K. Its standard UK range would sell 400,000 units a year there, at a contribution of £1.50 per unit. A range adapted to local tastes would sell 600,000 units, but shorter production runs would cut the contribution to £1.20 per unit, and the extra research and design would add £80,000 a year to fixed costs.<br />Compared with the standard range, adapting would change the firm's annual profit in Country K by",
+      "options": {
+        "A": "+£40,000",
+        "B": "+£120,000",
+        "C": "+£160,000",
+        "D": "+£220,000"
+      },
+      "answer": "A",
+      "model": {
+        "working": "Total contribution = contribution per unit × sales volume. The fixed costs are the same either way apart from the extra £80,000, so the change in profit is the change in total contribution minus that £80,000.<br />Standard range: 400,000 × £1.50 = <strong>£600,000</strong>.<br />Adapted range: 600,000 × £1.20 = <strong>£720,000</strong>.<br />Change in profit: £720,000 − £600,000 − £80,000 = <strong>+£40,000</strong>.<br />This is the glocalisation trade-off in figures. Adapting wins 50% more sales, but shorter runs raise the cost of each unit and the research adds to fixed costs, so most of the gain is used up. It still pays, just.",
+        "distractors": {
+          "B": "This is £720,000 − £600,000, the rise in total contribution. It leaves out the £80,000 of extra research and design, which has to be paid before the gain counts as profit.",
+          "C": "This values only the 200,000 extra units: 200,000 × £1.20 = £240,000, less £80,000. It forgets that the first 400,000 units now earn £0.30 less each, which costs 400,000 × £0.30 = £120,000.",
+          "D": "This keeps the contribution at £1.50: 600,000 × £1.50 = £900,000, less £600,000 and £80,000. Shorter production runs raise the cost of each unit, so the adapted range earns only £1.20 a unit."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-3-1-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A UK brand of laundry detergent starts selling in Country L. Average incomes there are far lower than in the UK, and most households buy their groceries a day or two at a time from small local shops. Its 2 kg box, sold for the local equivalent of its UK price, sells very few.<br />The change most likely to raise its sales in Country L is",
+      "options": {
+        "A": "A higher price, to signal the brand's UK quality.",
+        "B": "A larger box, so that the price per wash falls.",
+        "C": "A small sachet at a low price, sold in local shops.",
+        "D": "Online sales only, to cut the cost of reaching buyers."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The firm needs to adapt its price and the rest of its marketing to the local market.<br /><strong>Price:</strong> incomes are low → a 2 kg box at the UK price is out of reach → a smaller pack at a lower price brings it within reach → more buyers, at a lower margin per unit.<br /><strong>Place:</strong> households shop a little at a time in small local shops → the firm sells through the channels local buyers use → the product reaches more customers.<br />A small sachet at a low price, sold in local shops, does both.",
+        "distractors": {
+          "A": "A higher price puts the product even further out of reach. Where buyers have low incomes and plenty of substitutes, demand is price elastic, so a high price loses many sales.",
+          "B": "A larger box may cost less per wash, but it costs more in total. Households on low incomes who shop a day or two at a time cannot spend that much at once, so sales stay low.",
+          "D": "Most households buy from small local shops, not online. Selling only online would take the product away from the channels local buyers actually use."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-3-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A UK firm exports premium bicycles to Country P. Local bicycle makers pay lower wages and no shipping costs, so their cost per bicycle is well below the UK firm's. The UK firm wants to win sales there without making a loss.<br />It should compete mainly on",
+      "options": {
+        "A": "Brand and quality, as rivals can price below it.",
+        "B": "Brand and quality, as this will lower its costs.",
+        "C": "Price, as a lower price will always raise revenue.",
+        "D": "Price, as local rivals cannot match a price cut."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Local firms pay local wages and no shipping, so their cost per bicycle is lower. In a price war they can keep cutting after the UK firm has reached its own costs → competing on price means losses or lost sales.<br />Instead the UK firm can compete on what local rivals find harder to copy: its brand, design and quality. Buyers who value these become loyal → demand becomes less price elastic → it can charge more than local rivals and still sell.",
+        "distractors": {
+          "B": "Competing on brand and quality usually raises costs, through better parts, design and advertising. Its point is to let the firm charge a higher price than its rivals, not to cut its costs.",
+          "C": "A price cut raises revenue only if demand is price elastic, and it lowers the margin on every bicycle. With costs above its rivals', the UK firm can barely cut its price without making a loss.",
+          "D": "It is the other way round. Local rivals have the lower costs, so they can match any price cut the UK firm makes, and go further."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-3-1-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A global brand of children's drinking bottles sells the same bottle in 40 countries. In one country, a batch is found to contain a harmful chemical, and videos about it are shared widely on social media.<br />The most likely effect on the brand is that",
+      "options": {
+        "A": "Sales are unaffected, as the brand is so well known.",
+        "B": "Sales fall in every market, as trust in the brand is lost.",
+        "C": "Sales fall only in that country, as each market is separate.",
+        "D": "Sales recover quickly once that one batch is recalled."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A global brand is shared by every market it sells in. That is its strength, because customers already know and trust it, and also its risk.<br />A safety scare in one country → shared worldwide on social media → customers everywhere lose trust in the brand → sales fall in every market at once.",
+        "distractors": {
+          "A": "Being well known makes the risk larger, not smaller. The same bottle is sold under the same brand in 40 countries, so news of the fault matters to buyers in all of them.",
+          "C": "Each country may be a separate market for sales, but not for news. Social media carries the story everywhere, and buyers elsewhere know they are buying the same bottle under the same brand.",
+          "D": "A recall removes the harmful batch, but it does not restore trust overnight. Parents buying for their children are unlikely to switch back quickly, so the fall in sales is likely to last."
+        }
+      }
+    }
+  ]
+}

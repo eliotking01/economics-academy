@@ -1,0 +1,204 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-2",
+  "boardName": "Edexcel B Theme 2",
+  "spec": "2.3.2",
+  "slug": "2-3-2-capacity-utilisation",
+  "title": "Capacity Utilisation",
+  "shortTitle": "Capacity Utilisation",
+  "pageTitle": "Capacity Utilisation Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on capacity utilisation for Edexcel B A-Level Economics: calculating it, fixed cost per unit, and how to improve it.",
+  "intro": "Seven original multiple-choice questions on capacity utilisation: calculating it, how it affects fixed cost per unit, the problems of under- and over-utilisation, and ways of improving it. Two are calculations.",
+  "notesTeaser": "Seven original multiple-choice questions on calculating capacity utilisation, fixed cost per unit, under- and over-utilisation, and ways of improving it.",
+  "questions": [
+    {
+      "id": "edexcel-b-2-3-2-q1",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A dairy bottles 30,000 litres of milk a week and could bottle 40,000. It installs a second bottling line, which raises the most it can bottle to 50,000 litres a week, and its output rises to 35,000 litres. Its capacity utilisation",
+      "options": {
+        "A": "Falls from 75% to 60%.",
+        "B": "Falls from 75% to 70%.",
+        "C": "Rises from 60% to 70%.",
+        "D": "Rises from 75% to 87.5%."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Capacity utilisation = current output ÷ maximum possible output × 100.<br />Before: 30,000 ÷ 40,000 × 100 = <strong>75%</strong>.<br />After: 35,000 ÷ 50,000 × 100 = <strong>70%</strong>.<br />Output rose by 5,000 litres, but capacity rose by 10,000, so utilisation fell. Spare capacity grew from 10,000 to 15,000 litres a week.",
+        "distractors": {
+          "A": "This divides the old output, 30,000, by the new capacity. After the change, both figures are new: 35,000 ÷ 50,000 = 70%.",
+          "C": "This measures the starting point against the new capacity as well. Before the second line was installed, the most the dairy could bottle was 40,000 litres, so it was running at 75%.",
+          "D": "This divides the new output by the old capacity, 35,000 ÷ 40,000. The second line raised the maximum to 50,000 litres, so that is the figure to divide by now."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-2-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm that makes wooden garden planters can make up to 8,000 a month, and its fixed costs are £24,000 a month. Its capacity utilisation rises from 50% to 75%. The fall in its fixed cost per planter is",
+      "options": {
+        "A": "£2.00",
+        "B": "£3.00",
+        "C": "£4.00",
+        "D": "£12.00"
+      },
+      "answer": "A",
+      "model": {
+        "working": "At 50%, output = 8,000 × 0.5 = 4,000 planters. Fixed cost per planter = £24,000 ÷ 4,000 = <strong>£6.00</strong>.<br />At 75%, output = 8,000 × 0.75 = 6,000 planters. Fixed cost per planter = £24,000 ÷ 6,000 = <strong>£4.00</strong>.<br />Fall = £6.00 − £4.00 = <strong>£2.00</strong>.<br />Total fixed costs have not changed. They are simply spread over more planters.",
+        "distractors": {
+          "B": "This is the fall from 50% to full capacity, £6.00 − £3.00, using the 8,000 maximum. The firm has moved to 75%, or 6,000 planters, where fixed cost per planter is £4.00.",
+          "C": "This is the new fixed cost per planter, not the fall. It was £6.00 at 50%, so it has fallen by £2.00.",
+          "D": "This divides the fixed costs by the change in output, £24,000 ÷ 2,000. Work out fixed cost per unit at each output, then compare the two."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-2-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the capacity utilisation and costs of four firms.<br />Using Table 1, the firm whose spare capacity is most likely to keep its average cost high all year round is",
+      "table": {
+        "caption": "Table 1: Capacity utilisation and costs at four firms",
+        "head": [
+          "",
+          "Capacity utilisation",
+          "How long at this rate",
+          "Its costs are"
+        ],
+        "rows": [
+          [
+            "Firm 1",
+            "40%",
+            "Its quiet season only",
+            "About half fixed"
+          ],
+          [
+            "Firm 2",
+            "35%",
+            "All year, for three years",
+            "Almost all variable"
+          ],
+          [
+            "Firm 3",
+            "85%",
+            "All year, for three years",
+            "Mostly fixed"
+          ],
+          [
+            "Firm 4",
+            "50%",
+            "All year, for three years",
+            "Mostly fixed"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Firm 1.",
+        "B": "Firm 2.",
+        "C": "Firm 3.",
+        "D": "Firm 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Spare capacity matters because fixed costs stay the same however much a firm produces. Two things decide how much it hurts: the <strong>share of costs that are fixed</strong>, and <strong>how long</strong> the low rate lasts.<br />Firm 4 is the only firm with both. Its costs are mostly fixed, so at 50% each unit carries a lot of fixed cost. And the rate has been low all year for three years, so this is not a quiet season it can plan around: it has more capacity than it needs.",
+        "distractors": {
+          "A": "Its rate is low only in its quiet season, so its average cost is pushed up only then, which a firm expects and plans for. And only about half its costs are fixed.",
+          "B": "This is the trap: the lowest rate all year round. But almost all its costs are variable, and variable costs fall along with output, so its spare capacity pushes its average cost up far less.",
+          "C": "Its costs are mostly fixed, but 85% is a high rate. Most firms aim for a rate like this, short of 100%, which leaves time for maintenance and room for extra orders."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A maker of kitchen cabinets has run at 100% capacity for a year, with staff on overtime every week and no time set aside to service its machines. Its fixed cost per cabinet is the lowest it has ever been, yet its average cost per cabinet has risen. The most likely explanation is that",
+      "options": {
+        "A": "Every extra cabinet it makes has added to its fixed costs.",
+        "B": "It has grown so large that it faces diseconomies of scale.",
+        "C": "Overtime, breakdowns and faulty work have raised its costs.",
+        "D": "Turning away orders has cut the revenue it earns per cabinet."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Running at full capacity gives the lowest fixed cost per unit, as the stem says. But <strong>over-utilisation</strong> brings costs of its own:<br />Staff on overtime → higher wage costs, plus tiredness and mistakes → faulty cabinets to scrap or redo.<br />Machines never serviced → more breakdowns → lost output and repair bills.<br />These extra costs outweigh the saving on fixed cost per cabinet, so average cost rises. That is why most firms aim for a high rate that stops short of 100%.",
+        "distractors": {
+          "A": "Fixed costs, such as rent and salaries, do not change with output. That is why fixed cost per cabinet is at its lowest.",
+          "B": "Diseconomies of scale come from a firm growing larger. This firm has not grown: it is running the same factory harder, which is over-utilisation of its capacity.",
+          "D": "Turning orders away loses sales, but revenue per cabinet is its price, which this does not change. And revenue is not cost: the stem asks why each cabinet costs more to make."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A maker of school uniforms has run its two factories at about 45% capacity for three years. The number of schools it supplies has fallen, and is expected to keep falling. The way of raising its capacity utilisation that best fits its situation is",
+      "options": {
+        "A": "Adding a night shift so it can meet future orders.",
+        "B": "Closing one factory and selling its machines.",
+        "C": "Cutting its prices only in its quiet months of the year.",
+        "D": "Raising its prices to make up for the orders it has lost."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The spare capacity is not seasonal. It has lasted three years and demand is expected to keep falling, so the firm has more capacity than it needs.<br /><strong>Rationalisation</strong> cuts capacity to match demand: closing a factory and selling its machines → lower fixed costs → the remaining factory runs much fuller → higher utilisation and lower average cost at the same output.<br />It brings redundancy payments, and the firm might struggle if demand recovered. Here, demand is not expected to.",
+        "distractors": {
+          "A": "This is what an over-utilised firm does. A night shift adds capacity, so with output unchanged, utilisation falls further.",
+          "C": "Off-peak price cuts suit a firm that is quiet at certain times, as cinemas and gyms are. This firm's low rate lasts all year and comes from a lasting fall in demand.",
+          "D": "A higher price raises revenue per uniform, but it fills no capacity. With demand already falling, it is likely to cut output further and lower utilisation."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A go-karting track runs at 30% of capacity on weekday mornings. It cuts its weekday-morning prices by 20%. Demand for weekday-morning sessions is price inelastic. The most likely effect is",
+      "options": {
+        "A": "Higher utilisation and higher revenue in those sessions.",
+        "B": "Higher utilisation and unchanged revenue in those sessions.",
+        "C": "Higher utilisation but lower revenue in those sessions.",
+        "D": "Unchanged utilisation and lower revenue in those sessions."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A lower price → more weekday-morning sessions booked → <strong>higher utilisation</strong>.<br />But demand is price inelastic, so the percentage rise in sessions is smaller than the 20% cut in price. Revenue = price × sessions sold, so revenue from those sessions <strong>falls</strong>.<br />Filling capacity with price cuts raises revenue only if demand is price elastic.",
+        "distractors": {
+          "A": "This would need demand to be price elastic, with sessions rising by more than 20%. Inelastic demand means they rise by less.",
+          "B": "This would need demand to be unitary elastic, with sessions rising by exactly enough to offset the 20% price cut. Inelastic demand means they rise by less, so revenue falls.",
+          "D": "Price inelastic does not mean demand does not respond at all. Some extra sessions are booked, so utilisation rises, just by less than the price fell."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-2-q7",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A firm that moulds plastic toy parts has machines standing idle three days a week. It agrees to mould parts for a maker of garden furniture on those days. The firm has raised its capacity utilisation by",
+      "options": {
+        "A": "Acting as a subcontractor for another firm.",
+        "B": "Cutting its prices at quiet times to raise demand.",
+        "C": "Outsourcing part of its own work to another firm.",
+        "D": "Rationalisation, cutting capacity to match demand."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A <strong>subcontractor</strong> does work for another firm. Using idle machines to make parts for the garden-furniture maker fills capacity that would otherwise stand empty → higher output from the same machines → higher utilisation, and fixed costs spread over more units.",
+        "distractors": {
+          "B": "The firm has not changed its prices. It has found other work for its idle machines.",
+          "C": "This is the other way round. Outsourcing is passing your own work to another firm, which an over-utilised firm might do. Here the toy-parts firm is taking on another firm's work.",
+          "D": "Rationalisation cuts capacity, by closing sites or selling machines. This firm has kept its machines and found more work for them."
+        }
+      }
+    }
+  ]
+}

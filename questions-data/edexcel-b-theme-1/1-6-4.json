@@ -1,0 +1,211 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-1",
+  "boardName": "Edexcel B Theme 1",
+  "spec": "1.6.4",
+  "slug": "1-6-4-business-survival-and-cash-flow",
+  "title": "Business Survival and Cash Flow",
+  "shortTitle": "Business Survival and Cash Flow",
+  "pageTitle": "Business Survival and Cash Flow Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on business survival and cash flow for Edexcel B A-Level Economics: profit and cash, forecasts and credit needs.",
+  "intro": "Seven original multiple-choice questions on business survival and cash flow: why profit and cash differ, reading a cash-flow forecast, and using one to plan credit and reduce risk.",
+  "notesTeaser": "Seven original multiple-choice questions on profit and cash flow, cash-flow forecasts and planning credit.",
+  "questions": [
+    {
+      "id": "edexcel-b-1-6-4-q1",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A removals firm makes the following transactions in March. The one that is a cash inflow in March but adds nothing to the firm's profit is",
+      "options": {
+        "A": "A customer pays £900 in cash for a move done that day.",
+        "B": "A customer is invoiced £900 at the end of March for a move, due in 30 days.",
+        "C": "The firm pays £1,500 in rent for March.",
+        "D": "The firm takes out a £12,000 bank loan."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Money borrowed from a bank arrives in the firm's account, so it is a <strong>cash inflow</strong>. But it is not revenue: the firm has not sold anything, and the loan must be paid back. So it adds nothing to profit.",
+        "distractors": {
+          "A": "A cash sale is both. It is revenue, so it adds to profit, and the money arrives straight away, so it is a cash inflow too.",
+          "B": "This is the reverse case. The sale adds to profit in March, when the move is done, but the cash does not arrive until April.",
+          "C": "Rent is a cash outflow and a cost, so it reduces both cash and profit."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-4-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A wedding-cake maker has £2,000 in the bank at the start of April. Table 1 shows its cash-flow forecast for the next three months.<br />Using Table 1, its forecast closing balance at the end of June is",
+      "table": {
+        "caption": "Table 1: A wedding-cake maker's cash-flow forecast",
+        "head": [
+          "",
+          "April",
+          "May",
+          "June"
+        ],
+        "rows": [
+          [
+            "Cash inflows",
+            "£5,000",
+            "£4,200",
+            "£9,000"
+          ],
+          [
+            "Cash outflows",
+            "£6,500",
+            "£6,000",
+            "£5,500"
+          ]
+        ]
+      },
+      "options": {
+        "A": "£200",
+        "B": "£2,200",
+        "C": "£3,500",
+        "D": "£5,500"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Net cash flow = inflows − outflows. Closing balance = opening balance + net cash flow, and each month opens with the previous month's closing balance.<br />April: £2,000 + (£5,000 − £6,500) = £500.<br />May: £500 + (£4,200 − £6,000) = −£1,300.<br />June: −£1,300 + (£9,000 − £5,500) = <strong>£2,200</strong>.",
+        "distractors": {
+          "A": "This adds up the three months' net cash flows, −£1,500 − £1,800 + £3,500 = £200, but forgets the £2,000 the firm started with.",
+          "C": "This is June's net cash flow: what happens during the month. The closing balance also carries forward everything before it, including May's overdrawn balance of £1,300.",
+          "D": "This adds June's net cash flow to April's opening balance, £2,000 + £3,500. Each month opens with the previous month's closing balance, which for June is −£1,300."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-4-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A landscape gardener has £3,000 in the bank at the start of December. Table 1 shows its forecast net cash flow for the next four months; figures in brackets are negative.<br />Using Table 1, the smallest overdraft limit that would let it pay its bills in every month is",
+      "table": {
+        "caption": "Table 1: A landscape gardener's forecast net cash flow",
+        "head": [
+          "",
+          "December",
+          "January",
+          "February",
+          "March"
+        ],
+        "rows": [
+          [
+            "Net cash flow",
+            "(£1,000)",
+            "(£4,500)",
+            "(£2,000)",
+            "£6,000"
+          ]
+        ]
+      },
+      "options": {
+        "A": "£2,000",
+        "B": "£2,500",
+        "C": "£4,500",
+        "D": "£7,500"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Work out the closing balance month by month, starting from £3,000.<br />December: £3,000 − £1,000 = £2,000.<br />January: £2,000 − £4,500 = −£2,500.<br />February: −£2,500 − £2,000 = <strong>−£4,500</strong>.<br />March: −£4,500 + £6,000 = £1,500.<br />The balance is lowest at the end of February, £4,500 overdrawn, so that is the smallest limit that covers every month. In practice the firm would ask for a little more, in case income is lower than forecast.",
+        "distractors": {
+          "A": "This is February's net cash flow on its own. The overdraft has to cover the closing balance, which by then includes January's shortfall as well.",
+          "B": "This is the closing balance at the end of January, the first month the firm is overdrawn. February's outflow takes it a further £2,000 below zero.",
+          "D": "This adds up the three negative net cash flows, £1,000 + £4,500 + £2,000, but forgets the £3,000 the firm starts with, which covers part of the shortfall."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-4-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A kitchen-fitting firm wins three large new contracts. It must buy units and pay its fitters before each job starts, and its customers pay 60 days after a kitchen is finished. Its forecast profit for the year doubles. The biggest risk the contracts bring is that the firm",
+      "options": {
+        "A": "Cannot pay its suppliers and staff when payment is due.",
+        "B": "Draws rivals into the market with its higher profit.",
+        "C": "Makes a loss on the contracts over the year.",
+        "D": "Needs to sell more kitchens to break even."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Each contract makes a profit, but the cash goes out before it comes in. The firm pays for units and wages up front and waits until 60 days after each kitchen is finished to be paid. Three large contracts at once → far more cash going out before any comes in → it may be unable to pay its suppliers and staff on time. Growing faster than its cash allows is <strong>overtrading</strong>, and it can force a profitable firm to close.",
+        "distractors": {
+          "B": "High profits can draw rivals in over time, but that threatens future profit, not the firm's survival in the next few months. The danger here is running out of cash while it waits to be paid.",
+          "C": "The stem says forecast profit doubles, so the contracts are profitable. The problem is timing: profit counts when a kitchen is fitted, but the cash arrives 60 days later.",
+          "D": "The break-even point depends on the price, the variable cost of each kitchen and fixed costs, and nothing here changes them. Winning more work lifts sales further above break-even; it does not move it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-4-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An engineering firm's cash-flow forecast shows a shortfall in September, the month it plans to pay £20,000 for a new machine. Its customers pay 60 days after delivery. The action most likely to remove the September shortfall is to",
+      "options": {
+        "A": "Cut its prices to win more customers.",
+        "B": "Give customers 90 days to pay instead of 60.",
+        "C": "Hire an extra salesperson to win orders.",
+        "D": "Lease the machine instead of buying it."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Leasing replaces one £20,000 payment in September with smaller monthly payments spread over the lease. September's outflow falls straight away, which is exactly where the shortfall is.",
+        "distractors": {
+          "A": "Lower prices might win more orders, but customers pay 60 days after delivery, so no extra cash would arrive in September. Each sale would also bring in less.",
+          "B": "This makes the problem worse. Giving customers longer to pay delays cash inflows, so the shortfall grows.",
+          "C": "A new salesperson is an extra cash outflow straight away, and any orders they win would not be paid for until at least 60 days after delivery."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-4-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A dental practice has £5,000 in the bank at the start of January. Its forecast net cash flow is −£800 in January, −£1,200 in February and −£600 in March. The correct statement about the practice's forecast is that it",
+      "options": {
+        "A": "Ends every month with cash in the bank.",
+        "B": "Is making a loss in each of the three months.",
+        "C": "Needs an overdraft from January onwards.",
+        "D": "Has a negative closing balance by March."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Closing balances: January £5,000 − £800 = £4,200; February £4,200 − £1,200 = £3,000; March £3,000 − £600 = <strong>£2,400</strong>.<br />Net cash flow is negative every month, but the opening balance is big enough to absorb it, so the practice never runs out of cash. It is the closing balance, not net cash flow, that shows whether a business needs to borrow.",
+        "distractors": {
+          "B": "Cash flow and profit are different. Cash can fall because of a loan repayment or a new piece of equipment, neither of which counts in full as a cost in that month's profit. A fall in cash does not prove a loss.",
+          "C": "A negative net cash flow does not mean the account is overdrawn. At the end of January the practice still has £4,200, so it does not need to borrow.",
+          "D": "This treats the falls as if they took the balance below zero. They add up to £2,600, less than the £5,000 the practice started with, so it still has £2,400 at the end of March."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-4-q7",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "In its first month, a homeware shop sells goods worth £20,000: half are paid for in cash and half on 30 days' credit. The goods it sold cost it £12,000, paid for during the month, and it pays £3,000 in rent. It also takes out an £8,000 bank loan. For the month, its profit and its net cash flow are",
+      "options": {
+        "A": "Profit £5,000; net cash flow −£5,000.",
+        "B": "Profit £5,000; net cash flow £3,000.",
+        "C": "Profit £5,000; net cash flow £13,000.",
+        "D": "Profit £13,000; net cash flow £3,000."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Profit counts every sale when it is made, and takes off only costs.<br />Profit = £20,000 − £12,000 − £3,000 = <strong>£5,000</strong>.<br />Cash counts money only when it moves, including the loan.<br />Inflows = £10,000 of cash sales + £8,000 loan = £18,000. Outflows = £12,000 + £3,000 = £15,000.<br />Net cash flow = £18,000 − £15,000 = <strong>£3,000</strong>.",
+        "distractors": {
+          "A": "This leaves the £8,000 loan out of the cash flow. A loan is not revenue, so it rightly stays out of profit, but the money still arrives in the account.",
+          "C": "This counts all £20,000 of sales as cash. Half the customers have 30 days to pay, so £10,000 will not arrive until next month.",
+          "D": "Cash flow is right, but the £8,000 loan has been added to profit as if it were revenue. Borrowed money must be repaid, so it adds nothing to profit."
+        }
+      }
+    }
+  ]
+}

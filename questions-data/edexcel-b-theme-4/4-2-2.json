@@ -1,0 +1,221 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-4",
+  "boardName": "Edexcel B Theme 4",
+  "spec": "4.2.2",
+  "slug": "4-2-2-business-regulation",
+  "title": "Business Regulation",
+  "shortTitle": "Business Regulation",
+  "pageTitle": "Business Regulation Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions for Edexcel B A-Level Economics on business regulation: mergers, privatisation, price caps, the CMA and consumer law.",
+  "intro": "Eight original multiple-choice questions on business regulation: merger control, privatisation, regulating natural monopolies, consumer protection, the work of the Competition and Markets Authority, EU competition policy and employee protection. One is a calculation.",
+  "notesTeaser": "Eight original multiple-choice questions on merger control, privatisation, price caps, consumer protection, the CMA, EU competition policy and employee protection, including one calculation.",
+  "questions": [
+    {
+      "id": "edexcel-b-4-2-2-q1",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes four proposed mergers between UK firms.<br />Using Table 1 and the Competition and Markets Authority's (CMA's) turnover and share-of-supply tests, the only merger the CMA could not review is",
+      "table": {
+        "caption": "Table 1: Four proposed mergers",
+        "head": [
+          "",
+          "UK turnover of the business being bought",
+          "Merged firm's share of the product in the UK"
+        ],
+        "rows": [
+          [
+            "Merger 1",
+            "£45 million",
+            "32%"
+          ],
+          [
+            "Merger 2",
+            "£240 million",
+            "9%"
+          ],
+          [
+            "Merger 3",
+            "£60 million",
+            "17%"
+          ],
+          [
+            "Merger 4",
+            "£130 million",
+            "28%"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Merger 1.",
+        "B": "Merger 2.",
+        "C": "Merger 3.",
+        "D": "Merger 4."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The CMA can review a merger if <strong>either</strong> test is met: the business being bought has UK turnover above £100 million, <strong>or</strong> the merged firm would supply at least 25% of a product in the UK.<br />Merger 3 meets neither: its turnover is £60 million and its share is 17%. So it is the only one the CMA could not review.",
+        "distractors": {
+          "A": "The business being bought is small, at £45 million, but the merged firm would supply 32% of the product. That meets the 25% test, so the CMA can review it.",
+          "B": "The merged firm's share is only 9%, but the business being bought has UK turnover of £240 million, above £100 million. One test is enough.",
+          "D": "Merger 4 meets both tests, with turnover of £130 million and a 28% share. It is the one most clearly open to review."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-2-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "An energy network company's prices are capped at RPI − X, and the cap is reviewed every five years. In the first year of a new cap, the company finds a way to cut its costs by much more than X.<br />Until the next review, the most likely result is that the company",
+      "options": {
+        "A": "Has its X raised at once to remove the gain.",
+        "B": "Keeps the extra saving as higher profit.",
+        "C": "Must cut its prices by the full saving.",
+        "D": "Must pay the extra saving to the regulator."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Under an <strong>RPI − X</strong> cap, prices may rise by no more than inflation minus X. The cap limits the firm's prices, not its costs or its profit.<br />If the firm beats X, it keeps the extra profit until the cap is reviewed → it has an incentive to cut costs. That incentive is the main reason regulators use this kind of cap.",
+        "distractors": {
+          "A": "The cap is fixed until the review. If the regulator took the gain away at once, the firm would have no reason to cut costs in the first place.",
+          "C": "The cap sets the most the firm may charge. It does not require prices to fall with every cost saving.",
+          "D": "Nothing in an RPI − X cap makes the firm hand its savings to the regulator. Keeping them is what rewards the firm for becoming more efficient."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-2-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A regulator caps the prices that a regional electricity network may charge. The network's owner then finds it could raise its profit by cutting maintenance staff, even though power cuts would become more frequent.<br />The regulatory tool aimed most directly at this problem is",
+      "options": {
+        "A": "A larger X in the price cap.",
+        "B": "Breaking the network into two firms.",
+        "C": "Fines for missing a power-cut target.",
+        "D": "Selling the network to a new owner."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A price cap stops the owner raising profit through its prices, so it may try to raise profit by letting service slip instead.<br /><strong>Quality and performance targets</strong> close that route: fines for missing a target on power cuts → letting maintenance slip costs the owner money → it cannot raise its profit by cutting service.",
+        "distractors": {
+          "A": "A larger X squeezes the owner's prices harder. That makes cutting costs, including maintenance, even more tempting.",
+          "B": "An electricity network is a natural monopoly. Two firms running it would raise average costs, and neither problem in the stem would be solved.",
+          "D": "Any private owner would face the same incentive under the same cap. A change of owner does nothing about it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-2-q4",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government owns a shipyard that makes a loss of £20 million every year. It sells the shipyard to a private buyer for £300 million, and the buyer runs it with no further government support.<br />Ignoring interest and tax, the improvement in the government's finances over the first five years after the sale, compared with keeping the shipyard, is",
+      "options": {
+        "A": "£100 million",
+        "B": "£300 million",
+        "C": "£320 million",
+        "D": "£400 million"
+      },
+      "answer": "D",
+      "model": {
+        "working": "Privatisation helps the government's finances in two ways.<br />The sale raises money once: <strong>£300 million</strong>.<br />The state no longer covers the shipyard's losses: £20 million × 5 years = <strong>£100 million</strong>.<br />Total improvement: £300 million + £100 million = <strong>£400 million</strong>.",
+        "distractors": {
+          "A": "This counts only the losses the government no longer covers. It leaves out the £300 million raised by the sale.",
+          "B": "This counts only the sale. The government also stops paying for the shipyard's £20 million loss each year.",
+          "C": "This adds the sale to just one year's loss. The question asks about five years, so five years of losses are avoided."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-2-q5",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A car-hire website shows a price of £25 a day in its search results. A compulsory £9 \"preparation fee\" is added only on the final payment page.<br />This practice, which the Digital Markets, Competition and Consumers Act 2024 bans, is known as",
+      "options": {
+        "A": "Drip pricing.",
+        "B": "Penetration pricing.",
+        "C": "Predatory pricing.",
+        "D": "Price discrimination."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Drip pricing</strong> is when extra charges appear only late in the buying process. The customer compares the £25 headline price with other firms' prices, and only sees the compulsory £9 fee once they are about to pay.<br />Banning it means consumers see the full price up front → they can compare offers properly.",
+        "distractors": {
+          "B": "Penetration pricing is setting a low price to win customers when a product is launched. The £25 here is not a real low price, because a compulsory fee is added to it.",
+          "C": "Predatory pricing is pricing below cost until a rival leaves the market. Nothing in the stem suggests the firm is selling below cost.",
+          "D": "Price discrimination is charging different customers different prices for the same service. Every customer here pays the same fee."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two hotels in a seaside town have similar rooms and prices. One has only ever had genuine reviews online. The other has been buying fake five-star reviews, and has been winning more bookings. The CMA then starts enforcing the ban on fake reviews.<br />The most likely effect on the hotel with genuine reviews is that it",
+      "options": {
+        "A": "Faces higher compliance costs than its rival.",
+        "B": "Loses bookings, as reviews are now trusted less.",
+        "C": "Must lower its prices to keep its customers.",
+        "D": "Wins back bookings it was losing to its rival."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Fake reviews give customers false information, so the rival was winning bookings it would not have won on honest terms.<br />Once the ban is enforced, customers can compare the two hotels properly → bookings move back towards the honest hotel. Consumer protection costs firms money to comply with, but honest firms no longer lose sales to rivals who mislead.",
+        "distractors": {
+          "A": "The honest hotel was already following the rule, so it has little extra to do. It is the rival that has to change how it behaves.",
+          "B": "Enforcing the ban should make the reviews customers read more reliable, not less. That helps the hotel whose reviews were genuine all along.",
+          "C": "The rival's advantage came from misleading customers, not from lower prices. Once that is stopped, the honest hotel does not need to cut its prices to compete."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A UK maker of farm machinery exports to France and Germany. Its sales director agrees with a German rival that neither firm will undercut the other's prices in EU markets. The agreement covers only EU markets and has no effect on prices or trade in the UK.<br />Since Brexit, the competition authority that can investigate and fine the UK firm for this agreement is",
+      "options": {
+        "A": "The CMA only.",
+        "B": "The European Commission only.",
+        "C": "Both the CMA and the European Commission.",
+        "D": "Neither the CMA nor the European Commission."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Since Brexit, EU competition rules no longer apply <strong>inside</strong> the UK, where UK law does the same job. But a cartel that affects <strong>EU markets</strong> can still be investigated and fined by the European Commission, wherever the firm is based.<br />This agreement fixes prices only in EU markets, so the Commission can act. It has no effect in the UK, so UK competition law, which the CMA enforces, does not reach it.",
+        "distractors": {
+          "A": "The CMA enforces UK competition law, which deals with harm to competition in the UK. This agreement affects only EU markets, so the CMA has nothing to act on.",
+          "C": "The CMA could act only if the agreement affected competition in the UK. The stem says it does not.",
+          "D": "Brexit ended EU rules inside the UK, not for UK firms selling in the EU. UK exporters must follow EU rules as well as UK ones."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-2-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The only large employer in a remote town tells its warehouse staff to work through their breaks without pay. Few of them complain, because there is little other work nearby.<br />The economic case for employee protection law in this situation rests mainly on",
+      "options": {
+        "A": "Consumers knowing less about its products than it does.",
+        "B": "The employer's monopsony power over its workers.",
+        "C": "The external costs its products impose on the town.",
+        "D": "The firm's natural monopoly in its product market."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Workers usually have less bargaining power than their employer, and least of all where the employer is a <strong>monopsony</strong>. Staff with nowhere else to work have to accept the terms they are offered, however poor.<br />Employee protection law sets minimum standards the employer cannot push below, whatever its power.",
+        "distractors": {
+          "A": "That is the case for <strong>consumer</strong> protection. The problem here is how the firm treats its staff, not what its customers know.",
+          "C": "External costs are about harm to people outside a market. The stem describes nothing about the firm's products or their effect on the town.",
+          "D": "The stem says nothing about the firm's product market. Its power here comes from being the only buyer of labour in the town."
+        }
+      }
+    }
+  ]
+}

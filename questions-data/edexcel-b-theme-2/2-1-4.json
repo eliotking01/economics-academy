@@ -1,0 +1,209 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-2",
+  "boardName": "Edexcel B Theme 2",
+  "spec": "2.1.4",
+  "slug": "2-1-4-the-digital-economy",
+  "title": "How the Digital Economy Affects Markets and Firms",
+  "shortTitle": "The Digital Economy",
+  "pageTitle": "The Digital Economy Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on the digital economy for Edexcel B A-Level Economics: price comparison, micromarketing, the long tail and costs.",
+  "intro": "Seven original multiple-choice questions on how the digital economy affects markets and firms: price comparison sites, micromarketing, the long tail, online costs and network effects.",
+  "notesTeaser": "Seven original multiple-choice questions on price comparison sites, micromarketing, the long tail, the costs of selling online and network effects.",
+  "questions": [
+    {
+      "id": "edexcel-b-2-1-4-q1",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Car insurers' quotes appear side by side on a price comparison site, where most drivers now buy their cover. One insurer raises all its quotes by 5% while its rivals keep theirs unchanged. The most likely result is that the insurer",
+      "options": {
+        "A": "Gains customers, as a higher quote signals better cover.",
+        "B": "Keeps most of its customers, as few drivers compare quotes.",
+        "C": "Keeps most of its customers, as car insurance is a legal requirement.",
+        "D": "Loses many customers, as rivals' lower quotes are easy to see."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A price comparison site puts every insurer's quote next to its rivals'. Comparing takes seconds → drivers find the cheapest quote → demand for any one insurer becomes <strong>more price elastic</strong> → a small rise in its price <strong>loses many customers</strong> to the rivals now shown above it.",
+        "distractors": {
+          "A": "On a comparison site the quotes for similar cover sit side by side, so a higher quote looks like worse value, not better cover.",
+          "B": "The stem says most drivers now buy through the comparison site, so comparing quotes is exactly what they do.",
+          "C": "This mixes up the market with one firm. Drivers must buy insurance, so demand for insurance as a whole is price inelastic. But they need not buy it from this insurer, and the comparison site shows them every alternative."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-4-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A publisher spends £24,000 editing and designing an e-book. Each copy sold online then costs £0.10 in payment and download fees. It sells 10,000 copies in the first month and 40,000 in the first year as a whole.<br />The average cost of each copy sold in the first year is",
+      "options": {
+        "A": "£0.60",
+        "B": "£0.70",
+        "C": "£2.40",
+        "D": "£2.50"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Average cost = total cost ÷ number of copies, over the whole year.<br />Total cost: £24,000 + (40,000 × £0.10) = £24,000 + £4,000 = <strong>£28,000</strong>.<br />Average cost: £28,000 ÷ 40,000 = <strong>£0.70</strong>.<br />This is <strong>online distribution</strong> at work: each extra copy costs only 10p, so the more copies sold, the further the £24,000 is spread and the lower the average cost.",
+        "distractors": {
+          "A": "£24,000 ÷ 40,000 = £0.60 spreads the editing cost but leaves out the £0.10 fee paid on every copy.",
+          "C": "£24,000 ÷ 10,000 = £2.40 uses the first month's sales instead of the year's, and leaves out the 10p fee as well.",
+          "D": "£2.50 is the average cost for the first month only: £24,000 ÷ 10,000 + £0.10. The question asks about the whole year, by when 40,000 copies share the cost."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-4-q3",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "An online garden-supplies shop uses each customer's past orders to choose the offers it emails them. A customer who bought tomato seeds in March is sent a discount on tomato feed in May. This is an example of",
+      "options": {
+        "A": "Micromarketing.",
+        "B": "Network effects.",
+        "C": "The long tail.",
+        "D": "Viral marketing."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Micromarketing</strong> targets very small groups of customers, or single customers, with offers tailored to them, using data on what they search for and buy. Here each customer's own order history decides what they are offered, so the discount reaches the people most likely to want it and little is wasted on offers nobody needs.",
+        "distractors": {
+          "B": "Network effects are when a product becomes more useful to each user as more people use it. The shop's offers do not depend on how many other customers it has.",
+          "C": "The long tail is the many niche products that each sell a few units but together make up a large share of sales. This is about targeting offers, not the range of products stocked.",
+          "D": "Viral marketing is designed to be shared from person to person. These emails are sent by the shop to chosen customers, one at a time."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-4-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An online seller of sheet music lists 400,000 titles. Most of them sell fewer than five copies a year, yet together they make up a large share of its sales. It can list titles that a high-street music shop would never stock mainly because",
+      "options": {
+        "A": "Each rare title sells more copies online than a best-seller.",
+        "B": "Listing one more title costs it almost nothing.",
+        "C": "Online buyers pay much higher prices for rare titles.",
+        "D": "Rare titles cost less to buy in from publishers."
+      },
+      "answer": "B",
+      "model": {
+        "working": "This is the <strong>long tail</strong>. A shop has limited shelf space, so it stocks only titles that sell in large numbers. An online seller does not need a shelf: <strong>a listing costs almost nothing to keep</strong>. So it can offer every rare title, and although each sells only a few copies, together they add up to a large share of its sales.",
+        "distractors": {
+          "A": "This reverses the long tail. Each rare title sells only a few copies; it is the number of such titles, added together, that makes them matter.",
+          "C": "Nothing suggests online buyers pay a premium. The reason the titles can be listed is that keeping them on sale costs almost nothing, not that each sells at a higher price.",
+          "D": "The cost of buying a title in is not what stops a shop stocking it. Shelf space is: a shop cannot afford to give space to titles that sell a few copies a year."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-4-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Four firms start selling online. Table 1 shows each firm's price and average cost per unit before and after the move.<br />Using Table 1, the only firm whose profit on each unit rises is",
+      "table": {
+        "caption": "Table 1: Price and average cost per unit before and after selling online",
+        "head": [
+          "",
+          "Price before",
+          "Price after",
+          "Average cost before",
+          "Average cost after"
+        ],
+        "rows": [
+          [
+            "Firm 1",
+            "£40",
+            "£38",
+            "£32",
+            "£31"
+          ],
+          [
+            "Firm 2",
+            "£60",
+            "£48",
+            "£50",
+            "£40"
+          ],
+          [
+            "Firm 3",
+            "£25",
+            "£22",
+            "£20",
+            "£16"
+          ],
+          [
+            "Firm 4",
+            "£15",
+            "£15",
+            "£12",
+            "£12.50"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Firm 1.",
+        "B": "Firm 2.",
+        "C": "Firm 3.",
+        "D": "Firm 4."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Profit on each unit = price − average cost. Compare it before and after.<br />Firm 1: £40 − £32 = £8, then £38 − £31 = £7 → <strong>falls</strong>.<br />Firm 2: £60 − £50 = £10, then £48 − £40 = £8 → <strong>falls</strong>.<br />Firm 3: £25 − £20 = £5, then £22 − £16 = £6 → <strong>rises</strong>.<br />Firm 4: £15 − £12 = £3, then £15 − £12.50 = £2.50 → <strong>falls</strong>.<br />Selling online cuts costs, but more price competition cuts prices too. Profit rises only where <strong>cost falls by more than price</strong>, as at Firm 3: cost down £4, price down £3.",
+        "distractors": {
+          "A": "Of the firms that cut their price, Firm 1 cut it by the least, £2, but its cost fell by only £1, so its profit per unit fell from £8 to £7.",
+          "B": "Firm 2's cost fell by the most, £10, but its price fell by even more, £12. Both fell by 20%, yet the margin shrank from £10 to £8.",
+          "D": "Firm 4 held its price, but its average cost rose from £12 to £12.50, so its margin fell from £3 to £2.50."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-4-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A new website for buying and selling second-hand musical instruments charges sellers a fee of 5% of each sale. The established website charges 12%, yet after a year few sellers have moved to the new one. The most likely reason is that",
+      "options": {
+        "A": "Few buyers use the new site, so sellers expect fewer sales.",
+        "B": "Lower fees mean sellers keep less of each sale on the new site.",
+        "C": "Setting up a listing online costs most sellers too much.",
+        "D": "The new site's fee is too low to cover the cost of running it."
+      },
+      "answer": "A",
+      "model": {
+        "working": "This is a <strong>network effect</strong>: a marketplace becomes more useful to each user as more people use it. The established site already has the buyers → sellers go where the buyers are → more sellers attract still more buyers. A lower fee is worth little to a seller if the instrument does not sell, so a new rival struggles to attract either side.",
+        "distractors": {
+          "B": "This is the wrong way round. A 5% fee leaves the seller 95% of each sale, more than the 88% left by a 12% fee.",
+          "C": "Listing online is cheap, and the sellers are already doing it on the established site, so the cost of listing cannot explain why they stay there.",
+          "D": "That is a problem for the website's owners, not a reason for sellers to stay away. Sellers choose a site by how much they expect to sell there and what they keep."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-4-q7",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A shoe shop closes its high-street store and sells only online, saving £3,000 a month in rent. It sends out 2,000 pairs a month. Delivery, which it never paid before, costs £2 a pair, and 15% of the pairs sent out come back, each return costing £6 to handle. All other things being equal, its monthly costs",
+      "options": {
+        "A": "Fall by £3,000.",
+        "B": "Rise by £1,000.",
+        "C": "Rise by £2,800.",
+        "D": "Rise by £13,000."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Selling online saves the shop's rent, but it brings new costs.<br />Rent saved: <strong>−£3,000</strong>.<br />Delivery: 2,000 × £2 = <strong>+£4,000</strong>.<br />Returns: 15% × 2,000 = 300 pairs; 300 × £6 = <strong>+£1,800</strong>.<br />Net change: −£3,000 + £4,000 + £1,800 = <strong>+£2,800</strong>.<br />Selling online is not free: customers who cannot try shoes on send more back, and delivery has to be paid for.",
+        "distractors": {
+          "A": "This counts only the rent saved and leaves out the new costs of delivery and returns.",
+          "B": "This includes delivery, −£3,000 + £4,000 = +£1,000, but leaves out the £1,800 cost of handling returns.",
+          "D": "This charges the £6 return cost on all 2,000 pairs, £12,000, rather than on the 15% that come back."
+        }
+      }
+    }
+  ]
+}

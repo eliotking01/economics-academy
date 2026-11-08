@@ -1,0 +1,199 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-2",
+  "boardName": "Edexcel B Theme 2",
+  "spec": "2.2.1",
+  "slug": "2-2-1-price-elasticity-of-demand",
+  "title": "Price Elasticity of Demand (PED)",
+  "shortTitle": "Price Elasticity of Demand",
+  "pageTitle": "Price Elasticity of Demand Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on price elasticity of demand for Edexcel B A-Level Economics: calculating PED, total revenue, profit and pricing.",
+  "intro": "Seven original multiple-choice questions on price elasticity of demand: calculating and interpreting PED, its link to total revenue, the factors that affect it, and pricing in niche and mass markets. Two are calculations.",
+  "notesTeaser": "Seven original multiple-choice questions on calculating and interpreting PED, total revenue, the factors that affect PED, and pricing in niche and mass markets.",
+  "questions": [
+    {
+      "id": "edexcel-b-2-2-1-q1",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A ferry company estimates that the price elasticity of demand for its car crossings is −0.6. It raises the fare by 15%. Before the rise it carried 2,000 cars a week. All other things being equal, the number of cars it can expect to carry each week after the rise is",
+      "options": {
+        "A": "1,500",
+        "B": "1,700",
+        "C": "1,820",
+        "D": "2,180"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Rearrange the PED formula: % change in quantity demanded = PED × % change in price.<br />% change in quantity demanded = −0.6 × +15% = <strong>−9%</strong>.<br />Cars carried after the rise = 2,000 × (1 − 0.09) = <strong>1,820</strong> a week.<br />Demand is price inelastic, so the 15% rise in the fare loses only 9% of the cars, and the company's total revenue rises.",
+        "distractors": {
+          "A": "The formula has been inverted: 15 ÷ 0.6 = 25%, and 2,000 × 0.75 = 1,500. A PED below 1 means quantity changes by a <strong>smaller</strong> percentage than price, never a larger one.",
+          "B": "This assumes the number of cars falls by the same 15% as the fare. That would be true only if demand were unitary elastic. The PED of −0.6 says it falls by 0.6 × 15% = 9%.",
+          "D": "The size of the change is right but the direction is wrong. The minus sign in PED means price and quantity demanded move in opposite directions, so a higher fare means <strong>fewer</strong> cars, not more."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-1-q2",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A city bike-hire scheme cuts the price of a day's hire from £10 to £8. Daily hires rise from 500 to 700. Each hire costs the scheme £4 in cleaning and repairs, and its other costs do not change. The change in the scheme's daily profit is",
+      "options": {
+        "A": "−£800",
+        "B": "−£200",
+        "C": "+£600",
+        "D": "+£800"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Total revenue before: £10 × 500 = £5,000. After: £8 × 700 = £5,600. Revenue rises by <strong>£600</strong>.<br />Cleaning and repair costs before: £4 × 500 = £2,000. After: £4 × 700 = £2,800. Costs rise by <strong>£800</strong>.<br />Change in profit = £600 − £800 = <strong>−£200</strong> a day.<br />Demand is price elastic (+40% ÷ −20% = −2), so the price cut does raise total revenue. But higher revenue is not the same as higher profit: the 200 extra hires cost more to provide than the extra revenue they bring in.",
+        "distractors": {
+          "A": "This counts the £800 of extra costs but forgets that the scheme's revenue also rose by £600.",
+          "C": "This is the change in total revenue, not profit. It leaves out the £800 cost of providing the 200 extra hires.",
+          "D": "This counts the £4 earned above cost on each of the 200 extra hires (200 × £4 = £800), but forgets that the 500 people who hired a bike before now pay £2 less each. That loses 500 × £2 = £1,000, so profit falls by £200."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A supermarket sells its own-label bottled water at the same price as every other supermarket. A small workshop builds made-to-order electric guitars that few other makers offer, and its customers wait months for one. Each raises its price by 10%, and nothing else changes. The most likely effect on each firm's total revenue is that it",
+      "options": {
+        "A": "Falls for both firms.",
+        "B": "Falls for the workshop and rises for the supermarket.",
+        "C": "Rises for the workshop and falls for the supermarket.",
+        "D": "Rises for both firms."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The supermarket is in a <strong>mass market</strong>: every rival sells near-identical water → shoppers have plenty of close substitutes → demand for this supermarket's water is <strong>price elastic</strong> → a 10% price rise loses more than 10% of sales → total revenue <strong>falls</strong>.<br />The workshop is in a <strong>niche market</strong>: a specialist product with few substitutes and buyers willing to wait for it → demand is <strong>price inelastic</strong> → sales fall by less than 10% → total revenue <strong>rises</strong>.",
+        "distractors": {
+          "A": "Revenue falls after a price rise only when demand is price elastic. The workshop's guitars have few substitutes and loyal buyers, so its demand is price inelastic and its revenue rises.",
+          "B": "This is the right reasoning applied to the wrong firms. It is the supermarket's water that has many close substitutes, at the same price in every rival store, and the guitars that have few.",
+          "D": "This treats both demands as price inelastic. Water at another supermarket is a close substitute for this one's, so its shoppers switch away when the price rises and its revenue falls."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Demand for haircuts as a whole is price inelastic. Yet when one of six barbers on the same high street raises its prices by 10%, it loses a large share of its customers. The best explanation is that",
+      "options": {
+        "A": "Customers have had too little time to change their habits.",
+        "B": "Haircuts are a necessity that most people cannot go without.",
+        "C": "Haircuts take up a large share of most customers' income.",
+        "D": "Rival barbers a few doors away are close substitutes."
+      },
+      "answer": "D",
+      "model": {
+        "working": "PED depends on how <strong>narrowly the market is defined</strong>. People keep having their hair cut when prices rise across the board, so demand for haircuts as a whole is inelastic. But a haircut from one barber has five <strong>close substitutes</strong> on the same street → customers can switch at almost no cost → demand for this one barber's haircuts is price elastic.",
+        "distractors": {
+          "A": "Having little time to respond makes demand <strong>more price inelastic</strong>, not more elastic, so this would work the other way. In any case, walking to the next barber needs no change of habit at all.",
+          "B": "This explains why demand for haircuts as a whole is inelastic. It cannot explain why this barber's customers left: they still had their hair cut, just somewhere else.",
+          "C": "A haircut is a small share of most incomes. Even if it were a large share, that would apply to every barber, and so to the whole market, which the stem says is inelastic."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-1-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A garden centre changed the prices of four product lines last spring. Table 1 shows the percentage change in the price of each and in the quantity sold. Nothing else affecting demand changed.<br />Using Table 1, the product line for which demand was price elastic is",
+      "table": {
+        "caption": "Table 1: Price changes and sales at a garden centre",
+        "head": [
+          "Product line",
+          "Change in price",
+          "Change in quantity sold"
+        ],
+        "rows": [
+          [
+            "Bird seed",
+            "−5%",
+            "+2%"
+          ],
+          [
+            "Compost",
+            "+10%",
+            "−15%"
+          ],
+          [
+            "Hanging baskets",
+            "+8%",
+            "−8%"
+          ],
+          [
+            "Seed packets",
+            "−10%",
+            "+4%"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Bird seed.",
+        "B": "Compost.",
+        "C": "Hanging baskets.",
+        "D": "Seed packets."
+      },
+      "answer": "B",
+      "model": {
+        "working": "PED = % change in quantity demanded ÷ % change in price. Work it out for each line:<br />Bird seed: +2 ÷ −5 = −0.4.<br />Compost: −15 ÷ +10 = <strong>−1.5</strong>.<br />Hanging baskets: −8 ÷ +8 = −1.<br />Seed packets: +4 ÷ −10 = −0.4.<br />Ignoring the sign, only compost is greater than 1, so only demand for compost is <strong>price elastic</strong>: quantity changed by a larger percentage than price.",
+        "distractors": {
+          "A": "The formula has been inverted: 5 ÷ 2 = 2.5. Quantity changed by a smaller percentage than price, so demand for bird seed is price inelastic, at −0.4.",
+          "C": "Quantity changed by exactly the same percentage as price, so PED is −1. That is <strong>unitary elastic</strong>, the boundary between elastic and inelastic, not price elastic.",
+          "D": "The formula has been inverted: 10 ÷ 4 = 2.5. The price cut was the largest in the table, but sales rose by only 4%, so demand for seed packets is price inelastic, at −0.4."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Two airlines fly the same route with similar planes and service. Airline X knows that, whenever it changed its fares alone in the past, its PED was about −2. It cuts its fares by 10%, and within a day Airline Y cuts its fares by the same amount. Total demand for flights on the route hardly responds to fares. The most likely effect on Airline X's total revenue is that it",
+      "options": {
+        "A": "Falls, as few passengers now switch from Airline Y.",
+        "B": "Rises by about 8%, as its PED is about −2.",
+        "C": "Rises, as the lower fares draw passengers from Airline Y.",
+        "D": "Stays the same, as the two fare cuts cancel out."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Airline X's PED of −2 was measured when it changed its fares <strong>alone</strong>, so most of the response was passengers switching between the two airlines. Once Airline Y matches the cut, the gap between their fares disappears → almost nobody switches → Airline X gains only the few passengers who fly because the route as a whole is cheaper → its passenger numbers rise by much less than 20% → a 10% lower fare on every seat outweighs the extra passengers → total revenue <strong>falls</strong>.<br />How useful PED is for setting a price depends on how rivals react, and in a market like this a cut that rivals match wins few extra sales.",
+        "distractors": {
+          "B": "This is what PED −2 would predict if nothing else changed: passengers up 20%, so revenue × 1.2 × 0.9 = 1.08. But that PED came from times when Airline X changed its fares alone. Airline Y's matching cut means the estimate no longer holds.",
+          "C": "Airline X's lower fares would draw passengers from Airline Y only while Y's fares stayed higher. Once Y matches the cut within a day, there is no cheaper airline to switch to.",
+          "D": "The cuts cancel out only in the sense that neither airline is now cheaper than the other. Airline X still charges 10% less on every seat, and with few extra passengers that means less revenue, not the same."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-1-q7",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A pharmacy sells exactly 300 packs a month of a medicine that patients must take every day, whether its price is £8 or £12 a pack. Over this range of prices, demand for the medicine is",
+      "options": {
+        "A": "Perfectly elastic, with a PED of infinity.",
+        "B": "Perfectly inelastic, with a PED of zero.",
+        "C": "Price inelastic, with a PED between 0 and −1.",
+        "D": "Unitary elastic, with a PED of −1."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The price rises by 50%, from £8 to £12, and the quantity demanded does not change at all. PED = 0% ÷ +50% = <strong>0</strong>. When quantity demanded does not respond to price at all, demand is <strong>perfectly inelastic</strong>. Patients need the medicine every day, so they buy the same amount whatever it costs.",
+        "distractors": {
+          "A": "This is the opposite extreme. Perfectly elastic demand means any rise in price makes sales fall to zero. Here, sales do not fall at all.",
+          "C": "Price inelastic demand means quantity changes by a smaller percentage than price, but it still changes. Here it does not change at all, which is the special case of zero.",
+          "D": "Unitary elastic demand means quantity changes by the same percentage as price, so a 50% price rise would cut sales by 50%. Here sales stay at 300."
+        }
+      }
+    }
+  ]
+}

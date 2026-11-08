@@ -150,6 +150,8 @@ BOARD_HUBS = (
     "/practice-questions/edexcel-theme-1/", "/practice-questions/edexcel-theme-2/",
     "/practice-questions/edexcel-theme-3/", "/practice-questions/edexcel-theme-4/",
     "/practice-questions/aqa-a2-micro/", "/practice-questions/aqa-a2-macro/",
+    "/practice-questions/edexcel-b-theme-1/", "/practice-questions/edexcel-b-theme-2/",
+    "/practice-questions/edexcel-b-theme-3/", "/practice-questions/edexcel-b-theme-4/",
     "/revision-notes/glossary/edexcel-a/", "/revision-notes/glossary/aqa/",
 )
 

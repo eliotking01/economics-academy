@@ -1,0 +1,204 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-2",
+  "boardName": "Edexcel B Theme 2",
+  "spec": "2.1.5",
+  "slug": "2-1-5-how-small-firms-compete",
+  "title": "How Small Firms Compete",
+  "shortTitle": "How Small Firms Compete",
+  "pageTitle": "How Small Firms Compete Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on how small firms compete for Edexcel B A-Level Economics: USPs, flexibility, service, niches and stakeholders.",
+  "intro": "Seven original multiple-choice questions on how small firms survive against larger rivals: unique selling points, flexibility, customer service, niche markets and relationships with stakeholders.",
+  "notesTeaser": "Seven original multiple-choice questions on unique selling points, flexibility, customer service, niche markets and relationships with stakeholders.",
+  "questions": [
+    {
+      "id": "edexcel-b-2-1-5-q1",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The owner of an independent cheese shop lists four things about the business. The only one that is a unique selling point is",
+      "options": {
+        "A": "Card payments, which every shop in the town accepts.",
+        "B": "Local farm cheeses that customers want and no rival stocks.",
+        "C": "Opening at 6 a.m., though no customers come in before 9 a.m.",
+        "D": "Prices that match the supermarket's on its best-selling cheeses."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A <strong>unique selling point</strong> has to pass two tests: customers <strong>value</strong> it, and rivals <strong>do not offer</strong> it. Local farm cheeses that customers want and no rival stocks pass both. They give buyers a reason to come to this shop rather than the supermarket, and a reason to pay a little more.",
+        "distractors": {
+          "A": "Customers may value paying by card, but every shop offers it, so it is not unique.",
+          "C": "No other shop may open at 6 a.m., but no customer wants it either. A feature nobody values is not a selling point.",
+          "D": "Matching a rival's price is the opposite of being unique: it offers what the supermarket already offers. It is also a price war a small shop with higher costs is unlikely to win."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-5-q2",
+      "skill": "data-table",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Customers will pay up to 5% more than a large rival's price to buy from a small firm with good service. Table 1 compares four small firms' average costs with the price a large rival charges for the same product. Each small firm must charge at least its average cost.<br />Using Table 1, the small firm best placed to survive on service rather than price is",
+      "table": {
+        "caption": "Table 1: Four small firms' average cost and a large rival's price",
+        "head": [
+          "",
+          "Product",
+          "Small firm's average cost",
+          "Large rival's price"
+        ],
+        "rows": [
+          [
+            "Firm 1",
+            "Three-seat sofa",
+            "£520",
+            "£500"
+          ],
+          [
+            "Firm 2",
+            "Birthday card",
+            "£2.40",
+            "£1.60"
+          ],
+          [
+            "Firm 3",
+            "Bag of dog food",
+            "£12.00",
+            "£10.00"
+          ],
+          [
+            "Firm 4",
+            "Fitted car tyre",
+            "£66",
+            "£60"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Firm 1.",
+        "B": "Firm 2.",
+        "C": "Firm 3.",
+        "D": "Firm 4."
+      },
+      "answer": "A",
+      "model": {
+        "working": "To cover its costs each small firm must charge at least its average cost. Work out how far above the large rival's price that is, as a percentage of the rival's price.<br />Firm 1: £520 − £500 = £20; £20 ÷ £500 = <strong>4%</strong>.<br />Firm 2: £2.40 − £1.60 = £0.80; £0.80 ÷ £1.60 = <strong>50%</strong>.<br />Firm 3: £12.00 − £10.00 = £2; £2 ÷ £10 = <strong>20%</strong>.<br />Firm 4: £66 − £60 = £6; £6 ÷ £60 = <strong>10%</strong>.<br />Firm 1 is the only one that needs customers to pay less than 5% more than the rival's price. What matters is the <strong>size of the cost gap</strong> relative to the price, not in pounds.",
+        "distractors": {
+          "B": "Firm 2 has the smallest gap in pounds, 80p, but on a £1.60 card that is a 50% premium. That is ten times the 5% customers will pay.",
+          "C": "A £2 gap looks small, but on a £10 bag of dog food it means charging 20% more than the rival, four times what customers will pay.",
+          "D": "Firm 4 is closer, but it needs 10% more than the rival's price, twice the 5% customers will pay."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-5-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A customer needs blinds for an unusual round window. A national blinds chain offers only its standard sizes. A small local blinds maker, run by its owner, takes the order and fits the blinds within a week. The small firm can do this mainly because",
+      "options": {
+        "A": "It has more layers of management to plan the work.",
+        "B": "Its average cost is lower, as it makes fewer blinds.",
+        "C": "Its owner can agree to a one-off job on the spot.",
+        "D": "National chains are unable to make blinds to measure."
+      },
+      "answer": "C",
+      "model": {
+        "working": "This is <strong>flexibility in responding to customer needs</strong>. A small firm has few layers of management, often just the owner → an unusual request is decided on the spot → the job is done within days. The chain's fixed range and head-office procedures make it slow to say yes to one-off work, so it misses the sale.",
+        "distractors": {
+          "A": "This is the reverse. Few layers of management are what make a small firm quick to decide; more layers would slow it down.",
+          "B": "This inverts economies of scale. A firm making fewer blinds usually has a higher average cost, not a lower one, which is why small firms rarely compete on price.",
+          "D": "The chain could make a round blind; it chooses not to, because its range and procedures are built around standard sizes. That is a matter of flexibility, not ability."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-5-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A family-run tyre garage starts greeting customers by name, phoning them when their tyres are due for a check and explaining every job in plain words. The evidence that would best show this is helping the business is",
+      "options": {
+        "A": "More customers asking it to match a chain's prices.",
+        "B": "More customers who only visit during its sales.",
+        "C": "More hours spent by staff with each customer.",
+        "D": "More repeat customers and more sent by friends."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Good <strong>customer service</strong> works through loyalty: customers feel valued → they come back and recommend the garage to friends → <strong>repeat sales and free word-of-mouth advertising</strong>, from customers who are less likely to switch for a lower price. More repeat and recommended customers is the result the strategy is aiming at.",
+        "distractors": {
+          "A": "Customers asking for price matches are judging the garage on price, which is what good service is meant to move them away from.",
+          "B": "Customers who come only for discounts are the most price-sensitive and least loyal. A rise in them would suggest the service is not winning loyalty.",
+          "C": "Time spent with customers is something the garage puts in, not a result. It shows the service is being given, not that it is bringing in more business."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-5-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A small florist has bought from the same local grower for ten years. The grower now delivers fresh flowers every morning, so the florist keeps two days' stock instead of a week's, and drops off extra flowers within the hour when a large order comes in. The most direct benefit to the florist is",
+      "options": {
+        "A": "A lower price per flower, from buying in bulk.",
+        "B": "Higher prices, as customers see it supports local growers.",
+        "C": "Lower stock costs, with fewer flowers thrown away.",
+        "D": "Lower wage costs, as its staff are more motivated."
+      },
+      "answer": "C",
+      "model": {
+        "working": "This is a <strong>relationship with a stakeholder</strong>, here a supplier. Daily delivery means the florist holds far less stock → less money tied up in flowers and fewer wilting before they sell → <strong>lower stock costs and less waste</strong>. Help in a rush also lets it take large orders it could not otherwise meet.",
+        "distractors": {
+          "A": "Bulk buying is a purchasing economy of scale. The florist now buys smaller amounts more often, the opposite of buying in bulk, and the stem says nothing about a lower price.",
+          "B": "Goodwill from the local community is a different stakeholder relationship. Nothing in the stem says customers know about, or pay more for, the grower link.",
+          "D": "Motivated staff come from the relationship with employees. This deal is with a supplier, and it affects stock, not wages."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-5-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A small firm makes saddles for people who ride side-saddle. A national saddle maker has never tried to compete with it. The most likely reason is that",
+      "options": {
+        "A": "Its niche is too small for the national firm to bother with.",
+        "B": "National firms are not allowed to enter niche markets.",
+        "C": "Side-saddle riders refuse to pay premium prices.",
+        "D": "The small firm has lower average costs than the national one."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Side-saddle riding is a <strong>niche market</strong>: a small, clearly defined part of a larger market, with its own needs. It is often <strong>too small for a large firm to bother with</strong> → little direct competition → the small firm becomes the expert, with loyal customers willing to pay a premium.",
+        "distractors": {
+          "B": "There is no rule keeping large firms out of niches. They usually stay out by choice, because the market is too small to be worth it.",
+          "C": "This is the reverse of how niche markets work. Customers with particular needs and few alternatives are usually willing to pay more, not less.",
+          "D": "This inverts economies of scale. The national firm's size usually gives it the lower average cost; the small firm survives by avoiding head-on competition, not by being cheaper."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-5-q7",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A small garden-maintenance firm has 40 staff, and 5% of them leave each year. In large firms in the same trade, 30% of staff leave each year. Replacing each leaver costs £2,000 in recruitment and training.<br />Compared with a firm of the same size that loses staff at the large firms' rate, the small firm's yearly recruitment and training costs are lower by",
+      "options": {
+        "A": "£4,000",
+        "B": "£20,000",
+        "C": "£24,000",
+        "D": "£50,000"
+      },
+      "answer": "B",
+      "model": {
+        "working": "A small team that knows the owner and the customers tends to be more motivated, so fewer staff leave → lower recruitment and training costs.<br />Small firm: 5% × 40 = 2 leavers; 2 × £2,000 = <strong>£4,000</strong>.<br />Same-sized firm at the large firms' rate: 30% × 40 = 12 leavers; 12 × £2,000 = <strong>£24,000</strong>.<br />Saving: £24,000 − £4,000 = <strong>£20,000</strong> a year.",
+        "distractors": {
+          "A": "£4,000 is what the small firm spends each year, not how much less it spends than the other firm.",
+          "C": "£24,000 is what the other firm spends. The saving is the difference between the two costs.",
+          "D": "This treats the 25-percentage-point gap as 25 leavers: 25 × £2,000 = £50,000. The gap is 25% of 40 staff, which is 10 leavers."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-3",
+  "boardName": "Edexcel B Theme 3",
+  "spec": "3.2.2",
+  "slug": "3-2-2-assessing-the-potential-of-different-economies",
+  "title": "Assessing the Potential of Different Economies",
+  "shortTitle": "Assessing the Potential of Different Economies",
+  "pageTitle": "Assessing the Potential of Economies Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions for Edexcel B A-Level Economics on choosing a country to sell in and a site to produce in, from income to ROI.",
+  "intro": "Seven original multiple-choice questions on how a firm judges a country as a market and as a place to produce: disposable income, ease of doing business, political stability, exchange rates, costs of production, skills and the likely return on investment. One is a calculation.",
+  "notesTeaser": "Seven original multiple-choice questions on choosing a country to sell in and a site to produce in, including return on investment and cost per unit.",
+  "questions": [
+    {
+      "id": "edexcel-b-3-2-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A UK software firm is choosing between two countries in which to open a sales office. In Country R, registering a company takes three days and can be done online. In Country S, it takes five months, needs permits from four government departments and often an unofficial payment to an official.<br />The factor on which Country R scores better is",
+      "options": {
+        "A": "Disposable income.",
+        "B": "Ease of doing business.",
+        "C": "Infrastructure.",
+        "D": "Political stability."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Ease of doing business</strong> is how simple, quick and cheap it is to set up and run a firm in a country, from registering the company and getting permits to paying tax and enforcing contracts.<br />Country S has red tape and corruption: months of delay, several permits and unofficial payments → higher costs and later revenue → a lower return on the expansion. Country R scores better on this factor.",
+        "distractors": {
+          "A": "Disposable income is what households have to spend after tax, plus any benefits. The stem says nothing about how much customers in either country earn.",
+          "C": "Registering online needs an internet connection, but the difference described is in the rules and how long officials take, not in roads, ports, power or internet access.",
+          "D": "Unofficial payments are a sign of corruption, which counts against ease of doing business. Political stability is about the risk of unrest, war or a sudden change of government, and the stem describes none of those."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-2-2-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A UK maker of premium coffee machines plans to start selling in Country V. It chose V because its average wages are the lowest of the four countries it looked at. The machines will still be made in the UK.<br />The main flaw in this choice is that low wages",
+      "options": {
+        "A": "Mean that V is unlikely to be politically stable.",
+        "B": "Mean that workers there are likely to be less productive.",
+        "C": "Usually mean few households can afford a premium machine.",
+        "D": "Will raise the firm's costs if they start to rise quickly."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Selling into a market and locating production are different decisions, and each asks a different question.<br />For <strong>selling</strong>, the question is whether there are enough customers who can afford the product. Low wages → low <strong>disposable incomes</strong> → few households can afford a premium coffee machine → low sales.<br />Low wages are a reason to <strong>produce</strong> in a country, not to sell there. The firm has used a production factor to make a selling decision.",
+        "distractors": {
+          "A": "Low wages do not show that a country is unstable. Political stability is a separate factor, and nothing in the stem describes it.",
+          "B": "Productivity matters when choosing where to make a product, because it decides the cost per unit. The machines will be made in the UK, so the productivity of V's workers does not affect this firm.",
+          "D": "Rising wages would raise costs at a factory in V. This firm makes its machines in the UK, so wages in V are not part of its costs."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-2-2-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A UK food manufacturer is choosing one of four sites abroad for a new factory. Table 1 shows the cost of each, and the revenue and profit each is expected to earn a year.<br />Using Table 1, the site with the highest likely return on investment is",
+      "table": {
+        "caption": "Table 1: Four possible factory sites",
+        "head": ["", "Cost of the factory", "Expected annual revenue", "Expected annual profit"],
+        "rows": [
+          ["Site 1", "£5m", "£2.0m", "£0.60m"],
+          ["Site 2", "£20m", "£12.0m", "£2.80m"],
+          ["Site 3", "£25m", "£17.5m", "£3.25m"],
+          ["Site 4", "£40m", "£20.0m", "£4.40m"]
+        ]
+      },
+      "options": {
+        "A": "Site 1.",
+        "B": "Site 2.",
+        "C": "Site 3.",
+        "D": "Site 4."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Return on investment (ROI)</strong> is the profit an investment earns as a percentage of its cost: ROI = annual profit ÷ cost of investment × 100.<br />Site 1: £0.60m ÷ £5m × 100 = <strong>12%</strong>.<br />Site 2: £2.80m ÷ £20m × 100 = <strong>14%</strong>.<br />Site 3: £3.25m ÷ £25m × 100 = <strong>13%</strong>.<br />Site 4: £4.40m ÷ £40m × 100 = <strong>11%</strong>.<br />Site 2 earns the most profit for each pound spent on it.",
+        "distractors": {
+          "A": "Site 1 is the cheapest to build, so it risks the least money. But its £0.60m profit is only 12% of its cost, less than Site 2's 14%. It also has the highest profit margin, 30%, but ROI divides profit by the cost of the investment, not by revenue.",
+          "C": "This divides revenue by cost: £17.5m ÷ £25m = 70%, the highest of the four. ROI uses profit, not revenue, and on profit Site 3 returns 13%.",
+          "D": "Site 4 earns the most profit, £4.40m. But it costs £40m, so its ROI is 11%, the lowest of the four. ROI compares profit with what was spent to earn it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-2-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A firm can build the same factory in Country W, which has had a stable government for decades, or in Country X, where there have been two coups in ten years. The expected return on investment is 10% at both sites.<br />The better choice, and the reason, is",
+      "options": {
+        "A": "Country W, as the same return comes with less risk.",
+        "B": "Country W, as stable countries always earn higher profits.",
+        "C": "Country X, as higher risk brings a higher reward.",
+        "D": "Either, as their expected returns are the same."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A factory is an investment the firm cannot easily move. Unrest or a sudden change of government can stop production or lead to the site being seized, so the 10% expected in Country X is much less certain than the 10% expected in Country W.<br />A less stable country has to offer a <strong>higher</strong> expected ROI to be worth the extra risk. Here it offers the same, so Country W is the better choice.",
+        "distractors": {
+          "B": "A stable country does not always earn more. The two sites are expected to earn the same 10%. W is better because that return is safer, not because it is higher.",
+          "C": "Higher risk does not bring a higher return by itself. A firm should accept more risk only when it is paid for it with a higher expected return, and Country X offers the same 10% as W.",
+          "D": "Equal expected returns do not make the sites equal. The return in Country X is far less certain, so for the same expected ROI the firm should prefer the stable country."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-2-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A maker of microchips is choosing a site for a new plant. Country L has the lowest wages in its region, but frequent power cuts and few trained engineers. Country M's wages are three times L's, but its power supply is reliable and it has many engineering graduates. The firm chooses Country M.<br />The best explanation is that",
+      "options": {
+        "A": "Chip-making needs skilled engineers and reliable power.",
+        "B": "High wages in M mean more people there can afford its chips.",
+        "C": "Low wages are a sign that L's government is unstable.",
+        "D": "Wages are too small a share of its costs to matter at all."
+      },
+      "answer": "A",
+      "model": {
+        "working": "No country scores well on everything, so firms trade one factor off against another. Which matters most depends on what the firm makes.<br />Microchips are complex: they need <strong>skilled labour</strong> to make, and a power cut stops the line. A shortage of engineers in L would push up wages and slow production, and unreliable power would waste output, so L's low wages would not give low unit costs.<br />Low wages count most for products such as clothing and simple assembly. For chips, skills and <strong>infrastructure</strong> matter more.",
+        "distractors": {
+          "B": "This uses a selling factor to explain a production decision. Wages in M matter to the firm as a cost of making chips there, not as a sign of who can buy them.",
+          "C": "Low wages say nothing about whether a government is stable, and the stem gives no sign of unrest in Country L.",
+          "D": "Wages still matter, which is why L is tempting at all. The point is that M's skills and reliable power outweigh its higher wages for this product, not that wages count for nothing."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-2-2-q6",
+      "skill": "data-table",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A UK maker of branded snacks will choose one of four countries to export to, making the snacks in the UK and selling them in the local currency. Table 1 shows what it has found about each.<br />Using Table 1, the most promising market is",
+      "table": {
+        "caption": "Table 1: Four possible markets",
+        "head": ["", "Growth of disposable income per year", "Time to get permits to trade", "Politics", "The pound against the local currency, compared with a year ago"],
+        "rows": [
+          ["Country 1", "6%", "3 weeks", "Stable government", "25% higher"],
+          ["Country 2", "6%", "3 weeks", "Disputed election; protests closing shops", "Unchanged"],
+          ["Country 3", "6%", "10 months, and permits must be renewed every year", "Stable government", "Unchanged"],
+          ["Country 4", "4%", "4 weeks", "Stable government", "5% lower"]
+        ]
+      },
+      "options": {
+        "A": "Country 1.",
+        "B": "Country 2.",
+        "C": "Country 3.",
+        "D": "Country 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Each of the first three countries has one serious problem.<br />Country 1: the pound is 25% higher against the local currency than a year ago → UK snacks cost more in that currency → fewer sales, and the revenue earned there converts into fewer pounds.<br />Country 2: unrest is closing shops → a high risk of lost sales.<br />Country 3: a ten-month wait for permits, every year → poor <strong>ease of doing business</strong> → a much later start to selling, and red tape and costs that never go away.<br />Country 4's incomes grow a little more slowly, but it has none of these problems, and the slightly weaker pound makes UK snacks a little cheaper there. It is the most promising market.",
+        "distractors": {
+          "A": "A strong pound is bad for a UK firm selling abroad, not good. A pound 25% higher makes its snacks dearer in the local currency and cuts the value of its foreign sales in pounds.",
+          "B": "Income growth, permits and the exchange rate all look good, but protests that close shops put sales and stock at risk. Political stability matters to a firm selling into a market, not only to one building a factory.",
+          "C": "A ten-month wait for permits that comes round every year is not a one-off delay: it means a late start and red tape every year after. That costs the firm more than Country 3's faster income growth adds."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-2-2-q7",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A firm is choosing one of four sites for a factory that will make kettles to sell in the UK. Table 1 shows the hourly wage at each site, the number of kettles each worker makes in an hour, and the cost of transporting each kettle to the UK. Labour and transport are the only costs that differ between the sites.<br />Using Table 1, the site with the lowest cost per kettle is",
+      "table": {
+        "caption": "Table 1: Four possible sites for a kettle factory",
+        "head": ["", "Wage per hour", "Kettles made per worker per hour", "Transport cost per kettle to the UK"],
+        "rows": [
+          ["Site 1", "£2.00", "4", "£0.30"],
+          ["Site 2", "£14.00", "20", "£0.04"],
+          ["Site 3", "£7.20", "12", "£0.08"],
+          ["Site 4", "£9.00", "20", "£0.30"]
+        ]
+      },
+      "options": {
+        "A": "Site 1.",
+        "B": "Site 2.",
+        "C": "Site 3.",
+        "D": "Site 4."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Labour cost per kettle = wage per hour ÷ kettles made per worker per hour. Then add transport.<br />Site 1: £2.00 ÷ 4 = £0.50, + £0.30 = <strong>£0.80</strong>.<br />Site 2: £14.00 ÷ 20 = £0.70, + £0.04 = <strong>£0.74</strong>.<br />Site 3: £7.20 ÷ 12 = £0.60, + £0.08 = <strong>£0.68</strong>.<br />Site 4: £9.00 ÷ 20 = £0.45, + £0.30 = <strong>£0.75</strong>.<br />Low wages give low unit costs only if productivity is high enough, and the cost of getting goods to customers counts too.",
+        "distractors": {
+          "A": "Site 1 has the lowest wage, but each worker makes only 4 kettles an hour, so labour costs £0.50 a kettle. With transport it is the dearest site, at £0.80.",
+          "B": "Site 2 has the lowest transport cost, but its high wage makes labour £0.70 a kettle, so it costs £0.74 in all.",
+          "D": "Site 4 has the lowest labour cost per kettle, £0.45, but this leaves out transport. Adding £0.30 a kettle brings it to £0.75, more than Site 3."
+        }
+      }
+    }
+  ]
+}

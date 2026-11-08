@@ -1,0 +1,224 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-2",
+  "boardName": "Edexcel B Theme 2",
+  "spec": "2.3.4",
+  "slug": "2-3-4-impact-on-costs-and-sales-revenue",
+  "title": "Impact on Costs and Sales Revenue",
+  "shortTitle": "Impact on Costs and Sales Revenue",
+  "pageTitle": "Impact on Costs and Sales Revenue Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on costs and sales revenue for Edexcel B A-Level Economics: average cost, profit, cutting waste and product lead times.",
+  "intro": "Seven original multiple-choice questions on the impact of efficiency on costs and sales revenue: average cost, revenue against profit, minimising waste, and the advantage of short product development lead times. Two are calculations.",
+  "notesTeaser": "Seven original multiple-choice questions on average cost, revenue against profit, minimising waste, and short product development lead times.",
+  "questions": [
+    {
+      "id": "edexcel-b-2-3-4-q1",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A maker of bike helmets cuts its average cost by 15% through lean production. It keeps its price unchanged, and so do its rivals. All other things being equal, the effect on its sales revenue and its profit is",
+      "options": {
+        "A": "Revenue higher and profit higher.",
+        "B": "Revenue higher and profit unchanged.",
+        "C": "Revenue unchanged and profit higher.",
+        "D": "Revenue unchanged and profit unchanged."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Sales revenue = price × quantity sold. The price is unchanged, and with rivals' prices unchanged too, there is no reason for sales to change, so <strong>revenue is unchanged</strong>.<br />Each helmet now costs less to make → a wider margin on every helmet → <strong>higher profit</strong>.<br />Lower costs raise revenue only if the firm uses them to cut its price and demand is price elastic.",
+        "distractors": {
+          "A": "Lower costs do not raise revenue on their own. Neither the price nor the number sold has changed.",
+          "B": "This has the two the wrong way round. Revenue depends on price and sales, neither of which changed. Profit is revenue minus costs, and costs fell.",
+          "D": "Revenue is unchanged, but costs have fallen, so profit, which is revenue minus costs, rises."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-4-q2",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A maker of walking boots sells 1,000 pairs a month at £30 a pair. Lean production cuts its average cost from £20 to £16 a pair, at any output it is likely to make. Table 1 shows its two options.<br />Compared with keeping its price, cutting it changes the firm's monthly profit by",
+      "table": {
+        "caption": "Table 1: Two pricing options after the cost saving",
+        "head": [
+          "Option",
+          "Price per pair",
+          "Pairs sold per month"
+        ],
+        "rows": [
+          [
+            "Keep the price",
+            "£30",
+            "1,000"
+          ],
+          [
+            "Cut the price",
+            "£26",
+            "1,500"
+          ]
+        ]
+      },
+      "options": {
+        "A": "−£1,000",
+        "B": "+£1,000",
+        "C": "+£5,000",
+        "D": "+£9,000"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Profit = (price − average cost) × pairs sold, using the new average cost of £16 in both options.<br />Keep the price: (£30 − £16) × 1,000 = <strong>£14,000</strong>.<br />Cut the price: (£26 − £16) × 1,500 = <strong>£15,000</strong>.<br />Change = £15,000 − £14,000 = <strong>+£1,000</strong>.<br />Demand is price elastic here: a 13.3% price cut raises sales by 50%. So passing the saving on in a lower price earns more than keeping the price and taking the wider margin.",
+        "distractors": {
+          "A": "Either the subtraction is the wrong way round, £14,000 − £15,000, or both options have been worked out with the old £20 average cost: (£26 − £20) × 1,500 = £9,000 against (£30 − £20) × 1,000 = £10,000. Lean production has cut average cost to £16 in both.",
+          "C": "This compares £15,000 with the profit before the cost saving, (£30 − £20) × 1,000 = £10,000. The question compares cutting the price with keeping it, and both options have the new £16 average cost.",
+          "D": "This is the change in sales revenue, (£26 × 1,500) − (£30 × 1,000) = £39,000 − £30,000. Revenue is not profit: each of the extra 500 pairs also costs £16 to make."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-4-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A maker of accessories for games consoles cuts its product development lead time from nine months to three. A new console is announced, and none of its rivals can bring out accessories for it for six months. The main advantage to the firm is that it can",
+      "options": {
+        "A": "Charge a high price until its rivals' products arrive.",
+        "B": "Charge a low price, as its development costs have fallen.",
+        "C": "Keep its rivals out of this market for good.",
+        "D": "Launch without the risk of faults that rushing brings."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A short lead time means the firm launches before its rivals → no direct competition at first → it can charge a <strong>high price</strong> (price skimming) → higher revenue and profit until rivals arrive.<br />Here that window is about three months: the firm launches after three months, and its rivals after six.",
+        "distractors": {
+          "B": "A shorter lead time does cut development costs, but with no rivals yet there is no need to price low.",
+          "C": "The advantage lasts only until rivals' products arrive. A short lead time gives a head start, not a permanent monopoly.",
+          "D": "Rushing a product out <strong>raises</strong> the risk of faults. That is a cost of short lead times, not an advantage."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-4-q4",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows four firms' product development lead times and how often buyers' tastes change in their markets.<br />Using Table 1, the firm with the most to gain from cutting its lead time is",
+      "table": {
+        "caption": "Table 1: Lead times and markets at four firms",
+        "head": [
+          "",
+          "Product",
+          "How often buyers' tastes change",
+          "Current lead time"
+        ],
+        "rows": [
+          [
+            "Firm 1",
+            "Party costumes",
+            "Every few months",
+            "3 weeks"
+          ],
+          [
+            "Firm 2",
+            "Garden hoses",
+            "Rarely",
+            "12 months"
+          ],
+          [
+            "Firm 3",
+            "Kitchen sinks",
+            "Rarely",
+            "2 weeks"
+          ],
+          [
+            "Firm 4",
+            "Fashion trainers",
+            "Every few months",
+            "9 months"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Firm 1.",
+        "B": "Firm 2.",
+        "C": "Firm 3.",
+        "D": "Firm 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A short lead time matters most where <strong>products and tastes change fast</strong>: the firm can sell what is in fashion now, with fewer unsold lines and discounts.<br />Firm 4 sells into a fast-changing market, but takes nine months to bring a design to market, so by the time its trainers arrive the trend may have moved on. It has the most to gain.",
+        "distractors": {
+          "A": "Its market changes fast, but its lead time is already only three weeks. There is little left to gain.",
+          "B": "This is the trap: the longest lead time. But tastes in garden hoses rarely change, so a design that takes a year to develop is still what buyers want when it arrives.",
+          "C": "Its tastes rarely change and its lead time is already short, so a cut would gain it almost nothing."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-4-q5",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A sandwich chain pays for each of the following. In the sense used in lean production, the one that is waste is",
+      "options": {
+        "A": "Bread and fillings for sandwiches that it sells.",
+        "B": "Lighting its shops while customers are inside.",
+        "C": "Sandwiches thrown away unsold at closing time.",
+        "D": "Staff wages for making sandwiches at lunchtime."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Waste</strong> is anything a firm pays for that adds nothing to what the customer buys. Sandwiches thrown away unsold used bread, fillings and staff time, and no customer bought them.<br />More accurate sales forecasts cut this waste, because the chain makes only what will sell.",
+        "distractors": {
+          "A": "Ingredients for sandwiches that are sold are exactly what the customer is paying for.",
+          "B": "Lighting the shop while customers are in it is part of serving them. Lighting or heating empty space would be waste.",
+          "D": "Staff making sandwiches that sell add to what customers buy. Staff standing idle would be waste."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-4-q6",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A laundry can spend £60,000 on energy-efficient dryers that would cut its energy bill by £12,000 a year. The dryers would last four years and be worth nothing after that. The net gain to the laundry over the dryers' life is",
+      "options": {
+        "A": "−£12,000",
+        "B": "£0",
+        "C": "+£12,000",
+        "D": "+£48,000"
+      },
+      "answer": "A",
+      "model": {
+        "working": "Savings over the dryers' life = £12,000 × 4 = <strong>£48,000</strong>.<br />Net gain = £48,000 − £60,000 = <strong>−£12,000</strong>.<br />The dryers would take five years to earn back their cost, but they last only four. Cutting waste with new equipment pays off only if the savings last long enough.",
+        "distractors": {
+          "B": "This assumes the dryers last until they have paid for themselves, £60,000 ÷ £12,000 = 5 years. They last only four.",
+          "C": "The subtraction is the wrong way round. Savings of £48,000 are less than the £60,000 cost, so the laundry loses.",
+          "D": "This counts the savings and leaves out the £60,000 up-front cost."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-4-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Every firm in an industry adopts the same lean methods, and each cuts its average cost by 10%. Each then cuts its prices by 10%, and market shares do not change. The main gain from the lower costs goes to",
+      "options": {
+        "A": "Consumers, through lower prices.",
+        "B": "Each firm, through a larger market share.",
+        "C": "Each firm, through a lasting lead over rivals.",
+        "D": "Each firm, through a wider profit margin."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Lower costs give a firm an advantage only if it does better than its rivals. Here every firm cut its costs by the same percentage and passed the saving on in lower prices, so no firm wins sales from another: market shares are unchanged, and no firm's margin is wider than before.<br />The saving has passed to <strong>consumers</strong> as lower prices.",
+        "distractors": {
+          "B": "Market shares are unchanged, as the stem says. When every firm cuts its price by the same percentage, none wins sales from the others.",
+          "C": "Lean methods are well known, and every firm here has used them, so none has a lead. An advantage lasts only if a firm uses the methods better than its rivals do.",
+          "D": "Each firm passed its whole cost saving on as a lower price, so its margin is no wider than before."
+        }
+      }
+    }
+  ]
+}

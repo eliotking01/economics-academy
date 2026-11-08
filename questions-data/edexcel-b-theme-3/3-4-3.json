@@ -1,0 +1,161 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-3",
+  "boardName": "Edexcel B Theme 3",
+  "spec": "3.4.3",
+  "slug": "3-4-3-controlling-mncs",
+  "title": "Controlling MNCs",
+  "shortTitle": "Controlling MNCs",
+  "pageTitle": "Controlling MNCs Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions for Edexcel B A-Level Economics on controlling MNCs: lobbying, the law, pressure groups, social media and self-regulation.",
+  "intro": "Six original multiple-choice questions on what limits how far multinationals can be controlled: political influence and bargaining power, legal control and its enforcement, pressure groups, social media and self-regulation. One is a calculation.",
+  "notesTeaser": "Six original multiple-choice questions on political influence, legal control, pressure groups, social media and self-regulation, including a calculation.",
+  "questions": [
+    {
+      "id": "edexcel-b-3-4-3-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "In Country G, the main makers of online games agree their own rules on how in-game purchases may be advertised to children. Their trade body checks adverts and names any member that breaks the rules. No law requires any of this.<br />This is an example of",
+      "options": {
+        "A": "Legal control.",
+        "B": "Lobbying.",
+        "C": "Pressure-group action.",
+        "D": "Self-regulation."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Self-regulation</strong> is when a firm or industry sets and checks its own standards of behaviour, without the law requiring it.<br />Here the games makers write the rules, their own trade body checks them, and the only penalty is being named. No law is involved, so this is self-regulation by a whole industry.",
+        "distractors": {
+          "A": "Legal control is set by the government and backed by fines or criminal charges. The stem says no law requires any of this.",
+          "B": "Lobbying is a firm or industry trying to influence the government, for example to win weaker rules. Here the industry is writing rules for itself, not pressing the government.",
+          "C": "A pressure group is an outside organisation that campaigns to change how firms behave. These rules come from the firms themselves, through their own trade body."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-3-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Country Z plans a law that every firm selling clothes there must prove its supply chains are free of forced labour. A large clothing MNC threatens to stop investing in Z if the law is passed.<br />Z's government is best placed to pass the law despite the threat if",
+      "options": {
+        "A": "Few other countries have passed laws of this kind.",
+        "B": "The MNC employs a large share of Z's workers.",
+        "C": "Z is a large, rich market that the MNC needs.",
+        "D": "Z needs the MNC's investment to create jobs."
+      },
+      "answer": "C",
+      "model": {
+        "working": "How far a government can control an MNC depends on <strong>bargaining power</strong>. The law covers every firm that <em>sells</em> clothes in Z, so the MNC cannot escape it by moving its factories. If Z is a large, rich market, the MNC loses too much by walking away → it is likely to comply → its threat carries little weight.<br />A government that badly needs the MNC's jobs and investment is in the opposite position, and is more likely to back down.",
+        "distractors": {
+          "A": "Acting alone makes a country weaker, not stronger. If no other country has a law like this, the MNC can focus its sales elsewhere more easily. Rules shared by many countries are harder to escape.",
+          "B": "If the MNC employs a large share of Z's workers, the government has more to lose if it leaves. That raises the MNC's power over the government, not the other way round.",
+          "D": "A government that needs the MNC's investment fears losing it, so the threat to leave works. This is when governments tend to offer tax breaks or delay tougher rules."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-3-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A worker's video of a locked fire exit, in a factory that makes a clothing MNC's shirts, is shared widely on social media. The MNC makes no changes. Table 1 shows what happened over the next four weeks.<br />Using Table 1, the most reasonable conclusion is that",
+      "table": {
+        "caption": "Table 1: Posts about the video and the MNC's sales",
+        "head": [
+          "",
+          "Posts mentioning the MNC (thousands)",
+          "Sales (index, week before the video = 100)"
+        ],
+        "rows": [
+          ["Week 1", "850", "94"],
+          ["Week 2", "210", "97"],
+          ["Week 3", "40", "99"],
+          ["Week 4", "15", "100"]
+        ]
+      },
+      "options": {
+        "A": "Sales fell and stayed lower for the whole four weeks.",
+        "B": "Sales fell at first, then recovered as the posts died away.",
+        "C": "Sales rose, as the posts made more people aware of the MNC.",
+        "D": "Sales were unaffected, as few people saw the video."
+      },
+      "answer": "B",
+      "model": {
+        "working": "In Week 1 the video is everywhere, with 850,000 posts, and sales fall 6% below their level before the video. Each week after, the posts fall away and sales climb back: 97, 99 and then 100 in Week 4, their old level.<br />This shows a limit of social media as a control. A story spreads worldwide within hours, but it fades within days or weeks, and many people keep buying. Here the MNC made no changes at all, and by Week 4 its sales had fully recovered.",
+        "distractors": {
+          "A": "Sales were below 100 for the first three weeks, but in Week 4 they were back at 100, their level before the video. They did not stay lower for the whole period.",
+          "C": "The index is below 100 in Weeks 1 to 3, so sales fell rather than rose. Being talked about did not help the MNC here.",
+          "D": "There were 850,000 posts in Week 1, so many people saw it, and sales fell by 6%. The effect was real but short-lived."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-3-q4",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A pressure group calls for a boycott of a chocolate brand until it stops buying cocoa from farms that use child labour. The brand sells 5 million bars a year at £1.50 each, and each bar earns a contribution of £0.40. The boycott would cut its sales by 10% for as long as it keeps using those farms. Switching to checked farms would end the boycott but add £120,000 a year to its costs.<br />Compared with ignoring the boycott, switching would leave the brand's yearly profit higher by",
+      "options": {
+        "A": "£80,000",
+        "B": "£200,000",
+        "C": "£320,000",
+        "D": "£630,000"
+      },
+      "answer": "A",
+      "model": {
+        "working": "Ignoring the boycott loses 10% of sales: 5,000,000 × 10% = <strong>500,000</strong> bars.<br />Each lost bar is £0.40 of contribution lost: 500,000 × £0.40 = <strong>£200,000</strong> a year.<br />Switching avoids that loss but costs £120,000 a year.<br />Difference: £200,000 − £120,000 = <strong>£80,000</strong> in favour of switching.<br />This is how a pressure group changes an MNC's behaviour: it makes the poor practice cost more than putting it right. Had the boycott cut sales by less than 6%, ignoring it would have been cheaper.",
+        "distractors": {
+          "B": "This is the contribution the boycott would cost, but it leaves out the £120,000 a year that switching costs. Both sides of the choice have to be counted.",
+          "C": "This adds the cost of switching to the lost contribution, £200,000 + £120,000. Switching costs £120,000, so it has to be taken away from the £200,000 it saves.",
+          "D": "This values the lost sales at the price: 500,000 × £1.50 = £750,000, less £120,000. A lost sale also saves the cost of making the bar, so only the contribution of £0.40 a bar is lost."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-3-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Country J passes a law setting strict safety standards for garment factories, with large fines for breaking it. It employs 30 inspectors to check 6,000 factories. Two years later, conditions in most factories are unchanged.<br />The most likely reason is that",
+      "options": {
+        "A": "Few factories expect a visit, so the fines rarely bite.",
+        "B": "Host-country laws cannot apply to factories that supply MNCs.",
+        "C": "The law requires only a yearly statement, not any action.",
+        "D": "The MNCs' own codes of conduct override the country's law."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Laws only work if they are <strong>enforced</strong>. With 30 inspectors for 6,000 factories, each inspector has 200 to cover, so most factories may go years without a visit → owners know they are unlikely to be caught → a large fine is a risk they are willing to take → conditions stay the same.<br />Many host countries lack the inspectors and courts to enforce strict laws, which is one reason MNCs and their suppliers are hard to control.",
+        "distractors": {
+          "B": "A factory in Country J must follow Country J's laws, whoever it supplies. The problem is not that the law does not apply, but that it is rarely checked.",
+          "C": "A law that asks only for a yearly statement is a real weakness of some laws, but this one sets safety standards and fines firms that break them. The stem says nothing about statements.",
+          "D": "A voluntary code of conduct has no legal force and cannot override a law. At most it adds to what the law requires."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-3-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Two industries in Country D each adopt a voluntary code on the pay and safety of workers in their supply chains. In the first, the government has said it will pass a law if the code fails, and campaigners publish yearly checks on each firm. In the second, there is no threat of a law and firms check themselves.<br />The code more likely to change firms' behaviour, and the reason, is",
+      "options": {
+        "A": "The first, as a voluntary code carries legal penalties.",
+        "B": "The first, as outside pressure makes firms keep to it.",
+        "C": "The second, as firms are free to set standards they can meet.",
+        "D": "The second, as firms know their own supply chains best."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Self-regulation has no legal penalties, so a firm can ignore its own code. It works best where the law and outside pressure stay in the background.<br />In the first industry, breaking the code → campaigners publish it → bad publicity and lost sales, and the government passes a law that firms cannot ignore. So firms have good reasons to keep to the code.<br />In the second, nobody outside checks and nothing happens if the code fails, so it can easily become publicity with no real change behind it.",
+        "distractors": {
+          "A": "A voluntary code has no legal penalties, in either industry. What makes the first code work is the threat of a law and the campaigners' checks, not the code itself.",
+          "C": "Firms that set standards they find easy to meet are the main argument <em>against</em> self-regulation. A code that changes nothing is easy to keep.",
+          "D": "Firms knowing their own supply chains is an argument for self-regulation, but it is true in both industries. It cannot explain why one code works better than the other."
+        }
+      }
+    }
+  ]
+}

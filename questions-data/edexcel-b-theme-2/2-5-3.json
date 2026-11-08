@@ -1,0 +1,249 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-2",
+  "boardName": "Edexcel B Theme 2",
+  "spec": "2.5.3",
+  "slug": "2-5-3-inflation",
+  "title": "Inflation",
+  "shortTitle": "Inflation",
+  "pageTitle": "Inflation Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on inflation for Edexcel B A-Level Economics: deflation, real and nominal values, its causes, and who gains and who loses.",
+  "intro": "Seven original multiple-choice questions on inflation: deflation and disinflation, real and nominal values, demand-pull and cost-push inflation, and its impact on firms, savers and borrowers. Two are calculations.",
+  "notesTeaser": "Seven original multiple-choice questions on deflation and disinflation, real and nominal values, the causes of inflation, and its impact on firms and individuals.",
+  "questions": [
+    {
+      "id": "edexcel-b-2-5-3-q1",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows a country's annual rate of inflation over four years. At the start of Year 1 its price index stood at 100.<br />Using Table 1, the correct statement is",
+      "table": {
+        "caption": "Table 1: Annual rate of inflation",
+        "head": [
+          "Year",
+          "Rate of inflation"
+        ],
+        "rows": [
+          [
+            "Year 1",
+            "3.0%"
+          ],
+          [
+            "Year 2",
+            "1.0%"
+          ],
+          [
+            "Year 3",
+            "−0.5%"
+          ],
+          [
+            "Year 4",
+            "1.5%"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Prices fell in Year 2, when the rate of inflation fell.",
+        "B": "Prices fell in Year 3, but the index stayed above 100.",
+        "C": "Prices fell in Year 3, taking the index below 100.",
+        "D": "Prices were at their highest at the end of Year 1."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A positive rate means prices rose that year; a negative rate means they fell.<br />End of Year 1: 100 × 1.03 = <strong>103.0</strong>. End of Year 2: 103.0 × 1.01 ≈ <strong>104.0</strong>. End of Year 3: 104.0 × 0.995 ≈ <strong>103.5</strong>. End of Year 4: 103.5 × 1.015 ≈ <strong>105.1</strong>.<br />Year 3 is <strong>deflation</strong>: prices fell, but only by 0.5%, so the index stayed well above 100.",
+        "distractors": {
+          "A": "Year 2 is <strong>disinflation</strong>: the rate fell from 3.0% to 1.0%, but it was still positive, so prices still rose, only more slowly.",
+          "C": "A 0.5% fall in Year 3 undoes only a small part of the rises in Years 1 and 2. The index ends Year 3 at about 103.5, not below 100.",
+          "D": "Year 1 had the highest <strong>rate</strong>, but the price <strong>level</strong> kept rising in Years 2 and 4. Prices were highest at the end of Year 4, at about 105.1."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-3-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A bakery's sales were £400,000 in 2022 and £469,200 in 2025. Over the same period, the price index for its products rose from 100 to 115. To one decimal place, the bakery's sales at constant 2022 prices rose by",
+      "options": {
+        "A": "2.0%",
+        "B": "2.3%",
+        "C": "17.3%",
+        "D": "34.9%"
+      },
+      "answer": "A",
+      "model": {
+        "working": "Real value = nominal value ÷ price index × 100.<br />Sales in 2025 at constant 2022 prices: £469,200 ÷ 115 × 100 = <strong>£408,000</strong>.<br />Change: (£408,000 − £400,000) ÷ £400,000 × 100 = <strong>2.0%</strong>.<br />At current prices sales rose 17.3%, but most of that is higher prices. The bakery is selling only 2% more in real terms.",
+        "distractors": {
+          "B": "This subtracts the price rise from the sales rise: 17.3% − 15% = 2.3%. That shortcut is only an approximation. Deflating the sales figure by the index gives exactly 2.0%.",
+          "C": "This is the rise in sales at current prices: (£469,200 − £400,000) ÷ £400,000 = 17.3%. It is a nominal figure, so it includes the 15% rise in prices.",
+          "D": "This multiplies by the index instead of dividing: £469,200 × 1.15 = £539,580, a 34.9% rise. Removing inflation makes the figure smaller, not larger."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-3-q3",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A retired couple's private pension pays a fixed £18,000 a year. Prices then rise by 5% in each of the next three years. Measured in the prices at the start, and to the nearest £100, the real value of the pension at the end of the three years is",
+      "options": {
+        "A": "£15,300",
+        "B": "£15,500",
+        "C": "£15,700",
+        "D": "£17,100"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Each 5% rise is on top of the last, so build the price index year by year, starting at 100.<br />100 × 1.05 = 105 → 105 × 1.05 = 110.25 → 110.25 × 1.05 ≈ <strong>115.76</strong>.<br />Real value = £18,000 ÷ 115.76 × 100 ≈ £15,549, which is <strong>£15,500</strong> to the nearest £100.<br />The pension still pays £18,000, but it now buys only what about £15,500 bought three years ago. People on fixed incomes are hit hardest by inflation.",
+        "distractors": {
+          "A": "This takes 15% off the pension: £18,000 × 0.85 = £15,300. Prices have risen by more than 15%, but the real value is found by dividing by the index, not by taking a percentage off.",
+          "C": "This adds the three rises to get an index of 115: £18,000 ÷ 115 × 100 ≈ £15,652. But each rise applies to prices that have already risen, so the index reaches about 115.8.",
+          "D": "This allows for one year of inflation only: £18,000 ÷ 105 × 100 ≈ £17,143. Prices rise for three years, so the pension loses value three times."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-3-q4",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the reasons four UK firms give for raising their prices this year.<br />Using Table 1, the firm whose reason fits demand-pull inflation is",
+      "table": {
+        "caption": "Table 1: Why four firms raised their prices",
+        "head": [
+          "",
+          "Reason given"
+        ],
+        "rows": [
+          [
+            "Firm 1",
+            "The pound has fallen, so the fabric we import costs more"
+          ],
+          [
+            "Firm 2",
+            "Our energy bills have doubled since last winter"
+          ],
+          [
+            "Firm 3",
+            "Customers are ordering more than we are able to make"
+          ],
+          [
+            "Firm 4",
+            "The government has raised the tax on our product"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Firm 1.",
+        "B": "Firm 2.",
+        "C": "Firm 3.",
+        "D": "Firm 4."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Demand-pull inflation</strong> comes from spending rising faster than firms can raise output. Firm 3 has more orders than it can meet, so it raises prices because demand outruns supply.<br />The other three firms raise prices because their <strong>costs</strong> have gone up. That is cost-push inflation.",
+        "distractors": {
+          "A": "A weaker pound makes imported inputs dearer. That raises the firm's costs, so it is cost-push, not demand-pull.",
+          "B": "Higher energy bills are a rise in the cost of production, which the firm passes on in higher prices: cost-push.",
+          "D": "A rise in indirect tax adds to what the firm must pay on each unit it sells. It is one of the causes of cost-push inflation."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-3-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Over two years, UK inflation swings between 2% and 9%, and nobody can tell what it will be next year. A builders' merchant is deciding whether to build a new warehouse. The most likely effect of the inflation on its decision is that it",
+      "options": {
+        "A": "Builds now, as rising prices make any project more profitable.",
+        "B": "Delays it, as inflation will cut the value of the warehouse.",
+        "C": "Delays it, as it cannot forecast the project's costs and return.",
+        "D": "Is unaffected, as its costs and prices rise by the same amount."
+      },
+      "answer": "C",
+      "model": {
+        "working": "High and unpredictable inflation creates <strong>uncertainty</strong>.<br />Costs and prices change quickly and unpredictably → the merchant cannot forecast building costs, future revenue or the return on the warehouse with confidence → it puts off the investment → slower growth and fewer new jobs.",
+        "distractors": {
+          "A": "Inflation raises costs as well as prices, so it does not make projects more profitable. When it is this unpredictable, the firm cannot even tell whether the project will pay.",
+          "B": "Inflation raises the price of buildings along with other prices, so the warehouse's value in pounds would tend to rise. The problem is uncertainty, not a falling value.",
+          "D": "There is no reason to expect costs and prices to move together when inflation swings between 2% and 9%. Not knowing which will rise faster is exactly what makes planning hard."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-3-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Over a year, the prices of UK-made furniture rise by 6% and those of German-made furniture by 2%. Over the same year the pound falls by 4% against the euro. For a UK furniture maker selling in Germany, the euro price of its furniture compared with German rivals' is most likely to",
+      "options": {
+        "A": "Fall by about 4%.",
+        "B": "Rise by about 4%.",
+        "C": "Rise by about 8%.",
+        "D": "Stay about the same."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Higher UK inflation costs a UK exporter competitiveness only if it is not offset by a fall in the pound.<br />In pounds, the UK furniture is 6% dearer. Each pound now buys 4% fewer euros, so in euros the price rises by only about 6% − 4% = <strong>2%</strong> (more precisely, 1.06 × 0.96 = 1.0176).<br />German rivals' prices also rise by 2%, so the UK maker's furniture is <strong>about as competitive</strong> as before.",
+        "distractors": {
+          "A": "This counts only the fall in the pound and forgets that UK prices rose 4 points faster than German ones. The two effects roughly cancel.",
+          "B": "This is the gap between UK and German inflation, 6% − 2%. It ignores the fall in the pound, which makes UK goods cheaper in euros.",
+          "C": "This treats the fall in the pound as making UK goods dearer abroad: 6% + 4% − 2%. A weaker pound makes them cheaper in euros."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-3-q7",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "For several years, inflation runs at 6% while savings accounts pay 2% interest. Table 1 describes four people.<br />Using Table 1, the person most likely to gain from the inflation is",
+      "table": {
+        "caption": "Table 1: Four people during a period of inflation",
+        "head": [
+          "",
+          "Savings and debts",
+          "Pay"
+        ],
+        "rows": [
+          [
+            "Person 1",
+            "Owes £150,000 on a mortgage at a fixed rate of interest",
+            "Rises in line with prices"
+          ],
+          [
+            "Person 2",
+            "Has £15,000 in a savings account",
+            "Rises in line with prices"
+          ],
+          [
+            "Person 3",
+            "Has no savings or debts",
+            "Rises in line with prices"
+          ],
+          [
+            "Person 4",
+            "Has no savings or debts",
+            "Rises by 4% a year"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Person 1.",
+        "B": "Person 2.",
+        "C": "Person 3.",
+        "D": "Person 4."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Borrowers gain</strong> from inflation. Person 1's debt is fixed in pounds, while prices and their pay rise by 6% a year → the debt becomes smaller in real terms and easier to repay. Its fixed rate of interest means their repayments do not rise either.",
+        "distractors": {
+          "B": "Person 2 is a <strong>saver who loses</strong>. The savings earn 2% while prices rise by 6%, so their real value falls by about 4% a year.",
+          "C": "Person 3's pay keeps up with prices, so their real income holds steady. With no savings or debts, they neither gain nor lose.",
+          "D": "Person 4's pay rises by 4% while prices rise by 6%, so their <strong>real income falls</strong> by about 2% a year."
+        }
+      }
+    }
+  ]
+}

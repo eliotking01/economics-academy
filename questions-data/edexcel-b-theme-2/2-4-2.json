@@ -1,0 +1,269 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-2",
+  "boardName": "Edexcel B Theme 2",
+  "spec": "2.4.2",
+  "slug": "2-4-2-developed-emerging-and-developing-economies",
+  "title": "Developed, Emerging and Developing Economies",
+  "shortTitle": "Developed, Emerging and Developing Economies",
+  "pageTitle": "Developed, Emerging and Developing Economies Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on developed, emerging and developing economies for Edexcel B A-Level Economics: growth, indicators and median income.",
+  "intro": "Seven original multiple-choice questions on developed, emerging and developing economies: growth rates against income per head, indicators of development, the features of each type of economy, and mean and median incomes. Two are calculations.",
+  "notesTeaser": "Seven original multiple-choice questions on growth rates and income per head, indicators of development, types of economy, and mean and median incomes.",
+  "questions": [
+    {
+      "id": "edexcel-b-2-4-2-q1",
+      "skill": "calculation",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Table 1 shows the yearly salary of each of the seven people who work at a design agency.<br />Using Table 1, the median salary is",
+      "table": {
+        "caption": "Table 1: Salaries at a design agency",
+        "head": [
+          "",
+          "Job",
+          "Salary a year"
+        ],
+        "rows": [
+          [
+            "Person 1",
+            "Owner",
+            "£116,000"
+          ],
+          [
+            "Person 2",
+            "Designer",
+            "£30,000"
+          ],
+          [
+            "Person 3",
+            "Designer",
+            "£24,000"
+          ],
+          [
+            "Person 4",
+            "Account manager",
+            "£34,000"
+          ],
+          [
+            "Person 5",
+            "Junior designer",
+            "£22,000"
+          ],
+          [
+            "Person 6",
+            "Office manager",
+            "£28,000"
+          ],
+          [
+            "Person 7",
+            "Designer",
+            "£26,000"
+          ]
+        ]
+      },
+      "options": {
+        "A": "£28,000",
+        "B": "£34,000",
+        "C": "£40,000",
+        "D": "£69,000"
+      },
+      "answer": "A",
+      "model": {
+        "working": "The <strong>median</strong> is the salary of the person in the middle when everyone is ranked from lowest to highest.<br />Ranked: £22,000, £24,000, £26,000, <strong>£28,000</strong>, £30,000, £34,000, £116,000.<br />With seven people, the middle is the fourth: <strong>£28,000</strong>.<br />The mean is £280,000 ÷ 7 = £40,000, pulled up by the owner's salary. Six of the seven earn less than that, so the median is the better guide to a typical salary here.",
+        "distractors": {
+          "B": "This is the fourth salary in the table as listed. The median is the middle value only once the salaries are ranked in order.",
+          "C": "This is the <strong>mean</strong>: total salaries of £280,000 ÷ 7. One very high salary pulls the mean above what most people earn.",
+          "D": "This is halfway between the lowest and highest salaries, (£22,000 + £116,000) ÷ 2. The median is the middle person's salary, not the middle of the range."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-2-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A chain of mid-priced furniture shops is choosing between two towns for its next store. It wants the town where a typical household has the most to spend. Table 1 shows household incomes in each town.<br />Using Table 1, the chain should choose",
+      "table": {
+        "caption": "Table 1: Household income in two towns",
+        "head": [
+          "",
+          "Mean household income",
+          "Median household income"
+        ],
+        "rows": [
+          [
+            "Town X",
+            "£52,000",
+            "£30,000"
+          ],
+          [
+            "Town Y",
+            "£40,000",
+            "£36,000"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Town X, as its mean income is higher.",
+        "B": "Town X, as its two figures are further apart.",
+        "C": "Town Y, as its mean income is lower.",
+        "D": "Town Y, as its median income is higher."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The <strong>median</strong> is the income of the household in the middle, so it is the better guide to what a typical household has. Town Y's median, £36,000, is higher than Town X's, £30,000.<br />Town X's mean is higher, but it is £22,000 above its median. That wide gap means a few very high incomes are pulling the mean up, while the typical household there has less to spend than in Town Y.",
+        "distractors": {
+          "A": "The mean is pulled up by a few very high earners. Town X's typical household has £30,000, less than Town Y's £36,000.",
+          "B": "A wide gap between mean and median is a sign of inequality, not of a well-off typical household. It is a reason to look past Town X's mean, not to choose it.",
+          "C": "Town Y is the right choice, but not because its mean is lower. A lower mean would on its own point the other way. What counts is that its median is higher."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-2-q3",
+      "skill": "data-table",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Table 1 describes four economies.<br />Using Table 1, the economy most likely to be an emerging economy is",
+      "table": {
+        "caption": "Table 1: Four economies",
+        "head": [
+          "",
+          "Real GDP growth last year",
+          "GDP per capita",
+          "Main source of jobs"
+        ],
+        "rows": [
+          [
+            "Economy 1",
+            "1.4%",
+            "$46,000",
+            "Services"
+          ],
+          [
+            "Economy 2",
+            "6.0%",
+            "$9,500",
+            "Manufacturing"
+          ],
+          [
+            "Economy 3",
+            "2.5%",
+            "$1,100",
+            "Farming"
+          ],
+          [
+            "Economy 4",
+            "7.2%",
+            "$900",
+            "Farming"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Economy 1.",
+        "B": "Economy 2.",
+        "C": "Economy 3.",
+        "D": "Economy 4."
+      },
+      "answer": "B",
+      "model": {
+        "working": "An <strong>emerging economy</strong> is moving from developing to developed: fast growth, expanding industry and rising incomes, usually at a middle level of GDP per capita.<br />Economy 2 fits on every count: fast growth, a middle income of $9,500 a head, and manufacturing as its main source of jobs.",
+        "distractors": {
+          "A": "High income, slow but steady growth and mostly service jobs: this is a <strong>developed</strong> (mature) economy.",
+          "C": "Very low income and most jobs in farming: this is a <strong>developing</strong> economy.",
+          "D": "This is the trap: the fastest growth. But income per head is very low and most jobs are in farming, which makes it a <strong>developing</strong> economy. Growth in developing economies varies and is often unstable, so one fast year does not make an economy emerging."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-2-q4",
+      "skill": "calculation",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "In one year a country records 250,000 live births, and 7,500 of those babies die before their first birthday. Its infant mortality rate, in deaths per 1,000 live births, is",
+      "options": {
+        "A": "3",
+        "B": "30",
+        "C": "33",
+        "D": "300"
+      },
+      "answer": "B",
+      "model": {
+        "working": "The <strong>infant mortality rate</strong> is deaths of babies under one year old per 1,000 live births.<br />7,500 ÷ 250,000 × 1,000 = <strong>30</strong>.<br />It is one of the usual measures of health, alongside life expectancy at birth.",
+        "distractors": {
+          "A": "This is the rate per 100 births: 7,500 ÷ 250,000 × 100 = 3%. The infant mortality rate is measured per 1,000 live births.",
+          "C": "The division is the wrong way round: 250,000 ÷ 7,500 ≈ 33. That is the number of births for every death, not the number of deaths per 1,000 births.",
+          "D": "This multiplies by 10,000 instead of 1,000, giving deaths per 10,000 live births."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Over twenty years, millions of workers in an emerging economy leave small farms for jobs in new factories, with no change in technology. Real GDP rises mainly because",
+      "options": {
+        "A": "Farm output is not counted as part of GDP.",
+        "B": "Prices rise as workers move into the towns.",
+        "C": "The population grows as people move to cities.",
+        "D": "Workers produce more in factories than farms."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Workers move from low-output farming into factories, where each worker produces far more → the same workforce makes more → <strong>real GDP rises</strong>.<br />This is one reason poorer economies can grow faster than mature ones: they are catching up, by moving workers into more productive jobs and copying technology richer countries already use.",
+        "distractors": {
+          "A": "Farm output is part of GDP. The gain comes from each worker producing <strong>more</strong> in a factory than they did on a farm.",
+          "B": "Real GDP is adjusted for inflation, so rising prices do not raise it.",
+          "C": "Moving from the countryside to a city does not change how many people live in the country. The same workers are now producing more."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Over the last ten years Country K's real GDP has grown by 8% a year, and the UK's by 1.5%. A UK manager concludes that consumers in Country K must now be better off than UK consumers. To test this, the manager should compare",
+      "options": {
+        "A": "GDP per capita in each country.",
+        "B": "Nominal GDP growth in each country.",
+        "C": "The size of each country's population.",
+        "D": "Total real GDP in each country."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A growth rate shows how fast output is <strong>changing</strong>, not how well off people are. An economy starting from a low level can grow fast for years and still be far poorer than the UK.<br />How well off people are is shown by <strong>GDP per capita</strong>: real GDP divided by the population, the average income per person.",
+        "distractors": {
+          "B": "Nominal growth is still a growth rate, so it has the same flaw. It also includes inflation, which makes it a worse guide than the real figures the manager already has.",
+          "C": "Population on its own says nothing about income. It matters only once it is used to divide GDP, giving GDP per capita.",
+          "D": "Total GDP shows the size of an economy, not how well off its people are. A country with a huge population can have a large total GDP and a low income per person."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A UK maker of mid-priced kitchen appliances wants to sell abroad, in the markets where demand is likely to grow fastest over the next ten years. Emerging economies are the most promising markets mainly because",
+      "options": {
+        "A": "Most of their people still work in farming.",
+        "B": "Their GDP per capita is higher than the UK's.",
+        "C": "Their middle class is growing as incomes rise.",
+        "D": "Their populations are older and mostly urban."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Emerging economies grow fast, with rising incomes and a <strong>growing middle class</strong>. More households can afford mid-priced appliances each year → demand for the firm's products grows quickly.<br />Developed economies are richer, but grow slowly, so demand there grows slowly too.",
+        "distractors": {
+          "A": "This describes a <strong>developing</strong> economy. Most people working in farming on low incomes is a reason demand for appliances would be weak.",
+          "B": "Emerging economies usually have a middle level of GDP per capita, well below the UK's. Their appeal is that incomes are rising fast, not that they are already high.",
+          "D": "An older population living mostly in towns and cities describes a <strong>developed</strong> economy. Emerging economies have a growing middle class moving to the cities."
+        }
+      }
+    }
+  ]
+}

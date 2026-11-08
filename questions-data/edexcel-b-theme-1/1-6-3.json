@@ -1,0 +1,214 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-1",
+  "boardName": "Edexcel B Theme 1",
+  "spec": "1.6.3",
+  "slug": "1-6-3-profit-and-loss",
+  "title": "Profit and Loss",
+  "shortTitle": "Profit and Loss",
+  "pageTitle": "Profit and Loss Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on profit and loss for Edexcel B A-Level Economics: market entry, gross and operating profit, margins and raising profit.",
+  "intro": "Seven original multiple-choice questions on profit and loss: profit as a signal for entry, the three levels of profit, the statement of comprehensive income, profit margins and how firms raise profit.",
+  "notesTeaser": "Seven original multiple-choice questions on profit and market entry, gross and operating profit, profit margins and ways to raise profit.",
+  "questions": [
+    {
+      "id": "edexcel-b-1-6-3-q1",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A city council caps the number of taxi licences it issues. Demand for taxis in the city is steady, and the licensed firms have earned profits well above normal profit for many years. The best explanation for their profits staying high is that",
+      "options": {
+        "A": "High profits push existing firms out of the market.",
+        "B": "Profit this high is needed to keep firms in the market.",
+        "C": "The cap stops new firms entering to share the profit.",
+        "D": "With demand steady, no new firm would want to enter."
+      },
+      "answer": "C",
+      "model": {
+        "working": "In a competitive market, high profits draw new firms in: more supply → lower prices → profits squeezed back towards normal profit.<br />That only works if firms can get in. The licence cap is a <strong>legal barrier to entry</strong>: however attractive the profits, no new taxi firm can start, so the existing firms keep them.",
+        "distractors": {
+          "A": "This turns the signal round. High profits draw firms <strong>into</strong> a market; it is losses that push firms out.",
+          "B": "That describes normal profit, the smallest profit that keeps a firm in a market. These profits are well <strong>above</strong> normal profit, which is exactly what would attract new firms if they could enter.",
+          "D": "Firms are drawn in by the profit on offer, not only by growing demand. Profits well above normal would attract newcomers even with steady demand, if the cap did not stop them."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-3-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In one year a garden-furniture retailer has sales revenue of £600,000, cost of sales of £330,000, other operating expenses of £190,000 and interest on its loans of £15,000. Its profit for the year is",
+      "options": {
+        "A": "£65,000",
+        "B": "£80,000",
+        "C": "£270,000",
+        "D": "£395,000"
+      },
+      "answer": "A",
+      "model": {
+        "working": "Gross profit = £600,000 − £330,000 = £270,000.<br />Operating profit = £270,000 − £190,000 = £80,000.<br />Profit for the year = £80,000 − £15,000 = <strong>£65,000</strong>.<br />Each level of profit takes one more group of costs off the level above it.",
+        "distractors": {
+          "B": "This is operating profit. Profit for the year comes after interest, so the £15,000 still has to be taken off.",
+          "C": "This is gross profit: revenue minus cost of sales only. The operating expenses and the interest have not been taken off.",
+          "D": "This takes off the operating expenses and the interest but leaves out the cost of sales: £600,000 − £190,000 − £15,000. Cost of sales is the first cost to come off."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-3-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows a toy shop's results for two years.<br />Using Table 1, the correct statement about the shop is",
+      "table": {
+        "caption": "Table 1: A toy shop's results",
+        "head": [
+          "",
+          "Year 1",
+          "Year 2"
+        ],
+        "rows": [
+          [
+            "Sales revenue",
+            "£250,000",
+            "£320,000"
+          ],
+          [
+            "Profit for the year",
+            "£20,000",
+            "£24,000"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Its profit and its profit for the year margin both rose.",
+        "B": "Its profit rose, but its profit for the year margin fell.",
+        "C": "Its profit fell, but its profit for the year margin rose.",
+        "D": "Its profit and its profit for the year margin both fell."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Profit is an amount in pounds; profitability is profit measured against revenue.<br />Profit for the year rose from £20,000 to £24,000.<br />Margin in Year 1: 20,000 ÷ 250,000 × 100 = 8%.<br />Margin in Year 2: 24,000 ÷ 320,000 × 100 = 7.5%.<br />The shop made more profit but kept less of each £1 of sales: <strong>profit rose, profitability fell</strong>.",
+        "distractors": {
+          "A": "Profit did rise, by £4,000, but revenue rose faster: by 28%, against 20% for profit. So the margin fell from 8% to 7.5%.",
+          "C": "Both halves are the wrong way round. Profit rose from £20,000 to £24,000, and the margin fell from 8% to 7.5%.",
+          "D": "Profit rose, from £20,000 to £24,000. Only the margin fell, because revenue grew faster than profit."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-3-q4",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows a sandwich chain's revenue and costs for one year.<br />Using Table 1, its operating profit margin is",
+      "table": {
+        "caption": "Table 1: A sandwich chain's year",
+        "head": [
+          "Item",
+          "Amount"
+        ],
+        "rows": [
+          [
+            "Sales revenue",
+            "£1,250,000"
+          ],
+          [
+            "Cost of sales",
+            "£500,000"
+          ],
+          [
+            "Other operating expenses",
+            "£600,000"
+          ],
+          [
+            "Interest",
+            "£25,000"
+          ]
+        ]
+      },
+      "options": {
+        "A": "10%",
+        "B": "12%",
+        "C": "20%",
+        "D": "60%"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Gross profit = £1,250,000 − £500,000 = £750,000.<br />Operating profit = £750,000 − £600,000 = £150,000.<br />Operating profit margin = operating profit ÷ revenue × 100 = 150,000 ÷ 1,250,000 × 100 = <strong>12%</strong>.",
+        "distractors": {
+          "A": "This is the profit for the year margin: (£150,000 − £25,000) ÷ £1,250,000 × 100. Interest comes off after operating profit, so it has no place in the operating margin.",
+          "C": "This divides operating profit by gross profit: 150,000 ÷ 750,000 × 100. Every profit margin divides by <strong>revenue</strong>.",
+          "D": "This is the gross profit margin: 750,000 ÷ 1,250,000 × 100. It leaves out the £600,000 of other operating expenses."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-3-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Over two years, a pharmacy chain's gross profit margin stays at 45% while its operating profit margin falls from 15% to 9%. The most likely explanation is that",
+      "options": {
+        "A": "It has cut its selling prices.",
+        "B": "Its suppliers have raised their prices.",
+        "C": "Overheads have grown faster than sales.",
+        "D": "The interest on its loans has risen."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The gap between the gross and operating margins is overheads: costs such as rent, office salaries and marketing. The gross margin has not moved, so neither selling prices nor the cost of the goods sold is the cause. The gap has widened from 30 percentage points to 36, so overheads take a bigger share of each £1 of sales: they have risen <strong>faster than sales</strong>.",
+        "distractors": {
+          "A": "Cutting selling prices while the goods cost the same would shrink gross profit as a share of revenue. The gross margin has not moved.",
+          "B": "Dearer supplies raise cost of sales, which would show up as a lower gross margin. The gross margin has stayed at 45%.",
+          "D": "Interest is taken off after operating profit, so it changes the profit for the year margin, not the operating margin."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-3-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A chain of gyms pays off an expensive loan and replaces it with a cheaper one. Its revenue and all its other costs are unchanged. The profit margin or margins that rise are",
+      "options": {
+        "A": "All three margins.",
+        "B": "The gross profit margin only.",
+        "C": "The operating and profit for the year margins.",
+        "D": "The profit for the year margin only."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Interest is the last cost taken off, between operating profit and profit for the year. Cheaper borrowing → less interest → higher profit for the year, and so a higher <strong>profit for the year margin</strong>. Gross profit and operating profit are worked out before interest, so they and their margins do not change.",
+        "distractors": {
+          "A": "Gross profit and operating profit are both calculated before interest is taken off, so a change in interest cannot move them.",
+          "B": "Gross profit is revenue minus cost of sales. Interest plays no part in it, so this is the one margin that certainly does not change.",
+          "C": "Operating profit is calculated before interest. Only profit for the year comes after it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-3-q7",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An online pet-supplies shop spends £3,000 on a month of advertising. As a result it sells 400 extra orders, each bringing in £25 of sales revenue and costing £18 in cost of sales. All other things being equal, the advertising changes the shop's operating profit for the month by",
+      "options": {
+        "A": "−£200",
+        "B": "+£2,800",
+        "C": "+£7,000",
+        "D": "+£10,000"
+      },
+      "answer": "A",
+      "model": {
+        "working": "Extra revenue: 400 × £25 = £10,000.<br />Extra cost of sales: 400 × £18 = £7,200.<br />Extra gross profit: £10,000 − £7,200 = £2,800.<br />Advertising is an operating expense, so operating profit changes by £2,800 − £3,000 = <strong>−£200</strong>.<br />Selling more raises profit only if the extra gross profit is bigger than the cost of winning the sales. Here it falls £200 short.",
+        "distractors": {
+          "B": "This is the extra gross profit. It leaves out the £3,000 spent on the advertising that won the orders.",
+          "C": "This takes the £3,000 of advertising off the extra revenue but forgets the £7,200 the extra goods cost: £10,000 − £3,000.",
+          "D": "This is the extra sales revenue, not profit. Both the goods and the advertising have to be paid for out of it."
+        }
+      }
+    }
+  ]
+}

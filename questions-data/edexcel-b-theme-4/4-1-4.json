@@ -1,0 +1,210 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-4",
+  "boardName": "Edexcel B Theme 4",
+  "spec": "4.1.4",
+  "slug": "4-1-4-business-objectives-and-pricing-decisions",
+  "title": "Business Objectives and Pricing Decisions",
+  "shortTitle": "Business Objectives and Pricing Decisions",
+  "pageTitle": "Business Objectives and Pricing Decisions Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions for Edexcel B A-Level Economics on average and marginal cost and revenue, profit, contribution and how objectives set prices.",
+  "intro": "Seven original multiple-choice questions on business objectives and pricing decisions: average cost, average revenue and profit, marginal cost and marginal revenue, contribution, and how objectives shape prices. Four involve calculations.",
+  "notesTeaser": "Seven original multiple-choice questions on average and marginal cost and revenue, profit, contribution and how objectives shape prices, including four calculations.",
+  "questions": [
+    {
+      "id": "edexcel-b-4-1-4-q1",
+      "skill": "calculation",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A clothing firm sells 2,500 hoodies a month. Its average revenue is £24 and its average cost is £19.<br />Its monthly profit is",
+      "options": {
+        "A": "£5",
+        "B": "£12,500",
+        "C": "£47,500",
+        "D": "£60,000"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Profit = (AR − AC) × quantity.<br />Profit per hoodie: £24 − £19 = <strong>£5</strong>.<br />Monthly profit: £5 × 2,500 = <strong>£12,500</strong>.<br />Check with totals: total revenue £24 × 2,500 = £60,000, total cost £19 × 2,500 = £47,500, and £60,000 − £47,500 = £12,500.",
+        "distractors": {
+          "A": "£5 is the profit on each hoodie. The question asks for the profit on all 2,500 sold in a month.",
+          "C": "£47,500 is total cost, AC × quantity. Profit is what is left of total revenue once that cost is paid.",
+          "D": "£60,000 is total revenue, AR × quantity. It leaves out the cost of making the hoodies."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-4-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows an event caterer's weekly figures at five numbers of guests. To serve more guests, it has to lower its price per head.<br />If the caterer aims to maximise profit, then using Table 1 it should serve",
+      "table": {
+        "caption": "Table 1: An event caterer's weekly revenue and costs",
+        "head": [
+          "Guests per week",
+          "Price per head",
+          "Total revenue",
+          "Total cost"
+        ],
+        "rows": [
+          [
+            "50",
+            "£40",
+            "£2,000",
+            "£1,600"
+          ],
+          [
+            "100",
+            "£36",
+            "£3,600",
+            "£2,400"
+          ],
+          [
+            "150",
+            "£32",
+            "£4,800",
+            "£3,450"
+          ],
+          [
+            "200",
+            "£28",
+            "£5,600",
+            "£4,600"
+          ],
+          [
+            "250",
+            "£22",
+            "£5,500",
+            "£5,500"
+          ]
+        ]
+      },
+      "options": {
+        "A": "100 guests.",
+        "B": "150 guests.",
+        "C": "200 guests.",
+        "D": "250 guests."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Profit is total revenue minus total cost at each output: £400, £1,200, <strong>£1,350</strong>, £1,000 and £0. It is highest at <strong>150 guests</strong>.<br />The marginal figures show why. From 100 to 150 guests, MR = £1,200 ÷ 50 = £24 a guest and MC = £1,050 ÷ 50 = £21 → MR above MC → profit rises. From 150 to 200, MR = £800 ÷ 50 = £16 and MC = £1,150 ÷ 50 = £23 → MR below MC → profit falls.<br />So 150 guests, at £32 a head, is where MC = MR.",
+        "distractors": {
+          "A": "Profit per guest is highest at 100 (£36 − £24 = £12). But the next 50 guests still add more to revenue than to cost, so total profit is higher at 150. Profit is maximised where MC = MR, not where profit per unit is highest.",
+          "C": "Total revenue is highest at 200 guests, £5,600, so this is where a revenue maximiser would stop. The last 50 guests add £800 to revenue but £1,150 to cost.",
+          "D": "At 250 guests average revenue equals average cost (£22), so profit is zero. That is the sales maximiser's output, not the profit maximiser's."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-4-q3",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A cookery school sells 30 places on each class at £20 a place. To sell a 31st place it would have to cut the price to £19.50 for every place. Each extra student adds £4 to its costs for ingredients.<br />The amount the 31st place adds to the school's total contribution is",
+      "options": {
+        "A": "£0.50",
+        "B": "£4.50",
+        "C": "£15.50",
+        "D": "£16.00"
+      },
+      "answer": "A",
+      "model": {
+        "working": "The contribution of an extra unit is its <strong>marginal revenue minus its marginal cost</strong>.<br />Revenue from 30 places: 30 × £20 = <strong>£600</strong>.<br />Revenue from 31 places: 31 × £19.50 = <strong>£604.50</strong>.<br />MR of the 31st place: £604.50 − £600 = <strong>£4.50</strong>.<br />MC of the 31st place: <strong>£4</strong>.<br />Contribution: £4.50 − £4 = <strong>£0.50</strong>.<br />The 31st student pays £19.50, but the school loses 50p on each of the other 30 places, which takes £15 off. That is why MR is far below the price.",
+        "distractors": {
+          "B": "£4.50 is the marginal revenue. It leaves out the £4 of ingredients the extra student uses.",
+          "C": "This is the new price minus the extra cost, £19.50 − £4. It forgets that the price falls on all 30 places already sold, which costs £15 in revenue.",
+          "D": "This is the old price minus the extra cost, £20 − £4. The 31st place can only be sold at £19.50, and the price falls on the other 30 places too."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-4-q4",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A tea brand guarantees the farms it buys from a price well above the market price, so that their workers earn enough to live on. It charges more than rivals for similar tea, and accepts a lower profit than it could make by buying at the market price.<br />The brand's objective is best described as",
+      "options": {
+        "A": "Ethical or social aims.",
+        "B": "Profit maximisation.",
+        "C": "Revenue maximisation.",
+        "D": "Survival."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Paying suppliers a fair price raises the brand's costs → it charges more → it relies on customers who value its stance. It does this knowingly, accepting less profit than it could make.<br />That is an <strong>ethical or social aim</strong>: the firm puts the workers' living standards ahead of the highest possible profit.",
+        "distractors": {
+          "B": "A profit maximiser would buy at the market price, the cheapest available. The stem says the brand accepts a lower profit than it could make.",
+          "C": "A revenue maximiser keeps selling while each unit adds revenue, which usually means a lower price and more output. This brand charges more than its rivals.",
+          "D": "A firm aiming for survival cuts prices to keep cash coming in, as in a downturn. Nothing suggests the brand is struggling, and it is raising its costs on purpose."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-4-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In a downturn, a hotel cuts its weekday room rate from £90 to £45 to keep cash coming in. Each room it lets costs £20 in cleaning and laundry, and its fixed costs are the same whether or not a room is let.<br />Letting a room at £45 still makes sense because",
+      "options": {
+        "A": "Each room let adds £25 towards the hotel's fixed costs.",
+        "B": "Each room let at £45 covers its share of the fixed costs.",
+        "C": "The hotel earns more profit per room than it did at £90.",
+        "D": "The hotel's demand is price inelastic, so revenue rises."
+      },
+      "answer": "A",
+      "model": {
+        "working": "This is pricing for <strong>survival</strong>.<br />The fixed costs have to be paid whether a room is let or not. Each extra room let adds £45 to revenue and £20 to costs → it makes a <strong>contribution</strong> of £45 − £20 = £25 towards the fixed costs.<br />As long as price covers variable cost, each sale still helps. An empty room adds nothing.",
+        "distractors": {
+          "B": "Nothing in the stem shows that £45 covers any share of fixed costs, as well as the £20. The point is that it covers the £20 the room adds to costs, so whatever is left helps pay the fixed costs.",
+          "C": "Profit per room is lower at £45. The rate has halved, and the cost of cleaning a room has not changed.",
+          "D": "If demand were price inelastic, halving the rate would cut revenue, because bookings would rise by proportionally less than the price fell. The reason to let the room is its contribution, not its elasticity."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-4-q6",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A swimming pool sells 900 adult swims at £6 each and 600 junior swims at £3 each in a week.<br />The pool's average revenue per swim is",
+      "options": {
+        "A": "£4.20",
+        "B": "£4.50",
+        "C": "£4.80",
+        "D": "£8.00"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Average revenue is <strong>total revenue divided by quantity</strong>.<br />Total revenue: (900 × £6) + (600 × £3) = £5,400 + £1,800 = <strong>£7,200</strong>.<br />Total swims: 900 + 600 = <strong>1,500</strong>.<br />AR: £7,200 ÷ 1,500 = <strong>£4.80</strong>.<br />AR equals the price only when every unit sells at the same price. Here there are two prices, so AR sits between them, nearer £6 because more adults swim.",
+        "distractors": {
+          "A": "This swaps the two quantities, giving (900 × £3 + 600 × £6) ÷ 1,500. More adult swims are sold, so the average is pulled towards the adult price, not the junior one.",
+          "B": "This is the simple average of the two prices, (£6 + £3) ÷ 2. It ignores that more adult swims are sold than junior ones.",
+          "D": "This divides total revenue by the 900 adult swims only. AR divides by every swim sold, 1,500."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-4-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "For its first three years, an app-based dry-cleaning service set its price at the lowest level that covered its average cost, so as to get known. Now that it is established, its owners switch to maximising profit. Its demand and costs are the same as before.<br />Compared with before, the service is most likely to have",
+      "options": {
+        "A": "A higher price and a higher output.",
+        "B": "A higher price and a lower output.",
+        "C": "A lower price and a higher output.",
+        "D": "A lower price and a lower output."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Setting the lowest price that covers average cost is <strong>sales maximisation</strong>: it produces where AR = AC, the lowest price and highest output, earning only normal profit.<br /><strong>Profit maximisation</strong> produces where MC = MR → the highest price and the lowest output of the objectives → more profit for the owners.<br />So the switch means a higher price and fewer orders. A new firm often chases sales to get known, then switches to profit once it is established.",
+        "distractors": {
+          "A": "On a downward-sloping demand curve, a higher price means fewer customers. Output cannot rise while the price goes up.",
+          "C": "This is the switch the other way, from profit maximisation to sales maximisation.",
+          "D": "A lower price would sell more, not less. And sales maximisation already charges the lowest price that avoids a loss, so the profit maximiser's price is higher."
+        }
+      }
+    }
+  ]
+}

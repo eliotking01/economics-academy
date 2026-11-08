@@ -1,0 +1,209 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-2",
+  "boardName": "Edexcel B Theme 2",
+  "spec": "2.4.3",
+  "slug": "2-4-3-international-trade",
+  "title": "International Trade",
+  "shortTitle": "International Trade",
+  "pageTitle": "International Trade Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on international trade for Edexcel B A-Level Economics: comparative advantage, trading blocs, visibles and cheap imports.",
+  "intro": "Seven original multiple-choice questions on international trade: comparative advantage, trading blocs, trade and growth, visible and invisible trade, and the impact of cheap imports on living standards. One is a calculation.",
+  "notesTeaser": "Seven original multiple-choice questions on comparative advantage, trading blocs, trade and growth, visibles and invisibles, and cheap imports.",
+  "questions": [
+    {
+      "id": "edexcel-b-2-4-3-q1",
+      "skill": "data-table",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Table 1 shows how much one worker can make in a day in two countries.<br />Using Table 1, the correct conclusion is that",
+      "table": {
+        "caption": "Table 1: Output per worker per day",
+        "head": [
+          "",
+          "Bicycles",
+          "Tents"
+        ],
+        "rows": [
+          [
+            "Country J",
+            "4",
+            "12"
+          ],
+          [
+            "Country K",
+            "1",
+            "6"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Country J has a comparative advantage in both goods.",
+        "B": "Country J should specialise in bicycles, and Country K in tents.",
+        "C": "Country J should specialise in tents, and Country K in bicycles.",
+        "D": "Country K cannot gain from trade, as it is worse at both."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Country J makes more of both goods, so it has the <strong>absolute advantage</strong> in both. Who should specialise in what depends on <strong>opportunity cost</strong>.<br />Opportunity cost of 1 bicycle: Country J gives up 12 ÷ 4 = <strong>3 tents</strong>; Country K gives up 6 ÷ 1 = <strong>6 tents</strong>. J's is lower, so J has the comparative advantage in bicycles.<br />Opportunity cost of 1 tent: Country J gives up 4 ÷ 12 = 0.33 bicycles; Country K gives up 1 ÷ 6 = <strong>0.17 bicycles</strong>. K's is lower, so K has the comparative advantage in tents.",
+        "distractors": {
+          "A": "Country J has the <strong>absolute</strong> advantage in both, as it makes more of each. But a lower opportunity cost in one good means a higher one in the other, so no country can have a comparative advantage in both.",
+          "C": "This comes from working out the opportunity costs upside down. Giving up 3 tents for a bicycle in J against 6 in K means J's bicycles cost less, so J should make bicycles.",
+          "D": "Being worse at both does not stop Country K gaining. It gives up fewer bicycles for each tent than J does, so it gains by making tents and trading them."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-3-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A US maker of washing machines sells across the EU, a trading bloc, but pays a tariff on every machine it ships in. It decides to build a factory in Poland, an EU member. The main reason is that",
+      "options": {
+        "A": "Machines made in Poland face no tariff inside the EU.",
+        "B": "Taxes on company profits are lower in Poland than in the US.",
+        "C": "The EU bans imports of washing machines from outside it.",
+        "D": "The EU pays a grant to every foreign firm that sets up there."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A <strong>trading bloc</strong> is a group of countries that reduce or remove barriers to trade between themselves. Firms inside it sell to the other members without tariffs; firms outside it can face tariffs.<br />Machines made in Poland are made inside the bloc → no tariff when they are sold in France or Germany → lower costs than shipping them in from the US. That is why many foreign firms set up inside a bloc to sell to it.",
+        "distractors": {
+          "B": "Lower taxes on profits can draw a firm to a country, but nothing in the stem suggests tax is behind this decision. The stem points to the tariff, which setting up inside the bloc removes.",
+          "C": "The firm already sells across the EU, paying a tariff on each machine, so imports are not banned. A tariff is a tax on imports, not a ban.",
+          "D": "Nothing about a trading bloc means paying grants to firms that set up there. The bloc's effect is on barriers to trade."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-3-q3",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Each of the following involves a payment between the UK and another country. For the UK, the invisible import is",
+      "options": {
+        "A": "A French firm pays a London law firm to handle a contract.",
+        "B": "A UK family pays for a ski holiday in Austria.",
+        "C": "A UK firm sells whisky to a shop in Japan.",
+        "D": "A UK retailer buys laptops made in Taiwan."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Invisible</strong> trade is trade in services, such as banking, insurance, tourism and education. An <strong>import</strong> is bought from another country, so money flows out of the UK.<br />The UK family is buying a service, a holiday, from Austria, and money leaves the UK to pay for it. For the UK, it is an invisible import.",
+        "distractors": {
+          "A": "Legal advice is a service, so this is invisible trade. But money flows <strong>into</strong> the UK from France, so it is an invisible <strong>export</strong>.",
+          "C": "Whisky is a good, so this is visible trade. Money flows into the UK, so it is a visible export.",
+          "D": "This is an import, but laptops are goods, so it is a <strong>visible</strong> import."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Cheap imported bicycles start to arrive in the UK in large numbers. The group most likely to lose is",
+      "options": {
+        "A": "Courier firms that buy bikes for their riders.",
+        "B": "Families buying bikes for their children.",
+        "C": "Shops that sell the imported bikes.",
+        "D": "Workers at UK factories that make bikes."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Cheap imports win customers from UK producers → their sales and profits fall → factories close and jobs go → <strong>lower incomes for workers</strong> in that industry.<br />Whether living standards fall for good depends on whether those workers can retrain or move into growing industries.",
+        "distractors": {
+          "A": "Courier firms gain. Bikes are an input for them, so cheaper bikes mean lower costs, and lower prices or higher profit.",
+          "B": "Families gain. Each pound buys more, so their real incomes and standard of living rise.",
+          "C": "Shops selling the imports gain. Cheaper bikes bring in more buyers, and they can buy their stock for less."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-3-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A foreign producer sells steel in the UK below the cost of making it, to gain market share from UK steelmakers. For UK firms that use steel to make machinery, the main long-term risk is that",
+      "options": {
+        "A": "Steel prices rise once UK steelmakers have closed.",
+        "B": "Their costs rise at once, as imported steel is dearer.",
+        "C": "Their customers switch to imported machinery.",
+        "D": "Their sales fall, as the cheap steel is weaker."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Low prices from lower costs or better methods are a genuine gain. Prices kept low by selling <strong>below cost</strong> are different.<br />Steel sold below cost → UK steelmakers lose sales and close → the foreign producer faces little competition → it can <strong>raise its prices</strong> later. The machinery makers gain now, but may pay more in the long run, with fewer suppliers to turn to.",
+        "distractors": {
+          "B": "In the short run, steel is cheaper, not dearer, so the machinery makers' costs fall. The risk comes later.",
+          "C": "Cheap steel lowers the UK machinery makers' costs, which makes them more competitive against imported machinery, not less. The risk is to the price of steel once the foreign producer dominates the market.",
+          "D": "Nothing in the stem says the steel is of lower quality. It is cheap because it is sold below cost."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-3-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A UK maker of electric scooters starts selling across Europe, and its output rises from 10,000 to 50,000 scooters a year. The main way this makes it more competitive is through",
+      "options": {
+        "A": "Higher prices, as foreign buyers will pay more.",
+        "B": "Less competition, as it now sells abroad.",
+        "C": "Lower average costs, from economies of scale.",
+        "D": "Lower tariffs, as exporters pay none."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Selling to a bigger market → the firm produces on a larger scale → <strong>economies of scale</strong> lower its average cost → it can charge more competitive prices, or earn higher profits to invest.<br />This is one of the ways trade raises a country's growth.",
+        "distractors": {
+          "A": "Selling abroad does not mean foreign buyers pay more. A higher price would make the firm less competitive, not more.",
+          "B": "Selling abroad brings more competition, not less: the firm now faces rivals in every country it sells to.",
+          "D": "Exporting does not remove tariffs. Whether its scooters face a tariff depends on the trade rules between the UK and each country it sells to."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-3-q7",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows a country's trade over one year.<br />Its exports of goods and services together, minus its imports of goods and services together, come to",
+      "table": {
+        "caption": "Table 1: A country's trade in one year",
+        "head": [
+          "",
+          "Exports (£bn)",
+          "Imports (£bn)"
+        ],
+        "rows": [
+          [
+            "Goods (visibles)",
+            "400",
+            "520"
+          ],
+          [
+            "Services (invisibles)",
+            "360",
+            "220"
+          ]
+        ]
+      },
+      "options": {
+        "A": "−£120bn",
+        "B": "+£20bn",
+        "C": "+£140bn",
+        "D": "+£260bn"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Total exports = £400bn + £360bn = <strong>£760bn</strong>.<br />Total imports = £520bn + £220bn = <strong>£740bn</strong>.<br />£760bn − £740bn = <strong>+£20bn</strong>.<br />The country imports £120bn more goods than it exports, but exports £140bn more services than it imports, so overall it sells slightly more than it buys. This is the same pattern as the UK's: a gap on goods, more than covered here by services.",
+        "distractors": {
+          "A": "This is goods only: £400bn − £520bn. The stem asks for goods and services together, so the invisibles must be included.",
+          "C": "This is services only: £360bn − £220bn. It leaves out the gap on goods.",
+          "D": "This adds the two gaps together, £120bn + £140bn, ignoring that the goods gap is negative. Imports exceed exports for goods, so that gap must be subtracted."
+        }
+      }
+    }
+  ]
+}

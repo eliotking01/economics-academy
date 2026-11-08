@@ -1,0 +1,204 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-2",
+  "boardName": "Edexcel B Theme 2",
+  "spec": "2.2.3",
+  "slug": "2-2-3-non-price-competition",
+  "title": "Types of Non-Price Competition",
+  "shortTitle": "Non-Price Competition",
+  "pageTitle": "Non-Price Competition Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on non-price competition for Edexcel B A-Level Economics: the demand curve, advertising, promotion and distribution.",
+  "intro": "Seven original multiple-choice questions on non-price competition: how marketing shifts the demand curve and changes its elasticity, advertising and other promotion, distribution methods, and choosing a marketing approach.",
+  "notesTeaser": "Seven original multiple-choice questions on marketing and the demand curve, advertising and promotion, distribution methods and choosing a marketing approach.",
+  "questions": [
+    {
+      "id": "edexcel-b-2-2-3-q1",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "A cycling-clothing brand runs a campaign built around its riders' race wins, and buyers come to see its jerseys as better than any rival's. Sketching the demand curve for its jerseys before and after the campaign, the new curve is",
+      "options": {
+        "A": "Further left, and steeper.",
+        "B": "Further right, and flatter.",
+        "C": "Further right, and steeper.",
+        "D": "In the same place, but steeper."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Successful marketing changes the demand curve in two ways.<br />1. More buyers know about the jerseys and want them → more is demanded at every price → the curve <strong>shifts to the right</strong>.<br />2. Buyers see the jerseys as better than rivals' → fewer close substitutes in their eyes → demand becomes <strong>more price inelastic</strong> → the curve is <strong>steeper</strong>.<br />Together these let the brand sell more at a higher price.",
+        "distractors": {
+          "A": "The steeper slope is correct, but a successful campaign raises demand at every price, so the curve moves right, not left.",
+          "B": "The rightward shift is correct, but a flatter curve means demand is <strong>more</strong> price elastic. Buyers who see the jerseys as better than any rival's are less likely to switch when the price rises, so the curve becomes steeper.",
+          "D": "This is half the answer. Demand does become more price inelastic, but the campaign also makes more buyers want the jerseys at every price, which shifts the curve to the right."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-3-q2",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A firm launches the first home kit that tests tap water for lead. Its adverts explain what the kit checks, how to use it and which chemists stock it. This advertising is best described as",
+      "options": {
+        "A": "Informative, as it shifts demand for the kit to the right.",
+        "B": "Informative, as it makes demand for the kit more price inelastic.",
+        "C": "Persuasive, as it builds loyalty to the kit's brand.",
+        "D": "Persuasive, as it shifts demand for the kit to the right."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Informative advertising</strong> tells customers that a product exists, what it does and where to get it. These adverts do exactly that for a product nobody has seen before. More people learn about the kit and where to buy it → more buyers at every price → demand <strong>shifts to the right</strong>.",
+        "distractors": {
+          "B": "The type is right but the effect belongs to persuasive advertising. Demand becomes more price inelastic when advertising builds a brand image and loyalty, not when it explains what a product does.",
+          "C": "Persuasive advertising builds a brand image that customers identify with. These adverts give facts about a new product and where to find it, which makes them informative.",
+          "D": "These adverts give facts, not a brand image, so they are informative, not persuasive."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-3-q3",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A breakfast-cereal maker is choosing between four promotions. The one that is really a short-term price cut, rather than non-price competition, is",
+      "options": {
+        "A": "A competition with a family holiday as the prize.",
+        "B": "A free sample handed out at railway stations.",
+        "C": "A sponsorship deal with a local rugby club.",
+        "D": "A voucher for 30% off the next box bought."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Non-price competition wins customers through anything other than a lower price. A voucher for 30% off simply lowers the price the customer pays for the next box. Money-off offers are <strong>short-term price cuts</strong>, and like any price cut they lower the margin on every box sold with them.",
+        "distractors": {
+          "A": "A competition is a sales promotion that leaves the price unchanged. It gives customers a reason to buy, and to come back, without lowering what they pay.",
+          "B": "A free sample gets people to try the cereal, so that they buy it later at its normal price. It is a sales promotion, not a cut in the price of the boxes customers buy.",
+          "C": "Sponsorship links the brand with something customers already like. It is a promotional method that does not touch the price."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A small firm sells its hot sauces only through its own website. A national supermarket chain agrees to stock them in every store, and keeps part of the price of each bottle sold there. Compared with selling only online, the most likely result is",
+      "options": {
+        "A": "Higher total sales, and a higher average margin per bottle.",
+        "B": "Higher total sales, and a lower average margin per bottle.",
+        "C": "Lower total sales, and a higher average margin per bottle.",
+        "D": "Lower total sales, and a lower average margin per bottle."
+      },
+      "answer": "B",
+      "model": {
+        "working": "This is a change in <strong>distribution</strong>, from selling direct to selling through an intermediary.<br />Wider distribution: the sauces are on the shelf in every store → shoppers find them on every trip → demand shifts right → <strong>higher sales</strong>.<br />The supermarket's cut: each bottle sold there earns the firm less than one sold on its own website → the <strong>average margin per bottle falls</strong>.",
+        "distractors": {
+          "A": "Sales rise, but the margin cannot. Selling direct means no retailer takes a share, so every bottle sold through the supermarket earns less than one sold online.",
+          "C": "This gets both effects backwards. Being stocked in every store makes the sauces far easier to find, so sales rise, and the supermarket's share lowers the margin.",
+          "D": "The margin does fall, but sales do not. The website still sells as before, and every supermarket store becomes a new place to buy."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-3-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A maker of designer sunglasses stops supplying discount websites. It now sells only through its own shops and a few chosen department stores. The main gain it expects is",
+      "options": {
+        "A": "A premium price, with buyers less likely to switch.",
+        "B": "Higher sales, as more buyers can find its sunglasses.",
+        "C": "Lower costs, as it no longer pays any retailer a share.",
+        "D": "More direct competition with cheaper brands on price."
+      },
+      "answer": "A",
+      "model": {
+        "working": "This is <strong>selective distribution</strong>. Selling only through its own shops and a few chosen stores → the sunglasses look exclusive → buyers see fewer close substitutes → demand becomes <strong>more price inelastic</strong> → buyers are less likely to switch to rivals when the price rises → the firm can charge a <strong>premium price</strong>. It gives up some sales by leaving the discount websites, but earns more on each pair it sells.",
+        "distractors": {
+          "B": "Fewer outlets means fewer places to find the sunglasses, not more. Wider distribution raises sales; this firm is narrowing its distribution on purpose.",
+          "C": "The department stores still take a share of the price, and running its own shops costs money too. The aim is a higher price, not lower costs.",
+          "D": "This is the opposite of the aim. Leaving discount websites takes the sunglasses away from the places where buyers compare them with cheaper brands on price."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-3-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Three national chains supply almost all pizza deliveries in a country. Each doubles its spending on TV advertising in the same year. Total demand for pizza delivery barely changes. The most likely result for each chain is",
+      "options": {
+        "A": "A larger market share each, and higher profit.",
+        "B": "A smaller market share each, and lower costs.",
+        "C": "Lower costs per pizza, from many extra sales.",
+        "D": "Much the same share each, and lower profit."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Whether promotion pays depends on how rivals respond. Each chain's adverts pull customers one way and its rivals' adverts pull them back → each chain holds on to roughly the share it had → total demand barely changes, so sales barely change → but every chain now pays twice as much for advertising → <strong>higher costs, lower profit</strong>.",
+        "distractors": {
+          "A": "All three cannot gain market share at once: their shares already add up to almost the whole market. With every rival advertising harder too, each ends up with roughly the share it started with.",
+          "B": "Doubling advertising spending raises costs, it does not lower them. Nor does any chain lose share, since all three advertised more by the same amount.",
+          "C": "Total demand barely changes, so there are no extra sales to spread costs over. Each chain sells about the same number of pizzas while paying more for advertising."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-3-q7",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes four firms.<br />Using Table 1, the firm best suited to national TV advertising and stocking its product in as many shops as possible is",
+      "table": {
+        "caption": "Table 1: Four firms and their marketing budgets",
+        "head": [
+          "",
+          "Product",
+          "Customers",
+          "Yearly marketing budget"
+        ],
+        "rows": [
+          [
+            "Firm 1",
+            "Handmade wedding dresses",
+            "Brides within 30 miles of its shop",
+            "£8,000"
+          ],
+          [
+            "Firm 2",
+            "Chewing gum, a low-priced impulse buy",
+            "Shoppers of all ages across the UK",
+            "£15 million"
+          ],
+          [
+            "Firm 3",
+            "Software that runs dental practices",
+            "Dental practices across the UK",
+            "£400,000"
+          ],
+          [
+            "Firm 4",
+            "Iced tea, a low-priced impulse buy",
+            "Shoppers of all ages across the UK",
+            "£20,000"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Firm 1.",
+        "B": "Firm 2.",
+        "C": "Firm 3.",
+        "D": "Firm 4."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The right marketing approach depends on the <strong>target market</strong>, the <strong>product</strong> and the <strong>budget</strong>. Firm 2 passes all three tests:<br />Target market: shoppers of all ages across the whole country, which is what national TV reaches.<br />Product: a low-priced impulse buy needs to be on as many shelves as possible, because nobody travels to find chewing gum.<br />Budget: £15 million a year can pay for a national TV campaign.",
+        "distractors": {
+          "A": "Firm 1 serves a small, local niche. National TV would mostly reach people who will never buy, and £8,000 a year could not pay for it. It suits social media and a few local channels.",
+          "C": "Firm 3's customers are a small group of specialist businesses, and its product is complex. It needs targeted advertising that explains what the software does, not adverts aimed at every shopper.",
+          "D": "This is the trap. Iced tea is the right kind of product for national TV and wide distribution, but a £20,000 budget could not pay for a national TV campaign. A firm with a small budget has to lean on differentiation and social media instead."
+        }
+      }
+    }
+  ]
+}

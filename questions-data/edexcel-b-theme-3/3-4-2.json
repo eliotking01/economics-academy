@@ -1,0 +1,191 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-3",
+  "boardName": "Edexcel B Theme 3",
+  "spec": "3.4.2",
+  "slug": "3-4-2-ethical-issues",
+  "title": "Ethical Issues",
+  "shortTitle": "Ethical Issues",
+  "pageTitle": "Ethical Issues for MNCs Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions for Edexcel B A-Level Economics on MNC ethics: stakeholder conflicts, living wages, supply chains, pollution and marketing.",
+  "intro": "Seven original multiple-choice questions on the ethical issues multinationals face: stakeholder conflicts, pay and working conditions, pollution and waste, supply chains, misleading labels and promotion, and the trade-off between ethics and profit. One is a calculation.",
+  "notesTeaser": "Seven original multiple-choice questions on MNC ethics, from living wages and supply chains to pollution, marketing and the trade-off with profit, including a calculation.",
+  "questions": [
+    {
+      "id": "edexcel-b-3-4-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A factory in Country F makes toys for a UK-owned MNC. It pays each worker $150 a month, which is the legal minimum wage there. Local charities estimate that a worker needs $210 a month to pay for food, housing and healthcare.<br />The factory's pay is best described as",
+      "options": {
+        "A": "Above the legal minimum, but below a living wage.",
+        "B": "At a living wage, as the law sets that level.",
+        "C": "At the legal minimum, but below a living wage.",
+        "D": "Below both the legal minimum and a living wage."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A <strong>living wage</strong> is the pay a worker needs to cover basic needs, such as food, housing and healthcare, where they live. Here that is $210 a month.<br />The factory pays $150, exactly the legal minimum. So it breaks no law, but its pay is $60 a month short of a living wage.<br />This is why legal does not mean ethical: whether the pay is fair is a separate question from whether it is lawful.",
+        "distractors": {
+          "A": "The factory pays $150, which is the legal minimum, not above it. It is right that the pay is below a living wage.",
+          "B": "A legal minimum wage and a living wage are different things. The minimum is what the law requires. The living wage is what basic needs cost, here $210. They need not be the same.",
+          "D": "The factory pays exactly the legal minimum, so it is not below it. Only the living wage is out of reach."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-2-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A UK supermarket chain cuts the price it pays its overseas banana growers by 15%. It passes the whole saving on to UK shoppers as lower prices, so its own profit is unchanged. The growers respond by cutting their workers' pay.<br />The two stakeholder groups whose interests clash most directly here are",
+      "options": {
+        "A": "Its shareholders and its UK shoppers.",
+        "B": "Its shareholders and the growers' workers.",
+        "C": "Its UK shoppers and the growers' workers.",
+        "D": "Its UK store staff and its UK shoppers."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Follow the money. Lower prices for UK shoppers → the supermarket pays its growers less → the growers cut costs → their workers' pay falls.<br />The gain goes to the shoppers and the cost falls on the growers' workers, in another country but still stakeholders in the chain's business. Their interests clash directly: one group's lower prices are paid for by the other's lower pay.",
+        "distractors": {
+          "A": "Shoppers gain, but shareholders lose nothing: the stem says the chain's profit is unchanged. There is no clash between them here.",
+          "B": "This is a common clash when an MNC holds pay down to raise profit. Here, though, the chain's profit is unchanged, so its shareholders gain nothing from the workers' lower pay.",
+          "D": "Nothing in the stem changes the pay or jobs of the chain's own store staff. The cost of the lower prices falls on workers abroad."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-2-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A fashion MNC tells every factory that makes its clothes that it will now pay 10% less per garment, and that each order must be delivered in half the time. The factories are owned by local firms, not by the MNC.<br />For the factories' workers, the most likely result is",
+      "options": {
+        "A": "Higher pay, as the factories need staff quickly.",
+        "B": "Longer hours, often unpaid, as costs must be cut.",
+        "C": "No change, as the MNC does not employ them.",
+        "D": "Shorter hours, as orders move to rival factories."
+      },
+      "answer": "B",
+      "model": {
+        "working": "This is pressure passed down a <strong>supply chain</strong>. The factories earn 10% less per garment → they must cut costs to stay in profit. They must also make each order twice as fast → they need more hours from the same staff.<br />The cheapest way to do both is to make workers stay late without paying them for it → unpaid overtime. This is exploitation of labour, even though the MNC employs none of the workers itself.",
+        "distractors": {
+          "A": "Hiring extra staff at higher pay would raise the factories' costs just as their income per garment falls. The more likely response is to get more hours from the workers they have.",
+          "C": "The MNC does not employ the workers, but its terms set what their employers can afford. Problems in a supply chain usually come from this pressure, which is why they are hard to see from head office.",
+          "D": "The orders are staying with these factories, on worse terms. The problem is getting each order out in half the time, which means longer hours, not shorter."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-2-q4",
+      "skill": "data-table",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Table 1 lists practices found at four MNCs.<br />Using Table 1, the practice that is an example of misleading product labelling is that of",
+      "table": {
+        "caption": "Table 1: Practices found at four MNCs",
+        "head": ["", "Practice"],
+        "rows": [
+          [
+            "MNC 1",
+            "A dye works in its supply chain pours untreated waste into a river."
+          ],
+          [
+            "MNC 2",
+            "Its shampoo is labelled \"100% natural\" but contains synthetic preservatives."
+          ],
+          [
+            "MNC 3",
+            "One of its suppliers keeps workers' passports until their contracts end."
+          ],
+          [
+            "MNC 4",
+            "It hands out free cans of its energy drink at the gates of secondary schools."
+          ]
+        ]
+      },
+      "options": {
+        "A": "MNC 1.",
+        "B": "MNC 2.",
+        "C": "MNC 3.",
+        "D": "MNC 4."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Misleading product labelling</strong> is a label that claims a product is better, healthier or more \"natural\" than it is. MNC 2's shampoo is labelled \"100% natural\" but contains synthetic preservatives → customers buy it on a false belief → sales rise at first, but the firm risks fines and lost trust when it is found out.<br />All four practices raise ethical issues, but only MNC 2's is about what the product's label says.",
+        "distractors": {
+          "A": "Pouring untreated waste into a river is an environmental issue, waste disposal. It puts an external cost on people downstream, but it has nothing to do with a label.",
+          "C": "Keeping workers' passports is exploitation of labour in the supply chain, and can amount to forced labour. It is an ethical issue, but not a marketing one.",
+          "D": "Handing out energy drinks at school gates is the other marketing issue in the spec, an <strong>inappropriate promotional activity</strong>: promotion aimed at people the product could harm. It is about who the product is promoted to, not what its label says."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-2-q5",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A garment factory supplying an MNC employs 300 workers, each paid $120 a month, and makes 12,000 shirts a month. After a campaign, it raises pay to a living wage of $150 a month. With the same 300 workers, who now stay longer and work harder, output rises to 12,500 shirts a month.<br />The labour cost of each shirt rises by",
+      "options": {
+        "A": "$0.60",
+        "B": "$0.75",
+        "C": "$3.60",
+        "D": "$3.75"
+      },
+      "answer": "A",
+      "model": {
+        "working": "Labour cost per shirt = total pay ÷ shirts made.<br />Before: 300 × $120 = $36,000, and $36,000 ÷ 12,000 = <strong>$3.00</strong> per shirt.<br />After: 300 × $150 = $45,000, and $45,000 ÷ 12,500 = <strong>$3.60</strong> per shirt.<br />Rise: $3.60 − $3.00 = <strong>$0.60</strong>.<br />Pay rose by 25%, but the labour cost of each shirt rose by only 20%. Better-paid staff who stay longer and work harder win back part of the cost of paying more.",
+        "distractors": {
+          "B": "This divides the new pay bill by the old output: $45,000 ÷ 12,000 = $3.75, a rise of $0.75. It ignores the extra 500 shirts the better-paid workers make, which spreads the pay bill more thinly.",
+          "C": "This is the new labour cost of each shirt, $3.60. The question asks how much it rises, so the old cost of $3.00 has to be taken away.",
+          "D": "Two errors together. It divides the new pay bill by the old output, $45,000 ÷ 12,000 = $3.75, and then gives that new cost rather than the rise."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The directors of a clothing MNC are paid bonuses based only on this year's profit. They are offered a plan to check every supplier factory each year. It would cost £3 million a year from now on, while the gains from a better reputation would build up over several years.<br />The directors are most likely to",
+      "options": {
+        "A": "Accept the plan, as it would cut this year's costs.",
+        "B": "Accept the plan, as its gains would all come at once.",
+        "C": "Reject the plan, as it would never add to profit.",
+        "D": "Reject the plan, as its costs come before its gains."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Ethical choices tend to <strong>cost money now</strong>, while the gains in reputation, sales and lower risk build up over years. The checks cost £3 million from the first year → this year's profit falls → the directors' bonuses fall. The gains arrive later, after the bonuses have been decided.<br />So the directors are likely to turn the plan down, even if it would pay for itself in the long run.",
+        "distractors": {
+          "A": "Checking every supplier factory costs £3 million a year, so it raises this year's costs rather than cutting them.",
+          "B": "The stem says the gains build up over several years. A better reputation takes time to earn, which is the problem for directors judged on one year.",
+          "C": "The plan may well add to profit, once the gains in reputation build up. The reason to reject it is timing, not that it never pays."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "An MNC's chemical plant in Country Q is allowed by local law to pour its waste into a river untreated. Treating the waste would cost $2 million a year. The plant sells only to other manufacturers, who buy on price.<br />The strongest profit-based reason for the MNC to treat its waste anyway is that it",
+      "options": {
+        "A": "Avoids costs if the law tightens or the dumping is exposed.",
+        "B": "Lowers the plant's unit costs below those of its rivals.",
+        "C": "Moves the cost of the waste onto people outside the firm.",
+        "D": "Wins more orders from the firms that care about its record."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Acting ethically can raise profit by raising sales or by lowering risk. Here the sales route is weak: the plant's buyers choose on price, so a better record wins it few orders.<br />The risk route still works. Untreated waste → the river is poisoned for people downstream → if the law tightens, or the dumping is exposed, the MNC faces fines, clean-up costs and lost contracts. Treating its waste now protects it against those costs later.",
+        "distractors": {
+          "B": "Treating waste adds $2 million a year to the plant's costs, so it raises unit costs. It puts the plant at a cost disadvantage against rivals who keep dumping.",
+          "C": "It is the other way round. Dumping is what moves the cost onto people outside the firm, as an external cost. Treating the waste brings that cost back inside.",
+          "D": "Some buyers reward a good record, but the stem says this plant's buyers choose on price. A better record is unlikely to win it many orders."
+        }
+      }
+    }
+  ]
+}

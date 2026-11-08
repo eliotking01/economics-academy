@@ -1,0 +1,202 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-4",
+  "boardName": "Edexcel B Theme 4",
+  "spec": "4.3.1",
+  "slug": "4-3-1-market-failure-in-society",
+  "title": "Market Failure in Society",
+  "shortTitle": "Market Failure in Society",
+  "pageTitle": "Market Failure in Society Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions for Edexcel B A-Level Economics on market failure: merit, demerit and public goods, factor immobility and information.",
+  "intro": "Seven original multiple-choice questions on market failure in society: under-consumption of merit goods, public goods, over-consumption of demerit goods, factor immobility, asymmetric information and the consequences of environmental change. One is a calculation.",
+  "notesTeaser": "Seven original multiple-choice questions on merit, demerit and public goods, factor immobility, asymmetric information and environmental change, including one calculation.",
+  "questions": [
+    {
+      "id": "edexcel-b-4-3-1-q1",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In one town, far fewer young people stay in education after 16 than in the rest of the country, because many underestimate how much more they would earn with further qualifications.<br />For a manufacturer that recruits its staff in the town, the most likely long-term effect is",
+      "options": {
+        "A": "Higher costs per unit, as its staff are less productive.",
+        "B": "Higher sales, as more young people earn a wage sooner.",
+        "C": "Lower costs per unit, as skilled workers are more plentiful.",
+        "D": "Lower training costs, as its staff need less training."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Education is a <strong>merit good</strong>, and the town's young people are under-consuming it: they count only their private benefit, and underestimate even that.<br />For a local employer the chain is: fewer people stay in education → a less skilled workforce → lower productivity → <strong>higher costs per unit</strong>. That is the consequence of under-consumption for firms.",
+        "distractors": {
+          "B": "Leaving early does mean a wage sooner, but lower skills mean lower earnings over a working life. The long-term effect on local spending is more likely to be negative, and the stem is about the firm as an employer.",
+          "C": "The wrong way round. Fewer people gaining qualifications makes skilled workers in the town scarcer, not more plentiful.",
+          "D": "Staff who left education earlier arrive with fewer skills, so the firm is likely to need to train them more, not less."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-1-q2",
+      "skill": "calculation",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A haulage firm employs 200 drivers, 50 of whom smoke. On average a smoker takes 9 days off sick a year and a non-smoker takes 5. Each day off costs the firm £160 for an agency driver to cover.<br />The extra cost a year that the firm bears because some of its drivers smoke is",
+      "options": {
+        "A": "£640",
+        "B": "£32,000",
+        "C": "£72,000",
+        "D": "£128,000"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Each smoker takes 9 − 5 = <strong>4</strong> extra days off a year.<br />Extra days across the firm: 50 × 4 = 200 days.<br />Extra cost: 200 × £160 = <strong>£32,000</strong> a year.<br />The firm is not part of the market for cigarettes, so this is a cost that falls on a third party. Smokers count only their private costs, which is one reason a <strong>demerit good</strong> is over-consumed: firms bear lost output and cover costs that the smokers never pay.",
+        "distractors": {
+          "A": "This is the extra cost for one smoker, 4 × £160. The firm has 50 smokers.",
+          "C": "This counts every sick day the smokers take, 50 × 9 × £160. Non-smokers take 5 days off too, so only the extra 4 days are caused by smoking.",
+          "D": "This applies the 4 extra days to all 200 drivers. Only the 50 smokers take them."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-1-q3",
+      "skill": "data-table",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Table 1 shows unemployed workers and unfilled vacancies in three occupations in the two regions of a country.<br />Using Table 1, the vacancies most likely to stay unfilled because of geographical immobility are",
+      "table": {
+        "caption": "Table 1: Unemployed workers and unfilled vacancies, by occupation and region",
+        "head": [
+          "",
+          "North: unemployed",
+          "North: vacancies",
+          "South: unemployed",
+          "South: vacancies"
+        ],
+        "rows": [
+          [
+            "Chefs",
+            "520",
+            "500",
+            "640",
+            "610"
+          ],
+          [
+            "Electricians",
+            "1,800",
+            "150",
+            "120",
+            "1,600"
+          ],
+          [
+            "Software developers",
+            "40",
+            "700",
+            "60",
+            "1,300"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Chef vacancies in the North.",
+        "B": "Electrician vacancies in the North.",
+        "C": "Electrician vacancies in the South.",
+        "D": "Software developer vacancies in the South."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Geographical immobility means workers with the right skills cannot move to where the jobs are.<br /><strong>Electricians:</strong> the North has 1,800 unemployed and only 150 vacancies, while the South has 1,600 vacancies and only 120 unemployed. The skills exist, but in the wrong region, so the South's vacancies go unfilled because electricians in the North cannot move, for example because of housing costs or family ties.<br /><strong>Software developers:</strong> there are more vacancies than unemployed developers in <em>both</em> regions, so moving would not fill them. Too few people have the skills, which is occupational immobility.<br /><strong>Chefs:</strong> each region has more unemployed chefs than vacancies, so the vacancies can be filled locally.",
+        "distractors": {
+          "A": "The North has 520 unemployed chefs for 500 vacancies, so there are enough local workers to fill them. No one needs to move.",
+          "B": "This is where the unemployed electricians are, not where the shortage is. The North has 1,800 unemployed electricians for only 150 vacancies.",
+          "D": "These vacancies will stay unfilled, but not because of geographical immobility. The North also has more developer vacancies than unemployed developers, so there is no one to move. The cause is occupational immobility: the unemployed lack the skills."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-1-q4",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A bakery's oven breaks down. The repair firm can see that a £400 part would fix it, but tells the bakery the oven cannot be repaired and sells it a new one for £9,000. The bakery's owner has no way to check what the firm says.<br />The bakery has lost out because of",
+      "options": {
+        "A": "A negative externality, as the cost falls on the bakery.",
+        "B": "Asymmetric information, as the repair firm knows more.",
+        "C": "Imperfect information, as neither side knew the oven's state.",
+        "D": "Monopoly power, as the repair firm sets the price."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Asymmetric information</strong> is when one party to a transaction has more or better information than the other. The repair firm knows whether the oven can be fixed; the bakery cannot check. The better-informed side has taken advantage, selling a £9,000 oven where a £400 part would have done.",
+        "distractors": {
+          "A": "An externality falls on a <strong>third party</strong> outside the transaction. The bakery is the buyer, so its loss is a private cost.",
+          "C": "The repair firm did know. If neither side could tell, the information would be imperfect on both sides. Here one side knew more, which is what makes it asymmetric.",
+          "D": "Nothing in the stem says the bakery had no other firm to turn to. The repair firm's advantage came from what it knew, not from a lack of rivals."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-1-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Floods and heatwaves become more common in the UK as the climate changes.<br />Of the following firms, the one most likely to see demand for its product rise is",
+      "options": {
+        "A": "A builder of flood barriers.",
+        "B": "A hotel on a river bank.",
+        "C": "A maker of gas boilers.",
+        "D": "A wheat farm on low-lying land."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Climate change raises costs for many firms, but some industries gain. Demand rises for the things that protect against it or cut emissions, such as flood defences, insulation and renewable energy. A builder of flood barriers sells exactly what more frequent floods make people want.",
+        "distractors": {
+          "B": "More floods are a threat to a riverside hotel: damaged property, closures and higher insurance premiums. Its costs are likely to rise and its bookings to fall.",
+          "C": "Hotter weather means less need for heating, so nothing here raises demand for gas boilers.",
+          "D": "Floods and heatwaves make the farm's harvests less reliable. That hits its <strong>supply</strong> and its costs. Nothing in the stem raises demand for its wheat."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two countries emit the same amount of greenhouse gas each year. Country P is low-lying, with a long coastline, and much of its output comes from farming. Country Q is inland and hilly, and earns most of its income from banking.<br />As the climate changes, the most likely outcome is that",
+      "options": {
+        "A": "Both face the same costs, as they emit the same amount.",
+        "B": "Neither faces costs, as the damage falls on future generations.",
+        "C": "P faces higher costs, though it adds no more to the damage.",
+        "D": "Q faces higher costs, as banking uses more energy than farming."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Greenhouse gases warm the whole planet, so the damage does not fall on whoever emits them. How serious it is for a country depends on <strong>location</strong>: coastal and farming regions are hit far harder than others. P faces rising seas, flooding and less reliable harvests, while Q's inland banking economy is far less exposed. So P is likely to bear higher costs, even though its emissions add no more to the problem than Q's.",
+        "distractors": {
+          "A": "This assumes each country bears the cost of its own emissions. Emissions are an external cost that spreads across the planet, so the damage a country suffers depends on where it is, not on how much it emits.",
+          "B": "Much of the damage does come decades later, but not all of it. Floods, droughts and heatwaves are already raising costs for firms, farmers and governments.",
+          "D": "Energy use affects how much a country emits, and the stem says the two emit the same. It does not decide who bears the damage, and an inland banking economy is less exposed than a coastal farming one."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-1-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An entrepreneur in a seaside town can afford to run one of two ventures, each costing the same: a pay-and-display car park, or a service that keeps the whole beach clear of litter. Townspeople and visitors would value a clean beach far more than the extra parking.<br />The entrepreneur chooses the car park, most likely because",
+      "options": {
+        "A": "Beach users underestimate the benefit of a clean beach.",
+        "B": "Cleaning the beach would cost more than it is worth.",
+        "C": "Clearing litter is rival, so the service would soon run out.",
+        "D": "There is no way to make beach users pay for it."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A clean beach is a <strong>public good</strong>. It is non-excludable: once the beach is clean, the entrepreneur cannot stop people who have not paid from enjoying it. So everyone waits for someone else to pay, which is the <strong>free rider problem</strong>, and the venture cannot make a profit however much the town values it. A car park is easy to charge for, because drivers who do not pay can be fined, so the market provides it.",
+        "distractors": {
+          "A": "That is a problem with merit goods. The stem says people value a clean beach highly, so they are not misjudging its benefit. They just cannot be made to pay for it.",
+          "B": "The stem says the two ventures cost the same to run and that people value the clean beach far more. On those terms it is worth more than it costs. The problem is collecting payment.",
+          "C": "A clean beach is non-rival: one person enjoying it leaves no less for others. That is not why it goes unprovided."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-1",
+  "boardName": "Edexcel B Theme 1",
+  "spec": "1.3.2",
+  "slug": "1-3-2-supply",
+  "title": "Supply",
+  "shortTitle": "Supply",
+  "pageTitle": "Supply Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on supply for Edexcel B A-Level Economics: why the curve slopes up, movements and shifts, taxes, subsidies and shocks.",
+  "intro": "Seven original multiple-choice questions on supply: what producers decide, movements along the supply curve, and the factors that shift it.",
+  "notesTeaser": "Seven original multiple-choice questions on the supply curve, movements and shifts, costs, taxes, subsidies and external shocks.",
+  "questions": [
+    {
+      "id": "edexcel-b-1-3-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "To keep rural routes running, the government pays a bus company £0.50 for every passenger journey it provides on them. For the company's supply of rural bus journeys, this payment is",
+      "options": {
+        "A": "A subsidy, which increases demand.",
+        "B": "A subsidy, which increases supply.",
+        "C": "An external shock, which decreases supply.",
+        "D": "An indirect tax, which decreases supply."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A <strong>subsidy</strong> is a payment from the government to producers, which lowers their costs. Each journey now costs the bus company £0.50 less to provide, so it is willing to run more journeys at every fare. The supply curve shifts right: an <strong>increase in supply</strong>.",
+        "distractors": {
+          "A": "The payment goes to the producer, not to passengers. It changes the company's costs, so it is the supply curve that shifts.",
+          "C": "An external shock is an unexpected event outside the industry's control, such as bad weather. This is a deliberate government payment, and it helps supply rather than cutting it.",
+          "D": "An indirect tax is paid by the seller <strong>to</strong> the government. Here the money flows the other way, from the government to the seller."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-2-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An outbreak of bird flu forces farms to cull large numbers of laying hens, and the price of eggs rises sharply. For a bakery that makes custard tarts, the outbreak is most likely to",
+      "options": {
+        "A": "Cause a contraction of its supply, along its supply curve.",
+        "B": "Decrease demand for its tarts, as egg prices rise.",
+        "C": "Decrease its supply of tarts, as its costs rise.",
+        "D": "Leave its supply unchanged, as it does not keep hens."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Bird flu is an <strong>external shock</strong> to egg farms. It cuts the supply of eggs and pushes their price up. Eggs are a raw material for the bakery, so each custard tart now costs more to make and earns less profit. The bakery is willing to make fewer tarts at every price: its supply curve shifts left, a <strong>decrease in supply</strong>.",
+        "distractors": {
+          "A": "A contraction is a movement along the curve caused by a fall in the tarts' own price. Nothing has happened to that price. A change in costs shifts the whole curve.",
+          "B": "The rise in egg prices hits the bakery's costs, not its customers' wish to buy tarts. It is supply that shifts.",
+          "D": "The shock reaches the bakery through its costs. It does not need to keep hens for the price of eggs to matter to it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-2-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows how many cushions each of the three workshops in a town would supply each week at two prices. Workshop R then closes, and a new workshop opens that would supply 100 cushions a week at £8 and 140 at £10.<br />At a price of £10, the town's weekly supply of cushions is now",
+      "table": {
+        "caption": "Table 1: Weekly supply of cushions from each workshop",
+        "head": [
+          "",
+          "At £8",
+          "At £10"
+        ],
+        "rows": [
+          [
+            "Workshop P",
+            "120",
+            "150"
+          ],
+          [
+            "Workshop Q",
+            "80",
+            "110"
+          ],
+          [
+            "Workshop R",
+            "60",
+            "90"
+          ]
+        ]
+      },
+      "options": {
+        "A": "260",
+        "B": "300",
+        "C": "400",
+        "D": "490"
+      },
+      "answer": "C",
+      "model": {
+        "working": "The town's supply at each price is the total of what every workshop would supply.<br />At £10 after the changes: P 150 + Q 110 + new workshop 140 = <strong>400</strong> cushions a week.<br />Before, it was 150 + 110 + 90 = 350. One workshop has been replaced by one that supplies more at every price, so the town's supply curve shifts right.",
+        "distractors": {
+          "A": "This removes Workshop R but leaves out the new workshop: 150 + 110.",
+          "B": "This uses the £8 column: 120 + 80 + 100. The stem asks for supply at £10.",
+          "D": "This adds the new workshop but forgets that Workshop R has closed: 350 + 140."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A bakery can make 400 loaves a day with its normal staff and its newest ovens. Making 500 would mean paying overtime and running an older oven that uses more energy. This helps to explain why the bakery's supply curve slopes upwards, because",
+      "options": {
+        "A": "Demand for its loaves falls as it makes more of them.",
+        "B": "It is at full capacity, so supply cannot rise past 400.",
+        "C": "Its supply curve shifts left each time its output rises.",
+        "D": "Only a higher price covers the cost of extra loaves."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Making extra output often costs more: overtime pay and older, less efficient machines brought back into use. The bakery will only make the extra 100 loaves if the price is high enough to cover that extra cost. So it supplies more only at a <strong>higher price</strong>, which is why the supply curve slopes up from left to right.",
+        "distractors": {
+          "A": "This is about buyers, not the bakery. The demand curve does not explain why the supply curve slopes up.",
+          "B": "The bakery can make 500, using overtime and the older oven. It is not stuck at 400. It just needs a higher price to make the extra loaves worth it.",
+          "C": "A rise in output in response to price is a movement along the supply curve, not a shift of it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A dairy's costs rise by 4p a litre when its energy bills go up. In the same month the government starts paying dairies a subsidy of 6p for every litre they produce. All other things being equal, the dairy's supply curve will most likely",
+      "options": {
+        "A": "Move along, since only its costs have changed.",
+        "B": "Shift left, as its costs have risen.",
+        "C": "Shift right, as the subsidy outweighs the cost rise.",
+        "D": "Stay where it is, as the two changes cancel out."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A subsidy lowers a producer's costs. Taking both changes together, each litre costs the dairy 4p more and earns it 6p from the government, so its cost per litre falls by 6p − 4p = <strong>2p</strong>. Lower costs mean more profit on each litre, so it is willing to supply more at every price. The supply curve <strong>shifts right</strong>.",
+        "distractors": {
+          "A": "A change in costs shifts the supply curve. Only a change in the good's own price moves the dairy along it.",
+          "B": "This counts the energy bills but ignores the subsidy, which is bigger.",
+          "D": "The two changes would cancel only if they were the same size. The 6p subsidy outweighs the 4p rise."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-2-q6",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Four events affect the market for flour. The one best described as an external shock is that",
+      "options": {
+        "A": "A flour mill installs faster grinding machines.",
+        "B": "Two flour mills close after years of losses.",
+        "C": "Wages at flour mills rise after a new pay deal.",
+        "D": "Wheat harvests fail across Europe in a heatwave."
+      },
+      "answer": "D",
+      "model": {
+        "working": "An <strong>external shock</strong> is an unexpected event outside the industry's control. A heatwave that ruins the wheat harvest is exactly that: no mill chose it, and it cuts the supply of flour.",
+        "distractors": {
+          "A": "This is <strong>new technology</strong>, a decision the mill itself made. It would shift supply right.",
+          "B": "This is a change in the <strong>number of firms</strong> in the industry. It follows from the mills' own losses, not an outside event.",
+          "C": "This is a change in the <strong>costs of production</strong>, agreed between the mills and their workers."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": true,
+      "stem": "The duty on each litre of fuel rises. Drivers pay more per litre at the pump and buy less fuel. On a diagram of the fuel market, the change in what drivers buy is best shown as",
+      "options": {
+        "A": "A contraction of demand along an unchanged demand curve.",
+        "B": "A contraction of supply along an unchanged supply curve.",
+        "C": "A decrease in demand, as the demand curve shifts left.",
+        "D": "A decrease in both demand and supply."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Fuel duty is an <strong>indirect tax</strong>, paid by the seller to the government. It adds to the cost of every litre, so the <strong>supply</strong> curve shifts left and the price rises.<br />Nothing has changed drivers' wish to buy fuel at any given price, so the demand curve stays put. The higher price moves drivers up that curve: a <strong>contraction of demand</strong>.",
+        "distractors": {
+          "B": "The supply curve does not stay where it is: the tax shifts it left. And the stem asks about what drivers buy, which is read off the demand curve.",
+          "C": "This is the classic error. Buyers end up paying more, but the tax is a cost for sellers, so it shifts supply, not demand.",
+          "D": "Only one curve shifts. The duty shifts supply, and the fall in what drivers buy is a movement along an unchanged demand curve."
+        }
+      }
+    }
+  ]
+}

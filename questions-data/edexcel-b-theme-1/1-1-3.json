@@ -1,0 +1,194 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-1",
+  "boardName": "Edexcel B Theme 1",
+  "spec": "1.1.3",
+  "slug": "1-1-3-stakeholders-and-their-objectives",
+  "title": "Stakeholders and Their Objectives",
+  "shortTitle": "Stakeholders and Their Objectives",
+  "pageTitle": "Stakeholders and CSR Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on stakeholders for Edexcel B A-Level Economics: internal and external stakeholders, their objectives, conflicts and CSR.",
+  "intro": "Seven original multiple-choice questions on a business's stakeholders: who they are, what each group wants, where their objectives clash and the case for corporate social responsibility.",
+  "notesTeaser": "Seven original multiple-choice questions on stakeholder objectives, stakeholder conflicts and corporate social responsibility.",
+  "questions": [
+    {
+      "id": "edexcel-b-1-1-3-q1",
+      "skill": "data-table",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Table 1 lists four stakeholders in a regional bus company.<br />Using Table 1, the external stakeholder is",
+      "table": {
+        "caption": "Table 1: Four stakeholders in a regional bus company",
+        "head": [
+          "",
+          "Description"
+        ],
+        "rows": [
+          [
+            "Stakeholder 1",
+            "A driver on the company's busiest route"
+          ],
+          [
+            "Stakeholder 2",
+            "The manager who runs the main depot"
+          ],
+          [
+            "Stakeholder 3",
+            "A member of the family that owns the company"
+          ],
+          [
+            "Stakeholder 4",
+            "The firm that supplies the company's diesel"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Stakeholder 1.",
+        "B": "Stakeholder 2.",
+        "C": "Stakeholder 3.",
+        "D": "Stakeholder 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Internal stakeholders are inside the business: owners, managers and employees. External stakeholders are outside it but still affected by what it does: customers, suppliers, lenders, the local community and the government.<br />The diesel supplier is a separate business that sells to the bus company, so it is an <strong>external</strong> stakeholder. It wants regular orders, a fair price and to be paid on time.",
+        "distractors": {
+          "A": "A driver is an employee, and employees are internal stakeholders.",
+          "B": "A manager works inside the business, so the depot manager is an internal stakeholder.",
+          "C": "Owners are internal stakeholders. Owning the company puts the family inside it, even if they take no part in running it day to day."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-1-3-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A pottery company agrees a 6% pay rise with its workers. It keeps its prices unchanged, and nothing else about the business changes. The stakeholders most likely to lose out are its",
+      "options": {
+        "A": "Customers.",
+        "B": "Employees.",
+        "C": "Shareholders.",
+        "D": "Suppliers."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The pay rise raises wage costs. With prices and everything else unchanged, revenue stays the same, so <strong>profit falls</strong>.<br />Lower profit means smaller dividends and less profit kept in the business, so the owners, here the <strong>shareholders</strong>, bear the cost. This is the conflict between shareholders and employees over pay.",
+        "distractors": {
+          "A": "Customers would lose out if the pottery passed the higher costs on in higher prices. The stem says prices are unchanged, so customers pay the same as before.",
+          "B": "Employees are the ones who gain: they receive the pay rise.",
+          "D": "Nothing in the scenario changes the pottery's orders from its suppliers or the prices it pays them."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-1-3-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A bank has lent £200,000 to a family-run hotel, to be repaid over ten years. Of the hotel's plans, the one the bank is most likely to object to is",
+      "options": {
+        "A": "Paying out most of its cash to the owners.",
+        "B": "Raising its room prices by 5% in the summer.",
+        "C": "Switching to a cheaper laundry supplier.",
+        "D": "Training its reception staff in customer service."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A lender wants its interest paid and the loan repaid in full, so it wants the hotel to stay <strong>solvent</strong>, with enough cash to meet its repayments.<br />Paying most of the cash out to the owners leaves the hotel less able to cover its bills and its loan repayments if trade dips. It benefits the owners now at the expense of the lender's security.",
+        "distractors": {
+          "B": "Higher prices may raise revenue and profit, which would make the loan easier to repay. Nothing about this threatens the bank's interest.",
+          "C": "A cheaper supplier lowers costs. If anything, that leaves more cash to repay the loan.",
+          "D": "Training costs money, but better service tends to bring customers back. It is not the plan that most threatens the hotel's ability to repay."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-1-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Employees at two engineering firms ask for the same pay rise. Firm X's sales and profit are growing by 15% a year; Firm Y's have not grown for three years. The conflict between employees and shareholders over the pay rise is likely to be less serious at Firm X, mainly because",
+      "options": {
+        "A": "Its employees are less likely to strike if refused.",
+        "B": "Its rising profit can fund higher pay and dividends together.",
+        "C": "Its shareholders are less interested in their dividends.",
+        "D": "Its wage costs are a smaller share of what it spends."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A conflict is sharpest when a gain for one stakeholder is a direct loss for another. At Firm Y, with profit flat, every extra pound on wages is a pound less for shareholders.<br />At Firm X, profit is rising by 15% a year, so the business can <strong>pay more in wages and more in dividends at the same time</strong>. How well a business is doing is one of the things that decides how serious a stakeholder conflict is.",
+        "distractors": {
+          "A": "Nothing in the scenario suggests the two workforces differ in their willingness to strike. Both ask for the same pay rise.",
+          "C": "Shareholders in a growing firm still want dividends. What differs is that Firm X can afford to pay them as well as the pay rise.",
+          "D": "The scenario says nothing about how the two firms' costs are made up. The difference it does give is growth in profit."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-1-3-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A clothing retailer takes four decisions this year. The one that is an example of corporate social responsibility is",
+      "options": {
+        "A": "Cutting its prices to win customers from rival chains.",
+        "B": "Fitting the fire exits that safety law requires.",
+        "C": "Paying its own staff the legal minimum wage.",
+        "D": "Using factories that pay above the legal minimum."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Corporate social responsibility means a business taking account of the effects of its decisions on society and the environment, <strong>beyond what the law requires</strong>.<br />Choosing factories whose workers earn more than the legal minimum goes further than the law, for the workers' benefit. That is CSR.",
+        "distractors": {
+          "A": "Cutting prices to take customers from rivals is ordinary competition, aimed at sales and market share. It is not about the firm's wider effect on society.",
+          "B": "Fitting fire exits that the law requires is meeting a legal obligation. CSR goes beyond what the law requires.",
+          "C": "Paying the legal minimum is complying with the law, not going beyond it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-1-3-q6",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A budget airline's adverts call it \"the UK's greenest airline\" after it pays to plant trees that offset less than 1% of its carbon emissions. Its fleet and flight schedule are unchanged. The adverts are best described as an example of",
+      "options": {
+        "A": "Corporate social responsibility.",
+        "B": "Greenwashing.",
+        "C": "Satisficing.",
+        "D": "The principal-agent problem."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Greenwashing is when a firm <strong>exaggerates its environmental good deeds</strong> for publicity. Offsetting under 1% of its emissions, with nothing else changed, does not support a claim to be the greenest airline in the country.<br />It is one of the arguments against relying on CSR: some of what firms present as social responsibility is mainly marketing.",
+        "distractors": {
+          "A": "Planting trees is a small CSR action in itself. The question is about the adverts, which claim far more than the action delivers. Exaggerated environmental claims are greenwashing.",
+          "C": "Satisficing is aiming for a satisfactory level of profit rather than the most possible. Nothing in the scenario concerns the airline's profit target.",
+          "D": "The principal-agent problem is about managers pursuing their own goals instead of the shareholders'. The scenario is about what the airline tells its customers."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-1-3-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Four firms each consider an ethical-sourcing scheme that would raise their costs by the same amount. The scheme is most likely to pay for itself through higher sales or prices at",
+      "options": {
+        "A": "A firm making unbranded parts sold to other manufacturers.",
+        "B": "A local water company whose customers cannot switch supplier.",
+        "C": "A national chocolate brand whose customers follow its record.",
+        "D": "A wholesaler whose trade buyers choose purely on price."
+      },
+      "answer": "C",
+      "model": {
+        "working": "CSR pays for itself when it brings in extra revenue: customers notice how the firm behaves and either buy more from it or are willing to pay more.<br />That needs customers who <strong>pay attention</strong> to the firm's behaviour and who <strong>can switch</strong> to or away from it. A well-known consumer brand whose buyers follow its record has both. CSR is easier to justify for a firm like that than for one competing only on price.",
+        "distractors": {
+          "A": "Unbranded parts reach buyers who mostly never see the maker's name, so an ethical scheme does little for its reputation or its prices.",
+          "B": "Its customers cannot switch, so better behaviour wins it no extra customers and worse behaviour loses it none. The scheme would not raise its sales.",
+          "D": "Buyers who choose purely on price will move to a cheaper rival if the extra costs are passed on. This is the case where CSR is hardest to justify."
+        }
+      }
+    }
+  ]
+}

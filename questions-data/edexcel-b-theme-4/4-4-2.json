@@ -1,0 +1,221 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-4",
+  "boardName": "Edexcel B Theme 4",
+  "spec": "4.4.2",
+  "slug": "4-4-2-demand-side-policies",
+  "title": "Demand-Side Policies",
+  "shortTitle": "Demand-Side Policies",
+  "pageTitle": "Demand-Side Policies Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions for Edexcel B A-Level Economics on fiscal and monetary policy, quantitative easing, time lags and policy trade-offs.",
+  "intro": "Eight original multiple-choice questions on demand-side policies: fiscal and monetary policy, quantitative easing, their effects on the economy as a whole, time lags, crowding out and the trade-offs policy-makers face. One is a calculation.",
+  "notesTeaser": "Eight original multiple-choice questions on fiscal and monetary policy, quantitative easing, time lags, crowding out and policy trade-offs, including one calculation.",
+  "questions": [
+    {
+      "id": "edexcel-b-4-4-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "In one Budget, the Chancellor raises the main rate of corporation tax and cuts the rate of VAT charged on household energy bills.<br />In that order, the two changes are",
+      "options": {
+        "A": "A direct tax rise, then a direct tax cut.",
+        "B": "A direct tax rise, then an indirect tax cut.",
+        "C": "An indirect tax rise, then a direct tax cut.",
+        "D": "An indirect tax rise, then an indirect tax cut."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Corporation tax</strong> is taken from firms' profit, so it is a <strong>direct</strong> tax, and here it rises.<br /><strong>VAT</strong> is added to spending, so it is an <strong>indirect</strong> tax, and here it is cut.<br />Both are fiscal policy, set by the Chancellor in a Budget.",
+        "distractors": {
+          "A": "Corporation tax is direct, but VAT is added to the price of what people buy, not taken from income or profit, so it is indirect.",
+          "C": "Both labels are swapped. Corporation tax is taken from profit, so it is direct; VAT is added to spending, so it is indirect.",
+          "D": "VAT is indirect, but corporation tax is taken from firms' profit, which makes it a direct tax."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-2-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Bank Rate is already close to zero, so the Bank of England creates new money and uses it to buy £50 billion of government bonds from pension funds.<br />The main route by which this is meant to help a builders' merchant borrow to fund a new depot is that",
+      "options": {
+        "A": "Bank Rate falls further, so overdrafts get cheaper.",
+        "B": "Bond prices fall, so long-term interest rates rise.",
+        "C": "Bond prices rise, so long-term interest rates fall.",
+        "D": "The government spends the money on new building."
+      },
+      "answer": "C",
+      "model": {
+        "working": "This is <strong>quantitative easing</strong>, used when Bank Rate cannot be cut much further.<br />The Bank buys bonds → demand for bonds rises → <strong>bond prices rise</strong> → <strong>long-term interest rates fall</strong> → loans linked to them get cheaper → more projects, such as the new depot, are worth borrowing for.<br />The pension funds that sold the bonds also have money to lend or invest elsewhere.",
+        "distractors": {
+          "A": "QE is used because Bank Rate is already close to zero. It works through bond prices and long-term interest rates, not through a further cut in Bank Rate.",
+          "B": "The direction is reversed. Buying bonds adds to demand for them, so their prices rise, and long-term interest rates fall.",
+          "D": "The Bank buys the bonds from investors such as pension funds. QE is monetary policy, run by the Bank of England; the new money is not handed to the government to spend, which would be fiscal policy."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-2-q3",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "The government raises its spending by £10 billion, paid for by borrowing. The extra borrowing pushes up interest rates, so firms cancel £4 billion of investment they had planned. The multiplier for any change in spending is 1.5.<br />All other things being equal, the final change in real GDP is",
+      "options": {
+        "A": "+£6 billion",
+        "B": "+£9 billion",
+        "C": "+£11 billion",
+        "D": "+£15 billion"
+      },
+      "answer": "B",
+      "model": {
+        "working": "This is <strong>crowding out</strong>: heavy borrowing pushes up interest rates, so firms cancel some of the investment they had planned.<br />Net change in injections = +£10 billion − £4 billion = <strong>+£6 billion</strong>.<br />Final change in real GDP = £6 billion × 1.5 = <strong>+£9 billion</strong>.<br />The multiplier applies to the fall in investment as well as to the rise in government spending, because both change other people's incomes round after round.",
+        "distractors": {
+          "A": "£6 billion is the net change in injections. It still has to be multiplied by 1.5 to give the final change in real GDP.",
+          "C": "£10 billion × 1.5 = £15 billion, minus £4 billion, gives £11 billion. This subtracts the cancelled investment only once, but it has a multiplier effect too: the firms that would have supplied it lose income as well.",
+          "D": "£10 billion × 1.5 = £15 billion ignores crowding out. Firms cancel £4 billion of planned investment, which offsets part of the extra spending."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Real GDP has been falling for six months, and the MPC cuts Bank Rate sharply. The cut has its full effect about 20 months later, by which time the economy is growing fast and firms are short of staff.<br />At that point, the most likely result of the cut is",
+      "options": {
+        "A": "Higher inflation, as it adds to spending in a boom.",
+        "B": "Higher unemployment, as firms cut their spending.",
+        "C": "Little effect, as the recession has already ended.",
+        "D": "Lower inflation, as cheaper loans cut firms' costs."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A change in Bank Rate takes around 18 to 24 months to have its full effect, and here it arrives in the wrong conditions.<br />Lower rates → cheaper borrowing and less reward for saving → more consumption and investment → AD rises. With firms already short of staff there is little spare capacity, so the extra spending mainly pushes up wages and prices → <strong>higher inflation</strong>.<br />This is how a <strong>time lag</strong> can make policy do harm.",
+        "distractors": {
+          "B": "A rate cut raises spending; it does not make firms cut back. Higher unemployment would follow a rise in Bank Rate.",
+          "C": "The cut does not stop working when the recession ends. Its effect on spending builds up over the lag, whatever the state of the economy by then.",
+          "D": "Cheaper loans do lower some firms' interest costs, but the main effect of a rate cut is higher spending. In a boom with staff shortages, that raises inflation."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-2-q5",
+      "skill": "data-table",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Table 1 sets out four packages of measures that the government and the Bank of England could announce in the same month.<br />Using Table 1, the only package in which both measures would raise aggregate demand is",
+      "table": {
+        "caption": "Table 1: Four packages of policy measures",
+        "head": [
+          "Package",
+          "Monetary policy",
+          "Fiscal policy"
+        ],
+        "rows": [
+          [
+            "P",
+            "Bank Rate raised by 0.5 percentage points",
+            "Basic rate of income tax cut by 2p in the pound"
+          ],
+          [
+            "Q",
+            "£40 billion of quantitative easing",
+            "VAT raised from 20% to 22%"
+          ],
+          [
+            "R",
+            "Bank Rate cut by 0.25 percentage points",
+            "Government spending cut by £8 billion"
+          ],
+          [
+            "S",
+            "£30 billion of quantitative easing",
+            "Corporation tax cut from 25% to 22%"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Package P.",
+        "B": "Package Q.",
+        "C": "Package R.",
+        "D": "Package S."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Take each measure in turn: anything that raises C, I, G or X − M raises AD.<br />In <strong>Package S</strong>, QE lowers long-term interest rates, so borrowing and spending rise, and a corporation tax cut leaves firms more profit after tax to invest. <strong>Both raise AD.</strong><br />In each of the other packages one measure raises AD and the other lowers it, so the two pull against each other.",
+        "distractors": {
+          "A": "The income tax cut raises AD, but a rise in Bank Rate makes borrowing dearer and saving more rewarding, which lowers AD.",
+          "B": "QE raises AD, but a rise in VAT is a tax rise: it adds to prices and leaves households less to spend.",
+          "C": "The cut in Bank Rate raises AD, but a cut in government spending lowers it directly."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "To lift spending in a downturn, the government cuts income tax. A UK electronics retailer, most of whose televisions and laptops are made abroad, sees its sales rise sharply.<br />All other things being equal, the most likely effect on the UK's current account is that",
+      "options": {
+        "A": "It is unchanged, as the tax cut affects only households.",
+        "B": "Its deficit narrows, as the retailer's UK sales rise.",
+        "C": "Its deficit narrows, as the tax cut lowers firms' costs.",
+        "D": "Its deficit widens, as more spending goes on imports."
+      },
+      "answer": "D",
+      "model": {
+        "working": "An income tax cut leaves households more take-home pay → they spend more. Much of that extra spending goes on goods made abroad, such as this retailer's televisions and laptops → <strong>imports rise</strong>.<br />Nothing in the policy raises exports, so the <strong>current account deficit widens</strong>. This is one of the trade-offs of expansionary policy: growth or the current account.",
+        "distractors": {
+          "A": "The tax cut is aimed at households, but that is the point: households spend the extra income, and much of it goes on imported goods.",
+          "B": "The retailer's sales are made in the UK, but the televisions and laptops it sells were made abroad. Each one it restocks adds to imports.",
+          "C": "Income tax is taken from households' income, not from firms, so it does not lower firms' costs. Its effect runs through spending, and much of that spending is on imports."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "CPI inflation is 6%, and the MPC raises Bank Rate by one percentage point.<br />The main way this is meant to bring inflation back towards 2% is that",
+      "options": {
+        "A": "Firms raise prices less easily as spending falls.",
+        "B": "Firms' costs fall as their loans become cheaper.",
+        "C": "Households save less and spend more of their income.",
+        "D": "The pound weakens, so imported goods become cheaper."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A higher Bank Rate → loans and mortgages cost more and saving pays more → households and firms spend less → AD shifts left → with demand weaker, <strong>firms find it harder to raise their prices</strong> → inflation falls towards the 2% target.",
+        "distractors": {
+          "B": "A rate rise makes loans dearer, not cheaper. Firms with borrowing at variable rates see their interest costs go up.",
+          "C": "The direction is reversed. Higher rates make saving pay more, so households save more and spend less.",
+          "D": "A rate rise tends to strengthen the pound, not weaken it, because UK savings become more attractive to foreign investors. And a weaker pound would make imports dearer, not cheaper."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-2-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "Inflation is above target, and the economy is on the rising section of a Keynesian LRAS curve, with little spare capacity. The MPC raises Bank Rate.<br />Sketching an AD/AS diagram, the most likely effect is that",
+      "options": {
+        "A": "Real GDP and the price level both fall.",
+        "B": "Real GDP falls and the price level is unchanged.",
+        "C": "Real GDP is unchanged and the price level falls.",
+        "D": "Real GDP rises and the price level falls."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Higher Bank Rate → less borrowing and more saving → consumption and investment fall → <strong>AD shifts left</strong>.<br />On the rising section of the LRAS curve, a shift in AD changes both output and the price level. Moving back down that section, <strong>real GDP falls and the price level falls</strong>.<br />This is the trade-off in controlling inflation: lower inflation at the cost of slower growth and fewer jobs.",
+        "distractors": {
+          "B": "This is what happens on the flat section of the LRAS curve, where there is plenty of spare capacity. Here there is little, so prices move as well as output.",
+          "C": "This is the vertical section, at full capacity, where a shift in AD changes only the price level. On the rising section output changes too.",
+          "D": "Real GDP rising while the price level falls is the effect of LRAS shifting right. A rate rise reduces spending, so it shifts AD left."
+        }
+      }
+    }
+  ]
+}

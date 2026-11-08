@@ -1,0 +1,204 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-4",
+  "boardName": "Edexcel B Theme 4",
+  "spec": "4.1.5",
+  "slug": "4-1-5-productive-and-allocative-efficiency",
+  "title": "Productive and Allocative Efficiency",
+  "shortTitle": "Productive and Allocative Efficiency",
+  "pageTitle": "Productive and Allocative Efficiency Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions for Edexcel B A-Level Economics on productive and allocative efficiency, the margin, productivity and market orientation.",
+  "intro": "Seven original multiple-choice questions on productive and allocative efficiency: the distinction between them, the margin and opportunity cost, raising productivity to cut average cost, market orientation, and how markets interact. One is a calculation.",
+  "notesTeaser": "Seven original multiple-choice questions on productive and allocative efficiency, the margin, productivity, market orientation and how markets interact, including one calculation.",
+  "questions": [
+    {
+      "id": "edexcel-b-4-1-5-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A toy factory makes a board game at the lowest possible average cost. Most of the games go unsold because few people want them, and the same materials and staff could have made toys that people do want.<br />The factory's production of the game is best described as",
+      "options": {
+        "A": "Allocatively and productively efficient.",
+        "B": "Allocatively but not productively efficient.",
+        "C": "Productively but not allocatively efficient.",
+        "D": "Neither productively nor allocatively efficient."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Productive efficiency</strong> is about how things are made: producing at the lowest possible average cost. The factory does that.<br /><strong>Allocative efficiency</strong> is about what is made: the goods consumers value most. Few people want the game, and the resources could have made toys they do want → the factory is not allocatively efficient.",
+        "distractors": {
+          "A": "Making the game cheaply does not make it the right thing to make. The resources would have been worth more as toys people want.",
+          "B": "This has the two the wrong way round. The game is made at the lowest possible average cost, which is productive efficiency, but it is not what consumers want.",
+          "D": "The stem says the game is made at the lowest possible average cost, so production is productively efficient."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-5-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the price, marginal cost and average cost at the current output of four firms.<br />Using Table 1, the firm that is productively efficient but not allocatively efficient is",
+      "table": {
+        "caption": "Table 1: Price and costs at four firms' current output",
+        "head": [
+          "",
+          "Price",
+          "Marginal cost",
+          "Average cost"
+        ],
+        "rows": [
+          [
+            "Firm 1",
+            "£10",
+            "£10",
+            "£10"
+          ],
+          [
+            "Firm 2",
+            "£12",
+            "£12",
+            "£13"
+          ],
+          [
+            "Firm 3",
+            "£15",
+            "£11",
+            "£13"
+          ],
+          [
+            "Firm 4",
+            "£14",
+            "£10",
+            "£10"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Firm 1.",
+        "B": "Firm 2.",
+        "C": "Firm 3.",
+        "D": "Firm 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Productive efficiency:</strong> MC = AC, so average cost is at its lowest. <strong>Allocative efficiency:</strong> price = MC.<br />Firm 4: MC = AC = £10 → productively efficient. Price £14 is above MC £10 → not allocatively efficient: consumers value one more unit at £14, more than the £10 of resources it uses, so too little is made.",
+        "distractors": {
+          "A": "Firm 1 has price = MC = AC = £10, so it is both productively and allocatively efficient, as a perfectly competitive firm is in the long run.",
+          "B": "Firm 2 has price = MC = £12, so it is allocatively efficient. But MC (£12) is below AC (£13), so average cost is still falling and it is not productively efficient. This is the reverse of the question.",
+          "C": "Firm 3 has MC (£11) below AC (£13) and price (£15) above MC, so it is neither productively nor allocatively efficient."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-5-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The last jar a jam maker makes each week uses materials and labour costing £3.40, which could have been used to make something else. Shoppers pay £2.60 for that jar.<br />For allocative efficiency, the jam maker should make",
+      "options": {
+        "A": "Less jam, as the resources are worth more in another use.",
+        "B": "More jam, as shoppers are still willing to buy it.",
+        "C": "More jam, until its average cost is as low as possible.",
+        "D": "The same amount, as long as the jam makes a profit overall."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Think at the <strong>margin</strong>. The £3.40 marginal cost measures the <strong>opportunity cost</strong> of the last jar: what those resources could have made instead. The £2.60 price measures how much shoppers value it.<br />Price below MC → the resources are worth more elsewhere → society gains by making less jam and moving them to another use.<br />Allocative efficiency is where price = MC.",
+        "distractors": {
+          "B": "Shoppers do buy the last jar, but they value it at only £2.60, less than the £3.40 of resources it uses. Making more would widen that gap.",
+          "C": "This mixes up the two kinds of efficiency. Lowest average cost is productive efficiency. Allocative efficiency compares price with marginal cost.",
+          "D": "A profit overall says nothing about the last jar. The question is whether that jar is worth what it costs society to make, and at £2.60 against £3.40 it is not."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-5-q4",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A warehouse's new manager re-plans the shift rota and the order in which parcels are picked, so that staff rarely wait for work. Output rises with the same staff and equipment.<br />This way of raising productivity is best described as improving",
+      "options": {
+        "A": "Human capital.",
+        "B": "Market orientation.",
+        "C": "Technology.",
+        "D": "The quality of management."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Better planning of rotas, stock and workflow → less time idle or waiting → more output from the same inputs → lower average cost.<br />Nothing new has been bought and no one has been trained. The gain comes from how the work is organised, which is the <strong>quality of management</strong>.",
+        "distractors": {
+          "A": "Human capital is the skills of the workforce, raised by training and education. The same staff are doing the same jobs, only better organised.",
+          "B": "Market orientation means finding out what consumers want and producing to match. It concerns what is made, not how efficiently the work is done.",
+          "C": "Improving technology means new machinery or systems, such as an automated sorter. The warehouse uses the same equipment as before."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-5-q5",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm that scans paper records for law firms has monthly costs of £24,000 and scans 12,000 files a month. It then leases a faster scanner for £3,000 a month. With the same staff, it now scans 18,000 files a month, and its other costs are unchanged.<br />Its new average cost per file is",
+      "options": {
+        "A": "£1.33",
+        "B": "£1.50",
+        "C": "£2.00",
+        "D": "£2.25"
+      },
+      "answer": "B",
+      "model": {
+        "working": "New total cost: £24,000 + £3,000 = <strong>£27,000</strong>.<br />New output: <strong>18,000</strong> files.<br />New AC: £27,000 ÷ 18,000 = <strong>£1.50</strong>.<br />The old AC was £24,000 ÷ 12,000 = £2.00. Better <strong>technology</strong> raises costs by £3,000, but output rises by half, so each file costs 50p less.",
+        "distractors": {
+          "A": "This divides the old costs, £24,000, by the new output. It leaves out the £3,000 a month for the scanner.",
+          "C": "£2.00 is the average cost before the new scanner, £24,000 ÷ 12,000.",
+          "D": "This divides the new costs, £27,000, by the old output of 12,000. The scanner's whole point is that output rises to 18,000."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-5-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A garden-tools firm used to make whatever its engineers were best at designing and then look for shops to sell it. It now surveys gardeners each spring and changes its range to match what they ask for.<br />Compared with before, the most likely result is",
+      "options": {
+        "A": "Less unsold stock, as output matches what buyers want.",
+        "B": "Lower average cost, as it makes what it is best at making.",
+        "C": "Lower research costs, as it no longer has to find buyers.",
+        "D": "More discounting, as tastes now change before it can respond."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The firm has moved from <strong>product orientation</strong> to <strong>market orientation</strong>: it finds out what consumers want first, then produces to match.<br />Production matches what gardeners want → less unsold stock and fewer discounts → higher sales and profit. This is allocative efficiency at the level of one firm.",
+        "distractors": {
+          "B": "Making what it is best at is what the firm did before, under product orientation. Now its range follows what gardeners ask for.",
+          "C": "Market orientation adds research costs: the firm now pays to survey gardeners every spring. Market research is one of its main costs.",
+          "D": "Tastes can shift before production catches up, but the firm now checks them every spring. Compared with making tools and then looking for buyers, it should be left with less to discount, not more."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-5-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The price of the lithium used in electric-car batteries rises sharply, and the price of electric cars rises as a result.<br />The most likely effects on two other markets are",
+      "options": {
+        "A": "Higher demand for home charging points and lower demand for petrol cars.",
+        "B": "Lower demand for home charging points and higher demand for petrol cars.",
+        "C": "Higher demand for both home charging points and petrol cars.",
+        "D": "Lower demand for both home charging points and petrol cars."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Follow the change into the markets linked to electric cars.<br />Electric cars cost more → fewer are bought.<br /><strong>Home charging points</strong> are a complement, bought with an electric car → fewer electric cars → lower demand for charging points.<br /><strong>Petrol cars</strong> are a substitute → some buyers switch → higher demand for petrol cars.<br />This is how a change in one market spreads to others through the goods bought together or instead of each other.",
+        "distractors": {
+          "A": "This has both links the wrong way round. Charging points are bought with electric cars, so fewer electric cars means fewer charging points, while buyers switch to the substitute, petrol cars.",
+          "C": "Charging points are a complement, not a substitute. When fewer electric cars are bought, demand for them falls.",
+          "D": "Petrol cars are a substitute, not a complement. Buyers put off by dearer electric cars switch towards them, so demand for petrol cars rises."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-3",
+  "boardName": "Edexcel B Theme 3",
+  "spec": "3.1.5",
+  "slug": "3-1-5-exchange-rate-changes",
+  "title": "Exchange Rate Changes",
+  "shortTitle": "Exchange Rate Changes",
+  "pageTitle": "Exchange Rate Changes Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on exchange rate changes for Edexcel B A-Level Economics: the current account, inflation, FDI, the J-curve and the Eurozone.",
+  "intro": "Seven original multiple-choice questions on exchange rate changes: their effects on the current account, growth, unemployment, inflation and FDI, why a depreciation's effects are not automatic, and the costs and benefits of the Eurozone. One is a calculation.",
+  "notesTeaser": "Seven original multiple-choice questions on how exchange rate changes affect the economy, the J-curve and Marshall-Lerner, and the Eurozone.",
+  "questions": [
+    {
+      "id": "edexcel-b-3-1-5-q1",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A country's exports and imports are each worth £200bn a year. Its exporters set their prices in pounds, and its imports are priced in dollars. The pound then depreciates, so that import prices in pounds rise by 10%. In the first year, the volume of exports rises by 3% and the volume of imports falls by 4%.<br />To one decimal place, the change in the country's trade balance over that first year is",
+      "options": {
+        "A": "−£20.0bn",
+        "B": "−£6.0bn",
+        "C": "−£5.2bn",
+        "D": "+£14.0bn"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Exports are priced in pounds, so their value in pounds rises only with volume: £200bn × 1.03 = <strong>£206.0bn</strong>.<br />Imports cost 10% more in pounds, and 4% fewer are bought: £200bn × 1.10 × 0.96 = <strong>£211.2bn</strong>.<br />Trade balance = £206.0bn − £211.2bn = <strong>−£5.2bn</strong>, down from zero.<br />Each import costs more in pounds, and the quantity barely falls, so the country spends more on imports, not less. Volumes have moved by only 3% and 4% after price changes of around 10%, so the price elasticities of demand for exports and imports add up to well under 1: the Marshall-Lerner condition fails in this first year. This is the start of the J-curve: the balance worsens before buyers have time to switch.",
+        "distractors": {
+          "A": "This counts only the price effect: imports cost £220bn and exports stay at £200bn. It ignores the 3% rise in export volumes and the 4% fall in import volumes.",
+          "B": "This adds the percentage changes for imports, +10% and −4%, to get +6%, so imports come to £212bn. A price change and a volume change must be multiplied: 1.10 × 0.96 = 1.056, a rise of 5.6%.",
+          "D": "This counts only the change in volumes: exports £206bn and imports £192bn. It forgets that each import now costs 10% more in pounds, which is why a depreciation can make the balance worse at first."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-5-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The pound depreciates at the start of Year 1 and then stays at its new level. Table 1 shows the UK's trade balance in the year before and in the three years after.<br />Using Table 1, the most likely explanation is that demand for UK exports and imports was",
+      "table": {
+        "caption": "Table 1: UK trade balance (£bn)",
+        "head": [
+          "",
+          "Year before",
+          "Year 1",
+          "Year 2",
+          "Year 3"
+        ],
+        "rows": [
+          [
+            "Trade balance",
+            "−30",
+            "−38",
+            "−29",
+            "−21"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Price inelastic at first, then more elastic.",
+        "B": "Price inelastic in every year.",
+        "C": "Price elastic at first, then less elastic.",
+        "D": "Price elastic in every year."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The balance worsens in Year 1, from −£30bn to −£38bn, then improves past its starting point to −£21bn by Year 3. That traces a <strong>J-curve</strong>.<br />In the short run, prices are fixed in contracts and buyers take time to find new suppliers, so demand is price inelastic: each import costs more and the quantity barely falls, so the balance worsens. As buyers switch, demand becomes more elastic, the Marshall-Lerner condition holds, and the balance improves.",
+        "distractors": {
+          "B": "If demand stayed inelastic, with the elasticities adding up to less than 1, the balance would stay worse than before. Here it ends better than its starting point, so demand must have become more elastic.",
+          "C": "This is the J-curve upside down. Elastic demand at first would improve the balance straight away, and less elastic demand later would worsen it. The table shows the opposite order.",
+          "D": "If demand were elastic from the start, the balance would improve in Year 1. Instead it worsens first, which shows that buyers were slow to respond."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-5-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The pound depreciates sharply at a time when UK firms are already running close to full capacity and unemployment is very low. The most likely main result is",
+      "options": {
+        "A": "A large rise in real GDP, as net exports rise.",
+        "B": "Higher inflation, as firms cannot raise output much.",
+        "C": "Lower inflation, as imported goods become cheaper.",
+        "D": "Much lower unemployment, as firms hire more workers."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A depreciation raises net exports and so aggregate demand. What that does depends on spare capacity.<br />With idle factories and unemployed workers, firms can raise output, so growth and jobs gain most. <strong>Near full capacity</strong>, firms cannot produce much more → the extra demand mainly raises prices.<br />On top of that, imported food, fuel and components cost more in pounds → firms pass the costs on → cost-push inflation. Both effects point to higher inflation.",
+        "distractors": {
+          "A": "Real GDP can only rise a lot if firms have room to produce more. Close to full capacity, the extra demand from net exports mainly pushes up prices instead.",
+          "C": "This is the effect of an appreciation. A depreciation makes imports <strong>dearer</strong> in pounds, which adds to inflation.",
+          "D": "Unemployment is already very low, so there are few workers left to hire. Firms competing for scarce staff push up wages, which adds to inflation rather than cutting unemployment much further."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-5-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "The pound appreciates by 15% against the currencies of the UK's main trading partners and stays at that level. All other things being equal, the most likely effects in the UK are",
+      "options": {
+        "A": "Higher inflation and higher unemployment.",
+        "B": "Higher inflation and lower unemployment.",
+        "C": "Lower inflation and higher unemployment.",
+        "D": "Lower inflation and lower unemployment."
+      },
+      "answer": "C",
+      "model": {
+        "working": "An appreciation runs each depreciation chain the other way.<br /><strong>Unemployment:</strong> UK exports become dearer abroad and imports cheaper at home → exporters and firms competing with imports lose sales → they need fewer workers → unemployment rises.<br /><strong>Inflation:</strong> imported food, fuel and components cost less in pounds → firms' costs fall → inflation comes down. Weaker demand for exports eases demand-pull pressure too.",
+        "distractors": {
+          "A": "This gets unemployment right but not inflation. A stronger pound makes imports cheaper in pounds, which brings inflation down.",
+          "B": "These are the effects of a <strong>depreciation</strong>: dearer imports raise inflation, and stronger exports create jobs. An appreciation reverses both.",
+          "D": "This gets inflation right but not unemployment. A stronger pound makes UK goods dearer abroad, so exporters lose sales and cut jobs."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-5-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "The pound falls by 20% against the dollar. A US hotel group is deciding whether to buy a chain of hotels in the UK, whose owners keep their asking price in pounds unchanged.<br />The most likely effect on the group's decision is that",
+      "options": {
+        "A": "UK hotels are cheaper in dollars, so FDI into the UK is more likely.",
+        "B": "UK hotels are cheaper in dollars, so FDI into the UK is less likely.",
+        "C": "UK hotels are dearer in dollars, so FDI into the UK is more likely.",
+        "D": "UK hotels are dearer in dollars, so FDI into the UK is less likely."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The asking price is fixed in pounds, and each dollar now buys more pounds → the chain costs the US group fewer dollars.<br />When the pound depreciates, UK land, buildings and firms cost less in foreign currency → buying or building in the UK is cheaper for foreign firms → FDI into the UK can rise.<br />Buying and running a business it controls in another country is foreign direct investment, so this is an FDI inflow for the UK.",
+        "distractors": {
+          "B": "This gets the price right but the response wrong. A cheaper asset in dollars makes the purchase more attractive to the US group, not less.",
+          "C": "This gets the direction of the price wrong. When the pound falls, a fixed price in pounds costs <strong>fewer</strong> dollars, and a dearer asset would put buyers off, not attract them.",
+          "D": "This reverses the exchange rate effect. A weaker pound means each dollar buys more pounds, so UK assets become cheaper for US buyers."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-5-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Over several years, wages and prices in one Eurozone member rise much faster than in the other members, and its exports to them become uncompetitive. To regain competitiveness, the member's most likely route is to",
+      "options": {
+        "A": "Cut its own interest rate to weaken its currency.",
+        "B": "Let its currency depreciate against other members.",
+        "C": "Make its wages and prices rise more slowly.",
+        "D": "Put tariffs on imports from the other members."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A Eurozone member shares one currency and one monetary policy, so it gives up two tools.<br />It has <strong>no exchange rate to adjust</strong>: it cannot let its currency fall → its exports stay expensive → it can regain competitiveness only by holding its wages and prices down relative to its neighbours.<br />That usually means higher unemployment for years, which is what Greece faced in its debt crisis after 2010.",
+        "distractors": {
+          "A": "Interest rates for the whole Eurozone are set by the European Central Bank. A member cannot set its own rate, and has no currency of its own to weaken.",
+          "B": "Every member uses the euro, so there is no exchange rate between them. This is exactly the tool a member gives up when it joins.",
+          "D": "The Eurozone members are all in the EU single market, so tariffs on trade between them are not allowed."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-5-q7",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Country E, an EU member with its own currency, is about to adopt the euro. Table 1 describes four firms based there.<br />Using Table 1, the firm likely to gain most from the change is",
+      "table": {
+        "caption": "Table 1: Four firms in Country E",
+        "head": [
+          "",
+          "What the firm does"
+        ],
+        "rows": [
+          [
+            "Firm 1",
+            "Sells only in Country E, and buys only from local suppliers"
+          ],
+          [
+            "Firm 2",
+            "Sells most of its output to buyers in France and Germany"
+          ],
+          [
+            "Firm 3",
+            "Sells most of its output to buyers in the United States"
+          ],
+          [
+            "Firm 4",
+            "Buys its components from China, paying in dollars"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Firm 1.",
+        "B": "Firm 2.",
+        "C": "Firm 3.",
+        "D": "Firm 4."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Inside the Eurozone, a firm selling to another member is paid in euros → its revenue cannot be hit by a currency change, and it pays nothing to convert money → lower costs and easier planning.<br />Firm 2 sells mostly to France and Germany, both in the Eurozone. Once Country E adopts the euro, its main sales carry <strong>no exchange rate risk</strong> and no conversion costs, so it gains most.",
+        "distractors": {
+          "A": "Firm 1 does not trade abroad, so it has no exchange rate risk to lose. With prices in one currency across the Eurozone, it may even face more competition at home.",
+          "C": "Firm 3 sells to the US, which does not use the euro. It still has to convert dollars, so its exchange rate risk is unchanged.",
+          "D": "Firm 4 pays in dollars, and China is outside the Eurozone. Adopting the euro does nothing to its currency risk on those components."
+        }
+      }
+    }
+  ]
+}

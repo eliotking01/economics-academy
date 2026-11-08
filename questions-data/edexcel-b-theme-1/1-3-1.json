@@ -1,0 +1,204 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-1",
+  "boardName": "Edexcel B Theme 1",
+  "spec": "1.3.1",
+  "slug": "1-3-1-demand",
+  "title": "Demand",
+  "shortTitle": "Demand",
+  "pageTitle": "Demand Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on demand for Edexcel B A-Level Economics: effective demand, movements and shifts, and the factors that shift demand.",
+  "intro": "Seven original multiple-choice questions on demand: what consumers want and can afford, movements along the demand curve, and the factors that shift it.",
+  "notesTeaser": "Seven original multiple-choice questions on effective demand, movements along and shifts of the demand curve, and what shifts it.",
+  "questions": [
+    {
+      "id": "edexcel-b-1-3-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A shop planning to stock a £2,000 e-bike asks 500 local adults about it. 320 say they would like one. Of those, 45 say they would buy one at £2,000 and could afford to. Taking the answers at face value, the demand for the e-bike at £2,000 from this group is",
+      "options": {
+        "A": "45 people",
+        "B": "275 people",
+        "C": "320 people",
+        "D": "500 people"
+      },
+      "answer": "A",
+      "model": {
+        "working": "Demand is the quantity consumers are <strong>willing and able</strong> to buy at a given price. Wanting an e-bike is not enough: the want has to be backed by the ability to pay, which economists call <strong>effective demand</strong>.<br />Only the 45 people who would buy at £2,000 and could afford to meet both parts, so demand at £2,000 is <strong>45 people</strong>.",
+        "distractors": {
+          "B": "This is 320 − 45, the people who would like an e-bike but would not or could not buy one at £2,000. That is the group <strong>without</strong> effective demand.",
+          "C": "This counts everyone who would like an e-bike. Desire on its own is not demand unless it is backed by the ability to pay.",
+          "D": "This is everyone asked, including the 180 who do not want an e-bike at all."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-1-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A bowling alley finds that most groups play one game, and few pay the full £8 for a second game straight afterwards. It starts charging £4 for the second game, and many more groups stay on. The idea that best explains why the second game has to be cheaper is",
+      "options": {
+        "A": "Advertising and branding.",
+        "B": "Diminishing marginal utility.",
+        "C": "Effective demand.",
+        "D": "The law of supply."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Marginal utility is the extra satisfaction from one more unit, and it usually falls as a consumer has more of the same thing. A second game straight after the first is worth less to most groups than the first one was, so they will only pay for it if it is cheaper. That is the law of <strong>diminishing marginal utility</strong>, and it is one reason the demand curve slopes down.",
+        "distractors": {
+          "A": "Nothing about the alley's advertising or brand has changed. The same groups value the second game less than the first.",
+          "C": "The groups can clearly afford £8, because they have just paid it for the first game. The issue is not their ability to pay but how much the <strong>extra</strong> game is worth to them.",
+          "D": "The law of supply describes how producers respond to price. The stem is about why consumers will pay less for a second unit."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-1-q3",
+      "skill": "data-table",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Table 1 shows a town's population now and as forecast in ten years' time.<br />Using Table 1, the business in the town most likely to see an increase in demand is",
+      "table": {
+        "caption": "Table 1: A town's population by age group (thousands)",
+        "head": [
+          "Age group",
+          "Now",
+          "In ten years"
+        ],
+        "rows": [
+          [
+            "Under 18",
+            "22.0",
+            "19.0"
+          ],
+          [
+            "18 to 39",
+            "30.0",
+            "26.0"
+          ],
+          [
+            "40 to 64",
+            "32.0",
+            "30.0"
+          ],
+          [
+            "65 and over",
+            "16.0",
+            "20.0"
+          ],
+          [
+            "Total",
+            "100.0",
+            "95.0"
+          ]
+        ]
+      },
+      "options": {
+        "A": "A children's swimming school.",
+        "B": "A golf club for players aged 40 to 64.",
+        "C": "A home-care agency for older people.",
+        "D": "A letting agent for first-time renters."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Demand depends on the <strong>size and age distribution</strong> of the population, not on its size alone. The town shrinks by 5,000 people overall, but the group aged 65 and over grows from 16,000 to 20,000, a rise of 25%. A home-care agency serves that group, so the demand curve for its services is most likely to shift right.",
+        "distractors": {
+          "A": "The under-18s fall from 22,000 to 19,000, so the swimming school has fewer potential customers.",
+          "B": "The 40-to-64 group falls from 32,000 to 30,000. Demand for the golf club is more likely to fall than rise.",
+          "D": "First-time renters are mostly in the 18-to-39 group, which falls from 30,000 to 26,000, the largest fall of any group."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A printer maker cuts the price of its home printers by a third. It also sells the ink cartridges that fit only its printers. In the market for those cartridges, the most likely effect is",
+      "options": {
+        "A": "A contraction of demand.",
+        "B": "A decrease in demand.",
+        "C": "An extension of demand.",
+        "D": "An increase in demand."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Printers and their cartridges are <strong>complements</strong>: they are used together. Cheaper printers mean more people buy them, and each new printer owner needs cartridges. The cartridges' own price has not changed, so this is a shift of their demand curve to the right: an <strong>increase in demand</strong>.",
+        "distractors": {
+          "A": "A contraction is a movement up the curve caused by a rise in the good's <strong>own</strong> price. The price of cartridges has not changed.",
+          "B": "Demand for a complement decreases when the other good's price <strong>rises</strong>. Here the printer price has fallen.",
+          "C": "An extension is a movement down the curve caused by a fall in the good's own price. It is the printers that are cheaper, not the cartridges, so the whole cartridge demand curve shifts instead."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-1-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Over a year, average wages rise by 3% while prices rise by 6%. Shoppers buy a supermarket's value range less when they can afford better food. For that value range, the most likely effect is",
+      "options": {
+        "A": "A decrease in demand, because real incomes have fallen.",
+        "B": "A decrease in demand, because wages have risen.",
+        "C": "An increase in demand, because real incomes have fallen.",
+        "D": "An increase in demand, because wages have risen."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Two steps.<br />First, <strong>real income</strong> is income adjusted for inflation. Wages are up 3% but prices are up 6%, so what shoppers can actually buy has fallen.<br />Second, the value range is an <strong>inferior good</strong>: shoppers switch away from it when they can afford better. Demand for an inferior good rises when real incomes fall.<br />So the demand curve for the value range shifts right: an <strong>increase in demand</strong>.",
+        "distractors": {
+          "A": "Real incomes have fallen, but this treats the value range as a normal good. The stem says shoppers leave it when they can afford better, so a fall in real income raises its demand.",
+          "B": "The inferior-good logic is right, but it uses money wages. What matters is real income, and with prices rising faster than wages, real income has fallen.",
+          "D": "Two errors that happen to point the same way. It uses money wages rather than real income, and treats the range as a normal good. For an inferior good, a genuine rise in income would cut demand."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-1-q6",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A sandwich shop cuts the price of its lunchtime meal deal and sells more of them. A month later a new office block opens next door, and sales rise again at the same new price. In order, the two changes are",
+      "options": {
+        "A": "An extension of demand, then a further extension.",
+        "B": "An extension of demand, then an increase in demand.",
+        "C": "An increase in demand, then an extension of demand.",
+        "D": "An increase in demand, then a further increase."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The first rise in sales comes from the meal deal's <strong>own price</strong> falling, so buyers move down the existing demand curve: an <strong>extension of demand</strong>.<br />The second comes from something other than price. The office block brings more potential customers next door, so more meal deals are bought at the same price. The whole curve shifts right: an <strong>increase in demand</strong>.",
+        "distractors": {
+          "A": "The first change is an extension, but the second is not. Sales rose with no change in price, which is a shift of the curve, not a movement along it.",
+          "C": "The order is reversed. A price cut moves buyers along the curve, and a new source of customers shifts it.",
+          "D": "A change in the good's own price never shifts its own demand curve, so the first change cannot be an increase in demand."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-1-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": true,
+      "stem": "A trainer brand's new advert goes viral on social media. The brand then raises its price by 5%, yet it sells more pairs than before. Sketching the demand curve for its trainers, this is best shown as",
+      "options": {
+        "A": "A movement up the original demand curve only.",
+        "B": "A shift left, then a movement up the new curve.",
+        "C": "A shift right, then a movement down the new curve.",
+        "D": "A shift right, then a movement up the new curve."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Two things have happened.<br />The viral advert makes the trainers more popular, so more are wanted at every price: the demand curve <strong>shifts right</strong>.<br />The 5% price rise then moves buyers <strong>up</strong> the new curve, a contraction of demand.<br />Sales still end up higher than before, which tells you the shift was bigger than the contraction along the new curve.",
+        "distractors": {
+          "A": "A price rise on its own would cut the number of pairs sold. It cannot explain sales going up.",
+          "B": "A successful advert shifts demand to the right, not the left. A leftward shift and a price rise would both cut sales.",
+          "C": "The shift is right, but the price rose, so buyers move up the new curve. A movement down would need a price cut."
+        }
+      }
+    }
+  ]
+}

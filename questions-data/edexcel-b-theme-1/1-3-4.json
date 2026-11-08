@@ -1,0 +1,239 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-1",
+  "boardName": "Edexcel B Theme 1",
+  "spec": "1.3.4",
+  "slug": "1-3-4-price-mechanism",
+  "title": "Price Mechanism",
+  "shortTitle": "Price Mechanism",
+  "pageTitle": "Price Mechanism Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on the price mechanism for Edexcel B A-Level Economics: signals, firms' responses, niche and mass markets, market growth.",
+  "intro": "Seven original multiple-choice questions on the price mechanism: what prices signal, how firms respond to a change in demand, niche and mass markets, and market growth.",
+  "notesTeaser": "Seven original multiple-choice questions on the functions of price, firms' responses to demand, niche and mass markets, and market growth.",
+  "questions": [
+    {
+      "id": "edexcel-b-1-3-4-q1",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A skip-hire firm sees that local skip-hire prices have risen by 30% in a year. Its owner concludes that local building work has picked up. In reaching that conclusion, the owner is using the price rise as",
+      "options": {
+        "A": "An incentive, as each hire now earns the firm more.",
+        "B": "A rationing device, as fewer people can afford skips.",
+        "C": "A signal, as it shows demand is outrunning supply.",
+        "D": "A signal, as it shows supply is outrunning demand."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The owner is reading <strong>information</strong> from the price: a rising price shows that demand is outrunning supply. That is the <strong>signalling</strong> function. The signal is the information; the incentive would be the reason to act on it.",
+        "distractors": {
+          "A": "The higher price does make each hire more profitable, which is the incentive to supply more. But the owner is drawing a conclusion about the market, not deciding to act.",
+          "B": "The price rise may ration skips, but that is about who gets one. The owner is using the price as information.",
+          "D": "This reverses the signal. A falling price shows supply outrunning demand. A rising price shows the opposite."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-4-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "During a two-week heatwave, a garden centre's sales of paddling pools treble and its stock starts to run short. Forecasters expect normal weather to return next week. The garden centre's most sensible response is to",
+      "options": {
+        "A": "Build a second warehouse to hold more pools.",
+        "B": "Hire extra permanent staff to sell more pools.",
+        "C": "Raise the price of the pools it has left.",
+        "D": "Sign a three-year deal to buy twice as many pools."
+      },
+      "answer": "C",
+      "model": {
+        "working": "How a firm responds to a rise in demand depends on <strong>whether the rise will last</strong>. This one ends next week, so building capacity makes no sense. With stock running short, the firm can raise its price: the higher price rations the pools it has left and earns more profit on each sale.",
+        "distractors": {
+          "A": "A new warehouse is an investment in capacity. No firm builds capacity for a one-off spike in demand.",
+          "B": "Permanent staff would still be on the payroll long after the heatwave has ended.",
+          "D": "This commits the firm to twice the stock for three years, on the strength of two weeks of hot weather."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-4-q3",
+      "skill": "data-table",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Table 1 describes four firms that all see a rise in demand for their products.<br />Using Table 1, the firm most likely to respond mainly by raising its price is",
+      "table": {
+        "caption": "Table 1: Four firms facing a rise in demand",
+        "head": [
+          "",
+          "Capacity in use",
+          "What rivals are doing",
+          "How long the rise is expected to last"
+        ],
+        "rows": [
+          [
+            "Firm 1",
+            "60%",
+            "Holding their prices",
+            "Several years"
+          ],
+          [
+            "Firm 2",
+            "100%",
+            "Raising their prices",
+            "A few weeks"
+          ],
+          [
+            "Firm 3",
+            "70%",
+            "Holding their prices",
+            "A few weeks"
+          ],
+          [
+            "Firm 4",
+            "85%",
+            "Cutting their prices",
+            "Several years"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Firm 1.",
+        "B": "Firm 2.",
+        "C": "Firm 3.",
+        "D": "Firm 4."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Three things decide a firm's response: spare capacity, whether the rise will last, and what rivals do. Firm 2 has <strong>no spare capacity</strong>, so it cannot produce more quickly. The rise is <strong>short</strong>, so investing in new capacity is not worth it. And its <strong>rivals are raising prices too</strong>, so a price rise will not drive customers away. Raising its price is the obvious response.",
+        "distractors": {
+          "A": "Firm 1 has plenty of spare capacity and expects the rise to last. It can produce more now and may invest, and rivals holding their prices make a price rise risky.",
+          "C": "Firm 3 has spare capacity, so it can meet a short rise by producing more with what it has. Its rivals are holding their prices, which makes a price rise risky.",
+          "D": "Firm 4's rivals are cutting their prices, so raising its own would lose customers. With the rise expected to last, it is more likely to expand."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-4-q4",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A market report for one region shows that spending on dog grooming was £2.4m in Year 1, £3.0m in Year 2 and £3.3m in Year 3. The market's growth between Year 2 and Year 3 was",
+      "options": {
+        "A": "10%",
+        "B": "12.5%",
+        "C": "25%",
+        "D": "37.5%"
+      },
+      "answer": "A",
+      "model": {
+        "working": "Market growth (%) = change in market size ÷ original market size × 100.<br />Change between Year 2 and Year 3: £3.3m − £3.0m = <strong>£0.3m</strong>.<br />Growth: £0.3m ÷ £3.0m × 100 = <strong>10%</strong>.<br />The market is still growing, but more slowly than the year before.",
+        "distractors": {
+          "B": "This divides the £0.3m change by the Year 1 figure, £2.4m. The original value for this period is Year 2's £3.0m.",
+          "C": "This is the growth between Year 1 and Year 2: £0.6m ÷ £2.4m × 100.",
+          "D": "This is the growth over both years together: £0.9m ÷ £2.4m × 100."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-4-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A small firm makes hiking boots for people with very wide feet. It has few rivals and earns a high profit on each pair. If this niche grows quickly, the most likely result over time is that",
+      "options": {
+        "A": "Bigger firms are drawn in, and prices fall.",
+        "B": "Bigger firms stay out, as the market is too small.",
+        "C": "Prices rise, as the firm still faces few rivals.",
+        "D": "Prices stay high, as customers will pay more."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A niche market has few competitors and high profit on each unit. Those high profits are a signal and an incentive to other firms. As the niche grows it becomes worth entering, so <strong>bigger firms are drawn in</strong>, supply increases, and <strong>prices fall</strong>.",
+        "distractors": {
+          "B": "Small size is what keeps big firms out of a niche. The stem says this one is growing quickly, which removes that barrier.",
+          "C": "The firm has few rivals now, but high profits in a growing market attract new ones.",
+          "D": "Customers in a niche will often pay more, but once new firms enter they have more choice, and competition pushes prices down."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-4-q6",
+      "skill": "data-table",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Table 1 gives figures for four firms.<br />Using Table 1, the firm whose figures best fit a niche market is",
+      "table": {
+        "caption": "Table 1: Four firms' sales, profit and rivals",
+        "head": [
+          "",
+          "Units sold a year",
+          "Profit on each unit",
+          "Rivals"
+        ],
+        "rows": [
+          [
+            "Firm 1",
+            "4,000,000",
+            "£0.05",
+            "Many, including several large firms"
+          ],
+          [
+            "Firm 2",
+            "800",
+            "£0.40",
+            "Many"
+          ],
+          [
+            "Firm 3",
+            "600,000",
+            "£0.30",
+            "A few large firms"
+          ],
+          [
+            "Firm 4",
+            "2,500",
+            "£45.00",
+            "Two"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Firm 1.",
+        "B": "Firm 2.",
+        "C": "Firm 3.",
+        "D": "Firm 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A niche market is a small, specialised part of a larger market. It has <strong>few competitors</strong>, customers will pay more for something that suits them, so <strong>profit on each unit is high</strong>, and <strong>sales are small</strong>. Firm 4 fits all three: 2,500 units, £45 profit on each, and only two rivals.",
+        "distractors": {
+          "A": "Huge sales, a tiny profit on each unit and many large rivals are the marks of a <strong>mass</strong> market, where firms rely on high volumes.",
+          "B": "Firm 2's sales are small, but its profit per unit is low and it has many rivals. It looks like a small firm in a crowded market, not a niche.",
+          "C": "Large sales, low profit per unit and large rivals point to a mass market, not a niche."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-4-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm is deciding whether to start installing home electric-car chargers. The evidence that best suggests the market has room to grow is that",
+      "options": {
+        "A": "Existing installers are cutting prices to clear stock.",
+        "B": "Installers' prices and profits are rising across the market.",
+        "C": "Several installers have left the market this year.",
+        "D": "Total sales are flat, so firms grow by winning rivals' customers."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Rising prices and profits across a market are a <strong>signal that demand is outrunning supply</strong>. That is one of the clearest signs a market has room to grow, and the profits are also the incentive for a new firm to enter.",
+        "distractors": {
+          "A": "Cutting prices to clear stock is a sign of excess supply: sellers have more than buyers want.",
+          "C": "Firms leaving a market usually means profits are falling, the reverse of a growing market.",
+          "D": "This describes a flat market, where a new firm could only grow by taking customers from rivals."
+        }
+      }
+    }
+  ]
+}

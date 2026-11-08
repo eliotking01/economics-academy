@@ -1,0 +1,172 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-1",
+  "boardName": "Edexcel B Theme 1",
+  "spec": "1.2.1",
+  "slug": "1-2-1-role-of-an-entrepreneur",
+  "title": "Role of an Entrepreneur",
+  "shortTitle": "Role of an Entrepreneur",
+  "pageTitle": "Role of an Entrepreneur Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on the role of an entrepreneur for Edexcel B A-Level Economics: creative destruction, business decisions and added value.",
+  "intro": "Six original multiple-choice questions on what an entrepreneur does: driving creative destruction, deciding how to run and grow a business, and adding value.",
+  "notesTeaser": "Six original multiple-choice questions on creative destruction, the decisions to operate, expand and develop a business, and added value.",
+  "questions": [
+    {
+      "id": "edexcel-b-1-2-1-q1",
+      "skill": "data-table",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Table 1 lists four decisions made by the founder of a bike-repair business during one year.<br />Using Table 1, the decision that <strong>develops</strong> the business, rather than operating or expanding it, is",
+      "table": {
+        "caption": "Table 1: Decisions made by a bike-repair business",
+        "head": [
+          "",
+          "Decision"
+        ],
+        "rows": [
+          [
+            "Decision 1",
+            "Raises the price of a standard service from £45 to £50"
+          ],
+          [
+            "Decision 2",
+            "Takes out a bank loan to open a second workshop, offering the same repairs, in a nearby town"
+          ],
+          [
+            "Decision 3",
+            "Hires a part-time mechanic to cover busy Saturdays"
+          ],
+          [
+            "Decision 4",
+            "Starts building and selling its own range of electric cargo bikes"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Decision 1.",
+        "B": "Decision 2.",
+        "C": "Decision 3.",
+        "D": "Decision 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Developing a business means changing what it does: launching new products, improving existing ones or moving into new markets. Building and selling its own cargo bikes is a <strong>new product</strong> for a firm that until now has only repaired bikes, so Decision 4 develops the business. It is also the riskiest of the four, because the firm has no track record in making bikes.",
+        "distractors": {
+          "A": "Setting the price of a service is <strong>operating</strong> the business: a day-to-day decision about what to charge.",
+          "B": "A second workshop does more of what already works, in a new place. That is <strong>expanding</strong>. Needing a loan to pay for it does not make it development.",
+          "C": "Deciding how many staff to employ is a day-to-day <strong>operating</strong> decision; it does not change what the firm does."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-1-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A small cider maker buys in apples costing £180, glass bottles costing £60 and labels costing £20 to make a batch of 200 bottles. It sells every bottle for £4.50 at a weekly market, and pays a helper £150 in wages to run the stall. The added value on the batch is",
+      "options": {
+        "A": "£490",
+        "B": "£640",
+        "C": "£750",
+        "D": "£900"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Added value is the selling price of the output minus the cost of the inputs that go into it.<br />Value of the output: 200 × £4.50 = <strong>£900</strong>.<br />Cost of the inputs: £180 + £60 + £20 = <strong>£260</strong>.<br />Added value: £900 − £260 = <strong>£640</strong>.<br />The helper's wages are a cost of employing labour, not an input bought in to make the cider. Like the owner's time, they have to be paid for <em>out of</em> the added value, and whatever is left after that is profit.",
+        "distractors": {
+          "A": "This also subtracts the helper's £150 wages: £900 − £260 − £150 = £490. That is closer to the batch's profit. Added value is not profit, because it is measured before wages and the owner's time are paid.",
+          "C": "This subtracts the wages instead of the inputs: £900 − £150 = £750. The apples, bottles and labels are the inputs; the wages are not.",
+          "D": "This is the revenue from the batch, 200 × £4.50. Added value is what is left after the cost of the inputs is taken away."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A start-up begins selling prescription glasses online at half the usual high-street price. Over the next few years customers switch to it in large numbers, and many independent high-street opticians close. According to the idea of creative destruction, the main long-run gain to the economy is that",
+      "options": {
+        "A": "Fewer firms compete, so the new firm can raise its prices.",
+        "B": "Resources move to a firm that gives customers better value.",
+        "C": "Total spending on glasses rises across the economy.",
+        "D": "Workers who lose their jobs are re-employed straight away."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Creative destruction is the process by which new products, methods and firms replace older ones. The long-run gain is that <strong>labour and capital leave firms that use them poorly and end up in firms that use them well</strong>. Here, customers get glasses for half the price, and the economy can produce more with the same resources.",
+        "distractors": {
+          "A": "Creative destruction replaces old firms with better ones; it is not a route to market power. The gain comes from customers getting better value, which a price rise would undo.",
+          "C": "Customers have <strong>moved</strong> their spending, not raised it. At half the price they may well spend less on glasses and more on other things.",
+          "D": "This is the <strong>destructive</strong> half, and it has a cost. Some opticians' staff will struggle to find new work, at least in the short run, especially if their skills were specific to the old firms."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-1-q4",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Two coffee kiosks on the same station concourse buy the same beans, milk and cups from the same supplier and serve almost identical drinks. One trades under a well-known national name and charges £3.60 a cup. The other is an unknown independent and charges £2.70. The higher added value per cup at the first kiosk is best explained by",
+      "options": {
+        "A": "Branding.",
+        "B": "Convenience.",
+        "C": "Lower input costs.",
+        "D": "A unique selling point."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Added value is the selling price minus the cost of the inputs. Both kiosks pay the same for their inputs, so the extra 90p of added value comes from the higher price customers will pay at the first one. The only difference between them is the name, so this is <strong>branding</strong>: customers trust a name they know and will pay more for it.",
+        "distractors": {
+          "B": "Convenience would mean something like a better location or quicker service. Both kiosks are on the same concourse, so neither is more convenient to reach.",
+          "C": "Both kiosks buy the same inputs from the same supplier, so their input costs are the same. The gap is entirely on the price side.",
+          "D": "A unique selling point is a feature no rival offers. The drinks are almost identical, so the first kiosk offers nothing the second does not except its name."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-1-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm develops roof tiles made from recycled plastic that are cheaper and lighter than clay tiles, and builders switch to them. Over several years most of the country's clay-tile works close. In the short run, the group most likely to lose out is",
+      "options": {
+        "A": "Builders, who now pay less for their tiles.",
+        "B": "Homeowners, who have new roofs fitted.",
+        "C": "Workers hired by the recycled-tile firm.",
+        "D": "Workers with skills specific to clay tiles."
+      },
+      "answer": "D",
+      "model": {
+        "working": "This is the <strong>destructive</strong> half of creative destruction. The clay-tile works lose customers, their revenue falls and they close. Their workers lose their jobs, and those whose skills were specific to the old industry may struggle to find new ones, at least in the short run.",
+        "distractors": {
+          "A": "Builders gain, not lose: they have switched to tiles that are cheaper and lighter. That is the creative half.",
+          "B": "Homeowners gain from cheaper roofs. Consumers are usually winners from creative destruction, through more choice and better value.",
+          "C": "These are the new jobs the creative half brings. The new firm's sales grow as spending switches to it, so it takes on workers."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-1-q6",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A studio sells handmade table lamps for £50 each. The clay, glaze and electrical fittings in each lamp cost £20. The cost of these inputs then rises by 20%, and the studio raises its price by 10%. The added value on each lamp is now",
+      "options": {
+        "A": "£26",
+        "B": "£27",
+        "C": "£31",
+        "D": "£35"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Added value is the selling price minus the cost of the inputs.<br />Before: £50 − £20 = <strong>£30</strong>.<br />New input cost: £20 × 1.2 = <strong>£24</strong>. New price: £50 × 1.1 = <strong>£55</strong>.<br />After: £55 − £24 = <strong>£31</strong>.<br />Added value has risen by £1, even though input costs rose by the larger percentage. A 10% rise on £50 is £5, and a 20% rise on £20 is only £4. Percentage changes have to be turned into pounds before they can be compared.",
+        "distractors": {
+          "A": "This subtracts the £4 rise in input costs but forgets the price rise: £30 − £4 = £26.",
+          "B": "This takes the 10-point gap between the two percentages and cuts added value by 10%: £30 × 0.9 = £27. The two percentages apply to different amounts, £50 and £20, so they cannot simply be netted off.",
+          "D": "This adds the £5 price rise but forgets that input costs rose too: £30 + £5 = £35."
+        }
+      }
+    }
+  ]
+}

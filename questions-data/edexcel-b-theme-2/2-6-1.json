@@ -1,0 +1,187 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-2",
+  "boardName": "Edexcel B Theme 2",
+  "spec": "2.6.1",
+  "slug": "2-6-1-macroeconomic-objectives",
+  "title": "Possible Macroeconomic Objectives",
+  "shortTitle": "Macroeconomic Objectives",
+  "pageTitle": "Macroeconomic Objectives Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on macroeconomic objectives for Edexcel B A-Level Economics: growth, unemployment and the current account balance.",
+  "intro": "Six original multiple-choice questions on the government's macroeconomic objectives: why growth and low unemployment matter to firms and the government, how a current account deficit differs from a budget deficit, and what balance of payments equilibrium means. One is a calculation.",
+  "notesTeaser": "Six original multiple-choice questions on economic growth, low unemployment and balance of payments equilibrium on the current account, and why each matters to firms and the government.",
+  "questions": [
+    {
+      "id": "edexcel-b-2-6-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "In one year, a government's tax revenue is £15bn more than its own spending. Over the same year, the country pays £40bn more to the rest of the world for imports, income and transfers than it receives from it. The country has",
+      "options": {
+        "A": "A budget surplus and a current account surplus.",
+        "B": "A budget surplus and a current account deficit.",
+        "C": "A budget deficit and a current account surplus.",
+        "D": "A budget deficit and a current account deficit."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The two balances measure different things.<br />The <strong>budget</strong> balance compares the government's tax revenue with its own spending. Revenue is £15bn above spending, so there is a <strong>budget surplus</strong>.<br />The <strong>current account</strong> records trade in goods and services, income such as profits and interest, and transfers with the rest of the world. £40bn more flows out than comes in, so there is a <strong>current account deficit</strong>.<br />A country can have one kind of deficit without the other.",
+        "distractors": {
+          "A": "The budget is in surplus, but the current account is not. More money flows out to the rest of the world than comes in, which is a deficit.",
+          "C": "This swaps the two balances. The government's extra £15bn is a budget surplus, and the £40bn net outflow to the rest of the world is a current account deficit.",
+          "D": "The £40bn net outflow is a current account deficit, but it says nothing about the government's own finances. With tax revenue above spending, the budget is in surplus."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-1-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Forecasters expect UK real GDP to grow by 3% next year, up from 1% this year. A UK maker of delivery vans is deciding whether to build a second production line. The forecast makes the new line more attractive mainly because",
+      "options": {
+        "A": "Faster growth lowers the cost of building a production line.",
+        "B": "Faster growth lowers the interest rate on business loans.",
+        "C": "Faster growth raises other firms' spending on new vans.",
+        "D": "Faster growth reduces the competition from imported vans."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Growth is a rise in real GDP, so more is being produced and sold across the economy.<br />Firms that deliver goods, such as parcel firms, wholesalers and builders, see their own sales rise. More of them need extra vans, so the van maker's sales and profit are likely to rise.<br />With more vans to sell, a second production line is more likely to be fully used, which makes the investment worth more.",
+        "distractors": {
+          "A": "Growth tends to push costs up, not down. Busier suppliers and scarcer workers raise the prices of materials and labour.",
+          "B": "If anything, faster growth makes higher interest rates more likely. Growth well above trend tends to raise inflation, and the Bank of England sets Bank Rate to keep inflation at its target.",
+          "D": "When incomes and spending rise, spending on imports rises too. Foreign van makers also sell more, so the competition does not ease."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-1-q3",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Unemployment falls by 40,000 people over a year. Each of them had been receiving £5,000 a year in out-of-work benefits, and each now pays £4,000 a year in income tax and National Insurance. Ignoring any other effects, the government's budget deficit",
+      "options": {
+        "A": "Falls by £40m.",
+        "B": "Falls by £160m.",
+        "C": "Falls by £200m.",
+        "D": "Falls by £360m."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A fall in unemployment helps the government's finances in two ways at once.<br />Benefits no longer paid: 40,000 × £5,000 = <strong>£200m</strong>.<br />Extra tax collected: 40,000 × £4,000 = <strong>£160m</strong>.<br />Both make the deficit smaller: £200m + £160m = <strong>£360m</strong>.",
+        "distractors": {
+          "A": "This subtracts one effect from the other: £200m − £160m = £40m. But the two do not cancel out. Paying less in benefits and collecting more tax both improve the government's finances.",
+          "B": "This counts only the extra tax, 40,000 × £4,000. The government also stops paying £5,000 a year in benefits to each person who is now in work.",
+          "C": "This counts only the benefits saved, 40,000 × £5,000. Each person now in work also pays £4,000 a year in tax."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-1-q4",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows four countries' current account balances over four years, as a percentage of GDP.<br />Using Table 1, the country closest to the objective of balance of payments equilibrium on the current account is",
+      "table": {
+        "caption": "Table 1: Current account balance as a percentage of GDP",
+        "head": [
+          "",
+          "Year 1",
+          "Year 2",
+          "Year 3",
+          "Year 4"
+        ],
+        "rows": [
+          [
+            "Country P",
+            "−4.6",
+            "−5.1",
+            "−4.8",
+            "−5.3"
+          ],
+          [
+            "Country Q",
+            "+0.3",
+            "−1.2",
+            "−2.6",
+            "−4.1"
+          ],
+          [
+            "Country R",
+            "+6.2",
+            "+6.8",
+            "+7.1",
+            "+6.5"
+          ],
+          [
+            "Country S",
+            "−1.1",
+            "+0.7",
+            "−0.6",
+            "+0.9"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Country P.",
+        "B": "Country Q.",
+        "C": "Country R.",
+        "D": "Country S."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Equilibrium on the current account means a balance that is <strong>close to even over several years</strong>, not exactly zero in each one.<br />Country S moves between small deficits and small surpluses, none above about 1% of GDP. Over the four years they almost cancel out: −1.1 + 0.7 − 0.6 + 0.9 = <strong>−0.1</strong>.",
+        "distractors": {
+          "A": "Country P runs a large deficit, around 5% of GDP, every year. A large, lasting deficit has to be paid for by borrowing from abroad or selling assets to foreign buyers.",
+          "B": "Country Q is closest to zero in Year 1, but its deficit widens every year, to 4.1% of GDP by Year 4. One year is not enough to judge the objective.",
+          "C": "A large, lasting surplus is not the aim either. It means other countries run matching deficits, and they may respond with tariffs."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-1-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two countries each run a current account deficit of 3% of GDP, paid for in the same way. Most of Country X's extra imports are machines for new factories. Most of Country Y's are consumer goods such as clothes and phones. Country Y's deficit is the bigger worry because, unlike Country X's, its extra imports",
+      "options": {
+        "A": "Add little to its future output.",
+        "B": "Are paid for in a foreign currency.",
+        "C": "Increase its government's budget deficit.",
+        "D": "Must be paid for by borrowing from abroad."
+      },
+      "answer": "A",
+      "model": {
+        "working": "How much a deficit matters depends partly on <strong>what the imports are</strong>.<br />Country X's machines go into new factories, which raise its output later. Some of that output can be exported, which helps pay for the deficit.<br />Country Y's clothes and phones are bought by households and used up. They add little to what the country can produce in future, so little is built to help pay the deficit back.",
+        "distractors": {
+          "B": "Both countries pay for their imports in foreign currencies, so this cannot explain why Country Y's deficit is the bigger worry.",
+          "C": "This confuses the current account with the government's budget. Imports bought by households and firms are not government spending, so they do not change the budget deficit.",
+          "D": "The stem says both deficits are paid for in the same way. How a deficit is financed cannot separate the two countries here."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "For twenty years, a country's current account deficits are funded by foreign buyers taking over its firms, office blocks and shares. The most likely long-run effect on its current account is that",
+      "options": {
+        "A": "It improves, as the sales bring money into the country.",
+        "B": "It is unchanged, as only trade is recorded in it.",
+        "C": "It worsens, as profits on the assets now flow abroad.",
+        "D": "It worsens, as the sales are recorded as imports."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The money foreign buyers pay for the assets covers the deficit at the time. It is not payment for goods, services or income, so it does not count in the current account. It is recorded in the <strong>financial account</strong> instead.<br />After the sale, the <strong>profits</strong> those firms, offices and shares earn belong to their foreign owners and flow abroad every year.<br />The current account records income such as profits and interest as well as trade, so these outflows <strong>add to the deficit</strong> for as long as the assets are foreign-owned.",
+        "distractors": {
+          "A": "The money from each sale arrives once, and it is not trade or income, so it does not improve the current account. In every year after the sale, the profits go to the new owners abroad.",
+          "B": "The current account records income such as profits and interest, not just trade in goods and services. Profits paid to foreign owners count against it.",
+          "D": "Selling an asset to a foreign buyer brings money in. It is not spending on goods or services from abroad, so it is not an import."
+        }
+      }
+    }
+  ]
+}
