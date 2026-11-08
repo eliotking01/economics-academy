@@ -170,6 +170,13 @@ def expected_page_counts() -> dict[str, int]:
     practice = board_data.load("practiceQuestions")
     topics = sum(b["expectedTopics"] for b in practice.values())
     groups = sum(len(b["groups"]) for b in practice.values())
+    # Deck files of the boards with flashcards LIVE. A staged board's decks
+    # (D68) sit in flashcards-data/ too, but build_flashcards writes no page
+    # for them, so counting every file expected a page that cannot exist.
+    live_decks = {b["slugs"]["flashcards"]
+                  for b in board_data.load("flashcards").values()}
+    decks = [p for p in (ROOT / "flashcards-data").glob("*/*.json")
+             if p.parent.name in live_decks]
     out = {
         "notes-topic": notes_topics,
         "mcq-topic": topics,
@@ -177,7 +184,7 @@ def expected_page_counts() -> dict[str, int]:
         # that classifies as a hub - so count the hub RECORDS, not the groups
         "notes-hub": len(list((ROOT / "notes-data" / "hubs").glob("*.json"))),
         "mcq-hub": groups + 1,            # one per group plus /practice-questions/
-        "flashcards": len(list((ROOT / "flashcards-data").glob("*/*.json"))) + 1,
+        "flashcards": len(decks) + 1,     # one page per live deck plus the hub
         "glossary": len(board_data.load("glossary")) + 1,  # one per board plus the combined page
     }
     out.update(PINNED_PAGE_COUNTS)
