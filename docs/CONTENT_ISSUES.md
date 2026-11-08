@@ -711,3 +711,27 @@ Format per entry:
 - **Confidence** — medium-high (standard theory; the page's own trade-credit
   definition). It is a loose example, not a false principle.
 - **Status** — open.
+
+## 39. Edexcel B 1.6.4 worked example treats a cash surplus as proof of profit
+
+- **Location** — `revision-notes/edexcel-b-theme-1/1-6-4-business-survival-and-cash-flow.html`,
+  "Worked Example: Rosa's Christmas Rush", the paragraph under the table
+  (source: `notes-data/topics/edexcel-b-theme-1/1-6-4-business-survival-and-cash-flow.html`).
+- **Issue** — the page reads "Over the three months Rosa takes £24,000 and
+  spends £14,000, so the quarter is profitable: her bank balance ends £10,000
+  higher than it started." That reasons from cash to profit, on the page whose
+  point is that the two differ. It roughly holds here, because all Rosa's
+  customers pay straight away, but materials bought in October and not yet
+  used by the end of December would not be a cost of the quarter, so the cash
+  surplus and the profit need not match. Found by the cold-solver verify pass
+  on Edexcel B flashcards unit 1.6 (`NOTES?`). No card depends on this
+  sentence.
+- **Proposed correction** — keep the cash fact and drop the inference, e.g.
+  "Over the three months Rosa takes £24,000 and spends £14,000, so her bank
+  balance ends £10,000 higher than it started, and the season is a good one."
+  Or keep "profitable" and say why it holds here: "...and because her
+  customers pay straight away and she uses the materials she buys, the
+  quarter is profitable too." The wording is Eliot's call.
+- **Confidence** — medium (the sentence is not false for Rosa; it models a
+  shortcut the page warns against).
+- **Status** — open.

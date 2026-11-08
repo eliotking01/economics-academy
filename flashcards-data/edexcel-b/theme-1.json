@@ -2737,6 +2737,609 @@
         "notesPage": "/revision-notes/edexcel-b-theme-1/1-5-2-government-intervention-and-failure.html",
         "origin": "card-authored"
       }
+    },
+    {
+      "id": "edexcel-b-1-6-1-def-01",
+      "specCode": "1.6.1",
+      "topic": "1.6 Revenue, Costs, Profits and Cash",
+      "subtopic": "1-6-1-revenue-and-costs",
+      "cardType": "definition",
+      "front": "<p>Define <strong>sales volume</strong> and <strong>sales revenue</strong>, and give the link between them.</p>",
+      "back": "<p><strong>Sales volume</strong> — the number of units a business sells in a period, such as a week, a month or a year.</p><p><strong>Sales revenue</strong> — the money a business receives from selling its output, before any costs are taken off. It is also called total revenue or turnover.</p><p><strong>Sales revenue = Price × Sales volume</strong>, which rearranges to <strong>Sales volume = Sales revenue ÷ Price</strong>.</p><p>Revenue is not profit: costs still have to be paid.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "revenue",
+        "sales-volume"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-6-1-revenue-and-costs.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the number of units a business sells in a period, such as a week, a month or a year."
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-1-def-02",
+      "specCode": "1.6.1",
+      "topic": "1.6 Revenue, Costs, Profits and Cash",
+      "subtopic": "1-6-1-revenue-and-costs",
+      "cardType": "definition",
+      "front": "<p>Define <strong>fixed costs</strong> and <strong>variable costs</strong>, with examples of each.</p>",
+      "back": "<p><strong>Fixed costs</strong> — costs that do not change when output changes, at least in the short run. Rent, business rates, insurance and the salaries of permanent staff are all fixed costs. They have to be paid even in a month when the business makes nothing.</p><p><strong>Variable costs</strong> — costs that rise and fall with output. Raw materials, packaging, the energy used by machines and delivery charges are variable costs. Make nothing and they fall to zero.</p><p>Total variable costs = variable cost of one unit × output.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "costs",
+        "fixed-costs",
+        "variable-costs"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-6-1-revenue-and-costs.html",
+        "origin": "notes-verbatim",
+        "verbatim": "costs that do not change when output changes, at least in the short run. Rent, business rates, insurance and the salaries of permanent staff are all fixed costs. They have to be paid even in a month when the business makes nothing."
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-1-def-03",
+      "specCode": "1.6.1",
+      "topic": "1.6 Revenue, Costs, Profits and Cash",
+      "subtopic": "1-6-1-revenue-and-costs",
+      "cardType": "definition",
+      "front": "<p>Define <strong>total costs</strong> and <strong>average cost</strong>, and give the formula for each.</p>",
+      "back": "<p><strong>Total costs</strong> — the whole cost of producing a given level of output, found by adding fixed and variable costs:</p><p><strong>Total costs = Fixed costs + Variable costs</strong></p><p><strong>Average cost</strong> — the cost of producing one unit, found by dividing total costs by output:</p><p><strong>Average cost = Total costs ÷ Output</strong></p><p>It is also called unit cost.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "costs",
+        "total-costs",
+        "average-cost"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-6-1-revenue-and-costs.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the whole cost of producing a given level of output, found by adding fixed and variable costs:"
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-1-formula-01",
+      "specCode": "1.6.1",
+      "topic": "1.6 Revenue, Costs, Profits and Cash",
+      "subtopic": "1-6-1-revenue-and-costs",
+      "cardType": "formula",
+      "front": "<p>State the formula for <strong>percentage change</strong>. A gym's members fall from 800 to 680: what is the percentage change?</p>",
+      "back": "<p>Take the change, divide it by the original value and multiply by 100: (680 − 800) ÷ 800 × 100 = <strong>−15%</strong>. A negative answer means a fall.</p><p><strong>Always divide by the original value.</strong> If members go back up from 680 to 800, the rise is 120 ÷ 680 × 100 = 17.6%, not 15%, because the starting figure is smaller.</p><p>Take care with figures that are already percentages: an interest rate going from 2% to 3% has risen by one <strong>percentage point</strong>, which is a 50% increase.</p>",
+      "formula": "\\text{Percentage change} = \\frac{\\text{New value} - \\text{Original value}}{\\text{Original value}} \\times 100",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "percentage-change",
+        "formula",
+        "quantitative-skills"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-6-1-revenue-and-costs.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-1-calc-01",
+      "specCode": "1.6.1",
+      "topic": "1.6 Revenue, Costs, Profits and Cash",
+      "subtopic": "1-6-1-revenue-and-costs",
+      "cardType": "calculation",
+      "front": "<p>A bakery has fixed costs of <strong>£3,000</strong> a month. Each loaf uses <strong>£1.50</strong> of flour and packaging.</p><p>Calculate total costs and average cost at <strong>1,000</strong> and at <strong>4,000</strong> loaves a month. Why does average cost fall?</p>",
+      "back": "<ul><li><strong>1,000 loaves:</strong> variable costs 1,000 × £1.50 = £1,500. Total costs £3,000 + £1,500 = <strong>£4,500</strong>. Average cost £4,500 ÷ 1,000 = <strong>£4.50</strong>.</li><li><strong>4,000 loaves:</strong> variable costs 4,000 × £1.50 = £6,000. Total costs £3,000 + £6,000 = <strong>£9,000</strong>. Average cost £9,000 ÷ 4,000 = <strong>£2.25</strong>.</li></ul><p>Average cost falls because the same £3,000 of fixed costs is shared across more loaves: £3 a loaf at 1,000, but only 75p at 4,000.</p><p>Fixed costs are only fixed up to a point. If the bakery grows enough to need bigger premises, they jump to a new level.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "costs",
+        "average-cost",
+        "calculation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-6-1-revenue-and-costs.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-2-def-01",
+      "specCode": "1.6.2",
+      "topic": "1.6 Revenue, Costs, Profits and Cash",
+      "subtopic": "1-6-2-break-even-analysis",
+      "cardType": "definition",
+      "front": "<p>Define <strong>contribution per unit</strong>. What does contribution go towards?</p>",
+      "back": "<p><strong>Contribution per unit</strong> — the selling price of one unit minus its variable cost:</p><p><strong>Contribution per unit = Selling price − Variable cost per unit</strong></p><p>It is what is left from each sale once its variable cost is paid. It goes towards the fixed costs, and once they are covered, the contribution from every further unit is profit.</p><p>Total contribution = contribution per unit × sales volume. Take fixed costs away from it and you have profit.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "break-even",
+        "contribution"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-6-2-break-even-analysis.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the selling price of one unit minus its variable cost:"
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-2-def-02",
+      "specCode": "1.6.2",
+      "topic": "1.6 Revenue, Costs, Profits and Cash",
+      "subtopic": "1-6-2-break-even-analysis",
+      "cardType": "definition",
+      "front": "<p>Define the <strong>break-even point</strong>.</p>",
+      "back": "<p><strong>Break-even point</strong> — the level of output at which total revenue equals total costs, so the business makes neither a profit nor a loss. At that output, <strong>total fixed costs + total variable costs = total sales revenue</strong>.</p><p>Below the break-even point the business makes a loss. Above it, the business makes a profit.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "break-even"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-6-2-break-even-analysis.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the level of output at which total revenue equals total costs, so the business makes neither a profit nor a loss. At that output, total fixed costs + total variable costs = total sales revenue."
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-2-def-03",
+      "specCode": "1.6.2",
+      "topic": "1.6 Revenue, Costs, Profits and Cash",
+      "subtopic": "1-6-2-break-even-analysis",
+      "cardType": "definition",
+      "front": "<p>Define the <strong>margin of safety</strong>. What does it tell a business?</p>",
+      "back": "<p><strong>Margin of safety</strong> — the amount by which actual or planned sales are above the break-even point:</p><p><strong>Margin of safety = Actual output − Break-even output</strong></p><p>It shows how far sales could fall before the business makes a loss, in units or as a percentage of actual sales. A large margin means it could survive a drop in demand; a small one means even a short dip would push it into loss.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "break-even",
+        "margin-of-safety"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-6-2-break-even-analysis.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the amount by which actual or planned sales are above the break-even point:"
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-2-diagram-01",
+      "specCode": "1.6.2",
+      "topic": "1.6 Revenue, Costs, Profits and Cash",
+      "subtopic": "1-6-2-break-even-analysis",
+      "cardType": "diagram",
+      "front": "<p>Sketch a <strong>break-even chart</strong>. Label fixed costs, total costs, total revenue, the break-even point, the areas of loss and profit, and the margin of safety.</p>",
+      "back": "<p>Output goes along the bottom, and costs and revenue go up the side.</p><ul><li><strong>FC</strong> is a horizontal line: it is the same at every output.</li><li><strong>TC</strong> starts at the fixed cost line, because some costs are paid even at zero output, and rises with each unit made.</li><li><strong>TR</strong> starts at zero and rises more steeply than TC, because each unit sells for more than its variable cost.</li><li>The <strong>break-even point</strong> is where TR crosses TC. The gap between them to the left is a <strong>loss</strong>, and to the right a <strong>profit</strong>.</li><li>The <strong>margin of safety</strong> runs from break-even output to actual output.</li></ul><p>Here fixed costs are £2,000, the firm breaks even at 250 units and £3,000, and actual output of 500 gives a margin of safety of 250.</p>",
+      "svgRef": "/images/diagrams/svg/break-even-chart.svg",
+      "svgAlt": "Break-even chart with output across and costs and revenue up the side; FC is flat at £2,000, TC starts at £2,000 and rises, and TR starts at zero and rises more steeply, crossing TC at the break-even point of 250 units and £3,000; the gap between the lines is shaded as a loss before break-even and a profit after it, and the margin of safety runs from 250 to actual output of 500",
+      "difficulty": "standard",
+      "tags": [
+        "break-even",
+        "break-even-chart",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-6-2-break-even-analysis.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-2-calc-01",
+      "specCode": "1.6.2",
+      "topic": "1.6 Revenue, Costs, Profits and Cash",
+      "subtopic": "1-6-2-break-even-analysis",
+      "cardType": "calculation",
+      "front": "<p>A food truck sells burritos for <strong>£9</strong> each. Each burrito costs <strong>£3.50</strong> in ingredients and packaging, and the truck's fixed costs are <strong>£4,400</strong> a month. It sells <strong>1,100</strong> burritos a month.</p><p>Calculate contribution per unit, break-even output, break-even revenue, the margin of safety and monthly profit.</p>",
+      "back": "<ul><li><strong>Contribution per unit:</strong> £9 − £3.50 = £5.50</li><li><strong>Break-even output:</strong> £4,400 ÷ £5.50 = 800 burritos</li><li><strong>Break-even revenue:</strong> 800 × £9 = £7,200</li><li><strong>Margin of safety:</strong> 1,100 − 800 = 300 burritos, which is 27.3% of sales</li><li><strong>Profit:</strong> the contribution from the 300 burritos sold beyond break-even, 300 × £5.50 = £1,650</li></ul><p>Check: revenue of 1,100 × £9 = £9,900, minus total costs of £4,400 + (1,100 × £3.50) = £8,250, also gives £1,650.</p><p><strong>Divide fixed costs by contribution, not by the selling price.</strong> £4,400 ÷ £9 gives 489, which ignores the £3.50 each burrito costs to make.</p>",
+      "formula": "\\text{Break-even output} = \\frac{\\text{Total fixed costs}}{\\text{Contribution per unit}}",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "break-even",
+        "contribution",
+        "margin-of-safety",
+        "calculation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-6-2-break-even-analysis.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-2-app-01",
+      "specCode": "1.6.2",
+      "topic": "1.6 Revenue, Costs, Profits and Cash",
+      "subtopic": "1-6-2-break-even-analysis",
+      "cardType": "application",
+      "front": "<p>The food truck sells burritos at £9, with a variable cost of £3.50, fixed costs of £4,400 a month and sales of 1,100 a month. It breaks even at 800. What happens to <strong>contribution</strong>, <strong>break-even output</strong> and the <strong>margin of safety</strong> in each case?</p><ol><li>the price rises to £10</li><li>ingredients rise to £4.50 a burrito</li><li>the pitch fee falls, cutting fixed costs to £3,850.</li></ol>",
+      "back": "<ol><li>Contribution rises to £6.50 → break-even falls to 4,400 ÷ 6.50 = 676.9, so <strong>677</strong> → the margin of safety grows from 300 to 423, if sales stay at 1,100. Whether the truck is better off depends on how many customers it loses.</li><li>Contribution falls to £4.50 → break-even rises to 4,400 ÷ 4.50 = 977.8, so <strong>978</strong> → the margin of safety shrinks to 122.</li><li>Contribution stays at £5.50 → break-even falls to 3,850 ÷ 5.50 = <strong>700</strong> → the margin of safety grows to 400.</li></ol><p>Round break-even up, not down: the truck cannot sell part of a burrito, and rounding down would leave it just short.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "break-even",
+        "margin-of-safety",
+        "application"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-6-2-break-even-analysis.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-2-eval-01",
+      "specCode": "1.6.2",
+      "topic": "1.6 Revenue, Costs, Profits and Cash",
+      "subtopic": "1-6-2-break-even-analysis",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> break-even analysis as a planning tool for a business.</p>",
+      "back": "<p><strong>For</strong></p><ul><li>It is quick and easy to understand.</li><li>A new business can use it to set a sales target, and banks often expect to see it in a business plan before lending.</li><li>It shows how a change in price, variable cost or fixed costs moves the break-even point.</li></ul><p><strong>Against:</strong> it rests on assumptions that rarely hold exactly.</p><ul><li>It assumes every unit made is sold, but some stock goes unsold, is wasted or has to be sold off cheaply.</li><li>It assumes one selling price, but many firms give bulk discounts, run sales or charge different customers different prices.</li><li>It assumes variable cost per unit stays the same, but bulk buying can bring it down and overtime pay can push it up.</li><li>It assumes fixed costs stay fixed, but beyond a certain output they jump.</li><li>It is harder to use for a firm selling many products, because sharing out the fixed costs between them is partly guesswork.</li><li>It is only as good as the figures put into it, and says nothing about whether customers will want the product at all.</li></ul><p><strong>Judgement:</strong> it is a useful first check and sales target, but the break-even point is only as reliable as the price, cost and sales forecasts behind it.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "break-even",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-6-2-break-even-analysis.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-3-def-01",
+      "specCode": "1.6.3",
+      "topic": "1.6 Revenue, Costs, Profits and Cash",
+      "subtopic": "1-6-3-profit-and-loss",
+      "cardType": "definition",
+      "front": "<p>Define <strong>profit</strong> and <strong>normal profit</strong>.</p>",
+      "back": "<p><strong>Profit</strong> — what is left when a firm's costs are taken away from its revenue. If costs are bigger than revenue, the firm makes a <strong>loss</strong>.</p><p><strong>Normal profit</strong> — the smallest profit that keeps a firm in a market. It is just enough to cover the opportunity cost of the owner's time and money, which could be earning a return somewhere else. Profit above this draws new firms in; profit below it pushes firms out.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "profit",
+        "normal-profit"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-6-3-profit-and-loss.html",
+        "origin": "notes-verbatim",
+        "verbatim": "what is left when a firm's costs are taken away from its revenue. If costs are bigger than revenue, the firm makes a loss."
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-3-chain-01",
+      "specCode": "1.6.3",
+      "topic": "1.6 Revenue, Costs, Profits and Cash",
+      "subtopic": "1-6-3-profit-and-loss",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chain of reasoning</strong>: how do profits and losses draw firms into a market and push them out?</p>",
+      "back": "<p><strong>High profits</strong> → new firms are drawn in to share them (<strong>market entry</strong>) → more supply → prices fall → profits are squeezed back towards normal profit. A town's first escape room is fully booked, and two more open nearby within a year.</p><p><strong>Losses</strong> → firms that cannot cover their costs close or move into other markets (<strong>market exit</strong>) → supply falls → prices rise → the firms that remain have a better chance of making a profit.</p><p>This is the incentive function of the price mechanism. It only works if firms can get into the market: where <strong>barriers to entry</strong> are high, such as set-up costs or legal restrictions, existing firms can keep high profits for a long time.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "profit",
+        "market-entry",
+        "price-mechanism",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-6-3-profit-and-loss.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-3-def-02",
+      "specCode": "1.6.3",
+      "topic": "1.6 Revenue, Costs, Profits and Cash",
+      "subtopic": "1-6-3-profit-and-loss",
+      "cardType": "definition",
+      "front": "<p>Define <strong>gross profit</strong>, <strong>operating profit</strong> and <strong>profit for the year</strong>.</p>",
+      "back": "<p><strong>Gross profit</strong> — sales revenue minus cost of sales. <strong>Cost of sales</strong> is the direct cost of making or buying the goods that were sold, such as materials, stock bought in for resale and the wages of production staff.</p><p><strong>Operating profit</strong> — gross profit minus other operating expenses. These are the costs of running the business that are not tied to each unit sold, such as rent, office salaries, marketing and utility bills.</p><p><strong>Profit for the year</strong> — operating profit minus interest paid on the firm's loans. It is also called <strong>net profit</strong>.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "profit",
+        "gross-profit",
+        "operating-profit"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-6-3-profit-and-loss.html",
+        "origin": "notes-verbatim",
+        "verbatim": "sales revenue minus cost of sales. Cost of sales is the direct cost of making or buying the goods that were sold, such as materials, stock bought in for resale and the wages of production staff."
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-3-def-03",
+      "specCode": "1.6.3",
+      "topic": "1.6 Revenue, Costs, Profits and Cash",
+      "subtopic": "1-6-3-profit-and-loss",
+      "cardType": "definition",
+      "front": "<p>Define the <strong>statement of comprehensive income</strong>. How is it laid out?</p>",
+      "back": "<p><strong>Statement of comprehensive income</strong> — a financial statement that shows a firm's revenue, costs and profit over a period, usually a year. Its older name is the <strong>profit and loss account</strong>.</p><p>Sales revenue → minus cost of sales = gross profit → minus other operating expenses = operating profit → minus interest = profit for the year. Each line of profit is the line above it minus the cost in between.</p><p>Figures in brackets are costs being taken away. A profit line that comes out negative is a loss at that level, also shown in brackets.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "profit",
+        "financial-statements"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-6-3-profit-and-loss.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a financial statement that shows a firm's revenue, costs and profit over a period, usually a year. Its older name is the profit and loss account."
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-3-calc-01",
+      "specCode": "1.6.3",
+      "topic": "1.6 Revenue, Costs, Profits and Cash",
+      "subtopic": "1-6-3-profit-and-loss",
+      "cardType": "calculation",
+      "front": "<p>In a year, a furniture shop has sales revenue of <strong>£250,000</strong>, cost of sales of <strong>£100,000</strong>, other operating expenses of <strong>£110,000</strong> and interest of <strong>£5,000</strong>.</p><p>Calculate its gross profit, operating profit and profit for the year, and the margin for each.</p>",
+      "back": "<ul><li><strong>Gross profit:</strong> £250,000 − £100,000 = £150,000. Gross profit margin = 150,000 ÷ 250,000 × 100 = <strong>60%</strong>.</li><li><strong>Operating profit:</strong> £150,000 − £110,000 = £40,000. Operating profit margin = 40,000 ÷ 250,000 × 100 = <strong>16%</strong>.</li><li><strong>Profit for the year:</strong> £40,000 − £5,000 = £35,000. Profit for the year margin = 35,000 ÷ 250,000 × 100 = <strong>14%</strong>.</li></ul><p>Each margin is that profit as a percentage of revenue. The gap between the gross and operating margins is overheads, here 44p of every £1 of sales. The gap between the operating and profit for the year margins is the cost of the firm's debts.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "profit",
+        "profit-margins",
+        "calculation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-6-3-profit-and-loss.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-3-app-01",
+      "specCode": "1.6.3",
+      "topic": "1.6 Revenue, Costs, Profits and Cash",
+      "subtopic": "1-6-3-profit-and-loss",
+      "cardType": "application",
+      "front": "<p>A gym's profit for the year rises from <strong>£60,000</strong> to <strong>£66,000</strong>, while its revenue rises from <strong>£400,000</strong> to <strong>£550,000</strong>. Has it made more profit? Has it become more profitable?</p>",
+      "back": "<p><strong>More profit: yes.</strong> Profit has risen by £6,000.</p><p><strong>More profitable: no.</strong> The profit for the year margin has fallen from 60,000 ÷ 400,000 × 100 = 15% to 66,000 ÷ 550,000 × 100 = 12%. The gym keeps 12p of every £1 of sales, down from 15p.</p><p>Profit is an amount in pounds; profitability is profit measured against revenue. Say which one the data shows before you judge how well a firm is doing.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "profit",
+        "profitability",
+        "profit-margins",
+        "application"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-6-3-profit-and-loss.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-3-eval-01",
+      "specCode": "1.6.3",
+      "topic": "1.6 Revenue, Costs, Profits and Cash",
+      "subtopic": "1-6-3-profit-and-loss",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> the ways a firm can increase its profit.</p>",
+      "back": "<p>Profit is revenue minus costs, so a firm can bring in more revenue or spend less.</p><p><strong>Raising revenue</strong></p><ul><li><strong>Raise the price:</strong> more revenue from each sale, as long as customers keep buying. That is more likely with few close substitutes or a strong brand. If many customers switch to rivals, revenue can fall.</li><li><strong>Sell more</strong> through advertising, new products, new outlets or selling online. Each has a cost of its own, so it adds to profit only if the extra revenue is bigger.</li></ul><p><strong>Cutting costs</strong></p><ul><li>Cheaper supplies → higher gross margin. Less waste → a higher margin on every sale.</li><li>Lower overheads → higher operating margin. Cheaper borrowing → less interest → higher profit for the year.</li></ul><p><strong>Which works best depends on:</strong></p><ul><li><strong>Side effects:</strong> cheaper materials can mean lower quality and unhappy customers, and cutting staff might lower costs this year but hurt customer service.</li><li><strong>The firm's market:</strong> a strong brand can raise its price, while a firm in a price-competitive market is more likely to have to cut costs.</li><li><strong>Time:</strong> cheaper supplies or lower overheads cut costs straight away, while new products and outlets take time to add sales.</li></ul><p><strong>Judgement:</strong> there is no single best way. The right choice depends on the firm's market, how quickly each option works, and whether a cut would harm quality or customer service.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "profit",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-6-3-profit-and-loss.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-4-def-01",
+      "specCode": "1.6.4",
+      "topic": "1.6 Revenue, Costs, Profits and Cash",
+      "subtopic": "1-6-4-business-survival-and-cash-flow",
+      "cardType": "definition",
+      "front": "<p>Define <strong>cash flow</strong>. How does it differ from profit?</p>",
+      "back": "<p><strong>Cash flow</strong> — the money coming into and going out of a business over a period of time. Money coming in is a <strong>cash inflow</strong>; money going out is a <strong>cash outflow</strong>.</p><p>A sale counts towards profit when it is made, but it only counts as cash when the customer actually pays. That timing gap is why a firm's profit and its bank balance can tell very different stories.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "cash-flow"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-6-4-business-survival-and-cash-flow.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the money coming into and going out of a business over a period of time. Money coming in is a cash inflow; money going out is a cash outflow."
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-4-def-02",
+      "specCode": "1.6.4",
+      "topic": "1.6 Revenue, Costs, Profits and Cash",
+      "subtopic": "1-6-4-business-survival-and-cash-flow",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>cash-flow forecast</strong>, and outline the rows it has each month.</p>",
+      "back": "<p><strong>Cash-flow forecast</strong> — an estimate of a business's cash inflows and outflows, month by month, for the months ahead. It shows when the business is likely to have spare cash and when it is likely to run short.</p><ul><li><strong>Inflows</strong>, such as cash sales, payments from credit customers, loans and money put in by the owner.</li><li><strong>Outflows</strong>, such as stock and materials, wages, rent, bills, loan repayments and equipment.</li><li><strong>Net cash flow</strong> = inflows − outflows for that month.</li><li><strong>Opening balance:</strong> the cash at the start of the month, always the closing balance of the month before.</li><li><strong>Closing balance</strong> = opening balance + net cash flow.</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "cash-flow",
+        "cash-flow-forecast"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-6-4-business-survival-and-cash-flow.html",
+        "origin": "notes-verbatim",
+        "verbatim": "an estimate of a business's cash inflows and outflows, month by month, for the months ahead. It shows when the business is likely to have spare cash and when it is likely to run short."
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-4-app-01",
+      "specCode": "1.6.4",
+      "topic": "1.6 Revenue, Costs, Profits and Cash",
+      "subtopic": "1-6-4-business-survival-and-cash-flow",
+      "cardType": "application",
+      "front": "<p>For each of these, say how it affects a printing firm's <strong>profit</strong> and its <strong>cash</strong>:</p><ol><li>it prints £6,000 of leaflets for a council, which has 60 days to pay</li><li>it takes out a £15,000 bank loan</li><li>it buys a £24,000 printing press that it will use for six years</li><li>it repays £3,000 of the loan, plus £400 of interest.</li></ol>",
+      "back": "<ol><li><strong>Selling on credit.</strong> The sale adds to profit straight away, but the cash arrives 60 days later.</li><li><strong>A loan.</strong> £15,000 of cash comes in, but it is not revenue, so it adds nothing to profit.</li><li><strong>Buying equipment.</strong> £24,000 of cash goes out in one go, but the cost is spread over the years the press is used, so only part of it comes off this year's profit.</li><li><strong>Repaying a loan.</strong> £3,400 of cash goes out, but only the £400 of interest is a cost that lowers profit.</li></ol><p>So a profitable business can run short of cash, and a loss-making one can have plenty of cash for a while, for example just after taking out a loan.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "cash-flow",
+        "profit",
+        "application"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-6-4-business-survival-and-cash-flow.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-4-chain-01",
+      "specCode": "1.6.4",
+      "topic": "1.6 Revenue, Costs, Profits and Cash",
+      "subtopic": "1-6-4-business-survival-and-cash-flow",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chain of reasoning</strong>: why can a business whose products sell well still be forced to close? Which firms are most at risk?</p>",
+      "back": "<p>A business pays its staff, suppliers, landlord and lender in cash, not in profit. Cash runs out → it cannot pay its bills when they are due, so it is <strong>insolvent</strong> → suppliers stop delivering and the people it owes take it to court → the business can be forced to close even if its products sell well.</p><p><strong>Most at risk:</strong></p><ul><li><strong>New firms</strong>, which have to pay set-up costs before any sales come in.</li><li><strong>Fast-growing firms:</strong> more orders → more stock and staff before the extra customers pay → cash goes out faster than it comes in. The faster it grows, the more cash it needs. This is sometimes called <strong>overtrading</strong>.</li></ul><p>Late payment by customers makes this worse.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "cash-flow",
+        "business-survival",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-6-4-business-survival-and-cash-flow.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-4-calc-01",
+      "specCode": "1.6.4",
+      "topic": "1.6 Revenue, Costs, Profits and Cash",
+      "subtopic": "1-6-4-business-survival-and-cash-flow",
+      "cardType": "calculation",
+      "front": "<p>A garden furniture maker has <strong>£3,000</strong> in the bank at the start of March.</p><ul><li><strong>Inflows:</strong> March £5,000, April £9,000, May £14,000</li><li><strong>Outflows:</strong> March £10,000, April £7,500, May £6,500</li></ul><p>Find the net cash flow and closing balance for each month. When does it need credit, and how much?</p>",
+      "back": "<ul><li><strong>March:</strong> net cash flow £5,000 − £10,000 = (£5,000). Closing balance £3,000 − £5,000 = <strong>(£2,000)</strong>.</li><li><strong>April:</strong> net cash flow £9,000 − £7,500 = £1,500. Closing balance (£2,000) + £1,500 = <strong>(£500)</strong>.</li><li><strong>May:</strong> net cash flow £14,000 − £6,500 = £7,500. Closing balance (£500) + £7,500 = <strong>£7,000</strong>.</li></ul><p>It needs to borrow at least <strong>£2,000</strong> in March, and can repay it in May. In April net cash flow is positive, but the closing balance is still negative: it is the closing balance that shows whether the business needs to borrow.</p><p>An overdraft suits this, as interest is paid only on what is used, and a limit a little above £2,000 allows for weaker sales.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "cash-flow-forecast",
+        "calculation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-6-4-business-survival-and-cash-flow.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-4-eval-01",
+      "specCode": "1.6.4",
+      "topic": "1.6 Revenue, Costs, Profits and Cash",
+      "subtopic": "1-6-4-business-survival-and-cash-flow",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> how useful a cash-flow forecast is to a small business.</p>",
+      "back": "<p><strong>For</strong></p><ul><li>It shows when the business will need credit and how much. Arranging credit in advance is cheaper and easier than asking for it in a crisis, and a bank is more willing to lend to a business that saw the shortfall coming and knows how it will repay.</li><li>It gives the business time to act before the cash runs out: chase customers who owe it money or give less time to pay, ask suppliers for longer to pay (trade credit), delay buying equipment or lease it instead, and spread large purchases over several months.</li></ul><p><strong>Against</strong></p><ul><li>It is only an estimate: sales may be lower than expected, or a customer may pay late.</li></ul><p><strong>Judgement:</strong> it is most useful when it is updated each month and tested with \"what if?\" questions, such as what happens if sales are 20% lower. When reading one, a short dip with a clear reason is much less worrying than a balance that falls month after month.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "cash-flow-forecast",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-6-4-business-survival-and-cash-flow.html",
+        "origin": "card-authored"
+      }
     }
   ]
 }
