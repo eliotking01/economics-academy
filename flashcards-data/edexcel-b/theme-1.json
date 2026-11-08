@@ -1189,6 +1189,685 @@
         "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-5-the-wider-economic-environment.html",
         "origin": "card-authored"
       }
+    },
+    {
+      "id": "edexcel-b-1-3-1-def-01",
+      "specCode": "1.3.1",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-1-demand",
+      "cardType": "definition",
+      "front": "<p>Define <strong>demand</strong>.</p>",
+      "back": "<p><strong>Demand</strong> — the quantity of a good or service that consumers are willing and able to buy at each price over a given period of time.</p><p>Both parts matter: wanting a new car is not demand unless you can pay for it. Demand backed by the ability to pay is <strong>effective demand</strong>.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "demand"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-1-demand.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the quantity of a good or service that consumers are willing and able to buy at each price over a given period of time."
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-1-def-02",
+      "specCode": "1.3.1",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-1-demand",
+      "cardType": "definition",
+      "front": "<p>State the <strong>law of demand</strong>.</p>",
+      "back": "<p><strong>Law of demand</strong> — as the price of a good rises, the quantity demanded falls, ceteris paribus (all other things staying the same).</p><p>So the demand curve slopes down from left to right. When the price falls, buyers who could not afford the good before now can, existing buyers tend to buy more, and it looks cheaper next to its alternatives.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "demand"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-1-demand.html",
+        "origin": "notes-verbatim",
+        "verbatim": "as the price of a good rises, the quantity demanded falls, ceteris paribus (all other things staying the same)."
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-1-def-03",
+      "specCode": "1.3.1",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-1-demand",
+      "cardType": "definition",
+      "front": "<p>Define <strong>real income</strong>, and explain the difference between a normal good and an inferior good.</p>",
+      "back": "<p><strong>Real income</strong> — income adjusted for inflation, so it measures what a consumer can actually buy.</p><ul><li><strong>Normal goods:</strong> demand rises as real income rises. Most goods are normal, such as holidays abroad.</li><li><strong>Inferior goods:</strong> demand falls as real income rises, because people switch to something better. Supermarket value ranges are an example.</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "demand",
+        "real-income"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-1-demand.html",
+        "origin": "notes-verbatim",
+        "verbatim": "income adjusted for inflation, so it measures what a consumer can actually buy."
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-1-diagram-01",
+      "specCode": "1.3.1",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-1-demand",
+      "cardType": "diagram",
+      "front": "<p>Sketch an <strong>increase in demand</strong>, marking the quantity demanded at the original price. What could cause it?</p>",
+      "back": "<p>The whole curve shifts right from D1 to D2, so more is bought at every price. At the same price P1, quantity demanded rises from Q1 to Q2.</p><p>Anything except the good's own price can cause it:</p><ul><li>The price of a <strong>substitute</strong> rises.</li><li>The price of a <strong>complement</strong> falls.</li><li><strong>Real incomes</strong> rise, for a normal good.</li><li><strong>Tastes and fashions</strong> move towards it.</li><li><strong>Advertising and branding</strong> work.</li><li>The <strong>population</strong> grows, or the age group that buys it gets larger.</li></ul>",
+      "svgRef": "/images/diagrams/svg/demand-curve-shift.svg",
+      "svgAlt": "Two parallel downward-sloping demand curves, D1 and D2 to its right, with an arrow showing the shift right; at price P1 quantity demanded is Q1 on D1 and the larger Q2 on D2",
+      "difficulty": "standard",
+      "tags": [
+        "demand",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-1-demand.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-1-app-01",
+      "specCode": "1.3.1",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-1-demand",
+      "cardType": "application",
+      "front": "<p><strong>Movement or shift?</strong> Say what happens to the demand curve for Brand X coffee pods when:</p><ol><li>the price of Brand X pods rises</li><li>the pod coffee machines they fit are discounted</li><li>a rival brand of pods cuts its price</li><li>coffee becomes more fashionable.</li></ol>",
+      "back": "<ol><li><strong>Contraction</strong> along the curve. A good's own price never shifts its own demand curve.</li><li><strong>Shift right</strong> (an increase in demand). The machines are a complement, and a cheaper complement raises demand.</li><li><strong>Shift left</strong> (a decrease in demand). Rival pods are a substitute, and a cheaper substitute pulls buyers away.</li><li><strong>Shift right.</strong> Tastes have moved towards the product.</li></ol><p>Keep the words apart: <strong>extension</strong> and <strong>contraction</strong> for movements, <strong>increase</strong> and <strong>decrease in demand</strong> for shifts.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "demand",
+        "application"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-1-demand.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-2-def-01",
+      "specCode": "1.3.2",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-2-supply",
+      "cardType": "definition",
+      "front": "<p>Define <strong>supply</strong>.</p>",
+      "back": "<p><strong>Supply</strong> — the quantity of a good or service that producers are willing and able to sell at each price over a given period of time.</p><p>How much a producer makes depends on the price the product will sell for and what it costs to make. A higher price means more profit on each unit; higher costs mean less.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "supply"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-2-supply.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the quantity of a good or service that producers are willing and able to sell at each price over a given period of time."
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-2-def-02",
+      "specCode": "1.3.2",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-2-supply",
+      "cardType": "definition",
+      "front": "<p>State the <strong>law of supply</strong>, and explain why the supply curve slopes upwards.</p>",
+      "back": "<p><strong>Law of supply</strong> — as the price of a good rises, the quantity supplied rises, ceteris paribus.</p><ul><li>A higher price makes each unit more profitable, so existing producers want to sell more.</li><li>Extra output often costs more to make (overtime pay, older machines brought back into use), and only a higher price covers it.</li><li>Firms making other products are tempted to switch their resources into this one.</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "supply"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-2-supply.html",
+        "origin": "notes-verbatim",
+        "verbatim": "as the price of a good rises, the quantity supplied rises, ceteris paribus."
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-2-diagram-01",
+      "specCode": "1.3.2",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-2-supply",
+      "cardType": "diagram",
+      "front": "<p>Sketch an <strong>increase in supply</strong>, marking the quantity supplied at the original price. What could cause it?</p>",
+      "back": "<p>The curve shifts right from S1 to S2, so more is offered for sale at every price. At the same price P, quantity supplied rises from Q1 to Q2.</p><p>Causes:</p><ul><li>Lower <strong>costs of production</strong>: wages, raw materials, energy or rent.</li><li><strong>New technology</strong> that makes more from the same inputs.</li><li>An <strong>indirect tax</strong> is cut or removed.</li><li>A <strong>subsidy</strong> is introduced or increased.</li><li>New <strong>firms</strong> enter the market.</li><li>A helpful <strong>external shock</strong>, such as a bumper harvest.</li></ul><p>Each works in reverse to shift supply left.</p>",
+      "svgRef": "/images/diagrams/svg/supply-curve-shift.svg",
+      "svgAlt": "Two parallel upward-sloping supply curves, S1 and S2 to its right, with an arrow showing the shift right; at price P quantity supplied is Q1 on S1 and the larger Q2 on S2",
+      "difficulty": "standard",
+      "tags": [
+        "supply",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-2-supply.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-2-chain-01",
+      "specCode": "1.3.2",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-2-supply",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chain of reasoning</strong>: the government puts a new indirect tax on a product. Which curve shifts, and why?</p>",
+      "back": "<p>An <strong>indirect tax</strong> is a tax on spending, such as VAT or fuel duty, which the seller pays to the government.</p><p>The seller pays it → it adds to the cost of every unit → less profit on each unit → producers offer less at every price → <strong>supply shifts left</strong>.</p><p>The demand curve stays where it is, even though buyers end up paying a higher price.</p><p>A <strong>subsidy</strong>, a payment from the government to producers, works the other way: it lowers their costs, so supply shifts right.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "supply",
+        "indirect-tax",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-2-supply.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-3-def-01",
+      "specCode": "1.3.3",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-3-price-determination",
+      "cardType": "definition",
+      "front": "<p>Define the <strong>equilibrium price</strong>.</p>",
+      "back": "<p><strong>Equilibrium price</strong> — the price at which the quantity consumers want to buy equals the quantity producers want to sell. It is also called the market-clearing price, because nothing is left unsold and no buyer who will pay that price goes without.</p><p>The <strong>equilibrium quantity</strong> is the amount bought and sold at that price. Once a market reaches equilibrium, there is no pressure for the price to change.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "equilibrium"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-3-price-determination.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the price at which the quantity consumers want to buy equals the quantity producers want to sell. It is also called the market-clearing price, because nothing is left unsold and no buyer who will pay that price goes without."
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-3-diagram-01",
+      "specCode": "1.3.3",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-3-price-determination",
+      "cardType": "diagram",
+      "front": "<p>Show <strong>excess demand</strong> on a supply and demand diagram, and explain how market forces remove it.</p>",
+      "back": "<p><strong>Excess demand</strong>: the quantity demanded is greater than the quantity supplied, because the price is below equilibrium. It shows up as a shortage.</p><p>At P1, below Pe, the excess is the horizontal gap between Qs and Qd.</p><p>Shops sell out and queues form → buyers will pay more and sellers see they can charge more → the price rises → demand contracts and supply extends (the arrows) → until the two are equal again at Pe.</p>",
+      "svgRef": "/images/diagrams/svg/excess-demand.svg",
+      "svgAlt": "Supply and demand diagram with price P1 below the equilibrium price Pe; at P1 quantity supplied Qs is less than quantity demanded Qd, the gap is labelled excess demand, and arrows along both curves point up towards equilibrium",
+      "difficulty": "standard",
+      "tags": [
+        "equilibrium",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-3-price-determination.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-3-diagram-02",
+      "specCode": "1.3.3",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-3-price-determination",
+      "cardType": "diagram",
+      "front": "<p>Show <strong>excess supply</strong> on a supply and demand diagram, and explain how market forces remove it.</p>",
+      "back": "<p><strong>Excess supply</strong>: the quantity supplied is greater than the quantity demanded, because the price is above equilibrium. It shows up as a surplus.</p><p>At P1, above Pe, the excess is the horizontal gap between Qd and Qs.</p><p>Sellers are left with unsold stock → they cut prices to clear it → demand extends and supply contracts (the arrows) → until the market clears at Pe.</p>",
+      "svgRef": "/images/diagrams/svg/excess-supply.svg",
+      "svgAlt": "Supply and demand diagram with price P1 above the equilibrium price Pe; at P1 quantity demanded Qd is less than quantity supplied Qs, the gap is labelled excess supply, and arrows along both curves point down towards equilibrium",
+      "difficulty": "standard",
+      "tags": [
+        "equilibrium",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-3-price-determination.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-3-app-01",
+      "specCode": "1.3.3",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-3-price-determination",
+      "cardType": "application",
+      "front": "<p>For each change, say which curve shifts and which way, and what happens to the <strong>equilibrium price and quantity</strong>:</p><ol><li>a celebrity is seen wearing a brand of trainers</li><li>cheap flights abroad pull holidaymakers away from UK seaside resorts</li><li>new robots cut the cost of making cars across the industry</li><li>a drought cuts the coffee harvest.</li></ol>",
+      "back": "<ol><li><strong>Demand shifts right</strong> (tastes). Excess demand at the old price → <strong>P up, Q up</strong>.</li><li><strong>Demand for UK seaside holidays shifts left</strong> (a substitute got cheaper). Excess supply → <strong>P down, Q down</strong>.</li><li><strong>Supply shifts right</strong> (new technology). Excess supply → <strong>P down, Q up</strong>.</li><li><strong>Supply shifts left</strong> (an external shock). Excess demand → <strong>P up, Q down</strong>.</li></ol><p>Use the same steps every time: name the factor, say which curve shifts and which way, explain the shortage or surplus at the old price, then state the new price and quantity.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "equilibrium",
+        "application"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-3-price-determination.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-3-eval-01",
+      "specCode": "1.3.3",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-3-price-determination",
+      "cardType": "evaluation",
+      "front": "<p>Give the <strong>limitations of the supply and demand model</strong>: why might a real market not behave as it predicts?</p>",
+      "back": "<ul><li><strong>Ceteris paribus rarely holds.</strong> Several things change at once. If demand and supply both rise, quantity goes up, but the price could go either way.</li><li><strong>Time lags.</strong> Supply often cannot respond quickly: new houses take years to plan and build, so shortages can last.</li><li><strong>Imperfect information.</strong> Nobody knows where the equilibrium is, so it is found by trial and error. People also buy out of habit or on impulse.</li><li><strong>Non-price factors.</strong> Many firms compete on quality, brand and service, and change prices only now and then.</li><li><strong>Markets that do not clear.</strong> Some prices are held away from equilibrium on purpose: big concert tickets are often priced below what fans would pay, so excess demand remains.</li></ul><p>To evaluate, pick the limit that fits the case: a time lag for housing or crops, two curves shifting at once when several things change together.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "equilibrium",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-3-price-determination.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-4-def-01",
+      "specCode": "1.3.4",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-4-price-mechanism",
+      "cardType": "definition",
+      "front": "<p>Define the <strong>price mechanism</strong>.</p>",
+      "back": "<p><strong>Price mechanism</strong> — the way changes in price, set by demand and supply, decide how a market's scarce resources are used.</p><p>Nobody is in charge. Prices rise and fall, buyers and sellers respond, and resources move to where they are wanted. This is the \"invisible hand\".</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "price-mechanism"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-4-price-mechanism.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the way changes in price, set by demand and supply, decide how a market's scarce resources are used."
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-4-def-02",
+      "specCode": "1.3.4",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-4-price-mechanism",
+      "cardType": "definition",
+      "front": "<p>Name and explain the <strong>three functions of the price mechanism</strong>.</p>",
+      "back": "<ul><li><strong>Rationing:</strong> when something is scarce, a higher price limits it to those willing and able to pay the most.</li><li><strong>Incentive:</strong> a higher price means more profit, which encourages firms to produce more.</li><li><strong>Signalling:</strong> a price change tells buyers and sellers that conditions have changed. A rising price shows demand is outrunning supply.</li></ul><p>Keep signalling and incentive apart. The <strong>signal</strong> is the information: the price has risen, so demand is up. The <strong>incentive</strong> is the reason to act on it: higher prices mean more profit.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "price-mechanism"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-4-price-mechanism.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-4-chain-01",
+      "specCode": "1.3.4",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-4-price-mechanism",
+      "cardType": "chain",
+      "front": "<p>Demand for a firm's product rises. Build the <strong>chains of reasoning</strong> for its three possible responses, and say what decides which one it chooses.</p>",
+      "back": "<ul><li><strong>Raise its price:</strong> stock runs short → the firm raises its price → the higher price rations what it has → more profit on each sale.</li><li><strong>Produce more with what it has:</strong> spare capacity, overtime or stock → supply extends → higher revenue.</li><li><strong>Invest in more capacity:</strong> the rise looks set to last → new staff, machinery or premises → higher output and new jobs.</li></ul><p><strong>It depends on</strong> whether the rise will last (no firm builds capacity for a heatwave), how much spare capacity the firm has, and what rivals do: if they hold their prices, raising its own risks losing customers.</p><p>In the longer run, higher profits attract new firms → supply shifts right → the price is pushed back down.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "price-mechanism",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-4-price-mechanism.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-4-def-03",
+      "specCode": "1.3.4",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-4-price-mechanism",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>niche market</strong>, and compare it with a mass market.</p>",
+      "back": "<p><strong>Niche market</strong> — a small, specialised part of a larger market, with customers who want something particular, such as gluten-free bread or kit for left-handed golfers.</p><p>A <strong>mass market</strong> is a large market where similar products are sold to most types of customer, such as toothpaste, crisps or smartphones.</p><ul><li><strong>Mass:</strong> many buyers and usually several large sellers → competition keeps prices close to each other → small profit on each unit, so firms rely on high volumes at low cost.</li><li><strong>Niche:</strong> fewer competitors, and customers will often pay more for a product that suits them → profit on each unit can be high, but sales are small. If the niche grows, its profits draw in bigger firms and prices fall.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "price-mechanism",
+        "niche-market"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-4-price-mechanism.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a small, specialised part of a larger market, with customers who want something particular, such as gluten-free bread or kit for left-handed golfers."
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-4-calc-01",
+      "specCode": "1.3.4",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-4-price-mechanism",
+      "cardType": "calculation",
+      "front": "<p>A market's sales rise from £25m to £28m in a year. <strong>Calculate the market growth</strong>, and give two signs that a market has room to grow.</p>",
+      "back": "<p>Market growth (%) = change in market size ÷ original market size × 100 = £3m ÷ £25m × 100 = <strong>12%</strong>.</p><p>A growing market lets a firm raise sales without taking customers from rivals. Signs of room to grow:</p><ul><li>prices and profits rising, a signal that demand is outrunning supply</li><li>changing tastes, or growth in the age group that buys the product</li><li>rising real incomes, for normal goods</li><li>new technology that creates a product or makes it cheaper.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "market-growth",
+        "calculation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-4-price-mechanism.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-5-def-01",
+      "specCode": "1.3.5",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-5-understanding-the-consumer",
+      "cardType": "definition",
+      "front": "<p>Define <strong>primary research</strong>, and give one advantage and one drawback.</p>",
+      "back": "<p><strong>Primary research</strong> — new information collected first-hand by the business, for its own purpose. It is also called field research.</p><p>Methods include surveys, interviews, focus groups and test marketing, where a product is sold in one area before a full launch.</p><p><strong>For:</strong> up to date, fits the firm's exact question, and not available to rivals. <strong>Against:</strong> often slow and expensive to collect.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "market-research"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-5-understanding-the-consumer.html",
+        "origin": "notes-verbatim",
+        "verbatim": "new information collected first-hand by the business, for its own purpose. It is also called field research."
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-5-def-02",
+      "specCode": "1.3.5",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-5-understanding-the-consumer",
+      "cardType": "definition",
+      "front": "<p>Define <strong>secondary research</strong>, and give one advantage and one drawback.</p>",
+      "back": "<p><strong>Secondary research</strong> — using information that has already been collected by someone else, or for another purpose. It is also called desk research.</p><p>Sources include the Office for National Statistics (ONS), published market reports, competitors' websites and the firm's own sales records.</p><p><strong>For:</strong> quick and cheap. <strong>Against:</strong> may be out of date, may not answer the firm's exact question, and rivals can read it too.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "market-research"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-5-understanding-the-consumer.html",
+        "origin": "notes-verbatim",
+        "verbatim": "using information that has already been collected by someone else, or for another purpose. It is also called desk research."
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-5-def-03",
+      "specCode": "1.3.5",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-5-understanding-the-consumer",
+      "cardType": "definition",
+      "front": "<p>Define <strong>quantitative data</strong> and <strong>qualitative data</strong>.</p>",
+      "back": "<p><strong>Quantitative data</strong> — information that can be counted or measured, such as how many people would buy a product or how much they would pay. It is used to estimate demand and sales.</p><p><strong>Qualitative data</strong> — information about opinions, feelings and reasons, such as why customers prefer one brand to another. It explains behaviour but is hard to turn into numbers.</p><p>Do not mix up the two pairs. Primary or secondary is about <strong>who collected</strong> the data; quantitative or qualitative is about <strong>what kind</strong> of data it is. One survey can be primary and give both.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "market-research"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-5-understanding-the-consumer.html",
+        "origin": "notes-verbatim",
+        "verbatim": "information that can be counted or measured, such as how many people would buy a product or how much they would pay. It is used to estimate demand and sales."
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-5-def-04",
+      "specCode": "1.3.5",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-5-understanding-the-consumer",
+      "cardType": "definition",
+      "front": "<p>Define <strong>market segmentation</strong>, and give the usual ways to segment a market.</p>",
+      "back": "<p><strong>Market segmentation</strong> — dividing a market into groups of customers who share similar characteristics and needs, so a firm can target one or more of them.</p><ul><li><strong>Demographic:</strong> age, gender or family size.</li><li><strong>Geographic:</strong> where people live.</li><li><strong>Income:</strong> how much customers can spend.</li><li><strong>Lifestyle:</strong> interests, values and habits.</li></ul><p>It lets a firm design products, prices and adverts for the people most likely to buy, so less marketing money is wasted. The risk is that targeting one segment closely can put off customers outside it.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "market-segmentation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-5-understanding-the-consumer.html",
+        "origin": "notes-verbatim",
+        "verbatim": "dividing a market into groups of customers who share similar characteristics and needs, so a firm can target one or more of them."
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-5-eval-01",
+      "specCode": "1.3.5",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-5-understanding-the-consumer",
+      "cardType": "evaluation",
+      "front": "<p>Explain the <strong>limitations of market research</strong>, including sample size and bias.</p>",
+      "back": "<p><strong>Sample size.</strong> A firm cannot ask everyone, so it asks a sample. The smaller the sample, the more likely the results are down to chance. A bigger one is more reliable but costs more and takes longer.</p><p><strong>Bias</strong> makes results lean one way, so they no longer give a true picture of the market. It creeps in through:</p><ul><li><strong>who is asked</strong>, such as only the firm's social media followers</li><li><strong>how the question is worded</strong>, such as a question that pushes people towards yes</li><li><strong>what people say</strong>: saying you would buy is not the same as buying</li><li><strong>who reads the results</strong>: an owner keen on the idea may pay most attention to the answers that support it.</li></ul><p>Even good research goes out of date as tastes change, and it cannot predict what rivals will do next.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "market-research",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-5-understanding-the-consumer.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-6-def-01",
+      "specCode": "1.3.6",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-6-the-competition",
+      "cardType": "definition",
+      "front": "<p>Define <strong>market positioning</strong>.</p>",
+      "back": "<p><strong>Market positioning</strong> — where a product sits in customers' minds compared with its rivals, for example cheap and basic, or expensive and high quality.</p><p>Positions can be compared on a <strong>market map</strong> — a diagram that plots the brands in a market against two features customers care about, such as price and quality.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "competition",
+        "market-positioning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-6-the-competition.html",
+        "origin": "notes-verbatim",
+        "verbatim": "where a product sits in customers' minds compared with its rivals, for example cheap and basic, or expensive and high quality."
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-6-diagram-01",
+      "specCode": "1.3.6",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-6-the-competition",
+      "cardType": "diagram",
+      "front": "<p>Sketch a <strong>market map</strong> showing a gap in the market. How can a firm use one, and what are its limits?</p>",
+      "back": "<p>Brands are plotted against two features customers care about, here price and quality. The circled space at below-average price and above-average quality is a <strong>gap in the market</strong>: a position no brand fills.</p><p><strong>Uses:</strong> see which brands are the closest competitors, spot a gap, and decide where to place a new product or whether to move an existing one.</p><p><strong>Limits:</strong> where each brand goes is often a judgement call, and two features cannot capture everything customers weigh up. A gap is not proof of demand: ask whether customers want it and whether the firm can serve it at a profit.</p>",
+      "svgRef": "/images/diagrams/svg/market-map.svg",
+      "svgAlt": "Market map with price from low to high across and quality from low to high up, the axes crossing in the middle; six brands A to F sit mostly along a line from low price and low quality to high price and high quality, and an empty space at below-average price and above-average quality is circled as a gap in the market",
+      "difficulty": "standard",
+      "tags": [
+        "competition",
+        "market-map",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-6-the-competition.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-6-def-02",
+      "specCode": "1.3.6",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-6-the-competition",
+      "cardType": "definition",
+      "front": "<p>Define <strong>competitive advantage</strong>, and give the two broad routes to it.</p>",
+      "back": "<p><strong>Competitive advantage</strong> — something that lets a business attract customers away from its rivals and earn higher profits than they do.</p><ul><li><strong>Lower costs:</strong> charge less than rivals and still make a profit, or charge the same and make more. Discount supermarkets such as Aldi and Lidl compete this way.</li><li><strong>A better product</strong>, or one customers see as better, so they will pay more for it.</li></ul><p>It is worth most when it is hard to copy. A strong brand, a patent, a prime location or highly skilled staff take rivals years to match; a price cut can be matched the next day.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "competition",
+        "competitive-advantage"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-6-the-competition.html",
+        "origin": "notes-verbatim",
+        "verbatim": "something that lets a business attract customers away from its rivals and earn higher profits than they do."
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-6-chain-01",
+      "specCode": "1.3.6",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-6-the-competition",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chain of reasoning</strong>: how does product differentiation raise a firm's profit margins?</p>",
+      "back": "<p><strong>Product differentiation</strong> is making a product different from rival products in ways that customers value: design, features, quality, packaging, branding or after-sales service. The aim is often a <strong>unique selling point (USP)</strong>.</p><p>A differentiated product has fewer close substitutes → customers are less likely to switch when its price goes up → the firm can charge more without losing many sales → <strong>higher profit margins</strong>.</p><p>It is also how firms <strong>add value</strong>. The beans, milk and cup in a latte cost a small part of its price: customers are paying for the skill, the brand and the convenience.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "competition",
+        "product-differentiation",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-6-the-competition.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-6-def-03",
+      "specCode": "1.3.6",
+      "topic": "1.3 Introducing the Market",
+      "subtopic": "1-3-6-the-competition",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>stable market</strong> and a <strong>dynamic market</strong>, and explain how competing differs in each.</p>",
+      "back": "<p><strong>Stable market</strong> — a market where sales, products and customer tastes change little from year to year, such as bread, toilet roll or milk.</p><p><strong>Dynamic market</strong> — a market that changes quickly, with new products, new technology and shifting tastes, such as smartphones, fashion or video games.</p><ul><li><strong>Stable:</strong> planning is easier, but growth is hard. A firm mostly gains sales by taking them from rivals, so it competes on cost, price and brand loyalty.</li><li><strong>Dynamic:</strong> more chances to grow, but more risk. Firms must keep researching customers and developing products, because today's best seller can be overtaken within a year or two.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "competition",
+        "stable-and-dynamic-markets"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-3-6-the-competition.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a market where sales, products and customer tastes change little from year to year, such as bread, toilet roll or milk."
+      }
     }
   ]
 }
