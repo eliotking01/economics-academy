@@ -584,6 +584,611 @@
         "notesPage": "/revision-notes/edexcel-b-theme-1/1-1-3-stakeholders-and-their-objectives.html",
         "origin": "card-authored"
       }
+    },
+    {
+      "id": "edexcel-b-1-2-1-def-01",
+      "specCode": "1.2.1",
+      "topic": "1.2 Enterprise, Business and the Economy",
+      "subtopic": "1-2-1-role-of-an-entrepreneur",
+      "cardType": "definition",
+      "front": "<p>Define an <strong>entrepreneur</strong>.</p>",
+      "back": "<p><strong>Entrepreneur</strong> — a person who spots a business opportunity, brings together the resources needed to exploit it and accepts the risk that it might fail.</p><p>Organising land, labour and capital and taking the risk is <strong>enterprise</strong>, the fourth factor of production. If the business works, the entrepreneur's reward is profit. If it doesn't, they can lose what they put in.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "entrepreneurship"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-1-role-of-an-entrepreneur.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a person who spots a business opportunity, brings together the resources needed to exploit it and accepts the risk that it might fail."
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-1-def-02",
+      "specCode": "1.2.1",
+      "topic": "1.2 Enterprise, Business and the Economy",
+      "subtopic": "1-2-1-role-of-an-entrepreneur",
+      "cardType": "definition",
+      "front": "<p>Define <strong>creative destruction</strong>.</p>",
+      "back": "<p><strong>Creative destruction</strong> — the process by which new products, methods and firms replace older ones, as resources move away from businesses that have fallen behind and into new ones.</p><p>The idea comes from <strong>Joseph Schumpeter</strong>, who argued that this constant churn is how capitalist economies grow. The entrepreneur drives it.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "entrepreneurship"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-1-role-of-an-entrepreneur.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the process by which new products, methods and firms replace older ones, as resources move away from businesses that have fallen behind and into new ones."
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-1-def-03",
+      "specCode": "1.2.1",
+      "topic": "1.2 Enterprise, Business and the Economy",
+      "subtopic": "1-2-1-role-of-an-entrepreneur",
+      "cardType": "definition",
+      "front": "<p>Define <strong>added value</strong>.</p>",
+      "back": "<p><strong>Added value</strong> — the selling price of a product minus the cost of its inputs.</p><p>Added value is <strong>not profit</strong>: it still has to pay for costs such as the owner's time, advertising and delivery. Profit is whatever is left after those too.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "entrepreneurship"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-1-role-of-an-entrepreneur.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the selling price of a product minus the cost of its inputs."
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-1-chain-01",
+      "specCode": "1.2.1",
+      "topic": "1.2 Enterprise, Business and the Economy",
+      "subtopic": "1-2-1-role-of-an-entrepreneur",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chain of reasoning</strong> for both halves of creative destruction. Why does the economy gain over time?</p>",
+      "back": "<p><strong>Creative:</strong> an entrepreneur offers something better or cheaper → customers switch their spending → the new firm's sales grow → new jobs, and more choice and better value for consumers.</p><p><strong>Destructive:</strong> firms that fail to adapt lose customers → revenue falls → they close → their workers lose their jobs, and those with skills specific to the old industry may struggle to find new ones.</p><p><strong>Over time:</strong> labour and capital leave firms that use them poorly and end up in firms that use them well, so the country can produce more with the same resources.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "entrepreneurship",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-1-role-of-an-entrepreneur.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-1-app-01",
+      "specCode": "1.2.1",
+      "topic": "1.2 Enterprise, Business and the Economy",
+      "subtopic": "1-2-1-role-of-an-entrepreneur",
+      "cardType": "application",
+      "front": "<p>A café owner makes three decisions: changing tomorrow's menu prices, opening a second café in the next town, and launching a lunch delivery service for local offices. Which is <strong>operating</strong>, which <strong>expanding</strong> and which <strong>developing</strong> the business?</p>",
+      "back": "<p><strong>Operating:</strong> changing tomorrow's prices, a day-to-day decision.</p><p><strong>Expanding:</strong> the second café, producing more of what already works. It usually needs finance, which adds debt or brings in new owners.</p><p><strong>Developing:</strong> the delivery service, which changes what the business does. This is where innovation happens, and where the risk of getting it wrong is highest.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "entrepreneurship",
+        "application"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-1-role-of-an-entrepreneur.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-2-def-01",
+      "specCode": "1.2.2",
+      "topic": "1.2 Enterprise, Business and the Economy",
+      "subtopic": "1-2-2-entrepreneurial-motives",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>social enterprise</strong>.</p>",
+      "back": "<p><strong>Social enterprise</strong> — a business that trades to tackle a social or environmental problem and reinvests most of its profit in that aim.</p><p>A social entrepreneur still needs revenue above costs, but the surplus pays for the mission. The Big Issue, founded in 1991, is a UK example.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "entrepreneurship"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-2-entrepreneurial-motives.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a business that trades to tackle a social or environmental problem and reinvests most of its profit in that aim."
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-2-def-02",
+      "specCode": "1.2.2",
+      "topic": "1.2 Enterprise, Business and the Economy",
+      "subtopic": "1-2-2-entrepreneurial-motives",
+      "cardType": "definition",
+      "front": "<p>Name the <strong>four non-financial motives</strong> for starting a business that the spec lists.</p>",
+      "back": "<ul><li><strong>Ethical stance:</strong> running the business by moral principles, such as using only organic cotton.</li><li><strong>Social entrepreneurship:</strong> trading to tackle a social or environmental problem.</li><li><strong>Independence:</strong> being your own boss, with no manager above you.</li><li><strong>Home working:</strong> running the business from home, which cuts costs and fits around childcare.</li></ul><p>Non-financial motives come from the owner's values or the way they want to live.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "entrepreneurship"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-2-entrepreneurial-motives.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-2-chain-01",
+      "specCode": "1.2.2",
+      "topic": "1.2 Enterprise, Business and the Economy",
+      "subtopic": "1-2-2-entrepreneurial-motives",
+      "cardType": "chain",
+      "front": "<p>Explain why <strong>profit acts as an incentive</strong> to start a business.</p>",
+      "back": "<p>An entrepreneur takes a risk that employees don't, and the chance of a profit is what makes the risk worth taking. Profit works as an incentive in three ways:</p><ul><li><strong>It rewards the owner:</strong> profit is the entrepreneur's income.</li><li><strong>It pays for growth:</strong> profit kept in the business can fund new equipment, extra staff or a second site without borrowing.</li><li><strong>It sends a signal:</strong> high profits → other entrepreneurs see money to be made → new firms enter → resources move to where consumers want them.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "entrepreneurship",
+        "profit",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-2-entrepreneurial-motives.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-2-eval-01",
+      "specCode": "1.2.2",
+      "topic": "1.2 Enterprise, Business and the Economy",
+      "subtopic": "1-2-2-entrepreneurial-motives",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong>: is profit or a non-financial motive more important to an entrepreneur?</p>",
+      "back": "<p><strong>Profit has to beat the opportunity cost.</strong> Someone who leaves a £35,000-a-year job to run a business making £20,000 profit is £15,000 a year worse off in money terms. If they stay, something other than money is keeping them there.</p><p><strong>But the two are not either/or.</strong> A social enterprise that makes a loss cannot keep helping anyone, and an ethical brand may earn more because of its stance, as some customers pay a premium.</p><p><strong>It depends on the entrepreneur:</strong> judge which motive comes first for them, then explain how it still depends on the business covering its costs.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "entrepreneurship",
+        "profit",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-2-entrepreneurial-motives.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-3-def-01",
+      "specCode": "1.2.3",
+      "topic": "1.2 Enterprise, Business and the Economy",
+      "subtopic": "1-2-3-factors-of-production",
+      "cardType": "definition",
+      "front": "<p>Define the <strong>factors of production</strong>.</p>",
+      "back": "<p><strong>Factors of production</strong> — the resources used to make goods and provide services. Economists group them into four: land, labour, capital and enterprise.</p><p>Every business uses all four, but in a different mix: a farm needs a lot of land, a software firm hardly any. All four are scarce, so each has a price the business must pay to use it.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "factors-of-production"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-3-factors-of-production.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the resources used to make goods and provide services. Economists group them into four: land, labour, capital and enterprise."
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-3-def-02",
+      "specCode": "1.2.3",
+      "topic": "1.2 Enterprise, Business and the Economy",
+      "subtopic": "1-2-3-factors-of-production",
+      "cardType": "definition",
+      "front": "<p>Define <strong>enterprise</strong> as a factor of production.</p>",
+      "back": "<p><strong>Enterprise</strong> — the willingness and ability to organise the other factors of production and to take the risk of running a business.</p><p>The reward is <strong>profit</strong>, which, unlike the other rewards, is not agreed in advance and may be nothing at all.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "factors-of-production",
+        "entrepreneurship"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-3-factors-of-production.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the willingness and ability to organise the other factors of production and to take the risk of running a business."
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-3-def-03",
+      "specCode": "1.2.3",
+      "topic": "1.2 Enterprise, Business and the Economy",
+      "subtopic": "1-2-3-factors-of-production",
+      "cardType": "definition",
+      "front": "<p>Define <strong>land</strong> as a factor of production. What does it include for a business?</p>",
+      "back": "<p><strong>Land</strong> — natural resources used in production, such as water, crops, timber and oil. For a business, land also includes its premises.</p><p>Raw materials count as land too, because they start as natural resources: the coffee beans a café buys began as a crop. The reward to land is <strong>rent</strong>.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "factors-of-production"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-3-factors-of-production.html",
+        "origin": "notes-verbatim",
+        "verbatim": "natural resources used in production, such as water, crops, timber and oil. For a business, land also includes its premises."
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-3-def-04",
+      "specCode": "1.2.3",
+      "topic": "1.2 Enterprise, Business and the Economy",
+      "subtopic": "1-2-3-factors-of-production",
+      "cardType": "definition",
+      "front": "<p>Define <strong>labour</strong> as a factor of production.</p>",
+      "back": "<p><strong>Labour</strong> — the physical and mental effort people put into production.</p><p>In a business, labour is its <strong>managers and employees</strong>. The reward is <strong>wages and salaries</strong>, paid whether the business does well or badly.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "factors-of-production",
+        "labour"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-3-factors-of-production.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the physical and mental effort people put into production."
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-3-def-05",
+      "specCode": "1.2.3",
+      "topic": "1.2 Enterprise, Business and the Economy",
+      "subtopic": "1-2-3-factors-of-production",
+      "cardType": "definition",
+      "front": "<p>Define <strong>capital</strong> as a factor of production.</p>",
+      "back": "<p><strong>Capital</strong> — man-made resources used in production, such as machinery, tools and vehicles.</p><p>In a business, capital is its <strong>equipment</strong>, such as a café's coffee machine, ovens, fridges and tills. The reward to capital is <strong>interest</strong>.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "factors-of-production"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-3-factors-of-production.html",
+        "origin": "notes-verbatim",
+        "verbatim": "man-made resources used in production, such as machinery, tools and vehicles."
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-3-app-01",
+      "specCode": "1.2.3",
+      "topic": "1.2 Enterprise, Business and the Economy",
+      "subtopic": "1-2-3-factors-of-production",
+      "cardType": "application",
+      "front": "<p>A bakery uses: the shop it trades from, flour and eggs, ovens and mixers, its bakers, its shop manager, and the owner who opened it. Place each against its <strong>factor of production</strong>, and give each factor's reward.</p>",
+      "back": "<p><strong>Land</strong> (rent): the shop, which is its premises, and the flour and eggs, which are raw materials.</p><p><strong>Capital</strong> (interest): the ovens and mixers, which are equipment.</p><p><strong>Labour</strong> (wages and salaries): the bakers <em>and</em> the manager.</p><p><strong>Enterprise</strong> (profit): the owner, who set up the business and takes the risk.</p><p>Owners are enterprise; managers and workers are labour.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "factors-of-production",
+        "application"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-3-factors-of-production.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-4-def-01",
+      "specCode": "1.2.4",
+      "topic": "1.2 Enterprise, Business and the Economy",
+      "subtopic": "1-2-4-specialisation",
+      "cardType": "definition",
+      "front": "<p>Define <strong>specialisation</strong>.</p>",
+      "back": "<p><strong>Specialisation</strong> — when a person, business, region or country concentrates on producing a narrow range of goods or services, or on one part of a production process.</p><p>A firm specialises when it concentrates on one product, one type of customer or one stage of production, such as a bakery that supplies only bread to supermarkets.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "specialisation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-4-specialisation.html",
+        "origin": "notes-verbatim",
+        "verbatim": "when a person, business, region or country concentrates on producing a narrow range of goods or services, or on one part of a production process."
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-4-def-02",
+      "specCode": "1.2.4",
+      "topic": "1.2 Enterprise, Business and the Economy",
+      "subtopic": "1-2-4-specialisation",
+      "cardType": "definition",
+      "front": "<p>Define the <strong>division of labour</strong>.</p>",
+      "back": "<p><strong>Division of labour</strong> — splitting production into separate tasks and giving each worker one task, or a small set of tasks, to do over and over.</p><p>It is specialisation inside a workplace. Adam Smith's pin factory (1776) is the classic example: ten workers sharing out the steps made upwards of 48,000 pins a day.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "specialisation",
+        "productivity"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-4-specialisation.html",
+        "origin": "notes-verbatim",
+        "verbatim": "splitting production into separate tasks and giving each worker one task, or a small set of tasks, to do over and over."
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-4-eval-01",
+      "specCode": "1.2.4",
+      "topic": "1.2 Enterprise, Business and the Economy",
+      "subtopic": "1-2-4-specialisation",
+      "cardType": "evaluation",
+      "front": "<p>Give the <strong>advantages and disadvantages</strong> of the division of labour to <strong>employers</strong>.</p>",
+      "back": "<p><strong>Advantages</strong></p><ul><li>Higher productivity: workers get faster with practice and waste no time switching between jobs.</li><li>Lower cost per unit: more output from the same wage bill.</li><li>Cheaper training: a new starter only has to learn one task.</li><li>Easier to use machinery: simple, repeated tasks suit specialist equipment.</li></ul><p><strong>Disadvantages</strong></p><ul><li>Boredom: repetitive work can lead to careless mistakes, lower quality and more days off sick.</li><li>Staff turnover: bored workers leave, and replacing them costs money.</li><li>Bottlenecks: if one worker is absent or slow, every later stage waits.</li><li>Less flexibility: staff who know one task cannot easily cover for others.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "specialisation",
+        "productivity",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-4-specialisation.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-4-eval-02",
+      "specCode": "1.2.4",
+      "topic": "1.2 Enterprise, Business and the Economy",
+      "subtopic": "1-2-4-specialisation",
+      "cardType": "evaluation",
+      "front": "<p>Give the <strong>advantages and disadvantages</strong> of the division of labour to <strong>employees</strong>.</p>",
+      "back": "<p><strong>Advantages</strong></p><ul><li>Expertise: workers become highly skilled at their task.</li><li>Higher pay: skills that are in short supply can earn a premium.</li><li>Quicker start: less to learn before becoming useful in a new job.</li></ul><p><strong>Disadvantages</strong></p><ul><li>Monotony: the same task all day gives little job satisfaction.</li><li>Narrow skills: if the task is automated or the industry shrinks, the worker may struggle to find another job (<strong>structural unemployment</strong>).</li><li>Health: repeating the same movement can cause strain injuries.</li></ul><p>Say whose advantage it is: higher productivity helps the employer, while the worker on the same line may find the job dull.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "specialisation",
+        "labour",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-4-specialisation.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-4-eval-03",
+      "specCode": "1.2.4",
+      "topic": "1.2 Enterprise, Business and the Economy",
+      "subtopic": "1-2-4-specialisation",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> specialisation for a <strong>firm</strong>. What does whether it pays depend on?</p>",
+      "back": "<p><strong>Advantages:</strong> lower average costs from bulk buying and specialist machinery; a reputation for doing one thing well; cheaper marketing, with one clear message to one type of customer.</p><p><strong>Disadvantages:</strong> all its eggs in one basket, so a fall in demand for its one product collapses sales; it depends on other firms for everything it doesn't make; specialist machinery and skills make it slow to adapt.</p><p><strong>It depends on:</strong></p><ul><li>how stable demand is: safe in a steady market, risky where tastes or technology change fast;</li><li>the size of the market: the cost savings only come if it can sell a large volume;</li><li>trade: it needs reliable customers and suppliers.</li></ul>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "specialisation",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-4-specialisation.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-5-def-01",
+      "specCode": "1.2.5",
+      "topic": "1.2 Enterprise, Business and the Economy",
+      "subtopic": "1-2-5-the-wider-economic-environment",
+      "cardType": "definition",
+      "front": "<p>Define the <strong>interest rate</strong>.</p>",
+      "back": "<p><strong>Interest rate</strong> — the cost of borrowing money, and the reward for saving it, shown as a percentage per year.</p><p>The Bank of England sets <strong>Bank Rate</strong>, which other interest rates follow.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "interest-rates"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-5-the-wider-economic-environment.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the cost of borrowing money, and the reward for saving it, shown as a percentage per year."
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-5-def-02",
+      "specCode": "1.2.5",
+      "topic": "1.2 Enterprise, Business and the Economy",
+      "subtopic": "1-2-5-the-wider-economic-environment",
+      "cardType": "definition",
+      "front": "<p>Define the <strong>exchange rate</strong>.</p>",
+      "back": "<p><strong>Exchange rate</strong> — the price of one currency in terms of another, such as £1 = $1.30.</p><p>Exchange rates are decided by currency markets. Remember <strong>SPICED</strong>: a Strong Pound makes Imports Cheap and Exports Dear.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "exchange-rates"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-5-the-wider-economic-environment.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the price of one currency in terms of another, such as £1 = $1.30."
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-5-chain-01",
+      "specCode": "1.2.5",
+      "topic": "1.2 Enterprise, Business and the Economy",
+      "subtopic": "1-2-5-the-wider-economic-environment",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chains of reasoning</strong>: how does a rise in interest rates affect a firm's costs, demand and investment?</p>",
+      "back": "<p><strong>Costs:</strong> rates rise → interest on variable-rate loans and overdrafts goes up → higher costs → lower profit for any firm that borrows.</p><p><strong>Demand:</strong> rates rise → mortgage and credit-card repayments go up, and saving pays more → households spend less → lower sales, worst for things often bought on credit, such as cars and furniture.</p><p><strong>Investment:</strong> rates rise → borrowing for a new machine or shop costs more → fewer projects earn enough to cover the interest → investment is delayed.</p><p>A cut in rates runs each chain the other way.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "interest-rates",
+        "investment",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-5-the-wider-economic-environment.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-5-calc-01",
+      "specCode": "1.2.5",
+      "topic": "1.2 Enterprise, Business and the Economy",
+      "subtopic": "1-2-5-the-wider-economic-environment",
+      "cardType": "calculation",
+      "front": "<p>A UK firm sells a £40 product to the US. The pound strengthens from £1 = $1.20 to £1 = $1.35. <strong>Calculate the dollar price</strong> before and after, and explain who gains and who loses.</p>",
+      "back": "<p>Before: £40 × 1.20 = <strong>$48</strong>. After: £40 × 1.35 = <strong>$54</strong>.</p><p><strong>SPICED</strong>: a Strong Pound makes Imports Cheap and Exports Dear.</p><ul><li><strong>Exporters lose:</strong> UK goods cost more abroad → overseas buyers switch to cheaper rivals → export sales and profit fall.</li><li><strong>Importers gain:</strong> imported materials and components cost less in pounds → lower unit costs → higher margins.</li><li><strong>Firms competing with imports lose:</strong> foreign goods get cheaper in UK shops.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "exchange-rates",
+        "calculation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-5-the-wider-economic-environment.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-5-chain-02",
+      "specCode": "1.2.5",
+      "topic": "1.2 Enterprise, Business and the Economy",
+      "subtopic": "1-2-5-the-wider-economic-environment",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chains of reasoning</strong>: how does a rise in inflation affect a firm?</p>",
+      "back": "<ul><li><strong>Costs:</strong> materials, energy and wages cost more → higher unit costs → lower margins unless the firm raises its prices.</li><li><strong>Demand:</strong> prices rise faster than wages → real incomes fall → households buy less → lower sales.</li><li><strong>Interest rates:</strong> the Bank of England raises rates to bring inflation down → the interest-rate chains follow.</li><li><strong>Exports:</strong> UK prices rise faster than rivals' abroad → UK goods look expensive overseas → exporters lose sales.</li></ul><p>How much it hurts depends on <strong>pricing power</strong>, since strong brands can usually pass costs on, and on <strong>whether wages keep up</strong>.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "inflation",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-5-the-wider-economic-environment.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-5-app-01",
+      "specCode": "1.2.5",
+      "topic": "1.2 Enterprise, Business and the Economy",
+      "subtopic": "1-2-5-the-wider-economic-environment",
+      "cardType": "application",
+      "front": "<p>Interest rates rise. Compare the effect on a <strong>heavily borrowed car dealer</strong> and a <strong>debt-free firm selling basic groceries</strong>.</p>",
+      "back": "<p><strong>The car dealer is hit from both sides.</strong> Its loan repayments rise, so its costs go up, unless it is on a fixed rate until the deal ends. And cars are often bought on credit, so its customers face dearer finance and its sales fall.</p><p><strong>The grocer is barely touched.</strong> It has no loan to worry about, and households keep buying necessities. If it has cash in the bank, it earns more on it.</p><p>The effect always depends on the business: check its debts and whether it sells necessities or luxuries.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "interest-rates",
+        "application"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-5-the-wider-economic-environment.html",
+        "origin": "card-authored"
+      }
     }
   ]
 }
