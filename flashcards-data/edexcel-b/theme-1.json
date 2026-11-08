@@ -2332,6 +2332,411 @@
         "notesPage": "/revision-notes/edexcel-b-theme-1/1-4-3-types-and-sources-of-credit.html",
         "origin": "card-authored"
       }
+    },
+    {
+      "id": "edexcel-b-1-5-1-def-01",
+      "specCode": "1.5.1",
+      "topic": "1.5 Market Failure and Government Intervention",
+      "subtopic": "1-5-1-market-failure-and-externalities",
+      "cardType": "definition",
+      "front": "<p>Define <strong>private costs</strong>, <strong>external costs</strong> and <strong>social costs</strong>, and give the link between them.</p>",
+      "back": "<p><strong>Private costs</strong> — the costs paid by the firm or person carrying out an activity, such as a firm's wages, materials and energy, or the price a consumer pays for a good.</p><p><strong>External costs</strong> — costs that fall on a <strong>third party</strong>, someone outside the transaction, who is not compensated for them. Noise, pollution and congestion are the usual examples.</p><p><strong>Social costs</strong> — the full cost of an activity to society, which is the private cost plus any external cost.</p><p><strong>Social cost = private cost + external cost</strong></p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "externalities",
+        "market-failure"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-5-1-market-failure-and-externalities.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the costs paid by the firm or person carrying out an activity, such as a firm's wages, materials and energy, or the price a consumer pays for a good."
+      }
+    },
+    {
+      "id": "edexcel-b-1-5-1-def-02",
+      "specCode": "1.5.1",
+      "topic": "1.5 Market Failure and Government Intervention",
+      "subtopic": "1-5-1-market-failure-and-externalities",
+      "cardType": "definition",
+      "front": "<p>Define <strong>private benefits</strong>, <strong>external benefits</strong> and <strong>social benefits</strong>, and give the link between them.</p>",
+      "back": "<p><strong>Private benefits</strong> — the benefits that go to the person or firm who buys, uses or makes something, such as the enjoyment a consumer gets from a good or the revenue a firm earns from selling it.</p><p><strong>External benefits</strong> — gains that go to third parties, who do not pay for them.</p><p><strong>Social benefits</strong> — the full benefit of an activity to society, which is the private benefit plus any external benefit.</p><p><strong>Social benefit = private benefit + external benefit</strong></p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "externalities",
+        "market-failure"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-5-1-market-failure-and-externalities.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the benefits that go to the person or firm who buys, uses or makes something, such as the enjoyment a consumer gets from a good or the revenue a firm earns from selling it."
+      }
+    },
+    {
+      "id": "edexcel-b-1-5-1-def-03",
+      "specCode": "1.5.1",
+      "topic": "1.5 Market Failure and Government Intervention",
+      "subtopic": "1-5-1-market-failure-and-externalities",
+      "cardType": "definition",
+      "front": "<p>Define an <strong>externality</strong>. Name the four types, by whether a firm or a consumer causes them, with an example of each.</p>",
+      "back": "<p><strong>Externality</strong> — an external cost or external benefit. A <strong>negative externality</strong> is an external cost and a <strong>positive externality</strong> is an external benefit.</p><ul><li><strong>External cost of production</strong> (a firm, while making a good): water companies releasing sewage into rivers and the sea.</li><li><strong>External cost of consumption</strong> (a consumer, while using a good): drivers adding to congestion and air pollution for everyone else on the road.</li><li><strong>External benefit of production</strong> (a firm, while making a good): a firm trains its staff, some of whom later take those skills to other employers.</li><li><strong>External benefit of consumption</strong> (a consumer, while using a good): a vaccinated person is less likely to pass a disease on.</li></ul><p>The people causing an externality do not have to think about it, so decisions are made on private costs and benefits alone.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "externalities"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-5-1-market-failure-and-externalities.html",
+        "origin": "notes-verbatim",
+        "verbatim": "an external cost or external benefit."
+      }
+    },
+    {
+      "id": "edexcel-b-1-5-1-def-04",
+      "specCode": "1.5.1",
+      "topic": "1.5 Market Failure and Government Intervention",
+      "subtopic": "1-5-1-market-failure-and-externalities",
+      "cardType": "definition",
+      "front": "<p>Define <strong>market failure</strong> and the <strong>social optimum</strong>. When does a free market reach the social optimum on its own?</p>",
+      "back": "<p><strong>Market failure</strong> — when the free market leads to too much or too little of a good being produced or consumed, so resources are not allocated in the best way for society.</p><p><strong>Social optimum</strong> — the output where the social cost of one more unit equals its social benefit, written MSC = MSB on a diagram. The last unit made costs society exactly what it is worth to society.</p><p>In most markets there is no externality, so private and social costs and benefits are the same. The market equilibrium is then the social optimum, and the market works well on its own.</p><p>When there is an externality, the two points split apart: the market ends up at Q1 when society would be better off at Q2.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "market-failure",
+        "social-optimum"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-5-1-market-failure-and-externalities.html",
+        "origin": "notes-verbatim",
+        "verbatim": "when the free market leads to too much or too little of a good being produced or consumed, so resources are not allocated in the best way for society."
+      }
+    },
+    {
+      "id": "edexcel-b-1-5-1-calc-01",
+      "specCode": "1.5.1",
+      "topic": "1.5 Market Failure and Government Intervention",
+      "subtopic": "1-5-1-market-failure-and-externalities",
+      "cardType": "calculation",
+      "front": "<p>A paper mill spends £70 to make each tonne of paper. Chemicals it releases into a river cause £20 of damage per tonne to fishing firms downstream, who are not compensated. Calculate the <strong>social cost</strong> per tonne, and explain why the market produces too much paper.</p>",
+      "back": "<p>Social cost = private cost + external cost = £70 + £20 = <strong>£90 a tonne</strong>.</p><p>The mill prices from its own £70 → paper sells for less than its cost to society → more is bought → the fishing firms bear the £20.</p><p>This is an <strong>external cost of production</strong>, so the market produces more than the social optimum: <strong>overproduction</strong>.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "externalities",
+        "calculation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-5-1-market-failure-and-externalities.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-5-1-diagram-01",
+      "specCode": "1.5.1",
+      "topic": "1.5 Market Failure and Government Intervention",
+      "subtopic": "1-5-1-market-failure-and-externalities",
+      "cardType": "diagram",
+      "front": "<p>Sketch the diagram for an <strong>external cost of production</strong>. Mark the market outcome, the social optimum and the welfare loss.</p>",
+      "back": "<p>MSC lies above S=MPC, and the gap between them is the external cost of each unit. Demand is D=MPB=MSB.</p><ul><li><strong>Market:</strong> where supply meets demand, at P1 and Q1.</li><li><strong>Social optimum:</strong> where MSC meets demand, at P2 and Q2. Q1 is more than Q2, so there is <strong>overproduction</strong>.</li><li><strong>Welfare loss:</strong> between Q2 and Q1, each extra unit costs society more than it is worth to buyers, and P1 is too low because it leaves out the external cost. The shaded triangle is the welfare loss.</li></ul><p>Example: a factory's fumes harming the health of people nearby.</p>",
+      "svgRef": "/images/diagrams/svg/overproduction.svg",
+      "svgAlt": "Externality diagram with MSC above S=MPC and demand labelled D=MPB=MSB; the market is at P1 and Q1, the social optimum at P2 and the smaller Q2, and a shaded welfare loss triangle lies between Q2 and Q1",
+      "difficulty": "standard",
+      "tags": [
+        "externalities",
+        "market-failure",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-5-1-market-failure-and-externalities.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-5-1-diagram-02",
+      "specCode": "1.5.1",
+      "topic": "1.5 Market Failure and Government Intervention",
+      "subtopic": "1-5-1-market-failure-and-externalities",
+      "cardType": "diagram",
+      "front": "<p>Sketch the diagram for an <strong>external benefit of consumption</strong>, such as a vaccine. Mark the market outcome, the social optimum and the welfare loss.</p>",
+      "back": "<p>MSB lies above D=MPB, because using the good helps other people. Supply is S=MPC=MSC.</p><ul><li><strong>Market:</strong> consumers buy Q1, where D=MPB meets supply, at P1. Someone deciding whether to have a vaccine thinks about their own health, not the people they would no longer infect.</li><li><strong>Social optimum:</strong> where MSB meets supply, at P2 and Q2. Q1 is less than Q2, so there is <strong>underconsumption</strong>.</li><li><strong>Welfare loss:</strong> the shaded triangle is the benefit society misses out on: units between Q1 and Q2 that would have been worth more to society than they cost to make.</li></ul><p>The externality does not shift supply or demand. MSB is an extra line that shows what the market leaves out, so the market stays at Q1.</p>",
+      "svgRef": "/images/diagrams/svg/underconsumption.svg",
+      "svgAlt": "Externality diagram with MSB above D=MPB and supply labelled S=MPC=MSC; the market is at P1 and Q1, the social optimum at P2 and the larger Q2, and a shaded welfare loss triangle lies between Q1 and Q2",
+      "difficulty": "standard",
+      "tags": [
+        "externalities",
+        "market-failure",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-5-1-market-failure-and-externalities.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-5-1-app-01",
+      "specCode": "1.5.1",
+      "topic": "1.5 Market Failure and Government Intervention",
+      "subtopic": "1-5-1-market-failure-and-externalities",
+      "cardType": "application",
+      "front": "<p>For each, name the <strong>type of externality</strong>, say where the social curve sits, and say whether the free market gives too much or too little:</p><ol><li>a cement works whose dust settles on nearby homes and cars</li><li>smokers whose smoke harms the people around them</li><li>a building firm that trains apprentices, many of whom later work for other builders</li><li>adults who take a first-aid course and can then help strangers in an emergency.</li></ol>",
+      "back": "<ol><li><strong>External cost of production.</strong> MSC above S=MPC → <strong>overproduction</strong>.</li><li><strong>External cost of consumption.</strong> MSB below D=MPB → <strong>overconsumption</strong>.</li><li><strong>External benefit of production.</strong> MSC below S=MPC → <strong>underproduction</strong>.</li><li><strong>External benefit of consumption.</strong> MSB above D=MPB → <strong>underconsumption</strong>.</li></ol><p>External costs give too much; external benefits give too little. In every case the market stays at Q1, where S=MPC meets D=MPB.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "externalities",
+        "application"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-5-1-market-failure-and-externalities.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-5-2-def-01",
+      "specCode": "1.5.2",
+      "topic": "1.5 Market Failure and Government Intervention",
+      "subtopic": "1-5-2-government-intervention-and-failure",
+      "cardType": "definition",
+      "front": "<p>Define <strong>legislation</strong> and <strong>regulation</strong> as methods of government intervention. Give the main strength and drawback of each.</p>",
+      "back": "<p><strong>Legislation</strong> — laws passed by Parliament that ban or require something. Since 1 June 2025 it has been illegal for shops in England to sell single-use vapes, which were being thrown away as litter in large numbers.</p><p><strong>Regulation</strong> — rules that control how firms operate, set and enforced by government bodies, usually under powers that legislation gives them. Emission limits on factories, food hygiene inspections and safety standards are all regulation. A firm that breaks the rules can be fined or shut down.</p><ul><li><strong>Legislation:</strong> clear and quick to understand, and can stop a harmful product outright. But it needs enforcing, and a ban can push sales to an illegal market.</li><li><strong>Regulation:</strong> can be set for each industry and updated as technology changes. But inspecting and enforcing costs money, and firms face paperwork and compliance costs.</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "government-intervention"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-5-2-government-intervention-and-failure.html",
+        "origin": "notes-verbatim",
+        "verbatim": "laws passed by Parliament that ban or require something."
+      }
+    },
+    {
+      "id": "edexcel-b-1-5-2-def-02",
+      "specCode": "1.5.2",
+      "topic": "1.5 Market Failure and Government Intervention",
+      "subtopic": "1-5-2-government-intervention-and-failure",
+      "cardType": "definition",
+      "front": "<p>Define an <strong>indirect tax</strong>. How can it correct overproduction? Give a UK example.</p>",
+      "back": "<p><strong>Indirect tax</strong> — a tax on spending, paid to the government by the seller and added to the cost of each unit. It raises the price and cuts the quantity bought.</p><p>If the tax equals the external cost of each unit, overproduction is corrected.</p><p><strong>Example:</strong> the <strong>Soft Drinks Industry Levy</strong>, since April 2018. Producers pay it on soft drinks with 5g or more of sugar per 100ml, and many brands cut the sugar to pay less or none.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "government-intervention",
+        "indirect-tax"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-5-2-government-intervention-and-failure.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a tax on spending, paid to the government by the seller and added to the cost of each unit. It raises the price and cuts the quantity bought."
+      }
+    },
+    {
+      "id": "edexcel-b-1-5-2-def-03",
+      "specCode": "1.5.2",
+      "topic": "1.5 Market Failure and Government Intervention",
+      "subtopic": "1-5-2-government-intervention-and-failure",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>subsidy</strong> and a <strong>grant</strong>. How can a subsidy correct underconsumption, and what is its main drawback?</p>",
+      "back": "<p><strong>Subsidy</strong> — a payment from the government to producers that lowers their cost of each unit, so they supply more at a lower price. A <strong>grant</strong> is a one-off payment for a set purpose, such as the Boiler Upgrade Scheme's £7,500 towards a heat pump for homes in England and Wales.</p><p>If the subsidy matches the external benefit of each unit, output rises towards the social optimum and underconsumption is corrected.</p><p><strong>Drawback:</strong> it costs the government money that could be spent elsewhere, such as on schools or hospitals, which is an opportunity cost. A firm that has been subsidised for years may also feel less pressure to cut its costs.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "government-intervention",
+        "subsidy"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-5-2-government-intervention-and-failure.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a payment from the government to producers that lowers their cost of each unit, so they supply more at a lower price."
+      }
+    },
+    {
+      "id": "edexcel-b-1-5-2-def-04",
+      "specCode": "1.5.2",
+      "topic": "1.5 Market Failure and Government Intervention",
+      "subtopic": "1-5-2-government-intervention-and-failure",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>voluntary agreement</strong>. Give its main strength and its main drawback.</p>",
+      "back": "<p><strong>Voluntary agreement</strong> — a promise by firms in an industry to change what they do, agreed with the government with no law forcing them. In 2016 the food industry was asked to cut sugar in foods such as cereals, yoghurts and biscuits by 20% by 2020, on a voluntary basis.</p><ul><li><strong>Strength:</strong> cheap to run, and firms can choose the cheapest way to meet the target.</li><li><strong>Drawback:</strong> nothing happens to firms that ignore the target. The sugar programme cut the sugar in the foods it covered by far less than its target.</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "government-intervention"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-5-2-government-intervention-and-failure.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a promise by firms in an industry to change what they do, agreed with the government with no law forcing them."
+      }
+    },
+    {
+      "id": "edexcel-b-1-5-2-def-05",
+      "specCode": "1.5.2",
+      "topic": "1.5 Market Failure and Government Intervention",
+      "subtopic": "1-5-2-government-intervention-and-failure",
+      "cardType": "definition",
+      "front": "<p>Define <strong>government failure</strong>, and outline its four causes.</p>",
+      "back": "<p><strong>Government failure</strong> — when government intervention makes the allocation of resources worse than it was before, or costs more than the benefit it brings.</p><ul><li><strong>Distortion of price signals:</strong> a tax or subsidy changes the price, so the signal it sends firms about what consumers want can point the wrong way.</li><li><strong>Unintended consequences:</strong> people and firms respond to a policy in ways the government did not plan for.</li><li><strong>Excessive administrative costs:</strong> designing, running and enforcing a policy costs money, and if those costs are high compared with what it achieves, society can end up worse off.</li><li><strong>Information gaps:</strong> the government rarely knows the external cost for sure, so a tax can be set too high or too low.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "government-failure"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-5-2-government-intervention-and-failure.html",
+        "origin": "notes-verbatim",
+        "verbatim": "when government intervention makes the allocation of resources worse than it was before, or costs more than the benefit it brings."
+      }
+    },
+    {
+      "id": "edexcel-b-1-5-2-diagram-01",
+      "specCode": "1.5.2",
+      "topic": "1.5 Market Failure and Government Intervention",
+      "subtopic": "1-5-2-government-intervention-and-failure",
+      "cardType": "diagram",
+      "front": "<p>Sketch an <strong>indirect tax</strong> on a supply and demand diagram. Mark the tax per unit, how it is split between buyers and producers, and the government's revenue.</p>",
+      "back": "<p>A tax of a set amount per unit adds to the seller's costs, so supply shifts up and to the left, from S to S+Tax. The price buyers pay rises from P1 to P2, and the quantity falls from Q1 to Q2. Producers keep P3.</p><ul><li><strong>Tax per unit:</strong> the full vertical gap from P3 to P2, measured at Q2 between the two supply curves.</li><li><strong>Who pays:</strong> buyers pay P1 to P2 through the higher price, and producers pay P1 to P3 through the lower amount they keep.</li><li><strong>Revenue:</strong> tax per unit × Q2, the shaded rectangle from P3 up to P2 and across to Q2.</li></ul><p>A common slip is to mark P1 to P2 as the tax. That is only the part buyers pay.</p>",
+      "svgRef": "/images/diagrams/svg/indirect-tax-gov-revenue.svg",
+      "svgAlt": "Supply and demand diagram with supply shifted left from S to S+Tax; buyers pay P2, producers keep P3, quantity falls from Q1 to Q2, and the rectangle from P3 to P2 across to Q2 is shaded as government revenue",
+      "difficulty": "standard",
+      "tags": [
+        "indirect-tax",
+        "government-intervention",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-5-2-government-intervention-and-failure.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-5-2-diagram-02",
+      "specCode": "1.5.2",
+      "topic": "1.5 Market Failure and Government Intervention",
+      "subtopic": "1-5-2-government-intervention-and-failure",
+      "cardType": "diagram",
+      "front": "<p>Sketch a <strong>subsidy</strong> on a supply and demand diagram. Mark the subsidy per unit and the cost to the government.</p>",
+      "back": "<p>A subsidy lowers each unit's cost, so supply shifts down and to the right, from S to S+Subsidy. The price buyers pay falls from P1 to P2, and the quantity rises from Q1 to Q2. Producers receive P3 per unit, including the subsidy.</p><ul><li><strong>Subsidy per unit:</strong> the gap between P3 and P2.</li><li><strong>Cost to the government:</strong> that gap × Q2, the shaded rectangle.</li></ul><p>The government has to fund that rectangle from taxes or borrowing.</p>",
+      "svgRef": "/images/diagrams/svg/subsidy-gov-expenditure.svg",
+      "svgAlt": "Supply and demand diagram with supply shifted right from S to S+Subsidy; buyers pay P2, producers receive P3, quantity rises from Q1 to Q2, and the rectangle from P2 to P3 across to Q2 is shaded as government expenditure",
+      "difficulty": "standard",
+      "tags": [
+        "subsidy",
+        "government-intervention",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-5-2-government-intervention-and-failure.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-5-2-eval-01",
+      "specCode": "1.5.2",
+      "topic": "1.5 Market Failure and Government Intervention",
+      "subtopic": "1-5-2-government-intervention-and-failure",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> an indirect tax as a way to cut the consumption of a good with external costs.</p>",
+      "back": "<p><strong>For</strong></p><ul><li>It makes the polluter pay and raises revenue, while buyers and firms still choose for themselves.</li><li>It can change what firms make. While the voluntary sugar programme fell well short of its target, brands cut the sugar in soft drinks much further to pay less of the levy.</li></ul><p><strong>Against</strong></p><ul><li><strong>Hard to set at the right level.</strong> If the damage from each unit is 20p but the tax is 50p, output is cut by too much. Set it too low and overproduction carries on.</li><li><strong>Little effect if buyers keep buying.</strong> Smokers keep buying cigarettes when the price rises, so a tobacco tax raises a lot of revenue but cuts smoking less than it might.</li><li><strong>Unintended consequences.</strong> Heavy duty on cigarettes has moved some of the market underground, which limits how high the tax can usefully go.</li><li>It takes more of a poorer household's income.</li></ul><p><strong>Judgement:</strong> how far a tax works depends on how much buyers react to the higher price.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "indirect-tax",
+        "government-failure",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-5-2-government-intervention-and-failure.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-1-5-2-app-01",
+      "specCode": "1.5.2",
+      "topic": "1.5 Market Failure and Government Intervention",
+      "subtopic": "1-5-2-government-intervention-and-failure",
+      "cardType": "application",
+      "front": "<p>Name the <strong>cause of government failure</strong> in each case, and explain it:</p><ol><li>the government pays dairy farmers for every litre of milk they produce, and they produce more milk than people want to buy</li><li>a very high tax on bottles of spirits leads to a trade in smuggled, untaxed spirits</li><li>an insulation grant has such complicated forms that a large share of its budget goes on staff checking applications</li><li>a tax on a pesticide is set at £5 a litre, but the damage each litre does turns out to be £2.</li></ol>",
+      "back": "<ol><li><strong>Distortion of price signals.</strong> Farmers respond to the subsidy as well as to demand, so the surplus has to be stored or wasted.</li><li><strong>Unintended consequences.</strong> The smuggled spirits are sold cheaply and pay no tax, so some of the harm the tax was meant to cut comes back in another form.</li><li><strong>Excessive administrative costs.</strong> The cost of running the scheme is high compared with what it achieves. The UK's Green Homes Grant (2020 to 2021) was a real case: it was too complicated.</li><li><strong>Information gaps.</strong> The tax is set above the external cost, so output is cut by too much and society loses goods that were worth making.</li></ol>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "government-failure",
+        "application"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-08",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-1/1-5-2-government-intervention-and-failure.html",
+        "origin": "card-authored"
+      }
     }
   ]
 }
