@@ -23,7 +23,7 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| All-boards parity (D67) — Phase 1: Edexcel B practice questions, staged; unit 1.1 of 23 done (3 of 85 sets) | in progress on `feature/edexcel-b-questions`, not pushed | — | — |
+| All-boards parity (D67) — Phase 1: Edexcel B practice questions, all 85 sets, launched (89 new URLs) | complete on `feature/edexcel-b-questions`, pushed 2026-11-08; not merged | — | — |
 | All-boards parity (D67) — Phase 0 groundwork: per-board feature flags, originality corpus, cold-solver, three commands | committed, not pushed; URL list awaiting Eliot | — | — |
 | Edexcel B notes — Theme 3: 19 pages, index card, site search; Edexcel B complete, 85 pages | complete, PR open | — | — |
 | Edexcel B notes — Theme 2: 24 pages, index card, site search | live | 2026-10-19 | `ada29e8b` |
@@ -212,13 +212,30 @@ session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
 
-### All-boards parity — Phase 1, Edexcel B practice questions (from 2026-10-25) — IN PROGRESS (branch `feature/edexcel-b-questions`)
+### All-boards parity — Phase 1, Edexcel B practice questions (2026-10-25 to 2026-11-08) — LAUNCHED ON BRANCH, PUSHED, NOT MERGED (branch `feature/edexcel-b-questions`)
 
 `/edexcel-b-questions <unit>`, one unit per run. Each unit gets a review
-sheet, `review/questions-unit-X-Y.md`. B's `practiceQuestions` is **staged**
-in `boards.json`, so its sets are validated and no page is written until
-`/launch-feature edexcel-b practiceQuestions`. Count what is done with
+sheet, `review/questions-unit-X-Y.md`. Count the sets with
 `ls questions-data/edexcel-b-theme-*/`, not from this list.
+
+- **Launched 2026-11-08** (`3e764789`, sitemap `6ceb448d`, pushed to the
+  branch; live only once the branch merges into `main`). `/launch-feature
+  edexcel-b practiceQuestions` moved the family from `staged` to
+  `features`. A throwaway build first confirmed it mints exactly the 89
+  URLs approved in Phase 0 Q5. Launch wording is in
+  `review/launch-practiceQuestions.md`, W1-W7, answered by Eliot the same
+  day. The two that matter: B's board indexes say the sets "test your
+  knowledge of the … content" and the hub intro keeps the real-papers
+  claim for Edexcel A and AQA only, because 9EB0 sets no MCQs (D67). Also:
+  the Edexcel B menu group (desktop and mobile), "Edexcel A Economics" on
+  the hub, the home page practice card, FAQ and B board card, practice
+  links on the B cards of `/revision-notes/` (replacing a stand-in
+  past-papers link), and 2.1.3's set title with "(R&D)". The full suite
+  passed, 27/27, before the push.
+- **Before the merge:** check the pages in Live Server at desktop and
+  360 px (the hub, a B board index, two B topic pages, a B notes tail, the
+  menu, `/` and `/revision-notes/`). Then open the PR; it merges with a
+  merge commit, so CI sees the trailers.
 
 - **Unit 1.1** (`f8506b72`, answered 2026-10-26): 22 questions across
   1.1.1-1.1.3, 22/22 cold, 0 exact / 0 near. The first unit also staged the
