@@ -123,7 +123,7 @@ BOARD_ORDER = {d: i for i, (d, _, _) in enumerate(BOARDS)}
 # section per board, split into year groups.
 HUB_SECTIONS = [
     (
-        "Edexcel Economics",
+        "Edexcel A Economics",
         [
             ("Year 1 (AS Level)", ["edexcel-theme-1", "edexcel-theme-2"]),
             ("Year 2 (A Level)", ["edexcel-theme-3", "edexcel-theme-4"]),
@@ -906,7 +906,7 @@ def render_page(topic, siblings=(), ppq=None):
               >{topic['boardName']}</a
             >
             <span class="separator">&rsaquo;</span>
-            <span>{topic['spec']} {topic['title']}</span>
+            <span>{topic['spec']} {html.escape(topic['title'], quote=False)}</span>
           </nav>
 
           <div class="quiz-container">
@@ -1258,6 +1258,21 @@ def render_board_index(board_dir, topics):
     count = sum(len(t["questions"]) for t in topics)
     topic_word = "topic" if len(topics) == 1 else "topics"
     url = f"{SITE}/practice-questions/{board_dir}/"
+    if board == "edexcel-b":
+        # 9EB0 sets no multiple-choice questions (D67), so B's intro claims
+        # no exam style: the sets test knowledge of the content. Eliot's
+        # wording, 2026-11-08 (review/launch-practiceQuestions.md, W1).
+        intro = (
+            f"Free original multiple-choice questions that test your knowledge\n"
+            f"              of the {name} content: {blurb}. Every question carries\n"
+            f"              a full worked answer."
+        )
+    else:
+        intro = (
+            f"Free exam-style multiple-choice questions covering\n"
+            f"              {blurb}, written to the style and difficulty of the real\n"
+            f"              {label} papers. Every question carries a full worked answer."
+        )
 
     title = f"{name} Practice Questions — {label} A-Level Economics | Economics Academy"
     desc = (
@@ -1286,9 +1301,7 @@ def render_board_index(board_dir, topics):
           <section class="resource-hero">
             <h1>{name} Practice Questions</h1>
             <p class="resource-intro">
-              Free exam-style multiple-choice questions covering
-              {blurb}, written to the style and difficulty of the real
-              {label} papers. Every question carries a full worked answer.
+              {intro}
             </p>
             <p class="resource-stats">
               {count} questions &middot; {len(topics)} {topic_word} &middot; free, no sign-up
@@ -1429,9 +1442,12 @@ def render_hub(by_board):
           <section class="resource-hero">
             <h1>Free A-Level Economics Practice Questions</h1>
             <p class="resource-intro">
-              Exam-style multiple-choice questions for
-              <strong>Edexcel</strong> and <strong>AQA</strong>, written to the
-              style and difficulty of the real papers. Answer one at a time for
+              Multiple-choice questions for <strong>Edexcel A</strong>,
+              <strong>Edexcel B</strong> and <strong>AQA</strong>. The Edexcel A
+              and AQA sets are written to the style and difficulty of the real
+              papers. The Edexcel B papers set no multiple-choice questions, so
+              the Edexcel B practice questions test your knowledge of the
+              specification content instead. Answer one at a time for
               instant feedback, then read a full worked answer that explains the
               correct option and names the mistake behind each wrong one.
             </p>

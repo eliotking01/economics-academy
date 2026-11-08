@@ -183,7 +183,7 @@ PINNED = {
     "aqa.groups.1.names.practiceQuestionsLabel": "AQA Macroeconomics",
     "aqa.groups.1.names.practiceQuestionsButton": "Macro: The National and International Economy",
     "edexcel-b.features.0": "notes",
-    "edexcel-b.staged.0": "practiceQuestions",
+    "edexcel-b.features.1": "practiceQuestions",
     "edexcel-b.names.short": "Edexcel B",
     "edexcel-b.names.display": "Edexcel B",
     "edexcel-b.names.long": "Edexcel A-Level Economics B",

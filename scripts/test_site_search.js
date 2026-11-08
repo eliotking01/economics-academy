@@ -89,14 +89,22 @@ check(
     .every((r) => r.def && r.links.length >= 1),
 );
 
-check(
-  "a notes-only board (Edexcel B) gets no practice-question rows",
-  !rows.some(
-    (r) =>
-      r.group === "practice" &&
-      r.url.indexOf("/practice-questions/edexcel-b-") === 0,
-  ),
-);
+// The dirs row's quiz flag alone decides practice rows: a board without
+// practice questions gets none, a board with them gets one per topic.
+// Edexcel B was the notes-only case until its practice questions launched
+// (2026-11-08); the check now holds for whichever boards are live.
+data.dirs.forEach((d, di) => {
+  const prefix = "/practice-questions/" + d[0] + "/";
+  const n = rows.filter(
+    (r) => r.group === "practice" && r.url.indexOf(prefix) === 0,
+  ).length;
+  const topics = data.topics.filter((t) => t[0] === di).length;
+  check(
+    "practice rows for " + d[0] + " follow its quiz flag",
+    n === (d[4] ? topics : 0),
+    n + " rows, " + topics + " topics, quiz " + d[4],
+  );
+});
 
 // ------------------------------------------------------------- matching
 
