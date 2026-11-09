@@ -212,6 +212,27 @@ session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
 
+### All-boards parity — Phase 2, Edexcel B flashcards (2026-11-08 to —) — IN PROGRESS, NOT PUSHED (branch `feature/edexcel-b-flashcards`)
+
+`/edexcel-b-flashcards`, one unit per run, into
+`flashcards-data/edexcel-b/theme-N.json`. B's `flashcards` is **staged** in
+`boards.json`, so the decks are validated and no page is written. Review
+sheets: `05-website/drafts/all-boards-parity/review/flashcards-unit-X-Y.md`.
+
+- **Theme 1 written: 142 cards, units 1.1 to 1.6.** Every card verified
+  cold against its notes page. Deck-level wording approved 2026-11-09.
+- **Card budget (Eliot, 2026-11-09):** Theme 1 stays at 142. Themes 2 to 4
+  aim for about 5 cards a topic (about 120, 95 and 95), more only for a
+  diagram or calculation that needs its own card, named in the unit sheet.
+  Written into the skill.
+- **Answers to the Theme 1 sheets, 2026-11-09:** four notes wording changes
+  on Edexcel B Theme 1 pages (the 1.6.3 profit chip now matches 1.2.2's;
+  `CONTENT_ISSUES.md` #38 and #39 fixed; 1.5.2 "a larger share of a poorer
+  household's income"), and the excess-demand/supply SVG `<desc>` text
+  aligned to Qd/Qs.
+- **Open:** a numbered PPF SVG for 1.1.1 is queued in
+  `review/flashcard-diagrams-theme-1.md`. Themes 2 to 4 not started.
+
 ### All-boards parity — Phase 1, Edexcel B practice questions (2026-10-25 to 2026-11-08) — LAUNCHED ON BRANCH, PUSHED, NOT MERGED (branch `feature/edexcel-b-questions`)
 
 `/edexcel-b-questions <unit>`, one unit per run. Each unit gets a review

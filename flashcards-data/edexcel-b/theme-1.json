@@ -5,7 +5,7 @@
   "themeName": "Theme 1: Markets, Consumers and Firms",
   "deckId": "edexcel-b-theme-1",
   "deckTitle": "Edexcel B A-Level Economics Theme 1 Flashcards",
-  "metaDescription": "Free interactive flashcards for Edexcel B A-Level Economics Theme 1: scarcity and business objectives, enterprise, markets, credit, market failure, and revenue, costs and profit, with spaced repetition.",
+  "metaDescription": "Free interactive flashcards for Edexcel B A-Level Economics Theme 1: scarcity and business objectives, enterprise, markets, credit, market failure, and revenue, costs, profit and cash, with spaced repetition.",
   "intro": "Revise Theme 1 with interactive flashcards written to the Edexcel B (9EB0) specification — scarcity and stakeholders, enterprise and business, how markets work, the role of credit, market failure, and the revenue, cost and cash toolkit. Flip each card to check yourself, rate how well you knew it, and the deck brings back the cards you found hard. Every card links to the revision notes page that teaches it.",
   "cards": [
     {
@@ -2698,7 +2698,7 @@
       "subtopic": "1-5-2-government-intervention-and-failure",
       "cardType": "evaluation",
       "front": "<p><strong>Evaluate</strong> an indirect tax as a way to cut the consumption of a good with external costs.</p>",
-      "back": "<p><strong>For</strong></p><ul><li>It makes the polluter pay and raises revenue, while buyers and firms still choose for themselves.</li><li>It can change what firms make. While the voluntary sugar programme fell well short of its target, brands cut the sugar in soft drinks much further to pay less of the levy.</li></ul><p><strong>Against</strong></p><ul><li><strong>Hard to set at the right level.</strong> If the damage from each unit is 20p but the tax is 50p, output is cut by too much. Set it too low and overproduction carries on.</li><li><strong>Little effect if buyers keep buying.</strong> Smokers keep buying cigarettes when the price rises, so a tobacco tax raises a lot of revenue but cuts smoking less than it might.</li><li><strong>Unintended consequences.</strong> Heavy duty on cigarettes has moved some of the market underground, which limits how high the tax can usefully go.</li><li>It takes more of a poorer household's income.</li></ul><p><strong>Judgement:</strong> how far a tax works depends on how much buyers react to the higher price.</p>",
+      "back": "<p><strong>For</strong></p><ul><li>It makes the polluter pay and raises revenue, while buyers and firms still choose for themselves.</li><li>It can change what firms make. While the voluntary sugar programme fell well short of its target, brands cut the sugar in soft drinks much further to pay less of the levy.</li></ul><p><strong>Against</strong></p><ul><li><strong>Hard to set at the right level.</strong> If the damage from each unit is 20p but the tax is 50p, output is cut by too much. Set it too low and overproduction carries on.</li><li><strong>Little effect if buyers keep buying.</strong> Smokers keep buying cigarettes when the price rises, so a tobacco tax raises a lot of revenue but cuts smoking less than it might.</li><li><strong>Unintended consequences.</strong> Heavy duty on cigarettes has moved some of the market underground, which limits how high the tax can usefully go.</li><li>It takes a larger share of a poorer household's income.</li></ul><p><strong>Judgement:</strong> how far a tax works depends on how much buyers react to the higher price.</p>",
       "svgRef": null,
       "difficulty": "stretch",
       "tags": [
@@ -3037,7 +3037,7 @@
       "subtopic": "1-6-3-profit-and-loss",
       "cardType": "definition",
       "front": "<p>Define <strong>profit</strong> and <strong>normal profit</strong>.</p>",
-      "back": "<p><strong>Profit</strong> — what is left when a firm's costs are taken away from its revenue. If costs are bigger than revenue, the firm makes a <strong>loss</strong>.</p><p><strong>Normal profit</strong> — the smallest profit that keeps a firm in a market. It is just enough to cover the opportunity cost of the owner's time and money, which could be earning a return somewhere else. Profit above this draws new firms in; profit below it pushes firms out.</p>",
+      "back": "<p><strong>Profit</strong> — the amount by which a business's total revenue exceeds its total costs. If costs are bigger than revenue, the firm makes a <strong>loss</strong>.</p><p><strong>Normal profit</strong> — the smallest profit that keeps a firm in a market. It is just enough to cover the opportunity cost of the owner's time and money, which could be earning a return somewhere else. Profit above this draws new firms in; profit below it pushes firms out.</p>",
       "svgRef": null,
       "difficulty": "foundation",
       "tags": [
@@ -3051,7 +3051,7 @@
       "source": {
         "notesPage": "/revision-notes/edexcel-b-theme-1/1-6-3-profit-and-loss.html",
         "origin": "notes-verbatim",
-        "verbatim": "what is left when a firm's costs are taken away from its revenue. If costs are bigger than revenue, the firm makes a loss."
+        "verbatim": "the amount by which a business's total revenue exceeds its total costs. If costs are bigger than revenue, the firm makes a loss."
       }
     },
     {

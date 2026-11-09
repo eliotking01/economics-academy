@@ -710,7 +710,9 @@ Format per entry:
   call.
 - **Confidence** — medium-high (standard theory; the page's own trade-credit
   definition). It is a loose example, not a false principle.
-- **Status** — open.
+- **Status** — fixed (approved by Eliot 2026-11-09: the second
+  wording, trade credit dropped; "...suits an overdraft." No glossary
+  coupling, the tip is not a chip).
 
 ## 39. Edexcel B 1.6.4 worked example treats a cash surplus as proof of profit
 
@@ -734,4 +736,5 @@ Format per entry:
   quarter is profitable too." The wording is Eliot's call.
 - **Confidence** — medium (the sentence is not false for Rosa; it models a
   shortcut the page warns against).
-- **Status** — open.
+- **Status** — fixed (approved by Eliot 2026-11-09: the first
+  wording, verbatim. No card or glossary coupling).
