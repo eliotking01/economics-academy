@@ -713,6 +713,31 @@
       }
     },
     {
+      "id": "edexcel-b-2-2-1-diagram-01",
+      "specCode": "2.2.1",
+      "topic": "2.2 Firms, Consumers and Elasticities of Demand",
+      "subtopic": "2-2-1-price-elasticity-of-demand",
+      "cardType": "diagram",
+      "front": "<p>Sketch a demand curve for each of the five <strong>PED ranges</strong>. What shape is each curve, and what does it show?</p>",
+      "back": "<p>Price (P) goes up the side and quantity (Q) along the bottom. The steeper the demand curve through a given price, the less quantity responds to a change in price.</p><ul><li><strong>Perfectly price inelastic (PED 0):</strong> a vertical D at Q1. A fall in price from P1 to P2 leaves quantity unchanged.</li><li><strong>Relatively price inelastic (between 0 and 1):</strong> a steep D. The fall from P1 to P2 raises quantity only a little, from Q1 to Q2.</li><li><strong>Unitary price elastic (1):</strong> a curved D, bowed in towards the origin. Quantity changes by the same percentage as price, so total revenue stays the same.</li><li><strong>Relatively price elastic (greater than 1):</strong> a shallow D. A small fall from P1 to P2 raises quantity a lot, from Q1 to Q2.</li><li><strong>Perfectly price elastic (infinite):</strong> a horizontal D at P1. Any rise in price and sales fall to zero.</li></ul>",
+      "svgRef": "/images/diagrams/svg/price-elasticity-demand-ranges.svg",
+      "svgAlt": "Five demand diagrams with P on the vertical axis and Q on the horizontal axis, in order from perfectly price inelastic to perfectly price elastic: a vertical D at Q1, where a fall in price from P1 to P2 leaves quantity unchanged; a steep D, where the fall from P1 to P2 raises quantity only a little, from Q1 to Q2; a curved D bowed in towards the origin, for unitary price elastic; a shallow D, where a small fall from P1 to P2 raises quantity a lot, from Q1 to Q2; and a horizontal D at P1, with quantity anywhere from Q1 to Q2 at that price",
+      "difficulty": "standard",
+      "tags": [
+        "ped",
+        "elasticity",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-2-1-price-elasticity-of-demand.html",
+        "origin": "card-authored"
+      }
+    },
+    {
       "id": "edexcel-b-2-2-1-calc-01",
       "specCode": "2.2.1",
       "topic": "2.2 Firms, Consumers and Elasticities of Demand",
