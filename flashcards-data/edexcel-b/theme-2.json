@@ -662,6 +662,497 @@
         "notesPage": "/revision-notes/edexcel-b-theme-2/2-1-5-how-small-firms-compete.html",
         "origin": "card-authored"
       }
+    },
+    {
+      "id": "edexcel-b-2-2-1-def-01",
+      "specCode": "2.2.1",
+      "topic": "2.2 Firms, Consumers and Elasticities of Demand",
+      "subtopic": "2-2-1-price-elasticity-of-demand",
+      "cardType": "definition",
+      "front": "<p>Define <strong>price elasticity of demand (PED)</strong>. What makes demand for a product more price elastic?</p>",
+      "back": "<p><strong>Price elasticity of demand (PED)</strong> — how much the quantity demanded of a product responds to a change in its own price.</p><p>Demand is more price elastic when:</p><ul><li><strong>There are more, and closer, substitutes:</strong> customers can switch easily when the price rises. This is the most important factor.</li><li><strong>The product is a luxury, not a necessity.</strong></li><li><strong>It takes a large share of income:</strong> a 10% rise in the price of a car is noticed far more than a 10% rise in the price of salt.</li><li><strong>Customers have more time to respond:</strong> in the short run people are stuck with their habits, but over time they find alternatives.</li><li><strong>The market is defined narrowly:</strong> demand for petrol is price inelastic, but demand for petrol from one filling station is price elastic, because the next one is a short drive away.</li></ul><p>Demand is more price inelastic where buyers are loyal to a brand or the product is habit-forming.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "ped",
+        "elasticity"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-2-1-price-elasticity-of-demand.html",
+        "origin": "notes-verbatim",
+        "verbatim": "how much the quantity demanded of a product responds to a change in its own price."
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-1-formula-01",
+      "specCode": "2.2.1",
+      "topic": "2.2 Firms, Consumers and Elasticities of Demand",
+      "subtopic": "2-2-1-price-elasticity-of-demand",
+      "cardType": "formula",
+      "front": "<p>State the formula for <strong>PED</strong>. Why is the answer negative, and how do you classify the value?</p>",
+      "back": "<p>Work out each percentage change from the original figure, then divide. Price and quantity demanded move in opposite directions, so the answer is <strong>negative</strong>.</p><p><strong>Ignore the minus sign when you classify.</strong> What matters is the size of the number:</p><ul><li><strong>0:</strong> perfectly inelastic. Quantity demanded does not change at all.</li><li><strong>Between 0 and 1:</strong> price inelastic. Quantity changes by a smaller percentage than price.</li><li><strong>1:</strong> unitary elastic. Quantity changes by the same percentage as price.</li><li><strong>Greater than 1:</strong> price elastic. Quantity changes by a larger percentage than price.</li><li><strong>Infinite:</strong> perfectly elastic. Any rise in price and sales fall to zero.</li></ul><p>The number also gives the size of the response: a PED of −0.5 means a 10% price rise cuts quantity demanded by 5%.</p>",
+      "formula": "\\text{PED} = \\frac{\\%\\text{ change in quantity demanded}}{\\%\\text{ change in price}}",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "ped",
+        "formula",
+        "quantitative-skills"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-2-1-price-elasticity-of-demand.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-1-calc-01",
+      "specCode": "2.2.1",
+      "topic": "2.2 Firms, Consumers and Elasticities of Demand",
+      "subtopic": "2-2-1-price-elasticity-of-demand",
+      "cardType": "calculation",
+      "front": "<p>A cinema raises its ticket price from <strong>£8</strong> to <strong>£10</strong>. Weekly attendance falls from <strong>2,000</strong> to <strong>1,800</strong>.</p><p>Calculate the <strong>PED</strong> and the change in weekly <strong>total revenue</strong>. Is demand price elastic or price inelastic?</p>",
+      "back": "<ul><li><strong>% change in quantity demanded:</strong> (1,800 − 2,000) ÷ 2,000 × 100 = −10%.</li><li><strong>% change in price:</strong> (10 − 8) ÷ 8 × 100 = +25%.</li><li><strong>PED:</strong> −10 ÷ +25 = <strong>−0.4</strong>.</li><li><strong>Total revenue:</strong> £8 × 2,000 = £16,000 before and £10 × 1,800 = £18,000 after, a rise of <strong>£2,000</strong>.</li></ul><p>Ignoring the sign, 0.4 is less than 1, so demand is <strong>price inelastic</strong>: attendance fell by a smaller percentage than the price rose. The higher price outweighs the lost sales, so total revenue rises.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "ped",
+        "total-revenue",
+        "calculation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-2-1-price-elasticity-of-demand.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-1-chain-01",
+      "specCode": "2.2.1",
+      "topic": "2.2 Firms, Consumers and Elasticities of Demand",
+      "subtopic": "2-2-1-price-elasticity-of-demand",
+      "cardType": "chain",
+      "front": "<p>Define <strong>total revenue</strong>. Build the chain: how does PED decide what a price rise does to total revenue?</p>",
+      "back": "<p><strong>Total revenue</strong> — the money a firm receives from selling its product (also called sales revenue). Total revenue = price × quantity sold.</p><p>A price rise means more money on each unit but fewer units sold. PED tells you which effect wins.</p><ul><li><strong>Price inelastic:</strong> price rises 10% → sales fall by less than 10% → the higher price outweighs the lost sales → total revenue rises.</li><li><strong>Price elastic:</strong> price rises 10% → sales fall by more than 10% → the lost sales outweigh the higher price → total revenue falls.</li><li><strong>Unitary elastic:</strong> the two effects cancel out → total revenue stays the same.</li></ul><p>A price cut works the other way round. Higher revenue is not the same as higher profit: before recommending a price cut, check what the extra units cost to make.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "ped",
+        "total-revenue",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-2-1-price-elasticity-of-demand.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the money a firm receives from selling its product (also called sales revenue)"
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-1-eval-01",
+      "specCode": "2.2.1",
+      "topic": "2.2 Firms, Consumers and Elasticities of Demand",
+      "subtopic": "2-2-1-price-elasticity-of-demand",
+      "cardType": "evaluation",
+      "front": "<p>Explain why PED usually differs between a <strong>mass market</strong> and a <strong>niche market</strong>. <strong>Evaluate</strong> how useful PED is when a firm sets its price.</p>",
+      "back": "<p><strong>Mass market</strong> — a large market in which many firms sell similar products to customers with broadly the same needs.</p><ul><li><strong>Mass market:</strong> many rivals sell near-identical products → customers have plenty of close substitutes → demand for one firm's product is price elastic → a price rise loses so many sales that revenue falls. Firms price close to their rivals and rely on high volume at a low margin.</li><li><strong>Niche market:</strong> a specialist product with few substitutes and loyal buyers → demand is price inelastic → the firm can charge a premium and lose few sales → a high margin on a low volume.</li></ul><p><strong>How useful is PED?</strong></p><ul><li><strong>Rivals react:</strong> in a mass market, a price cut that rivals match wins few extra sales, so revenue falls for everyone.</li><li><strong>The estimate may be out of date:</strong> PED is worked out from past sales, while tastes, incomes and rivals' prices keep changing. It also holds only for small price changes.</li></ul><p><strong>Judgement:</strong> PED is a guide, not a forecast. It is most reliable for a small price change that rivals are unlikely to match, and least reliable in a mass market where a price cut is quickly copied. This is why firms work to make demand more price inelastic, through branding and other non-price competition.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "ped",
+        "mass-market",
+        "niche-market",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-2-1-price-elasticity-of-demand.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a large market in which many firms sell similar products to customers with broadly the same needs."
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-2-def-01",
+      "specCode": "2.2.2",
+      "topic": "2.2 Firms, Consumers and Elasticities of Demand",
+      "subtopic": "2-2-2-competing-on-price",
+      "cardType": "definition",
+      "front": "<p>Define <strong>price skimming</strong> and <strong>penetration pricing</strong>. When does each suit a new product?</p>",
+      "back": "<p><strong>Price skimming</strong> — launching a new product at a high price, then lowering it over time.</p><p>High launch price → a large margin on each sale to the keenest early buyers → R&amp;D costs are recovered quickly → later price cuts bring in more cautious buyers. It needs a product rivals cannot copy straight away, often protected by a patent. <strong>Risks:</strong> the high profit attracts rivals, and early buyers may resent a quick price cut.</p><p><strong>Penetration pricing</strong> — launching at a low price to win market share quickly, then raising it.</p><p>Low launch price → customers try the product and switch from rivals → market share and higher output → economies of scale lower unit cost. It suits a mass market where demand is price elastic. <strong>Risks:</strong> low profit or losses at first, and customers leaving when the price goes up.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "pricing-strategies",
+        "price-skimming",
+        "penetration-pricing"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-2-2-competing-on-price.html",
+        "origin": "notes-verbatim",
+        "verbatim": "launching a new product at a high price, then lowering it over time."
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-2-def-02",
+      "specCode": "2.2.2",
+      "topic": "2.2 Firms, Consumers and Elasticities of Demand",
+      "subtopic": "2-2-2-competing-on-price",
+      "cardType": "definition",
+      "front": "<p>Define <strong>predatory pricing</strong>, <strong>competitive pricing</strong> and <strong>psychological pricing</strong>.</p>",
+      "back": "<p><strong>Predatory pricing</strong> — setting a price below cost to force rivals out of the market, then raising it.</p><p>Price below cost → rivals make losses and leave → less competition → the firm raises prices and recovers its losses. Only a large firm with the cash to survive the losses can do this, and it is illegal when a dominant firm uses it.</p><p><strong>Competitive pricing</strong> — setting a price at or close to rivals' prices.</p><p>The norm where products are similar and customers compare prices. Charging more loses sales and charging less may start a price war, so firms compete on service, location and brand instead.</p><p><strong>Psychological pricing</strong> — setting a price for its effect on how customers see the product.</p><p>A price of £4.99 reads as \"£4 and something\" → it feels much cheaper than £5 → more sales. It can work the other way too: a high, round price signals quality and status.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "pricing-strategies",
+        "predatory-pricing",
+        "competitive-pricing",
+        "psychological-pricing"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-2-2-competing-on-price.html",
+        "origin": "notes-verbatim",
+        "verbatim": "setting a price below cost to force rivals out of the market, then raising it."
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-2-calc-01",
+      "specCode": "2.2.2",
+      "topic": "2.2 Firms, Consumers and Elasticities of Demand",
+      "subtopic": "2-2-2-competing-on-price",
+      "cardType": "calculation",
+      "front": "<p>A candle maker spends <strong>£3</strong> on wax and <strong>£4</strong> on labour for each candle, and adds <strong>£1</strong> per candle to cover overheads. It uses a <strong>50% mark-up</strong>.</p><p>Calculate its selling price. A rival sells a candle for <strong>£15</strong> that costs <strong>£12</strong> to make: what is the rival's mark-up?</p>",
+      "back": "<p><strong>Cost-plus pricing</strong> — adding a percentage mark-up to the cost of making each unit to set the price.</p><ul><li><strong>Unit cost:</strong> £3 + £4 + £1 = £8.</li><li><strong>Mark-up:</strong> 50% × £8 = £4.</li><li><strong>Selling price:</strong> £8 + £4 = <strong>£12</strong>.</li><li><strong>Rival's mark-up:</strong> (£15 − £12) ÷ £12 × 100 = <strong>25%</strong>.</li></ul><p><strong>A mark-up is a percentage of cost, not of price.</strong> The £4 mark-up is 50% of the £8 cost, but only 33.3% of the £12 price (4 ÷ 12 × 100). Dividing by the price gives the profit margin instead, a different figure.</p><p>Cost-plus makes sure each sale covers its cost, but it ignores demand and rivals' prices. The £1 overhead share also assumes a set number of sales: with fewer, each candle carries more of the overheads.</p>",
+      "formula": "\\text{Price} = \\text{Unit cost} + (\\text{Unit cost} \\times \\text{Mark-up})",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "cost-plus-pricing",
+        "mark-up",
+        "calculation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-2-2-competing-on-price.html",
+        "origin": "notes-verbatim",
+        "verbatim": "adding a percentage mark-up to the cost of making each unit to set the price."
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-2-eval-01",
+      "specCode": "2.2.2",
+      "topic": "2.2 Firms, Consumers and Elasticities of Demand",
+      "subtopic": "2-2-2-competing-on-price",
+      "cardType": "evaluation",
+      "front": "<p>Define a <strong>pricing strategy</strong>. <strong>Evaluate</strong> what decides which strategy is most appropriate for a firm.</p>",
+      "back": "<p><strong>Pricing strategy</strong> — the approach a firm takes to setting the price of a product over time.</p><ul><li><strong>USPs and differentiation:</strong> a product with features rivals lack can be skimmed or priced at a premium. A standard product has to be priced competitively.</li><li><strong>PED:</strong> price inelastic demand supports skimming and higher prices. Price elastic demand favours penetration or competitive pricing, because a price cut wins many extra sales.</li><li><strong>Amount of competition:</strong> with many close rivals, the firm has little choice but to match their prices. With few, it has room to set its own.</li><li><strong>Strength of brand:</strong> a well-known brand can charge more than rivals and keep its customers.</li><li><strong>Stage in the product life cycle:</strong> skimming or penetration at launch, competitive pricing in maturity, and price cuts to clear stock in decline.</li><li><strong>Costs:</strong> in the long run the price has to cover unit cost. A small firm cannot afford months of penetration or predatory losses that a large firm can absorb.</li></ul><p><strong>Judgement:</strong> no strategy suits every case, and the factors work together. A differentiated product with few rivals has price inelastic demand and room to price high, by skimming at launch or charging a premium later, while a standard product in a crowded market is pushed into competitive pricing. The firm's costs and cash then limit how long it can afford to price low.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "pricing-strategies",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-2-2-competing-on-price.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the approach a firm takes to setting the price of a product over time."
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-2-chain-01",
+      "specCode": "2.2.2",
+      "topic": "2.2 Firms, Consumers and Elasticities of Demand",
+      "subtopic": "2-2-2-competing-on-price",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chain of reasoning</strong>: how have online sales and price comparison sites changed the way firms set prices?</p>",
+      "back": "<ul><li><strong>Sellers of standard products:</strong> shoppers see every price in seconds → demand for each seller becomes more price elastic → firms are pushed into competitive pricing → lower margins and profit.</li><li><strong>Online retailers:</strong> no shops to rent or staff → lower costs → lower prices → high-street rivals lose sales unless they match the price or give a reason to pay more.</li><li><strong>Firms that change prices often:</strong> online prices cost nothing to change → airlines and hotels raise them when demand is high and cut them when it is low → more revenue from the same seats and rooms.</li></ul><p>Firms respond by making their prices harder to compare: bundles, versions sold through only one retailer, and loyalty-card prices.</p><p>How much this matters depends on how easy the product is to compare, as broadband deals are compared mainly on price and a haircut is not, and on brand loyalty, as loyal customers may not look at a comparison site at all.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "pricing-strategies",
+        "price-comparison",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-2-2-competing-on-price.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-3-def-01",
+      "specCode": "2.2.3",
+      "topic": "2.2 Firms, Consumers and Elasticities of Demand",
+      "subtopic": "2-2-3-non-price-competition",
+      "cardType": "definition",
+      "front": "<p>Define <strong>non-price competition</strong> and <strong>marketing</strong>. Why might a firm compete this way rather than cut its price?</p>",
+      "back": "<p><strong>Non-price competition</strong> — winning customers through anything other than a lower price, such as quality, branding, advertising or where the product is sold.</p><p><strong>Marketing</strong> — finding out what customers want and persuading them to buy the firm's product.</p><p>A price cut is easy for rivals to copy and lowers the margin on every unit. Non-price competition is harder to copy, and if it works the firm can keep its price, or raise it.</p><p>The spec names three ways to do it: <strong>product differentiation</strong>, <strong>advertising and other promotion</strong>, and <strong>distribution</strong>.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "non-price-competition",
+        "marketing"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-2-3-non-price-competition.html",
+        "origin": "notes-verbatim",
+        "verbatim": "winning customers through anything other than a lower price, such as quality, branding, advertising or where the product is sold."
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-3-chain-01",
+      "specCode": "2.2.3",
+      "topic": "2.2 Firms, Consumers and Elasticities of Demand",
+      "subtopic": "2-2-3-non-price-competition",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chain of reasoning</strong>: what two effects does successful marketing have on a product's demand curve, and why does revenue rise?</p>",
+      "back": "<ul><li><strong>Demand shifts to the right:</strong> more customers know about the product and want it → more is demanded at every price → higher sales without a price cut.</li><li><strong>Demand becomes more price inelastic:</strong> customers see the product as different from, and better than, its rivals → fewer close substitutes in their eyes → the demand curve becomes steeper → the firm can raise its price and lose few sales.</li></ul><p>Together they mean higher sales at a higher price, so revenue rises.</p><p><strong>Name both effects.</strong> A shift to the right is only half the answer. The change in elasticity is what lets the firm raise its price without losing many sales: link it to margins and profit.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "non-price-competition",
+        "marketing",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-2-3-non-price-competition.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-3-def-02",
+      "specCode": "2.2.3",
+      "topic": "2.2 Firms, Consumers and Elasticities of Demand",
+      "subtopic": "2-2-3-non-price-competition",
+      "cardType": "definition",
+      "front": "<p>Define <strong>promotion</strong>. How do informative and persuasive advertising affect demand, and what other promotional methods can a firm use?</p>",
+      "back": "<p><strong>Promotion</strong> — communicating with customers to make them aware of a product and persuade them to buy it.</p><ul><li><strong>Informative advertising:</strong> tells customers the product exists, what it does and where to get it → more buyers → demand shifts right.</li><li><strong>Persuasive advertising:</strong> builds a brand image customers identify with → brand loyalty → buyers stick with the product when its price rises → demand becomes more price inelastic.</li></ul><p><strong>Other methods:</strong> sales promotions such as free samples and loyalty schemes, sponsorship, social media and influencers, and public relations, the free coverage in news stories and reviews that customers often trust more than an advert.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "non-price-competition",
+        "promotion",
+        "advertising"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-2-3-non-price-competition.html",
+        "origin": "notes-verbatim",
+        "verbatim": "communicating with customers to make them aware of a product and persuade them to buy it."
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-3-def-03",
+      "specCode": "2.2.3",
+      "topic": "2.2 Firms, Consumers and Elasticities of Demand",
+      "subtopic": "2-2-3-non-price-competition",
+      "cardType": "definition",
+      "front": "<p>Define <strong>distribution</strong>. How can a firm's choice of distribution method change demand and its margin?</p>",
+      "back": "<p><strong>Distribution</strong> — how a product gets from the producer to the customer, and where customers can buy it.</p><p>A firm can sell <strong>direct</strong>, through its own shops or website, or through <strong>intermediaries</strong>, such as wholesalers and retailers that stock its products.</p><ul><li><strong>Wider distribution:</strong> a listing in a national supermarket chain → customers find the product on every shopping trip → demand shifts right. The supermarket takes a share of the price, so the margin on each unit falls.</li><li><strong>Selling direct online:</strong> no retailer's cut → a higher margin, and the firm sees exactly who its customers are → it can target them with offers. It pays for delivery and returns instead.</li><li><strong>Selective distribution:</strong> selling only through its own stores and a few chosen retailers → the product looks exclusive → demand becomes more price inelastic → a premium price.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "non-price-competition",
+        "distribution"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-2-3-non-price-competition.html",
+        "origin": "notes-verbatim",
+        "verbatim": "how a product gets from the producer to the customer, and where customers can buy it."
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-3-eval-01",
+      "specCode": "2.2.3",
+      "topic": "2.2 Firms, Consumers and Elasticities of Demand",
+      "subtopic": "2-2-3-non-price-competition",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> how a firm should choose its marketing approach, and whether spending on promotion will pay.</p>",
+      "back": "<p>There is no single best approach. A national breakfast cereal brand needs national advertising and the widest possible distribution. A small maker of handmade dog treats relies on its story, social media and a few specialist shops, and charges a premium.</p><p><strong>The right approach depends on:</strong></p><ul><li><strong>The target market:</strong> who the customers are, what they value and where they shop, found through market research and segmentation.</li><li><strong>The product:</strong> a complex product needs advertising that explains what it does. A low-priced impulse buy needs to be on as many shelves as possible.</li><li><strong>The budget:</strong> a small firm cannot match a large rival's advertising, so it leans on differentiation, service and social media.</li><li><strong>Stage in the product life cycle:</strong> informative advertising at launch, persuasive advertising and brand building in maturity, and extension strategies as sales fall.</li></ul><p><strong>Will promotion pay?</strong> Not if it costs more than the extra sales bring in, as a television campaign can for a small firm. And if every firm in the market advertises, each may just hold on to its share while all of them pay higher costs.</p><p><strong>Judgement:</strong> the best approach is the one that fits the firm's customers, product and budget. Promotion pays only when the extra revenue is greater than its cost, which is hardest where every rival is advertising too.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "non-price-competition",
+        "marketing",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-2-3-non-price-competition.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-4-def-01",
+      "specCode": "2.2.4",
+      "topic": "2.2 Firms, Consumers and Elasticities of Demand",
+      "subtopic": "2-2-4-income-elasticity-of-demand",
+      "cardType": "definition",
+      "front": "<p>Define <strong>income elasticity of demand (YED)</strong>. What decides whether a product's YED is high, low or negative?</p>",
+      "back": "<p><strong>Income elasticity of demand (YED)</strong> — how much the quantity demanded of a product responds to a change in consumers' real income.</p><p>Real income is income adjusted for inflation. It rises when the economy grows and can fall in a recession.</p><ul><li><strong>How essential the product is:</strong> necessities have low YED, because people buy them whatever their income. Luxuries have high YED.</li><li><strong>The customer's income level:</strong> the same product can be a luxury for a low-income household and a necessity for a high-income one. As a country gets richer, goods such as cars move from one group to the other.</li><li><strong>Whether better alternatives exist:</strong> a product is inferior when people swap it for something they prefer as they earn more, such as bus travel for a car.</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "yed",
+        "elasticity"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-2-4-income-elasticity-of-demand.html",
+        "origin": "notes-verbatim",
+        "verbatim": "how much the quantity demanded of a product responds to a change in consumers' real income."
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-4-def-02",
+      "specCode": "2.2.4",
+      "topic": "2.2 Firms, Consumers and Elasticities of Demand",
+      "subtopic": "2-2-4-income-elasticity-of-demand",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>normal good</strong> and an <strong>inferior good</strong>. What YED values show a luxury, a necessity and an inferior good?</p>",
+      "back": "<p><strong>Normal good</strong> — a product whose demand rises when income rises, so YED is positive.</p><p><strong>Inferior good</strong> — a product whose demand falls when income rises, so YED is negative.</p><ul><li><strong>Greater than 1: a luxury</strong> (normal, income elastic), such as holidays and meals out. When incomes fall, sales fall by a larger percentage than income.</li><li><strong>Between 0 and 1: a necessity</strong> (normal, income inelastic), such as bread and electricity. When incomes fall, sales fall a little.</li><li><strong>Less than 0: inferior</strong>, such as budget brands and bus travel. When incomes fall, sales rise.</li></ul><p><strong>Always keep the sign of YED.</strong> With PED you drop the minus sign, but with YED it is the answer: −0.6 shows an inferior good, and +0.6 a necessity. \"Inferior\" is about how demand reacts to income, not about quality.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "yed",
+        "normal-goods",
+        "inferior-goods"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-2-4-income-elasticity-of-demand.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a product whose demand rises when income rises, so YED is positive."
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-4-formula-01",
+      "specCode": "2.2.4",
+      "topic": "2.2 Firms, Consumers and Elasticities of Demand",
+      "subtopic": "2-2-4-income-elasticity-of-demand",
+      "cardType": "formula",
+      "front": "<p>State the formula for <strong>YED</strong>. In a recession, real incomes fall by <strong>4%</strong>. Sales of a supermarket's budget range rise by <strong>2%</strong>, and sales of package holidays fall by <strong>10%</strong>. Calculate the YED of each and name the type of good.</p>",
+      "back": "<ul><li><strong>Budget range:</strong> +2 ÷ −4 = <strong>−0.5</strong>. Negative, so an <strong>inferior good</strong>: shoppers trade down as their incomes fall.</li><li><strong>Package holidays:</strong> −10 ÷ −4 = <strong>+2.5</strong>. Positive and greater than 1, so a normal good and a <strong>luxury</strong>: sales fell 2.5 times as fast as income.</li></ul><p>Watch the signs when income falls. Sales falling with income gives a positive YED, a normal good. Sales rising as income falls gives a negative YED, an inferior good.</p>",
+      "formula": "\\text{YED} = \\frac{\\%\\text{ change in quantity demanded}}{\\%\\text{ change in real income}}",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "yed",
+        "formula",
+        "quantitative-skills"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-2-4-income-elasticity-of-demand.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-4-chain-01",
+      "specCode": "2.2.4",
+      "topic": "2.2 Firms, Consumers and Elasticities of Demand",
+      "subtopic": "2-2-4-income-elasticity-of-demand",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chain of reasoning</strong>: how does YED tell a firm what the economic cycle will do to its sales?</p>",
+      "back": "<ul><li><strong>Sellers of luxuries in a boom:</strong> real incomes rise → demand grows faster than income → sales and profit rise → the firm hires staff and invests in extra capacity.</li><li><strong>Sellers of luxuries in a recession:</strong> real incomes fall → customers cut back on luxuries first → sales fall sharply → lower profit, and jobs at risk.</li><li><strong>Sellers of inferior goods in a recession:</strong> shoppers trade down → demand rises → discount retailers and budget brands gain sales and market share.</li><li><strong>Sellers of necessities:</strong> demand barely moves either way → steady sales through the cycle.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "yed",
+        "economic-cycle",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-2-4-income-elasticity-of-demand.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-4-eval-01",
+      "specCode": "2.2.4",
+      "topic": "2.2 Firms, Consumers and Elasticities of Demand",
+      "subtopic": "2-2-4-income-elasticity-of-demand",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> how useful YED is to a firm planning its products and output.</p>",
+      "back": "<p><strong>For</strong></p><ul><li><strong>A product portfolio:</strong> a firm with both a premium range and a budget range sells more of one when it sells less of the other → steadier total sales across the economic cycle.</li><li><strong>Output and stock:</strong> a firm expecting a downturn can order fewer of its luxuries and more of its inferior goods, as a car dealer might order fewer new cars and more used ones.</li></ul><p><strong>Against</strong></p><ul><li><strong>The estimate may be wrong:</strong> YED is worked out from past data, and tastes change.</li><li><strong>Whose income is changing:</strong> average income can rise while the firm's own customers are worse off.</li></ul><p><strong>Judgement:</strong> YED shows which way, and roughly how strongly, a firm's sales will move over the cycle. How far the firm can rely on it depends on how recent the estimate is and on whether its own customers' incomes are moving with the average.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "yed",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-2-4-income-elasticity-of-demand.html",
+        "origin": "card-authored"
+      }
     }
   ]
 }
