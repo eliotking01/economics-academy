@@ -789,4 +789,8 @@ Format per entry:
   National Statistic is well documented; checked from memory, not against
   the ONS or UK Statistics Authority page in this session). Not a chip, so
   no glossary coupling.
-- **Status** — open.
+- **Status** — fixed (approved by Eliot 2026-11-09, the simpler wording:
+  "RPI is no longer an accredited National Statistic, but the ONS still
+  publishes it because some long-term contracts are linked to it." The
+  card `edexcel-b-2-5-3-formula-01` stays as it is: it no longer makes the
+  claim either way).
