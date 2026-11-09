@@ -738,3 +738,25 @@ Format per entry:
   shortcut the page warns against).
 - **Status** — fixed (approved by Eliot 2026-11-09: the first
   wording, verbatim. No card or glossary coupling).
+
+## 40. Edexcel B 2.3.1 states a capital-intensive firm always has the higher break-even output
+
+- **Location** — `revision-notes/edexcel-b-theme-2/2-3-1-productivity.html`,
+  "Labour-Intensive and Capital-Intensive Production", the paragraph under the
+  comparison table (source: `notes-data/topics/edexcel-b-theme-2/2-3-1-productivity.html`).
+- **Issue** — the page reads "Because its costs are mostly fixed, a
+  capital-intensive firm has a higher break-even output than a labour-intensive
+  one." Break-even output is fixed costs ÷ contribution per unit. A
+  capital-intensive firm usually has lower variable cost per unit, so a larger
+  contribution, which pulls break-even output down. Higher break-even output is
+  likely but not certain. It is a common textbook simplification, stated here
+  as a rule. Found by the cold-solver verify pass on Edexcel B flashcards unit
+  2.3 (`NOTES?` on `edexcel-b-2-3-1-def-02`). The card now stops at "it needs
+  high output to keep average cost down" and does not rely on this sentence.
+- **Proposed correction** — hedge it, e.g. "Because its costs are mostly
+  fixed, a capital-intensive firm usually has a higher break-even output than
+  a labour-intensive one." Or leave it as written, as a deliberate
+  simplification. The wording is Eliot's call.
+- **Confidence** — medium (standard theory; the claim holds in the typical
+  case and the page's own context).
+- **Status** — open.

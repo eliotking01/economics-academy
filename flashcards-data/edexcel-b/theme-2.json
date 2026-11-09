@@ -1153,6 +1153,495 @@
         "notesPage": "/revision-notes/edexcel-b-theme-2/2-2-4-income-elasticity-of-demand.html",
         "origin": "card-authored"
       }
+    },
+    {
+      "id": "edexcel-b-2-3-1-def-01",
+      "specCode": "2.3.1",
+      "topic": "2.3 Productive Efficiency",
+      "subtopic": "2-3-1-productivity",
+      "cardType": "definition",
+      "front": "<p>Define <strong>productivity</strong> and <strong>labour productivity</strong>. Why is productivity not the same as output?</p>",
+      "back": "<p><strong>Productivity</strong> — output per unit of input in a given time period.</p><p><strong>Labour productivity</strong> — output per worker, or per hour worked, in a given period.</p><p>Output per hour is fairer when staff work different hours, and it is the measure usually quoted for the UK economy.</p><p><strong>Productivity is not output.</strong> A firm that hires more staff can raise its output while each worker makes no more than before. Productivity only rises when each worker, or each hour, produces more.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "productivity",
+        "labour-productivity"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-3-1-productivity.html",
+        "origin": "notes-verbatim",
+        "verbatim": "output per unit of input in a given time period."
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-1-calc-01",
+      "specCode": "2.3.1",
+      "topic": "2.3 Productive Efficiency",
+      "subtopic": "2-3-1-productivity",
+      "cardType": "calculation",
+      "front": "<p>A call centre's <strong>12</strong> staff handle <strong>1,440</strong> calls a day, and each is paid <strong>£120</strong> a day. New software lets the same 12 staff handle <strong>1,800</strong> calls.</p><p>Calculate labour productivity and the <strong>unit labour cost</strong> of a call, before and after. If the centre had instead hired a 13th worker and handled <strong>1,560</strong> calls, what would productivity be?</p>",
+      "back": "<p><strong>Unit labour cost</strong> is the labour cost of making one unit: the wage bill divided by output.</p><ul><li><strong>Before:</strong> 1,440 ÷ 12 = <strong>120 calls</strong> per worker a day. The wage bill is 12 × £120 = £1,440, so unit labour cost is £1,440 ÷ 1,440 = <strong>£1.00</strong> a call.</li><li><strong>After:</strong> 1,800 ÷ 12 = <strong>150 calls</strong> per worker a day. Unit labour cost is £1,440 ÷ 1,800 = <strong>80p</strong> a call.</li><li><strong>A 13th worker:</strong> 1,560 ÷ 13 = <strong>120 calls</strong>. Output has risen, but productivity has not.</li></ul><p>Higher productivity at the same wage lowers unit labour cost, which is why it matters for competitiveness. Hiring more staff raises output without making each worker any more productive.</p>",
+      "formula": "\\text{Labour productivity} = \\frac{\\text{Output}}{\\text{Workers}}",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "labour-productivity",
+        "unit-labour-cost",
+        "calculation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-3-1-productivity.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-1-chain-01",
+      "specCode": "2.3.1",
+      "topic": "2.3 Productive Efficiency",
+      "subtopic": "2-3-1-productivity",
+      "cardType": "chain",
+      "front": "<p>Define <strong>competitiveness</strong>. Build the <strong>chain of reasoning</strong> from higher productivity to a more competitive firm, and say what limits the gain.</p>",
+      "back": "<p><strong>Competitiveness</strong> — a firm's ability to win sales from its rivals, on price or on quality.</p><ul><li><strong>The firm:</strong> more output per worker → lower unit labour cost → lower average cost → it can cut prices to win sales, or keep them and earn a wider margin.</li><li><strong>Exporters:</strong> lower unit costs → UK goods can be priced below overseas rivals' → more export sales.</li></ul><p><strong>The gain depends on:</strong></p><ul><li><strong>Wages:</strong> if pay rises as fast as productivity, unit labour cost does not fall.</li><li><strong>Rivals' productivity:</strong> competitiveness is relative. A firm whose productivity improves by 2% a year still falls behind rivals improving by 5%.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "productivity",
+        "competitiveness",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-3-1-productivity.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a firm's ability to win sales from its rivals, on price or on quality."
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-1-eval-01",
+      "specCode": "2.3.1",
+      "topic": "2.3 Productive Efficiency",
+      "subtopic": "2-3-1-productivity",
+      "cardType": "evaluation",
+      "front": "<p>Explain why rising productivity matters for <strong>economic growth</strong> and for <strong>wages</strong>. <strong>Evaluate</strong> whether workers always share in a productivity gain.</p>",
+      "back": "<p><strong>Economic growth</strong> — an increase in real GDP, the value of an economy's output adjusted for inflation.</p><ul><li><strong>Growth:</strong> productivity rises across the economy → more output from the same workers → the economy's productive potential grows → higher real incomes, and more tax revenue for the government. The workforce grows slowly, so lasting rises in living standards depend on productivity.</li><li><strong>Wages:</strong> each worker produces more → their work is worth more to the firm → it can raise pay and keep unit labour cost the same → higher real wages.</li></ul><p><strong>Do workers always gain?</strong></p><ul><li><strong>Bargaining power:</strong> when staff are hard to find, or a trade union is strong, workers can push for a share. Otherwise the firm may keep the gain as profit.</li><li><strong>Where the gain came from:</strong> if a machine now does work people used to do, output per worker rises but some jobs go.</li><li><strong>Pay that outruns productivity:</strong> unit labour cost rises → the firm raises prices or accepts lower profit, and may cut jobs.</li></ul><p><strong>Judgement:</strong> higher productivity makes higher real wages possible, not certain. Workers are most likely to share in it when labour is scarce and the gain does not come from replacing staff with machines. The link also runs the other way: better pay can raise productivity, because motivated staff work harder and fewer leave.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "productivity",
+        "wages",
+        "economic-growth",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-3-1-productivity.html",
+        "origin": "notes-verbatim",
+        "verbatim": "an increase in real GDP, the value of an economy's output adjusted for inflation"
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-1-def-02",
+      "specCode": "2.3.1",
+      "topic": "2.3 Productive Efficiency",
+      "subtopic": "2-3-1-productivity",
+      "cardType": "definition",
+      "front": "<p>Define <strong>labour-intensive</strong> and <strong>capital-intensive</strong> production. How do they differ, and what decides which one a firm uses?</p>",
+      "back": "<p><strong>Labour-intensive production</strong> — production that uses a high proportion of labour compared with capital, so wages are a large share of costs.</p><p><strong>Capital-intensive production</strong> — production that uses a high proportion of machinery and equipment compared with labour.</p><ul><li><strong>Costs:</strong> a labour-intensive firm's biggest cost is wages. A capital-intensive firm's is machinery, mostly a fixed cost, so it needs high output to keep average cost down.</li><li><strong>Labour productivity:</strong> higher in capital-intensive production, as each worker has more capital to use.</li><li><strong>Flexibility:</strong> labour-intensive production can change the product or cut hours easily. Machines suit long runs of one standard product.</li></ul><p><strong>The choice depends on</strong> the cost of labour against capital (as wages rise, firms switch to machines, such as self-service tills), the scale of output, and the product: personal training needs people.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "labour-intensive",
+        "capital-intensive"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-3-1-productivity.html",
+        "origin": "notes-verbatim",
+        "verbatim": "production that uses a high proportion of labour compared with capital, so wages are a large share of costs."
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-2-def-01",
+      "specCode": "2.3.2",
+      "topic": "2.3 Productive Efficiency",
+      "subtopic": "2-3-2-capacity-utilisation",
+      "cardType": "definition",
+      "front": "<p>Define <strong>capacity</strong>, <strong>full capacity</strong> and <strong>spare capacity</strong>.</p>",
+      "back": "<p><strong>Capacity</strong> — the most a firm can produce in a given period with its existing premises, machinery and staff.</p><p><strong>Full capacity</strong> — producing at that maximum, with no resources standing idle.</p><p><strong>Spare capacity</strong> — the gap between what a firm produces and the most it could produce. The firm could raise output by this much without new premises or machinery.</p><p>A climbing wall can take 40 climbers a session. With all 40 places booked it is at full capacity. With 25 booked, it has spare capacity of 15 places.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "capacity",
+        "spare-capacity"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-3-2-capacity-utilisation.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the most a firm can produce in a given period with its existing premises, machinery and staff."
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-2-calc-01",
+      "specCode": "2.3.2",
+      "topic": "2.3 Productive Efficiency",
+      "subtopic": "2-3-2-capacity-utilisation",
+      "cardType": "calculation",
+      "front": "<p>A factory can make <strong>6,000</strong> garden chairs a month. Its fixed costs are <strong>£27,000</strong> a month, materials cost <strong>£10</strong> a chair, and each chair sells for <strong>£17</strong>.</p><p>Calculate capacity utilisation, fixed cost per chair and average cost when it makes <strong>3,000</strong> chairs, and when it makes <strong>5,400</strong>. What is the profit or loss on each chair?</p>",
+      "back": "<p><strong>Capacity utilisation</strong> — the firm's current output as a percentage of its maximum possible output.</p><ul><li><strong>3,000 chairs:</strong> CU = 3,000 ÷ 6,000 × 100 = <strong>50%</strong>. Fixed cost per chair = £27,000 ÷ 3,000 = £9. Average cost = £9 + £10 = <strong>£19</strong>, a <strong>loss of £2</strong> on each chair.</li><li><strong>5,400 chairs:</strong> CU = 5,400 ÷ 6,000 × 100 = <strong>90%</strong>. Fixed cost per chair = £27,000 ÷ 5,400 = £5. Average cost = £5 + £10 = <strong>£15</strong>, a <strong>profit of £2</strong> on each chair.</li></ul><p><strong>Only the fixed cost per unit changes.</strong> Materials cost £10 a chair at 50% or at 90%. Say that fixed costs are spread over more units, and show it with the figures.</p>",
+      "formula": "\\text{CU } (\\%) = \\frac{\\text{Current output}}{\\text{Maximum output}} \\times 100",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "capacity-utilisation",
+        "fixed-costs",
+        "calculation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-3-2-capacity-utilisation.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the firm's current output as a percentage of its maximum possible output"
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-2-chain-01",
+      "specCode": "2.3.2",
+      "topic": "2.3 Productive Efficiency",
+      "subtopic": "2-3-2-capacity-utilisation",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chains of reasoning</strong>: what goes wrong when a firm's capacity utilisation is too low, and when it is too high?</p>",
+      "back": "<p><strong>Under-utilisation</strong> (a lot of spare capacity):</p><ul><li><strong>Unit costs:</strong> low output → fixed costs are spread over fewer units → higher average cost → higher prices or lower margins → less competitive.</li><li><strong>Staff:</strong> quiet shifts and idle machines → workers worry about their jobs → lower motivation and productivity.</li></ul><p><strong>Over-utilisation</strong> (at or near full capacity):</p><ul><li><strong>Machinery:</strong> no time for maintenance → more breakdowns → lost output and repair bills.</li><li><strong>Staff:</strong> long hours and overtime → tiredness and mistakes → lower quality, and higher wage costs from overtime pay.</li><li><strong>Customers:</strong> extra orders are turned down → customers go to rivals → lost sales that may not come back.</li></ul><p>So most firms aim for a high rate of utilisation that stops short of 100%.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "capacity-utilisation",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-3-2-capacity-utilisation.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-2-eval-01",
+      "specCode": "2.3.2",
+      "topic": "2.3 Productive Efficiency",
+      "subtopic": "2-3-2-capacity-utilisation",
+      "cardType": "evaluation",
+      "front": "<p>A firm is running at <strong>55%</strong> capacity utilisation. <strong>Evaluate</strong> how serious a problem this is.</p>",
+      "back": "<p><strong>Why it matters:</strong> rent, machinery and salaried staff cost the same whether the firm is busy or quiet → fixed costs are spread over fewer units → higher average cost → thinner margins, or higher prices.</p><p><strong>It depends on:</strong></p><ul><li><strong>How long it lasts:</strong> a ski-hire shop expects to be quiet in summer and plans for it. Low utilisation all year round means the firm has more capacity than it needs.</li><li><strong>The share of fixed costs:</strong> for airlines, hotels and cinemas, each empty seat or room pushes average cost up a lot. A firm whose costs are mostly variable is hit far less.</li><li><strong>Some spare capacity is useful:</strong> the firm can take a large order at short notice, and has time to maintain machines and train staff.</li></ul><p><strong>Judgement:</strong> 55% is most serious for a firm with high fixed costs that expects demand to stay low, which needs to fill its capacity or cut it. A seasonal dip at a firm whose costs are mostly variable matters far less.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "capacity-utilisation",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-3-2-capacity-utilisation.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-2-def-02",
+      "specCode": "2.3.2",
+      "topic": "2.3 Productive Efficiency",
+      "subtopic": "2-3-2-capacity-utilisation",
+      "cardType": "definition",
+      "front": "<p>Define <strong>rationalisation</strong>. What are the two routes to higher capacity utilisation, and what does each cost the firm?</p>",
+      "back": "<p><strong>Rationalisation</strong> — cutting capacity to match demand, for example by closing a site, selling machinery, cutting shifts or making staff redundant.</p><ul><li><strong>Raise output to fill capacity:</strong> increase demand through marketing, new markets or lower prices at quiet times, or make something else, using idle machines for a new product or working as a subcontractor for other firms. <strong>The cost:</strong> a price cut lowers revenue per unit, and only raises revenue if demand is price elastic.</li><li><strong>Cut capacity to match output:</strong> fewer premises, machines and staff → lower fixed costs → higher utilisation and lower average cost at the same output. <strong>The cost:</strong> redundancy payments, lower morale among the staff who stay, and if demand recovers, the firm may not be able to meet it.</li></ul><p>An over-utilised firm does the opposite. It adds capacity by buying machinery or running an extra shift, or outsources work to other firms. Adding capacity only makes sense if the extra demand is expected to last.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "rationalisation",
+        "capacity-utilisation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-3-2-capacity-utilisation.html",
+        "origin": "notes-verbatim",
+        "verbatim": "cutting capacity to match demand, for example by closing a site, selling machinery, cutting shifts or making staff redundant."
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-3-def-01",
+      "specCode": "2.3.3",
+      "topic": "2.3 Productive Efficiency",
+      "subtopic": "2-3-3-lean-production",
+      "cardType": "definition",
+      "front": "<p>Define <strong>lean production</strong> and <strong>quality</strong>. Which methods does lean production use?</p>",
+      "back": "<p><strong>Lean production</strong> — an approach to production that aims to cut waste of every kind, such as materials, time, stock and faulty products, while keeping quality high.</p><p><strong>Quality</strong> — how well a product meets customers' expectations, every time they buy it.</p><p>Each lean method is a way of making the same output with fewer resources, in services as well as manufacturing:</p><ul><li><strong>Managing quality:</strong> quality control, quality assurance and Total Quality Management (TQM).</li><li><strong>Continuous improvement:</strong> Kaizen.</li><li><strong>Stock management:</strong> just-in-time (JIT).</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "lean-production",
+        "quality"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-3-3-lean-production.html",
+        "origin": "notes-verbatim",
+        "verbatim": "an approach to production that aims to cut waste of every kind, such as materials, time, stock and faulty products, while keeping quality high."
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-3-def-02",
+      "specCode": "2.3.3",
+      "topic": "2.3 Productive Efficiency",
+      "subtopic": "2-3-3-lean-production",
+      "cardType": "definition",
+      "front": "<p>Define <strong>quality control</strong>, <strong>quality assurance</strong> and <strong>Total Quality Management (TQM)</strong>. When is a fault found under each, and by whom?</p>",
+      "back": "<p><strong>Quality control</strong> — checking finished products, or samples of them, and rejecting any that are faulty.</p><p><strong>Quality assurance</strong> — setting standards for each stage of production and checking work against them as it is done, so faults are stopped before the product is finished.</p><p><strong>Total Quality Management (TQM)</strong> — making quality the responsibility of every employee in every department, with each stage of the work treating the next as its customer.</p><ul><li><strong>Quality control:</strong> after the product is made, by inspectors. Faulty products have already used up materials and time.</li><li><strong>Quality assurance:</strong> at each stage of production, by workers checking their own work. Setting and checking the standards costs time.</li><li><strong>TQM:</strong> faults are prevented at source, by everyone, including staff who never see the product. It needs training and a change of culture, which are slow.</li></ul><p><strong>Control finds faults; assurance stops them being made.</strong> If staff check their own work at each stage, that is assurance, and the saving comes from less waste, not from better inspection.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "quality-control",
+        "quality-assurance",
+        "tqm"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-3-3-lean-production.html",
+        "origin": "notes-verbatim",
+        "verbatim": "setting standards for each stage of production and checking work against them as it is done, so faults are stopped before the product is finished."
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-3-def-03",
+      "specCode": "2.3.3",
+      "topic": "2.3 Productive Efficiency",
+      "subtopic": "2-3-3-lean-production",
+      "cardType": "definition",
+      "front": "<p>Define <strong>Kaizen</strong>. How does it lower a firm's costs, and when does it work less well?</p>",
+      "back": "<p><strong>Kaizen</strong> — continuous improvement through many small, regular changes, most of them suggested by the workers who do the job.</p><p>In a warehouse, moving the most-ordered items next to the packing bench saves a few steps on every order.</p><ul><li><strong>Costs:</strong> small changes, made constantly → less wasted time, movement and materials → higher productivity → lower average cost.</li><li><strong>Staff:</strong> workers' ideas are put into practice → they feel involved → higher motivation and fewer staff leaving.</li></ul><p><strong>It works less well when:</strong></p><ul><li><strong>A big change is needed:</strong> small steps cannot keep up with a rival that brings in new technology.</li><li><strong>Staff do not trust managers:</strong> if workers think their ideas will be used to cut jobs, they stop offering them.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "kaizen",
+        "continuous-improvement"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-3-3-lean-production.html",
+        "origin": "notes-verbatim",
+        "verbatim": "continuous improvement through many small, regular changes, most of them suggested by the workers who do the job."
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-3-eval-01",
+      "specCode": "2.3.3",
+      "topic": "2.3 Productive Efficiency",
+      "subtopic": "2-3-3-lean-production",
+      "cardType": "evaluation",
+      "front": "<p>Define <strong>just-in-time (JIT)</strong>. <strong>Evaluate</strong> whether a firm should switch from just-in-case to JIT stock management.</p>",
+      "back": "<p><strong>Just-in-time (JIT)</strong> — a way of managing stock in which materials arrive just as they are needed and products are made to meet orders, so the firm holds little or no buffer stock.</p><p>Just-in-case is the alternative: holding buffer stocks of materials and finished goods in case a delivery is late or demand rises.</p><ul><li><strong>Cash flow:</strong> less money tied up in stock → more cash for other uses → less need to borrow.</li><li><strong>Costs:</strong> less storage, and less stock wasted → lower average cost.</li><li><strong>Risk:</strong> one late delivery → no buffer stock to fall back on → production stops → lost output and sales. A sudden rise in demand is hard to meet, and small, frequent deliveries miss out on bulk-buying discounts.</li></ul><p><strong>It depends on</strong> the firm's suppliers (reliable suppliers close by suit JIT; parts shipped from the other side of the world are more likely to be delayed) and how predictable demand is.</p><p><strong>Judgement:</strong> JIT suits a firm with reliable local suppliers and steady demand. A firm that relies on distant suppliers, or faces sudden peaks in demand, risks losing more from halted production than it saves on stock.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "jit",
+        "stock-management",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-3-3-lean-production.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a way of managing stock in which materials arrive just as they are needed and products are made to meet orders, so the firm holds little or no buffer stock."
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-3-chain-01",
+      "specCode": "2.3.3",
+      "topic": "2.3 Productive Efficiency",
+      "subtopic": "2-3-3-lean-production",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chains of reasoning</strong>: how can lean production give a firm a competitive advantage, and what decides how long the advantage lasts?</p>",
+      "back": "<ul><li><strong>Lower costs:</strong> less waste of stock, time and materials → lower average cost → lower prices to win sales, or wider margins at the same price.</li><li><strong>Better quality:</strong> fewer faults → a reputation for reliability → loyal customers, whose demand is more price inelastic → the firm can charge more.</li><li><strong>Speed:</strong> making to order with little stock → the firm can change its products quickly → it responds to new trends before rivals.</li></ul><p><strong>How long it lasts depends on:</strong></p><ul><li><strong>The cost of getting there:</strong> training, new systems and new supplier deals cost money, and the savings take time to arrive.</li><li><strong>Whether rivals can copy it:</strong> lean methods are well known. The advantage lasts only if the firm uses them better, which comes down to its culture and staff.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "lean-production",
+        "competitive-advantage",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-3-3-lean-production.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-4-chain-01",
+      "specCode": "2.3.4",
+      "topic": "2.3 Productive Efficiency",
+      "subtopic": "2-3-4-impact-on-costs-and-sales-revenue",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chains of reasoning</strong>: how do higher productivity, higher capacity utilisation and lean production each lower a firm's average cost?</p>",
+      "back": "<ul><li><strong>Higher productivity:</strong> each worker makes more → the wage bill is shared across more units → lower labour cost per unit.</li><li><strong>Higher capacity utilisation:</strong> more output from the same premises and machines → fixed costs are spread over more units → lower fixed cost per unit.</li><li><strong>Lean production:</strong> less stock, scrap and rework → fewer materials and less time wasted → lower cost per unit.</li></ul><p>All three get more output from the same resources. Name which cost each one cuts, rather than just saying \"costs fall\".</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "average-cost",
+        "productive-efficiency",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-3-4-impact-on-costs-and-sales-revenue.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-4-calc-01",
+      "specCode": "2.3.4",
+      "topic": "2.3 Productive Efficiency",
+      "subtopic": "2-3-4-impact-on-costs-and-sales-revenue",
+      "cardType": "calculation",
+      "front": "<p>A firm sells <strong>1,000</strong> lamps a month at <strong>£15</strong>. Lean production cuts its average cost from <strong>£10</strong> to <strong>£8</strong>, and it stays at £8 at every output in this question.</p><p>(a) It keeps its price. Calculate revenue and profit before and after. (b) It cuts its price to <strong>£13</strong>, keeping the same margin on each lamp. Calculate revenue and profit if sales rise to <strong>1,500</strong>, and if they rise only to <strong>1,100</strong>.</p>",
+      "back": "<ul><li><strong>Before:</strong> revenue £15 × 1,000 = £15,000. Profit (£15 − £10) × 1,000 = £5,000.</li><li><strong>(a) Keeps its price:</strong> revenue is still <strong>£15,000</strong>. Profit (£15 − £8) × 1,000 = <strong>£7,000</strong>.</li><li><strong>(b) £13, selling 1,500:</strong> revenue £13 × 1,500 = <strong>£19,500</strong>. Profit (£13 − £8) × 1,500 = <strong>£7,500</strong>. Demand is price elastic, so revenue rises, and enough extra lamps are sold for the price cut to earn more profit too.</li><li><strong>(b) £13, selling 1,100:</strong> revenue £13 × 1,100 = <strong>£14,300</strong>, a fall. Profit £5 × 1,100 = <strong>£5,500</strong>. Demand is price inelastic, so revenue falls, and keeping the price earns more.</li></ul><p><strong>Lower costs do not raise revenue on their own.</strong> Revenue is price times quantity sold, and neither changes just because costs fall. If the firm keeps its price, the gain shows up in profit. A price cut raises revenue only if demand is price elastic, and only if rivals do not cut their prices too.</p><p><strong>Elastic demand guarantees higher revenue, not higher profit.</strong> Here the price cut beats the £7,000 from keeping the price only if more than 1,400 lamps are sold (£7,000 ÷ £5).</p>",
+      "formula": "\\text{Sales revenue} = \\text{Price} \\times \\text{Quantity sold}",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "sales-revenue",
+        "profit",
+        "ped",
+        "calculation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-3-4-impact-on-costs-and-sales-revenue.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-4-chain-02",
+      "specCode": "2.3.4",
+      "topic": "2.3 Productive Efficiency",
+      "subtopic": "2-3-4-impact-on-costs-and-sales-revenue",
+      "cardType": "chain",
+      "front": "<p>What counts as <strong>waste</strong> for a firm? Build the chains from cutting waste to lower costs and higher sales, and say what limits the gain.</p>",
+      "back": "<p><strong>Waste</strong> is anything a firm pays for that adds nothing to what the customer buys: materials thrown away, faulty products that are scrapped or reworked, staff and machines standing idle, energy used heating empty space, and goods made that nobody buys.</p><ul><li><strong>Costs:</strong> less material and energy used per unit → lower variable cost per unit → lower average cost.</li><li><strong>Sales:</strong> a name for cutting waste and packaging → appeals to customers who care about the environment → more sales, and sometimes a higher price.</li></ul><p>Firms cut waste with lean methods, products designed to use less material, energy-efficient equipment and more accurate sales forecasts.</p><p><strong>The gain is limited by:</strong></p><ul><li><strong>The up-front cost:</strong> new equipment or a redesign pays off only if the savings last long enough.</li><li><strong>Trade-offs:</strong> cutting stock to the minimum raises the risk of running out, and greener materials can cost more than the ones they replace.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "waste",
+        "average-cost",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-3-4-impact-on-costs-and-sales-revenue.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-4-def-01",
+      "specCode": "2.3.4",
+      "topic": "2.3 Productive Efficiency",
+      "subtopic": "2-3-4-impact-on-costs-and-sales-revenue",
+      "cardType": "definition",
+      "front": "<p>Define <strong>product development lead time</strong>. Why does a short one give a firm a competitive advantage?</p>",
+      "back": "<p><strong>Product development lead time</strong> — the time between starting work on a new product and putting it on sale.</p><ul><li><strong>First to market:</strong> the firm launches before rivals → no direct competition at first → it can charge a high price (price skimming) → higher revenue and profit until rivals arrive.</li><li><strong>Keeping up with tastes:</strong> a toy maker turns a new craze into stock within weeks → it sells what is wanted now → fewer unsold lines and fewer discounts.</li><li><strong>Lower development costs:</strong> fewer months of paying designers and engineers → lower costs, and the R&amp;D spending is earned back sooner.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "lead-time",
+        "competitive-advantage"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-3-4-impact-on-costs-and-sales-revenue.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the time between starting work on a new product and putting it on sale."
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-4-eval-01",
+      "specCode": "2.3.4",
+      "topic": "2.3 Productive Efficiency",
+      "subtopic": "2-3-4-impact-on-costs-and-sales-revenue",
+      "cardType": "evaluation",
+      "front": "<p>A firm cuts its average cost and shortens its product development lead time. <strong>Evaluate</strong> how far this will raise its sales revenue and profit.</p>",
+      "back": "<p><strong>The case for:</strong> lower average cost → a lower price, or a wider margin at the same price. A short lead time → first to market, and in step with tastes → higher revenue and fewer discounts.</p><p><strong>It depends on:</strong></p><ul><li><strong>PED:</strong> a price cut raises revenue only when demand is price elastic. With inelastic demand, keeping the price and taking the wider margin earns more.</li><li><strong>Rivals' response:</strong> if rivals cut their costs and prices too, nobody gains market share, and the saving passes to consumers.</li><li><strong>The market:</strong> a short lead time matters most where products and tastes change fast, such as clothing and toys. A firm selling salt gains little.</li><li><strong>Quality:</strong> rushing a product out raises the risk of faults, recalls and a damaged brand.</li></ul><p><strong>Judgement:</strong> the gain is largest for a firm in a fast-changing market, facing price-elastic demand, whose rivals cannot easily match its costs. Where rivals can, the saving soon passes to consumers as lower prices.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "average-cost",
+        "lead-time",
+        "sales-revenue",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-3-4-impact-on-costs-and-sales-revenue.html",
+        "origin": "card-authored"
+      }
     }
   ]
 }
