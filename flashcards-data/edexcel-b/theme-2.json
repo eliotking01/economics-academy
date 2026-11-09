@@ -2714,6 +2714,390 @@
         "notesPage": "/revision-notes/edexcel-b-theme-2/2-5-4-employment-and-unemployment.html",
         "origin": "card-authored"
       }
+    },
+    {
+      "id": "edexcel-b-2-6-1-def-01",
+      "specCode": "2.6.1",
+      "topic": "2.6 Introduction to Macroeconomic Policy",
+      "subtopic": "2-6-1-macroeconomic-objectives",
+      "cardType": "definition",
+      "front": "<p>Define <strong>macroeconomic objectives</strong>. Name the four in the spec, how each is measured and what the UK aims for.</p>",
+      "back": "<p><strong>Macroeconomic objectives</strong> — the goals a government sets for the performance of the whole economy.</p><ul><li><strong>Economic growth:</strong> measured by the rise in real GDP each year. The aim is steady growth close to the trend rate, because growth far above trend tends to end in rising inflation and then a downturn.</li><li><strong>Low unemployment:</strong> measured by the ILO unemployment rate. The aim is as low as possible, though it can never reach zero, because some people are always moving between jobs.</li><li><strong>Low and stable inflation:</strong> measured by the annual change in the CPI. The aim is 2%, the target the government gives the Bank of England.</li><li><strong>Current account equilibrium:</strong> measured by the current account balance, often as a % of GDP. The aim is a balance that is roughly even over time, with no large deficit or surplus.</li></ul><p>The government sets the objectives, and the Bank of England is in charge of inflation. Governments have other aims too, such as a sound budget, a fairer spread of income and protecting the environment, but the spec names these four.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "macroeconomic-objectives",
+        "economic-growth",
+        "unemployment",
+        "inflation",
+        "current-account"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-6-1-macroeconomic-objectives.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the goals a government sets for the performance of the whole economy."
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-1-def-02",
+      "specCode": "2.6.1",
+      "topic": "2.6 Introduction to Macroeconomic Policy",
+      "subtopic": "2-6-1-macroeconomic-objectives",
+      "cardType": "definition",
+      "front": "<p>Define the <strong>balance of payments</strong> and the <strong>current account</strong>. What is a current account deficit, and how is it different from a budget deficit?</p>",
+      "back": "<p><strong>Balance of payments</strong> — the record of all money flowing into and out of a country from its dealings with the rest of the world.</p><p><strong>Current account</strong> — the part of the balance of payments that records trade in goods and services, plus income such as profits and interest earned abroad and transfers such as foreign aid.</p><ul><li><strong>Deficit:</strong> more money flows out than in, mainly because imports are worth more than exports.</li><li><strong>Surplus:</strong> more money flows in than out.</li><li><strong>Equilibrium:</strong> a balance close to even over several years, not exactly zero in each one.</li></ul><p><strong>Not a budget deficit.</strong> The current account is about trade and income flows with other countries. A budget deficit is the government spending more than it raises in tax. A country can have one without the other, so check which one the question is asking about.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "balance-of-payments",
+        "current-account",
+        "budget-deficit"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-6-1-macroeconomic-objectives.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the record of all money flowing into and out of a country from its dealings with the rest of the world."
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-1-chain-01",
+      "specCode": "2.6.1",
+      "topic": "2.6 Introduction to Macroeconomic Policy",
+      "subtopic": "2-6-1-macroeconomic-objectives",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chains of reasoning</strong>: why do <strong>economic growth</strong> and <strong>low unemployment</strong> matter to firms, households and the government?</p>",
+      "back": "<p><strong>Economic growth:</strong></p><ul><li><strong>Firms:</strong> real GDP rises → households and other firms spend more → higher sales and profit → more reason to invest in new capacity.</li><li><strong>Households:</strong> more output → more jobs and rising pay → higher real incomes and living standards.</li><li><strong>The government:</strong> higher incomes and profits → more tax revenue at the same tax rates → more to spend on public services, or less borrowing.</li></ul><p><strong>Low unemployment:</strong></p><ul><li><strong>Individuals:</strong> a job → a wage instead of benefits → higher income, and skills kept up to date.</li><li><strong>Firms:</strong> more people in work → more customers with money to spend → higher sales. But staff get harder to find, which pushes up wages.</li><li><strong>The government:</strong> fewer people out of work → less spent on benefits and more income tax collected → a smaller budget deficit.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "economic-growth",
+        "unemployment",
+        "macroeconomic-objectives",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-6-1-macroeconomic-objectives.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-1-chain-02",
+      "specCode": "2.6.1",
+      "topic": "2.6 Introduction to Macroeconomic Policy",
+      "subtopic": "2-6-1-macroeconomic-objectives",
+      "cardType": "chain",
+      "front": "<p>Why does the inflation objective say <strong>low and stable</strong>? Build a chain for each word, and explain why the target is 2% rather than zero.</p>",
+      "back": "<p>The government sets the Bank of England a target of <strong>2% CPI inflation</strong>, and the Bank sets interest rates to hit it.</p><ul><li><strong>Low:</strong> prices rise slowly → wages and savings keep their value → real incomes hold up, and UK goods stay competitive abroad.</li><li><strong>Stable:</strong> firms can predict their costs and prices → they can plan, sign contracts and agree pay rises with confidence → more investment.</li></ul><p><strong>Why not zero?</strong> Falling prices bring their own problems: households put off buying in the hope of lower prices later → firms' sales fall.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "inflation",
+        "inflation-target",
+        "macroeconomic-objectives",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-6-1-macroeconomic-objectives.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-1-eval-01",
+      "specCode": "2.6.1",
+      "topic": "2.6 Introduction to Macroeconomic Policy",
+      "subtopic": "2-6-1-macroeconomic-objectives",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> whether a large, lasting current account deficit is a problem for the UK.</p>",
+      "back": "<p><strong>Why it can be a problem:</strong></p><ul><li><strong>It has to be paid for:</strong> a deficit → the country borrows from abroad or sells assets to foreign buyers → future interest and profits flow overseas.</li><li><strong>It can cost jobs:</strong> households buy imports instead of UK goods → UK producers lose sales → fewer jobs in manufacturing and other traded industries.</li></ul><p><strong>It depends on:</strong></p><ul><li><strong>What the imports are:</strong> imported equipment that raises output later, such as robots for a car plant, is easier to justify than imported consumer goods.</li><li><strong>How it is financed:</strong> foreign firms building factories in the UK bring jobs, while short-term borrowing can leave the country quickly.</li></ul><p>A large surplus is not the aim either: other countries then run matching deficits, and they may respond with tariffs.</p><p><strong>Judgement:</strong> a deficit that buys equipment and is financed by foreign firms building in the UK is less worrying than one that pays for consumer goods with short-term borrowing, though interest and profits still flow overseas either way.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "current-account",
+        "current-account-deficit",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-6-1-macroeconomic-objectives.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-2-def-01",
+      "specCode": "2.6.2",
+      "topic": "2.6 Introduction to Macroeconomic Policy",
+      "subtopic": "2-6-2-policy-instruments",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>policy instrument</strong>. Name the four instruments in the spec, who runs each one and what it changes.</p>",
+      "back": "<p><strong>Policy instrument</strong> — a tool the government or the central bank uses to steer the economy towards its objectives.</p><ul><li><strong>Fiscal policy:</strong> run by the government (the Chancellor, in the Budget). Changes government spending and taxes.</li><li><strong>Monetary policy:</strong> run by the Bank of England's Monetary Policy Committee. Changes Bank Rate, which other interest rates follow.</li><li><strong>Supply-side policies:</strong> run mainly by the government. Change taxes, benefits, training, grants and subsidies, and infrastructure.</li><li><strong>Exchange rate policy:</strong> the government lets the pound float, so nothing is changed: the market sets the rate.</li></ul><p>Fiscal and monetary policy change <strong>aggregate demand</strong>, the total spending in the economy. Supply-side policies raise the economy's <strong>capacity to produce</strong>.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "policy-instruments",
+        "fiscal-policy",
+        "monetary-policy",
+        "supply-side-policies"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-6-2-policy-instruments.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a tool the government or the central bank uses to steer the economy towards its objectives"
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-2-chain-01",
+      "specCode": "2.6.2",
+      "topic": "2.6 Introduction to Macroeconomic Policy",
+      "subtopic": "2-6-2-policy-instruments",
+      "cardType": "chain",
+      "front": "<p>Define <strong>fiscal policy</strong>. Build the chains: how does an expansionary fiscal policy affect firms, and what limits its effect?</p>",
+      "back": "<p><strong>Fiscal policy</strong> — changing the levels of government spending and taxation to affect aggregate demand.</p><p><strong>Expansionary</strong> fiscal policy means spending more or taxing less, which raises AD. <strong>Contractionary</strong> fiscal policy does the opposite, to slow the economy or cut government borrowing. Spending above tax revenue in a year is a <strong>budget deficit</strong>, covered by borrowing.</p><ul><li><strong>Government spending rises:</strong> on, say, flood defences or a new prison → contracts for builders and their suppliers → more output and more jobs.</li><li><strong>Income tax or VAT is cut:</strong> more take-home pay, or lower prices → households spend more → higher sales for shops and restaurants.</li><li><strong>Corporation tax is cut:</strong> firms keep more profit after tax → more to invest.</li></ul><p><strong>It depends on:</strong></p><ul><li><strong>Whether households spend or save:</strong> if confidence is low, a tax cut is saved and sales barely move.</li><li><strong>How it is paid for:</strong> spending funded by borrowing adds to the national debt and its interest, which may mean higher taxes later.</li><li><strong>Spare capacity:</strong> if firms are already near full capacity, extra demand raises prices more than output.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "fiscal-policy",
+        "aggregate-demand",
+        "budget-deficit",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-6-2-policy-instruments.html",
+        "origin": "notes-verbatim",
+        "verbatim": "changing the levels of government spending and taxation to affect aggregate demand."
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-2-chain-02",
+      "specCode": "2.6.2",
+      "topic": "2.6 Introduction to Macroeconomic Policy",
+      "subtopic": "2-6-2-policy-instruments",
+      "cardType": "chain",
+      "front": "<p>Define <strong>monetary policy</strong>. Build the chains: how does a rise in Bank Rate affect households, firms and exporters? What decides how hard it bites?</p>",
+      "back": "<p><strong>Monetary policy</strong> — changing interest rates to affect aggregate demand.</p><p>The Bank of England's Monetary Policy Committee sets <strong>Bank Rate</strong> to keep CPI inflation at the government's 2% target. Banks' rates on loans, mortgages and savings follow it.</p><ul><li><strong>Households:</strong> mortgage and loan repayments go up and saving pays more → less spending → lower sales, worst for goods often bought on credit, such as new kitchens.</li><li><strong>Firms:</strong> loans and overdrafts cost more → higher costs, and fewer projects worth borrowing for → less investment.</li><li><strong>Exporters:</strong> higher UK rates attract savings from abroad → the pound tends to rise → UK goods cost more overseas → export sales fall.</li></ul><p>Together these lower AD, which brings inflation down. A cut in Bank Rate works the other way.</p><p><strong>It depends on:</strong></p><ul><li><strong>How much people and firms borrow:</strong> a firm with no debt feels little, and one with cash in the bank gains from higher rates.</li><li><strong>Fixed or variable rates:</strong> many mortgages and business loans are fixed for some years, so the change arrives only when the deal ends.</li><li><strong>Time lags:</strong> the Bank of England says a change usually takes up to two years to have its full effect on inflation.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "monetary-policy",
+        "bank-rate",
+        "interest-rates",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-6-2-policy-instruments.html",
+        "origin": "notes-verbatim",
+        "verbatim": "changing interest rates to affect aggregate demand."
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-2-def-02",
+      "specCode": "2.6.2",
+      "topic": "2.6 Introduction to Macroeconomic Policy",
+      "subtopic": "2-6-2-policy-instruments",
+      "cardType": "definition",
+      "front": "<p>Define <strong>supply-side policies</strong>. Name the five the spec lists, with the chain for each. How can one tax cut be two kinds of policy?</p>",
+      "back": "<p><strong>Supply-side policies</strong> — policies that raise the economy's capacity to produce, by improving the quantity or quality of its workers and capital or how well markets work.</p><ul><li><strong>Taxes:</strong> lower income tax → work pays more → more people take jobs or work longer hours → a larger workforce.</li><li><strong>Benefits:</strong> lower benefits or stricter rules for claiming → a bigger gap between income in and out of work → more people look for jobs → firms find it easier to recruit.</li><li><strong>Education and training:</strong> more spending on skills and apprenticeships → workers can do more skilled jobs → higher productivity, lower unit costs and less occupational immobility.</li><li><strong>Grants and subsidies:</strong> money towards research, new equipment or starting a business → lower costs of investing → more innovation and new firms.</li><li><strong>Infrastructure:</strong> better roads, rail and broadband → goods and staff move faster and more cheaply → lower costs and access to wider markets.</li></ul><p><strong>One tax cut, two policies:</strong> a cut in income tax raises take-home pay, so it is fiscal policy boosting AD in the short run. It also makes work pay more, so it is a supply-side policy raising the workforce over time. Say which effect you mean, and over what time period.</p><p><strong>Limits:</strong> they take years to work, people may not respond (a firm may take a grant for an investment it would have made anyway), and cutting benefits leaves those who cannot work poorer.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "supply-side-policies",
+        "productivity",
+        "fiscal-policy"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-6-2-policy-instruments.html",
+        "origin": "notes-verbatim",
+        "verbatim": "policies that raise the economy's capacity to produce, by improving the quantity or quality of its workers and capital or how well markets work."
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-2-eval-01",
+      "specCode": "2.6.2",
+      "topic": "2.6 Introduction to Macroeconomic Policy",
+      "subtopic": "2-6-2-policy-instruments",
+      "cardType": "evaluation",
+      "front": "<p>Define a <strong>floating exchange rate</strong>. <strong>Evaluate</strong> the UK's choice to let the pound float, for the economy and for firms.</p>",
+      "back": "<p><strong>Floating exchange rate</strong> — an exchange rate set by the demand for and supply of a currency on the foreign exchange market, with no target from the government or central bank.</p><p>Under a <strong>fixed</strong> exchange rate, the central bank would instead buy and sell its currency to hold an agreed value.</p><p><strong>How a floating pound helps the economy:</strong></p><ul><li><strong>It adjusts on its own:</strong> the UK buys more imports than it sells exports → more pounds are sold → the pound falls → exports get cheaper abroad and imports dearer → the deficit narrows.</li><li><strong>It leaves interest rates free:</strong> the Bank does not have to set rates to defend the pound → it can set them for the 2% inflation target.</li></ul><p><strong>The cost for firms is uncertainty:</strong> the pound moves → an exporter's revenue and an importer's costs in pounds change from month to month → margins are harder to predict → some firms hold back on investment, or pay their bank to fix a rate months ahead.</p><p><strong>It depends on</strong> how much the firm trades abroad. A hairdresser with UK suppliers hardly notices, while a firm that imports components and exports finished machines is exposed on both sides.</p><p><strong>Judgement:</strong> for the economy, a floating pound tends to narrow a trade deficit on its own and frees interest rates for the inflation target. The cost is uncertainty, and it falls mostly on firms that trade heavily abroad.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "floating-exchange-rate",
+        "exchange-rates",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-6-2-policy-instruments.html",
+        "origin": "notes-verbatim",
+        "verbatim": "an exchange rate set by the demand for and supply of a currency on the foreign exchange market, with no target from the government or central bank."
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-3-diagram-01",
+      "specCode": "2.6.3",
+      "topic": "2.6 Introduction to Macroeconomic Policy",
+      "subtopic": "2-6-3-policy-conflicts-and-trade-offs",
+      "cardType": "diagram",
+      "front": "<p>Sketch the <strong>short-run Phillips curve</strong>. Explain the trade-off it shows, and when that trade-off breaks down.</p>",
+      "back": "<p><strong>Trade-off</strong> — a situation where getting more of one thing means accepting less of another.</p><p><strong>Short-run Phillips curve</strong> — a curve showing an inverse relationship between the rate of inflation and the rate of unemployment in the short run.</p><p>Inflation (%) is on the vertical axis and unemployment (%) on the horizontal. The SRPC falls steeply at low unemployment, then flattens out as unemployment rises.</p><ul><li><strong>Cutting unemployment:</strong> AD rises → firms hire more and spare workers become scarce → firms raise wages to recruit and pass the cost on in prices → inflation rises.</li><li><strong>Cutting inflation:</strong> Bank Rate rises → households and firms spend less → firms cut output and stop hiring → unemployment rises.</li></ul><p><strong>The trade-off is not fixed. It depends on:</strong></p><ul><li><strong>The cause of inflation:</strong> cost-push inflation, such as a jump in energy prices, can raise inflation and unemployment together, so the curve gives no guide.</li><li><strong>Spare capacity:</strong> in a deep recession, extra demand creates jobs with little effect on prices.</li><li><strong>The time period:</strong> supply-side policies that raise productivity can lower both over the long run.</li></ul>",
+      "svgRef": "/images/diagrams/svg/short-run-phillips-curve.svg",
+      "svgAlt": "Inflation (%) on the vertical axis and unemployment (%) on the horizontal; a curve labelled SRPC slopes down, steep where unemployment is low and almost flat where unemployment is high",
+      "difficulty": "standard",
+      "tags": [
+        "phillips-curve",
+        "trade-off",
+        "inflation",
+        "unemployment",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-6-3-policy-conflicts-and-trade-offs.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a curve showing an inverse relationship between the rate of inflation and the rate of unemployment in the short run."
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-3-chain-01",
+      "specCode": "2.6.3",
+      "topic": "2.6 Introduction to Macroeconomic Policy",
+      "subtopic": "2-6-3-policy-conflicts-and-trade-offs",
+      "cardType": "chain",
+      "front": "<p>Define a <strong>negative externality</strong>. Build the chains: why does economic growth tend to raise these costs, and why does the conflict run both ways?</p>",
+      "back": "<p><strong>Negative externality</strong> — a cost of producing or consuming a good that falls on a third party, who is not paid for it, such as pollution from a factory.</p><ul><li><strong>Pollution:</strong> more output → more energy, transport and raw materials used → more emissions and waste → costs for people living nearby and for the climate.</li><li><strong>Congestion:</strong> more people commuting and more goods moved → busier roads → longer journeys and higher transport costs for firms.</li><li><strong>The other way round:</strong> policies that cut externalities, such as carbon taxes or tighter regulation → firms' costs rise → growth can slow in the short run.</li></ul><p><strong>How sharp the conflict is depends on:</strong></p><ul><li><strong>The kind of growth:</strong> growth in services, or in clean energy, adds far less pollution than growth in heavy industry.</li><li><strong>The time period:</strong> green investment costs firms money now but can create new industries and jobs later.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "negative-externalities",
+        "economic-growth",
+        "policy-conflicts",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-6-3-policy-conflicts-and-trade-offs.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a cost of producing or consuming a good that falls on a third party, who is not paid for it, such as pollution from a factory."
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-3-chain-02",
+      "specCode": "2.6.3",
+      "topic": "2.6 Introduction to Macroeconomic Policy",
+      "subtopic": "2-6-3-policy-conflicts-and-trade-offs",
+      "cardType": "chain",
+      "front": "<p>Even with a clear objective, why is <strong>managing the economy</strong> hard? Give six problems governments face, with the chain for each.</p>",
+      "back": "<ul><li><strong>Conflicting objectives:</strong> faster growth → more spending on imports → a wider current account deficit. Cutting the budget deficit → less spending → slower growth. The government has to choose which objective matters most at the time.</li><li><strong>Time lags:</strong> a change in Bank Rate can take up to two years to work in full → by then, the economy may have moved on.</li><li><strong>Late and uncertain data:</strong> GDP figures arrive weeks after the quarter ends and are often revised → policy-makers can misjudge where the economy is.</li><li><strong>Shocks from abroad:</strong> a world recession or a rise in oil prices → hits the UK whatever its own policies.</li><li><strong>Limited money:</strong> extra spending or tax cuts have to be paid for → a large national debt limits how much more the government can borrow.</li><li><strong>Politics:</strong> tax rises and spending cuts are unpopular → they may be delayed, especially before an election.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "managing-the-economy",
+        "policy-conflicts",
+        "time-lags",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-6-3-policy-conflicts-and-trade-offs.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-3-app-01",
+      "specCode": "2.6.3",
+      "topic": "2.6 Introduction to Macroeconomic Policy",
+      "subtopic": "2-6-3-policy-conflicts-and-trade-offs",
+      "cardType": "application",
+      "front": "<p>The UK enters a recession and unemployment is rising. What would a <strong>Keynesian</strong> economist and a <strong>free-market</strong> economist each advise, and why do they disagree?</p>",
+      "back": "<p>They disagree about how the economy works, so they recommend different policies.</p><ul><li><strong>Keynesian:</strong> the economy can stay below full capacity for years if spending is weak, so the main worry is unemployment and lost output. Advice: the government borrows to spend, on projects such as new schools and flood defences, to replace the missing demand, and spends on training and infrastructure.</li><li><strong>Free-market:</strong> left alone, markets return the economy to full capacity fairly quickly, so the main worries are inflation, high taxes and government debt. Advice: avoid adding to debt, use monetary policy for inflation, and cut taxes and red tape so that firms expand.</li></ul><p><strong>Role of government:</strong> Keynesians want a large one, managing demand to keep output near capacity. Free-market economists want a small one: keep inflation low and let markets work.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "keynesian",
+        "free-market",
+        "macroeconomic-perspectives",
+        "application"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-6-3-policy-conflicts-and-trade-offs.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-3-eval-01",
+      "specCode": "2.6.3",
+      "topic": "2.6 Introduction to Macroeconomic Policy",
+      "subtopic": "2-6-3-policy-conflicts-and-trade-offs",
+      "cardType": "evaluation",
+      "front": "<p>Define an <strong>unintended consequence</strong>. UK inflation is rising because world gas prices have jumped. <strong>Evaluate</strong> raising Bank Rate in response.</p>",
+      "back": "<p><strong>Unintended consequence</strong> — an effect of a policy that policy-makers did not aim for, often on another objective or another group.</p><p><strong>Match the instrument to the cause, not just the problem.</strong> Here the cause is world energy prices, and a higher Bank Rate works by cutting demand:</p><ul><li><strong>How it would work:</strong> Bank Rate rises → households and firms borrow and spend less → prices rise more slowly, but only by cutting spending and jobs.</li><li><strong>Unintended consequences:</strong> slower growth and job losses, and a stronger pound that hurts exporters.</li></ul><p><strong>It also depends on:</strong></p><ul><li><strong>How people respond:</strong> households and firms may change their behaviour in ways no one planned.</li><li><strong>Using instruments together:</strong> if the government loosens fiscal policy while the Bank is raising rates, the two pull against each other.</li></ul><p><strong>Other matches:</strong> a recession → more government spending or tax cuts (risk: more debt and more imports). A skills shortage → education and training (risk: firms cut their own training and let the state pay). Low investment → a cut in corporation tax (risk: higher dividends instead, and less tax revenue).</p><p><strong>Judgement:</strong> higher interest rates do little against inflation caused by world energy prices, and slow it mainly by costing growth and jobs. Name the cause, pick the instrument that tackles it, then name one unintended consequence.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "unintended-consequences",
+        "monetary-policy",
+        "policy-conflicts",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-6-3-policy-conflicts-and-trade-offs.html",
+        "origin": "notes-verbatim",
+        "verbatim": "an effect of a policy that policy-makers did not aim for, often on another objective or another group."
+      }
     }
   ]
 }
