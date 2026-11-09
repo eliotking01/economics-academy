@@ -1,0 +1,667 @@
+{
+  "board": "edexcel-b",
+  "boardName": "Edexcel B",
+  "theme": "theme-2",
+  "themeName": "Theme 2: The Wider Economic Environment",
+  "deckId": "edexcel-b-theme-2",
+  "deckTitle": "Edexcel B A-Level Economics Theme 2 Flashcards",
+  "metaDescription": "Free interactive flashcards for Edexcel B A-Level Economics Theme 2: business growth, elasticity, productive efficiency, the global economy, the economic cycle and macroeconomic policy, with spaced repetition.",
+  "intro": "Revise Theme 2 with interactive flashcards written to the Edexcel B (9EB0) specification — business growth and competitive advantage, elasticities of demand, productive efficiency, life in a global economy, the economic cycle and macroeconomic policy. Flip each card to check yourself, rate how well you knew it, and the deck brings back the cards you found hard. Every card links to the revision notes page that teaches it.",
+  "cards": [
+    {
+      "id": "edexcel-b-2-1-1-def-01",
+      "specCode": "2.1.1",
+      "topic": "2.1 Business Growth and Competitive Advantage",
+      "subtopic": "2-1-1-growth",
+      "cardType": "definition",
+      "front": "<p>Define <strong>economies of scale</strong> and <strong>diseconomies of scale</strong>.</p>",
+      "back": "<p><strong>Economies of scale</strong> — the fall in long-run average cost that comes from producing on a larger scale.</p><p><strong>Diseconomies of scale</strong> — the rise in long-run average cost when a firm grows beyond its minimum efficient scale.</p><p>Both are about <strong>average</strong> cost, the cost of each unit. A growing firm spends more in total, but if its output rises faster than its costs, each unit gets cheaper to make.</p><p>Diseconomies come from <strong>coordination</strong> problems, as more sites, departments and products are harder to plan and control, and weaker <strong>motivation</strong>, as each worker feels like a small part of a big organisation.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "economies-of-scale",
+        "diseconomies-of-scale"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-1-1-growth.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the fall in long-run average cost that comes from producing on a larger scale."
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-1-def-02",
+      "specCode": "2.1.1",
+      "topic": "2.1 Business Growth and Competitive Advantage",
+      "subtopic": "2-1-1-growth",
+      "cardType": "definition",
+      "front": "<p>Distinguish <strong>internal</strong> from <strong>external economies of scale</strong>, with examples of each.</p>",
+      "back": "<p><strong>Internal economies of scale</strong> — cost savings that come from the growth of the firm itself.</p><ul><li><strong>Purchasing:</strong> bulk discounts on large orders.</li><li><strong>Technical:</strong> large machinery whose cost is spread over far more units.</li><li><strong>Financial:</strong> lenders see a large firm as safer, so it borrows at lower interest rates.</li><li><strong>Managerial:</strong> specialist managers who make better decisions.</li><li><strong>Marketing:</strong> an advert's cost per unit falls as sales rise.</li><li><strong>Risk-bearing:</strong> a loss in one product or place is covered by profit in another.</li></ul><p><strong>External economies of scale</strong> — cost savings a firm gets from the growth of its whole industry, often in one area, not from its own size. Examples are a skilled labour pool, specialist suppliers nearby and better infrastructure.</p><p>Internal economies move a firm <strong>down</strong> its average cost curve. External economies <strong>shift the whole curve down</strong>, for large and small firms alike.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "economies-of-scale"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-1-1-growth.html",
+        "origin": "notes-verbatim",
+        "verbatim": "cost savings that come from the growth of the firm itself."
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-1-def-03",
+      "specCode": "2.1.1",
+      "topic": "2.1 Business Growth and Competitive Advantage",
+      "subtopic": "2-1-1-growth",
+      "cardType": "definition",
+      "front": "<p>Define <strong>market power</strong> and <strong>market share</strong>. How does growth give a firm power over consumers and over suppliers?</p>",
+      "back": "<p><strong>Market power</strong> — a firm's ability to influence the prices it charges customers or pays suppliers.</p><p><strong>Market share</strong> — one firm's sales as a percentage of the total sales in its market.</p><ul><li><strong>Over consumers:</strong> rivals shrink or disappear → fewer close substitutes → demand becomes more price inelastic → the firm can raise prices without losing many sales → higher profit, while consumers pay more and have less choice.</li><li><strong>Over suppliers:</strong> the firm becomes one of a supplier's biggest customers → it negotiates lower prices or longer to pay → lower costs and better cash flow, while the supplier's margins are squeezed.</li></ul><p>A bigger share usually brings <strong>brand recognition</strong> too: shoppers trust a name they see often, so they choose it first and their demand is less sensitive to price.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "market-power",
+        "market-share"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-1-1-growth.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a firm's ability to influence the prices it charges customers or pays suppliers."
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-1-def-04",
+      "specCode": "2.1.1",
+      "topic": "2.1 Business Growth and Competitive Advantage",
+      "subtopic": "2-1-1-growth",
+      "cardType": "definition",
+      "front": "<p>Define <strong>corporate culture</strong>. What role does it play as a firm grows?</p>",
+      "back": "<p><strong>Corporate culture</strong> — the shared values, attitudes and habits that shape how people in a business behave, often summed up as \"the way we do things here\".</p><ul><li><strong>It can hold a bigger firm together:</strong> staff share the same goals → fewer rules and checks are needed → decisions can be made lower down → faster, cheaper decisions and fewer communication problems.</li><li><strong>It affects motivation:</strong> staff who feel trusted and valued work harder and stay longer.</li><li><strong>Growth can weaken it:</strong> the founder can no longer know everyone → the old values fade → motivation falls → diseconomies of scale get worse.</li><li><strong>Takeovers can bring a culture clash:</strong> conflict and senior staff leaving → the cost savings the deal promised do not arrive.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "corporate-culture",
+        "growth"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-1-1-growth.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the shared values, attitudes and habits that shape how people in a business behave, often summed up as \"the way we do things here\"."
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-1-diagram-01",
+      "specCode": "2.1.1",
+      "topic": "2.1 Business Growth and Competitive Advantage",
+      "subtopic": "2-1-1-growth",
+      "cardType": "diagram",
+      "front": "<p>Sketch the <strong>long-run average cost (LRAC) curve</strong>. Label economies of scale, diseconomies of scale and the minimum efficient scale.</p>",
+      "back": "<p>Costs go up the side and quantity along the bottom. The LRAC curve is U-shaped.</p><ul><li>On the left, average cost falls as output rises: <strong>economies of scale</strong>.</li><li>The lowest point marks the <strong>minimum efficient scale (MES)</strong> — the lowest output at which a firm reaches the lowest possible long-run average cost.</li><li>Beyond the MES, average cost rises again: <strong>diseconomies of scale</strong>.</li></ul><p>A firm already at its MES gains no more cost savings from growing, and may start to face diseconomies.</p>",
+      "svgRef": "/images/diagrams/svg/economies-of-scale.svg",
+      "svgAlt": "U-shaped long-run average cost curve (LRAC) with costs on the vertical axis and quantity on the horizontal axis; an arrow beside the falling left side is labelled economies of scale, an arrow beside the rising right side is labelled diseconomies of scale, and a dashed line from the lowest point of the curve marks MES on the quantity axis",
+      "difficulty": "standard",
+      "tags": [
+        "economies-of-scale",
+        "lrac",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-1-1-growth.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the lowest output at which a firm reaches the lowest possible long-run average cost."
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-1-eval-01",
+      "specCode": "2.1.1",
+      "topic": "2.1 Business Growth and Competitive Advantage",
+      "subtopic": "2-1-1-growth",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> whether growth will make a firm more profitable.</p>",
+      "back": "<p><strong>For</strong></p><ul><li>Economies of scale → lower average cost, and more market power → higher prices → a wider margin on each unit, and more units sold at that margin → higher total profit.</li></ul><p><strong>Against</strong></p><ul><li><strong>Diseconomies of scale:</strong> coordination and motivation problems push average cost back up.</li><li><strong>Internal communication:</strong> more layers of management → messages arrive late, changed or not at all → slow decisions and costly mistakes.</li><li><strong>Skills shortages:</strong> the firm must outbid other employers for scarce staff, or hire less-skilled ones → higher labour costs, or slower output and more mistakes. The owner may lack the skills to run a bigger firm too.</li></ul><p><strong>Judgement:</strong> it depends on how close the firm is to its MES, and on whether the competition authorities step in: the CMA can block a merger or investigate a firm that uses its market power against consumers. How serious the problems are depends on the speed of growth, since a takeover can double a firm overnight, and on how the firm is organised, since regional or divisional managers keep chains of command short.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "growth",
+        "diseconomies-of-scale",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-1-1-growth.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-2-def-01",
+      "specCode": "2.1.2",
+      "topic": "2.1 Business Growth and Competitive Advantage",
+      "subtopic": "2-1-2-methods-of-growth",
+      "cardType": "definition",
+      "front": "<p>Distinguish <strong>organic</strong> from <strong>inorganic growth</strong>. What is the difference between a merger and a takeover?</p>",
+      "back": "<p><strong>Organic growth</strong> — growth from within the business, using its own resources, such as selling more, launching new products or opening new sites. It is also called internal growth.</p><p><strong>Inorganic growth</strong> — growth by joining with another business through a merger or a takeover. It is also called external growth.</p><ul><li>A <strong>merger</strong> is when two firms agree to combine into one.</li><li>A <strong>takeover</strong> (or acquisition) is when one firm buys enough of another's shares, more than half, to control it.</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "methods-of-growth",
+        "organic-growth",
+        "inorganic-growth"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-1-2-methods-of-growth.html",
+        "origin": "notes-verbatim",
+        "verbatim": "growth from within the business, using its own resources, such as selling more, launching new products or opening new sites. It is also called internal growth."
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-2-def-02",
+      "specCode": "2.1.2",
+      "topic": "2.1 Business Growth and Competitive Advantage",
+      "subtopic": "2-1-2-methods-of-growth",
+      "cardType": "definition",
+      "front": "<p>Define <strong>integration</strong>, and distinguish <strong>horizontal</strong>, <strong>vertical</strong> and <strong>conglomerate</strong> integration.</p>",
+      "back": "<p><strong>Integration</strong> — two businesses coming together under one owner, through a merger or a takeover.</p><ul><li><strong>Horizontal integration</strong> — joining with a firm in the same industry at the same stage of production, usually a competitor.</li><li><strong>Vertical integration</strong> — joining with a firm at a different stage of the same supply chain. It runs in two directions. <strong>Backward</strong> vertical integration is buying a supplier; <strong>forward</strong> vertical integration is buying a customer or outlet, closer to the consumer.</li><li><strong>Conglomerate integration</strong> — joining with a firm in an unrelated market.</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "integration",
+        "methods-of-growth"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-1-2-methods-of-growth.html",
+        "origin": "notes-verbatim",
+        "verbatim": "two businesses coming together under one owner, through a merger or a takeover."
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-2-eval-01",
+      "specCode": "2.1.2",
+      "topic": "2.1 Business Growth and Competitive Advantage",
+      "subtopic": "2-1-2-methods-of-growth",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> organic against inorganic growth. Which route is better for a firm?</p>",
+      "back": "<p><strong>Organic</strong></p><ul><li>Often paid for out of retained profit → little debt and no clash of cultures → lower risk, and the owners keep control.</li><li>But it is slow → a rival may win the market first, and the firm takes years to reach the scale where average cost is lowest.</li></ul><p><strong>Inorganic</strong></p><ul><li>Buying another firm brings instant market share and economies of scale: customers, staff and brands arrive at once.</li><li>But buyers usually pay above the firm's market value, often with borrowed money → interest costs rise. Paying with shares can dilute control, and if the two firms do not combine well, the promised savings never arrive.</li></ul><p><strong>Judgement:</strong> it depends on the finance available, since a small firm with modest profits may have no choice but to grow organically, and on how fast the market is moving, since in a fast-growing market waiting years to build up can mean losing it to rivals.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "methods-of-growth",
+        "organic-growth",
+        "inorganic-growth",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-1-2-methods-of-growth.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-2-chain-01",
+      "specCode": "2.1.2",
+      "topic": "2.1 Business Growth and Competitive Advantage",
+      "subtopic": "2-1-2-methods-of-growth",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chain of reasoning</strong>: how does horizontal integration affect the firm, consumers and workers?</p>",
+      "back": "<ul><li><strong>The firm:</strong> two rivals become one → bigger orders and shared costs → economies of scale and a larger market share → lower average cost and more market power.</li><li><strong>Consumers:</strong> one fewer competitor → less pressure on price → higher prices and less choice, unless the cost savings are passed on.</li><li><strong>Workers:</strong> two head offices and two sales teams doing the same job → one is cut → job losses.</li></ul><p>This is the type of integration the competition authorities watch most closely. In 2019 the CMA blocked a merger of Sainsbury's and Asda, finding it would lead to higher prices and lower quality and range for shoppers.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "integration",
+        "horizontal-integration",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-1-2-methods-of-growth.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-2-app-01",
+      "specCode": "2.1.2",
+      "topic": "2.1 Business Growth and Competitive Advantage",
+      "subtopic": "2-1-2-methods-of-growth",
+      "cardType": "application",
+      "front": "<p>A chocolate maker is planning a deal. Name the type of integration if it buys (a) a rival chocolate maker, (b) a cocoa supplier, (c) a chain of sweet shops or (d) a garden centre business. What should the analysis of each focus on?</p>",
+      "back": "<ul><li><strong>(a) Horizontal:</strong> the same industry at the same stage. Focus on <strong>market power</strong>: economies of scale and a bigger market share for the firm, but less competition for consumers.</li><li><strong>(b) Backward vertical:</strong> a supplier at an earlier stage. Focus on <strong>control of the supply chain</strong>: a secure supply, control over quality and cost, and the profit the supplier used to make.</li><li><strong>(c) Forward vertical:</strong> an outlet at a later stage, closer to the consumer. Focus on <strong>control of the supply chain</strong>: a guaranteed place to sell, and the shops' profit margin. The risk is running a business it does not know.</li><li><strong>(d) Conglomerate:</strong> an unrelated market. Focus on <strong>spreading risk</strong>: a fall in chocolate sales no longer hits the whole business, but there are few shared savings and its managers know little about garden centres.</li></ul><p>Name the type from what the two firms do. If the sweet shop chain bought the chocolate maker that supplies it, that would be <strong>backward vertical</strong> integration, not horizontal, even though both sell chocolate.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "integration",
+        "application"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-1-2-methods-of-growth.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-3-def-01",
+      "specCode": "2.1.3",
+      "topic": "2.1 Business Growth and Competitive Advantage",
+      "subtopic": "2-1-3-research-and-development-and-innovation",
+      "cardType": "definition",
+      "front": "<p>Define <strong>research and development (R&amp;D)</strong> and <strong>innovation</strong>. How is an invention different from an innovation?</p>",
+      "back": "<p><strong>Research and development (R&amp;D)</strong> — the work a business does to discover new knowledge and turn it into new products or new ways of making them.</p><p><strong>Innovation</strong> — turning a new idea into a product or process that is actually sold or used.</p><p>An <strong>invention</strong> is the idea itself. It only becomes an innovation when it reaches the market or the factory floor, and many inventions never do.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "r-and-d",
+        "innovation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-1-3-research-and-development-and-innovation.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the work a business does to discover new knowledge and turn it into new products or new ways of making them."
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-3-def-02",
+      "specCode": "2.1.3",
+      "topic": "2.1 Business Growth and Competitive Advantage",
+      "subtopic": "2-1-3-research-and-development-and-innovation",
+      "cardType": "definition",
+      "front": "<p>Distinguish <strong>product innovation</strong> from <strong>process innovation</strong>. How does each give a firm a competitive advantage?</p>",
+      "back": "<p><strong>Product innovation</strong> — a new or improved good or service, such as a bakery launching a gluten-free range.</p><p><strong>Process innovation</strong> — a new or improved way of producing or delivering a product, such as the same bakery installing ovens that bake twice as many loaves an hour.</p><ul><li><strong>Product:</strong> something rivals do not offer → the product is differentiated and demand becomes more price inelastic → the firm can charge a higher price → higher revenue and profit.</li><li><strong>Process:</strong> output per worker or per machine rises → lower average cost → the firm can cut its price to win customers, or keep it and take a wider margin.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "innovation",
+        "product-innovation",
+        "process-innovation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-1-3-research-and-development-and-innovation.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a new or improved good or service, such as a bakery launching a gluten-free range."
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-3-def-03",
+      "specCode": "2.1.3",
+      "topic": "2.1 Business Growth and Competitive Advantage",
+      "subtopic": "2-1-3-research-and-development-and-innovation",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>patent</strong>. Build the chain from R&amp;D to market power, and say how consumers gain and lose.</p>",
+      "back": "<p><strong>Patent</strong> — a legal right that lets an inventor take action against anyone who makes or sells their invention without permission. A UK patent lasts up to 20 years if it is renewed each year.</p><p>Successful R&amp;D → the firm patents the result → rivals cannot sell a copy → the firm is the only supplier and can set a high price → high profits for the life of the patent. That prospect is the incentive to spend on risky R&amp;D.</p><ul><li><strong>Consumers lose in the short run:</strong> one supplier → higher prices while the patent lasts.</li><li><strong>Consumers gain in the long run:</strong> the profit pays for more R&amp;D → new products that might not exist otherwise. When the patent ends, rivals enter and prices fall, as with cheaper copies of a medicine.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "patent",
+        "market-power",
+        "r-and-d"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-1-3-research-and-development-and-innovation.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a legal right that lets an inventor take action against anyone who makes or sells their invention without permission. A UK patent lasts up to 20 years if it is renewed each year."
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-3-eval-01",
+      "specCode": "2.1.3",
+      "topic": "2.1 Business Growth and Competitive Advantage",
+      "subtopic": "2-1-3-research-and-development-and-innovation",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> state funding of R&amp;D. Why do firms left to the market spend too little on it, and how well does government support work?</p>",
+      "back": "<p><strong>Why firms spend too little</strong></p><ul><li><strong>Spillovers:</strong> new knowledge spreads to other firms and to consumers, who gain without paying. This is a positive externality, so the firm that pays for the research does not get all the benefit.</li><li><strong>Risk:</strong> basic research may take decades to pay off, or never pay off at all.</li></ul><p><strong>For</strong></p><ul><li>Tax relief and grants → R&amp;D costs firms less → more projects are worth doing → more innovation → higher productivity and economic growth.</li></ul><p><strong>Against</strong></p><ul><li><strong>Choosing well:</strong> officials may back projects that fail, and have less at stake than an investor using their own money.</li><li><strong>Paying for what would have happened anyway:</strong> if a firm would have done the research without help, the subsidy just adds to its profit.</li></ul><p><strong>Judgement:</strong> left to the market, firms spend less on R&amp;D than is best for society, so there is a case for support. How well it works depends on backing the right projects, and on funding research that would not have happened without it.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "r-and-d",
+        "state-funding",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-1-3-research-and-development-and-innovation.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-3-diagram-01",
+      "specCode": "2.1.3",
+      "topic": "2.1 Business Growth and Competitive Advantage",
+      "subtopic": "2-1-3-research-and-development-and-innovation",
+      "cardType": "diagram",
+      "front": "<p>Sketch the <strong>product life cycle</strong>. Label the four stages and show an extension strategy. What happens to sales and profit at each stage?</p>",
+      "back": "<p><strong>Product life cycle</strong> — the stages a product's sales pass through over time, from launch to withdrawal.</p><p>Sales go up the side and time along the bottom.</p><ul><li><strong>Introduction:</strong> sales are low, as few customers know the product. Usually a loss, as R&amp;D and launch costs are still being paid.</li><li><strong>Growth:</strong> sales rise fast. Profit appears and cash flow turns positive, and rivals start to enter.</li><li><strong>Maturity:</strong> sales are high but level off. Profit is highest, as costs are spread over high sales.</li><li><strong>Decline:</strong> sales fall as tastes change or better products arrive, and profit falls.</li></ul><p>An <strong>extension strategy</strong> branches off just after decline begins and lifts sales again.</p>",
+      "svgRef": "/images/diagrams/svg/product-life-cycle.svg",
+      "svgAlt": "Product life cycle with sales on the vertical axis and time on the horizontal axis; the sales curve starts at zero, rises slowly through introduction, steeply through growth, levels off and peaks in maturity, and falls in decline, with dashed lines marking where each stage ends; just after decline begins, a second curve labelled extension strategy branches off and lifts sales back above their earlier peak",
+      "difficulty": "standard",
+      "tags": [
+        "product-life-cycle",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-1-3-research-and-development-and-innovation.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the stages a product's sales pass through over time, from launch to withdrawal."
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-3-def-04",
+      "specCode": "2.1.3",
+      "topic": "2.1 Business Growth and Competitive Advantage",
+      "subtopic": "2-1-3-research-and-development-and-innovation",
+      "cardType": "definition",
+      "front": "<p>Define an <strong>extension strategy</strong>, and give four examples. When is one worth it?</p>",
+      "back": "<p><strong>Extension strategy</strong> — action taken to lengthen a product's life by lifting sales when they level off or start to fall.</p><ul><li><strong>New markets:</strong> selling abroad or to a new type of customer.</li><li><strong>Repackaging or redesign:</strong> a new look, size or version that makes the product feel new.</li><li><strong>New uses:</strong> finding another reason to buy it.</li><li><strong>Price changes:</strong> a price cut or promotion to win back price-sensitive buyers.</li></ul><p>Sales rise again → more revenue from a product whose development is already paid for → cash to fund the next new product.</p><p>It is worth it only if the reason sales are falling can be fixed, since a new pack will not save a product that newer technology has replaced, and if the same budget would not earn more spent on a new product.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "product-life-cycle",
+        "extension-strategy"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-1-3-research-and-development-and-innovation.html",
+        "origin": "notes-verbatim",
+        "verbatim": "action taken to lengthen a product's life by lifting sales when they level off or start to fall."
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-4-def-01",
+      "specCode": "2.1.4",
+      "topic": "2.1 Business Growth and Competitive Advantage",
+      "subtopic": "2-1-4-the-digital-economy",
+      "cardType": "definition",
+      "front": "<p>Define <strong>viral marketing</strong> and <strong>micromarketing</strong>. How does each help a firm?</p>",
+      "back": "<p><strong>Viral marketing</strong> — marketing designed to be shared by the people who see it, so it spreads from person to person at little cost to the firm.</p><p>A video that goes viral reaches millions for the cost of making it, which lets a small firm compete with big advertising budgets. The catch is that nobody can be sure what will spread.</p><p><strong>Micromarketing</strong> — targeting very small groups of customers, or individuals, with products and offers tailored to them, using data on what they search for and buy.</p><p>Data shows what each customer wants → offers matched to them → more of them buy, and less is wasted on adverts nobody needs → higher sales per pound spent on marketing.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "digital-economy",
+        "viral-marketing",
+        "micromarketing"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-1-4-the-digital-economy.html",
+        "origin": "notes-verbatim",
+        "verbatim": "marketing designed to be shared by the people who see it, so it spreads from person to person at little cost to the firm."
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-4-chain-01",
+      "specCode": "2.1.4",
+      "topic": "2.1 Business Growth and Competitive Advantage",
+      "subtopic": "2-1-4-the-digital-economy",
+      "cardType": "chain",
+      "front": "<p>Define a <strong>price comparison site</strong>. Build the chain: how do these sites affect consumers and firms?</p>",
+      "back": "<p><strong>Price comparison site</strong> — a website that lists the prices of the same product from many sellers side by side, used for things such as energy, flights and broadband.</p><ul><li><strong>Consumers:</strong> comparing prices takes seconds → buyers find the cheapest seller → lower prices paid and more chance of switching.</li><li><strong>Firms:</strong> demand becomes more price elastic → a small price rise loses many sales → firms must compete on price → margins are squeezed, and the lowest-cost firms win.</li></ul><p>A standard product is judged on price alone, while a strong brand or a niche product keeps some pricing power.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "digital-economy",
+        "price-comparison",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-1-4-the-digital-economy.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a website that lists the prices of the same product from many sellers side by side, used for things such as energy, flights and broadband."
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-4-diagram-01",
+      "specCode": "2.1.4",
+      "topic": "2.1 Business Growth and Competitive Advantage",
+      "subtopic": "2-1-4-the-digital-economy",
+      "cardType": "diagram",
+      "front": "<p>Sketch the <strong>long tail</strong>. Why can an online seller profit from it when a shop cannot?</p>",
+      "back": "<p><strong>Long tail</strong> — the large number of niche products that each sell only a few units, but together can make up a big share of sales.</p><p>Sales go up the side and products, ranked by sales, along the bottom. The curve falls steeply across the <strong>head</strong>, a few best-sellers, then flattens into a long, low <strong>tail</strong> of niche products, shaded to show that together they add up.</p><p>A shop has room for only so many products, so it stocks the best-sellers. An online seller can list millions, because a listing costs almost nothing to keep. Each niche product sells only a few units, but together they add up, and customers with unusual tastes find what they want.</p>",
+      "svgRef": "/images/diagrams/svg/long-tail.svg",
+      "svgAlt": "The long tail, with sales on the vertical axis and products ranked by sales on the horizontal axis; the curve falls steeply across the first few products, labelled head: a few best-sellers, then flattens into a long, low tail running to the right, which is shaded and labelled long tail: many niche products",
+      "difficulty": "standard",
+      "tags": [
+        "digital-economy",
+        "long-tail",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-1-4-the-digital-economy.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the large number of niche products that each sell only a few units, but together can make up a big share of sales."
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-4-def-02",
+      "specCode": "2.1.4",
+      "topic": "2.1 Business Growth and Competitive Advantage",
+      "subtopic": "2-1-4-the-digital-economy",
+      "cardType": "definition",
+      "front": "<p>Define <strong>network effects</strong>. Why does the digital economy create many new firms, yet let a few platforms dominate?</p>",
+      "back": "<p><strong>Network effects</strong> — when a product becomes more useful to each user as more people use it.</p><ul><li><strong>Creation:</strong> start-up costs are low → a laptop and a website can be enough to start trading → many new firms enter → more choice for consumers and new jobs.</li><li><strong>Destruction:</strong> customers move online → high-street shops, travel agents and bank branches lose custom → closures and job losses.</li><li><strong>Dominance:</strong> a marketplace with more sellers attracts more buyers → more buyers attract more sellers → the platform keeps growing → it can come to dominate its market, and a new rival struggles to attract either side.</li></ul><p>So barriers to entry are lower, but network effects let a few online platforms grow very large.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "digital-economy",
+        "network-effects",
+        "creative-destruction"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-1-4-the-digital-economy.html",
+        "origin": "notes-verbatim",
+        "verbatim": "when a product becomes more useful to each user as more people use it."
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-4-eval-01",
+      "specCode": "2.1.4",
+      "topic": "2.1 Business Growth and Competitive Advantage",
+      "subtopic": "2-1-4-the-digital-economy",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> whether the digital economy raises a firm's profit.</p>",
+      "back": "<p><strong>For</strong></p><ul><li><strong>Lower costs:</strong> no shop rent, cheaper marketing and near-free distribution of digital products → lower average cost.</li><li><strong>Wider markets:</strong> a website can be seen anywhere → customers across the country or abroad → more sales, and economies of scale a local market could never support.</li></ul><p><strong>Against</strong></p><ul><li><strong>Lower prices:</strong> price comparison and rivals from anywhere → more price-elastic demand → lower prices.</li><li><strong>New costs:</strong> warehouses, delivery, returns, the website and its security, and scarce staff with digital skills.</li></ul><p><strong>Judgement:</strong> profit rises for firms whose costs fall faster than their prices, and turns to loss for those whose prices fall faster. It depends on whether the product can be sold online, since a hairdresser is barely affected while a seller of books, music or insurance is transformed, and on how differentiated it is.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "digital-economy",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-1-4-the-digital-economy.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-5-def-01",
+      "specCode": "2.1.5",
+      "topic": "2.1 Business Growth and Competitive Advantage",
+      "subtopic": "2-1-5-how-small-firms-compete",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>unique selling point (USP)</strong>. Build the chain: how does a USP help a small firm survive against larger rivals?</p>",
+      "back": "<p><strong>Unique selling point (USP)</strong> — a feature of a product or business that customers value and rivals do not offer.</p><p>Something customers cannot get elsewhere → fewer close substitutes → demand is more price inelastic → the firm can charge more than larger rivals without losing many sales → a margin high enough to survive on.</p><p>A small firm needs this because large rivals have economies of scale, so their average cost is usually lower, and matching their prices would mean a loss.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "small-firms",
+        "usp"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-1-5-how-small-firms-compete.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a feature of a product or business that customers value and rivals do not offer."
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-5-def-02",
+      "specCode": "2.1.5",
+      "topic": "2.1 Business Growth and Competitive Advantage",
+      "subtopic": "2-1-5-how-small-firms-compete",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>niche market</strong>. Why does targeting one suit a small firm, and what are the risks?</p>",
+      "back": "<p><strong>Niche market</strong> — a small, clearly defined part of a larger market, with its own particular needs.</p><p>Specialising lets a small firm become the expert. The niche is often too small for a large firm to bother with → little direct competition → loyal customers willing to pay a premium.</p><p><strong>Risks:</strong> the niche can shrink if tastes change, and a niche that grows can attract a large firm that brings its lower costs with it.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "small-firms",
+        "niche-market"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-1-5-how-small-firms-compete.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a small, clearly defined part of a larger market, with its own particular needs."
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-5-chain-01",
+      "specCode": "2.1.5",
+      "topic": "2.1 Business Growth and Competitive Advantage",
+      "subtopic": "2-1-5-how-small-firms-compete",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chains of reasoning</strong>: how do flexibility and customer service help a small firm compete?</p>",
+      "back": "<ul><li><strong>Flexibility:</strong> few layers of management, often just the owner → a customer asks for something unusual → the owner decides on the spot → the order is met within days → sales that a large firm's fixed range and procedures would miss. The range can change quickly too, while a chain waits for a decision from head office.</li><li><strong>Customer service:</strong> customers deal with the owner, who knows their names and what they bought last time → they feel valued → they come back and recommend the firm to friends → repeat sales and free word-of-mouth advertising, from customers who are less likely to switch for a lower price.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "small-firms",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-1-5-how-small-firms-compete.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-5-app-01",
+      "specCode": "2.1.5",
+      "topic": "2.1 Business Growth and Competitive Advantage",
+      "subtopic": "2-1-5-how-small-firms-compete",
+      "cardType": "application",
+      "front": "<p>An independent café competes with a national coffee chain. Apply <strong>relationships with stakeholders</strong>: how could its suppliers, employees and local community each give it an advantage?</p>",
+      "back": "<ul><li><strong>Suppliers:</strong> a long-standing local bakery → quick deliveries, help in a rush and sometimes longer to pay → lower stock costs and better cash flow.</li><li><strong>Employees:</strong> a small team that knows the owner and the regulars → higher motivation and fewer staff leaving → lower recruitment costs and better service.</li><li><strong>Local community:</strong> the café sponsors a local running club → goodwill and loyalty from people who want to support local businesses → more sales.</li></ul><p>Close relationships like these are a competitive advantage that size cannot buy, and a chain finds personal service and local ties hard to copy.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "small-firms",
+        "stakeholders",
+        "application"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-1-5-how-small-firms-compete.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-5-eval-01",
+      "specCode": "2.1.5",
+      "topic": "2.1 Business Growth and Competitive Advantage",
+      "subtopic": "2-1-5-how-small-firms-compete",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> whether a small firm can survive against large rivals without competing on price.</p>",
+      "back": "<p><strong>Why not compete on price?</strong> Large rivals have economies of scale and lower average cost. A small firm that tries to match their prices will make a loss, and cannot win a price war.</p><p><strong>For</strong></p><ul><li>A USP, flexibility, personal service, a niche and close stakeholder relationships all give customers a reason to pay a little more.</li></ul><p><strong>Against</strong></p><ul><li><strong>Copying:</strong> a large chain can copy an extra such as a free service, though it finds personal service and local ties harder to copy.</li><li><strong>The cost gap:</strong> customers pay a little more for service, but not much more. If the chain's prices are far lower, many will switch.</li></ul><p><strong>Judgement:</strong> it depends on the size of the cost gap. In trades where economies of scale are small, such as hairdressing, the gap may hardly exist. Where it is large, the small firm needs an advantage that a large rival would find hard to copy.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "small-firms",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-1-5-how-small-firms-compete.html",
+        "origin": "card-authored"
+      }
+    }
+  ]
+}
