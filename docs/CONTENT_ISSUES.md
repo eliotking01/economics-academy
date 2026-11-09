@@ -759,4 +759,7 @@ Format per entry:
   simplification. The wording is Eliot's call.
 - **Confidence** — medium (standard theory; the claim holds in the typical
   case and the page's own context).
-- **Status** — open.
+- **Status** — fixed (approved by Eliot 2026-11-09: "usually" added,
+  "...a capital-intensive firm usually has a higher break-even output than a
+  labour-intensive one". No glossary coupling, the sentence is not a chip.
+  The card `edexcel-b-2-3-1-def-02` stays without the clause).
