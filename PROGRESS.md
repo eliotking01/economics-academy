@@ -236,10 +236,10 @@ sheets: `05-website/drafts/all-boards-parity/review/flashcards-unit-X-Y.md`.
   the card text relies on is present. No SVG or card changed; nine of the
   SVGs are shared with the Edexcel A and AQA decks.
 - **Numbered PPF drawn, 2026-11-09:** `images/diagrams/svg/ppf-numbered.svg`
-  is a new file; `ppf-basic.svg` is untouched. No card uses it yet.
-- **Open:** Q2 in `review/flashcard-diagrams-theme-1.md`, whether
-  1.1.1 diagram-01 and calc-01 move to `ppf-numbered.svg` (svgRef and alt
-  text). Themes 2 to 4 not started.
+  is a new file; `ppf-basic.svg` is untouched. Q2 answered (a): 1.1.1
+  diagram-01 and calc-01 now use it, with alt text that gives the four
+  points' figures. Fronts and backs unchanged.
+- **Open:** Themes 2 to 4 not started.
 
 ### All-boards parity — Phase 1, Edexcel B practice questions (2026-10-25 to 2026-11-08) — LAUNCHED ON BRANCH, PUSHED, NOT MERGED (branch `feature/edexcel-b-questions`)
 

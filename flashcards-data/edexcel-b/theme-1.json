@@ -109,8 +109,8 @@
       "cardType": "diagram",
       "front": "<p>Sketch a <strong>PPF</strong> for capital goods and consumer goods. What does a point on the curve, a point inside it and a point outside it each show?</p>",
       "back": "<p><strong>On the curve</strong> (A, C, D, B): all the economy's resources are used, so making more of one good means making less of the other. Moving from C to D gains consumer goods at the opportunity cost of the capital goods given up.</p><p><strong>Inside</strong> (E): some resources are unemployed, so output of both goods could rise with no opportunity cost.</p><p><strong>Outside</strong> (F): out of reach with today's resources and technology.</p>",
-      "svgRef": "/images/diagrams/svg/ppf-basic.svg",
-      "svgAlt": "Bowed-out production possibility frontier for capital goods and consumer goods, with points A, C, D and B on the curve, point E inside it and point F outside it",
+      "svgRef": "/images/diagrams/svg/ppf-numbered.svg",
+      "svgAlt": "Bowed-out production possibility frontier for capital goods and consumer goods, with points on the curve at A (0 consumer goods, 100 capital goods), C (100, 95), D (190, 50) and B (200, 0), point E inside it and point F outside it",
       "difficulty": "standard",
       "tags": [
         "ppf",
@@ -134,7 +134,8 @@
       "cardType": "calculation",
       "front": "<p>Along a PPF, moving from A to C gains 100 consumer goods for 5 capital goods, C to D gains 90 for 45, and D to B gains 10 for 50. Calculate the <strong>opportunity cost of one extra consumer good</strong> for each move. What does the pattern show?</p>",
       "back": "<p>A to C: 5 ÷ 100 = <strong>0.05</strong> capital goods per consumer good.</p><p>C to D: 45 ÷ 90 = <strong>0.5</strong> capital goods.</p><p>D to B: 50 ÷ 10 = <strong>5</strong> capital goods.</p><p>The opportunity cost of each extra consumer good rises as the economy moves down the curve. Resources are not equally good at everything, so the last ones switched across are the least suited to making consumer goods. That is why a PPF bows outwards.</p>",
-      "svgRef": null,
+      "svgRef": "/images/diagrams/svg/ppf-numbered.svg",
+      "svgAlt": "Bowed-out production possibility frontier for capital goods and consumer goods, with points on the curve at A (0 consumer goods, 100 capital goods), C (100, 95), D (190, 50) and B (200, 0), point E inside it and point F outside it",
       "difficulty": "standard",
       "tags": [
         "ppf",
