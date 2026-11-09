@@ -1,0 +1,47 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">Production possibility frontier with figures</title>
+  <desc id="d">A concave production possibility frontier, PPF1, for capital goods and consumer goods. Points on the frontier: A at 0 consumer goods and 100 capital goods, C at 100 and 95, D at 190 and 50, and B at 200 and 0. Moving from C to D gains 90 consumer goods at the opportunity cost of 45 capital goods. Point E inside the frontier is inefficient; point F outside it is currently unattainable.</desc>
+  <!-- geometry
+       on-curve: 100,80 360,102 594,300 620,520
+  -->
+  <!-- scale: x = 100 + 2.6 x consumer goods; y = 520 - 4.4 x capital goods.
+       curve: superellipse (c/200)^2.8693 + (k/100)^2.8693 = 1, which passes
+       exactly through A, C, D and B; drawn as Catmull-Rom cubics with those
+       four points as knots. -->
+  <!-- guides -->
+  <line x1="100" y1="102" x2="360" y2="102" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="360" y1="102" x2="360" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="100" y1="300" x2="594" y2="300" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="594" y1="300" x2="594" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="44" font-size="26" fill="#333333">Capital goods</text>
+  <text x="700" y="588" font-size="26" fill="#333333" text-anchor="end">Consumer goods</text>
+  <!-- axis values: 100/95 are 22px apart and 190/200 26px apart, so each pair is nudged apart (by at most 6px) to keep a gap between them -->
+  <text x="84" y="85" font-size="24" fill="#333333" text-anchor="end">100</text>
+  <text x="84" y="113" font-size="24" fill="#333333" text-anchor="end">95</text>
+  <text x="84" y="308" font-size="24" fill="#333333" text-anchor="end">50</text>
+  <text x="84" y="528" font-size="24" fill="#333333" text-anchor="end">0</text>
+  <text x="100" y="550" font-size="24" fill="#333333" text-anchor="middle">0</text>
+  <text x="360" y="550" font-size="24" fill="#333333" text-anchor="middle">100</text>
+  <text x="601" y="550" font-size="24" fill="#333333" text-anchor="end">190</text>
+  <text x="613" y="550" font-size="24" fill="#333333">200</text>
+  <!-- curve -->
+  <path d="M100 80 C105 80 120.2 80 130.2 80 C140.3 80.1 150.3 80.2 160.4 80.3 C170.4 80.5 180.6 80.7 190.7 81 C200.7 81.4 210.7 81.8 220.7 82.3 C230.7 82.9 240.7 83.6 250.7 84.4 C260.7 85.3 270.6 86.3 280.6 87.5 C290.5 88.7 300.5 90.1 310.3 91.7 C320.2 93.3 331.6 95.6 339.8 97.3 C348.1 99 350.3 99.3 360 102 C369.7 104.7 386.8 109.6 397.8 113.3 C408.8 117 416.7 120.2 425.8 124.1 C435 128.1 444.1 132.4 452.9 137.1 C461.7 141.8 470.4 146.9 478.8 152.4 C487.1 157.9 495.3 163.8 503.1 170 C510.9 176.3 518.4 183 525.5 190.1 C532.5 197.2 539.3 204.7 545.6 212.5 C551.9 220.2 557.8 228.4 563.2 236.8 C568.6 245.2 573 252.3 578.1 262.9 C583.3 273.4 590.3 290.7 594 300 C597.7 309.3 597.9 310.8 600.1 318.8 C602.3 326.8 605.3 338.1 607.5 347.9 C609.6 357.7 611.3 367.7 612.8 377.6 C614.3 387.6 615.4 397.5 616.4 407.5 C617.3 417.5 618 427.5 618.5 437.5 C619 447.5 619.3 453.9 619.6 467.7 C619.8 481.4 619.9 511.3 620 520" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- points -->
+  <circle cx="100" cy="80" r="7" fill="#333333"/>
+  <circle cx="360" cy="102" r="7" fill="#333333"/>
+  <circle cx="594" cy="300" r="7" fill="#333333"/>
+  <circle cx="620" cy="520" r="7" fill="#333333"/>
+  <circle cx="238" cy="274" r="7" fill="#333333"/>
+  <circle cx="558" cy="159" r="7" fill="#333333"/>
+  <!-- labels -->
+  <text x="114" y="72" font-size="24" fill="#333333">A</text>
+  <text x="372" y="92" font-size="24" fill="#333333">C</text>
+  <text x="608" y="294" font-size="24" fill="#333333">D</text>
+  <text x="634" y="506" font-size="24" fill="#333333">B</text>
+  <text x="252" y="268" font-size="24" fill="#333333">E</text>
+  <text x="572" y="153" font-size="24" fill="#333333">F</text>
+  <text x="634" y="420" font-size="26" font-weight="700" fill="#1d70b8">PPF1</text>
+</svg>
