@@ -763,3 +763,30 @@ Format per entry:
   "...a capital-intensive firm usually has a higher break-even output than a
   labour-intensive one". No glossary coupling, the sentence is not a chip.
   The card `edexcel-b-2-3-1-def-02` stays without the clause).
+
+## 41. Edexcel B 2.5.3 says the ONS does not count RPI as an official statistic
+
+- **Location** — `revision-notes/edexcel-b-theme-2/2-5-3-inflation.html`,
+  "Price Indices: CPI and RPI", the RPI paragraph (source:
+  `notes-data/topics/edexcel-b-theme-2/2-5-3-inflation.html`).
+- **Issue** — the page reads "The ONS says RPI is not good enough to be an
+  official statistic, but still publishes it because some long-term
+  contracts are linked to it." RPI lost its *National Statistic* (now
+  "accredited official statistic") status in 2013, but it is still
+  produced and published as an official statistic. "Not good enough to be
+  an official statistic" overstates the downgrade. Found by the cold-solver
+  verify pass on Edexcel B flashcards unit 2.5 (`NOTES?` on
+  `edexcel-b-2-5-3-formula-01`). The card now says only "It is still
+  published because some long-term contracts are linked to it." It does
+  not rely on the doubtful clause.
+- **Proposed correction** — "The ONS no longer treats RPI as an accredited
+  National Statistic, because it is a poor measure of inflation, but still
+  publishes it because some long-term contracts are linked to it." Or,
+  simpler: "RPI is no longer an accredited National Statistic, but the ONS
+  still publishes it because some long-term contracts are linked to it."
+  The wording is Eliot's call.
+- **Confidence** — medium-high (the 2013 de-designation of RPI as a
+  National Statistic is well documented; checked from memory, not against
+  the ONS or UK Statistics Authority page in this session). Not a chip, so
+  no glossary coupling.
+- **Status** — open.

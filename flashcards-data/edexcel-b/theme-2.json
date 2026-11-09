@@ -2184,6 +2184,536 @@
         "notesPage": "/revision-notes/edexcel-b-theme-2/2-4-4-exchange-rates.html",
         "origin": "card-authored"
       }
+    },
+    {
+      "id": "edexcel-b-2-5-1-def-01",
+      "specCode": "2.5.1",
+      "topic": "2.5 The Economic Cycle",
+      "subtopic": "2-5-1-the-economic-cycle",
+      "cardType": "definition",
+      "front": "<p>Define the <strong>economic cycle</strong> and the <strong>trend rate of growth</strong>. What drives the cycle?</p>",
+      "back": "<p><strong>Economic cycle</strong> — the repeated rise and fall in economic activity, measured by real GDP, around the economy's long-term trend. It is also called the trade cycle or business cycle.</p><p><strong>Trend rate of growth</strong> — the average rate at which real GDP grows over many years, as the economy's capacity to produce rises.</p><p>Real GDP is the value of everything an economy produces, adjusted for inflation. Actual growth rarely matches the trend: some years it runs faster, some slower, and sometimes output falls.</p><p><strong>What drives it:</strong> mainly changes in spending, and each change feeds on itself. Confidence rises → households and firms spend and invest more → firms raise output and hire → incomes rise → spending rises again. A fall in confidence, a rise in interest rates or a sudden shock, such as a jump in energy prices, runs the same chain downwards.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "economic-cycle",
+        "trend-growth",
+        "real-gdp"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-5-1-the-economic-cycle.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the repeated rise and fall in economic activity, measured by real GDP, around the economy's long-term trend. It is also called the trade cycle or business cycle."
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-1-def-02",
+      "specCode": "2.5.1",
+      "topic": "2.5 The Economic Cycle",
+      "subtopic": "2-5-1-the-economic-cycle",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>boom</strong> and a <strong>recession</strong>, and compare what you would expect to see in each. If growth falls from 4% to 2%, is that a recession?</p>",
+      "back": "<p><strong>Boom</strong> — a period when real GDP grows faster than its trend rate and the economy is working at or near full capacity.</p><p><strong>Recession</strong> — a fall in real GDP for two consecutive quarters, that is, six months of negative economic growth.</p><ul><li><strong>Output:</strong> in a boom, real GDP rises above its trend rate. In a recession it shrinks, and firms have spare capacity.</li><li><strong>Unemployment:</strong> low in a boom, when firms struggle to fill vacancies and skills shortages appear. Rising in a recession, as firms cut jobs.</li><li><strong>Inflation:</strong> rising in a boom, as spending outgrows what firms can supply. Low in a recession, and prices can even fall.</li><li><strong>Confidence:</strong> high in a boom, so households borrow and firms invest. Low in a recession, so households save more and firms put off investment.</li><li><strong>Imports:</strong> more in a boom and fewer in a recession, as incomes rise and fall.</li><li><strong>Government finances:</strong> stronger in a boom. Weaker in a recession, as tax revenue falls and benefit spending rises, so borrowing goes up.</li></ul><p><strong>4% to 2% is not a recession.</strong> The economy is still growing, so real GDP is higher than a year ago. A recession needs real GDP itself to fall.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "boom",
+        "recession",
+        "economic-cycle"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-5-1-the-economic-cycle.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a period when real GDP grows faster than its trend rate and the economy is working at or near full capacity."
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-1-diagram-01",
+      "specCode": "2.5.1",
+      "topic": "2.5 The Economic Cycle",
+      "subtopic": "2-5-1-the-economic-cycle",
+      "cardType": "diagram",
+      "front": "<p>Sketch the <strong>economic cycle</strong> around the trend rate of growth. Label and describe its four phases.</p>",
+      "back": "<p>Real GDP goes up the side and time along the bottom. The trend rate of growth is a straight upward line, and actual output curves above and below it.</p><ul><li><strong>Boom (or peak):</strong> output grows faster than the trend and the economy works close to its full capacity. Output is above the trend line.</li><li><strong>Downturn (or slowdown):</strong> growth slows, and output drops back towards the trend.</li><li><strong>Recession (or slump):</strong> output falls, leaving the economy well below what it could produce. Its lowest point is called the trough.</li><li><strong>Recovery (or upturn, expansion):</strong> growth returns and output climbs back towards the trend.</li></ul>",
+      "svgRef": "/images/diagrams/svg/trade-cycle.svg",
+      "svgAlt": "Real GDP on the vertical axis and time on the horizontal axis; a straight upward line is labelled trend rate of growth, and actual output curves above it in a shaded area labelled boom, crosses back through it at the point labelled downturn, dips below it in a shaded area labelled recession, and rises back to it at the point labelled recovery",
+      "difficulty": "foundation",
+      "tags": [
+        "economic-cycle",
+        "trade-cycle",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-5-1-the-economic-cycle.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-1-chain-01",
+      "specCode": "2.5.1",
+      "topic": "2.5 The Economic Cycle",
+      "subtopic": "2-5-1-the-economic-cycle",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chains of reasoning</strong>: how do a boom and a recession affect a firm's costs, capacity and cash?</p>",
+      "back": "<p><strong>In a boom:</strong></p><ul><li><strong>Costs rise:</strong> firms compete for scarce staff and materials → wages and input prices go up → higher unit costs → margins shrink unless prices rise too.</li><li><strong>Capacity runs short:</strong> orders outgrow output → delivery times lengthen → customers go to rivals → lost sales unless the firm invests or hires.</li></ul><p><strong>In a recession:</strong></p><ul><li><strong>Cash gets tight:</strong> customers pay later and banks lend more cautiously → less cash coming in → firms struggle to pay suppliers and staff → a risk of failure, even for firms that were profitable.</li><li><strong>Some costs fall:</strong> more people are looking for work → easier to recruit and less pressure on pay → lower labour costs. Rents and material prices may ease too.</li></ul><p>Most firms sell more in a boom and less in a recession, but their costs tend to rise in a boom and ease in a recession.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "economic-cycle",
+        "firms",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-5-1-the-economic-cycle.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-1-eval-01",
+      "specCode": "2.5.1",
+      "topic": "2.5 The Economic Cycle",
+      "subtopic": "2-5-1-the-economic-cycle",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> how a firm might respond as the economy moves from boom into recession. What decides how hard it is hit?</p>",
+      "back": "<p><strong>How firms respond to a recession:</strong></p><ul><li><strong>Prices:</strong> hold or cut prices, and run promotions.</li><li><strong>Output and stock:</strong> cut output and run stock down.</li><li><strong>Staff:</strong> freeze hiring, cut hours or make redundancies.</li><li><strong>Investment:</strong> delay projects and close loss-making sites.</li><li><strong>Products:</strong> push value ranges and smaller pack sizes.</li></ul><p><strong>What decides how hard it is hit:</strong></p><ul><li><strong>What it sells:</strong> sellers of luxuries feel each swing most and sellers of necessities least. Sellers of inferior goods move the opposite way.</li><li><strong>How much it borrows:</strong> a firm with large debts struggles when sales fall and when rates rise. One with cash reserves can ride out a recession, and even buy weaker rivals cheaply.</li><li><strong>How deep and long the recession is:</strong> a short, mild slowdown can be absorbed with stock and cash. A long recession forces job cuts and closures.</li></ul><p><strong>Judgement:</strong> a firm with little debt that sells necessities or value ranges is hit least, and may even gain. The deeper and longer the recession, the more even a strong firm has to cut jobs and capacity.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "economic-cycle",
+        "recession",
+        "firms",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-5-1-the-economic-cycle.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-2-diagram-01",
+      "specCode": "2.5.2",
+      "topic": "2.5 The Economic Cycle",
+      "subtopic": "2-5-2-circular-flow-of-income",
+      "cardType": "diagram",
+      "front": "<p>Sketch the <strong>circular flow of income</strong> between households and firms. Why should output, income and expenditure give the same answer?</p>",
+      "back": "<p><strong>Circular flow of income</strong> — a model of how money moves round an economy, from firms to households as income and back to firms as spending.</p><p>Firms are at the top and households at the bottom.</p><ul><li><strong>Households to firms:</strong> households own the factors of production (land, labour, capital and enterprise), and firms hire them. Households also spend their income on firms' goods and services.</li><li><strong>Firms to households:</strong> firms pay for the factors with income (rent, wages, interest and profit), and supply goods and services.</li></ul><p>Each money flow pays for a real flow going the other way: income pays for the factors of production, and spending pays for the goods and services.</p><p><strong>Output, income and expenditure</strong> are three ways of measuring national income, the size of the economy. In theory they match, because every pound spent on a product is a pound of income for whoever helped make it.</p>",
+      "svgRef": "/images/diagrams/svg/circular-flow-of-income.svg",
+      "svgAlt": "Circular flow with firms at the top and households at the bottom; on the right an arrow runs from firms to households, labelled goods and services inside the circle and income (rent, wages, interest, profit) outside it; on the left an arrow runs from households to firms, labelled expenditure on goods and services inside the circle and factors of production (land, labour, capital, enterprise) outside it",
+      "difficulty": "foundation",
+      "tags": [
+        "circular-flow",
+        "national-income",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-5-2-circular-flow-of-income.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a model of how money moves round an economy, from firms to households as income and back to firms as spending."
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-2-def-01",
+      "specCode": "2.5.2",
+      "topic": "2.5 The Economic Cycle",
+      "subtopic": "2-5-2-circular-flow-of-income",
+      "cardType": "definition",
+      "front": "<p>Define an <strong>injection</strong> and a <strong>withdrawal</strong>. Pair each injection with the withdrawal from the same sector, and state when the circular flow is in equilibrium.</p>",
+      "back": "<p><strong>Injection</strong> — spending that enters the circular flow from outside the household-firm loop: investment, government spending and exports.</p><p><strong>Withdrawal</strong> — income that leaves the circular flow instead of being spent on the country's own output: saving, taxation and imports. Withdrawals are also called leakages.</p><ul><li><strong>Financial:</strong> investment (I), firms spending on machinery, buildings and equipment, against saving (S), income households put aside instead of spending.</li><li><strong>Government:</strong> government spending (G), on public services such as schools, hospitals and roads, against taxation (T).</li><li><strong>Overseas:</strong> exports (X), spending by foreign buyers on UK goods and services, against imports (M), spending by UK buyers on goods and services from abroad.</li></ul><p><strong>Equilibrium:</strong> the flow is stable when injections equal withdrawals: I + G + X = S + T + M.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "injections",
+        "withdrawals",
+        "circular-flow"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-5-2-circular-flow-of-income.html",
+        "origin": "notes-verbatim",
+        "verbatim": "spending that enters the circular flow from outside the household-firm loop: investment, government spending and exports."
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-2-diagram-02",
+      "specCode": "2.5.2",
+      "topic": "2.5 The Economic Cycle",
+      "subtopic": "2-5-2-circular-flow-of-income",
+      "cardType": "diagram",
+      "front": "<p>Sketch the circular flow with <strong>injections and withdrawals</strong>. Explain what happens to national income when injections rise above withdrawals, and when withdrawals rise above injections.</p>",
+      "back": "<p>Firms are at the top and households at the bottom. Government spending, investment and exports arrow into the circle; taxation, savings and imports arrow out of it.</p><ul><li><strong>Injections above withdrawals, so the flow grows:</strong> foreign demand for UK goods rises → exporters sell more → they take on staff and pay more in wages → those workers spend more in UK shops → sales, output and jobs rise across the economy.</li><li><strong>Withdrawals above injections, so the flow shrinks:</strong> worried households save more → less is spent in shops → firms sell less and cut output and jobs → incomes fall, so spending falls again.</li></ul><p>Each round of spending becomes someone else's income, so the final change in national income is bigger than the first one. This is the <strong>multiplier effect</strong>.</p><p><strong>The size of the impact depends on</strong> spare capacity (near full capacity, extra spending mostly raises prices) and on where withdrawals go next: banks lend savings on to firms to invest, and taxes pay for government spending, so a withdrawal can come back in as an injection.</p>",
+      "svgRef": "/images/diagrams/svg/circular-flow-of-income-injections-withdrawals.svg",
+      "svgAlt": "Circular flow with firms at the top and households at the bottom; three arrows on the left point into the circle, labelled government spending, investment and exports, and three arrows on the right point out of it, labelled taxation, savings and imports",
+      "difficulty": "standard",
+      "tags": [
+        "injections",
+        "withdrawals",
+        "multiplier",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-5-2-circular-flow-of-income.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-2-formula-01",
+      "specCode": "2.5.2",
+      "topic": "2.5 The Economic Cycle",
+      "subtopic": "2-5-2-circular-flow-of-income",
+      "cardType": "formula",
+      "front": "<p>Define <strong>aggregate demand</strong> and state its formula. What changes each component? Is a rise in the state pension part of G?</p>",
+      "back": "<p><strong>Aggregate demand (AD)</strong> — total planned spending on a country's goods and services over a period of time. It has four components:</p><ul><li><strong>Consumption (C):</strong> household spending, the largest component. Changed by real incomes, interest rates, confidence about jobs, house prices and how easy it is to borrow.</li><li><strong>Investment (I):</strong> firms' spending on capital goods. Changed by expected future sales, interest rates, retained profit, business confidence and new technology.</li><li><strong>Government spending (G):</strong> on public services and infrastructure. Changed by government priorities, the state of its finances and the economic cycle.</li><li><strong>Net exports (X − M):</strong> exports minus imports. Changed by the exchange rate, incomes at home and abroad, trade barriers, and UK prices and quality compared with rivals'.</li></ul><p>A cut in Bank Rate makes borrowing cheaper → households spend more and firms invest more → C and I rise → AD rises.</p><p><strong>A pension rise is not G.</strong> G is spending on goods and services, such as nurses' pay or a new road. Benefits and state pensions are transfers: the government buys nothing in return. They enter AD only when the people who receive them spend the money, as C.</p>",
+      "formula": "AD = C + I + G + (X - M)",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "aggregate-demand",
+        "formula"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-5-2-circular-flow-of-income.html",
+        "origin": "notes-verbatim",
+        "verbatim": "total planned spending on a country's goods and services over a period of time. It has four components:"
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-2-chain-01",
+      "specCode": "2.5.2",
+      "topic": "2.5 The Economic Cycle",
+      "subtopic": "2-5-2-circular-flow-of-income",
+      "cardType": "chain",
+      "front": "<p>Define <strong>aggregate supply</strong>. Build the chains: how do the cost of inputs and productivity change it?</p>",
+      "back": "<p><strong>Aggregate supply (AS)</strong> — the total output that firms in an economy are willing and able to produce at each price level.</p><ul><li><strong>The cost of inputs and resources:</strong> wages, energy or raw material prices rise → it costs more to produce each unit → firms raise prices or supply less → AS falls, so output falls and prices rise. Cheaper inputs run the chain the other way, and a weaker pound works like a price rise for firms that import materials.</li><li><strong>Productivity:</strong> better training, equipment or methods → more output from each worker → lower unit costs → firms can supply more at the same prices → AS rises, so output grows without pushing up prices.</li></ul><p><strong>The effect depends on</strong> how long the change lasts (a short spike in oil prices against a lasting gain in productivity) and how much the input matters: a rise in energy prices hits a steelworks far harder than a software firm.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "aggregate-supply",
+        "productivity",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-5-2-circular-flow-of-income.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the total output that firms in an economy are willing and able to produce at each price level."
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-3-def-01",
+      "specCode": "2.5.3",
+      "topic": "2.5 The Economic Cycle",
+      "subtopic": "2-5-3-inflation",
+      "cardType": "definition",
+      "front": "<p>Define <strong>inflation</strong>, <strong>deflation</strong> and <strong>disinflation</strong>. Inflation falls from 5% to 2%, then from 2% to −0.5%: name each change.</p>",
+      "back": "<p><strong>Inflation</strong> — a sustained rise in the general level of prices in an economy over time.</p><p><strong>Deflation</strong> — a sustained fall in the general price level, so the rate of inflation is negative.</p><p><strong>Disinflation</strong> — a fall in the rate of inflation. Prices are still rising, but more slowly.</p><p>The rate of inflation is the percentage rise in the price level over a year.</p><ul><li><strong>5% to 2%:</strong> disinflation. Prices are still rising, just more slowly.</li><li><strong>2% to −0.5%:</strong> deflation. Prices are now falling.</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "inflation",
+        "deflation",
+        "disinflation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-5-3-inflation.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a sustained rise in the general level of prices in an economy over time."
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-3-formula-01",
+      "specCode": "2.5.3",
+      "topic": "2.5 The Economic Cycle",
+      "subtopic": "2-5-3-inflation",
+      "cardType": "formula",
+      "front": "<p>What is a <strong>price index</strong>? How is the CPI built, how does the RPI differ, and how do you turn index numbers into a rate of inflation?</p>",
+      "back": "<p><strong>Price index</strong> — a number that shows the price level in one period compared with a base period, which is set at 100.</p><ul><li><strong>CPI:</strong> the UK's main measure. The government sets the Bank of England a target of 2% CPI inflation. Each month the ONS records the prices of a basket of goods and services that households typically buy, and weights each item by its share of household spending, so a rise in energy prices moves the index more than a rise in the price of tea.</li><li><strong>RPI:</strong> an older measure. It includes housing costs that the CPI leaves out, such as mortgage interest payments and council tax, and it is usually higher than the CPI. It is still published because some long-term contracts are linked to it.</li></ul><p><strong>An index number is not a rate of inflation.</strong> To find the rate, take the percentage change in the index from one year to the next.</p>",
+      "formula": "\\text{Rate} = \\frac{\\text{New index} - \\text{Old index}}{\\text{Old index}} \\times 100",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "price-index",
+        "cpi",
+        "rpi",
+        "formula"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-5-3-inflation.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a number that shows the price level in one period compared with a base period, which is set at 100."
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-3-calc-01",
+      "specCode": "2.5.3",
+      "topic": "2.5 The Economic Cycle",
+      "subtopic": "2-5-3-inflation",
+      "cardType": "calculation",
+      "front": "<p>A gym's revenue is <strong>£150,000</strong> in 2023, <strong>£162,240</strong> in 2024 and <strong>£172,480</strong> in 2025. The price index (2023 = 100) is <strong>104</strong> in 2024 and <strong>112</strong> in 2025.</p><p>(a) Calculate the rate of inflation in 2024 and 2025. (b) Calculate real revenue in 2024 and 2025 at 2023 prices. (c) Did the gym really sell more in 2025?</p>",
+      "back": "<p><strong>Nominal value</strong> — a value measured in the prices of the time, with no adjustment for inflation. Figures at current prices are nominal.</p><p><strong>Real value</strong> — a value adjusted for inflation, so it shows what has happened to the amount bought or produced. Figures at constant prices are real: they are valued at the prices of one base year.</p><ul><li><strong>(a) Inflation:</strong> 2024: (104 − 100) ÷ 100 × 100 = <strong>4.0%</strong>. 2025: (112 − 104) ÷ 104 × 100 = <strong>7.7%</strong>, not 8%: divide by the old index, not by 100.</li><li><strong>(b) Real revenue:</strong> 2024: £162,240 ÷ 104 × 100 = <strong>£156,000</strong>. 2025: £172,480 ÷ 112 × 100 = <strong>£154,000</strong>.</li><li><strong>(c) No.</strong> At current prices revenue rose 6.3% in 2025, but at constant 2023 prices it fell 1.3%, because prices rose faster than the gym's takings.</li></ul>",
+      "formula": "\\text{Real value} = \\frac{\\text{Nominal value}}{\\text{Price index}} \\times 100",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "real-and-nominal",
+        "price-index",
+        "calculation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-5-3-inflation.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a value measured in the prices of the time, with no adjustment for inflation. Figures at current prices are nominal."
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-3-diagram-01",
+      "specCode": "2.5.3",
+      "topic": "2.5 The Economic Cycle",
+      "subtopic": "2-5-3-inflation",
+      "cardType": "diagram",
+      "front": "<p>Define <strong>demand-pull inflation</strong> and show it on an AD/AS diagram. What could set it off?</p>",
+      "back": "<p><strong>Demand-pull inflation</strong> — inflation caused by aggregate demand rising faster than the economy can increase its output.</p><p>The price level goes up the side and real GDP along the bottom. AD shifts right from <strong>AD1 to AD2</strong> along an upward-sloping SRAS curve. The price level rises from <strong>PL1 to PL2</strong>, and real GDP rises from Y1 to Y2.</p><p><strong>The chain:</strong> interest rates are cut, taxes fall or confidence rises → households and firms spend more → firms near full capacity cannot raise output fast enough → they raise prices, and the price level rises.</p>",
+      "svgRef": "/images/diagrams/svg/ad-shift-right.svg",
+      "svgAlt": "Price level on the vertical axis and real GDP on the horizontal axis; aggregate demand shifts right from AD1 to AD2 along an upward-sloping SRAS curve, so the price level rises from PL1 to PL2 and real GDP rises from Y1 to Y2",
+      "difficulty": "standard",
+      "tags": [
+        "demand-pull-inflation",
+        "ad-as",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-5-3-inflation.html",
+        "origin": "notes-verbatim",
+        "verbatim": "inflation caused by aggregate demand rising faster than the economy can increase its output."
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-3-diagram-02",
+      "specCode": "2.5.3",
+      "topic": "2.5 The Economic Cycle",
+      "subtopic": "2-5-3-inflation",
+      "cardType": "diagram",
+      "front": "<p>Define <strong>cost-push inflation</strong> and show it on an AD/AS diagram. How does its effect on output differ from demand-pull inflation?</p>",
+      "back": "<p><strong>Cost-push inflation</strong> — inflation caused by rising costs of production, which firms pass on as higher prices.</p><p>The price level goes up the side and real GDP along the bottom. SRAS shifts left from <strong>SRAS1 to SRAS2</strong> along a downward-sloping AD curve. The price level rises from <strong>PL1 to PL2</strong>, and real GDP falls from Y1 to Y2.</p><p><strong>The chain:</strong> wages, energy, raw materials or indirect taxes rise, or a weaker pound makes imported inputs dearer → unit costs rise → firms raise prices to protect their margins → the price level rises while output falls.</p><p><strong>The difference:</strong> demand-pull raises output as well as prices; cost-push cuts output. The two can feed each other: workers ask for higher pay to keep up with prices, which raises firms' costs and pushes prices up again.</p>",
+      "svgRef": "/images/diagrams/svg/sras-shift-left.svg",
+      "svgAlt": "Price level on the vertical axis and real GDP on the horizontal axis; short-run aggregate supply shifts left from SRAS1 to SRAS2 along a downward-sloping AD curve, so the price level rises from PL1 to PL2 and real GDP falls from Y1 to Y2",
+      "difficulty": "standard",
+      "tags": [
+        "cost-push-inflation",
+        "ad-as",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-5-3-inflation.html",
+        "origin": "notes-verbatim",
+        "verbatim": "inflation caused by rising costs of production, which firms pass on as higher prices."
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-3-eval-01",
+      "specCode": "2.5.3",
+      "topic": "2.5 The Economic Cycle",
+      "subtopic": "2-5-3-inflation",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> the impact of high inflation on firms and on individuals. Who loses, who gains, and what decides how much?</p>",
+      "back": "<p><strong>Firms:</strong></p><ul><li><strong>Uncertainty:</strong> costs and prices change quickly and unpredictably → firms cannot forecast costs, revenue or the return on a new project with confidence → they put off investment → slower growth and fewer new jobs.</li><li><strong>Lost competitiveness:</strong> UK prices rise faster than rivals' abroad → UK exports look dear and imports look cheap → UK firms lose orders overseas and sales at home.</li></ul><p><strong>Individuals:</strong></p><ul><li><strong>Real income falls</strong> when prices rise faster than pay. People on fixed incomes, and those whose pay rises late, are hit hardest. A 2% pay rise with 5% inflation is a real pay cut of about 3%.</li><li><strong>Savers lose</strong> when inflation is above the interest rate on their savings: the money saved buys less each year.</li><li><strong>Borrowers gain:</strong> debts are fixed in pounds, so as prices and wages rise the debt becomes smaller in real terms.</li></ul><p><strong>It depends on:</strong> how high and predictable inflation is; whether UK inflation is above that in rival countries (a fall in the pound can offset it); whether pay, pensions and benefits keep up; and interest rates. The Bank of England usually raises rates to bring inflation down, which helps savers but makes variable-rate borrowers pay more.</p><p><strong>Judgement:</strong> steady inflation of about 2% is easy to plan around. High, unpredictable inflation does the most harm, to investment and to anyone whose income does not keep up, and borrowers' gain can be wiped out once interest rates rise.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "inflation",
+        "firms",
+        "individuals",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-5-3-inflation.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-4-def-01",
+      "specCode": "2.5.4",
+      "topic": "2.5 The Economic Cycle",
+      "subtopic": "2-5-4-employment-and-unemployment",
+      "cardType": "definition",
+      "front": "<p>Define <strong>employment</strong>, <strong>unemployment</strong> and <strong>underemployment</strong>. Is a retired person who is not looking for work unemployed?</p><p>31mn people are in work and 1.4mn are unemployed. Calculate the unemployment rate.</p>",
+      "back": "<p><strong>Employment</strong> — people doing paid work, whether full-time, part-time or self-employed. In UK figures, one hour of paid work a week is enough to count.</p><p><strong>Unemployment</strong> — people of working age who have no job but are available for work and actively looking for it.</p><p><strong>Underemployment</strong> — people in work who want more hours than they can get, or whose job makes little use of their skills. A trained chef working ten hours a week in a shop, because that is all she can find, is underemployed.</p><p><strong>No.</strong> People without a job who are not looking for one, such as full-time students, retired people and carers, are <strong>economically inactive</strong>, not unemployed.</p><p><strong>Unemployment rate:</strong> the unemployed as a percentage of everyone in work or looking for it. 1.4 ÷ (31 + 1.4) × 100 = <strong>4.3%</strong>. Dividing by the 31mn in work alone gives the wrong answer.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "employment",
+        "unemployment",
+        "underemployment"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-5-4-employment-and-unemployment.html",
+        "origin": "notes-verbatim",
+        "verbatim": "people of working age who have no job but are available for work and actively looking for it."
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-4-def-02",
+      "specCode": "2.5.4",
+      "topic": "2.5 The Economic Cycle",
+      "subtopic": "2-5-4-employment-and-unemployment",
+      "cardType": "definition",
+      "front": "<p>Compare the <strong>claimant count</strong> and the <strong>ILO measure</strong> of unemployment: who counts, where the data comes from, and a strength and weakness of each.</p>",
+      "back": "<ul><li><strong>Claimant count:</strong> people claiming benefits because they are out of work: Jobseeker's Allowance, or Universal Credit with a requirement to look for work. It comes from government benefit records.<ul><li><strong>Strength:</strong> cheap to collect, monthly, and covers every claimant.</li><li><strong>Weakness:</strong> misses unemployed people who cannot or do not claim, and changes to benefit rules change the count. It also includes some low-paid part-time workers seeking more work.</li></ul></li><li><strong>ILO measure:</strong> people without a job who have looked for work in the past four weeks and can start within the next two. It comes from the Labour Force Survey, which asks a sample of households about their work.<ul><li><strong>Strength:</strong> counts people whether or not they claim, and uses an international definition, so countries can be compared.</li><li><strong>Weakness:</strong> costly, and a sample can be wrong, especially if few households reply.</li></ul></li></ul><p>The two can move differently. Someone whose partner earns too much for them to get benefits can be ILO unemployed without ever appearing as a claimant.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "claimant-count",
+        "ilo-unemployment",
+        "measurement"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-5-4-employment-and-unemployment.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-4-def-03",
+      "specCode": "2.5.4",
+      "topic": "2.5 The Economic Cycle",
+      "subtopic": "2-5-4-employment-and-unemployment",
+      "cardType": "definition",
+      "front": "<p>Define <strong>structural</strong> and <strong>technological unemployment</strong>. A coal mine closes while hospitals in a city 100 miles away are hiring. Why might the miners stay out of work?</p>",
+      "back": "<p><strong>Structural unemployment</strong> — unemployment caused by the long-term decline of an industry, which leaves workers whose skills or location no longer match the jobs available.</p><p><strong>Technological unemployment</strong> — unemployment caused by machines or software doing work that people used to do, such as self-service checkouts replacing cashiers. It is a form of structural unemployment: new technology also creates jobs, but usually different ones, needing different skills.</p><p>The decline may come from falling demand, new technology or production moving abroad. The miners face two kinds of factor immobility:</p><ul><li><strong>Occupational immobility:</strong> they lack the skills or qualifications for the jobs on offer, and retraining takes time and money.</li><li><strong>Geographical immobility:</strong> they cannot move to where the jobs are, because housing there costs more or they have family ties where they live.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "structural-unemployment",
+        "technological-unemployment",
+        "immobility"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-5-4-employment-and-unemployment.html",
+        "origin": "notes-verbatim",
+        "verbatim": "unemployment caused by the long-term decline of an industry, which leaves workers whose skills or location no longer match the jobs available."
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-4-chain-01",
+      "specCode": "2.5.4",
+      "topic": "2.5 The Economic Cycle",
+      "subtopic": "2-5-4-employment-and-unemployment",
+      "cardType": "chain",
+      "front": "<p>Define <strong>demand-deficient unemployment</strong> and build its chain of reasoning. How would you tell it apart from structural unemployment in a case study, and why does it matter?</p>",
+      "back": "<p><strong>Demand-deficient unemployment</strong> — unemployment caused by too little aggregate demand. It rises in a recession, so it is also called cyclical unemployment.</p><p><strong>The chain:</strong> households and firms spend less → firms sell less → they need fewer workers, because labour is a derived demand → they stop hiring and make redundancies → the newly unemployed spend less, and the cycle deepens.</p><p><strong>Telling them apart:</strong></p><ul><li>Job losses across many industries during a recession are <strong>demand-deficient</strong>.</li><li>Job losses in one declining industry or region, while other sectors are hiring, are <strong>structural</strong>.</li></ul><p><strong>Why it matters:</strong> the cure is different. More spending helps demand-deficient unemployment, but only retraining or new local jobs help structural unemployment.</p><p>Frictional unemployment, the short gaps while people move between jobs, is usually brief and is not one of the causes the spec lists.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "demand-deficient-unemployment",
+        "cyclical-unemployment",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-5-4-employment-and-unemployment.html",
+        "origin": "notes-verbatim",
+        "verbatim": "unemployment caused by too little aggregate demand. It rises in a recession, so it is also called cyclical unemployment"
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-4-eval-01",
+      "specCode": "2.5.4",
+      "topic": "2.5 The Economic Cycle",
+      "subtopic": "2-5-4-employment-and-unemployment",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> the impact of rising unemployment on firms and on individuals.</p>",
+      "back": "<p><strong>Firms:</strong></p><ul><li><strong>Lower sales:</strong> people lose their jobs and others fear for theirs → household income and confidence fall → spending falls, especially on luxuries → lower sales and profit. Discount retailers can gain as shoppers trade down.</li><li><strong>Cheaper recruitment:</strong> more applicants for each vacancy → jobs are easier to fill and there is less pressure to raise pay → lower labour costs.</li></ul><p><strong>Individuals:</strong></p><ul><li><strong>Loss of income:</strong> a worker loses their job → they rely on savings, benefits or borrowing → their real income and living standards fall.</li><li><strong>Lost skills:</strong> the longer someone is out of work → the more their skills and confidence fade → the harder it is to get hired → lower pay even after they find work. Firms that hire them face higher training costs.</li><li><strong>Health:</strong> money worries and losing a routine → stress and poorer mental health.</li></ul><p><strong>It depends on</strong> how long it lasts and where it is concentrated. Structural unemployment hits one town or region, so local shops and suppliers suffer most, while firms elsewhere barely notice.</p><p><strong>Judgement:</strong> a short spell between jobs does little lasting harm. Long-term unemployment does the most damage, because it erodes skills and income, and the harm is greatest where job losses are concentrated in one place.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "unemployment",
+        "firms",
+        "individuals",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-5-4-employment-and-unemployment.html",
+        "origin": "card-authored"
+      }
     }
   ]
 }
