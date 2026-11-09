@@ -230,6 +230,11 @@ sheets: `05-website/drafts/all-boards-parity/review/flashcards-unit-X-Y.md`.
   `CONTENT_ISSUES.md` #38 and #39 fixed; 1.5.2 "a larger share of a poorer
   household's income"), and the excess-demand/supply SVG `<desc>` text
   aligned to Qd/Qs.
+- **Theme 1 diagrams approved (Eliot, 2026-11-09):** each of the 11 diagram
+  cards' SVGs rendered headless and compared with its notes-page PNG in
+  `review/flashcard-diagrams-theme-1.md`. Every label, curve and number
+  the card text relies on is present. No SVG or card changed; nine of the
+  SVGs are shared with the Edexcel A and AQA decks.
 - **Open:** a numbered PPF SVG for 1.1.1 is queued in
   `review/flashcard-diagrams-theme-1.md`. Themes 2 to 4 not started.
 
