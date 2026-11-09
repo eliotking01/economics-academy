@@ -1642,6 +1642,548 @@
         "notesPage": "/revision-notes/edexcel-b-theme-2/2-3-4-impact-on-costs-and-sales-revenue.html",
         "origin": "card-authored"
       }
+    },
+    {
+      "id": "edexcel-b-2-4-1-def-01",
+      "specCode": "2.4.1",
+      "topic": "2.4 Life in a Global Economy",
+      "subtopic": "2-4-1-globalisation",
+      "cardType": "definition",
+      "front": "<p>Define <strong>globalisation</strong>. What are its three characteristics?</p>",
+      "back": "<p><strong>Globalisation</strong> — the growing integration of the world's economies, as goods, services, money and people move more freely between countries.</p><ul><li><strong>Increased investment flows:</strong> more <strong>foreign direct investment (FDI)</strong> — money a firm invests in another country to set up, buy or expand a business it controls there, such as a factory, an office or a chain of shops. Investors also buy more foreign shares and bonds without taking control.</li><li><strong>World trade rising as a share of world GDP:</strong> trade has grown faster than output, so more of what the world produces is sold across a border.</li><li><strong>Increased migration:</strong> more people live and work outside the country they were born in. This widens the pool of workers firms can recruit.</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "globalisation",
+        "fdi"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-4-1-globalisation.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the growing integration of the world's economies, as goods, services, money and people move more freely between countries."
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-1-def-02",
+      "specCode": "2.4.1",
+      "topic": "2.4 Life in a Global Economy",
+      "subtopic": "2-4-1-globalisation",
+      "cardType": "definition",
+      "front": "<p>Define <strong>trade liberalisation</strong> and <strong>capital market liberalisation</strong>. How has each contributed to globalisation?</p>",
+      "back": "<p><strong>Trade liberalisation</strong> — the reduction or removal of barriers to trade, such as tariffs (taxes on imports) and quotas (limits on the quantity that can be imported).</p><p><strong>Capital market liberalisation</strong> — the removal of controls on moving money into and out of a country, so that firms and investors can invest abroad freely.</p><ul><li><strong>Trade liberalisation:</strong> tariffs cut through WTO talks and by joining trading blocs such as the EU → imported goods are cheaper and firms face fewer barriers selling abroad → more goods and services cross borders.</li><li><strong>Capital market liberalisation:</strong> controls removed, as the UK did in 1979 → investors can move money to wherever the returns are highest → more FDI and more buying of foreign shares and bonds → firms can raise finance abroad and set up operations overseas.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "globalisation",
+        "trade-liberalisation",
+        "capital-market-liberalisation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-4-1-globalisation.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the reduction or removal of barriers to trade, such as tariffs (taxes on imports) and quotas (limits on the quantity that can be imported)."
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-1-def-03",
+      "specCode": "2.4.1",
+      "topic": "2.4 Life in a Global Economy",
+      "subtopic": "2-4-1-globalisation",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>transnational company</strong>. How does the growth of global companies add to globalisation?</p>",
+      "back": "<p><strong>Transnational company</strong> — a business with operations, such as factories, offices or shops, in more than one country. It is also called a multinational corporation (MNC).</p><p>A transnational opens a factory abroad → money flows into that country as FDI → parts and finished goods move between its own sites in different countries → trade and investment both grow.</p><p>The factors feed each other. Cheaper shipping made it worthwhile to build factories in China once it opened up, and capital market liberalisation let transnationals move the money to do it.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "globalisation",
+        "transnational-company"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-4-1-globalisation.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a business with operations, such as factories, offices or shops, in more than one country. It is also called a multinational corporation (MNC)."
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-1-chain-01",
+      "specCode": "2.4.1",
+      "topic": "2.4 Life in a Global Economy",
+      "subtopic": "2-4-1-globalisation",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chains of reasoning</strong>: how have political change in China and the former Soviet Union, and cheaper transport and communications, driven globalisation?</p>",
+      "back": "<ul><li><strong>Political change:</strong> China opened up from the late 1970s and joined the WTO in 2001. The Soviet Union broke up in 1991, and Russia and Eastern Europe moved towards market economies → well over a billion workers and consumers join the world economy → firms can make goods where labour is cheap and sell to new markets → cheaper manufactured goods in UK shops, and more trade and FDI.</li><li><strong>Cheaper transport and communications:</strong> container shipping makes it far cheaper to move goods across the world, and the internet does the same for information → a firm can manage suppliers and factories on the other side of the world → production is split across countries, with each stage done where it costs least → more trade in parts as well as finished goods.</li></ul><p>The internet also lets services such as customer support be supplied from another country.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "globalisation",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-4-1-globalisation.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-1-app-01",
+      "specCode": "2.4.1",
+      "topic": "2.4 Life in a Global Economy",
+      "subtopic": "2-4-1-globalisation",
+      "cardType": "application",
+      "front": "<p>Sort each into a <strong>characteristic</strong> of globalisation or a <strong>factor</strong> that caused it:</p><p>(a) container shipping; (b) more money crossing borders as firms invest abroad; (c) China joining the WTO; (d) more people working outside the country they were born in; (e) the UK scrapping its controls on taking money out of the country; (f) trade growing faster than world output.</p>",
+      "back": "<ul><li><strong>Characteristics</strong> (what globalisation looks like): (b) increased investment flows; (d) increased migration; (f) world trade rising as a share of world GDP.</li><li><strong>Factors</strong> (what caused it): (a) reduced cost of transport; (c) political change in China; (e) capital market liberalisation.</li></ul><p>If a question asks <strong>why</strong> globalisation has happened, describing rising trade earns little. Explain how a factor led to it.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "globalisation",
+        "application"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-4-1-globalisation.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-2-def-01",
+      "specCode": "2.4.2",
+      "topic": "2.4 Life in a Global Economy",
+      "subtopic": "2-4-2-developed-emerging-and-developing-economies",
+      "cardType": "definition",
+      "front": "<p>Define <strong>GDP per capita</strong>, the <strong>literacy rate</strong> and the <strong>Human Development Index (HDI)</strong>. How is health usually measured?</p>",
+      "back": "<p><strong>GDP per capita</strong> — real GDP divided by the population, giving the average income per person. To compare countries, it is usually adjusted for differences in the cost of living.</p><p><strong>Literacy rate</strong> — the percentage of adults, aged 15 and over, who can read and write.</p><p><strong>Human Development Index (HDI)</strong> — a United Nations measure that combines health (life expectancy), education (years of schooling) and income (GNI per capita) into one score between 0 and 1.</p><p><strong>Health</strong> is usually measured by <strong>life expectancy</strong> at birth or the <strong>infant mortality rate</strong> (deaths of babies under one year old per 1,000 live births).</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "development",
+        "gdp-per-capita",
+        "hdi"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-4-2-developed-emerging-and-developing-economies.html",
+        "origin": "notes-verbatim",
+        "verbatim": "real GDP divided by the population, giving the average income per person. To compare countries, it is usually adjusted for differences in the cost of living."
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-2-def-02",
+      "specCode": "2.4.2",
+      "topic": "2.4 Life in a Global Economy",
+      "subtopic": "2-4-2-developed-emerging-and-developing-economies",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>developed</strong>, an <strong>emerging</strong> and a <strong>developing</strong> economy. How do they differ?</p>",
+      "back": "<p><strong>Developed economy</strong> — a high-income economy, also called a mature economy, where most people work in services and growth is slow but steady.</p><p><strong>Emerging economy</strong> — an economy moving from developing to developed, with fast growth, expanding industry and rising incomes.</p><p><strong>Developing economy</strong> — a low-income economy where many people work in farming and literacy and life expectancy are lower.</p><p>In the order developed; emerging; developing:</p><ul><li><strong>Main sector:</strong> services; manufacturing growing fast; farming and raw materials.</li><li><strong>Population:</strong> slow growth and ageing; a growing middle class, moving to the cities; fast growth, young and mostly rural.</li><li><strong>HDI:</strong> very high; medium to high; low to medium.</li><li><strong>Examples:</strong> UK, Germany, Japan; Brazil, India, China; Malawi, Niger, Mozambique.</li></ul><p>These are broad groups, not exact categories. An emerging economy can have modern, high-tech cities alongside poor rural areas that look more like a developing economy.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "development",
+        "emerging-economies"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-4-2-developed-emerging-and-developing-economies.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a high-income economy, also called a mature economy, where most people work in services and growth is slow but steady."
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-2-chain-01",
+      "specCode": "2.4.2",
+      "topic": "2.4 Life in a Global Economy",
+      "subtopic": "2-4-2-developed-emerging-and-developing-economies",
+      "cardType": "chain",
+      "front": "<p>Compare the growth of the <strong>UK</strong> and the <strong>BRIC</strong> economies since 2000. Why can poorer economies grow faster?</p>",
+      "back": "<p><strong>BRIC</strong> stands for Brazil, Russia, India and China: four large economies grouped together because they were expected to grow much faster than high-income economies.</p><ul><li><strong>China and India grew fastest</strong>, by a wide margin.</li><li><strong>Brazil and Russia slowed sharply.</strong> Both grew quickly in the 2000s, helped by high prices for the commodities they export, such as oil and soya. Since 2010 their growth has been close to the UK's.</li><li><strong>The UK grew slowly but steadily</strong>, which is typical of a mature economy.</li></ul><p><strong>Catching up:</strong> poorer economies copy technology that richer countries already use, and move workers from low-output farming into factories, where each worker produces far more → output rises quickly → faster growth.</p><p><strong>A faster growth rate does not mean a richer country.</strong> China has grown far faster than the UK, but its GDP per capita is still much lower. Growth rates show how quickly output is changing; GDP per capita and the HDI show how well off people are.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "economic-growth",
+        "bric",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-4-2-developed-emerging-and-developing-economies.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-2-eval-01",
+      "specCode": "2.4.2",
+      "topic": "2.4 Life in a Global Economy",
+      "subtopic": "2-4-2-developed-emerging-and-developing-economies",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> GDP per capita as a measure of how well off people in a country are. What do the other indicators add?</p>",
+      "back": "<p><strong>Strength:</strong> GDP per capita is easy to calculate and available for almost every country.</p><p><strong>Limitations:</strong> it is an average, so it hides how unequally income is shared, and it misses unpaid and unrecorded work.</p><p><strong>The other indicators:</strong></p><ul><li><strong>Literacy:</strong> shows whether people have the basic skills to get better-paid work, but it is close to 100% in high-income countries, so it cannot tell them apart.</li><li><strong>Health:</strong> measures something people value directly, living longer, but it can be held back by things other than income, such as disease or conflict.</li><li><strong>HDI:</strong> combines income, health and education, so it gives a broader picture than any one measure. It is still an average, and ignores inequality and damage to the environment.</li></ul><p><strong>Judgement:</strong> GDP per capita is the easiest comparison, but the HDI gives a broader picture of whether growth is improving people's lives. Neither shows how income is shared, so compare the mean and median incomes too: a wide gap between them is a sign of inequality.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "development",
+        "gdp-per-capita",
+        "hdi",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-4-2-developed-emerging-and-developing-economies.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-2-calc-01",
+      "specCode": "2.4.2",
+      "topic": "2.4 Life in a Global Economy",
+      "subtopic": "2-4-2-developed-emerging-and-developing-economies",
+      "cardType": "calculation",
+      "front": "<p>Define <strong>mean income</strong> and <strong>median income</strong>.</p><p>Five people earn <strong>£21,000</strong>, <strong>£105,000</strong>, <strong>£14,000</strong>, <strong>£33,000</strong> and <strong>£27,000</strong> a year. Calculate the mean and the median. Which is the better guide to a typical income?</p>",
+      "back": "<p><strong>Mean income</strong> — total income divided by the number of people, the ordinary average.</p><p><strong>Median income</strong> — the income of the person in the middle when everyone is ranked from lowest to highest income.</p><ul><li><strong>Mean:</strong> total £200,000 ÷ 5 = <strong>£40,000</strong>.</li><li><strong>Median:</strong> ranked, £14,000, £21,000, £27,000, £33,000, £105,000. The middle one is <strong>£27,000</strong>.</li></ul><p>One high income pulls the mean up to £40,000, more than four of the five people earn. The <strong>median</strong> is the better guide to a typical income, and official UK figures on household income lead with it. A wide gap between the two is a sign of inequality.</p>",
+      "formula": "\\text{Mean income} = \\frac{\\text{Total income}}{\\text{Number of people}}",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "mean-income",
+        "median-income",
+        "calculation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-4-2-developed-emerging-and-developing-economies.html",
+        "origin": "notes-verbatim",
+        "verbatim": "total income divided by the number of people, the ordinary average."
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-3-def-01",
+      "specCode": "2.4.3",
+      "topic": "2.4 Life in a Global Economy",
+      "subtopic": "2-4-3-international-trade",
+      "cardType": "definition",
+      "front": "<p>Define <strong>absolute advantage</strong> and <strong>comparative advantage</strong>. Which one decides what a country should specialise in?</p>",
+      "back": "<p><strong>Absolute advantage</strong> — when one country can make more of a good than another country with the same quantity of resources.</p><p><strong>Comparative advantage</strong> — when one country's opportunity cost of making a good is lower than another country's, so it gives up less of other goods to make it.</p><p><strong>Comparative advantage decides.</strong> Each country should specialise in the goods it makes at the lowest opportunity cost, then trade. Each can then consume more than it could make alone.</p><p>A country that is better at making everything still gains from trade, by specialising in the goods where its lead is largest and importing the rest.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "comparative-advantage",
+        "absolute-advantage",
+        "specialisation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-4-3-international-trade.html",
+        "origin": "notes-verbatim",
+        "verbatim": "when one country can make more of a good than another country with the same quantity of resources."
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-3-diagram-01",
+      "specCode": "2.4.3",
+      "topic": "2.4 Life in a Global Economy",
+      "subtopic": "2-4-3-international-trade",
+      "cardType": "diagram",
+      "front": "<p>Sketch two countries' <strong>PPFs</strong>: Germany can make up to 20mn computer chips or 200mn T-shirts, and Vietnam up to 10mn chips or 150mn T-shirts. Who has the absolute advantage, and who has the comparative advantage in each good?</p>",
+      "back": "<p>T-shirts go up the side and computer chips along the bottom. Both PPFs are straight lines. Germany's runs from 200mn T-shirts to 20mn chips and lies wholly outside Vietnam's, which runs from 150mn T-shirts to 10mn chips.</p><ul><li><strong>Absolute advantage:</strong> Germany, in both goods, as its PPF lies outside Vietnam's.</li><li><strong>Opportunity cost of 1 chip:</strong> Germany 200 ÷ 20 = 10 T-shirts; Vietnam 150 ÷ 10 = 15 T-shirts. Germany gives up fewer, so its comparative advantage is in <strong>chips</strong>.</li><li><strong>Opportunity cost of 1 T-shirt:</strong> Germany 20 ÷ 200 = 0.1 chips; Vietnam 10 ÷ 150 = 0.07 chips. Vietnam's comparative advantage is in <strong>T-shirts</strong>.</li></ul><p>Both gain from specialising and trading as long as a chip swaps for between 10 and 15 T-shirts.</p>",
+      "svgRef": "/images/diagrams/svg/comparative-advantage.svg",
+      "svgAlt": "Two straight-line production possibility frontiers with T-shirts on the vertical axis and computer chips on the horizontal axis; PPF (Germany) runs from 200mn T-shirts to 20mn computer chips and lies wholly outside PPF (Vietnam), which runs from 150mn T-shirts to 10mn computer chips",
+      "difficulty": "standard",
+      "tags": [
+        "comparative-advantage",
+        "ppf",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-4-3-international-trade.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-3-calc-01",
+      "specCode": "2.4.3",
+      "topic": "2.4 Life in a Global Economy",
+      "subtopic": "2-4-3-international-trade",
+      "cardType": "calculation",
+      "front": "<p>Country A can make <strong>30mn phones or 90mn bags of coffee</strong>. Country B can make <strong>10mn phones or 60mn bags of coffee</strong>.</p><p>(a) Work out each country's opportunity cost of 1 phone, and say which good each should specialise in. (b) Each specialises fully, then A swaps <strong>5mn phones for 25mn bags</strong>. Show that both gain.</p>",
+      "back": "<ul><li><strong>(a) Opportunity cost of 1 phone:</strong> A 90 ÷ 30 = <strong>3 bags</strong>; B 60 ÷ 10 = <strong>6 bags</strong>. A gives up less, so A specialises in <strong>phones</strong>. A bag costs A one third of a phone and B one sixth, so B specialises in <strong>coffee</strong>. A has the absolute advantage in both, but that does not decide it.</li><li><strong>(b) Fully specialised:</strong> A makes 30mn phones and B makes 60mn bags.</li><li><strong>A after trading:</strong> 25mn phones and 25mn bags. Alone, making 25mn phones would leave it (30 − 25) × 3 = 15mn bags. <strong>Gain: 10mn bags.</strong></li><li><strong>B after trading:</strong> 5mn phones and 35mn bags. Alone, making 5mn phones would leave it 60 − (5 × 6) = 30mn bags. <strong>Gain: 5mn bags.</strong></li></ul><p>Both consume beyond their own PPF. Both gain as long as a phone swaps for between 3 and 6 bags.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "comparative-advantage",
+        "opportunity-cost",
+        "calculation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-4-3-international-trade.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-3-def-02",
+      "specCode": "2.4.3",
+      "topic": "2.4 Life in a Global Economy",
+      "subtopic": "2-4-3-international-trade",
+      "cardType": "definition",
+      "front": "<p>Define <strong>exports</strong>, <strong>imports</strong>, <strong>visible trade</strong> and <strong>invisible trade</strong>. Classify each for the UK:</p><p>(a) an American tourist spending money in London; (b) a UK family on holiday in Spain; (c) a UK carmaker selling cars in France; (d) a UK supermarket buying bananas from Colombia.</p>",
+      "back": "<p><strong>Exports</strong> — goods and services produced in one country and sold to buyers in another, so money flows into the exporting country.</p><p><strong>Imports</strong> — goods and services bought from another country, so money flows out.</p><p><strong>Visible trade</strong> — trade in goods, things you can see and touch, such as cars, medicines or oil.</p><p><strong>Invisible trade</strong> — trade in services, such as banking, insurance, tourism and education.</p><ul><li>(a) <strong>Invisible export:</strong> money comes into the UK.</li><li>(b) <strong>Invisible import:</strong> money goes out.</li><li>(c) <strong>Visible export.</strong></li><li>(d) <strong>Visible import.</strong></li></ul><p>What matters is which way the money flows, not where the people go. The UK imports more goods than it exports but exports more services than it imports.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "visible-trade",
+        "invisible-trade",
+        "exports",
+        "imports"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-4-3-international-trade.html",
+        "origin": "notes-verbatim",
+        "verbatim": "trade in goods, things you can see and touch, such as cars, medicines or oil."
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-3-chain-01",
+      "specCode": "2.4.3",
+      "topic": "2.4 Life in a Global Economy",
+      "subtopic": "2-4-3-international-trade",
+      "cardType": "chain",
+      "front": "<p>Define a <strong>trading bloc</strong>. Then build the <strong>chains of reasoning</strong>: how can international trade raise a country's economic growth, and what limits the gain?</p>",
+      "back": "<p><strong>Trading bloc</strong> — a group of countries that agree to reduce or remove barriers to trade between themselves, such as the EU. Firms inside a bloc can sell to the other members without tariffs, which gives them a larger home market.</p><ul><li><strong>Exports:</strong> foreign demand for UK goods rises → UK firms sell more and expand output → they hire more workers, whose spending raises demand further → higher real GDP.</li><li><strong>Bigger markets:</strong> firms sell to the world, not just one country → they produce on a larger scale → economies of scale lower their average costs → more competitive prices and higher profits to invest.</li><li><strong>Competition:</strong> imports compete with home producers → firms must cut costs and improve products to survive → higher productivity, which raises the economy's capacity to grow.</li></ul><p><strong>The gain depends on:</strong></p><ul><li><strong>Imports as well as exports:</strong> spending on imports leaves the country, so if imports replace home production, the gain from exports is partly offset.</li><li><strong>What the country exports:</strong> a country relying on raw materials, whose prices swing widely, gets less steady growth than one exporting a mix of goods and services.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "international-trade",
+        "trading-bloc",
+        "economic-growth",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-4-3-international-trade.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a group of countries that agree to reduce or remove barriers to trade between themselves, such as the EU."
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-3-eval-01",
+      "specCode": "2.4.3",
+      "topic": "2.4 Life in a Global Economy",
+      "subtopic": "2-4-3-international-trade",
+      "cardType": "evaluation",
+      "front": "<p>Cheap imported clothes and electronics flood into the UK. <strong>Evaluate</strong> the effect on UK standards of living.</p>",
+      "back": "<p><strong>Standard of living</strong> — the quantity and quality of goods and services people can afford, which depends on their real income.</p><ul><li><strong>Consumers gain:</strong> imports cost less → each pound buys more → real incomes rise → a higher standard of living, with more choice too.</li><li><strong>Firms using imported inputs gain:</strong> cheaper materials and components → lower costs → lower prices for their own customers, or higher profit.</li><li><strong>Competing UK producers lose:</strong> cheap imports win customers from them → sales and profits fall → factories close and jobs go → lower incomes for workers in those industries and the towns that depend on them.</li></ul><p><strong>It depends on:</strong></p><ul><li><strong>Whether workers find new jobs:</strong> if they can retrain or move into growing industries, the loss is short term. If their skills don't fit and the jobs are elsewhere, they can stay unemployed for years.</li><li><strong>Why the imports are cheap:</strong> low prices from lower costs or better methods are a genuine gain. Prices kept low by poor safety standards, or by selling below cost to win a market, can hurt consumers and UK firms later.</li></ul><p><strong>Judgement:</strong> consumers gain, but the losses fall on particular workers and towns. Living standards rise overall when the imports are cheap because they are made at lower cost, and when the workers who lose their jobs can move into growing industries.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "cheap-imports",
+        "standard-of-living",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-4-3-international-trade.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the quantity and quality of goods and services people can afford, which depends on their real income."
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-4-def-01",
+      "specCode": "2.4.4",
+      "topic": "2.4 Life in a Global Economy",
+      "subtopic": "2-4-4-exchange-rates",
+      "cardType": "definition",
+      "front": "<p>Define <strong>appreciation</strong> and <strong>depreciation</strong>. What decides the value of the pound?</p>",
+      "back": "<p><strong>Appreciation</strong> — a rise in the value of a currency against another, such as the pound rising from $1.30 to $1.40.</p><p><strong>Depreciation</strong> — a fall in the value of a currency against another, such as the pound falling from $1.30 to $1.20.</p><p>The pound has a <strong>floating exchange rate</strong>: its value is set by the demand for and supply of pounds on the foreign exchange market.</p><ul><li><strong>Pounds are demanded by</strong> anyone abroad who needs them: foreign buyers of UK goods and services, foreign firms investing in the UK, and savers moving money into UK banks.</li><li><strong>Pounds are supplied by</strong> UK households and firms changing them into other currencies to buy imports or invest abroad.</li></ul><p><strong>Check which way round the rate is written.</strong> If £1 = $1.30, a higher number means a stronger pound. If $1 = £0.77, a higher number means a weaker pound.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "exchange-rates",
+        "appreciation",
+        "depreciation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-4-4-exchange-rates.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a rise in the value of a currency against another, such as the pound rising from $1.30 to $1.40."
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-4-diagram-01",
+      "specCode": "2.4.4",
+      "topic": "2.4 Life in a Global Economy",
+      "subtopic": "2-4-4-exchange-rates",
+      "cardType": "diagram",
+      "front": "<p>Sketch the market for pounds showing an <strong>appreciation</strong>. Give three things that could cause it.</p>",
+      "back": "<p>The exchange rate goes up the side and the quantity of pounds along the bottom. Demand for pounds shifts right from <strong>D1 to D2</strong> along an unchanged supply curve S. The exchange rate rises from <strong>P1 to P2</strong>, and the quantity of pounds rises from Q1 to Q2.</p><ul><li><strong>Interest rates:</strong> UK rates rise compared with rates abroad → saving in the UK pays more → foreign savers buy pounds → demand for pounds rises.</li><li><strong>Demand for exports:</strong> foreign demand for UK goods rises → buyers need more pounds to pay for them → demand for pounds rises.</li><li><strong>Speculation:</strong> traders expect the pound to rise → they buy it now to profit later → demand for pounds rises.</li></ul>",
+      "svgRef": "/images/diagrams/svg/exchange-rate-appreciation.svg",
+      "svgAlt": "Market for pounds with exchange rate on the vertical axis and quantity of pounds on the horizontal axis; demand shifts right from D1 to D2 along an unchanged supply curve S, so the exchange rate rises from P1 to P2 and quantity rises from Q1 to Q2",
+      "difficulty": "standard",
+      "tags": [
+        "exchange-rates",
+        "appreciation",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-4-4-exchange-rates.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-4-diagram-02",
+      "specCode": "2.4.4",
+      "topic": "2.4 Life in a Global Economy",
+      "subtopic": "2-4-4-exchange-rates",
+      "cardType": "diagram",
+      "front": "<p>Sketch the market for pounds showing a <strong>depreciation</strong> caused by an increase in the supply of pounds. What could cause the increase?</p>",
+      "back": "<p>The exchange rate goes up the side and the quantity of pounds along the bottom. Supply of pounds shifts right from <strong>S1 to S2</strong> along an unchanged demand curve D. The exchange rate falls from <strong>P1 to P2</strong>, while the quantity of pounds rises from Q1 to Q2.</p><ul><li><strong>Spending on imports:</strong> UK spending on imports rises → UK households and firms change more pounds into other currencies to pay for them → supply of pounds rises.</li><li><strong>Speculation:</strong> traders expect the pound to fall → they sell it → supply of pounds rises.</li></ul>",
+      "svgRef": "/images/diagrams/svg/exchange-rate-depreciation.svg",
+      "svgAlt": "Market for pounds with exchange rate on the vertical axis and quantity of pounds on the horizontal axis; supply shifts right from S1 to S2 along an unchanged demand curve D, so the exchange rate falls from P1 to P2 and quantity rises from Q1 to Q2",
+      "difficulty": "standard",
+      "tags": [
+        "exchange-rates",
+        "depreciation",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-4-4-exchange-rates.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-4-calc-01",
+      "specCode": "2.4.4",
+      "topic": "2.4 Life in a Global Economy",
+      "subtopic": "2-4-4-exchange-rates",
+      "cardType": "calculation",
+      "front": "<p>The exchange rate moves from <strong>£1 = €1.20</strong> to <strong>£1 = €1.05</strong>.</p><p>(a) Calculate the percentage change, and say whether the pound has appreciated or depreciated. (b) Convert a UK firm's <strong>£40</strong> kettle into euros at each rate. (c) Convert the sterling cost of a <strong>€600</strong> component the firm imports at each rate.</p>",
+      "back": "<ul><li><strong>(a)</strong> (1.05 − 1.20) ÷ 1.20 × 100 = <strong>−12.5%</strong>. Each pound buys fewer euros, so the pound has <strong>depreciated</strong>.</li><li><strong>(b) Multiply by the rate:</strong> 40 × 1.20 = <strong>€48</strong>, then 40 × 1.05 = <strong>€42</strong>. The kettle is 12.5% cheaper for buyers paying in euros.</li><li><strong>(c) Divide by the rate:</strong> 600 ÷ 1.20 = <strong>£500</strong>, then 600 ÷ 1.05 = <strong>£571</strong>. The component is about 14.3% dearer for the UK firm.</li></ul><p>The firm's exports become more price competitive, but its imported components cost more. The net effect depends on which is larger.</p>",
+      "formula": "\\text{Foreign price} = \\text{Sterling price} \\times \\text{Rate}",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "exchange-rates",
+        "depreciation",
+        "calculation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-4-4-exchange-rates.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-4-def-02",
+      "specCode": "2.4.4",
+      "topic": "2.4 Life in a Global Economy",
+      "subtopic": "2-4-4-exchange-rates",
+      "cardType": "definition",
+      "front": "<p>Define the <strong>effective exchange rate</strong>. The sterling effective exchange rate index falls from <strong>90</strong> to <strong>81</strong>. What does this tell you, and why might a single firm need more than this?</p>",
+      "back": "<p><strong>Effective exchange rate</strong> — the value of a currency against a basket of other currencies, with each weighted by how much the country trades with it. It is also called the trade-weighted exchange rate.</p><ul><li><strong>Why it is needed:</strong> the pound can rise against the dollar while falling against the euro, so no single exchange rate shows whether it is stronger overall.</li><li><strong>The fall:</strong> (81 − 90) ÷ 90 × 100 = −10%. The pound has depreciated by 10% on average against the currencies of the UK's trading partners.</li><li><strong>The level:</strong> the Bank of England's index has January 2005 = 100, so 81 means the pound is worth 19% less on average than then.</li></ul><p>The effective rate shows what is happening to UK firms as a whole. A single firm still needs the rate for the currency it actually trades in: an exporter selling only to the US cares about the dollar.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "exchange-rates",
+        "effective-exchange-rate"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-4-4-exchange-rates.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the value of a currency against a basket of other currencies, with each weighted by how much the country trades with it. It is also called the trade-weighted exchange rate."
+      }
+    },
+    {
+      "id": "edexcel-b-2-4-4-eval-01",
+      "specCode": "2.4.4",
+      "topic": "2.4 Life in a Global Economy",
+      "subtopic": "2-4-4-exchange-rates",
+      "cardType": "evaluation",
+      "front": "<p>The pound depreciates sharply. <strong>Evaluate</strong> the impact on UK firms.</p>",
+      "back": "<ul><li><strong>Exporters gain:</strong> each UK product costs less in foreign currency → the firm can cut its foreign price and win more sales, or keep the price and earn more pounds on each one → higher revenue and profit.</li><li><strong>Importers lose:</strong> materials and components priced in dollars or euros cost more pounds → higher unit costs → the firm raises its prices and loses some sales, or keeps its prices and accepts a lower margin.</li><li><strong>Firms competing with imports gain:</strong> imported rivals cost more in UK shops → customers switch to UK-made products → higher sales for UK producers.</li></ul><p><strong>It depends on:</strong></p><ul><li><strong>How much the firm imports as well as exports:</strong> many exporters buy parts from abroad, so a weaker pound raises their costs while it helps their sales. The net effect depends on which is larger.</li><li><strong>Price elasticity of demand:</strong> if foreign buyers are price-sensitive, a lower foreign price wins many extra sales. A strong brand sells on quality, so the exchange rate matters less.</li><li><strong>Size and duration of the change:</strong> firms rarely switch suppliers or markets over a brief dip. A big fall that persists for a year or more can make them rethink where they source parts and which countries they target.</li></ul><p><strong>Judgement:</strong> the biggest winners export price-sensitive products, or compete with imports, and buy their inputs in the UK. The biggest losers buy most of their inputs abroad and export little.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "exchange-rates",
+        "depreciation",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-09",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-2/2-4-4-exchange-rates.html",
+        "origin": "card-authored"
+      }
     }
   ]
 }
