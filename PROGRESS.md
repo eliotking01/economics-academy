@@ -239,6 +239,15 @@ sheets: `05-website/drafts/all-boards-parity/review/flashcards-unit-X-Y.md`.
   is a new file; `ppf-basic.svg` is untouched. Q2 answered (a): 1.1.1
   diagram-01 and calc-01 now use it, with alt text that gives the four
   points' figures. Fronts and backs unchanged.
+- **Theme 1 QA applied (Eliot, 2026-11-09, all four fixes approved):**
+  `review/qa-flashcards-theme-1.md` found no high or medium defects. The
+  1.2.5 interest-rate chip now uses 1.4.1's wording ("…or the reward for
+  saving it, shown as a percentage of the amount borrowed or saved per
+  year"), and card 1.2.5 def-01 follows it. Three shared SVGs get label
+  clearance under `DIAGRAM_STYLE.md`'s 8px rule: `excess-demand.svg`'s
+  "Excess demand" gains a white halo over the guides, and the "Government
+  expenditure" / "Government revenue" labels move off the P1 guide. Those
+  three also change the live Edexcel A and AQA decks at the next push.
 - **Open:** Themes 2 to 4 not started.
 
 ### All-boards parity — Phase 1, Edexcel B practice questions (2026-10-25 to 2026-11-08) — LAUNCHED ON BRANCH, PUSHED, NOT MERGED (branch `feature/edexcel-b-questions`)

@@ -31,7 +31,7 @@
   <line x1="300" y1="375" x2="420" y2="375" stroke="#333333" stroke-width="2"/>
   <line x1="300" y1="369" x2="300" y2="381" stroke="#333333" stroke-width="2"/>
   <line x1="420" y1="369" x2="420" y2="381" stroke="#333333" stroke-width="2"/>
-  <text x="360" y="405" font-size="22" fill="#333333" text-anchor="middle">Excess demand</text>
+  <text x="360" y="405" font-size="22" fill="#333333" text-anchor="middle" paint-order="stroke" stroke="#ffffff" stroke-width="6" stroke-linejoin="round">Excess demand</text>
   <!-- labels -->
   <text x="598" y="62" font-size="26" font-weight="700" fill="#1d70b8">S</text>
   <text x="558" y="498" font-size="26" font-weight="700" fill="#1d70b8">D</text>
