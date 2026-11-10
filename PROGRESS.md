@@ -248,7 +248,23 @@ sheets: `05-website/drafts/all-boards-parity/review/flashcards-unit-X-Y.md`.
   "Excess demand" gains a white halo over the guides, and the "Government
   expenditure" / "Government revenue" labels move off the P1 guide. Those
   three also change the live Edexcel A and AQA decks at the next push.
-- **Open:** Themes 2 to 4 not started.
+- **Theme 2 written: 126 cards across 24 topics, units 2.1 to 2.6**,
+  including the new PED-ranges diagram card for 2.2.1 (its 800×960 SVG and
+  the multi-panel canvas line in `DIAGRAM_STYLE.md` approved in
+  `review/flashcard-diagrams-theme-2.md`, Q1 (a) and Q2 (a)).
+- **Theme 2 QA applied (Eliot, 2026-11-10, all four fixes approved):**
+  `review/qa-flashcards-theme-2.md` found no high or medium defects. The
+  niche-market chips on 2.1.5 and 2.2.1 and the trade-off chip on 2.6.3
+  now use the Theme 1 wording (1.3.4 and 1.1.1), and cards 2.1.5 def-02
+  and 2.6.3 diagram-01 follow them. 2.2.4 eval-01 no longer calls used
+  cars an inferior good, and 2.4.1 app-01 says China joining the WTO is
+  also trade liberalisation. `trade-cycle.svg`'s "Boom" moves to y=284 to
+  clear the curve by 8px; that SVG is shared with the live Edexcel A and
+  AQA decks, so they change at the next push. **Still open:** the 3.3.2
+  niche-market chip keeps the old "clearly defined" wording, which the
+  approved fix did not cover. It needs aligning before the B glossary,
+  which needs one wording per term.
+- **Open:** Themes 3 and 4 not started.
 
 ### All-boards parity — Phase 1, Edexcel B practice questions (2026-10-25 to 2026-11-08) — LAUNCHED ON BRANCH, PUSHED, NOT MERGED (branch `feature/edexcel-b-questions`)
 
