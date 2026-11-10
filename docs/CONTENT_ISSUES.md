@@ -872,4 +872,5 @@ Format per entry:
   terms. The wording is Eliot's call.
 - **Confidence** — low (the link is defensible; this is a choice of
   target, not an error). Not a chip, so no glossary coupling.
-- **Status** — open.
+- **Status** — closed, no change (Eliot, 2026-11-10: the link stays on
+  2.2.1).
