@@ -2002,6 +2002,534 @@
         "notesPage": "/revision-notes/edexcel-b-theme-3/3-5-3-minimum-wage-legislation.html",
         "origin": "card-authored"
       }
+    },
+    {
+      "id": "edexcel-b-3-6-1-def-01",
+      "specCode": "3.6.1",
+      "topic": "3.6 Inequality and Redistribution",
+      "subtopic": "3-6-1-poverty-and-inequality",
+      "cardType": "definition",
+      "front": "<p>Define <strong>absolute poverty</strong> and <strong>relative poverty</strong>, with an example of each. How is poverty different from inequality?</p>",
+      "back": "<p><strong>Absolute poverty</strong> — when a household cannot afford the basics needed to survive, such as enough food, clean water, shelter and basic healthcare.</p><p><strong>Relative poverty</strong> — when a household's income is well below the typical income in its own country, so it cannot afford the standard of living most people there take for granted.</p><p>A UK family that can pay for food and rent but not for school trips, a working fridge or heating all winter is in relative poverty. A family in a low-income country that can't afford two meals a day is in absolute poverty.</p><p><strong>The two can move in different directions.</strong> Economic growth usually cuts absolute poverty, as more people can afford the basics. Relative poverty only falls if the poorest households' incomes rise faster than the typical household's.</p><p><strong>Poverty is not inequality.</strong> Poverty is about the people at the bottom. Inequality is about the gap between the top and the bottom, and a country can be unequal with very little absolute poverty.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "absolute-poverty",
+        "relative-poverty",
+        "inequality"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-6-1-poverty-and-inequality.html",
+        "origin": "notes-verbatim",
+        "verbatim": "when a household cannot afford the basics needed to survive, such as enough food, clean water, shelter and basic healthcare."
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-1-def-02",
+      "specCode": "3.6.1",
+      "topic": "3.6 Inequality and Redistribution",
+      "subtopic": "3-6-1-poverty-and-inequality",
+      "cardType": "definition",
+      "front": "<p>How is poverty measured? Give the UK's national measure and two international measures, with a limitation of each international one.</p>",
+      "back": "<p><strong>National measures:</strong> each country sets its own. The UK's is relative: a household is in <strong>relative low income</strong> if its income is below 60% of the median household income that year, after adjusting for the size of the household. The median is the middle income.</p><p><strong>International measures</strong> use one line for every country, so poverty can be compared across the world:</p><ul><li><strong>World Bank poverty line:</strong> people living on less than a set amount a day, adjusted for what money buys in each country. This is extreme poverty. <strong>Limitation:</strong> someone just above the line counts as not poor, though their life is much the same.</li><li><strong>Multidimensional Poverty Index (MPI):</strong> people who lack several basics at once in health, education and living standards, such as schooling, clean water or electricity. <strong>Limitation:</strong> it needs detailed household surveys, which some countries carry out only every few years.</li></ul><p>Growth has almost ended extreme poverty in China, but it is still common in parts of sub-Saharan Africa.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "poverty-measures",
+        "relative-poverty",
+        "absolute-poverty"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-6-1-poverty-and-inequality.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-1-diagram-01",
+      "specCode": "3.6.1",
+      "topic": "3.6 Inequality and Redistribution",
+      "subtopic": "3-6-1-poverty-and-inequality",
+      "cardType": "diagram",
+      "front": "<p>Define the <strong>Lorenz curve</strong>. Sketch it with the line of perfect equality. How do you read it, and what makes it move?</p>",
+      "back": "<p><strong>Lorenz curve</strong> — a curve showing the cumulative share of total income held by the cumulative share of households, ranked from poorest to richest.</p><p>If every household had the same income, the poorest 20% would have 20% of the income, the poorest 50% would have 50%, and so on. That gives the straight 45-degree <strong>line of perfect equality</strong>.</p><p>In practice, poorer households get less than their share, so the curve sags below the line. Area A is the gap between the two, and area B is the area under the curve.</p><p><strong>To read it:</strong> pick a point on the horizontal axis. If the curve passes through 50% of households and 25% of income, the poorest half of households receive only a quarter of all income.</p><p>The further the curve bows away from the line, the greater the inequality. Redistribution, such as higher taxes on high incomes paid out as benefits to low ones, moves the curve towards the line. Two curves on one diagram compare two countries, or one country at two dates.</p>",
+      "svgRef": "/images/diagrams/svg/lorenz-curve.svg",
+      "svgAlt": "Lorenz curve diagram with Cumulative % of Income on the vertical axis and Cumulative % of Households on the horizontal axis, each from 0% to 100%; the straight 45-degree line of perfect equality, the Lorenz curve sagging below it, area A between the two and area B beneath the curve",
+      "difficulty": "standard",
+      "tags": [
+        "lorenz-curve",
+        "inequality",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-6-1-poverty-and-inequality.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a curve showing the cumulative share of total income held by the cumulative share of households, ranked from poorest to richest."
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-1-formula-01",
+      "specCode": "3.6.1",
+      "topic": "3.6 Inequality and Redistribution",
+      "subtopic": "3-6-1-poverty-and-inequality",
+      "cardType": "formula",
+      "front": "<p>Define the <strong>Gini coefficient</strong> and state its formula. What do 0 and 1 mean, and what are its limitations?</p>",
+      "back": "<p><strong>Gini coefficient</strong> — a measure of inequality calculated from the Lorenz curve, as area A divided by the whole area under the line of perfect equality.</p><p>It runs from 0 to 1, and is sometimes shown as a percentage from 0 to 100:</p><ul><li><strong>0 is perfect equality:</strong> the Lorenz curve sits on the line, so area A is zero.</li><li><strong>1 is perfect inequality:</strong> one household has all the income, so area B is zero.</li></ul><p>A higher figure means more inequality.</p><p><strong>Its limitations:</strong></p><ul><li><strong>It hides where the inequality is:</strong> two Lorenz curves of different shapes can enclose the same area A, so a gap at the bottom and a gap at the top can give the same figure. The Lorenz curve shows which.</li><li><strong>It depends on what is measured:</strong> income before taxes and benefits is more unequal than income after them, and wealth is far more unequal than income.</li></ul>",
+      "formula": "\\text{Gini coefficient} = \\frac{A}{A + B}",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "gini-coefficient",
+        "lorenz-curve",
+        "inequality",
+        "formula"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-6-1-poverty-and-inequality.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a measure of inequality calculated from the Lorenz curve, as area A divided by the whole area under the line of perfect equality"
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-1-calc-01",
+      "specCode": "3.6.1",
+      "topic": "3.6 Inequality and Redistribution",
+      "subtopic": "3-6-1-poverty-and-inequality",
+      "cardType": "calculation",
+      "front": "<p>On a Lorenz curve diagram with both axes running from 0 to 1, the whole area under the line of perfect equality (A + B) is <strong>0.5</strong>.</p><ul><li><strong>Country X:</strong> area A is <strong>0.16</strong>, and its Lorenz curve passes through 40% of households and 15% of income.</li><li><strong>Country Y:</strong> area B is <strong>0.3</strong>.</li></ul><p>(a) Calculate each country's Gini coefficient. (b) Which is more unequal? (c) What does the point on Country X's curve show?</p>",
+      "back": "<p><strong>(a) Gini coefficients:</strong></p><ul><li><strong>Country X:</strong> 0.16 ÷ 0.5 = <strong>0.32</strong>, or 32 as a percentage.</li><li><strong>Country Y:</strong> A = 0.5 − 0.3 = 0.2, so 0.2 ÷ 0.5 = <strong>0.4</strong>, or 40.</li></ul><p><strong>(b) Country Y is more unequal.</strong> Its Gini coefficient is higher: area A is bigger, so overall its Lorenz curve bows further away from the line of perfect equality.</p><p><strong>(c)</strong> The poorest 40% of households in Country X receive only 15% of all income. With perfect equality they would receive 40%.</p><p>The two figures do not say where the inequality is: the Lorenz curves show whether the gap is at the bottom or the top.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "gini-coefficient",
+        "lorenz-curve",
+        "calculation",
+        "quantitative-skills"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-6-1-poverty-and-inequality.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-1-eval-01",
+      "specCode": "3.6.1",
+      "topic": "3.6 Inequality and Redistribution",
+      "subtopic": "3-6-1-poverty-and-inequality",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> the claim that rising relative poverty means the poorest households are worse off.</p>",
+      "back": "<p><strong>Why it may not:</strong></p><ul><li><strong>Relative poverty can rise while everyone gets better off:</strong> the median income grows faster than the incomes of the poorest → more households fall below 60% of it → relative poverty rises, even though they can afford more than before.</li><li><strong>Growth:</strong> economic growth usually cuts absolute poverty, as more people can afford the basics.</li></ul><p><strong>Why it still matters:</strong> a household whose income is well below the typical income cannot afford the standard of living most people there take for granted, such as school trips, a working fridge or heating all winter.</p><p><strong>It depends on which measure is used:</strong></p><ul><li>a relative line, such as the UK's 60% of median income</li><li>an absolute line, such as the World Bank's, where someone just above it counts as not poor though their life is much the same</li><li>the MPI, which counts people lacking several basics at once.</li></ul><p><strong>Judgement:</strong> say which measure of poverty a figure uses before you judge whether poverty is rising or falling. Rising relative poverty alongside falling absolute poverty means the poorest can afford more than before but have fallen further behind the typical household.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "relative-poverty",
+        "absolute-poverty",
+        "poverty-measures",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-6-1-poverty-and-inequality.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-2-def-01",
+      "specCode": "3.6.2",
+      "topic": "3.6 Inequality and Redistribution",
+      "subtopic": "3-6-2-reducing-poverty",
+      "cardType": "definition",
+      "front": "<p>Define <strong>economic development</strong>. How is it different from economic growth, how can growth reduce poverty, and what decides how much it does?</p>",
+      "back": "<p>A rise in real GDP is <strong>economic growth</strong>: the economy produces more.</p><p><strong>Economic development</strong> — an improvement in people's living standards and welfare, measured by health, education and freedom from poverty as well as income.</p><p>Growth can drive development, but it doesn't guarantee it. A country can grow by exporting oil while most people stay poor. The Human Development Index combines income, health and education to measure development.</p><p><strong>When an economy grows:</strong></p><ul><li><strong>Workers:</strong> firms expand → more jobs, often moving people from farm work into better-paid factory or service jobs → higher incomes → fewer households below the poverty line.</li><li><strong>The government:</strong> incomes and spending rise → more tax revenue → more spent on schools, clinics and clean water → better health and education for poor households.</li></ul><p><strong>How much growth reduces poverty depends on:</strong> who gains, as gains that go mainly to owners of land, mines or capital widen inequality and cut poverty slowly; where the jobs are, as growth in cities may not reach poor rural areas; and how the extra revenue is used, as corruption or spending on the army leaves less for health and education.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "economic-development",
+        "economic-growth",
+        "poverty"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-6-2-reducing-poverty.html",
+        "origin": "notes-verbatim",
+        "verbatim": "an improvement in people's living standards and welfare, measured by health, education and freedom from poverty as well as income."
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-2-def-02",
+      "specCode": "3.6.2",
+      "topic": "3.6 Inequality and Redistribution",
+      "subtopic": "3-6-2-reducing-poverty",
+      "cardType": "definition",
+      "front": "<p>Define <strong>international aid</strong>. What are its two main forms, and what is a soft loan?</p>",
+      "back": "<p><strong>International aid</strong> — money, goods or expertise given or lent on generous terms by one country, or by an organisation such as the World Bank, to help another.</p><ul><li><strong>Humanitarian aid:</strong> short-term help after a disaster or war, such as food, shelter and medical care.</li><li><strong>Development aid:</strong> longer-term funding for projects such as schools, vaccination programmes, roads and power supplies. It can be a grant or a <strong>soft loan</strong>, a loan at a low interest rate.</li></ul><p>The United Nations target is for high-income countries to give 0.7% of their national income (GNI) as aid.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "international-aid",
+        "development",
+        "soft-loans"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-6-2-reducing-poverty.html",
+        "origin": "notes-verbatim",
+        "verbatim": "money, goods or expertise given or lent on generous terms by one country, or by an organisation such as the World Bank, to help another."
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-2-chain-01",
+      "specCode": "3.6.2",
+      "topic": "3.6 Inequality and Redistribution",
+      "subtopic": "3-6-2-reducing-poverty",
+      "cardType": "chain",
+      "front": "<p>Build the chains for how <strong>international aid</strong> improves welfare, and say what decides how well it works.</p>",
+      "back": "<ul><li><strong>Health:</strong> aid pays for vaccines, clean water and clinics → fewer children die and fewer adults are too ill to work → higher productivity and incomes.</li><li><strong>Education:</strong> aid builds schools and trains teachers → more children learn to read and count → better-paid jobs as adults.</li><li><strong>Infrastructure:</strong> aid funds roads and power → lower costs for firms and farmers → more investment, jobs and trade.</li></ul><p><strong>How well aid works depends on:</strong></p><ul><li><strong>Corruption and governance:</strong> money taken by officials or spent on the wrong projects never reaches the poor.</li><li><strong>Dependency:</strong> a country that relies on aid may do less to raise its own taxes or build its own industries.</li><li><strong>Tied aid:</strong> aid that must be spent on the donor's own goods or firms costs more and may not fit local needs.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "international-aid",
+        "welfare",
+        "tied-aid",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-6-2-reducing-poverty.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-2-def-03",
+      "specCode": "3.6.2",
+      "topic": "3.6 Inequality and Redistribution",
+      "subtopic": "3-6-2-reducing-poverty",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>non-governmental organisation (NGO)</strong>. What do NGOs do, and what are their main strength and weakness in reducing poverty?</p>",
+      "back": "<p><strong>Non-governmental organisation (NGO)</strong> — a not-for-profit organisation, independent of government, that works on a social or environmental problem. Oxfam and Save the Children are UK examples.</p><p>NGOs run projects on the ground, such as wells, schools and health clinics, give emergency relief and campaign for changes in policy. Much of their money comes from donations, and some comes from governments' aid budgets.</p><ul><li><strong>Strength:</strong> they work closely with local communities → projects suit local needs and reach people governments miss → less money lost to corruption.</li><li><strong>Weakness:</strong> each NGO is small and relies on donations → projects are local and funding can stop → they can't replace a government's schools and hospitals.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "ngos",
+        "poverty",
+        "international-aid"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-6-2-reducing-poverty.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a not-for-profit organisation, independent of government, that works on a social or environmental problem. Oxfam and Save the Children are UK examples."
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-2-eval-01",
+      "specCode": "3.6.2",
+      "topic": "3.6 Inequality and Redistribution",
+      "subtopic": "3-6-2-reducing-poverty",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> which government policy is most likely to reduce poverty.</p>",
+      "back": "<p><strong>The main policies:</strong></p><ul><li><strong>Education and health spending:</strong> free schools and clinics → healthier, more skilled workers → higher productivity and pay for the next generation.</li><li><strong>Cash transfers:</strong> regular payments to poor families → more spent on food and schooling → fewer in absolute poverty. Brazil's Bolsa Família pays families on condition their children attend school and have health checks.</li><li><strong>Progressive taxes and benefits:</strong> higher earners pay a larger share of their income in tax → the money funds benefits for low-income households → the gap narrows and relative poverty falls.</li><li><strong>A minimum wage:</strong> pay rises for the lowest earners → fewer working households in poverty.</li><li><strong>Microfinance:</strong> small loans to people banks won't lend to → they buy a sewing machine or livestock → a small business and a steady income.</li><li><strong>Attracting trade and FDI:</strong> foreign firms open factories → jobs and skills → higher incomes.</li></ul><p><strong>It depends on:</strong></p><ul><li><strong>Time lags:</strong> cash transfers help at once; education raises incomes only when today's pupils start work.</li><li><strong>Targeting:</strong> in countries with large informal economies, a minimum wage or income tax reaches few of the poorest, so direct transfers and public services do more.</li><li><strong>Incentives:</strong> benefits withdrawn sharply as income rises can discourage work (the poverty trap).</li></ul><p><strong>Judgement:</strong> match the policy to the type of poverty. Growth, aid and jobs cut absolute poverty in low-income countries. In a country like the UK, poverty is mostly relative, so taxes, benefits and public services matter more. Say which kind of poverty, and which country, your argument is about.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "poverty-reduction",
+        "cash-transfers",
+        "microfinance",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-6-2-reducing-poverty.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-3-def-01",
+      "specCode": "3.6.3",
+      "topic": "3.6 Inequality and Redistribution",
+      "subtopic": "3-6-3-the-impact-of-inequality",
+      "cardType": "definition",
+      "front": "<p>Define <strong>economic agents</strong>. Why is some inequality expected, and what two questions decide whether it is a problem?</p>",
+      "back": "<p><strong>Economic agents</strong> — the individuals, firms and governments whose decisions make up the economy.</p><p>Some inequality is expected: people who train for years or take risks earn more, and that reward gives others a reason to do the same.</p><p><strong>The two questions:</strong></p><ul><li>How wide is the gap?</li><li>Does it come from effort, or from the family someone was born into?</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "economic-agents",
+        "inequality",
+        "incentives"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-6-3-the-impact-of-inequality.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the individuals, firms and governments whose decisions make up the economy."
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-3-chain-01",
+      "specCode": "3.6.3",
+      "topic": "3.6 Inequality and Redistribution",
+      "subtopic": "3-6-3-the-impact-of-inequality",
+      "cardType": "chain",
+      "front": "<p>Build the chains for how inequality affects <strong>individuals</strong> on low incomes and on high incomes. What decides how much it matters?</p>",
+      "back": "<p><strong>For people on low incomes:</strong></p><ul><li><strong>Health:</strong> low income → cold or damp housing and a poorer diet → more illness and shorter lives → more time off work and lower earnings.</li><li><strong>Education and opportunity:</strong> parents can't pay for books, tutoring or a move near a good school → children leave school with fewer qualifications → low-paid jobs as adults, so low income passes from one generation to the next.</li><li><strong>Debt:</strong> no savings to fall back on → a broken boiler means borrowing at high interest → less left each month.</li></ul><p><strong>For people on high incomes:</strong></p><ul><li><strong>Wealth builds:</strong> high earners can save → savings, shares and property earn interest, dividends and rent → their income and wealth grow further.</li><li><strong>Incentives:</strong> the chance of higher pay → people train, work longer hours or start businesses → higher incomes for them and more output for the economy.</li></ul><p><strong>It depends on:</strong> public services, as free healthcare and schools, such as the NHS, protect poorer families from the worst effects; and social mobility, as inequality matters less if a child from a poor family can still reach a well-paid job than if incomes are fixed by background.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "inequality",
+        "individuals",
+        "social-mobility",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-6-3-the-impact-of-inequality.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-3-chain-02",
+      "specCode": "3.6.3",
+      "topic": "3.6 Inequality and Redistribution",
+      "subtopic": "3-6-3-the-impact-of-inequality",
+      "cardType": "chain",
+      "front": "<p>Explain how <strong>low income and low productivity</strong> feed each other in a firm. How can a firm break the cycle, and how does inequality change what firms can sell?</p>",
+      "back": "<p>Productivity is output per worker.</p><ul><li><strong>Low pay lowers productivity:</strong> low income → poorer health, stress and long journeys to work → more absence and less effort → less output per worker and higher unit costs for the firm.</li><li><strong>Low productivity keeps pay low:</strong> each worker produces little → the firm can't afford to pay more → wages stay low → workers can't afford training to move up.</li><li><strong>Staff turnover:</strong> low-paid staff leave for slightly better offers → the firm keeps recruiting and training → higher costs and less experienced staff.</li></ul><p><strong>Breaking the cycle:</strong> a firm can pay more or train its staff. Better-paid workers are often more motivated and stay longer, so output per worker rises and some of the extra pay is recovered.</p><p><strong>Demand splits:</strong> incomes at the top rise faster than the rest → demand grows for luxury goods and for discount stores → firms in the middle of the market lose sales.</p><p><strong>It depends on:</strong> the type of work, as a firm that can replace low-paid staff with machines may automate before it raises pay; and its market, as a luxury brand gains from a growing number of high earners while a mid-market chain loses.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "productivity",
+        "low-pay",
+        "staff-turnover",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-6-3-the-impact-of-inequality.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-3-chain-03",
+      "specCode": "3.6.3",
+      "topic": "3.6 Inequality and Redistribution",
+      "subtopic": "3-6-3-the-impact-of-inequality",
+      "cardType": "chain",
+      "front": "<p>Build the chains for how inequality affects the <strong>economy as a whole</strong>: four costs and one benefit.</p>",
+      "back": "<p><strong>Costs:</strong></p><ul><li><strong>Lower spending:</strong> low earners spend almost all of any extra income, high earners save more of it → the more income goes to the top, the less is spent → lower aggregate demand and slower growth.</li><li><strong>Wasted talent:</strong> able children from poor families don't get the education to match their ability → a less skilled workforce → lower productivity and slower long-run growth.</li><li><strong>Government finances:</strong> more people on low incomes → more spent on benefits and healthcare, and less collected in income tax → less to spend on education or infrastructure, or higher taxes elsewhere.</li><li><strong>Social costs:</strong> large gaps → more crime and social unrest → political instability → firms invest less.</li></ul><p><strong>Benefit:</strong></p><ul><li><strong>Incentives and saving:</strong> the reward for success → more enterprise, and high earners' savings fund investment through banks → faster growth.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "inequality",
+        "aggregate-demand",
+        "economic-growth",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-6-3-the-impact-of-inequality.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-3-eval-01",
+      "specCode": "3.6.3",
+      "topic": "3.6 Inequality and Redistribution",
+      "subtopic": "3-6-3-the-impact-of-inequality",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> whether inequality is bad for an economy.</p>",
+      "back": "<p><strong>It can be:</strong> the more income goes to the top, the less is spent, so aggregate demand and growth are lower. Able children from poor families don't get the education to match their ability, so the workforce is less skilled. Large gaps bring more crime and unrest, so firms invest less.</p><p><strong>But:</strong> the reward for success brings more enterprise, and high earners' savings fund investment through banks, so growth is faster.</p><p><strong>The overall effect depends on:</strong></p><ul><li><strong>How large the gap is:</strong> some inequality keeps incentives strong; very wide gaps bring more of the costs.</li><li><strong>Its cause:</strong> inequality from skill and effort can raise output; inequality from background wastes talent.</li><li><strong>The government's response:</strong> taxes, benefits and public services narrow the gap, but can weaken incentives if pushed too far.</li></ul><p><strong>Judgement:</strong> don't argue that all inequality is bad. Weigh the incentive effect against the costs to health, skills and demand, then judge which is bigger in the case given. The size of the gap and whether people can move up are usually what decide it.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "inequality",
+        "incentives",
+        "economic-growth",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-6-3-the-impact-of-inequality.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-4-def-01",
+      "specCode": "3.6.4",
+      "topic": "3.6 Inequality and Redistribution",
+      "subtopic": "3-6-4-redistribution-of-income-and-wealth",
+      "cardType": "definition",
+      "front": "<p>Define <strong>income</strong> and <strong>wealth</strong>. How are the two linked, and why is wealth shared more unequally than income?</p>",
+      "back": "<p><strong>Income</strong> — the flow of money a person or household receives over a period of time, such as wages, benefits, interest, rent and profit.</p><p><strong>Wealth</strong> — the stock of assets a person or household owns at a point in time, such as a house, savings, shares and a pension, minus any debts.</p><p>Income is like water flowing into a bath; wealth is the water already in it.</p><p><strong>The link:</strong> income that is saved builds wealth, and wealth earns more income as rent, interest and dividends. That is why wealth is shared far more unequally than income: those who own assets keep adding to them.</p><p><strong>Keep them separate:</strong> a rise in house prices makes homeowners wealthier without changing anyone's income, so wealth inequality can widen while income inequality stays the same.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "income",
+        "wealth",
+        "inequality"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-6-4-redistribution-of-income-and-wealth.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the flow of money a person or household receives over a period of time, such as wages, benefits, interest, rent and profit."
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-4-def-02",
+      "specCode": "3.6.4",
+      "topic": "3.6 Inequality and Redistribution",
+      "subtopic": "3-6-4-redistribution-of-income-and-wealth",
+      "cardType": "definition",
+      "front": "<p>Define <strong>redistribution</strong>. What makes a tax progressive, proportional or regressive? Give a UK example of each where there is one, and name the taxes aimed at wealth.</p>",
+      "back": "<p><strong>Redistribution</strong> — government action that moves income or wealth from better-off households to worse-off ones, through taxes, benefits and public services.</p><ul><li><strong>Progressive:</strong> the share of income paid in tax rises as income rises. Income tax: nothing on the first slice of income, then higher rates on higher bands.</li><li><strong>Proportional:</strong> the share stays the same at every income. Rare; a flat-rate tax on all income would be one.</li><li><strong>Regressive:</strong> the share falls as income rises. VAT and duties on tobacco and alcohol, as poorer households spend more of their income.</li></ul><p><strong>Wealth</strong> is taxed separately, mainly through inheritance tax on large estates and capital gains tax on profits from selling assets such as shares or a second home. Income tax and benefits mainly change income; inheritance and capital gains taxes are the ones aimed at wealth.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "redistribution",
+        "progressive-tax",
+        "regressive-tax",
+        "wealth"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-6-4-redistribution-of-income-and-wealth.html",
+        "origin": "notes-verbatim",
+        "verbatim": "government action that moves income or wealth from better-off households to worse-off ones, through taxes, benefits and public services."
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-4-def-03",
+      "specCode": "3.6.4",
+      "topic": "3.6 Inequality and Redistribution",
+      "subtopic": "3-6-4-redistribution-of-income-and-wealth",
+      "cardType": "definition",
+      "front": "<p>Define the <strong>poverty trap</strong>. What are means-tested and universal benefits? How does the trap weaken incentives, and how can it be reduced?</p>",
+      "back": "<p><strong>Means-tested benefits</strong> are paid only to households with low income or savings, and reduced as income rises. Universal Credit in the UK is one. <strong>Universal benefits</strong> are paid to everyone in a group whatever their income, such as the State Pension.</p><p><strong>Poverty trap</strong> — when a low-paid worker who earns more is barely better off, because they pay more tax and lose means-tested benefits at the same time.</p><ul><li><strong>For workers:</strong> little gain from extra hours or a promotion → people stay on low hours → incomes stay low and benefit spending stays high.</li><li><strong>For firms:</strong> staff turn down extra shifts → harder to fill hours → recruitment costs rise.</li></ul><p><strong>Reducing it:</strong> withdraw benefits more slowly as income rises, raise the income at which tax starts, or raise the minimum wage.</p><p>Each has a cost. A slower withdrawal means more households, further up the income scale, receive benefits, so spending rises. That is the trade-off between equity and incentives.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "poverty-trap",
+        "means-tested-benefits",
+        "incentives"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-6-4-redistribution-of-income-and-wealth.html",
+        "origin": "notes-verbatim",
+        "verbatim": "when a low-paid worker who earns more is barely better off, because they pay more tax and lose means-tested benefits at the same time."
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-4-calc-01",
+      "specCode": "3.6.4",
+      "topic": "3.6 Inequality and Redistribution",
+      "subtopic": "3-6-4-redistribution-of-income-and-wealth",
+      "cardType": "calculation",
+      "front": "<p>Jordan works part-time and gets a means-tested benefit. A promotion adds <strong>£200 a week</strong> to Jordan's pay. Income tax and National Insurance take <strong>20%</strong> of the extra pay, and the benefit falls by <strong>55p for every £1</strong> earned after tax.</p><p>(a) How much of the extra £200 does Jordan keep? (b) What is the effective tax rate? (c) If the benefit instead fell by 40p for every £1, how much would Jordan keep, and what would it cost the government?</p>",
+      "back": "<p><strong>(a) What Jordan keeps:</strong></p><ul><li>Tax and National Insurance: 20% × £200 = <strong>£40</strong>.</li><li>Pay after tax: £200 − £40 = <strong>£160</strong>.</li><li>Benefit lost: 55% × £160 = <strong>£88</strong>.</li><li>Jordan keeps £160 − £88 = <strong>£72</strong>.</li></ul><p><strong>(b) Effective tax rate:</strong> £200 − £72 = £128 lost, and £128 ÷ £200 × 100 = <strong>64%</strong>. After travel or childcare costs, the promotion may barely pay. That is the poverty trap.</p><p><strong>(c) A slower withdrawal:</strong> 40% × £160 = £64 lost, so Jordan keeps £160 − £64 = <strong>£96</strong>, an effective tax rate of 52%. The cost: more households, further up the income scale, still receive the benefit, so benefit spending rises.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "poverty-trap",
+        "effective-tax-rate",
+        "calculation",
+        "quantitative-skills"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-6-4-redistribution-of-income-and-wealth.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-6-4-eval-01",
+      "specCode": "3.6.4",
+      "topic": "3.6 Inequality and Redistribution",
+      "subtopic": "3-6-4-redistribution-of-income-and-wealth",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> how far progressive taxes and the provision of public services redistribute income.</p>",
+      "back": "<p><strong>Progressive taxes:</strong></p><ul><li><strong>Low-income households:</strong> higher earners pay more → the revenue funds benefits and services → poorer households' incomes and living standards rise → inequality and relative poverty fall.</li><li><strong>But high earners:</strong> they keep less of each extra pound → some work less, move abroad or find ways to avoid the tax → less revenue than expected.</li></ul><p><strong>Public services</strong>, such as the NHS, state schools, social housing and free school meals, are provided free or below cost and paid for from taxes:</p><ul><li><strong>Living standards:</strong> a household doesn't pay for a GP visit or a school place → these services are worth far more compared with a low income than a high one → the gap in living standards narrows.</li><li><strong>Opportunity:</strong> free schooling and healthcare for every child → skills depend less on parents' income → higher earnings as adults, which reduces inequality in the next generation.</li></ul><p><strong>It depends on:</strong></p><ul><li><strong>How mobile the tax base is:</strong> high earners and firms that can easily move abroad limit how high rates can go.</li><li><strong>How the money is spent:</strong> revenue only narrows the gap if it is spent on benefits and services that reach poorer households.</li><li><strong>Quality and access:</strong> better-off families can move near the best schools, so free services don't reach everyone equally.</li><li><strong>Cost:</strong> services are paid for by taxes, and higher taxes can weaken incentives to work and invest.</li></ul><p><strong>Judgement:</strong> both redistribute most where the tax base cannot easily move abroad and the money is spent on benefits and services that reach poorer households. Push tax rates too high and some high earners work less, move abroad or avoid the tax, so the revenue raised is less than expected.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "redistribution",
+        "progressive-tax",
+        "public-services",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-6-4-redistribution-of-income-and-wealth.html",
+        "origin": "card-authored"
+      }
     }
   ]
 }
