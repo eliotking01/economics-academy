@@ -1219,6 +1219,383 @@
         "notesPage": "/revision-notes/edexcel-b-theme-3/3-3-2-demand-side-factors-in-global-markets.html",
         "origin": "card-authored"
       }
+    },
+    {
+      "id": "edexcel-b-3-4-1-def-01",
+      "specCode": "3.4.1",
+      "topic": "3.4 Impact of Globalisation on Local and National Economies",
+      "subtopic": "3-4-1-the-impact-of-multinational-corporations",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>host country</strong> and a <strong>home country</strong>. Why does an exam answer on a multinational need to say who gains and who loses?</p>",
+      "back": "<p><strong>Host country</strong> — a country an MNC sets up in. Its home country is where its head office is.</p><p>A <strong>multinational corporation (MNC)</strong> is a business with operations, such as factories, offices or shops, in more than one country.</p><p>An MNC brings money, jobs and new methods to a host country, but it can also squeeze out local firms and send its profits home. The same factory can help one group and harm another, so name the group affected, finish the chain, and judge which effect is largest.</p><p>A car maker with its head office in Japan opens a factory in the UK: Japan is the home country and the UK is the host country.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "mnc",
+        "host-country",
+        "globalisation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-4-1-the-impact-of-multinational-corporations.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a country an MNC sets up in. Its home country is where its head office is."
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-1-chain-01",
+      "specCode": "3.4.1",
+      "topic": "3.4 Impact of Globalisation on Local and National Economies",
+      "subtopic": "3-4-1-the-impact-of-multinational-corporations",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chains of reasoning</strong>: how can a large MNC site affect the <strong>local economy</strong> around it? Cover jobs, wages, local suppliers, local competitors and the community. What decides how much the area gains?</p>",
+      "back": "<ul><li><strong>Jobs:</strong> the site hires local people → unemployment in the area falls → the new workers spend more in local shops → jobs are created in businesses that never deal with the MNC.</li><li><strong>Wages:</strong> the MNC pays more than local employers to attract staff → local firms raise pay to keep theirs → wages across the area rise.</li><li><strong>Local suppliers:</strong> the MNC buys parts, food, cleaning and transport nearby → local firms win contracts → their sales and profits rise, and they hire too.</li><li><strong>Local competitors:</strong> the MNC has economies of scale and a known brand → it undercuts small local rivals → they lose sales, and some close with the loss of their jobs.</li><li><strong>Community and environment:</strong> more lorries, noise and pollution → air and water quality fall → residents' health and quality of life suffer.</li></ul><p><strong>How much the area gains depends on:</strong></p><ul><li><strong>Where it buys its inputs:</strong> an MNC that imports most of its parts gives local suppliers little.</li><li><strong>The jobs it creates:</strong> low-skilled assembly work raises incomes less than skilled jobs, especially if the senior posts go to staff from the home country.</li><li><strong>Local laws:</strong> where rules on pay, safety and pollution are weak or poorly enforced, workers and residents are more likely to lose out.</li></ul><p>A food-processing plant that buys its vegetables from nearby farms spreads far more of its spending locally than an assembly plant that ships in every part.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "mnc",
+        "local-economy",
+        "employment",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-4-1-the-impact-of-multinational-corporations.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-1-eval-01",
+      "specCode": "3.4.1",
+      "topic": "3.4 Impact of Globalisation on Local and National Economies",
+      "subtopic": "3-4-1-the-impact-of-multinational-corporations",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> whether an MNC benefits the <strong>national economy</strong> of its host country. Consider the balance of payments, skills, consumers, business culture and tax revenues.</p>",
+      "back": "<p><strong>Benefits:</strong></p><ul><li><strong>Balance of payments:</strong> exports from the new site earn foreign currency, and goods once imported are made at home.</li><li><strong>Technology and skills:</strong> workers learn new methods, and local suppliers copy them.</li><li><strong>Consumers:</strong> more choice, and lower prices from economies of scale.</li><li><strong>Business culture:</strong> new management methods, such as lean production, spread to local firms.</li><li><strong>Tax revenues:</strong> corporation tax on the MNC's profits, plus income tax paid by the new workers.</li></ul><p><strong>Costs:</strong></p><ul><li><strong>Balance of payments:</strong> imported parts, and profits sent to the home country, are outflows on the current account.</li><li><strong>Technology and skills:</strong> research and skilled jobs often stay in the home country.</li><li><strong>Consumers:</strong> if local rivals close, choice falls and the MNC can raise prices.</li><li><strong>Business culture:</strong> practices that clash with local customs, such as long hours or refusing to deal with trade unions.</li><li><strong>Tax revenues:</strong> tax breaks offered to attract the MNC, and profit moved abroad by transfer pricing, cut what it pays.</li></ul><p><strong>It depends on:</strong></p><ul><li><strong>The deal it struck:</strong> a government that offers large grants or tax breaks to win an MNC gets less back in tax.</li><li><strong>Where profits go:</strong> profit reinvested in the host country keeps adding to growth. Profit sent home does not.</li><li><strong>The size of the economy:</strong> in a small, developing economy, one large MNC can dominate whole industries and gain power over the government.</li></ul><p><strong>Judgement:</strong> the host country gains most when the MNC buys locally, reinvests its profits and pays tax on them. It gains least when it gave large tax breaks to win a site that imports its parts and sends its profits home.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "mnc",
+        "balance-of-payments",
+        "tax-revenue",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-4-1-the-impact-of-multinational-corporations.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-1-def-02",
+      "specCode": "3.4.1",
+      "topic": "3.4 Impact of Globalisation on Local and National Economies",
+      "subtopic": "3-4-1-the-impact-of-multinational-corporations",
+      "cardType": "definition",
+      "front": "<p>Define <strong>transfer pricing</strong>. How can an MNC use it to pay less tax, and who loses when it does?</p>",
+      "back": "<p><strong>Transfer pricing</strong> — the prices one part of an MNC charges another part, in a different country, for goods, services or the use of its brand.</p><p>Tax rates on profit differ between countries → the MNC sets its internal prices to report less profit where tax is high and more where it is low → it pays less tax in total.</p><ul><li><strong>The government:</strong> less profit reported → less corporation tax collected → less to spend on schools and roads, or other taxes must rise.</li><li><strong>Domestic firms:</strong> the MNC pays a lower tax rate on the same profit → it keeps more to cut prices or invest → local rivals compete at a disadvantage.</li></ul><p>Transfer pricing is legal if the prices are close to what two independent firms would charge each other. Tax authorities challenge prices set to move profit, but that is hard to prove for a brand name, which has no market price.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "transfer-pricing",
+        "mnc",
+        "tax-revenue",
+        "corporation-tax"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-4-1-the-impact-of-multinational-corporations.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the prices one part of an MNC charges another part, in a different country, for goods, services or the use of its brand."
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-1-calc-01",
+      "specCode": "3.4.1",
+      "topic": "3.4 Impact of Globalisation on Local and National Economies",
+      "subtopic": "3-4-1-the-impact-of-multinational-corporations",
+      "cardType": "calculation",
+      "front": "<p>An MNC's chain of gyms in a high-tax country makes <strong>£20 million</strong> profit a year, taxed there at <strong>30%</strong>. A sister company in a low-tax country, where profit is taxed at <strong>10%</strong>, starts charging the gym chain <strong>£8 million</strong> a year for the use of the brand.</p><p>(a) Calculate the gym chain's profit after the charge. (b) Calculate the MNC's total tax bill before and after the charge. (c) How much corporation tax does the high-tax country lose?</p>",
+      "back": "<p><strong>(a) Profit in the high-tax country:</strong> £20m − £8m = <strong>£12 million</strong>. The £8 million is now profit of the sister company.</p><p><strong>(b) Total tax bill:</strong></p><ul><li>Before: £20m × 30% = <strong>£6 million</strong>.</li><li>After: £12m × 30% = £3.6m in the high-tax country, plus £8m × 10% = £0.8m in the low-tax country = <strong>£4.4 million</strong>.</li></ul><p>The MNC saves £6m − £4.4m = <strong>£1.6 million</strong> a year.</p><p><strong>(c) Tax lost by the high-tax country:</strong> £6m − £3.6m = <strong>£2.4 million</strong> a year.</p><p>The MNC still makes £20 million in total. Only the country where the profit is reported has changed. Whether £8 million is a fair price for the brand is hard for the tax authority to prove, because a brand name has no market price.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "transfer-pricing",
+        "tax-revenue",
+        "calculation",
+        "quantitative-skills"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-4-1-the-impact-of-multinational-corporations.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-2-def-01",
+      "specCode": "3.4.2",
+      "topic": "3.4 Impact of Globalisation on Local and National Economies",
+      "subtopic": "3-4-2-ethical-issues",
+      "cardType": "definition",
+      "front": "<p>Define <strong>business ethics</strong>. Why do MNCs face more ethical choices than most firms?</p>",
+      "back": "<p><strong>Business ethics</strong> — the moral principles that guide a firm's decisions, about what is right as well as what is legal or profitable.</p><p>MNCs work in countries where laws on pay, safety and pollution are weaker than at home → something banned in the UK may be legal elsewhere → the firm has to decide for itself what is right, not just what is allowed.</p><p>Acting ethically usually costs more, so there is often a trade-off with profit.</p><p><strong>Legal does not mean ethical.</strong> An MNC paying the local minimum wage for very long working weeks may break no law. Judge the firm against what it could afford and what its customers expect, as well as against the law.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "business-ethics",
+        "mnc",
+        "stakeholders"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-4-2-ethical-issues.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the moral principles that guide a firm's decisions, about what is right as well as what is legal or profitable."
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-2-chain-01",
+      "specCode": "3.4.2",
+      "topic": "3.4 Impact of Globalisation on Local and National Economies",
+      "subtopic": "3-4-2-ethical-issues",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chains of reasoning</strong> for three <strong>stakeholder conflicts</strong> an MNC faces. Who bears the cost in each?</p>",
+      "back": "<p>An MNC's stakeholders are spread across many countries, and their aims often clash.</p><ul><li><strong>Shareholders and overseas workers:</strong> shareholders want higher profit → the MNC holds factory pay down → lower costs and bigger dividends, but workers stay poorly paid.</li><li><strong>Customers and suppliers' workers:</strong> customers in high-income countries want low prices → the MNC pushes its suppliers to cut costs → suppliers cut wages or skimp on safety.</li><li><strong>The MNC and the host community:</strong> a factory draws heavily on local water → less is left for farms and homes → the firm's costs stay low while local people bear the cost.</li></ul><p>A clothing retailer that promises ever-lower prices to shoppers at home may be squeezing the wages of the workers who make its clothes.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "stakeholders",
+        "business-ethics",
+        "mnc",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-4-2-ethical-issues.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-2-def-02",
+      "specCode": "3.4.2",
+      "topic": "3.4 Impact of Globalisation on Local and National Economies",
+      "subtopic": "3-4-2-ethical-issues",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>living wage</strong>. Is it fair for an MNC to pay low wages in a developing country? Give both views, and the effect of raising pay.</p>",
+      "back": "<p><strong>Living wage</strong> — the pay a worker needs to cover basic needs, such as food, housing and healthcare, where they live.</p><p>Whether the pay is fair is an ethical judgement:</p><ul><li><strong>A fair deal:</strong> MNCs often pay more than local firms or farm work → workers are better off than they would be without the job.</li><li><strong>Exploitation:</strong> pay is below a living wage → workers need long hours or a second job to get by → the MNC keeps its costs low at their expense.</li></ul><p>Working conditions raise the same questions: long hours, unpaid overtime, unsafe buildings and machinery, and bans on joining a trade union.</p><p><strong>Raising pay and standards</strong> → higher unit costs → higher prices or lower profit. Better-paid, safer staff tend to stay longer and work harder, which wins back some of that cost.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "living-wage",
+        "business-ethics",
+        "working-conditions"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-4-2-ethical-issues.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the pay a worker needs to cover basic needs, such as food, housing and healthcare, where they live."
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-2-chain-02",
+      "specCode": "3.4.2",
+      "topic": "3.4 Impact of Globalisation on Local and National Economies",
+      "subtopic": "3-4-2-ethical-issues",
+      "cardType": "chain",
+      "front": "<p>Explain the ethical issues an MNC faces over the <strong>environment</strong>, its <strong>supply chain</strong> and its <strong>marketing</strong>. Build a chain for each.</p>",
+      "back": "<p><strong>Environment.</strong> Cleaner production costs money, and the damage from pollution falls on people outside the firm, an external cost.</p><ul><li><strong>Emissions:</strong> cheap, dirty fuel and no filters → lower energy and equipment costs → smoke harms local health, and greenhouse gases add to climate change.</li><li><strong>Waste disposal:</strong> chemicals or plastic are dumped instead of treated → disposal costs fall → water and soil are poisoned for the farms and families nearby.</li></ul><p><strong>Supply chain.</strong> The people making a product may be several steps away from the firm that sells it, so problems are hard to see from head office.</p><ul><li><strong>Exploitation of labour:</strong> suppliers under pressure on price pay below the legal minimum, force unpaid overtime or keep workers' passports. At worst this is forced labour.</li><li><strong>Child labour:</strong> children work instead of going to school, often producing raw materials such as cotton or cocoa far down the chain.</li></ul><p>A brand that does not own the factory still has its name tied to what happens there.</p><p><strong>Marketing.</strong></p><ul><li><strong>Misleading product labelling:</strong> a label claims a product is \"natural\" or healthier than it is → customers buy it on a false belief → sales rise at first, but the firm risks fines and lost trust when found out. False green claims are greenwashing.</li><li><strong>Inappropriate promotional activities:</strong> promotion aimed at people the product could harm, such as sugary snacks advertised to young children → higher sales → harm to those buyers → complaints, boycotts and tighter rules.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "business-ethics",
+        "supply-chain",
+        "external-costs",
+        "marketing",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-4-2-ethical-issues.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-2-eval-01",
+      "specCode": "3.4.2",
+      "topic": "3.4 Impact of Globalisation on Local and National Economies",
+      "subtopic": "3-4-2-ethical-issues",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> whether acting ethically raises or lowers an MNC's profit.</p>",
+      "back": "<p><strong>Lowers profit:</strong> better pay, cleaner production and supplier checks → higher unit costs → higher prices or lower profit, and a disadvantage against rivals who cut corners.</p><p><strong>Raises profit:</strong></p><ul><li><strong>Higher sales:</strong> a good reputation → customers who care choose the brand, and some pay more for it → higher sales and margins.</li><li><strong>Lower risk:</strong> fewer scandals → less chance of boycotts, fines and lost contracts → steadier profit over time.</li></ul><p><strong>It depends on:</strong></p><ul><li><strong>How visible the brand is:</strong> a scandal hurts a well-known consumer brand far more than a firm that sells parts to other businesses.</li><li><strong>Price elasticity of demand:</strong> where demand is price elastic, as for cheap clothing, buyers switch to rivals if prices rise, so ethical costs are hard to pass on.</li><li><strong>The time period:</strong> ethical choices cost money now, while the gains in reputation and staff loyalty build up over years.</li></ul><p><strong>Judgement:</strong> in the short run, acting ethically usually costs profit. Over time it is most likely to pay for a well-known consumer brand whose customers care, and least likely for a firm selling cheap goods to price-sensitive buyers, or parts to other businesses.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "business-ethics",
+        "profit",
+        "ped",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-4-2-ethical-issues.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-3-chain-01",
+      "specCode": "3.4.3",
+      "topic": "3.4 Impact of Globalisation on Local and National Economies",
+      "subtopic": "3-4-3-controlling-mncs",
+      "cardType": "chain",
+      "front": "<p>Why are MNCs hard to control? Build the chains for their <strong>political influence</strong>: lobbying and the threat to leave.</p>",
+      "back": "<p>An MNC operates in many countries, so no one government's laws cover everything it does. Governments also compete for MNC investment, and an MNC that dislikes one country's rules can move its factory, or its profits, somewhere else.</p><ul><li><strong>Lobbying:</strong> the MNC pays lobbyists and meets ministers to argue its case → the government hears mostly the MNC's side → it agrees more lenient tax rules or weaker regulation.</li><li><strong>The threat to leave:</strong> the MNC says it will invest elsewhere → the government fears losing jobs and tax → it offers tax breaks or delays tougher rules.</li></ul><p>Governments can still push back, especially when the public is on their side: a firm questioned in public over how little tax it pays may face a backlash from customers, and change course to protect its sales.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "mnc",
+        "controlling-mncs",
+        "lobbying",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-4-3-controlling-mncs.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-3-chain-02",
+      "specCode": "3.4.3",
+      "topic": "3.4 Impact of Globalisation on Local and National Economies",
+      "subtopic": "3-4-3-controlling-mncs",
+      "cardType": "chain",
+      "front": "<p>Explain how <strong>legal control</strong> and <strong>social media</strong> can change an MNC's behaviour. Give the limits of each.</p>",
+      "back": "<p><strong>Legal control:</strong> laws set the minimum standard on pay, health and safety, pollution, competition and tax → an MNC that breaks them faces fines, and in the worst cases criminal charges. A home country can also reach supply chains abroad: under the UK's Modern Slavery Act 2015, large firms doing business in the UK must publish a statement each year on what they are doing to stop slavery in their business and supply chains.</p><p><em>Limits:</em> laws only work if they are enforced. Some host countries lack the inspectors and courts to do it, and MNCs can afford lawyers to find loopholes. The Modern Slavery Act requires a statement but not action, so a firm can report that it has done little.</p><p><strong>Social media:</strong> anyone can share evidence, such as a worker's video from a factory floor → the post spreads worldwide within hours → the MNC's reputation suffers in every market → it has to respond quickly to protect sales.</p><p><em>Limits:</em> stories fade within days, false claims spread as fast as true ones, and many people who share a post keep buying the product.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "controlling-mncs",
+        "regulation",
+        "social-media",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-4-3-controlling-mncs.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-3-def-01",
+      "specCode": "3.4.3",
+      "topic": "3.4 Impact of Globalisation on Local and National Economies",
+      "subtopic": "3-4-3-controlling-mncs",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>pressure group</strong>. How can one change an MNC's behaviour, and what limits its power?</p>",
+      "back": "<p><strong>Pressure group</strong> — an organisation that campaigns to change the behaviour of businesses or governments, such as Greenpeace on the environment or Amnesty International on human rights.</p><p>A campaign exposes poor practice through reports, protests or a call to boycott → bad publicity and lost sales → the MNC changes its practice to protect its brand.</p><p><strong>The limits:</strong> most groups have small budgets beside an MNC's, and a boycott works only if enough customers join it.</p><p>A boycott can hurt a famous brand that sells to the public. It does little to a firm that sells steel to car makers, where the law matters more.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "pressure-groups",
+        "controlling-mncs",
+        "boycott"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-4-3-controlling-mncs.html",
+        "origin": "notes-verbatim",
+        "verbatim": "an organisation that campaigns to change the behaviour of businesses or governments, such as Greenpeace on the environment or Amnesty International on human rights."
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-3-def-02",
+      "specCode": "3.4.3",
+      "topic": "3.4 Impact of Globalisation on Local and National Economies",
+      "subtopic": "3-4-3-controlling-mncs",
+      "cardType": "definition",
+      "front": "<p>Define <strong>self-regulation</strong>. Give ways an MNC, or a whole industry, can regulate itself.</p>",
+      "back": "<p><strong>Self-regulation</strong> — when a firm or industry sets and checks its own standards of behaviour, without the law requiring it.</p><p><strong>An MNC might:</strong></p><ul><li>make every supplier sign a code of conduct</li><li>audit its suppliers' factories</li><li>publish its emissions each year</li><li>sign up to a voluntary international code, such as the UN Global Compact.</li></ul><p><strong>A whole industry:</strong> UK advertisers wrote their own rules, and pay for the Advertising Standards Authority (ASA) to enforce them through a levy on advertising spend.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "self-regulation",
+        "controlling-mncs",
+        "business-ethics"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-4-3-controlling-mncs.html",
+        "origin": "notes-verbatim",
+        "verbatim": "when a firm or industry sets and checks its own standards of behaviour, without the law requiring it."
+      }
+    },
+    {
+      "id": "edexcel-b-3-4-3-eval-01",
+      "specCode": "3.4.3",
+      "topic": "3.4 Impact of Globalisation on Local and National Economies",
+      "subtopic": "3-4-3-controlling-mncs",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> whether self-regulation can control an MNC's behaviour as well as outside control by governments, campaigners and customers.</p>",
+      "back": "<p><strong>For self-regulation:</strong></p><ul><li>It is cheaper for taxpayers, and quicker to change than a law.</li><li>Firms know their own industry and supply chains best.</li><li>A firm can go beyond the law and win customers who care.</li></ul><p><strong>Against:</strong></p><ul><li>There are no legal penalties, so a firm can ignore its own code.</li><li>A firm writing its own rules may set standards it finds easy to meet.</li><li>Codes can be publicity with no real change behind them.</li></ul><p><strong>But outside control has limits too. It depends on:</strong></p><ul><li><strong>Bargaining power:</strong> the rules of a large market such as the US or EU carry weight, because MNCs need access to it. A poorer country that badly needs the jobs and investment is unlikely to push hard.</li><li><strong>Whether countries act together:</strong> an MNC can avoid one country's rules by moving elsewhere. Rules agreed by many countries are harder to escape.</li><li><strong>The type of firm:</strong> boycotts and social media work on a famous consumer brand. For a firm whose customers are other businesses, the law matters more.</li></ul><p><strong>Judgement:</strong> self-regulation works best where laws and outside pressure remain in the background, giving firms a reason to keep to their codes. Without them, nothing stops a firm ignoring its own code.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "self-regulation",
+        "controlling-mncs",
+        "regulation",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-4-3-controlling-mncs.html",
+        "origin": "card-authored"
+      }
     }
   ]
 }
