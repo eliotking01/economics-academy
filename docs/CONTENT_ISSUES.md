@@ -897,4 +897,5 @@ Format per entry:
   leave it as written. The wording is Eliot's call.
 - **Confidence** — low (a structure point, not an error of fact). Not a
   chip, so no glossary coupling.
-- **Status** — open.
+- **Status** — closed, no change (Eliot, 2026-11-10: the list stays as
+  written).
