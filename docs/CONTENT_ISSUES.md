@@ -846,4 +846,7 @@ Format per entry:
   wording is Eliot's call.
 - **Confidence** — low (the bullet is loose, not wrong for the offshoring
   case the section is mainly about). Not a chip, so no glossary coupling.
-- **Status** — open.
+- **Status** — fixed (approved by Eliot 2026-11-10, the proposed wording:
+  "Costs: when the work moves abroad, wages and rents are lower → lower
+  unit costs → …". The card `edexcel-b-3-2-1-eval-01` already says the
+  same, so it is unchanged).
