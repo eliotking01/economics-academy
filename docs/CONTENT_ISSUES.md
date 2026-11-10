@@ -850,3 +850,26 @@ Format per entry:
   "Costs: when the work moves abroad, wages and rents are lower → lower
   unit costs → …". The card `edexcel-b-3-2-1-eval-01` already says the
   same, so it is unchanged).
+
+## 44. Edexcel B 3.3.2 sends the reader to the PED page for mass and niche markets
+
+- **Location** — `revision-notes/edexcel-b-theme-3/3-3-2-demand-side-factors-in-global-markets.html`,
+  "How Firms Respond to Demand-Side Factors", second paragraph: "How far a
+  firm then adapts its marketing depends on whether it sells to a mass
+  market or a niche (unit 2.2.1)" (source:
+  `notes-data/topics/edexcel-b-theme-3/3-3-2-demand-side-factors-in-global-markets.html`).
+- **Issue** — the cross-reference goes to
+  `2-2-1-price-elasticity-of-demand.html`. The cold-solver verify pass on
+  Edexcel B flashcards unit 3.3 (`NOTES?`, raised while checking
+  `edexcel-b-3-3-2-def-02`) questioned whether a PED page is the right
+  place to send a reader for mass and niche markets. Checked: 2.2.1 has a
+  section, "Pricing in Niche and Mass Markets", with chips for both terms,
+  so the link lands on a definition. B also defines both terms in 1.3.4
+  (`1-3-4-price-mechanism.html`) and niche markets in 2.1.5. The card does
+  not depend on the link and is unchanged.
+- **Proposed correction** — none recommended: leave the link as written.
+  The alternative is to point it at 1.3.4, where B first teaches the two
+  terms. The wording is Eliot's call.
+- **Confidence** — low (the link is defensible; this is a choice of
+  target, not an error). Not a chip, so no glossary coupling.
+- **Status** — open.
