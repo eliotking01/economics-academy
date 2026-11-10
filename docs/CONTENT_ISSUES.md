@@ -822,3 +822,28 @@ Format per entry:
 - **Status** — fixed (approved by Eliot 2026-11-10, the shorter wording:
   "→ a gain in producer surplus (the green area), and more jobs." The card
   `edexcel-b-3-1-4-diagram-01` already says the same, so it is unchanged).
+
+## 43. Edexcel B 3.2.1 gives lower foreign wages as the cost saving from outsourcing as well as offshoring
+
+- **Location** — `revision-notes/edexcel-b-theme-3/3-2-1-conditions-that-prompt-trade.html`,
+  "Offshoring and Outsourcing", the "Costs" bullet under "When a firm
+  offshores or outsources:" (source:
+  `notes-data/topics/edexcel-b-theme-3/3-2-1-conditions-that-prompt-trade.html`).
+- **Issue** — the bullet reads "Costs: wages and rents are lower abroad →
+  lower unit costs → the firm can cut prices or earn a higher margin." The
+  list is introduced as applying to a firm that "offshores or outsources",
+  but the page's own exam tip says outsourcing hands work to another firm
+  "which may be in the same town". For outsourcing within the UK, lower
+  wages abroad are not why it saves money. The section's opening line,
+  "Firms also trade by buying from abroad", has the same slant, though
+  that line is about trade and is fair in context. Found by the cold-solver
+  verify pass on Edexcel B flashcards unit 3.2 (`NOTES?` on
+  `edexcel-b-3-2-1-eval-01`). The card now reads "Lower costs: when the
+  work moves abroad, wages and rents are lower → …".
+- **Proposed correction** — "Costs: when the work moves abroad, wages and
+  rents are lower → lower unit costs → …". Or leave it as written: the
+  section is about trade, so the reader can take it as offshoring. The
+  wording is Eliot's call.
+- **Confidence** — low (the bullet is loose, not wrong for the offshoring
+  case the section is mainly about). Not a chip, so no glossary coupling.
+- **Status** — open.

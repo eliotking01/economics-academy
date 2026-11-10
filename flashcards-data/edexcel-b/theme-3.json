@@ -697,6 +697,278 @@
         "origin": "notes-verbatim",
         "verbatim": "the group of EU countries that use the euro as their currency, with interest rates set for all of them by the European Central Bank (ECB)."
       }
+    },
+    {
+      "id": "edexcel-b-3-2-1-def-01",
+      "specCode": "3.2.1",
+      "topic": "3.2 Economic Factors in Business Expansion",
+      "subtopic": "3-2-1-conditions-that-prompt-trade",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>push factor</strong>, a <strong>pull factor</strong> and a <strong>saturated market</strong>. Build the chains for the two push factors.</p>",
+      "back": "<p><strong>Push factor</strong> — a problem in the home market that drives a firm to look for sales abroad.</p><p><strong>Pull factor</strong> — a benefit of selling abroad that attracts a firm to expand there.</p><p><strong>Saturated market</strong> — a market where most people who want the product already have it, so sales grow slowly and come mainly from replacements.</p><p>The two push factors:</p><ul><li><strong>A saturated home market:</strong> few new customers → sales and revenue stop growing → the firm sells in countries where demand is still rising → higher sales and profit.</li><li><strong>Competition:</strong> more rivals at home → price cuts to keep customers → lower margins and profit → the firm sells where it faces less competition and can charge more.</li></ul><p>Nearly every UK home already has a washing machine, so a maker can only grow at home by taking customers from rivals. Where ownership is still rising, every new buyer is extra demand.</p><p>The two pull factors are economies of scale and risk spreading.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "push-factors",
+        "pull-factors",
+        "saturated-markets"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-2-1-conditions-that-prompt-trade.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a problem in the home market that drives a firm to look for sales abroad."
+      }
+    },
+    {
+      "id": "edexcel-b-3-2-1-chain-01",
+      "specCode": "3.2.1",
+      "topic": "3.2 Economic Factors in Business Expansion",
+      "subtopic": "3-2-1-conditions-that-prompt-trade",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chains of reasoning</strong> for the two <strong>pull factors</strong>. When does risk spreading work least well?</p>",
+      "back": "<ul><li><strong>Economies of scale:</strong> new export markets → higher output → bulk buying, and design and advertising costs spread over more units → lower average cost → lower prices or higher profit per unit.</li><li><strong>Risk spreading:</strong> a recession hits the UK → UK sales fall, but sales in other countries hold up → revenue and cash flow stay steadier → less risk of losses and job cuts.</li></ul><p><strong>Risk spreading works best when the markets don't move together.</strong> Economies are more interdependent than they used to be, so a global recession can hit every market at once.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "pull-factors",
+        "economies-of-scale",
+        "risk-spreading",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-2-1-conditions-that-prompt-trade.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-2-1-chain-02",
+      "specCode": "3.2.1",
+      "topic": "3.2 Economic Factors in Business Expansion",
+      "subtopic": "3-2-1-conditions-that-prompt-trade",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chains of reasoning</strong>: how can selling abroad <strong>extend a product's life cycle</strong> and <strong>raise capacity utilisation</strong>? What limits how much it helps?</p>",
+      "back": "<ul><li><strong>Extending the product life cycle:</strong> UK sales start to fall → the firm launches the product in a country where it is new → sales grow again → more revenue from a product whose development is already paid for → cash to fund new products.</li><li><strong>Raising capacity utilisation:</strong> export orders → higher output from the same factory → fixed costs spread over more units → lower average cost and higher profit.</li></ul><p>Selling in a new market is an extension strategy: it starts the life cycle again. It works when the product is new to customers abroad. A product replaced by better technology is likely to decline everywhere.</p><p>Exports can also fill a seasonal gap. A UK maker of winter coats is quiet in the British summer, when it is winter in New Zealand.</p><p><strong>How much it helps depends on:</strong></p><ul><li><strong>The cost of entering the market:</strong> marketing, shipping and adapting the product for a new country can cost more than the extra sales bring in.</li><li><strong>Exchange rates:</strong> a stronger pound makes UK exports dearer abroad and cuts the value of foreign sales in pounds.</li><li><strong>How much spare capacity there is:</strong> a firm already near full capacity would need a new factory to meet foreign orders, which removes the cost advantage.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "product-life-cycle",
+        "extension-strategy",
+        "capacity-utilisation",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-2-1-conditions-that-prompt-trade.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-2-1-def-02",
+      "specCode": "3.2.1",
+      "topic": "3.2 Economic Factors in Business Expansion",
+      "subtopic": "3-2-1-conditions-that-prompt-trade",
+      "cardType": "definition",
+      "front": "<p>Define <strong>offshoring</strong> and <strong>outsourcing</strong>. Is each of these offshoring, outsourcing or both?</p><ul><li>(a) A UK toy firm pays a factory in China to make its toys.</li><li>(b) A UK insurer moves its claims team to its own office in South Africa.</li><li>(c) A UK hotel chain pays a local firm to run its laundry.</li></ul>",
+      "back": "<p><strong>Offshoring</strong> — moving part of a firm's production or services to another country.</p><p><strong>Outsourcing</strong> — paying another firm to carry out work the business used to do itself.</p><p><strong>Offshoring is about where; outsourcing is about who.</strong> Offshoring moves work to another country. Outsourcing hands it to another firm, which may be in the same town.</p><ul><li><strong>(a) Both:</strong> the work moves abroad and to another firm.</li><li><strong>(b) Offshoring only:</strong> the work moves abroad, but the insurer still does it itself.</li><li><strong>(c) Outsourcing only:</strong> another firm does the work, but it stays in the UK.</li></ul><p>In an extract, check which one the firm has done, or whether it has done both, and use the right term.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "offshoring",
+        "outsourcing"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-2-1-conditions-that-prompt-trade.html",
+        "origin": "notes-verbatim",
+        "verbatim": "moving part of a firm's production or services to another country."
+      }
+    },
+    {
+      "id": "edexcel-b-3-2-1-eval-01",
+      "specCode": "3.2.1",
+      "topic": "3.2 Economic Factors in Business Expansion",
+      "subtopic": "3-2-1-conditions-that-prompt-trade",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> whether a UK firm gains from offshoring or outsourcing its production, and who loses.</p>",
+      "back": "<p><strong>For:</strong></p><ul><li><strong>Lower costs:</strong> when the work moves abroad, wages and rents are lower → lower unit costs → the firm can cut prices or earn a higher margin.</li><li><strong>Focus:</strong> a specialist supplier does the routine work → the firm puts its staff and money into what it does best, such as design → a stronger product.</li></ul><p><strong>Against, for UK workers:</strong> jobs move abroad → staff are made redundant → lower incomes in the areas the work left.</p><p><strong>It depends on:</strong></p><ul><li><strong>Control over quality:</strong> it is harder to check work done by another firm thousands of miles away. Faults or poor working conditions at a supplier can damage the brand.</li><li><strong>The length of the supply chain:</strong> goods take weeks to ship, so the firm reacts more slowly to changes in demand, and a blocked port can halt supplies.</li><li><strong>Whether the cost gap lasts:</strong> as wages rise in emerging economies, the saving shrinks, and some firms bring work back home.</li></ul><p><strong>Judgement:</strong> it pays most where the work is routine, its quality is easy to check and demand changes little, and while the wage gap lasts. It pays least for a firm whose brand rests on quality, or which must react quickly to what customers want.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "offshoring",
+        "outsourcing",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-2-1-conditions-that-prompt-trade.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-2-2-def-01",
+      "specCode": "3.2.2",
+      "topic": "3.2 Economic Factors in Business Expansion",
+      "subtopic": "3-2-2-assessing-the-potential-of-different-economies",
+      "cardType": "definition",
+      "front": "<p>Define <strong>disposable income</strong>. Why does a firm choosing a market to sell in look at both its <strong>level</strong> and its <strong>growth</strong>? Name the other four factors it weighs up.</p>",
+      "back": "<p><strong>Disposable income</strong> — household income after income tax and National Insurance, plus any state benefits. It is what people have to spend.</p><ul><li><strong>The level</strong> shows how many people can buy the product today.</li><li><strong>The growth</strong> shows how the market will change. A country where average incomes are far below the UK's, but rising quickly, can be a better long-term prospect than a wealthy but saturated market.</li></ul><p>Incomes rise → more households join the middle class → demand for income-elastic goods, such as cars, eating out and foreign holidays, grows faster than incomes → higher sales for firms that got in early.</p><p><strong>The other four factors:</strong></p><ul><li><strong>Ease of doing business:</strong> simple rules, quick approvals and little corruption.</li><li><strong>Infrastructure:</strong> good roads, ports, power and internet access, so goods reach customers cheaply and on time, and online sales are possible.</li><li><strong>Political stability:</strong> a steady government and laws that don't change suddenly.</li><li><strong>Exchange rate:</strong> a stable rate, and a pound that isn't strong against the local currency.</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "disposable-income",
+        "market-entry",
+        "income-elasticity"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-2-2-assessing-the-potential-of-different-economies.html",
+        "origin": "notes-verbatim",
+        "verbatim": "household income after income tax and National Insurance, plus any state benefits. It is what people have to spend."
+      }
+    },
+    {
+      "id": "edexcel-b-3-2-2-def-02",
+      "specCode": "3.2.2",
+      "topic": "3.2 Economic Factors in Business Expansion",
+      "subtopic": "3-2-2-assessing-the-potential-of-different-economies",
+      "cardType": "definition",
+      "front": "<p>Define <strong>ease of doing business</strong>. Build the chains: how do red tape and political instability make a country a less attractive market?</p>",
+      "back": "<p><strong>Ease of doing business</strong> — how simple, quick and cheap it is to set up and run a firm in a country, from registering the company and getting permits to paying tax and enforcing contracts.</p><ul><li><strong>Red tape and corruption:</strong> months of delay and extra fees before trading starts → higher costs and later revenue → a lower return on the expansion.</li><li><strong>Political instability:</strong> war, unrest or a sudden change of government → shops close, imports stop or the firm's assets are taken → lost sales and assets.</li></ul><p>The World Bank used to rank countries on ease of doing business. It stopped in 2021 after finding problems with its data, so treat older rankings with care.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "ease-of-doing-business",
+        "political-stability",
+        "market-entry"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-2-2-assessing-the-potential-of-different-economies.html",
+        "origin": "notes-verbatim",
+        "verbatim": "how simple, quick and cheap it is to set up and run a firm in a country, from registering the company and getting permits to paying tax and enforcing contracts."
+      }
+    },
+    {
+      "id": "edexcel-b-3-2-2-chain-01",
+      "specCode": "3.2.2",
+      "topic": "3.2 Economic Factors in Business Expansion",
+      "subtopic": "3-2-2-assessing-the-potential-of-different-economies",
+      "cardType": "chain",
+      "front": "<p>Define the <strong>exchange rate</strong>. A UK firm sells in India. Build the chains: how does a stronger pound against the rupee affect its sales and its revenue in pounds?</p>",
+      "back": "<p><strong>Exchange rate</strong> — the price of one currency in terms of another.</p><ul><li><strong>Sales:</strong> UK goods cost more in rupees → customers buy fewer → lower sales.</li><li><strong>Revenue in pounds:</strong> revenue earned in rupees converts into fewer pounds → lower revenue and profit in pounds.</li></ul><p>If £1 rises from 100 to 110 rupees, a £50 jacket goes from 5,000 to 5,500 rupees. And 5.5 million rupees of sales, worth £55,000 at the old rate, are worth only £50,000 at the new one.</p><p>A weaker pound does the reverse. A rate that swings a lot makes planning hard, because the firm cannot tell what its foreign sales will be worth.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "exchange-rates",
+        "market-entry",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-2-2-assessing-the-potential-of-different-economies.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the price of one currency in terms of another"
+      }
+    },
+    {
+      "id": "edexcel-b-3-2-2-def-03",
+      "specCode": "3.2.2",
+      "topic": "3.2 Economic Factors in Business Expansion",
+      "subtopic": "3-2-2-assessing-the-potential-of-different-economies",
+      "cardType": "definition",
+      "front": "<p>Name the nine factors that influence where a firm <strong>locates production</strong>. Why do three of them matter more for a production site than for a market to sell in?</p>",
+      "back": "<p>Selling into a market asks: are there enough customers who can afford the product? Locating production asks: can the firm make the product there cheaply and reliably?</p><ul><li><strong>Costs of production:</strong> low wages, rents, energy and material costs cut unit costs, if productivity is high enough.</li><li><strong>Skills and availability of labour:</strong> enough workers with the right skills. A shortage pushes wages up, and complex products need trained engineers.</li><li><strong>Infrastructure:</strong> ports, roads and a reliable power supply, so materials arrive and goods leave on time.</li><li><strong>Location in a trade bloc:</strong> a site inside the bloc the firm sells to pays no external tariff on goods sold in the bloc.</li><li><strong>Government incentives:</strong> grants, tax breaks or cheap land cut the cost of building and running the site.</li><li><strong>Ease of doing business:</strong> quick planning approval and simple rules, so the site opens sooner and costs less to run.</li><li><strong>Political stability:</strong> a low risk of conflict or of the site being seized.</li><li><strong>Natural resources:</strong> raw materials or cheap energy close by cut transport and energy costs. A quarry has to go where the stone is.</li><li><strong>Likely return on investment:</strong> the highest expected profit for the money spent, which brings all the other factors together.</li></ul><p><strong>Infrastructure, ease of doing business and political stability</strong> are on both lists. They matter more for a production site, because the firm has put money into buildings and machinery it cannot easily move.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "location-of-production",
+        "globalisation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-2-2-assessing-the-potential-of-different-economies.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-2-2-calc-01",
+      "specCode": "3.2.2",
+      "topic": "3.2 Economic Factors in Business Expansion",
+      "subtopic": "3-2-2-assessing-the-potential-of-different-economies",
+      "cardType": "calculation",
+      "front": "<p>Define <strong>return on investment (ROI)</strong>. A firm is choosing between two factory sites:</p><ul><li><strong>Site A</strong> costs <strong>£15 million</strong> and is expected to earn <strong>£1.8 million</strong> a year.</li><li><strong>Site B</strong> costs <strong>£24 million</strong> and is expected to earn <strong>£2.4 million</strong> a year.</li></ul><p>Calculate the ROI of each. Which is better value, and what could change the decision?</p>",
+      "back": "<p><strong>Return on investment (ROI)</strong> — the profit an investment earns as a percentage of its cost.</p><ul><li><strong>Site A:</strong> 1.8 ÷ 15 × 100 = <strong>12%</strong>.</li><li><strong>Site B:</strong> 2.4 ÷ 24 × 100 = <strong>10%</strong>.</li></ul><p><strong>Site A is better value.</strong> Site B earns more profit in total, but less for each pound spent.</p><p><strong>Unless Site A is riskier:</strong> a less stable country has to offer a higher expected ROI to be worth the risk.</p>",
+      "formula": "\\text{ROI } (\\%) = \\frac{\\text{Annual profit}}{\\text{Cost of investment}} \\times 100",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "return-on-investment",
+        "location-of-production",
+        "calculation",
+        "quantitative-skills"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-2-2-assessing-the-potential-of-different-economies.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the profit an investment earns as a percentage of its cost"
+      }
+    },
+    {
+      "id": "edexcel-b-3-2-2-eval-01",
+      "specCode": "3.2.2",
+      "topic": "3.2 Economic Factors in Business Expansion",
+      "subtopic": "3-2-2-assessing-the-potential-of-different-economies",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> the factors a UK firm should weigh up when choosing a country in which to locate production.</p>",
+      "back": "<p>No country scores well on everything, so the firm trades one factor off against another. The likely return on investment brings them together.</p><p><strong>It depends on:</strong></p><ul><li><strong>What the firm makes:</strong> shoes and simple assembly need lots of labour, so low wages count most. Aircraft parts need skilled staff and reliable power.</li><li><strong>Productivity, not just wages:</strong> low wages cut unit costs only if productivity is high enough.</li><li><strong>Where it sells:</strong> a site inside the trade bloc it sells to avoids the external tariff.</li><li><strong>Risk against return:</strong> a less stable country has to offer a higher expected ROI to be worth the risk, because buildings and machinery cannot easily be moved.</li></ul><p><strong>Match the factor to the decision.</strong> Low wages are a reason to produce in a country, not to sell there, as they usually mean low disposable incomes.</p><p><strong>Judgement:</strong> for a product that needs lots of labour, low wages decide it, as long as productivity and infrastructure are good enough. For a complex product, skills, reliable power and stability come first. In both cases the best site is the one with the highest expected ROI once the risk is allowed for.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "location-of-production",
+        "return-on-investment",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-2-2-assessing-the-potential-of-different-economies.html",
+        "origin": "card-authored"
+      }
     }
   ]
 }
