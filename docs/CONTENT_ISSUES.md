@@ -819,4 +819,6 @@ Format per entry:
 - **Confidence** — medium (standard welfare analysis; the bullet is loose,
   not backwards). Not a chip, so no glossary coupling. The same sentence
   does not appear in the figure's caption or alt text.
-- **Status** — open.
+- **Status** — fixed (approved by Eliot 2026-11-10, the shorter wording:
+  "→ a gain in producer surplus (the green area), and more jobs." The card
+  `edexcel-b-3-1-4-diagram-01` already says the same, so it is unchanged).
