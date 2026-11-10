@@ -1,0 +1,702 @@
+{
+  "board": "edexcel-b",
+  "boardName": "Edexcel B",
+  "theme": "theme-3",
+  "themeName": "Theme 3: The Global Economy",
+  "deckId": "edexcel-b-theme-3",
+  "deckTitle": "Edexcel B A-Level Economics Theme 3 Flashcards",
+  "metaDescription": "Free interactive flashcards for Edexcel B A-Level Economics Theme 3: globalisation, business expansion, global companies, local and national economies, labour markets and inequality, with spaced repetition.",
+  "intro": "Revise Theme 3 with interactive flashcards written to the Edexcel B (9EB0) specification — globalisation, the economic factors in business expansion, globalisation's impact on global companies and on local and national economies, global labour markets, and inequality and redistribution. Flip each card to check yourself, rate how well you knew it, and the deck brings back the cards you found hard. Every card links to the revision notes page that teaches it.",
+  "cards": [
+    {
+      "id": "edexcel-b-3-1-1-def-01",
+      "specCode": "3.1.1",
+      "topic": "3.1 Globalisation",
+      "subtopic": "3-1-1-growing-economies",
+      "cardType": "definition",
+      "front": "<p>Define <strong>purchasing power parity (PPP)</strong>. How has economic power shifted towards China, India, Africa and other emerging markets since 2000?</p>",
+      "back": "<p><strong>Purchasing power parity (PPP)</strong> — a way of comparing countries' output that adjusts for differences in prices, so that a dollar buys the same amount in each country.</p><p>Economic power comes from the size of an economy: a bigger one buys and sells more and has more say in trade talks. Measured at PPP, between 2000 and 2025:</p><ul><li><strong>China:</strong> its share of world GDP more than doubled, and it has been the world's largest economy since 2014. Its growth came from manufacturing for export.</li><li><strong>India:</strong> its share almost doubled, and it is now the third largest economy. Its growth has leaned more on services sold to firms abroad, such as IT.</li><li><strong>Sub-Saharan Africa:</strong> its share barely moved, but its population almost doubled, so it is a fast-growing market and workforce. Many of its economies rely on exporting oil and metals, so their growth rises and falls with world prices.</li><li><strong>Other emerging markets:</strong> Vietnam and Indonesia have attracted factories as wages in China rise.</li></ul><p>Over the same period, the shares of the US and the UK fell.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "emerging-economies",
+        "ppp",
+        "economic-power"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-1-growing-economies.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a way of comparing countries' output that adjusts for differences in prices, so that a dollar buys the same amount in each country."
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-1-chain-01",
+      "specCode": "3.1.1",
+      "topic": "3.1 Globalisation",
+      "subtopic": "3-1-1-growing-economies",
+      "cardType": "chain",
+      "front": "<p>Define <strong>rationalisation</strong>. Build the <strong>chains of reasoning</strong>: what trade and rationalisation opportunities does growth in emerging economies give UK firms?</p>",
+      "back": "<p><strong>Rationalisation</strong> — reorganising a business to cut its costs, for example by closing sites, cutting jobs or moving production elsewhere.</p><ul><li><strong>New customers:</strong> incomes rise in emerging economies → demand for imported goods and services grows → UK exporters sell more abroad → higher revenue, and economies of scale from the larger market.</li><li><strong>Cheaper inputs:</strong> emerging economies make components at low cost → UK firms import them → lower unit costs → higher margins or lower prices.</li><li><strong>Rationalisation:</strong> growing economies give firms new places to produce. A UK furniture maker might close its own workshop and buy from suppliers in Vietnam instead → production moves to a lower-cost country → unit costs fall → the firm can cut prices or raise its profit margin.</li></ul><p><strong>It depends on what the firm sells:</strong> a firm whose product is wanted in emerging markets gains a bigger market. One competing on price with low-cost producers is more likely to lose.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "emerging-economies",
+        "rationalisation",
+        "trade-opportunities",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-1-growing-economies.html",
+        "origin": "notes-verbatim",
+        "verbatim": "reorganising a business to cut its costs, for example by closing sites, cutting jobs or moving production elsewhere."
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-1-chain-02",
+      "specCode": "3.1.1",
+      "topic": "3.1 Globalisation",
+      "subtopic": "3-1-1-growing-economies",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chains of reasoning</strong>: how do shifting employment patterns and rising incomes in emerging economies affect workers and firms?</p>",
+      "back": "<p>As economies grow, workers move from farming into manufacturing, then into services.</p><ul><li><strong>Workers in emerging economies:</strong> factories open in towns and cities → people leave low-paid farm work for factory jobs → higher wages → higher living standards, and fewer people in extreme poverty.</li><li><strong>Workers in the UK:</strong> manufacturing moves to lower-cost countries → factory jobs go → workers whose skills don't suit the growing service sector face unemployment or lower pay.</li><li><strong>A new middle class:</strong> incomes rise → spending moves from basic food towards cars, branded goods, holidays and education → demand for income-elastic products grows fastest → firms selling them earn more from abroad.</li><li><strong>Rising labour costs:</strong> wages rise with incomes → producing in that country costs more → its cost advantage shrinks → some firms move production on to cheaper countries, or invest in machinery to replace workers.</li></ul><p><strong>It depends on skills and flexibility:</strong> workers who can retrain move into growing industries. Those who can't, or who live where the old jobs were, can stay out of work for years.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "emerging-economies",
+        "employment-patterns",
+        "rising-incomes",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-1-growing-economies.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-1-formula-01",
+      "specCode": "3.1.1",
+      "topic": "3.1 Globalisation",
+      "subtopic": "3-1-1-growing-economies",
+      "cardType": "formula",
+      "front": "<p>Define <strong>nominal value</strong> and <strong>real value</strong>. State the formula for converting a nominal value into a real one.</p>",
+      "back": "<p><strong>Nominal value</strong> — a value measured in the prices of the time, not adjusted for inflation.</p><p><strong>Real value</strong> — a value adjusted for inflation, so it shows the change in the amount that can be bought or produced.</p><p>Divide the nominal value by a price index and multiply by 100. The answer is in the prices of the price index's base year.</p><p>Comparing incomes over time means removing the effect of rising prices first. If wages triple while prices triple, real wages have not changed.</p>",
+      "formula": "\\text{Real value} = \\frac{\\text{Nominal value}}{\\text{Price index}} \\times 100",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "real-and-nominal",
+        "price-index",
+        "formula",
+        "quantitative-skills"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-1-growing-economies.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a value measured in the prices of the time, not adjusted for inflation."
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-1-formula-02",
+      "specCode": "3.1.1",
+      "topic": "3.1 Globalisation",
+      "subtopic": "3-1-1-growing-economies",
+      "cardType": "formula",
+      "front": "<p>Define an <strong>index number</strong> and state how to calculate one. How do you find the percentage change between two years when neither is the base year?</p>",
+      "back": "<p><strong>Index number</strong> — a value expressed relative to a base year, which is set at 100.</p><p>An index above 100 shows a rise since the base year, and one below 100 a fall. Index numbers make very different figures easy to compare: with 2000 = 100, China's real GDP reached about 687 by 2025 and the UK's 145.</p><p>The gap between an index and 100 is the percentage change since the base year. Between any two other years, find the percentage change from the old index number to the new one:</p><p>\\( \\%\\ \\text{change} = \\frac{\\text{New} - \\text{Old}}{\\text{Old}} \\times 100 \\)</p><p><strong>A change in points is not a change in per cent:</strong> an index rising from 120 to 132 is 12 points but 10%.</p>",
+      "formula": "\\text{Index} = \\frac{\\text{This year's value}}{\\text{Base year's value}} \\times 100",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "index-numbers",
+        "formula",
+        "quantitative-skills"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-1-growing-economies.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a value expressed relative to a base year, which is set at 100"
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-1-calc-01",
+      "specCode": "3.1.1",
+      "topic": "3.1 Globalisation",
+      "subtopic": "3-1-1-growing-economies",
+      "cardType": "calculation",
+      "front": "<p>Garment workers in an emerging economy earn an average of <strong>$300</strong> a month in 2019, <strong>$378</strong> in 2022 and <strong>$462</strong> in 2025. The price index (2019 = 100) is <strong>120</strong> in 2022 and <strong>140</strong> in 2025.</p><p>(a) Calculate the nominal wage index for 2025. (b) Calculate the real wage in 2022 and 2025 at 2019 prices, and express each as an index. (c) Calculate the percentage change in real wages from 2022 to 2025.</p>",
+      "back": "<p><strong>(a) Nominal wage index, 2025:</strong> 462 ÷ 300 × 100 = <strong>154</strong>. Money wages rose 54%.</p><p><strong>(b) Real wages at 2019 prices:</strong></p><ul><li>2022: 378 ÷ 120 × 100 = <strong>$315</strong>, an index of 315 ÷ 300 × 100 = <strong>105</strong>.</li><li>2025: 462 ÷ 140 × 100 = <strong>$330</strong>, an index of 330 ÷ 300 × 100 = <strong>110</strong>.</li></ul><p><strong>(c) Change in real wages, 2022 to 2025:</strong> (110 − 105) ÷ 105 × 100 = <strong>4.8%</strong>, not 5%. The index rose 5 points, but a change in points is not a change in per cent.</p><p>Pay rose 54% in money terms, but prices rose 40%, so workers can buy only 10% more than in 2019.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "real-and-nominal",
+        "index-numbers",
+        "calculation",
+        "quantitative-skills"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-1-growing-economies.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-2-def-01",
+      "specCode": "3.1.2",
+      "topic": "3.1 Globalisation",
+      "subtopic": "3-1-2-trade-and-growth",
+      "cardType": "definition",
+      "front": "<p>Define <strong>trade liberalisation</strong>. In what three ways have trade barriers fallen, and can the trend go into reverse?</p>",
+      "back": "<p><strong>Trade liberalisation</strong> — the reduction or removal of barriers to trade between countries, such as tariffs and quotas.</p><ul><li><strong>WTO talks:</strong> countries have agreed tariff cuts through the World Trade Organisation.</li><li><strong>Trading blocs:</strong> members have removed barriers on trade with each other.</li><li><strong>Cuts made alone:</strong> countries have cut their own tariffs as they opened up. India's average tariff on imports fell from 56% in 1990 to under 5% by 2022.</li></ul><p><strong>The trend can reverse.</strong> Since 2018 the US has raised tariffs, first on Chinese goods and then on imports from most countries. When the UK left the EU single market, its firms faced new customs checks on trade with Europe.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "trade-liberalisation",
+        "wto",
+        "globalisation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-2-trade-and-growth.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the reduction or removal of barriers to trade between countries, such as tariffs and quotas."
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-2-chain-01",
+      "specCode": "3.1.2",
+      "topic": "3.1 Globalisation",
+      "subtopic": "3-1-2-trade-and-growth",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chains of reasoning</strong>: how does cutting trade barriers raise a country's economic growth?</p>",
+      "back": "<ul><li><strong>Cheaper inputs:</strong> tariffs on imported materials and machinery fall → firms' costs fall → their goods become more competitive at home and abroad → more exports and higher output.</li><li><strong>New export markets:</strong> trading partners cut their tariffs in return → firms sell to many more customers → they expand and gain economies of scale → more jobs and investment.</li><li><strong>More competition:</strong> imports compete with protected home producers → inefficient firms must cut costs or close → resources move to firms that use them better → productivity rises, and so does the economy's capacity to grow.</li></ul><p>\"Trade liberalisation increases growth\" earns little on its own. Name the route, and finish with a rise in output or productive capacity.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "trade-liberalisation",
+        "economic-growth",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-2-trade-and-growth.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-2-chain-02",
+      "specCode": "3.1.2",
+      "topic": "3.1 Globalisation",
+      "subtopic": "3-1-2-trade-and-growth",
+      "cardType": "chain",
+      "front": "<p>Why is <strong>specialisation by country</strong> increasing? Build the chains for its gain and its risk.</p>",
+      "back": "<p>Countries specialise in the goods and services where they have a comparative advantage, and trade for the rest.</p><p>Specialisation is increasing because it now happens <strong>within a single product</strong> as well. Each country does the stage it does most cheaply, so parts cross several borders before the good is sold. A laptop might be designed in one country, use a screen made in a second and be assembled in a third.</p><ul><li><strong>The gain:</strong> each country focuses on fewer tasks → workers and firms get better at them and produce on a larger scale → lower unit costs → cheaper goods and more exports.</li><li><strong>The risk:</strong> production depends on every link → one country's factories close or its ports are blocked → parts stop arriving → firms elsewhere have to cut output.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "specialisation",
+        "supply-chains",
+        "comparative-advantage",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-2-trade-and-growth.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-2-chain-03",
+      "specCode": "3.1.2",
+      "topic": "3.1 Globalisation",
+      "subtopic": "3-1-2-trade-and-growth",
+      "cardType": "chain",
+      "front": "<p>Define <strong>foreign direct investment (FDI)</strong>. Build the <strong>chains of reasoning</strong>: how can a multinational building a factory raise a country's growth?</p>",
+      "back": "<p><strong>Foreign direct investment (FDI)</strong> — investment by a firm in another country to set up, buy or expand a business it controls there.</p><p>Trade liberalisation makes FDI easier, because a foreign-owned factory can import parts and export its output freely.</p><ul><li><strong>More capital:</strong> money flows in to build and equip the factory → the country can produce more → its productive capacity grows.</li><li><strong>Jobs and incomes:</strong> the factory hires local workers and buys from local suppliers → their incomes rise and they spend more → demand and output grow further, a multiplier effect.</li><li><strong>Technology and skills:</strong> the multinational brings new methods and trains its staff → workers and suppliers learn them → productivity rises in local firms too.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "fdi",
+        "economic-growth",
+        "multinationals",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-2-trade-and-growth.html",
+        "origin": "notes-verbatim",
+        "verbatim": "investment by a firm in another country to set up, buy or expand a business it controls there"
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-2-eval-01",
+      "specCode": "3.1.2",
+      "topic": "3.1 Globalisation",
+      "subtopic": "3-1-2-trade-and-growth",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> how far trade liberalisation and FDI raise an emerging economy's growth.</p>",
+      "back": "<p><strong>For:</strong> cheaper inputs, bigger export markets and more competition raise output and productivity. FDI adds capital, jobs and new technology, so productive capacity grows.</p><p><strong>It depends on:</strong></p><ul><li><strong>Whether home firms can compete:</strong> new industries may be wiped out by established foreign rivals before they grow large enough to survive. This is the infant industry argument for keeping some protection.</li><li><strong>What the country can sell:</strong> one that exports mainly raw materials gains less than one that can build manufacturing and services, and its growth swings with world prices.</li><li><strong>Where the profits go:</strong> profits sent back to the parent company leave the country, so less of the gain stays at home.</li><li><strong>The type of work:</strong> simple assembly jobs transfer few skills, and if the factory imports most of its parts, local suppliers gain little.</li><li><strong>How long the multinational stays:</strong> it can move to a cheaper country when wages rise or a tax break ends, taking the jobs with it.</li></ul><p><strong>Judgement:</strong> the gain is largest where home firms can build industries beyond raw materials, and where multinationals train local workers and buy from local suppliers. Even then, if the gains go to a few, GDP rises but many people are no better off.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "trade-liberalisation",
+        "fdi",
+        "economic-growth",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-2-trade-and-growth.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-3-def-01",
+      "specCode": "3.1.3",
+      "topic": "3.1 Globalisation",
+      "subtopic": "3-1-3-trading-blocs",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>trading bloc</strong> and a <strong>single market</strong>. Name the four types of bloc, from the least to the most closely linked, with an example of each.</p>",
+      "back": "<p><strong>Trading bloc</strong> — a group of countries that agree to reduce or remove barriers to trade between themselves.</p><p><strong>Single market</strong> — a trading bloc where goods, services, capital and people move freely between members, under one set of product rules.</p><p>Each type includes everything in the one before it:</p><ul><li><strong>Free trade area:</strong> no tariffs or quotas on trade between members; each sets its own tariffs on everyone else. Example: USMCA, which replaced NAFTA in 2020.</li><li><strong>Customs union:</strong> also a common external tariff, the same tariff on imports from outside the bloc, whichever member they enter. Example: Mercosur.</li><li><strong>Single market:</strong> also free movement of services, capital and workers, and shared rules on products. Example: the EU.</li><li><strong>Monetary union:</strong> also a single currency and one central bank. Example: the Eurozone.</li></ul><p>Blocs have expanded. The EU's single market began in 1993 with 12 members and has 27 today, and ASEAN has grown from five founders in 1967 to eleven members.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "trading-blocs",
+        "single-market",
+        "customs-union",
+        "free-trade-area"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-3-trading-blocs.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a group of countries that agree to reduce or remove barriers to trade between themselves"
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-3-def-02",
+      "specCode": "3.1.3",
+      "topic": "3.1 Globalisation",
+      "subtopic": "3-1-3-trading-blocs",
+      "cardType": "definition",
+      "front": "<p>Define <strong>trade creation</strong> and <strong>trade diversion</strong>. Which is a gain, which is a loss, and why?</p>",
+      "back": "<p><strong>Trade creation</strong> — when joining a bloc moves trade from a higher-cost producer at home to a lower-cost producer in another member country.</p><p><strong>Trade diversion</strong> — when joining a bloc moves trade from a lower-cost producer outside the bloc to a higher-cost producer inside it.</p><ul><li><strong>Trade creation is a gain:</strong> goods are made where they cost least, and consumers pay less.</li><li><strong>Trade diversion is a loss of efficiency:</strong> the tariff, not the cost of making the good, decides where it is bought. The government also loses the tariff revenue it used to collect.</li></ul><p><strong>Which one it is depends on where the goods came from before.</strong> In both cases consumers usually pay less, so don't call diversion bad for consumers.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "trading-blocs",
+        "trade-creation",
+        "trade-diversion"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-3-trading-blocs.html",
+        "origin": "notes-verbatim",
+        "verbatim": "when joining a bloc moves trade from a higher-cost producer at home to a lower-cost producer in another member country."
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-3-calc-01",
+      "specCode": "3.1.3",
+      "topic": "3.1 Globalisation",
+      "subtopic": "3-1-3-trading-blocs",
+      "cardType": "calculation",
+      "front": "<p>A country puts a <strong>25% tariff</strong> on all imports. It then joins a trading bloc with Italy, but not with the US. Each good costs this much to make:</p><ul><li><strong>Bicycles:</strong> US £200, Italy £220, home producer £260.</li><li><strong>Shoes:</strong> US £40, Italy £44, home producer £48.</li></ul><p>For each good, where do buyers buy before and after the country joins? Is the change trade creation or trade diversion?</p>",
+      "back": "<p><strong>Bicycles: trade diversion.</strong></p><ul><li>Before: US £200 + 25% = £250, Italy £220 + 25% = £275, home £260. Buyers choose the US at £250.</li><li>After: Italy £220 with no tariff; the US is still £250. Buyers switch to Italy.</li><li>Trade moves from a lower-cost producer outside the bloc to one inside it whose costs are £20 higher. Consumers pay £30 less, but the government loses £50 of tariff revenue on each bicycle.</li></ul><p><strong>Shoes: trade creation.</strong></p><ul><li>Before: US £40 + 25% = £50, Italy £44 + 25% = £55, home £48. Buyers choose the home producer at £48.</li><li>After: Italy £44 with no tariff. Buyers switch from the higher-cost home producer to Italy.</li><li>Consumers pay £4 less, and the shoes are made where they cost less.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "trade-creation",
+        "trade-diversion",
+        "calculation",
+        "quantitative-skills"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-3-trading-blocs.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-3-eval-01",
+      "specCode": "3.1.3",
+      "topic": "3.1 Globalisation",
+      "subtopic": "3-1-3-trading-blocs",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> the impact of a trading bloc on firms inside it and outside it.</p>",
+      "back": "<p><strong>Firms inside the bloc can gain:</strong></p><ul><li><strong>A bigger market:</strong> tariffs on sales to other members go → firms sell to millions more customers → higher output brings economies of scale → lower unit costs and higher profit.</li><li><strong>Cheaper inputs:</strong> parts and materials from other members arrive tariff-free → lower costs → lower prices or higher margins.</li><li><strong>More workers to hire:</strong> in a single market, workers can move between members → firms fill vacancies from across the bloc → fewer skills shortages and less pressure on wages.</li></ul><p><strong>But they face more competition:</strong> rivals from other members sell freely in the home market → prices are pushed down → inefficient firms lose sales and profit, and some close.</p><p><strong>Firms outside the bloc</strong> pay a tariff that members' goods don't → they are less competitive in the bloc → they lose sales, or set up a factory inside it to get round the tariff.</p><p><strong>It depends on:</strong></p><ul><li><strong>The type of bloc:</strong> in a free trade area, firms must prove where their goods were made, which adds paperwork. A single market removes most border checks and sets one set of product rules.</li><li><strong>How much the firm trades with members:</strong> a firm selling only at home gains little from tariff-free access and still faces new competition.</li></ul><p><strong>Judgement:</strong> efficient firms that sell a lot to other members gain most, especially in a single market. Inefficient firms that sell only at home are the likeliest to lose.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "trading-blocs",
+        "firms",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-3-trading-blocs.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-3-def-03",
+      "specCode": "3.1.3",
+      "topic": "3.1 Globalisation",
+      "subtopic": "3-1-3-trading-blocs",
+      "cardType": "definition",
+      "front": "<p>Define <strong>interdependence</strong>. How do trading blocs deepen it, and how can it spread a recession or a supply shock?</p>",
+      "back": "<p><strong>Interdependence</strong> — when countries rely on each other for trade, investment and supplies, so that what happens in one economy affects the others.</p><p>Members of a bloc trade more with each other and build supply chains that cross their borders. The EU buys about two-fifths of the UK's exports, so:</p><ul><li><strong>A recession spreads:</strong> EU incomes fall → EU households and firms buy fewer UK exports → UK output falls → UK firms cut jobs.</li><li><strong>A supply shock spreads:</strong> a factory in one member stops producing parts → firms in other members that rely on them cannot finish their goods → output falls across the bloc.</li></ul><p>It cuts the other way too: when the bloc grows, every member's exporters gain. And countries that depend on each other's trade have a reason to settle disputes by negotiation.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "interdependence",
+        "trading-blocs",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-3-trading-blocs.html",
+        "origin": "notes-verbatim",
+        "verbatim": "when countries rely on each other for trade, investment and supplies, so that what happens in one economy affects the others."
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-4-def-01",
+      "specCode": "3.1.4",
+      "topic": "3.1 Globalisation",
+      "subtopic": "3-1-4-trade-policy-and-trade-negotiations",
+      "cardType": "definition",
+      "front": "<p>Define <strong>protectionism</strong>. Give four reasons governments protect industries.</p>",
+      "back": "<p><strong>Protectionism</strong> — government policies that restrict imports to shield domestic producers from foreign competition.</p><ul><li><strong>Infant industries:</strong> a new industry may need time to grow and cut its costs before it can compete with established foreign firms.</li><li><strong>Jobs:</strong> protection can save jobs in an industry that cheaper imports would otherwise close.</li><li><strong>Dumping:</strong> foreign firms selling below cost to win a market can be met with extra tariffs.</li><li><strong>Strategic industries:</strong> a country may want its own supply of steel, energy or medicines in case trade is cut off.</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "protectionism",
+        "infant-industry",
+        "dumping"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-4-trade-policy-and-trade-negotiations.html",
+        "origin": "notes-verbatim",
+        "verbatim": "government policies that restrict imports to shield domestic producers from foreign competition."
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-4-diagram-01",
+      "specCode": "3.1.4",
+      "topic": "3.1 Globalisation",
+      "subtopic": "3-1-4-trade-policy-and-trade-negotiations",
+      "cardType": "diagram",
+      "front": "<p>Define a <strong>tariff</strong>. Sketch its effect on a market open to world trade. Who gains, who loses, and where is the welfare loss?</p>",
+      "back": "<p><strong>Tariff</strong> — a tax on imported goods.</p><p>Without the tariff, the country imports as much as it wants at the world price, Sworld (P1): home producers supply Q1, consumers buy Q4 and imports fill the gap. The tariff raises the price of imports to Sworld+tariff (P2).</p><ul><li><strong>Home producers gain:</strong> the price they can charge rises → they expand output from Q1 to Q2 → a gain in producer surplus (the green area), and more jobs.</li><li><strong>Consumers lose:</strong> they pay the higher price → they buy Q3 instead of Q4 → lower real incomes and less choice.</li><li><strong>The government gains:</strong> it collects the tariff on each of the Q2–Q3 units still imported (the purple rectangle).</li></ul><p>Imports shrink from Q1–Q4 to Q2–Q3. <strong>The two red triangles are a welfare loss.</strong> The left one is the cost of making goods at home that could be imported more cheaply. The right one is the lost benefit to consumers who no longer buy at all.</p>",
+      "svgRef": "/images/diagrams/svg/tariff.svg",
+      "svgAlt": "Tariff diagram with price on the vertical axis and quantity on the horizontal axis; downward-sloping Ddomestic and upward-sloping Sdomestic cross above two horizontal lines, Sworld at P1 and the higher Sworld+tariff at P2. At P1 domestic supply is Q1 and demand Q4; at P2 domestic supply is Q2 and demand Q3. A green area to the left of Sdomestic between the two lines, a purple rectangle between Q2 and Q3 and two red triangles either side of it are shaded",
+      "difficulty": "standard",
+      "tags": [
+        "tariffs",
+        "protectionism",
+        "welfare-loss",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-4-trade-policy-and-trade-negotiations.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a tax on imported goods."
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-4-diagram-02",
+      "specCode": "3.1.4",
+      "topic": "3.1 Globalisation",
+      "subtopic": "3-1-4-trade-policy-and-trade-negotiations",
+      "cardType": "diagram",
+      "front": "<p>Define an <strong>import quota</strong>. Sketch its effect on a market open to world trade. How does it differ from a tariff?</p>",
+      "back": "<p><strong>Import quota</strong> — a limit on the quantity of a good that can be imported in a period.</p><p>At the world price Pw, home producers supply Q1 and consumers buy Q4. Once imports reach the quota, any extra demand must be met by home producers, who need a higher price to supply more. Show this with Sdomestic+quota: it starts on Sworld, the size of the quota to the right of Sdomestic, runs parallel to it and cuts Ddomestic at Pq.</p><ul><li><strong>Price</strong> rises from Pw to Pq.</li><li><strong>Home output</strong> rises from Q1 to Q2, and <strong>consumption</strong> falls from Q4 to Q3.</li><li><strong>Imports</strong> are cut to the quota, Q2–Q3.</li></ul><p><strong>The difference from a tariff:</strong> the government collects no revenue. The gap between the world price and the higher home price goes instead to the foreign firms allowed to sell within the quota. So the shaded welfare loss runs all the way from Q1 to Q4 between Pw and Pq: the two triangles, plus the rectangle that goes to foreign firms.</p>",
+      "svgRef": "/images/diagrams/svg/import-quota.svg",
+      "svgAlt": "Import quota diagram with price on the vertical axis and quantity on the horizontal axis; downward-sloping Ddomestic and upward-sloping Sdomestic cross above a horizontal line, Sworld, at the world price Pw, where domestic supply is Q1 and demand Q4. A second supply curve, Sdomestic+quota, starts on Sworld to the right of Sdomestic, runs parallel to it and cuts Ddomestic at the higher price Pq, where domestic output is Q2 and demand Q3; the gap from Q2 to Q3 is labelled quota imports. The area between Pw and Pq from Q1 to Q4, between Sdomestic and Ddomestic, is shaded and labelled welfare loss",
+      "difficulty": "standard",
+      "tags": [
+        "import-quotas",
+        "protectionism",
+        "welfare-loss",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-4-trade-policy-and-trade-negotiations.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a limit on the quantity of a good that can be imported in a period."
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-4-def-02",
+      "specCode": "3.1.4",
+      "topic": "3.1 Globalisation",
+      "subtopic": "3-1-4-trade-policy-and-trade-negotiations",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>non-tariff barrier</strong> and a <strong>subsidy</strong>. Name four non-tariff barriers. How does a domestic subsidy protect home producers, and who pays for it?</p>",
+      "back": "<p><strong>Non-tariff barrier</strong> — any restriction on imports other than a tariff or a quota.</p><ul><li><strong>Government legislation:</strong> laws on product safety, labelling or how food is produced, which can keep out goods made to another country's rules.</li><li><strong>Paperwork and checks:</strong> customs forms, licences and inspections at the border add cost and delay, and hit small exporters hardest.</li><li><strong>Voluntary export restraints:</strong> the exporting country agrees to limit how much it sells, usually to head off a tighter barrier.</li><li><strong>Embargoes:</strong> a complete ban on trade with a country, usually for political reasons.</li></ul><p>Rules like these often have genuine aims, such as safety. They count as protectionism when their main effect is to keep foreign goods out.</p><p><strong>Subsidy</strong> — a payment from the government to producers that lowers their costs.</p><ul><li><strong>Home producers:</strong> the subsidy lowers their unit costs → they can match the price of imports → they win back sales at home and abroad.</li><li><strong>Consumers and taxpayers:</strong> prices don't rise, unlike with a tariff → but the subsidy has to be paid for through taxes or borrowing, or by spending less elsewhere.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "non-tariff-barriers",
+        "subsidies",
+        "protectionism"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-4-trade-policy-and-trade-negotiations.html",
+        "origin": "notes-verbatim",
+        "verbatim": "any restriction on imports other than a tariff or a quota."
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-4-def-03",
+      "specCode": "3.1.4",
+      "topic": "3.1 Globalisation",
+      "subtopic": "3-1-4-trade-policy-and-trade-negotiations",
+      "cardType": "definition",
+      "front": "<p>What part do the <strong>G20</strong>, the <strong>WTO</strong>, the <strong>IMF</strong> and the <strong>World Bank</strong> play, and what is one criticism of each? Define a <strong>bilateral trade agreement</strong>, and give one advantage and one drawback.</p>",
+      "back": "<ul><li><strong>G20:</strong> leaders of 19 large economies, the EU and the African Union meet each year to coordinate policy on growth, trade and finance. <em>But</em> it has no power to enforce what it agrees, and most low-income countries are not members.</li><li><strong>WTO:</strong> sets the rules of world trade, hosts talks to cut barriers and settles disputes between members. <em>But</em> talks are slow: the Doha round, launched in 2001, was never completed.</li><li><strong>IMF:</strong> lends to countries in financial crisis or with balance of payments problems, and monitors their economies. <em>But</em> its loans come with conditions, such as spending cuts, that can deepen a recession and hit the poorest hardest.</li><li><strong>World Bank:</strong> lends to and funds developing countries for long-term projects, such as roads, power and schools, to reduce poverty. <em>But</em> voting power depends on how much each country pays in, so high-income countries have the most say.</li></ul><p><strong>Bilateral trade agreement</strong> — a deal between two countries to reduce barriers to trade between them.</p><ul><li><strong>Advantage:</strong> two countries can agree far faster than the WTO's members, and can tailor the deal to the goods they trade.</li><li><strong>Drawback:</strong> each deal has its own rules, which adds paperwork for firms trading with many countries, and a small economy has little bargaining power against a large one.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "trade-negotiations",
+        "wto",
+        "imf",
+        "world-bank",
+        "bilateral-agreements"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-4-trade-policy-and-trade-negotiations.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a deal between two countries to reduce barriers to trade between them."
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-4-eval-01",
+      "specCode": "3.1.4",
+      "topic": "3.1 Globalisation",
+      "subtopic": "3-1-4-trade-policy-and-trade-negotiations",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> whether a tariff is a good way to protect a home industry from cheaper imports.</p>",
+      "back": "<p><strong>For:</strong> home producers expand output, earn more and keep jobs, and the government collects tariff revenue. An infant industry gets time to grow and cut its costs.</p><p><strong>Against:</strong> consumers pay more, buy less and have less choice, and the two triangles on the tariff diagram are a welfare loss.</p><p><strong>It depends on:</strong></p><ul><li><strong>Retaliation:</strong> trading partners may put tariffs on the country's exports in return, so exporters lose what the protected industry gains.</li><li><strong>Whether the industry becomes competitive:</strong> protection that never ends removes the pressure to cut costs, and consumers keep paying more.</li><li><strong>Price elasticity of demand for imports:</strong> if demand is inelastic, a tariff barely cuts imports and mainly raises prices.</li><li><strong>The alternative:</strong> a subsidy protects home producers without raising prices, but it has to be paid for through taxes or borrowing, or by spending less elsewhere.</li></ul><p><strong>Judgement:</strong> a tariff works best as short-term help for an infant industry that will become competitive, when trading partners do not retaliate. Kept for good, it removes the pressure to cut costs, and consumers keep paying more.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "tariffs",
+        "protectionism",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-4-trade-policy-and-trade-negotiations.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-5-chain-01",
+      "specCode": "3.1.5",
+      "topic": "3.1 Globalisation",
+      "subtopic": "3-1-5-exchange-rate-changes",
+      "cardType": "chain",
+      "front": "<p>Define <strong>depreciation</strong> and <strong>appreciation</strong>. Build the <strong>chains of reasoning</strong>: how does a depreciation of the pound affect the current account, economic growth, firms, unemployment, inflation and FDI?</p>",
+      "back": "<p><strong>Depreciation</strong> — a fall in the value of a currency against another, such as the pound falling from $1.30 to $1.20.</p><p><strong>Appreciation</strong> — a rise in the value of a currency against another.</p><p>A weaker pound makes UK exports cheaper abroad and imports dearer at home. When the pound depreciates:</p><ul><li><strong>Current account:</strong> export sales rise and imports fall → a current account deficit narrows, or a surplus grows.</li><li><strong>Economic growth:</strong> net exports rise → aggregate demand rises → firms raise output → higher real GDP, made larger by the multiplier.</li><li><strong>Firms:</strong> exporters and firms competing with imports win sales → higher revenue and profit. Firms that rely on imported materials face higher costs and lower margins.</li><li><strong>Unemployment:</strong> firms producing more for export and home markets need more workers → they hire → unemployment falls, especially in manufacturing areas.</li><li><strong>Inflation:</strong> imported food, fuel and components cost more in pounds → firms pass the costs on → cost-push inflation. Higher demand for exports adds demand-pull pressure too.</li><li><strong>FDI:</strong> UK land, factories and firms cost less in foreign currency → buying or building in the UK is cheaper for foreign firms → FDI into the UK can rise.</li></ul><p>An appreciation runs each chain the other way.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "exchange-rates",
+        "depreciation",
+        "appreciation",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-5-exchange-rate-changes.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a fall in the value of a currency against another, such as the pound falling from $1.30 to $1.20."
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-5-formula-01",
+      "specCode": "3.1.5",
+      "topic": "3.1 Globalisation",
+      "subtopic": "3-1-5-exchange-rate-changes",
+      "cardType": "formula",
+      "front": "<p>State the <strong>Marshall-Lerner condition</strong>. Why can a depreciation make the current account worse?</p>",
+      "back": "<p><strong>Marshall-Lerner condition</strong> — a depreciation improves the current account only if the price elasticities of demand for exports and imports add up to more than 1.</p><p>The elasticities are taken as positive numbers.</p><p><strong>Why it can fail:</strong> a depreciation means each import costs more in pounds. If the quantity of imports barely falls, the UK spends more on them, not less, and exports must rise enough to make up for that. If demand for both is inelastic and the total is below 1, a depreciation makes the current account worse.</p><p>For example, PEDs of 0.3 for exports and 0.4 for imports add up to 0.7, so the condition fails.</p>",
+      "formula": "\\text{PED}_{\\text{exports}} + \\text{PED}_{\\text{imports}} > 1",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "marshall-lerner",
+        "current-account",
+        "ped",
+        "formula"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-5-exchange-rate-changes.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a depreciation improves the current account only if the price elasticities of demand for exports and imports add up to more than 1"
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-5-diagram-01",
+      "specCode": "3.1.5",
+      "topic": "3.1 Globalisation",
+      "subtopic": "3-1-5-exchange-rate-changes",
+      "cardType": "diagram",
+      "front": "<p>Sketch the <strong>J-curve</strong>. Why does the trade balance get worse before it gets better after a depreciation?</p>",
+      "back": "<p>Net trade goes up the side, from deficit (exports less than imports) at the bottom to surplus at the top, and time goes along the bottom. The trade balance starts flat, in deficit. When the depreciation occurs, it falls deeper into deficit through the short run, reaches its lowest point, then rises through the long run and crosses into surplus, tracing a J.</p><ul><li><strong>Short run, worse:</strong> prices are fixed in contracts and buyers take time to find new suppliers → demand for exports and imports is price inelastic → the quantity of imports barely falls, but each costs more in pounds → the deficit widens.</li><li><strong>Long run, better:</strong> contracts end and buyers switch to the new prices → demand becomes more price elastic → exports rise and imports fall enough → the trade balance improves.</li></ul><p>The J-curve shows that a depreciation can fail the Marshall-Lerner condition at first, even when it holds in the long run.</p>",
+      "svgRef": "/images/diagrams/svg/j-curve.svg",
+      "svgAlt": "J-curve diagram with net trade on the vertical axis, running from deficit at the bottom to surplus at the top, and time on the horizontal axis; the trade balance starts flat in deficit, falls deeper into deficit through the short run after the dashed line where the depreciation occurs, reaches its lowest point at a second dashed line, then rises through the long run and crosses into surplus",
+      "difficulty": "standard",
+      "tags": [
+        "j-curve",
+        "exchange-rates",
+        "current-account",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-5-exchange-rate-changes.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-5-eval-01",
+      "specCode": "3.1.5",
+      "topic": "3.1 Globalisation",
+      "subtopic": "3-1-5-exchange-rate-changes",
+      "cardType": "evaluation",
+      "front": "<p>Define the <strong>current account</strong>. <strong>Evaluate</strong> whether a depreciation of the pound will improve the UK's current account and raise growth.</p>",
+      "back": "<p><strong>Current account</strong> — the part of the balance of payments that records trade in goods and services, plus income such as interest and profits flowing in and out of the country.</p><p><strong>For:</strong> UK exports get cheaper abroad and imports dearer → export sales rise and imports fall → the current account improves → net exports raise aggregate demand → higher real GDP and more jobs.</p><p><strong>It depends on:</strong></p><ul><li><strong>The Marshall-Lerner condition:</strong> if the price elasticities of demand for exports and imports add up to less than 1, the current account gets worse.</li><li><strong>Time (the J-curve):</strong> demand is inelastic at first, so the trade balance worsens before it improves.</li><li><strong>Spare capacity:</strong> with unemployed workers and idle factories, firms can raise output, so growth and jobs gain most. Near full capacity, the extra demand mainly raises prices.</li><li><strong>Import content of exports:</strong> many UK exports use imported parts. Their costs rise with the depreciation, so part of the price advantage is lost.</li></ul><p><strong>Judgement:</strong> a weaker pound can improve the current account and raise growth, but only after a lag and only if demand is elastic enough. If the economy is near full capacity, the main result may be inflation.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "exchange-rates",
+        "depreciation",
+        "current-account",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-5-exchange-rate-changes.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the part of the balance of payments that records trade in goods and services, plus income such as interest and profits flowing in and out of the country."
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-5-chain-02",
+      "specCode": "3.1.5",
+      "topic": "3.1 Globalisation",
+      "subtopic": "3-1-5-exchange-rate-changes",
+      "cardType": "chain",
+      "front": "<p>Define the <strong>Eurozone</strong>. Build the <strong>chains of reasoning</strong>: what does the euro bring firms and countries inside it, and what does sharing one monetary policy cost them?</p>",
+      "back": "<p><strong>Eurozone</strong> — the group of EU countries that use the euro as their currency, with interest rates set for all of them by the European Central Bank (ECB).</p><p><strong>Benefits:</strong></p><ul><li><strong>No exchange rate risk:</strong> a Spanish firm selling to Italy is paid in euros → its revenue cannot be hit by a currency change, and it pays nothing to convert money → lower costs and easier planning → more trade between members.</li><li><strong>Clear prices:</strong> prices across the Eurozone are in one currency → buyers compare them easily → firms face more competition → lower prices for consumers.</li><li><strong>More investment:</strong> a firm from outside, such as a Japanese electronics maker, can build one factory and sell across the Eurozone without currency risk → more FDI into member countries.</li></ul><p><strong>Costs:</strong></p><ul><li><strong>One interest rate for all:</strong> the ECB sets a single rate → it may be too high for a member in recession and too low for one with rising inflation → each country loses a tool to manage its own economy.</li><li><strong>No exchange rate to adjust:</strong> a member whose costs rise faster than its neighbours' cannot let its currency fall → its exports stay expensive → it can regain competitiveness only by cutting wages and prices, which means higher unemployment for years.</li></ul><p><strong>It depends on</strong> how closely the country's economy moves with the rest, and how easily workers and money move to where the jobs are. The UK never joined, so UK firms trading with the Eurozone still face changes in the pound-euro rate.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "eurozone",
+        "monetary-union",
+        "exchange-rates",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-5-exchange-rate-changes.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the group of EU countries that use the euro as their currency, with interest rates set for all of them by the European Central Bank (ECB)."
+      }
+    }
+  ]
+}

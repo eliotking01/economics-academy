@@ -794,3 +794,29 @@ Format per entry:
   publishes it because some long-term contracts are linked to it." The
   card `edexcel-b-2-5-3-formula-01` stays as it is: it no longer makes the
   claim either way).
+
+## 42. Edexcel B 3.1.4 labels the tariff diagram's green area as "revenue and profit"
+
+- **Location** — `revision-notes/edexcel-b-theme-3/3-1-4-trade-policy-and-trade-negotiations.html`,
+  "Tariffs", the "Home producers gain" bullet under Figure 1 (source:
+  `notes-data/topics/edexcel-b-theme-3/3-1-4-trade-policy-and-trade-negotiations.html`).
+- **Issue** — the page reads "they expand output from Q1 to Q2 → higher
+  revenue and profit (the green area), and more jobs." The green area, to
+  the left of Sdomestic between Sworld and Sworld+tariff, is the gain in
+  domestic producer surplus. The rise in revenue is larger: it is the green
+  area plus the cost of producing the extra units Q1 to Q2, which is the
+  area under Sdomestic between Q1 and Q2 (the left red triangle and the
+  rectangle below Sworld). So "revenue" is not the green area. "Profit"
+  is close enough at A level, since producer surplus is usually taught as
+  the producers' gain. Found by the cold-solver verify
+  pass on Edexcel B flashcards unit 3.1 (`NOTES?` on
+  `edexcel-b-3-1-4-diagram-01`). The card now says "a gain in producer
+  surplus (the green area), and more jobs".
+- **Proposed correction** — "→ higher revenue and profit, and more jobs.
+  The green area is their gain in producer surplus." Or, shorter: "→ a gain
+  in producer surplus (the green area), and more jobs." Or leave it as
+  written, as a deliberate simplification. The wording is Eliot's call.
+- **Confidence** — medium (standard welfare analysis; the bullet is loose,
+  not backwards). Not a chip, so no glossary coupling. The same sentence
+  does not appear in the figure's caption or alt text.
+- **Status** — open.
