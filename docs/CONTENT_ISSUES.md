@@ -874,3 +874,27 @@ Format per entry:
   target, not an error). Not a chip, so no glossary coupling.
 - **Status** — closed, no change (Eliot, 2026-11-10: the link stays on
   2.2.1).
+
+## 45. Edexcel B 3.5.2 lists the cost to firms under "Both can push wages up"
+
+- **Location** — `revision-notes/edexcel-b-theme-3/3-5-2-wage-rates.html`,
+  "Trade Unions and Professional Bodies", the list introduced by "Both can
+  push wages up:" (source:
+  `notes-data/topics/edexcel-b-theme-3/3-5-2-wage-rates.html`).
+- **Issue** — the list has three bullets: collective bargaining, entry
+  requirements and "The cost to firms: pay rises → labour costs rise → the
+  firm raises prices, accepts lower profit or employs fewer people". The
+  third is a consequence of higher pay, not a way a union or professional
+  body pushes wages up, so it sits under a heading it does not answer. The
+  economics is right; only the grouping is off. Found by the cold-solver
+  verify pass on Edexcel B flashcards unit 3.5 (`NOTES?`, raised while
+  rechecking `edexcel-b-3-5-2-eval-01`). The cards `3-5-2-def-03` and
+  `3-5-2-eval-01` give the cost its own line and do not depend on the
+  heading.
+- **Proposed correction** — either change the lead-in to something like
+  "Both can push wages up, at a cost to firms:", or move the third bullet
+  out of the list into its own sentence before "Firms can gain too." Or
+  leave it as written. The wording is Eliot's call.
+- **Confidence** — low (a structure point, not an error of fact). Not a
+  chip, so no glossary coupling.
+- **Status** — open.

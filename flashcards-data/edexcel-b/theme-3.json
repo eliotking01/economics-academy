@@ -1596,6 +1596,412 @@
         "notesPage": "/revision-notes/edexcel-b-theme-3/3-4-3-controlling-mncs.html",
         "origin": "card-authored"
       }
+    },
+    {
+      "id": "edexcel-b-3-5-1-def-01",
+      "specCode": "3.5.1",
+      "topic": "3.5 Global Labour Markets",
+      "subtopic": "3-5-1-employment-patterns",
+      "cardType": "definition",
+      "front": "<p>Define the <strong>labour force</strong>. Give three reasons the global labour force has grown.</p>",
+      "back": "<p><strong>Labour force</strong> — everyone of working age who is either in work or actively looking for it.</p><p>The global labour force has grown by more than a billion people since 1991. The main reasons:</p><ul><li><strong>Population growth:</strong> most of the extra workers are in developing countries, especially in South Asia and Africa, where populations are young and still growing.</li><li><strong>More women in paid work:</strong> in many countries, including the UK, better education and changing attitudes have brought more women into the labour force.</li><li><strong>Economies opening up:</strong> as China, India and the former Soviet bloc joined world trade, hundreds of millions of workers came within reach of global firms.</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "labour-force",
+        "globalisation",
+        "labour-markets"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-5-1-employment-patterns.html",
+        "origin": "notes-verbatim",
+        "verbatim": "everyone of working age who is either in work or actively looking for it."
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-1-def-02",
+      "specCode": "3.5.1",
+      "topic": "3.5 Global Labour Markets",
+      "subtopic": "3-5-1-employment-patterns",
+      "cardType": "definition",
+      "front": "<p>Define <strong>structural change</strong>. Name the four sectors of an economy, with an example of each. How do jobs move between them as an economy develops?</p>",
+      "back": "<p><strong>Structural change</strong> — a long-term shift in the share of jobs and output between the sectors of an economy.</p><ul><li><strong>Primary:</strong> extracts raw materials and grows food, such as farming, fishing and mining.</li><li><strong>Secondary:</strong> turns raw materials into goods, such as manufacturing and construction.</li><li><strong>Tertiary:</strong> provides services, such as retail, hospitality, transport and health care.</li><li><strong>Quaternary:</strong> provides knowledge-based services, such as research and development, IT and consultancy.</li></ul><p>As an economy develops, jobs move from the primary sector to the secondary, then to the tertiary and quaternary sectors. Many developing countries are still moving workers off farms and into factories, where each worker produces far more, so incomes rise. The UK made that move long ago and has since shifted from manufacturing to services.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "structural-change",
+        "sectors",
+        "labour-markets"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-5-1-employment-patterns.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a long-term shift in the share of jobs and output between the sectors of an economy."
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-1-chain-01",
+      "specCode": "3.5.1",
+      "topic": "3.5 Global Labour Markets",
+      "subtopic": "3-5-1-employment-patterns",
+      "cardType": "chain",
+      "front": "<p>Why do jobs move between sectors? Build the chains for what happens when an industry <strong>declines</strong>, and say what decides how costly the change is.</p>",
+      "back": "<p><strong>Jobs move between sectors because of:</strong></p><ul><li><strong>Rising incomes:</strong> people spend a bigger share on services such as eating out, travel and health care.</li><li><strong>Higher productivity:</strong> machines let farms and factories produce more with fewer workers, so jobs there fall even when output does not.</li><li><strong>Global competition:</strong> much manufacturing has moved to lower-cost countries, especially in Asia.</li><li><strong>Technology:</strong> new industries, such as software and online services, create jobs in the quaternary sector.</li></ul><p><strong>When an industry declines:</strong></p><ul><li><strong>Its workers:</strong> plants close → their skills or location don't match the new jobs → structural unemployment → lower incomes, sometimes for years.</li><li><strong>The local area:</strong> a large employer closes → its former staff spend less in local shops → more firms cut jobs, and whole towns can decline.</li><li><strong>Firms in growing sectors:</strong> demand for new skills outruns supply → skill shortages → they pay more to recruit, which raises their costs.</li></ul><p><strong>The cost depends on:</strong> labour mobility, as workers who can retrain or move to where the jobs are find new work faster, and the speed of change, as a slow decline lets people retire or retrain while a sudden closure leaves them stranded.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "structural-change",
+        "structural-unemployment",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-5-1-employment-patterns.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-1-chain-02",
+      "specCode": "3.5.1",
+      "topic": "3.5 Global Labour Markets",
+      "subtopic": "3-5-1-employment-patterns",
+      "cardType": "chain",
+      "front": "<p>What does it mean for labour markets to be <strong>interdependent</strong>? Build the four ways globalisation links them, and say what decides how closely two are linked.</p>",
+      "back": "<p>Labour markets are <strong>interdependent</strong> when a change in one country affects jobs and wages in another.</p><ul><li><strong>Trade:</strong> a major trading partner goes into recession → it buys fewer imports → exporters elsewhere cut output → they cut jobs.</li><li><strong>Firms moving production:</strong> wages rise in one country → MNCs move factories to cheaper ones → jobs fall in the first and rise in the second. As wages in China rose, some clothing production moved to countries such as Vietnam and Bangladesh.</li><li><strong>Migration:</strong> workers move to countries with higher pay or more jobs → labour supply rises where they arrive and falls where they left.</li><li><strong>Digital services:</strong> work such as coding, accounting and customer service can be done online from anywhere → firms hire across borders → a programmer in the UK competes with one in India.</li></ul><p><strong>How closely two are linked depends on:</strong></p><ul><li><strong>Barriers:</strong> tariffs, migration rules and work permits all slow the links.</li><li><strong>Skills:</strong> the more specialised the job, the fewer people worldwide can do it, so the less its pay is held down by competition from abroad.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "interdependence",
+        "globalisation",
+        "labour-markets",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-5-1-employment-patterns.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-1-eval-01",
+      "specCode": "3.5.1",
+      "topic": "3.5 Global Labour Markets",
+      "subtopic": "3-5-1-employment-patterns",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> whether a growing global labour force harms workers in high-income countries such as the UK.</p>",
+      "back": "<p><strong>Who loses:</strong></p><ul><li><strong>Low-skilled workers:</strong> they compete with workers abroad who cost less → jobs in industries such as textiles move overseas → job losses, or lower pay for those who stay.</li></ul><p><strong>Who gains:</strong></p><ul><li><strong>Skilled workers:</strong> firms sell into bigger global markets → more demand for design, engineering and finance skills → higher wages.</li><li><strong>Firms:</strong> more workers are available in low-wage countries → firms move production there or buy from suppliers there → lower costs → lower prices or higher profit.</li></ul><p><strong>It depends on:</strong></p><ul><li><strong>Productivity as well as wages:</strong> a worker paid half as much who produces a third as much costs more per unit of output. A UK worker paid £18 an hour who makes 9 units costs £2 a unit. A worker abroad paid £9 an hour who makes 3 units costs £3 a unit.</li><li><strong>Whether the work can move:</strong> a factory job can go abroad, but a plumber or a care worker has to be where the customer is.</li></ul><p><strong>Judgement:</strong> say which workers you mean. Low-skilled workers in jobs that can move abroad lose most. Skilled workers can gain, and those whose work has to be done locally are protected. An answer that names the group earns more than \"workers lose out\".</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "labour-force",
+        "globalisation",
+        "unit-labour-costs",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-5-1-employment-patterns.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-2-diagram-01",
+      "specCode": "3.5.2",
+      "topic": "3.5 Global Labour Markets",
+      "subtopic": "3-5-2-wage-rates",
+      "cardType": "diagram",
+      "front": "<p>Define the <strong>wage rate</strong>. Sketch how the wage is set in a competitive labour market. What makes the wage rise, and what increases the supply of labour to a job?</p>",
+      "back": "<p><strong>Wage rate</strong> — the price of labour, paid per hour, week or year of work.</p><p>In a competitive labour market, the wage is set where firms' demand for labour, D(L), meets workers' supply of it, S(L): the wage W1, with Q1 people employed. MRP is the extra revenue the last worker brings in, and AC is the average cost of a worker, which is the wage.</p><p><strong>A wage rises when demand for labour rises or supply falls.</strong> The supply of labour to a job is the number of people willing and able to do it at each wage. It rises when:</p><ul><li>pay in similar jobs falls</li><li>non-wage benefits improve, such as flexible hours, job security or a good pension</li><li>fewer qualifications are needed</li><li>the working-age population grows, through higher birth rates in the past, or migration</li><li>work pays more than not working, through lower income tax, cheaper childcare or less generous out-of-work benefits.</li></ul><p>Each of these raises supply, so it <strong>lowers</strong> the wage. The reverse of each cuts supply and raises the wage.</p><p>That is why pay differs so much between jobs: few people have a surgeon's training and hospitals need surgeons badly, while almost anyone can start work in a shop.</p>",
+      "svgRef": "/images/diagrams/svg/wage-determination.svg",
+      "svgAlt": "Labour market diagram with Wages on the vertical axis and Quantity of Labour on the horizontal axis; the downward-sloping D(L)=MRP curve crosses the upward-sloping S(L)=AC curve at wage W1 and quantity Q1, with dashed lines from the crossing to each axis",
+      "difficulty": "standard",
+      "tags": [
+        "wage-determination",
+        "labour-supply",
+        "labour-markets",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-5-2-wage-rates.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the price of labour, paid per hour, week or year of work."
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-2-def-01",
+      "specCode": "3.5.2",
+      "topic": "3.5 Global Labour Markets",
+      "subtopic": "3-5-2-wage-rates",
+      "cardType": "definition",
+      "front": "<p>Define <strong>derived demand</strong>. Give four things that change a firm's demand for labour.</p>",
+      "back": "<p><strong>Derived demand</strong> — demand for something because of the demand for what it helps to produce. Firms want workers for the goods and services they make, not for their own sake.</p><ul><li><strong>Demand for the product:</strong> more people eat out → restaurants need more staff → demand for chefs and waiting staff rises.</li><li><strong>Productivity:</strong> each worker produces more → each adds more to revenue → firms will employ more people, or pay more.</li><li><strong>The cost of machines:</strong> machines get cheaper or better → firms swap workers for them, as with self-service checkouts → demand for labour falls.</li><li><strong>Other employment costs:</strong> employer National Insurance rises → each worker costs more to employ → firms want fewer of them at any wage.</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "derived-demand",
+        "labour-demand",
+        "labour-markets"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-5-2-wage-rates.html",
+        "origin": "notes-verbatim",
+        "verbatim": "demand for something because of the demand for what it helps to produce. Firms want workers for the goods and services they make, not for their own sake."
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-2-chain-01",
+      "specCode": "3.5.2",
+      "topic": "3.5 Global Labour Markets",
+      "subtopic": "3-5-2-wage-rates",
+      "cardType": "chain",
+      "front": "<p>Why do skilled workers earn more? Use demand and supply, then build the chains for workers, firms and the economy when people <strong>train or study</strong>.</p>",
+      "back": "<p>Skills raise pay from both sides of the market. A skilled worker produces more, so firms' demand for them is higher. Skills take years to gain, so fewer people can supply them. Higher demand and lower supply give a higher wage.</p><ul><li><strong>Workers:</strong> train or study → become more productive and harder to replace → higher wages and less risk of losing their job.</li><li><strong>Firms:</strong> train staff → higher productivity and better quality → lower unit costs and higher profit. The risk is that a rival poaches the trained worker by paying more.</li><li><strong>The economy:</strong> a better-educated workforce → firms can make higher-value products and compete on quality → higher real incomes.</li></ul><p><strong>The pay-off depends on</strong> whether the skills are in demand, as training for a declining industry does little for pay, and who pays: firms train less when trained staff can easily leave, which is why governments fund apprenticeships and education.</p><p>Explain pay with demand and supply, not with how useful a job is. Nurses do essential work, but the NHS employs most of them, which gives it the power to hold pay down. A top footballer earns far more because each top player brings a club huge revenue and very few people have the talent.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "skills",
+        "training",
+        "wage-differentials",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-5-2-wage-rates.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-2-def-02",
+      "specCode": "3.5.2",
+      "topic": "3.5 Global Labour Markets",
+      "subtopic": "3-5-2-wage-rates",
+      "cardType": "definition",
+      "front": "<p>Define <strong>redundancy</strong>. How do global competition, recession and redundancies hold wages down, and what decides how far they fall?</p>",
+      "back": "<p><strong>Redundancy</strong> — when an employer dismisses a worker because their job is no longer needed, not because of how they did it.</p><ul><li><strong>Global competition:</strong> foreign rivals sell for less → UK firms must cut costs to keep customers → they hold down pay, automate or move work abroad → slower wage growth for workers whose jobs could be done elsewhere.</li><li><strong>Recession:</strong> spending on goods and services falls → firms need fewer workers, as labour is a derived demand → they freeze pay and stop hiring → wage growth slows across the economy.</li><li><strong>Redundancies:</strong> firms cut jobs → more people apply for each vacancy → employers can fill jobs without raising pay → lower wages for new starters. Workers who keep their jobs often accept smaller pay rises.</li></ul><p><strong>How far wages fall depends on:</strong></p><ul><li><strong>Whether pay can be cut:</strong> firms rarely cut pay in pounds, as it hurts morale, and the minimum wage sets a floor. They cut hours, bonuses or jobs instead, and real wages fall if pay rises more slowly than prices.</li><li><strong>How long it lasts:</strong> a short recession may only delay pay rises; lasting competition from abroad can lower pay for good.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "redundancy",
+        "recession",
+        "global-competition",
+        "wages"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-5-2-wage-rates.html",
+        "origin": "notes-verbatim",
+        "verbatim": "when an employer dismisses a worker because their job is no longer needed, not because of how they did it."
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-2-def-03",
+      "specCode": "3.5.2",
+      "topic": "3.5 Global Labour Markets",
+      "subtopic": "3-5-2-wage-rates",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>trade union</strong> and a <strong>professional body</strong>. How can each push wages up, and what does that cost the firm?</p>",
+      "back": "<p><strong>Trade union</strong> — an organisation of workers that negotiates with employers, as a group, over pay and working conditions.</p><p><strong>Professional body</strong> — an organisation that sets the qualifications and standards for a profession. Accountants, for example, must pass a professional body's exams before they can call themselves chartered.</p><ul><li><strong>Collective bargaining:</strong> a union negotiates for all its members and can threaten a strike → the employer risks lost output → it agrees higher pay than it would offer one worker alone.</li><li><strong>Entry requirements:</strong> a professional body requires long training and hard exams → fewer people qualify → the supply of labour is limited → higher wages for those who do.</li><li><strong>The cost to firms:</strong> pay rises → labour costs rise → the firm raises prices, accepts lower profit or employs fewer people.</li></ul><p>Firms can gain too. A union gives staff a voice, which can cut staff turnover and raise productivity.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "trade-unions",
+        "professional-bodies",
+        "collective-bargaining",
+        "wages"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-5-2-wage-rates.html",
+        "origin": "notes-verbatim",
+        "verbatim": "an organisation that sets the qualifications and standards for a profession. Accountants, for example, must pass a professional body's exams before they can call themselves chartered."
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-2-eval-01",
+      "specCode": "3.5.2",
+      "topic": "3.5 Global Labour Markets",
+      "subtopic": "3-5-2-wage-rates",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> how far a trade union can raise its members' pay.</p>",
+      "back": "<p><strong>It can raise pay:</strong></p><ul><li><strong>Collective bargaining:</strong> a union negotiates for all its members and can threaten a strike → the employer risks lost output → it agrees higher pay than it would offer one worker alone.</li></ul><p>Firms can gain too. A union gives staff a voice, which can cut staff turnover and raise productivity.</p><p><strong>But:</strong> pay rises → labour costs rise → the firm raises prices, accepts lower profit or employs fewer people.</p><p><strong>It depends on:</strong></p><ul><li><strong>Membership:</strong> the more of the workforce it represents, the more a strike would cost the employer.</li><li><strong>The employer's position:</strong> a profitable firm in a growing market can afford more than one fighting off cheaper foreign rivals.</li><li><strong>Whether the work can be replaced:</strong> if the firm can automate or move production abroad, a union that pushes too hard costs its members their jobs.</li></ul><p><strong>Judgement:</strong> a union raises pay most where it represents most of the workforce, the employer is profitable in a growing market, and the work cannot easily be automated or moved abroad. Where the firm can automate or move production abroad, pushing too hard costs its members their jobs.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "trade-unions",
+        "wages",
+        "global-competition",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-5-2-wage-rates.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-3-diagram-01",
+      "specCode": "3.5.3",
+      "topic": "3.5 Global Labour Markets",
+      "subtopic": "3-5-3-minimum-wage-legislation",
+      "cardType": "diagram",
+      "front": "<p>Define a <strong>minimum wage</strong>. Sketch the effect of one set above the market wage. Who gains and who loses?</p>",
+      "back": "<p><strong>Minimum wage</strong> — the lowest hourly pay an employer can legally give a worker.</p><p>In the UK the National Living Wage is the minimum for workers aged 21 and over, and the National Minimum Wage sets lower rates for younger workers, whose lack of experience could otherwise price them out of jobs. The rates change every April.</p><p>Without it, the wage is W1 and Q1 are employed. A minimum wage at Wmin (the NMW line), above W1:</p><ul><li><strong>Workers who keep their jobs gain:</strong> they earn Wmin instead of W1.</li><li><strong>Firms want fewer workers:</strong> only QD, so employment falls from Q1 to QD.</li><li><strong>More people want to work:</strong> QS at the higher wage, so the gap from QD to QS is unemployment.</li></ul>",
+      "svgRef": "/images/diagrams/svg/min-wage.svg",
+      "svgAlt": "Labour market diagram with Wages on the vertical axis and Quantity of Labour on the horizontal axis; the downward-sloping D(L)=MRP curve and the upward-sloping S(L)=AC curve cross at W1 and Q1. A horizontal line labelled NMW at Wmin, above W1, cuts D(L)=MRP at QD and S(L)=AC at QS, either side of Q1",
+      "difficulty": "standard",
+      "tags": [
+        "minimum-wage",
+        "labour-markets",
+        "unemployment",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-5-3-minimum-wage-legislation.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the lowest hourly pay an employer can legally give a worker."
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-3-chain-01",
+      "specCode": "3.5.3",
+      "topic": "3.5 Global Labour Markets",
+      "subtopic": "3-5-3-minimum-wage-legislation",
+      "cardType": "chain",
+      "front": "<p>How do minimum wages differ between <strong>developed and developing countries</strong>? Build the chains for a developing country that raises its minimum wage.</p>",
+      "back": "<ul><li><strong>Level:</strong> higher in money terms in developed countries; much lower in developing ones, as productivity and prices are lower.</li><li><strong>Who it covers:</strong> most workers in developed countries, as most jobs are formal and registered; fewer in developing ones, as many work in the informal economy, in unregistered jobs the law rarely reaches.</li><li><strong>Enforcement:</strong> inspections and fines in developed countries; often weak, with few inspectors, in developing ones.</li><li><strong>How it is set:</strong> often one national rate in developed countries, with age bands in the UK; in developing ones it often varies by region or industry.</li></ul><p><strong>When a developing country raises its minimum wage:</strong></p><ul><li><strong>Workers gain:</strong> higher pay → families can afford better food, housing and schooling → higher living standards.</li><li><strong>Exporters' costs rise:</strong> factories making goods for global brands pay more → unit costs rise → the country's goods become less price competitive.</li><li><strong>Jobs can move:</strong> MNCs compare costs between countries → some move orders to a cheaper one → job losses in the first country.</li><li><strong>The informal economy grows:</strong> small firms can't afford the new rate → they hire off the books → workers lose legal protection.</li></ul><p><strong>It depends on</strong> enforcement, as a minimum wage that nobody checks changes little, and productivity: if output per worker rises as well, unit costs need not rise.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "minimum-wage",
+        "developing-economies",
+        "informal-economy",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-5-3-minimum-wage-legislation.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-3-def-01",
+      "specCode": "3.5.3",
+      "topic": "3.5 Global Labour Markets",
+      "subtopic": "3-5-3-minimum-wage-legislation",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>skill shortage</strong>. How does one weaken a country's international competitiveness, and what decides how much damage it does?</p>",
+      "back": "<p><strong>Skill shortage</strong> — when employers can't find enough workers with the skills they need at the going wage.</p><p><strong>International competitiveness</strong> is a country's ability to sell abroad on price and quality. A skill shortage weakens it through:</p><ul><li><strong>Higher costs:</strong> firms compete for scarce staff → wages rise → unit labour costs rise → higher prices → fewer exports.</li><li><strong>Lost orders:</strong> jobs go unfilled → orders are turned down or delivered late → overseas customers buy from rivals.</li><li><strong>Less investment:</strong> MNCs invest where they can find the workers they need → they choose other countries → fewer jobs and slower growth.</li></ul><p><strong>The damage depends on</strong> how long training takes, as more lorry drivers can be trained in months but a doctor takes years, and migration rules: firms that can recruit from abroad fill gaps faster.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "skill-shortages",
+        "international-competitiveness",
+        "labour-markets"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-5-3-minimum-wage-legislation.html",
+        "origin": "notes-verbatim",
+        "verbatim": "when employers can't find enough workers with the skills they need at the going wage."
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-3-def-02",
+      "specCode": "3.5.3",
+      "topic": "3.5 Global Labour Markets",
+      "subtopic": "3-5-3-minimum-wage-legislation",
+      "cardType": "definition",
+      "front": "<p>Define <strong>migration</strong>. What are its effects on the host economy, and on the country the migrants leave?</p>",
+      "back": "<p><strong>Migration</strong> — people moving from one place to another to live, usually to find work or higher pay.</p><ul><li><strong>Within economies:</strong> people move from poorer regions to better-off ones, or from the countryside to cities. In China, well over 100 million rural workers have left their home towns to work in cities.</li><li><strong>Between economies:</strong> people move to countries with more jobs or higher pay. A minimum wage in a developed country can be many times the pay on offer at home.</li></ul><p><strong>When workers move to another country:</strong></p><ul><li><strong>The host economy:</strong> labour supply rises → skill shortages ease and firms can expand → more output, spending and tax. Wage growth may slow in jobs where migrants and local workers compete.</li><li><strong>The country they leave:</strong> skilled workers go → fewer doctors, engineers and teachers at home (a <strong>brain drain</strong>) → slower growth. Against this, migrants send money home, called <strong>remittances</strong> → families spend more → higher incomes.</li></ul><p><strong>It depends on</strong> migrants' skills, as filling shortages raises output while competing for the same jobs as low-paid local workers can hold their pay down, and time: in the short run, more people put pressure on housing and public services; over time, the extra tax can pay for more of both.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "migration",
+        "brain-drain",
+        "remittances",
+        "labour-markets"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-5-3-minimum-wage-legislation.html",
+        "origin": "notes-verbatim",
+        "verbatim": "people moving from one place to another to live, usually to find work or higher pay."
+      }
+    },
+    {
+      "id": "edexcel-b-3-5-3-eval-01",
+      "specCode": "3.5.3",
+      "topic": "3.5 Global Labour Markets",
+      "subtopic": "3-5-3-minimum-wage-legislation",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> whether a minimum wage reduces inequality. Consider its effects on the incentive to work and to raise productivity.</p>",
+      "back": "<p><strong>For:</strong></p><ul><li><strong>Lower inequality:</strong> the lowest earners get a pay rise → the gap between low and average pay narrows → fewer working households in poverty.</li><li><strong>A stronger incentive to work:</strong> a job pays more compared with benefits → more people want to work → the supply of labour rises.</li><li><strong>An incentive for firms to raise productivity:</strong> labour costs rise → firms invest in training or machines → each worker produces more. Better-paid staff may also work harder and leave less often.</li></ul><p><strong>Against:</strong></p><ul><li><strong>Fewer jobs or hours:</strong> labour costs rise → firms cut hours, hire fewer people or automate → some low-paid workers lose income, as at QD on the diagram.</li></ul><p><strong>It depends on:</strong></p><ul><li><strong>How high it is set:</strong> close to the market wage, few jobs are lost; far above it, many more.</li><li><strong>Who the low paid live with:</strong> many minimum-wage workers share a home with a better-paid partner or parent, so some of the gain goes to households that are not poor. Benefits target poverty more precisely.</li><li><strong>Employer power:</strong> where one employer dominates a local labour market, a minimum wage can raise pay and jobs together.</li></ul><p><strong>Judgement:</strong> the diagram shows the worst case. It assumes the minimum is above the market wage and that firms cut jobs rather than prices or profit. Research on the UK since the minimum wage began in 1999 has found very small effects on jobs, so it narrows the gap at the bottom of the pay scale with few jobs lost. It is a less precise tool against poverty than benefits, because some of the gain goes to households that are not poor.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "minimum-wage",
+        "inequality",
+        "incentives",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-10",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-3/3-5-3-minimum-wage-legislation.html",
+        "origin": "card-authored"
+      }
     }
   ]
 }
