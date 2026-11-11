@@ -323,8 +323,10 @@ sheets: `05-website/drafts/all-boards-parity/review/flashcards-unit-X-Y.md`.
   - `perfect-competition-short-run-loss.svg` (A and AQA only) had the same
     line-through-"P1" fault. Eliot asked for the same fix on 2026-11-11:
     its dashed price line now stops at x=415, 8px short of the firm's "P1".
-    It is shared with the live Edexcel A and AQA decks, so they change at
-    the next push.
+    Its firm-panel Q1 guide also ran through the "1" of "D=AR=MR=P1"; it
+    now breaks around the label (y 393 to 428), 8px clear of the ink
+    above and below. It is shared with the live Edexcel A and AQA decks,
+    so they change at the next push.
 - **Unit 4.5 answers (Eliot, 2026-11-11, all four recommendations taken):**
   CONTENT_ISSUES #54 fixed. 4.5.3 now says "the Bank regularly checks" and
   the 4.5.4 table says "Regular stress tests", because since 2025 the Bank
