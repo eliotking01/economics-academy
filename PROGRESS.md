@@ -23,9 +23,12 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
+| All-boards parity (D67) — Phase 2: Edexcel B flashcards, all four decks written (staged) | pushed on `feature/edexcel-b-flashcards`; not merged | — | — |
 | All-boards parity (D67) — Phase 1: Edexcel B practice questions, all 85 sets, launched (89 new URLs) | live (PR #48) | 2026-11-08 | `39403ead` |
-| All-boards parity (D67) — Phase 0 groundwork: per-board feature flags, originality corpus, cold-solver, three commands | committed, not pushed; URL list awaiting Eliot | — | — |
-| Edexcel B notes — Theme 3: 19 pages, index card, site search; Edexcel B complete, 85 pages | complete, PR open | — | — |
+| June 2025 papers added to the past-paper question bank | live (PR #47) | 2026-10-24 | `d96b0928` |
+| June 2025 papers and the June 2023 Edexcel B mark schemes published | live (PR #46) | 2026-10-24 | `ed1d9539` |
+| All-boards parity (D67) — Phase 0 groundwork: per-board feature flags, originality corpus, cold-solver, three commands | live (PR #45) | 2026-10-24 | `fafdf34f` |
+| Edexcel B notes — Theme 3: 19 pages, index card, site search; Edexcel B complete, 85 pages | live (PR #44) | 2026-10-21 | `755c56e0` |
 | Edexcel B notes — Theme 2: 24 pages, index card, site search | live | 2026-10-19 | `ada29e8b` |
 | Edexcel B notes — Theme 4: 19 pages, index card, site search | live | 2026-10-17 | `fec344d2` |
 | Edexcel B notes — Theme 1: 23 pages, index section, site search | live | 2026-10-15 | `782bafd7` |
@@ -369,7 +372,7 @@ sheet, `review/questions-unit-X-Y.md`. Count the sets with
   `/launch-feature` needs no new wording for those two lines or for
   `HUB_SECTIONS`.
 
-### All-boards parity — Phase 0 groundwork (2026-10-24) — COMMITTED, NOT PUSHED (branch `feature/all-boards-groundwork`)
+### All-boards parity — Phase 0 groundwork (2026-10-24) — LIVE (merged 2026-10-24, `fafdf34f`, PR #45; branch `feature/all-boards-groundwork`)
 
 D67 (2026-10-24) gives Edexcel B practice questions, flashcards, a glossary
 and a past-paper bank, and widens the bank to Edexcel A Section A short
@@ -417,7 +420,7 @@ committed tree exactly, with 0 differences.
 
 Phase 1 (`/edexcel-b-questions`) can start.
 
-### Edexcel B revision notes — Theme 3 (2026-10-20) — COMPLETE, PR into main opened 2026-10-20 (branch `feature/edexcel-b-theme-3`)
+### Edexcel B revision notes — Theme 3 (2026-10-20) — LIVE (merged 2026-10-21, `755c56e0`, PR #44)
 
 The fourth and last theme in publishing order (1, 4, 2, 3; D66). **With it,
 Edexcel B is complete: all 85 topic pages across Themes 1-4**, and the
