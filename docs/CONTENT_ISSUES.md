@@ -1101,7 +1101,9 @@ Format per entry:
   at 4.5 times or more a borrower's income". Adding the percentage is not recommended: it is the
   kind of figure that dates.
 - **Confidence** — low. Not a chip, so no glossary coupling.
-- **Status** — open, for Eliot.
+- **Status** — closed, no change (Eliot, 2026-11-11: the page stays as
+  it is. The cards keep their added sentence, "Such loans are allowed, but
+  only as a limited part of new lending").
 
 ## 54. Edexcel B 4.5.3 and 4.5.4 say the Bank stress-tests banks every year
 
@@ -1120,13 +1122,32 @@ Format per entry:
   `edexcel-b-4-5-3-def-02`), then checked against the Bank's stress-testing
   pages. The cards say "the Bank regularly checks" and "Regular stress
   tests", which is true either way and does not contradict the page.
+  **Checked 2026-11-11 on bankofengland.co.uk:**
+  - "The Bank of England's approach to stress testing the UK banking
+    system", published 29 November 2024 and covering "from 2025 onwards"
+    (`https://www.bankofengland.co.uk/stress-testing/2024/boes-approach-to-stress-testing-the-uk-banking-system`):
+    "the Bank expects to carry out a Bank Capital Stress Test every other
+    year", with lighter stress testing "in the intervening years".
+  - Financial Stability Report, December 2025, published 2 December 2025
+    (`https://www.bankofengland.co.uk/financial-stability-report/2025/december-2025`):
+    the FPC lists "reducing the frequency of its main Bank Capital Stress
+    Tests to every other year" among its steps.
+  - The main stress-testing page
+    (`https://www.bankofengland.co.uk/stress-testing`, last updated 3 July
+    2026) gives no frequency either way.
 - **Proposed correction** — 4.5.3: "the Bank regularly checks whether the
   largest banks could survive a severe recession". 4.5.4 table: "Regular
   stress tests". Both drop a detail that dates, which fits keeping the
   notes simple.
 - **Confidence** — high that "each year" is out of date. Not a chip, so no
   glossary coupling.
-- **Status** — open, for Eliot.
+- **Status** — approved (Eliot, 2026-11-11: the proposed wording, on both
+  pages); fixed in the commit that applies Eliot's answers to the unit 4.5
+  flashcard sheet. 4.5.3 now reads "the Bank regularly checks whether the
+  largest banks could survive a severe recession", and the 4.5.4 table row
+  reads "Regular stress tests". The cards `edexcel-b-4-5-3-def-02` and
+  `edexcel-b-4-5-4-eval-01` already said "regularly" and "Regular", and
+  now match the pages.
 
 ## 55. Edexcel B 4.5.2 says lending for houses adds nothing to capacity
 
@@ -1142,4 +1163,5 @@ Format per entry:
   assets raises prices without adding to what the economy can produce", or
   no change: the simplification is a common one.
 - **Confidence** — low. Not a chip, so no glossary coupling.
-- **Status** — open, for Eliot.
+- **Status** — closed, no change (Eliot, 2026-11-11: the page stays as
+  it is).

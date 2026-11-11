@@ -23,7 +23,7 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| All-boards parity (D67) — Phase 1: Edexcel B practice questions, all 85 sets, launched (89 new URLs) | complete on `feature/edexcel-b-questions`, pushed 2026-11-08; not merged | — | — |
+| All-boards parity (D67) — Phase 1: Edexcel B practice questions, all 85 sets, launched (89 new URLs) | live (PR #48) | 2026-11-08 | `39403ead` |
 | All-boards parity (D67) — Phase 0 groundwork: per-board feature flags, originality corpus, cold-solver, three commands | committed, not pushed; URL list awaiting Eliot | — | — |
 | Edexcel B notes — Theme 3: 19 pages, index card, site search; Edexcel B complete, 85 pages | complete, PR open | — | — |
 | Edexcel B notes — Theme 2: 24 pages, index card, site search | live | 2026-10-19 | `ada29e8b` |
@@ -212,7 +212,7 @@ session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
 
-### All-boards parity — Phase 2, Edexcel B flashcards (2026-11-08 to —) — IN PROGRESS, NOT PUSHED (branch `feature/edexcel-b-flashcards`)
+### All-boards parity — Phase 2, Edexcel B flashcards (2026-11-08 to —) — ALL FOUR DECKS WRITTEN, STAGED; PUSHED, NOT MERGED (branch `feature/edexcel-b-flashcards`)
 
 `/edexcel-b-flashcards`, one unit per run, into
 `flashcards-data/edexcel-b/theme-N.json`. B's `flashcards` is **staged** in
@@ -317,11 +317,20 @@ sheets: `05-website/drafts/all-boards-parity/review/flashcards-unit-X-Y.md`.
     shared with the live Edexcel A and AQA decks, so they change at the next
     push.
   - Eliot approved the text of card 4.1.1 diagram-02 on 2026-11-11.
-  - **Still open:** `perfect-competition-short-run-loss.svg` (A and AQA only) has
-    the same line-through-"P1" fault; Q2 (b) would fix it and was not
-    chosen. Unit 4.5 Q1–Q4 and CONTENT_ISSUES #46 and #52 remain with Eliot.
+- **Unit 4.5 answers (Eliot, 2026-11-11, all four recommendations taken):**
+  CONTENT_ISSUES #54 fixed. 4.5.3 now says "the Bank regularly checks" and
+  the 4.5.4 table says "Regular stress tests", because since 2025 the Bank
+  runs its main capital stress test every other year (checked on
+  bankofengland.co.uk the same day; the entry cites the pages). #53 and
+  #55 closed with no change. The two stress-test cards keep "regularly" /
+  "Regular", and 4.5.3 def-02 keeps its added sentence. **Theme 4 is
+  accepted as complete at 99 cards.**
+- **Still open:** `perfect-competition-short-run-loss.svg` (A and AQA only)
+  has the same line-through-"P1" fault as the supernormal-profit SVG had.
+  CONTENT_ISSUES #46 and #52, both deferred by Eliot.
+  Next step: `/launch-feature edexcel-b flashcards`.
 
-### All-boards parity — Phase 1, Edexcel B practice questions (2026-10-25 to 2026-11-08) — LAUNCHED ON BRANCH, PUSHED, NOT MERGED (branch `feature/edexcel-b-questions`)
+### All-boards parity — Phase 1, Edexcel B practice questions (2026-10-25 to 2026-11-08) — LIVE, MERGED 2026-11-08 AS PR #48 (`39403ead`, branch `feature/edexcel-b-questions`)
 
 `/edexcel-b-questions <unit>`, one unit per run. Each unit gets a review
 sheet, `review/questions-unit-X-Y.md`. Count the sets with
