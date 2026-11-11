@@ -1454,6 +1454,563 @@
         "notesPage": "/revision-notes/edexcel-b-theme-4/4-3-3-policies-to-deal-with-market-failure.html",
         "origin": "card-authored"
       }
+    },
+    {
+      "id": "edexcel-b-4-4-1-diagram-01",
+      "specCode": "4.4.1",
+      "topic": "4.4 Macroeconomic Policies and Impact on Firms and Individuals",
+      "subtopic": "4-4-1-the-ad-as-model",
+      "cardType": "diagram",
+      "front": "<p>Define <strong>aggregate demand</strong> and state its formula. Sketch an increase in AD, and give four things that could cause it.</p>",
+      "back": "<p><strong>Aggregate demand (AD)</strong> — the total spending on an economy's goods and services at a given price level over a period of time: AD = C + I + G + (X − M).</p><p><strong>The diagram:</strong> the price level goes up the side and real GDP along the bottom. AD shifts right from <strong>AD1 to AD2</strong>, so at the same price level PL, the real GDP demanded rises from Y1 to Y2. A change in the price level only moves the economy along the curve.</p><ul><li><strong>Interest rates fall:</strong> loans are cheaper and saving pays less → households spend more and firms invest more.</li><li><strong>Confidence rises:</strong> households who feel their jobs are safe spend more, and firms expecting strong sales invest.</li><li><strong>Fiscal policy loosens:</strong> the government spends more or cuts taxes.</li><li><strong>Exports rise:</strong> a weaker pound or faster growth abroad → more overseas buyers for UK goods.</li></ul><p>Each one reversed shifts AD to the left.</p>",
+      "svgRef": "/images/diagrams/svg/ad-shift.svg",
+      "svgAlt": "Price level on the vertical axis and real GDP on the horizontal axis. Two parallel downward-sloping lines, AD1 and AD2, with AD2 to the right and an arrow pointing right between them. A dashed line at price level PL meets AD1 above Y1 and AD2 above Y2, with Y2 greater than Y1",
+      "difficulty": "foundation",
+      "tags": [
+        "aggregate-demand",
+        "ad-shift",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-4-1-the-ad-as-model.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the total spending on an economy's goods and services at a given price level over a period of time:"
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-1-diagram-02",
+      "specCode": "4.4.1",
+      "topic": "4.4 Macroeconomic Policies and Impact on Firms and Individuals",
+      "subtopic": "4-4-1-the-ad-as-model",
+      "cardType": "diagram",
+      "front": "<p>Define <strong>short-run aggregate supply</strong> and <strong>long-run aggregate supply</strong>. Sketch an increase in SRAS. What shifts SRAS, and what shifts LRAS?</p>",
+      "back": "<p><strong>Short-run aggregate supply (SRAS)</strong> — the total output firms in an economy plan to supply at each price level in the short run, when the prices of factors of production, such as wages, are fixed.</p><p><strong>Long-run aggregate supply (LRAS)</strong> — the most an economy can produce when all its resources are fully and efficiently employed. It shows the economy's productive capacity.</p><p><strong>The diagram:</strong> SRAS shifts right from <strong>SRAS1 to SRAS2</strong>, so at the same price level PL, the real GDP supplied rises from Y1 to Y2.</p><ul><li><strong>SRAS shifts with costs across the economy:</strong> lower wages, cheaper energy and raw materials, a stronger pound (cheaper imported inputs) or a cut in indirect taxes → firms supply more at each price level. A rise in any of them shifts SRAS left.</li><li><strong>LRAS shifts with more or better resources:</strong> more workers, better skills, more capital, new technology → productive capacity grows. This is long-run economic growth, and it is what supply-side policies aim for.</li></ul>",
+      "svgRef": "/images/diagrams/svg/sras-shift.svg",
+      "svgAlt": "Price level on the vertical axis and real GDP on the horizontal axis. Two parallel upward-sloping lines, SRAS1 and SRAS2, with SRAS2 to the right and an arrow pointing right between them. A dashed line at price level PL meets SRAS1 above Y1 and SRAS2 above Y2, with Y2 greater than Y1",
+      "difficulty": "standard",
+      "tags": [
+        "sras",
+        "lras",
+        "sras-shift",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-4-1-the-ad-as-model.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the total output firms in an economy plan to supply at each price level in the short run, when the prices of factors of production, such as wages, are fixed."
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-1-diagram-03",
+      "specCode": "4.4.1",
+      "topic": "4.4 Macroeconomic Policies and Impact on Firms and Individuals",
+      "subtopic": "4-4-1-the-ad-as-model",
+      "cardType": "diagram",
+      "front": "<p>Define <strong>full capacity output</strong>. Sketch the Keynesian LRAS curve and explain what happens to output and prices on each of its three sections. How does the classical view differ?</p>",
+      "back": "<p><strong>Full capacity output</strong> — the level of real GDP at which all of the economy's resources are in use, so output cannot rise any further in the short run.</p><p><strong>The diagram:</strong> the Keynesian LRAS is flat at low real GDP, curves upwards as output rises, and becomes vertical at full capacity output, <strong>Yfe</strong>.</p><ul><li><strong>Flat:</strong> many workers and machines are idle → firms produce more without paying more for them → output rises with no rise in prices.</li><li><strong>Rising:</strong> spare capacity runs out → firms bid for scarce workers and materials → output still rises, but costs and prices rise too.</li><li><strong>Vertical:</strong> the economy is at Yfe → more spending only raises prices.</li></ul><p><strong>Classical view:</strong> LRAS is vertical at full capacity. The economy always returns there, so in the long run a change in AD moves only the price level. The Keynesian view is that the economy can stay below full capacity for a long time.</p>",
+      "svgRef": "/images/diagrams/svg/lras-keynesian.svg",
+      "svgAlt": "Price level on the vertical axis and real GDP on the horizontal axis. The LRAS curve is horizontal at low real GDP, curves upwards more and more steeply as output rises, and becomes vertical at full capacity output, marked Yfe with a dashed vertical line",
+      "difficulty": "standard",
+      "tags": [
+        "full-capacity-output",
+        "keynesian-lras",
+        "classical-lras",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-4-1-the-ad-as-model.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the level of real GDP at which all of the economy's resources are in use, so output cannot rise any further in the short run."
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-1-chain-01",
+      "specCode": "4.4.1",
+      "topic": "4.4 Macroeconomic Policies and Impact on Firms and Individuals",
+      "subtopic": "4-4-1-the-ad-as-model",
+      "cardType": "chain",
+      "front": "<p>Build the chains: what does each of these do to <strong>inflation and unemployment</strong>? (a) AD rises with spare capacity (b) AD rises near full capacity (c) AD falls (d) SRAS shifts left (e) LRAS shifts right. What does the effect depend on?</p>",
+      "back": "<ul><li><strong>(a) AD rises, spare capacity:</strong> more spending → firms bring idle workers and machines back into use → output rises with little change in prices → unemployment falls and inflation barely moves.</li><li><strong>(b) AD rises near full capacity:</strong> firms compete for scarce staff and materials → wages and costs rise → prices rise with little extra output: <strong>demand-pull inflation</strong>.</li><li><strong>(c) AD falls:</strong> households and firms spend less → firms cut output and need fewer workers → unemployment rises and inflation falls.</li><li><strong>(d) SRAS shifts left:</strong> energy or wage costs rise → firms raise prices and cut output → <strong>cost-push inflation</strong> and higher unemployment at the same time.</li><li><strong>(e) LRAS shifts right:</strong> productive capacity grows → output can rise without pushing up costs → growth with lower inflation, and more jobs if AD grows to match.</li></ul><p><strong>It depends on:</strong> spare capacity (the same rise in AD cuts unemployment in a recession but mainly causes inflation in a boom); the size of the shift, since the multiplier can make a small change larger; and time, since firms take time to hire, invest or raise prices.</p><p><strong>Say where the economy starts</strong> before you shift a curve.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "ad-as-model",
+        "inflation",
+        "unemployment",
+        "spare-capacity",
+        "chain"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-4-1-the-ad-as-model.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-1-formula-01",
+      "specCode": "4.4.1",
+      "topic": "4.4 Macroeconomic Policies and Impact on Firms and Individuals",
+      "subtopic": "4-4-1-the-ad-as-model",
+      "cardType": "formula",
+      "front": "<p>Define the <strong>multiplier effect</strong>. Why does an injection of spending raise real GDP by more than itself? State the formula, and give three things that make the multiplier larger.</p>",
+      "back": "<p><strong>Multiplier effect</strong> — the process by which an initial change in spending leads to a larger final change in real GDP.</p><p><strong>Why:</strong> one person's spending is another's income. A council pays a firm to build a new sports centre → its workers spend part of their wages in local cafés → the café staff spend part of theirs. Each round is smaller, because some income leaks out as saving, tax or spending on imports.</p><ul><li><strong>MPC</strong> (marginal propensity to consume): the share of each extra pound spent on UK goods and services.</li><li><strong>MPW</strong> (marginal propensity to withdraw): the share that leaks out, MPS + MPT + MPM. MPC + MPW = 1.</li></ul><p><strong>Larger when:</strong> leakages are small (low tax rates, little saving, few imports); there is spare capacity, so firms meet the extra demand with more output rather than higher prices; and confidence is high, so people spend extra income instead of saving it.</p><p>It works in reverse too: a fall in spending, such as fewer overseas orders for UK exporters, cuts incomes round after round.</p>",
+      "formula": "\\text{Multiplier} = \\frac{1}{1 - \\text{MPC}} = \\frac{1}{\\text{MPW}}",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "multiplier",
+        "mpc",
+        "mpw",
+        "formula"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-4-1-the-ad-as-model.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the process by which an initial change in spending leads to a larger final change in real GDP."
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-1-calc-01",
+      "specCode": "4.4.1",
+      "topic": "4.4 Macroeconomic Policies and Impact on Firms and Individuals",
+      "subtopic": "4-4-1-the-ad-as-model",
+      "cardType": "calculation",
+      "front": "<p>Out of each extra pound of income, households save <strong>10p</strong>, pay <strong>20p</strong> in tax and spend <strong>20p</strong> on imports.</p><p>(a) Calculate the MPW, the MPC and the multiplier. (b) The government spends an extra <strong>£4 billion</strong> on new railway lines. By how much does real GDP rise? (c) Households grow worried about their jobs and now save <strong>40p</strong> of each extra pound. What are the new multiplier and the new rise in real GDP, and why is it smaller?</p>",
+      "back": "<ul><li><strong>(a)</strong> MPW = 0.1 + 0.2 + 0.2 = <strong>0.5</strong>. MPC = 1 − 0.5 = <strong>0.5</strong>. Multiplier = 1 ÷ 0.5 = <strong>2</strong>.</li><li><strong>(b)</strong> £4bn × 2 = <strong>£8 billion</strong> rise in real GDP.</li><li><strong>(c)</strong> MPW = 0.4 + 0.2 + 0.2 = 0.8, so the multiplier = 1 ÷ 0.8 = <strong>1.25</strong>. £4bn × 1.25 = <strong>£5 billion</strong>. More of each pound leaks out as saving → less is spent again in each round → a smaller final rise in real GDP. Low confidence shrinks the multiplier.</li></ul><p>The answer assumes spare capacity. Near full capacity, much of the extra spending goes into higher prices instead.</p>",
+      "formula": "\\text{Multiplier} = \\frac{1}{\\text{MPW}}",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "multiplier",
+        "mpw",
+        "calculation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-4-1-the-ad-as-model.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-1-eval-01",
+      "specCode": "4.4.1",
+      "topic": "4.4 Macroeconomic Policies and Impact on Firms and Individuals",
+      "subtopic": "4-4-1-the-ad-as-model",
+      "cardType": "evaluation",
+      "front": "<p>What does the <strong>AD/AS model</strong> show about the economy as a whole? Give three ways it helps, and <strong>evaluate</strong> its limits.</p>",
+      "back": "<p>It puts the main objectives on one diagram: real GDP shows growth, the price level shows inflation, and the gap between output and full capacity shows unemployment.</p><ul><li><strong>Finding the cause:</strong> inflation with rising output points to strong demand; inflation with falling output points to a supply shock.</li><li><strong>Choosing a policy:</strong> weak demand calls for demand-side policies; low capacity calls for supply-side policies.</li><li><strong>Showing trade-offs:</strong> pushing AD up near full capacity buys a little growth at the cost of higher inflation.</li></ul><p><strong>Its limits:</strong> classical and Keynesian economists disagree about the shape of LRAS, so the same policy can look effective on one diagram and useless on the other. The model shows the direction of a change, not its size or timing. No one knows exactly where full capacity is.</p><p><strong>Judgement:</strong> a rise in AD has a very different effect in a recession from in a boom. State whether there is spare capacity, using the evidence, then draw the shift on the matching part of the LRAS curve.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "ad-as-model",
+        "classical-keynesian",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-4-1-the-ad-as-model.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-2-def-01",
+      "specCode": "4.4.2",
+      "topic": "4.4 Macroeconomic Policies and Impact on Firms and Individuals",
+      "subtopic": "4-4-2-demand-side-policies",
+      "cardType": "definition",
+      "front": "<p>Define <strong>demand-side policies</strong>. Then define <strong>fiscal policy</strong> and <strong>monetary policy</strong>: who runs each, and what are its tools?</p>",
+      "back": "<p><strong>Demand-side policies</strong> — policies that change the level of aggregate demand (AD) to steer growth, unemployment and inflation.</p><p><strong>Fiscal policy</strong> — the use of government spending and taxation to influence aggregate demand.</p><ul><li>Run by the government, through the Chancellor's Budget. Taxes are direct (on income and profit, such as income tax and corporation tax) or indirect (on spending, such as VAT and fuel duty).</li><li><strong>Expansionary:</strong> more spending or lower taxes → AD shifts right. <strong>Contractionary</strong> is the opposite. Spending above tax revenue is a budget deficit, which the government borrows to cover.</li></ul><p><strong>Monetary policy</strong> — the use of interest rates and the money supply to influence aggregate demand, mainly to control inflation.</p><ul><li>Run by the Bank of England's Monetary Policy Committee, independently of the government, to keep CPI inflation at the government's 2% target.</li><li>Two tools: <strong>Bank Rate</strong>, which banks' own rates on loans, mortgages and savings follow, and <strong>quantitative easing</strong>.</li></ul><p>The government does not set interest rates. Name the right body.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "demand-side-policies",
+        "fiscal-policy",
+        "monetary-policy"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-4-2-demand-side-policies.html",
+        "origin": "notes-verbatim",
+        "verbatim": "policies that change the level of aggregate demand (AD) to steer growth, unemployment and inflation."
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-2-def-02",
+      "specCode": "4.4.2",
+      "topic": "4.4 Macroeconomic Policies and Impact on Firms and Individuals",
+      "subtopic": "4-4-2-demand-side-policies",
+      "cardType": "definition",
+      "front": "<p>Define <strong>quantitative easing</strong>. When does the Bank of England use it, how does it raise AD, and what side effect can it have?</p>",
+      "back": "<p><strong>Quantitative easing (QE)</strong> — the central bank creating new money electronically and using it to buy assets, mostly government bonds, to increase the money supply.</p><p><strong>When:</strong> Bank Rate is already close to zero, so it cannot be cut much further.</p><p><strong>The chain:</strong> the Bank buys bonds from investors such as pension funds → bond prices rise and long-term interest rates fall → borrowing is cheaper for households and firms, and the sellers have money to lend or invest → spending and investment rise → AD shifts right.</p><p><strong>Side effect:</strong> QE can push up house and share prices, which helps the people who own them.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "quantitative-easing",
+        "monetary-policy",
+        "money-supply"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-4-2-demand-side-policies.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the central bank creating new money electronically and using it to buy assets, mostly government bonds, to increase the money supply."
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-2-diagram-01",
+      "specCode": "4.4.2",
+      "topic": "4.4 Macroeconomic Policies and Impact on Firms and Individuals",
+      "subtopic": "4-4-2-demand-side-policies",
+      "cardType": "diagram",
+      "front": "<p>Show <strong>expansionary demand-side policy</strong> on an AD/AS diagram for an economy with spare capacity. Name a policy that would encourage investment, one for jobs and one for growth. What happens to growth, jobs, prices and trade? How would the result differ at full capacity?</p>",
+      "back": "<p><strong>The diagram:</strong> on a Keynesian LRAS1, AD shifts right from <strong>AD1 to AD2</strong>. Real GDP rises from Y1 to Y2, still below Yfe, and the price level rises from PL1 to PL2.</p><p><strong>Policies:</strong> investment, a Bank Rate cut, QE or a cut in corporation tax; jobs, government spending on roads and housing; growth, an income tax cut.</p><ul><li><strong>Growth:</strong> more spending → firms raise output → real GDP rises, by more than the first injection because of the multiplier.</li><li><strong>Jobs:</strong> firms need more staff → unemployment falls → household incomes rise.</li><li><strong>Prices:</strong> as spare capacity runs out, firms compete for workers and materials → costs rise → demand-pull inflation.</li><li><strong>Trade:</strong> higher incomes → more spending on imports → the current account deficit widens.</li></ul><p><strong>At full capacity</strong> (a classical vertical LRAS at Yfe), the same shift raises only the price level, and real GDP stays at Yfe.</p><p>Contractionary policy shifts AD left, and each chain runs the other way.</p>",
+      "svgRef": "/images/diagrams/svg/keynesian-ad-shift-right.svg",
+      "svgAlt": "Price level on the vertical axis and real GDP on the horizontal axis. A Keynesian LRAS1 curve is flat at low output, then rises, then becomes vertical at Yfe. AD shifts right from AD1 to AD2. Real GDP rises from Y1 to Y2, with Y2 still below Yfe, and the price level rises from PL1 to PL2",
+      "difficulty": "standard",
+      "tags": [
+        "expansionary-policy",
+        "ad-shift",
+        "spare-capacity",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-4-2-demand-side-policies.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-2-chain-01",
+      "specCode": "4.4.2",
+      "topic": "4.4 Macroeconomic Policies and Impact on Firms and Individuals",
+      "subtopic": "4-4-2-demand-side-policies",
+      "cardType": "chain",
+      "front": "<p>Build the chains for the <strong>policy conflicts and trade-offs</strong> of demand-side policy. Give five, and explain how fiscal and monetary policy can pull against each other.</p>",
+      "back": "<ul><li><strong>Growth or low inflation:</strong> boosting AD → more output and jobs → but near capacity, rising prices. Raising rates to cut inflation slows growth and can cost jobs.</li><li><strong>Growth or the current account:</strong> higher incomes → more imports → a wider trade deficit.</li><li><strong>Now or later:</strong> tax cuts and spending paid for by borrowing → more growth now → but higher debt interest, and higher taxes or lower spending in future.</li><li><strong>Growth or equality:</strong> low interest rates and QE → higher house and share prices → gains for those who own them, while first-time buyers are priced out.</li><li><strong>Growth or the environment:</strong> more output → more energy use and pollution.</li></ul><p><strong>Pulling against each other:</strong> if the government loosens fiscal policy while inflation is above target, the MPC may raise Bank Rate to offset it.</p><p>Policy-makers have to choose which objective matters most at the time.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "policy-conflicts",
+        "trade-offs",
+        "demand-side-policies",
+        "chain"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-4-2-demand-side-policies.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-2-eval-01",
+      "specCode": "4.4.2",
+      "topic": "4.4 Macroeconomic Policies and Impact on Firms and Individuals",
+      "subtopic": "4-4-2-demand-side-policies",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> monetary policy against fiscal policy. Give the strengths and weaknesses of each, explain the time lags, and say what decides how well either policy works.</p>",
+      "back": "<ul><li><strong>Monetary policy, strengths:</strong> set by an independent MPC, free of short-term political pressure; Bank Rate can change at any meeting; a clear inflation target.</li><li><strong>Monetary policy, weaknesses:</strong> long time lags; one rate for the whole country, so it cannot target a region or industry; little room to cut near zero, and QE can push up house and share prices.</li><li><strong>Fiscal policy, strengths:</strong> can be aimed at a region, industry or income group; government spending adds to AD directly, and works when interest rates are already low.</li><li><strong>Fiscal policy, weaknesses:</strong> slow to plan and pass; extra borrowing adds to the national debt; tax rises and spending cuts are unpopular, so politics can delay them.</li></ul><p><strong>Time lags:</strong> a change in Bank Rate takes around 18 to 24 months to work in full, partly because many mortgages are fixed. Fiscal policy waits for late data, a Budget and new law. A rate cut that arrives once recovery has started adds to inflation instead.</p><p><strong>It depends on:</strong> confidence (worried households save a tax cut, firms won't borrow however cheap loans are); the size of the multiplier; spare capacity; and crowding out, where heavy government borrowing pushes up interest rates and private investment falls.</p><p><strong>Judgement:</strong> against unemployment, either policy works only where it is caused by weak demand, not where people's skills don't match the jobs on offer. The MPC can decide at any meeting, but the full effect takes up to two years; fiscal policy is slower to agree, but can be aimed at the region or group worst hit. Say which matters more in the case given.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "monetary-policy",
+        "fiscal-policy",
+        "time-lags",
+        "crowding-out",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-4-2-demand-side-policies.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-3-def-01",
+      "specCode": "4.4.3",
+      "topic": "4.4 Macroeconomic Policies and Impact on Firms and Individuals",
+      "subtopic": "4-4-3-supply-side-policies",
+      "cardType": "definition",
+      "front": "<p>Define <strong>supply-side policies</strong>. Then define <strong>market-based</strong> and <strong>interventionist</strong> policies, with an example of each. Why are interventionist policies needed?</p>",
+      "back": "<p><strong>Supply-side policies</strong> — policies that aim to increase an economy's productive capacity, shifting long-run aggregate supply (LRAS) to the right.</p><p><strong>Market-based policies</strong> — supply-side policies that reduce the government's role, so markets work more freely and incentives are stronger. Example: a cut in income tax, or deregulation.</p><p><strong>Interventionist policies</strong> — supply-side policies in which the government spends, provides or directs resources to raise productive capacity. Example: spending on apprenticeships, or a new rail line.</p><ul><li>Market-based policies rely on firms and workers responding to incentives.</li><li>Interventionist policies fill gaps the market leaves, because firms would provide too little of them, such as training workers who might leave for a rival firm.</li></ul><p>Demand-side policy changes how much is spent. Supply-side policy changes how much the economy can produce. Many supply-side policies also cut firms' costs, so SRAS shifts right as well.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "supply-side-policies",
+        "market-based",
+        "interventionist"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-4-3-supply-side-policies.html",
+        "origin": "notes-verbatim",
+        "verbatim": "policies that aim to increase an economy's productive capacity, shifting long-run aggregate supply (LRAS) to the right."
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-3-app-01",
+      "specCode": "4.4.3",
+      "topic": "4.4 Macroeconomic Policies and Impact on Firms and Individuals",
+      "subtopic": "4-4-3-supply-side-policies",
+      "cardType": "application",
+      "front": "<p>Say whether each supply-side policy is <strong>market-based</strong> or <strong>interventionist</strong>, and name the aim it serves:</p><ul><li>a cut in corporation tax</li><li>privatising a state-owned firm</li><li>funded childcare so parents can return to work</li><li>student loans</li><li>state spending on apprenticeships</li><li>faster planning approval for new building</li><li>government spending on broadband and power grids.</li></ul>",
+      "back": "<ul><li><strong>Corporation tax cut:</strong> market-based; increase incentives, as firms keep more profit to invest.</li><li><strong>Privatisation:</strong> market-based; promote competition.</li><li><strong>Funded childcare:</strong> interventionist; reform the labour market.</li><li><strong>Student loans:</strong> market-based; improve skills and the quality of labour, as people invest in their own skills.</li><li><strong>Apprenticeships:</strong> interventionist; improve skills and the quality of labour.</li><li><strong>Faster planning approval:</strong> market-based; improve infrastructure.</li><li><strong>Broadband and power grids:</strong> interventionist; improve infrastructure.</li></ul><p><strong>The test:</strong> does it reduce the government's role and rely on incentives (market-based), or does the government spend, provide or direct resources (interventionist)?</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "market-based",
+        "interventionist",
+        "supply-side-policies",
+        "application"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-4-3-supply-side-policies.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-3-chain-01",
+      "specCode": "4.4.3",
+      "topic": "4.4 Macroeconomic Policies and Impact on Firms and Individuals",
+      "subtopic": "4-4-3-supply-side-policies",
+      "cardType": "chain",
+      "front": "<p>Build the chains: how does each of the five supply-side aims raise <strong>productive capacity</strong>? Increase incentives, promote competition, reform the labour market, improve skills, improve infrastructure.</p>",
+      "back": "<ul><li><strong>Incentives:</strong> lower tax on income → work pays more → more people join the labour force or work longer hours → more labour, so higher output.</li><li><strong>Competition:</strong> lower barriers → new firms enter → existing firms must cut costs and innovate → lower prices and higher productivity.</li><li><strong>Labour market:</strong> wages and hiring respond more easily to demand → firms take on staff more readily → lower unemployment.</li><li><strong>Skills:</strong> better training → workers produce more per hour → firms' unit costs fall and workers can earn higher wages.</li><li><strong>Infrastructure:</strong> faster transport and broadband → lower costs of moving goods and people → firms reach more customers and invest where they could not before.</li></ul><p>Each one raises the quantity or productivity of labour and capital, so LRAS shifts right.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "supply-side-policies",
+        "productive-capacity",
+        "chain"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-4-3-supply-side-policies.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-3-diagram-01",
+      "specCode": "4.4.3",
+      "topic": "4.4 Macroeconomic Policies and Impact on Firms and Individuals",
+      "subtopic": "4-4-3-supply-side-policies",
+      "cardType": "diagram",
+      "front": "<p>Show a successful <strong>supply-side policy</strong> on a classical AD/AS diagram. What happens to real GDP and the price level, and how does the Keynesian diagram show it? Why might AD move before LRAS?</p>",
+      "back": "<p><strong>The diagram:</strong> LRAS shifts right from a vertical <strong>LRAS1 at Yfe1</strong> to a vertical <strong>LRAS2 at Yfe2</strong>. Full capacity output itself rises. With AD unchanged, the price level falls from PL1 to PL2.</p><p><strong>Keynesian view:</strong> the whole LRAS curve moves right, so the economy reaches full capacity at a higher output. Real GDP rises from Y1 to Y2 and the price level falls from PL1 to PL2.</p><p><strong>AD first:</strong> many supply-side policies are government spending. Building a new motorway adds to G, so AD rises at once, while LRAS moves only once the road is open. Show both shifts, say which comes first, and use the gap between them as the time lag.</p>",
+      "svgRef": "/images/diagrams/svg/classical-lras-shift-right.svg",
+      "svgAlt": "Price level on the vertical axis and real GDP on the horizontal axis. A downward-sloping AD curve crosses a vertical LRAS1 at Yfe1 and price level PL1. LRAS shifts right to a vertical LRAS2 at Yfe2, where AD crosses it at the lower price level PL2",
+      "difficulty": "standard",
+      "tags": [
+        "supply-side-policies",
+        "lras-shift",
+        "classical-lras",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-4-3-supply-side-policies.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-3-eval-01",
+      "specCode": "4.4.3",
+      "topic": "4.4 Macroeconomic Policies and Impact on Firms and Individuals",
+      "subtopic": "4-4-3-supply-side-policies",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> supply-side policies. Give their strengths and weaknesses, the trade-offs they bring, and what decides how well they work.</p>",
+      "back": "<ul><li><strong>Strengths:</strong> growth without inflation, as capacity rises; lower structural unemployment, which demand-side policy cannot fix; exporters compete better on price as unit costs fall; more tax revenue and fewer benefit claims, so the budget deficit narrows over time.</li><li><strong>Weaknesses:</strong> long time lags (a new apprentice takes years to become fully skilled); interventionist policies cost money, with an opportunity cost; uncertain results (a firm may keep a tax cut as profit); no help in a recession, since extra capacity is wasted if demand is weak.</li></ul><p><strong>Trade-offs:</strong> efficiency or equality (cuts to top tax rates, benefits and union power help higher earners most); the budget now or growth later; growth or the environment (new roads and runways); workers or firms (flexible contracts mean cheaper hiring but less job security).</p><p><strong>It depends on:</strong> the type of policy (market-based is often cheaper for the government; interventionist can reach problems markets ignore); the cause of the problem (they help most where low output comes from a skills gap, poor transport or weak competition); and how well they are run, since money spent on the wrong projects is government failure.</p><p><strong>Judgement:</strong> they suit a problem of capacity, not of weak demand, and their benefits arrive years later. Say what is holding output back before you recommend one.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "supply-side-policies",
+        "trade-offs",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-4-3-supply-side-policies.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-4-app-01",
+      "specCode": "4.4.4",
+      "topic": "4.4 Macroeconomic Policies and Impact on Firms and Individuals",
+      "subtopic": "4-4-4-the-impact-of-macroeconomic-policies",
+      "cardType": "application",
+      "front": "<p>Give one effect on <strong>firms</strong> and one on <strong>individuals</strong> of each policy:</p><ul><li>a higher Bank Rate</li><li>lower taxes</li><li>higher government spending</li><li>supply-side reform.</li></ul>",
+      "back": "<ul><li><strong>Higher Bank Rate:</strong> firms face dearer loans and weaker sales, so they invest less, though firms with cash savings earn more. Individuals pay more on mortgages and loans, savers earn more, and prices rise more slowly.</li><li><strong>Lower taxes:</strong> firms keep more profit after tax and sell more, so they invest more. Individuals have more take-home pay to spend, but public services may have less money.</li><li><strong>Higher government spending:</strong> suppliers and builders win contracts, and firms gain customers as jobs are created. Individuals get more jobs and better services, but higher taxes or debt later.</li><li><strong>Supply-side reform:</strong> better-trained staff and transport cut firms' costs, but new entrants bring more competition. Individuals gain skills and pay over time, but flexible contracts mean less job security.</li></ul><p>The same policy can help one group and hurt another.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "policy-impact",
+        "firms",
+        "individuals",
+        "application"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-4-4-the-impact-of-macroeconomic-policies.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-4-eval-01",
+      "specCode": "4.4.4",
+      "topic": "4.4 Macroeconomic Policies and Impact on Firms and Individuals",
+      "subtopic": "4-4-4-the-impact-of-macroeconomic-policies",
+      "cardType": "evaluation",
+      "front": "<p><strong>Compare the alternative approaches</strong> to macroeconomic policy: demand-side or supply-side, monetary or fiscal, market-based or interventionist. What does each choice trade off, and why do governments use a mix?</p>",
+      "back": "<ul><li><strong>Demand-side or supply-side:</strong> demand-side works within two years or so and suits a recession caused by weak spending. Supply-side takes years but raises capacity, so growth can last without inflation.</li><li><strong>Monetary or fiscal:</strong> the MPC can change Bank Rate at any meeting, but it hits every region and industry alike. Fiscal policy can be aimed at a group, such as low-income households, but it is slower to agree and adds to borrowing.</li><li><strong>Market-based or interventionist:</strong> tax cuts and deregulation cost the government less but can widen inequality. Spending on training and infrastructure fills gaps the market leaves but has a large opportunity cost.</li></ul><p><strong>A mix:</strong> demand-side policy to steady the economy now, and supply-side policy to raise its growth rate over time.</p><p><strong>Judgement:</strong> each approach has a cost, so the best choice depends on the cause of the problem and how quickly it must be solved.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "policy-comparison",
+        "demand-side-policies",
+        "supply-side-policies",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-4-4-the-impact-of-macroeconomic-policies.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-4-eval-02",
+      "specCode": "4.4.4",
+      "topic": "4.4 Macroeconomic Policies and Impact on Firms and Individuals",
+      "subtopic": "4-4-4-the-impact-of-macroeconomic-policies",
+      "cardType": "evaluation",
+      "front": "<p>Set five <strong>criteria for success</strong> to judge whether a macroeconomic policy worked. Why does each one matter?</p>",
+      "back": "<ul><li><strong>Did it hit its target?</strong> Inflation back to 2%, unemployment down or growth up, measured against what the policy set out to do.</li><li><strong>How quickly?</strong> A policy that works after the problem has passed has failed, even if the numbers improve.</li><li><strong>At what cost?</strong> The money spent or tax revenue lost, and any damage to other objectives such as growth or the budget deficit.</li><li><strong>Who gained and who lost?</strong> A policy that meets its target but hits low-income households hardest may not count as a success.</li><li><strong>Did it last?</strong> A temporary boost is worth less than a lasting rise in capacity.</li></ul><p>Decide what success would look like first, then judge the policy against it.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "criteria-for-success",
+        "policy-evaluation",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-4-4-the-impact-of-macroeconomic-policies.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-4-chain-01",
+      "specCode": "4.4.4",
+      "topic": "4.4 Macroeconomic Policies and Impact on Firms and Individuals",
+      "subtopic": "4-4-4-the-impact-of-macroeconomic-policies",
+      "cardType": "chain",
+      "front": "<p>Build the chains for the five factors that decide how <strong>effective</strong> almost any macroeconomic policy is. What else can policy-makers not control?</p>",
+      "back": "<ul><li><strong>Time lags:</strong> monetary policy takes 18 to 24 months to work in full, and supply-side policy years → the economy may have changed by then.</li><li><strong>The size of the multiplier:</strong> little of any extra income saved, taxed or spent on imports → a change in spending has a larger final effect.</li><li><strong>Spare capacity:</strong> in a recession, extra demand raises output and jobs → near full capacity, it mostly raises prices.</li><li><strong>Confidence:</strong> worried households and firms save rather than spend → a tax cut or rate cut does less.</li><li><strong>Side effects:</strong> costs elsewhere, such as more borrowing or higher house prices, and responses no one intended, such as a firm banking a tax cut as profit instead of investing it.</li></ul><p><strong>Beyond their control:</strong> shocks such as a jump in world energy prices, and data that arrive late and are often revised.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "policy-effectiveness",
+        "time-lags",
+        "multiplier",
+        "chain"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-4-4-the-impact-of-macroeconomic-policies.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-4-4-app-02",
+      "specCode": "4.4.4",
+      "topic": "4.4 Macroeconomic Policies and Impact on Firms and Individuals",
+      "subtopic": "4-4-4-the-impact-of-macroeconomic-policies",
+      "cardType": "application",
+      "front": "<p>Between late 2021 and 2023, the MPC raised Bank Rate from <strong>0.1% to 5.25%</strong>. CPI inflation had peaked at <strong>11.1%</strong> in 2022, driven largely by energy and food prices. Judge the policy against the criteria: target, time lags, the cause, and side effects. What did fiscal policy add?</p>",
+      "back": "<ul><li><strong>Target:</strong> inflation fell back to 2% in 2024, so by that test the policy succeeded.</li><li><strong>Time lags:</strong> many homeowners were on fixed-rate mortgages and paid the higher rate only when their deal ended → the squeeze on spending built up over two years.</li><li><strong>The cause:</strong> higher rates cannot lower world gas prices. They work by cutting demand at home → part of the fall in inflation came from energy prices falling back, not from the policy.</li><li><strong>Side effects:</strong> higher repayments for borrowers and firms → less spending and investment → very slow growth in 2023.</li></ul><p><strong>Fiscal policy:</strong> the Energy Price Guarantee capped household energy prices, holding a typical bill at about £2,500 a year. It worked within weeks and protected low-income households, but was paid for with extra borrowing.</p><p><strong>Judgement:</strong> the rate rises worked, but slowly, because most mortgages were fixed. Monetary policy tackled the inflation; fiscal policy eased its cost for households while it lasted.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "interest-rates",
+        "criteria-for-success",
+        "case-study",
+        "application"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-4-4-the-impact-of-macroeconomic-policies.html",
+        "origin": "card-authored"
+      }
     }
   ]
 }

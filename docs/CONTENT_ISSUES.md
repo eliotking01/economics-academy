@@ -978,3 +978,66 @@ Format per entry:
 - **Confidence** — low. Not a chip on B, so no glossary coupling.
 - **Status** — closed, no change (Eliot, 2026-11-11: the page stays as
   written).
+
+## 49. Edexcel B 4.4.3 says privatisation lowers barriers to entry
+
+- **Location** — `revision-notes/edexcel-b-theme-4/4-4-3-supply-side-policies.html`,
+  "Policies for Each Aim" table, the "Promote competition" row, market-based
+  column (source:
+  `notes-data/topics/edexcel-b-theme-4/4-4-3-supply-side-policies.html`).
+- **Issue** — the cell reads "Deregulation and privatisation, lowering
+  barriers to entry". Deregulation lowers barriers to entry. Privatisation
+  on its own only moves a firm from public to private ownership: a
+  privatised monopoly stays a monopoly unless the market is also opened to
+  new firms. The cell lets a reader take the two together. Found by the
+  cold-solver verify pass on Edexcel B flashcards unit 4.4 (`NOTES?`,
+  raised while checking `edexcel-b-4-4-3-app-01`). The card now says only
+  that privatisation is market-based and promotes competition, which is
+  the row it sits in.
+- **Proposed correction** — "Deregulation, lowering barriers to entry;
+  privatisation, with markets opened to new firms". Or leave it as the
+  simplest version for A level. The wording is Eliot's call.
+- **Confidence** — medium (standard theory: privatisation and
+  liberalisation are separate policies). Not a chip, so no glossary
+  coupling.
+- **Status** — open.
+
+## 50. Edexcel B 4.4.3 classes R&D tax relief as interventionist
+
+- **Location** — same page, "Policies for Each Aim" table, the "Increase
+  incentives" row, interventionist column.
+- **Issue** — the cell reads "Tax relief or grants for research and
+  development, and for investment in new equipment". Grants are clearly
+  interventionist. Tax relief is classed either way in textbooks: some
+  call any tax incentive market-based. On the page's own chips, relief
+  targeted at one activity is the government directing resources, so
+  interventionist is defensible, but a student who reads "market-based
+  ... incentives are stronger" could fairly answer market-based. Found by
+  the cold-solver verify pass on Edexcel B flashcards unit 4.4 (`NOTES?`,
+  "a wording risk, not an error"). The card no longer uses this item.
+- **Proposed correction** — none needed for accuracy. Optionally "Grants
+  for research and development and for new equipment, or tax relief
+  targeted at them" to show why it counts as directing resources. The
+  wording is Eliot's call.
+- **Confidence** — low (a classification convention). Not a chip, so no
+  glossary coupling.
+- **Status** — open.
+
+## 51. Edexcel B 4.4.3 says a Keynesian LRAS shift always lowers the price level
+
+- **Location** — same page, "Showing Supply-Side Policies on a Diagram",
+  the sentence before Figure 2 and the Figure 2 caption.
+- **Issue** — on the Keynesian diagram, a right shift of LRAS lowers the
+  price level and raises real GDP only where AD crosses LRAS on its rising
+  or vertical section. Where AD crosses the flat section, output and
+  prices barely change. The page states the result without that
+  condition, though its own "No help in a recession" bullet makes the same
+  point in words. Found by the cold-solver verify pass on Edexcel B
+  flashcards unit 4.4 (`NOTES?`, "minor, possibly not worth logging",
+  raised while checking `edexcel-b-4-4-3-diagram-01`). The card follows
+  the page and the figure, which draws AD on the rising section.
+- **Proposed correction** — none recommended: Figure 2 shows the case the
+  sentence describes, and the recession bullet covers the rest. Leaving it
+  keeps the page simple.
+- **Confidence** — low. Not a chip, so no glossary coupling.
+- **Status** — open.
