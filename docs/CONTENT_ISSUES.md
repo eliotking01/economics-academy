@@ -1069,3 +1069,77 @@ Format per entry:
   glossary coupling.
 - **Status** — open, deferred (Eliot, 2026-11-11: keep it flagged, to be
   fixed later; the fix touches SVGs shared by three boards).
+
+## 53. Edexcel B 4.5.3 states the FPC mortgage limit without its size
+
+- **Location** — `revision-notes/edexcel-b-theme-4/4-5-3-the-role-of-the-central-bank.html`,
+  "Regulating the Banking Industry: the Financial Policy Committee", the
+  "Limits on risky mortgages" bullet (source slice
+  `notes-data/topics/edexcel-b-theme-4/4-5-3-the-role-of-the-central-bank.html`).
+- **Issue** — "it caps the share of new mortgages lenders can make at 4.5
+  times or more a borrower's income" is correct, but without the size of
+  the cap a student can read it as "no mortgage may exceed 4.5 times
+  income", that is, a ban rather than a limit on the share. Found by the
+  cold-solver verify pass on Edexcel B flashcards unit 4.5 (`NOTES?`, low
+  confidence, raised while checking `edexcel-b-4-5-3-def-02` and
+  `edexcel-b-4-5-3-app-01`). The verifier recalled the limit as 15% of new
+  lending and thought the Bank changed how it applies to individual lenders
+  in 2025, but said that is from memory and must be checked against the
+  Bank of England's current policy. Not checked: the Bank's documents are
+  not in this repo. The cards follow the page and add one sentence of their
+  own, "Such loans are allowed, but only as a limited part of new lending",
+  which follows from "caps the share" and needs no figure.
+  **Checked 2026-11-11** (Bank of England high loan to income lending
+  page, and its July 2025 Financial Stability Report remarks): the 4.5
+  times definition and the 15% limit still stand, but since July 2025 the
+  15% applies to all new lending in aggregate and an individual lender may
+  go above it. The page's "caps the share of new mortgages lenders can
+  make" is still right read as lenders taken together; read as each
+  lender, it is now out of date.
+- **Proposed correction** — either leave it (simplest), or make the
+  aggregate explicit, such as "it caps the share of all new mortgages made
+  at 4.5 times or more a borrower's income". Adding the percentage is not recommended: it is the
+  kind of figure that dates.
+- **Confidence** — low. Not a chip, so no glossary coupling.
+- **Status** — open, for Eliot.
+
+## 54. Edexcel B 4.5.3 and 4.5.4 say the Bank stress-tests banks every year
+
+- **Location** — `revision-notes/edexcel-b-theme-4/4-5-3-the-role-of-the-central-bank.html`,
+  the FPC's "Stress tests" bullet ("each year the Bank checks whether the
+  largest banks could survive a severe recession"), and
+  `revision-notes/edexcel-b-theme-4/4-5-4-the-global-financial-crisis.html`,
+  the regulation table's "Annual stress tests" row (source slices in
+  `notes-data/topics/edexcel-b-theme-4/`).
+- **Issue** — from 2025 the Bank of England runs its main Bank Capital
+  Stress Test every other year, not every year (announced November 2024;
+  the 2025 test was launched in March 2025 and is described by the Bank as
+  the first of a biennial cycle, with lighter exercises in between).
+  Found by the cold-solver verify pass on Edexcel B flashcards unit 4.5
+  (`NOTES?`, medium-low confidence, raised while re-checking
+  `edexcel-b-4-5-3-def-02`), then checked against the Bank's stress-testing
+  pages. The cards say "the Bank regularly checks" and "Regular stress
+  tests", which is true either way and does not contradict the page.
+- **Proposed correction** — 4.5.3: "the Bank regularly checks whether the
+  largest banks could survive a severe recession". 4.5.4 table: "Regular
+  stress tests". Both drop a detail that dates, which fits keeping the
+  notes simple.
+- **Confidence** — high that "each year" is out of date. Not a chip, so no
+  glossary coupling.
+- **Status** — open, for Eliot.
+
+## 55. Edexcel B 4.5.2 says lending for houses adds nothing to capacity
+
+- **Location** — `revision-notes/edexcel-b-theme-4/4-5-2-the-role-of-the-financial-sector.html`,
+  "Why the Financial Sector Matters", the "Who gets the credit" bullet.
+- **Issue** — "lending for houses and existing assets raises prices
+  without adding to what the economy can produce". Lending to build new
+  houses does add to output; the claim holds for buying existing houses.
+  Found by the cold-solver verify pass on Edexcel B flashcards unit 4.5
+  (`NOTES?`, raised while re-checking `edexcel-b-4-5-2-eval-01`, which
+  carries the sentence).
+- **Proposed correction** — "lending to buy existing houses and other
+  assets raises prices without adding to what the economy can produce", or
+  no change: the simplification is a common one.
+- **Confidence** — low. Not a chip, so no glossary coupling.
+- **Status** — open, for Eliot.

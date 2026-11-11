@@ -2011,6 +2011,524 @@
         "notesPage": "/revision-notes/edexcel-b-theme-4/4-4-4-the-impact-of-macroeconomic-policies.html",
         "origin": "card-authored"
       }
+    },
+    {
+      "id": "edexcel-b-4-5-1-def-01",
+      "specCode": "4.5.1",
+      "topic": "4.5 Risk and the Financial Sector",
+      "subtopic": "4-5-1-risks-and-uncertainty",
+      "cardType": "definition",
+      "front": "<p>Define <strong>risk</strong> and <strong>uncertainty</strong>, and explain why the difference matters to a firm.</p><p>Classify each as a risk or an uncertainty: (a) stock stolen from a shop; (b) whether a new flavour of crisps will sell; (c) a delivery van crashing; (d) customers' tastes moving away from the firm's product.</p>",
+      "back": "<p><strong>Risk</strong> — an unknown outcome whose chances can be measured, usually from past data, so a probability can be put on it.</p><p><strong>Uncertainty</strong> — an unknown outcome whose chances cannot be measured, because there is no past record to go on.</p><ul><li><strong>Risk can be priced:</strong> it can be measured → an insurer or a bank can work out a fair charge for taking it on → the firm swaps an unknown loss for a known cost, such as an insurance premium.</li><li><strong>Uncertainty cannot:</strong> no one can put a number on it → no one will sell cover against it → the owners carry it themselves. Profit is their reward for doing so.</li></ul><ul><li><strong>(a) Risk:</strong> records across many shops show how often theft happens, so the stock can be insured.</li><li><strong>(b) Uncertainty:</strong> a new product has no past record to go on.</li><li><strong>(c) Risk:</strong> records across thousands of vans show roughly how many crash each year.</li><li><strong>(d) Uncertainty:</strong> there is no past record of how tastes will change, so no insurer will cover it.</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "risk",
+        "uncertainty",
+        "insurance",
+        "definition"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-5-1-risks-and-uncertainty.html",
+        "origin": "notes-verbatim",
+        "verbatim": "an unknown outcome whose chances can be measured, usually from past data, so a probability can be put on it."
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-1-chain-01",
+      "specCode": "4.5.1",
+      "topic": "4.5 Risk and the Financial Sector",
+      "subtopic": "4-5-1-risks-and-uncertainty",
+      "cardType": "chain",
+      "front": "<p>Define an <strong>economic shock</strong>, and distinguish a demand shock from a supply shock. Build the chains for a negative shock of each kind, and give three things that decide how badly a firm is hurt.</p>",
+      "back": "<p><strong>Economic shock</strong> — an unexpected event that suddenly changes demand or costs across the economy.</p><p>A <strong>demand shock</strong> changes how much customers buy. A <strong>supply shock</strong> changes what it costs to produce. Few firms see either coming, so shocks are a source of uncertainty.</p><ul><li><strong>Demand shock:</strong> sales fall suddenly → revenue drops while rent and loan repayments stay the same → cash runs short → firms cut staff, delay investment or close.</li><li><strong>Supply shock:</strong> energy or materials cost more → unit costs rise → the firm raises prices and loses sales, or holds prices and accepts a lower profit margin.</li><li><strong>Workers and consumers:</strong> job losses and higher prices → lower real incomes → less spending, which passes the shock on to other firms.</li></ul><p>Shocks also create winners: online retailers and delivery firms when shoppers move online, and energy producers when energy prices jump.</p><p><strong>How badly a firm is hurt depends on:</strong></p><ul><li><strong>Size and duration:</strong> a business can ride out a short shock on its savings. One that lasts years can change what customers buy for good.</li><li><strong>Cash reserves and debt:</strong> a firm with cash in the bank and little borrowing can wait for demand to recover. A heavily borrowed firm may run out of cash first.</li><li><strong>Ability to pass costs on:</strong> with price inelastic demand or a strong brand, a firm can raise prices after a supply shock and keep most of its sales.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "economic-shocks",
+        "demand-shock",
+        "supply-shock",
+        "uncertainty",
+        "chain"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-5-1-risks-and-uncertainty.html",
+        "origin": "notes-verbatim",
+        "verbatim": "an unexpected event that suddenly changes demand or costs across the economy."
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-1-def-02",
+      "specCode": "4.5.1",
+      "topic": "4.5 Risk and the Financial Sector",
+      "subtopic": "4-5-1-risks-and-uncertainty",
+      "cardType": "definition",
+      "front": "<p>Define <strong>exchange rate risk</strong> and a <strong>forward contract</strong>. How does hedging help a firm that trades abroad, and what decides whether it is worth it?</p>",
+      "back": "<p><strong>Exchange rate risk</strong> — the risk that a change in the exchange rate alters the value of a payment a firm has agreed to make or receive in a foreign currency.</p><p><strong>Forward contract</strong> — an agreement made today to buy or sell a currency on a set future date at an exchange rate fixed now.</p><ul><li><strong>An importer paying in dollars:</strong> if the pound weakens, it pays more pounds.</li><li><strong>An exporter paid in euros:</strong> if the pound strengthens, it receives fewer pounds.</li></ul><p>Banks sell forward contracts in the <strong>forward market</strong>. Using one to remove exchange rate risk is <strong>hedging</strong>: it fixes the pound value of a deal → the firm can set prices and budget, and a sudden currency move cannot wipe out its margin → it is more willing to sign overseas deals.</p><p><strong>Whether it is worth it depends on:</strong></p><ul><li><strong>Lost gains:</strong> the firm gives up any benefit from a favourable move.</li><li><strong>Cost and scale:</strong> banks charge for the service, so a small firm with few overseas deals may not bother.</li><li><strong>Known amounts and dates:</strong> a contract fixes one sum on one date. It cannot protect sales the firm has not yet won, or a fall in the pound that lasts for years.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "exchange-rate-risk",
+        "forward-contract",
+        "hedging",
+        "definition"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-5-1-risks-and-uncertainty.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the risk that a change in the exchange rate alters the value of a payment a firm has agreed to make or receive in a foreign currency."
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-1-calc-01",
+      "specCode": "4.5.1",
+      "topic": "4.5 Risk and the Financial Sector",
+      "subtopic": "4-5-1-risks-and-uncertainty",
+      "cardType": "calculation",
+      "front": "<p>A Scottish whisky distiller sells to a US importer for <strong>$390,000</strong>, to be paid in three months. Its bank offers a forward contract at <strong>£1 = $1.25</strong>.</p><p>(a) How many pounds does the contract fix the distiller's revenue at? (b) Without the contract, how many pounds would it receive if in three months the rate is <strong>£1 = $1.30</strong>, or <strong>£1 = $1.20</strong>? (c) In each case, did the contract help or cost the distiller, and by how much? Why might it hedge anyway?</p>",
+      "back": "<ul><li><strong>(a)</strong> $390,000 ÷ 1.25 = <strong>£312,000</strong>.</li><li><strong>(b)</strong> At $1.30 (pound stronger): $390,000 ÷ 1.30 = <strong>£300,000</strong>. At $1.20 (pound weaker): $390,000 ÷ 1.20 = <strong>£325,000</strong>.</li><li><strong>(c)</strong> Pound stronger: the contract gains it <strong>£12,000</strong> (£312,000 against £300,000). Pound weaker: it receives <strong>£13,000 less</strong> than it would have without the contract (£312,000 against £325,000).</li></ul><p>For an exporter, a stronger pound means fewer pounds when the dollars arrive: the reverse of an importer.</p><p><strong>Why hedge anyway:</strong> either way, the distiller knows its revenue from the day it signs the deal, so it can set prices and budget with confidence. The price is giving up the gain from a weaker pound.</p>",
+      "formula": "\\text{Amount in pounds} = \\frac{\\text{Amount in dollars}}{\\text{Dollars per £1}}",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "forward-contract",
+        "exchange-rate-risk",
+        "hedging",
+        "calculation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-5-1-risks-and-uncertainty.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-1-def-03",
+      "specCode": "4.5.1",
+      "topic": "4.5 Risk and the Financial Sector",
+      "subtopic": "4-5-1-risks-and-uncertainty",
+      "cardType": "definition",
+      "front": "<p>Define <strong>insurance</strong>. How does pooling risk make it work, what three things does it do for a business, and what are its limits?</p>",
+      "back": "<p><strong>Insurance</strong> — a contract in which a firm pays a regular sum, the <strong>premium</strong>, and the insurer agrees to pay compensation if a specified loss happens.</p><p><strong>Pooling risk:</strong> an insurer collects premiums from thousands of firms, knowing from past data that only a few will claim in a year. The premiums from the many pay for the losses of the few.</p><ul><li><strong>Survival:</strong> a flood ruins a print shop's presses → the insurer pays for new ones → the shop reopens instead of closing, and its staff keep their jobs.</li><li><strong>Steady costs:</strong> a fixed premium replaces a large, unpredictable loss → cash flow is easier to forecast.</li><li><strong>Access to finance:</strong> banks lending against property usually insist it is insured → insurance protects their collateral → the firm can borrow.</li></ul><p><strong>Its limits:</strong></p><ul><li><strong>Only risks are covered:</strong> no insurer will pay out because sales fell, a rival undercut the firm or a product flopped. Those are uncertainties, and the firm must rely on something else, such as cash reserves.</li><li><strong>Premiums are a cost:</strong> they rise after a claim or in high-risk areas, such as flood plains, and some firms insure for less than their assets are worth to save money.</li></ul><p>Employers' liability insurance, which covers claims from injured staff, is required by law as soon as a firm takes on employees.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "insurance",
+        "pooling-risk",
+        "risk",
+        "definition"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-5-1-risks-and-uncertainty.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a contract in which a firm pays a regular sum, the premium, and the insurer agrees to pay compensation if a specified loss happens."
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-2-def-01",
+      "specCode": "4.5.2",
+      "topic": "4.5 Risk and the Financial Sector",
+      "subtopic": "4-5-2-the-role-of-the-financial-sector",
+      "cardType": "definition",
+      "front": "<p>Define the <strong>financial sector</strong>. Name the seven roles the spec gives it, with one line on what each does.</p>",
+      "back": "<p><strong>Financial sector</strong> — the banks, building societies, insurers, investment funds and markets that handle money for households, firms and the government.</p><ul><li><strong>Mobilising savings for lending:</strong> it pools many small savings so they can be lent in large amounts. Savers earn interest or a return, and one failed borrower is a small loss spread across thousands of savers.</li><li><strong>Lending to business for working capital:</strong> overdrafts and short-term loans for working capital, and longer loans for machinery, buildings and technology.</li><li><strong>Lending to individuals:</strong> mortgages, personal loans and credit cards let households buy now and pay over time.</li><li><strong>Facilitating the exchange of goods and services:</strong> card payments, bank transfers and direct debits move money between buyers and sellers, so firms can sell to customers they will never meet, online and overseas.</li><li><strong>Assessing creditor risk:</strong> deciding whether to lend, how much, and at what rate.</li><li><strong>Forward markets in currencies and commodities:</strong> a firm agrees today the price at which it will buy or sell on a future date. A coffee chain can fix what it will pay for beans next year.</li><li><strong>A market for equities:</strong> a stock exchange, where companies sell shares to raise money and investors trade them.</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "financial-sector",
+        "banks",
+        "financial-markets",
+        "definition"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-5-2-the-role-of-the-financial-sector.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the banks, building societies, insurers, investment funds and markets that handle money for households, firms and the government."
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-2-def-02",
+      "specCode": "4.5.2",
+      "topic": "4.5 Risk and the Financial Sector",
+      "subtopic": "4-5-2-the-role-of-the-financial-sector",
+      "cardType": "definition",
+      "front": "<p>Define <strong>working capital</strong>. Why does a profitable firm still need credit to run from day to day, and what happens to it when credit dries up?</p>",
+      "back": "<p><strong>Working capital</strong> — the money available for a business's day-to-day running, measured as current assets minus current liabilities. It pays for stock, staff and suppliers before customers pay.</p><p>A toy shop buys its Christmas stock in the autumn and pays its supplier straight away, but is paid by its customers only as the stock sells. An <strong>overdraft</strong> or short-term loan bridges the gap.</p><ul><li><strong>When credit flows:</strong> credit pays for stock and equipment → output and sales rise sooner → higher profit and more jobs. With longer-term loans for investment as well, a firm can grow faster than its own profits would allow.</li><li><strong>When credit dries up:</strong> a profitable firm still has bills to pay before its customers pay it → it runs short of cash → it cuts orders or staff, or fails.</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "working-capital",
+        "credit",
+        "overdraft",
+        "definition"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-5-2-the-role-of-the-financial-sector.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the money available for a business's day-to-day running, measured as current assets minus current liabilities. It pays for stock, staff and suppliers before customers pay."
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-2-chain-01",
+      "specCode": "4.5.2",
+      "topic": "4.5 Risk and the Financial Sector",
+      "subtopic": "4-5-2-the-role-of-the-financial-sector",
+      "cardType": "chain",
+      "front": "<p>Define <strong>creditor risk</strong>. How does a bank assess it, and why does it matter to the whole economy whether banks do this well, badly or too cautiously?</p>",
+      "back": "<p><strong>Creditor risk</strong> — the risk to a lender that a borrower does not repay what it owes.</p><p>Before lending, a bank checks the borrower's credit history, income or cash-flow forecast, and any collateral on offer. It then decides whether to lend, how much, and at what rate. Riskier borrowers pay more interest to cover the greater chance of default.</p><p>This decides where savings go:</p><ul><li><strong>Done well:</strong> money goes to borrowers likely to use it productively and repay → fewer bad debts → banks stay sound and keep lending.</li><li><strong>Done badly:</strong> loans go to borrowers who cannot repay → defaults rise → banks make losses and cut lending to everyone, as in 2007-08.</li><li><strong>Done too cautiously:</strong> new firms with no track record or collateral are turned down → good ideas go unfunded → less investment and enterprise.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "creditor-risk",
+        "lending",
+        "banks",
+        "chain"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-5-2-the-role-of-the-financial-sector.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the risk to a lender that a borrower does not repay what it owes."
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-2-def-03",
+      "specCode": "4.5.2",
+      "topic": "4.5 Risk and the Financial Sector",
+      "subtopic": "4-5-2-the-role-of-the-financial-sector",
+      "cardType": "definition",
+      "front": "<p>Define <strong>equities</strong>. Distinguish the primary market from the secondary market, and explain why the secondary market matters to a company that receives nothing from it.</p>",
+      "back": "<p><strong>Equities</strong> — shares in a company, each giving its owner part-ownership and a share of any profits paid out as dividends.</p><p>A stock exchange, such as the London Stock Exchange, does two jobs:</p><ul><li><strong>Primary market:</strong> a company first sells shares to the public → it raises new money for investment.</li><li><strong>Secondary market:</strong> after that, investors buy and sell those shares between themselves.</li></ul><p><strong>Why the secondary market matters:</strong> investors know they can sell their shares whenever they want → they are more willing to buy in the first place → companies can raise large sums without taking on debt or paying interest.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "equities",
+        "stock-exchange",
+        "shares",
+        "definition"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-5-2-the-role-of-the-financial-sector.html",
+        "origin": "notes-verbatim",
+        "verbatim": "shares in a company, each giving its owner part-ownership and a share of any profits paid out as dividends."
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-2-eval-01",
+      "specCode": "4.5.2",
+      "topic": "4.5 Risk and the Financial Sector",
+      "subtopic": "4-5-2-the-role-of-the-financial-sector",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> the importance of the financial sector. How does it help firms, households and trade, and what decides how much it helps?</p>",
+      "back": "<ul><li><strong>Firms:</strong> savings are channelled into loans and share issues → firms can fund working capital and investment → higher output, productivity and jobs.</li><li><strong>Households:</strong> mortgages and loans let them spread big purchases over time → consumption is steadier → firms' sales are steadier too. The risk is debt that grows faster than incomes: if rates rise or jobs are lost, repayments swallow more income and spending falls sharply.</li><li><strong>Trade:</strong> fast payments and forward markets cut the cost and risk of buying and selling abroad → more trade and specialisation.</li></ul><p><strong>How much it helps depends on:</strong></p><ul><li><strong>Who gets the credit:</strong> lending for houses and existing assets raises prices without adding to what the economy can produce. Lending to firms for investment does.</li><li><strong>The size of firm:</strong> large companies can issue shares and bonds. Small firms depend on banks, and lose out first when banks become cautious.</li><li><strong>How much risk the sector takes:</strong> too much lending to weak borrowers can end in a crisis that cuts credit to everyone. Regulation by the Bank of England tries to prevent this.</li></ul><p><strong>Judgement:</strong> the sector adds most when its credit goes to firms that invest, reaches small firms as well as large ones, and is lent without taking on too much risk.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "financial-sector",
+        "credit",
+        "economic-growth",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-5-2-the-role-of-the-financial-sector.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-3-def-01",
+      "specCode": "4.5.3",
+      "topic": "4.5 Risk and the Financial Sector",
+      "subtopic": "4-5-3-the-role-of-the-central-bank",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>central bank</strong> and <strong>Bank Rate</strong>. What are the Bank of England's two main aims, and why do the rest of the economy's interest rates follow Bank Rate?</p>",
+      "back": "<p><strong>Central bank</strong> — the bank that manages a country's currency and interest rates, and oversees its banking system. In the UK it is the Bank of England.</p><p><strong>Bank Rate</strong> — the interest rate the Bank of England pays commercial banks on the money they keep with it overnight. It is also called the base rate or the official interest rate.</p><ul><li><strong>Monetary stability:</strong> low and steady inflation. The <strong>Monetary Policy Committee (MPC)</strong> handles it by setting Bank Rate, independently of the government.</li><li><strong>Financial stability:</strong> a banking system that keeps working in bad times. The <strong>Financial Policy Committee (FPC)</strong> handles it.</li></ul><p><strong>Why other rates follow:</strong> if the Bank pays more on banks' deposits, they will only lend to households and firms at higher rates too → a change in Bank Rate soon changes rates on new mortgages, business loans, overdrafts and savings accounts.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "central-bank",
+        "bank-rate",
+        "bank-of-england",
+        "definition"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-5-3-the-role-of-the-central-bank.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the bank that manages a country's currency and interest rates, and oversees its banking system. In the UK it is the Bank of England."
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-3-eval-01",
+      "specCode": "4.5.3",
+      "topic": "4.5 Risk and the Financial Sector",
+      "subtopic": "4-5-3-the-role-of-the-central-bank",
+      "cardType": "evaluation",
+      "front": "<p>What inflation target does the MPC work to, and what happens if inflation misses it? Explain why the MPC sets Bank Rate for two years ahead, and <strong>evaluate</strong> how well Bank Rate controls inflation.</p>",
+      "back": "<p><strong>The target:</strong> 2% CPI inflation, set by the government. If inflation misses it by more than one percentage point either way, the Governor must write an open letter to the Chancellor explaining why and what the Bank will do.</p><p><strong>The chain:</strong> inflation looks set to rise above target → the MPC raises Bank Rate → loan and mortgage repayments rise, saving pays more, and fewer projects are worth funding → aggregate demand falls → firms find it harder to raise prices and workers to win big pay rises → inflation slows.</p><p><strong>Two years ahead:</strong> a change in Bank Rate takes around 18 to 24 months to have its full effect, so the MPC sets rates for where it expects inflation to be in two years, not where it is today.</p><p><strong>How well it works depends on:</strong></p><ul><li><strong>The cause of the inflation:</strong> higher rates reduce demand. They cannot make imported energy or food cheaper, so cost-push inflation is cut only by squeezing demand harder, at a cost to output and jobs.</li><li><strong>Time lags:</strong> many homeowners have fixed-rate mortgages, so a rise reaches them only when their deal ends. A forecast that turns out wrong can leave rates too high for too long.</li><li><strong>Credibility:</strong> if firms and workers believe the Bank will hit 2%, they set prices and pay claims accordingly, and inflation falls with smaller rate rises.</li></ul><p><strong>Judgement:</strong> Bank Rate works best when inflation comes from too much demand and the Bank is believed. Against inflation from imported energy or food, it works only at a cost to output and jobs.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "monetary-policy",
+        "bank-rate",
+        "inflation-target",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-5-3-the-role-of-the-central-bank.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-3-def-02",
+      "specCode": "4.5.3",
+      "topic": "4.5 Risk and the Financial Sector",
+      "subtopic": "4-5-3-the-role-of-the-central-bank",
+      "cardType": "definition",
+      "front": "<p>Define the <strong>Financial Policy Committee (FPC)</strong>. How does its job differ from the PRA's and the FCA's, what are its three main tools, and what trade-off do tighter rules involve?</p>",
+      "back": "<p><strong>Financial Policy Committee (FPC)</strong> — the Bank of England committee that looks for risks to the financial system as a whole and acts to reduce them.</p><ul><li><strong>The FPC</strong> looks for <strong>systemic risk</strong>: problems, such as a lending boom, that could hit many banks at once.</li><li><strong>The Prudential Regulation Authority (PRA)</strong>, part of the Bank, supervises individual banks.</li><li><strong>The Financial Conduct Authority (FCA)</strong>, separate from the Bank, checks that firms treat customers fairly.</li></ul><p><strong>The FPC's main tools:</strong></p><ul><li><strong>Capital buffers:</strong> it can make banks hold extra capital, money from shareholders that absorbs losses, when risks are building. In a downturn it can release the buffer so banks keep lending.</li><li><strong>Limits on risky mortgages:</strong> it caps the share of new mortgages lenders can make at 4.5 times or more a borrower's income. Such loans are allowed, but only as a limited part of new lending.</li><li><strong>Stress tests:</strong> the Bank regularly checks whether the largest banks could survive a severe recession. Those that fall short must strengthen their finances.</li></ul><p><strong>The trade-off:</strong> the FPC raises the capital buffer → banks are safer but have less to lend → credit costs a little more → slightly less investment and spending. Looser rules risk the kind of lending boom that ended in 2007-08.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "financial-policy-committee",
+        "financial-regulation",
+        "bank-of-england",
+        "definition"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-5-3-the-role-of-the-central-bank.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the Bank of England committee that looks for risks to the financial system as a whole and acts to reduce them."
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-3-def-03",
+      "specCode": "4.5.3",
+      "topic": "4.5 Risk and the Financial Sector",
+      "subtopic": "4-5-3-the-role-of-the-central-bank",
+      "cardType": "definition",
+      "front": "<p>Why is the Bank of England the <strong>banker to the banks</strong>? Define a <strong>lender of last resort</strong>, explain why even a sound bank can need one, and say what the case for it depends on.</p>",
+      "back": "<p>Commercial banks hold accounts at the Bank of England, just as firms hold accounts at a high-street bank, and use them to settle payments with each other. That makes the Bank the <strong>banker to the banks</strong>.</p><p><strong>Lender of last resort</strong> — a central bank lending to a commercial bank that is short of cash and cannot borrow anywhere else.</p><p><strong>Why a sound bank can need one:</strong> a bank lends most of its deposits out for years, so it never has enough cash to repay every saver at once → if savers fear for the bank and all try to withdraw together, a <strong>bank run</strong>, even a sound bank can run out of cash.</p><ul><li><strong>Savers:</strong> the Bank of England lends → the commercial bank can pay out every withdrawal → panic subsides.</li><li><strong>The wider economy:</strong> one bank's failure cannot spread to others it owes money to → banks keep lending to firms and households.</li></ul><p><strong>The case for it depends on:</strong></p><ul><li><strong>Short of cash, or bust:</strong> the role is meant for banks with a cash shortage, not banks whose loans have gone bad. The Bank lends only against good collateral, and charges more than normal for it.</li><li><strong>Moral hazard:</strong> if banks expect to be rescued, they may take bigger risks. That is why the lender of last resort comes with regulation from the FPC and PRA.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "lender-of-last-resort",
+        "bank-run",
+        "moral-hazard",
+        "definition"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-5-3-the-role-of-the-central-bank.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a central bank lending to a commercial bank that is short of cash and cannot borrow anywhere else."
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-3-app-01",
+      "specCode": "4.5.3",
+      "topic": "4.5 Risk and the Financial Sector",
+      "subtopic": "4-5-3-the-role-of-the-central-bank",
+      "cardType": "application",
+      "front": "<p>For each, say which Bank of England committee or which regulator is responsible, and why:</p><ul><li>(a) CPI inflation is forecast to be 4% in two years' time</li><li>(b) lenders are making more and more mortgages at five times the borrower's income</li><li>(c) one bank's own finances look weak after a run of bad loans</li><li>(d) a lender is treating its customers unfairly</li></ul>",
+      "back": "<ul><li><strong>(a) The MPC:</strong> it targets 2% CPI inflation and sets Bank Rate for where it expects inflation to be in two years, so it would raise Bank Rate.</li><li><strong>(b) The FPC:</strong> a lending boom is a systemic risk. It can use its cap on the share of new mortgages made at 4.5 times income or more, and make banks hold a bigger capital buffer.</li><li><strong>(c) The PRA:</strong> it supervises individual banks. The FPC looks at the system as a whole.</li><li><strong>(d) The FCA:</strong> it checks that firms treat customers fairly, and is separate from the Bank of England.</li></ul><p><strong>Keep the two committees apart:</strong> the MPC targets inflation, and its tool is Bank Rate. The FPC targets the safety of the whole financial system, and its tools are rules on how banks lend and how much capital they hold.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "monetary-policy-committee",
+        "financial-policy-committee",
+        "financial-regulation",
+        "application"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-5-3-the-role-of-the-central-bank.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-4-def-01",
+      "specCode": "4.5.4",
+      "topic": "4.5 Risk and the Financial Sector",
+      "subtopic": "4-5-4-the-global-financial-crisis",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>sub-prime mortgage</strong>, <strong>speculation</strong> and a <strong>market bubble</strong>. How did the US house price bubble make sub-prime lending look safe, and why did the losses turn up in banks around the world when it burst?</p>",
+      "back": "<p><strong>Sub-prime mortgage</strong> — a home loan to a borrower with a poor credit record or low income, who is more likely than most to default.</p><p><strong>Speculation</strong> — buying an asset mainly because you expect its price to rise, so you can sell it at a profit.</p><p><strong>Market bubble</strong> — a rise in an asset's price far above what its underlying value can justify, driven by buyers expecting further rises.</p><ul><li><strong>Looking safe:</strong> house prices were rising → if a borrower could not pay, the house could be sold for more than the loan → banks and buyers kept betting that prices would keep rising.</li><li><strong>Spreading:</strong> US lenders offered sub-prime loans with low starting rates, often with little check on income, then sold them on. Thousands of mortgages were bundled into securities and bought by banks worldwide.</li><li><strong>Bursting:</strong> rates reset higher and prices fell → borrowers defaulted, and owed more than their homes were worth → lenders could not get their money back → losses turned up in banks far from the US, and no one knew exactly which banks held them.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "sub-prime-mortgages",
+        "speculation",
+        "market-bubbles",
+        "financial-crisis",
+        "definition"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-5-4-the-global-financial-crisis.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a home loan to a borrower with a poor credit record or low income, who is more likely than most to default."
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-4-def-02",
+      "specCode": "4.5.4",
+      "topic": "4.5 Risk and the Financial Sector",
+      "subtopic": "4-5-4-the-global-financial-crisis",
+      "cardType": "definition",
+      "front": "<p>Define <strong>moral hazard</strong> and <strong>organisational culture</strong>. Use each to explain why banks took such large risks before the crisis, and why the cost was a negative externality.</p>",
+      "back": "<p><strong>Moral hazard</strong> — taking more risk because someone else will bear the cost if it goes wrong.</p><p><strong>Organisational culture</strong> — the shared values and habits that shape how people in a business behave.</p><ul><li><strong>Too big to fail:</strong> the largest banks were so big, and so linked to the rest of the economy, that governments could not let them collapse → banks expected a rescue if bets went wrong → they took bigger risks for bigger profits, with thin capital to cover losses.</li><li><strong>Culture:</strong> staff were paid large bonuses for selling loans and making short-term profit, and lost nothing personally when those loans failed later → warnings from risk managers were often ignored while profits were high. Lenders that sold mortgages on had little reason to check whether borrowers could repay.</li></ul><p><strong>A negative externality:</strong> when the banks failed, much of the cost fell on taxpayers and workers who had no part in the decisions.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "moral-hazard",
+        "organisational-culture",
+        "too-big-to-fail",
+        "financial-crisis",
+        "definition"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-5-4-the-global-financial-crisis.html",
+        "origin": "notes-verbatim",
+        "verbatim": "taking more risk because someone else will bear the cost if it goes wrong."
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-4-chain-01",
+      "specCode": "4.5.4",
+      "topic": "4.5 Risk and the Financial Sector",
+      "subtopic": "4-5-4-the-global-financial-crisis",
+      "cardType": "chain",
+      "front": "<p>Define a <strong>credit crunch</strong>. Build the chain by which the banking crisis became a recession, then link the causes of the crisis into a single chain.</p>",
+      "back": "<p><strong>Credit crunch</strong> — a sudden, sharp fall in the amount banks are willing to lend.</p><p>Once banks were losing money, they hoarded cash to protect themselves.</p><ul><li><strong>Firms:</strong> banks cut overdrafts and refused new loans → firms could not fund stock, wages or investment → even profitable businesses cut output, laid off staff or failed.</li><li><strong>The wider economy:</strong> less investment and more job losses → lower spending → lower sales for other firms → more loans go bad, and banks cut lending again.</li></ul><p><strong>Linking the causes:</strong> a culture of bonuses for lending, plus moral hazard → banks made sub-prime loans → a house price bubble made those loans look safe → when it burst, losses caused a credit crunch → that is what reached firms and workers.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "credit-crunch",
+        "financial-crisis",
+        "recession",
+        "chain"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-5-4-the-global-financial-crisis.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a sudden, sharp fall in the amount banks are willing to lend."
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-4-eval-01",
+      "specCode": "4.5.4",
+      "topic": "4.5 Risk and the Financial Sector",
+      "subtopic": "4-5-4-the-global-financial-crisis",
+      "cardType": "evaluation",
+      "front": "<p>How did banking regulation contribute to the global financial crisis? Give four ways UK regulation has changed since, with the problem each targets, and <strong>evaluate</strong> how well the new rules work.</p>",
+      "back": "<p><strong>Before the crisis</strong> regulation was light. UK supervisors checked each bank on its own, and no one was responsible for spotting a risk building up across the whole system. Banks were allowed to run with little capital and to rely on short-term borrowing from each other, which vanished in 2007-08.</p><ul><li><strong>More capital and cash</strong> (Basel III): banks had too little to absorb losses or meet withdrawals.</li><li><strong>New regulators</strong> (the FPC, PRA and FCA): no one watched the system as a whole.</li><li><strong>Regular stress tests:</strong> banks were not tested against a severe recession.</li><li><strong>Ring-fencing:</strong> risky investment banking could sink ordinary customers' deposits.</li></ul><p><strong>How well it works depends on:</strong></p><ul><li><strong>The cost to lending:</strong> safer banks hold more capital → they lend less, or charge more → less investment and slower growth.</li><li><strong>Risk moving elsewhere:</strong> tighter rules on banks can push lending to less regulated firms, such as investment funds, where the risk is harder to see.</li><li><strong>Moral hazard remains:</strong> as long as a bank is too big to fail, it may still count on a rescue. Rules that make shareholders and lenders bear losses first try to change that.</li></ul><p><strong>Judgement:</strong> the new rules make banks safer, but at some cost to lending and growth, and they cannot fully remove the risk while some banks are still too big to fail.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "financial-regulation",
+        "financial-crisis",
+        "moral-hazard",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-5-4-the-global-financial-crisis.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-5-4-chain-02",
+      "specCode": "4.5.4",
+      "topic": "4.5 Risk and the Financial Sector",
+      "subtopic": "4-5-4-the-global-financial-crisis",
+      "cardType": "chain",
+      "front": "<p>Build the chains for the <strong>impact of the financial crisis</strong> on households, firms, workers, savers and the government. Why was the impact uneven?</p>",
+      "back": "<ul><li><strong>Households:</strong> recession and job losses → lower incomes → some could not repay mortgages and lost their homes. Mortgages became harder to get, especially for first-time buyers.</li><li><strong>Firms:</strong> the credit crunch cut their finance while demand was falling → lower sales and profit → investment cut and many businesses failed.</li><li><strong>Workers:</strong> firms cut jobs → unemployment rose → those still in work had little bargaining power, so real wages fell for years.</li><li><strong>Savers:</strong> the Bank of England cut Bank Rate to 0.5% and began quantitative easing → savings earned almost nothing for a decade.</li><li><strong>Government:</strong> bank rescues, a temporary VAT cut to support spending, lower tax revenue and higher spending on benefits → a much bigger budget deficit → more borrowing → spending cuts and tax rises in the years that followed.</li></ul><p><strong>Why it was uneven:</strong></p><ul><li><strong>Debt or savings:</strong> borrowers on variable-rate mortgages gained from low rates. People living on interest from savings lost.</li><li><strong>Assets:</strong> low rates and QE pushed up the prices of shares and houses, which helped those who already owned them more than those trying to buy.</li><li><strong>The industry:</strong> construction, car sales and other industries reliant on credit were hit hardest. Discount retailers gained as shoppers traded down.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "financial-crisis",
+        "economic-agents",
+        "credit-crunch",
+        "chain"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-5-4-the-global-financial-crisis.html",
+        "origin": "card-authored"
+      }
     }
   ]
 }
