@@ -1000,7 +1000,10 @@ Format per entry:
 - **Confidence** — medium (standard theory: privatisation and
   liberalisation are separate policies). Not a chip, so no glossary
   coupling.
-- **Status** — open.
+- **Status** — approved (Eliot, 2026-11-11: the proposed wording);
+  fixed in the commit that applies Eliot's answers to the unit 4.4
+  flashcard sheet. The cell now reads "Deregulation, lowering barriers to
+  entry; privatisation, with markets opened to new firms".
 
 ## 50. Edexcel B 4.4.3 classes R&D tax relief as interventionist
 
@@ -1021,7 +1024,8 @@ Format per entry:
   wording is Eliot's call.
 - **Confidence** — low (a classification convention). Not a chip, so no
   glossary coupling.
-- **Status** — open.
+- **Status** — closed, no change (Eliot, 2026-11-11: the page stays as
+  written).
 
 ## 51. Edexcel B 4.4.3 says a Keynesian LRAS shift always lowers the price level
 
@@ -1040,4 +1044,28 @@ Format per entry:
   sentence describes, and the recession bullet covers the rest. Leaving it
   keeps the page simple.
 - **Confidence** — low. Not a chip, so no glossary coupling.
-- **Status** — open.
+- **Status** — closed, no change (Eliot, 2026-11-11: the page stays as
+  written).
+
+## 52. Three shared AD/AS SVGs have loose `<desc>` text
+
+- **Location** — `images/diagrams/svg/lras-keynesian.svg`,
+  `images/diagrams/svg/keynesian-ad-shift-right.svg` and
+  `images/diagrams/svg/classical-lras-shift-right.svg`, the `<desc>`
+  element in each. All three are used by flashcards on Edexcel A, AQA and
+  now Edexcel B.
+- **Issue** — the two Keynesian SVGs describe the curve as "L-shaped",
+  which is a poor description of a curve that is flat, then rises, then is
+  vertical. The classical one says "Full-employment output", where the
+  notes say "full capacity output". The text is not visible, but a screen
+  reader may announce it with the card's `svgAlt`. Found by the cold-solver
+  verify pass on Edexcel B flashcards unit 4.4 (a remark, not a `NOTES?`).
+  The cards do not depend on it: each card's own `svgAlt` describes the
+  figure correctly.
+- **Proposed correction** — Keynesian: "flat at low output, then rising,
+  then vertical at full capacity output (Yfe)". Classical: "full capacity
+  output". The exact wording is Eliot's call.
+- **Confidence** — high that the wording is loose. Not a chip, so no
+  glossary coupling.
+- **Status** — open, deferred (Eliot, 2026-11-11: keep it flagged, to be
+  fixed later; the fix touches SVGs shared by three boards).
