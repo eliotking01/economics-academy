@@ -316,8 +316,8 @@ sheets: `05-website/drafts/all-boards-parity/review/flashcards-unit-X-Y.md`.
     dashed price line stops at x=415, short of the firm's "P1". That SVG is
     shared with the live Edexcel A and AQA decks, so they change at the next
     push.
-  - **Still open:** the text of card 4.1.1 diagram-02 awaits Eliot's
-    approval. `perfect-competition-short-run-loss.svg` (A and AQA only) has
+  - Eliot approved the text of card 4.1.1 diagram-02 on 2026-11-11.
+  - **Still open:** `perfect-competition-short-run-loss.svg` (A and AQA only) has
     the same line-through-"P1" fault; Q2 (b) would fix it and was not
     chosen. Unit 4.5 Q1–Q4 and CONTENT_ISSUES #46 and #52 remain with Eliot.
 
