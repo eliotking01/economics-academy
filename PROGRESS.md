@@ -23,7 +23,7 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| All-boards parity (D67) — Phase 2: Edexcel B flashcards, all four decks written (staged) | pushed on `feature/edexcel-b-flashcards`; not merged | — | — |
+| All-boards parity (D67) — Phase 2: Edexcel B flashcards, all four decks, launched (8 new URLs) | launched on `feature/edexcel-b-flashcards`, PR #49 open; not merged | — | — |
 | All-boards parity (D67) — Phase 1: Edexcel B practice questions, all 85 sets, launched (89 new URLs) | live (PR #48) | 2026-11-08 | `39403ead` |
 | June 2025 papers added to the past-paper question bank | live (PR #47) | 2026-10-24 | `d96b0928` |
 | June 2025 papers and the June 2023 Edexcel B mark schemes published | live (PR #46) | 2026-10-24 | `ed1d9539` |
@@ -215,7 +215,7 @@ session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
 
-### All-boards parity — Phase 2, Edexcel B flashcards (2026-11-08 to —) — ALL FOUR DECKS WRITTEN, STAGED; PUSHED, NOT MERGED (branch `feature/edexcel-b-flashcards`)
+### All-boards parity — Phase 2, Edexcel B flashcards (2026-11-08 to —) — LAUNCHED ON THE BRANCH, PR #49 OPEN; NOT MERGED (branch `feature/edexcel-b-flashcards`)
 
 `/edexcel-b-flashcards`, one unit per run, into
 `flashcards-data/edexcel-b/theme-N.json`. B's `flashcards` is **staged** in
@@ -335,8 +335,21 @@ sheets: `05-website/drafts/all-boards-parity/review/flashcards-unit-X-Y.md`.
   #55 closed with no change. The two stress-test cards keep "regularly" /
   "Regular", and 4.5.3 def-02 keeps its added sentence. **Theme 4 is
   accepted as complete at 99 cards.**
+- **Launched, 2026-11-11 (`4cfe0dac`, sitemap `740dfc17`; PR #49).**
+  `/launch-feature edexcel-b flashcards`: 85 of 85 topics carried, 467
+  cards, and the throwaway-worktree build wrote exactly the 8 URLs of
+  Phase 0 Q6. `flashcards` moved from `staged` to `features`. Eliot's
+  answers to `review/launch-flashcards.md` (F1 to F5) applied: the B
+  notes tails, the `/flashcards/` hub head, the home page card, FAQ and B
+  board card, and `names.flashcards` on the B groups.
+  **F1, for the B bank launch:** B deck pages' third button links
+  "Edexcel B past papers" (`papersUrl`), because the bank button would
+  have been a 404. `build_flashcards.PAPERS_LINK` flips it to the bank
+  when B's `pastPaperBank` goes live; `/launch-feature` step 4 now has
+  the check. The search-index test's deck count is now derived, and
+  `EXPECTED_KATEX_PAGES` declares B Themes 2 to 4.
 - **Still open:** CONTENT_ISSUES #46 and #52, both deferred by Eliot.
-  Next step: `/launch-feature edexcel-b flashcards`.
+  Merge PR #49 (merge commit, not squash), then record the merge commit here.
 
 ### All-boards parity — Phase 1, Edexcel B practice questions (2026-10-25 to 2026-11-08) — LIVE, MERGED 2026-11-08 AS PR #48 (`39403ead`, branch `feature/edexcel-b-questions`)
 
