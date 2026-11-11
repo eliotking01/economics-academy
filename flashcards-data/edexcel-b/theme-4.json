@@ -684,6 +684,392 @@
         "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-5-productive-and-allocative-efficiency.html",
         "origin": "card-authored"
       }
+    },
+    {
+      "id": "edexcel-b-4-2-1-def-01",
+      "specCode": "4.2.1",
+      "topic": "4.2 Market Power and Market Failure",
+      "subtopic": "4-2-1-market-power-and-market-failure",
+      "cardType": "definition",
+      "front": "<p>Define <strong>collusion</strong> and a <strong>cartel</strong>. How does overt collusion differ from tacit collusion, and what does either do to consumers and to the colluding firms?</p>",
+      "back": "<p><strong>Collusion</strong> — firms cooperating instead of competing, for example to fix prices, share out customers or limit output.</p><p><strong>Cartel</strong> — a group of firms with a formal agreement to collude. Cartels are illegal in the UK, and people found guilty of cartel activity can go to prison.</p><p>Collusion is most likely in an oligopoly, where a few firms can watch each other.</p><ul><li><strong>Overt collusion:</strong> firms openly agree, through meetings, messages or contracts. A cartel is overt collusion. The agreement leaves evidence, so it can be proven in court and punished.</li><li><strong>Tacit collusion:</strong> firms coordinate without ever communicating, for example by following a price leader or never starting a price war. The result can be the same as a cartel's, but with no agreement to point to it is much harder to prove.</li></ul><p><strong>Either form:</strong></p><ul><li><strong>Consumers:</strong> the firms act together like one monopoly → prices rise and output falls → consumers pay more and some are priced out.</li><li><strong>The colluding firms:</strong> no price competition → higher margins → supernormal profit, but a risk of heavy fines if caught.</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "collusion",
+        "cartel",
+        "tacit-collusion",
+        "oligopoly",
+        "market-failure"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-2-1-market-power-and-market-failure.html",
+        "origin": "notes-verbatim",
+        "verbatim": "firms cooperating instead of competing, for example to fix prices, share out customers or limit output."
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-1-def-02",
+      "specCode": "4.2.1",
+      "topic": "4.2 Market Power and Market Failure",
+      "subtopic": "4-2-1-market-power-and-market-failure",
+      "cardType": "definition",
+      "front": "<p>Define <strong>restrictive practices</strong> and give four examples. Build the chain from a restrictive practice to its effect on consumers.</p>",
+      "back": "<p><strong>Restrictive practices</strong> — actions by a firm that limit competition, either against rivals or against the firms it trades with.</p><ul><li><strong>Predatory pricing:</strong> pricing below cost until a rival leaves the market, then raising prices.</li><li><strong>Exclusive dealing:</strong> making retailers stock only the firm's own products.</li><li><strong>Tying:</strong> selling one product only to customers who also buy another.</li><li><strong>Refusal to supply:</strong> cutting off shops that also stock a rival's goods.</li></ul><p><strong>The chain:</strong> the practice keeps rivals out or pushes them out → fewer firms compete → the dominant firm can raise its prices later → consumers pay more and have less choice.</p><p>Competition law bans these practices when a dominant firm uses them.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "restrictive-practices",
+        "predatory-pricing",
+        "competition-law",
+        "market-power"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-2-1-market-power-and-market-failure.html",
+        "origin": "notes-verbatim",
+        "verbatim": "actions by a firm that limit competition, either against rivals or against the firms it trades with."
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-1-def-03",
+      "specCode": "4.2.1",
+      "topic": "4.2 Market Power and Market Failure",
+      "subtopic": "4-2-1-market-power-and-market-failure",
+      "cardType": "definition",
+      "front": "<p>Define <strong>monopsony</strong> and a <strong>trade union</strong>. How does a dominant buyer affect its suppliers and consumers? How does a monopsony employer affect wages and jobs, and what can a trade union do about it?</p>",
+      "back": "<p><strong>Monopsony</strong> — a market with a single buyer, or one dominant buyer, of a good, service or factor of production.</p><p><strong>Trade union</strong> — an organisation of workers that bargains with employers over pay and conditions.</p><p><strong>A dominant buyer</strong>, such as a large car maker buying parts from small suppliers who have nowhere else to sell:</p><ul><li><strong>Suppliers:</strong> the buyer pushes down the price it pays → suppliers' margins shrink → smaller suppliers may go out of business or cut investment.</li><li><strong>Consumers:</strong> the buyer's costs fall → it may pass some of the saving on as lower prices, or keep it as profit.</li></ul><p><strong>A monopsony employer</strong>, the one large employer in a town: workers have few other jobs to go to → it can pay less than a competitive market would → lower wages → fewer people take the jobs, so employment is lower too.</p><p><strong>A trade union</strong> can threaten strikes to push wages above the competitive level → labour costs rise → firms may hire fewer workers or raise prices. Against a monopsony employer, though, it can push the wage back up towards the competitive level, raising pay and jobs together.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "monopsony",
+        "trade-unions",
+        "labour-market",
+        "market-power"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-2-1-market-power-and-market-failure.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a market with a single buyer, or one dominant buyer, of a good, service or factor of production."
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-1-diagram-01",
+      "specCode": "4.2.1",
+      "topic": "4.2 Market Power and Market Failure",
+      "subtopic": "4-2-1-market-power-and-market-failure",
+      "cardType": "diagram",
+      "front": "<p>Define a <strong>natural monopoly</strong> and say why one can arise. Sketch the diagram and compare the output, price and profit of a privatised, profit-maximising firm with those of a nationalised one. What is the market failure?</p>",
+      "back": "<p><strong>Natural monopoly</strong> — a market where one firm can supply the whole market at a lower average cost than two or more firms could.</p><p><strong>Why:</strong> fixed costs are huge and the cost of serving one more customer is small. Two firms each laying gas pipes along every street would double the cost for no gain. Average cost keeps falling across the whole market, so one firm is the efficient outcome.</p><p><strong>The diagram:</strong> LRAC is still falling where it meets D=AR, with LRMC below it.</p><ul><li><strong>Privatised firm:</strong> it maximises profit where MR = LRMC → output Qp at price Pp, with average cost Cp. Pp is above Cp, so it makes a profit.</li><li><strong>Nationalised firm:</strong> it produces where LRMC meets D=AR → a larger output Qn at a lower price Pn. But Pn is below its average cost Cn, so it makes a loss.</li></ul><p><strong>The market failure:</strong> the one firm faces no competition. Left alone, it could charge high prices and let its service slip, so natural monopolies are regulated or publicly owned.</p>",
+      "svgRef": "/images/diagrams/svg/natural-monopoly.svg",
+      "svgAlt": "Costs and revenue on the vertical axis and quantity on the horizontal axis. LRAC falls across the whole range of demand, with LRMC below it. D=AR slopes down and cuts LRAC while LRAC is still falling, and MR is twice as steep, ending below the quantity axis. The privatised firm produces Qp, where MR meets LRMC, at price Pp on D=AR with average cost Cp on LRAC, below Pp. The nationalised firm produces the larger output Qn, where LRMC meets D=AR, at the lower price Pn, with average cost Cn above Pn",
+      "difficulty": "stretch",
+      "tags": [
+        "natural-monopoly",
+        "privatisation",
+        "nationalisation",
+        "economies-of-scale",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-2-1-market-power-and-market-failure.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a market where one firm can supply the whole market at a lower average cost than two or more firms could."
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-1-eval-01",
+      "specCode": "4.2.1",
+      "topic": "4.2 Market Power and Market Failure",
+      "subtopic": "4-2-1-market-power-and-market-failure",
+      "cardType": "evaluation",
+      "front": "<p>Define <strong>market failure</strong> and explain why market power causes it. <strong>Evaluate</strong> the effects on economic agents and the government: what decides how serious the failure is?</p>",
+      "back": "<p><strong>Market failure</strong> — when a free market allocates resources inefficiently, resulting in a social welfare loss.</p><p><strong>Why market power causes it:</strong> a firm with little competition can raise its price above marginal cost and supply less → resources are under-allocated to the good → allocative inefficiency.</p><ul><li><strong>Consumers:</strong> higher prices and less choice → lower real incomes and less consumer surplus.</li><li><strong>Workers:</strong> a monopsony employer pays less → lower living standards and less spending in the local economy.</li><li><strong>Suppliers and small firms:</strong> squeezed by a dominant buyer or kept out by restrictive practices → lower profits, less investment and some closures.</li><li><strong>Firms with power:</strong> supernormal profit → higher returns for owners, and funds for investment.</li><li><strong>The government:</strong> it has to fund competition authorities and regulators → less to spend elsewhere, and it may pay more for services it buys from a dominant supplier.</li></ul><p><strong>How serious it is depends on:</strong> economies of scale, since a large firm's costs may be low enough that prices are no higher than with many small firms; the use of profit, since research and new products can benefit consumers over time; contestability, since the threat of entry limits price rises; and regulation, which can correct much of the failure, at a cost.</p><p><strong>Judgement:</strong> name the type of market power first, because the fix differs. Breaking up a cartel would not raise costs, but breaking up a natural monopoly would.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "market-failure",
+        "market-power",
+        "stakeholders",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-2-1-market-power-and-market-failure.html",
+        "origin": "notes-verbatim",
+        "verbatim": "when a free market allocates resources inefficiently, resulting in a social welfare loss"
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-2-def-01",
+      "specCode": "4.2.2",
+      "topic": "4.2 Market Power and Market Failure",
+      "subtopic": "4-2-2-business-regulation",
+      "cardType": "definition",
+      "front": "<p>Define <strong>privatisation</strong>. What does it aim to achieve, and what is the risk when the business privatised is a natural monopoly?</p>",
+      "back": "<p><strong>Privatisation</strong> — transferring a business from public ownership to private ownership, usually by selling shares.</p><p>The aim is to bring in the profit motive and, where possible, competition.</p><ul><li><strong>Efficiency:</strong> private owners want profit → managers cut waste and costs → lower prices or better service for customers.</li><li><strong>Government finances:</strong> the sale raises money once → the state no longer covers the business's losses.</li></ul><p><strong>The risk:</strong> a privatised natural monopoly is still a monopoly. Without competition, the profit motive can push prices up and quality down. That is why such firms are controlled by an industry regulator.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "privatisation",
+        "natural-monopoly",
+        "efficiency",
+        "regulation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-2-2-business-regulation.html",
+        "origin": "notes-verbatim",
+        "verbatim": "transferring a business from public ownership to private ownership, usually by selling shares."
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-2-def-02",
+      "specCode": "4.2.2",
+      "topic": "4.2 Market Power and Market Failure",
+      "subtopic": "4-2-2-business-regulation",
+      "cardType": "definition",
+      "front": "<p>Define the <strong>Competition and Markets Authority (CMA)</strong>. What are its main jobs, and how does it control mergers? How does EU competition policy still affect UK firms?</p>",
+      "back": "<p><strong>Competition and Markets Authority (CMA)</strong> — the UK government body that enforces competition and consumer law.</p><ul><li>Review mergers, and block or change harmful ones.</li><li>Investigate and fine cartels and abuse of dominance.</li><li>Study whole markets that seem not to be working, and order changes.</li><li>Enforce consumer protection law.</li></ul><p><strong>Competition law</strong> bans agreements between firms that restrict competition, such as price fixing, and a dominant firm abusing its position, such as through predatory pricing. Firms can be fined, and individuals in a cartel can go to prison.</p><p><strong>Mergers:</strong> a merger between rivals removes a competitor. The CMA can review one where the business being bought has UK turnover above £100 million, or where the merged firm would supply at least 25% of a product in the UK. If the deal would substantially lessen competition, it can block it, or approve it only if the firms sell off parts of the business.</p><p><strong>EU competition policy:</strong> since Brexit it no longer applies inside the UK. But a UK firm whose cartel or abuse of dominance affects EU markets can be fined by the European Commission, and a global merger can need approval from both the CMA and the Commission → more cost and delay, and a risk the two decide differently.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "competition-and-markets-authority",
+        "competition-policy",
+        "mergers",
+        "eu-competition-policy"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-2-2-business-regulation.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the UK government body that enforces competition and consumer law."
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-2-calc-01",
+      "specCode": "4.2.2",
+      "topic": "4.2 Market Power and Market Failure",
+      "subtopic": "4-2-2-business-regulation",
+      "cardType": "calculation",
+      "front": "<p>A regulator caps the bills of the one firm that owns a region's water network at <strong>RPI − X</strong>, with <strong>X = 2%</strong>. Last year the average bill was <strong>£500</strong>, and RPI inflation is <strong>5%</strong>.</p><p>(a) What is the highest the average bill can be this year? (b) The firm cuts its costs by more than the regulator expected. Who keeps the gain, and why does this give the firm an incentive to cut costs? (c) Why does the regulator also set quality targets, and what can stop the cap working?</p>",
+      "back": "<p><strong>(a)</strong> The bill may rise by no more than 5% − 2% = <strong>3%</strong>. £500 × 1.03 = <strong>£515</strong>.</p><p><strong>(b)</strong> The firm keeps any profit from beating X → the more it cuts its costs, the more profit it makes → it has an incentive to cut costs.</p><p><strong>(c)</strong> Under a price cap, the firm could still raise profit by letting its service slip. Fines for missing targets, such as on supply cuts or complaints, stop that.</p><p><strong>What can stop it working:</strong></p><ul><li><strong>Information:</strong> the firm knows its costs far better than the regulator, so X may be set too low.</li><li><strong>Regulatory capture:</strong> a regulator that grows too close to the firms it oversees may start to serve their interests.</li></ul>",
+      "formula": "\\text{Maximum price rise} = \\text{RPI inflation} - X",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "price-cap",
+        "rpi-minus-x",
+        "natural-monopoly",
+        "regulation",
+        "calculation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-2-2-business-regulation.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-2-chain-01",
+      "specCode": "4.2.2",
+      "topic": "4.2 Market Power and Market Failure",
+      "subtopic": "4-2-2-business-regulation",
+      "cardType": "chain",
+      "front": "<p>Why does the law protect consumers? Outline what UK consumer law requires, and build the chains for its effects on consumers and on firms.</p>",
+      "back": "<p><strong>Why:</strong> consumers know less about a product than the firm selling it, so the law sets minimum standards.</p><ul><li><strong>Consumer Rights Act 2015:</strong> goods must be of satisfactory quality, fit for purpose and as described. If they are not, buyers can claim a refund, repair or replacement.</li><li><strong>Digital Markets, Competition and Consumers Act 2024:</strong> bans fake reviews and drip pricing, where extra charges appear only late in the buying process. The CMA can now decide for itself that a firm has broken consumer law, and fine it up to 10% of its global turnover.</li></ul><p><strong>The chains:</strong></p><ul><li><strong>Consumers:</strong> clear prices and honest reviews → they can compare offers properly → better choices and fewer bad buys.</li><li><strong>Firms:</strong> compliance costs money → but honest firms no longer lose sales to rivals who mislead.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "consumer-protection",
+        "asymmetric-information",
+        "regulation",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-2-2-business-regulation.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-2-chain-02",
+      "specCode": "4.2.2",
+      "topic": "4.2 Market Power and Market Failure",
+      "subtopic": "4-2-2-business-regulation",
+      "cardType": "chain",
+      "front": "<p>Why does the law protect employees? Name four UK protections, build the chains for their effects on workers and on firms, and say what the overall effect depends on.</p>",
+      "back": "<p><strong>Why:</strong> workers usually have less bargaining power than their employer, especially where it is a monopsony, so UK law sets minimum standards.</p><ul><li><strong>The National Minimum Wage and National Living Wage:</strong> a legal floor on hourly pay.</li><li><strong>The Equality Act 2010:</strong> bans discrimination on grounds such as sex, race, disability and age.</li><li><strong>Health and safety law:</strong> makes employers manage risks at work.</li><li><strong>Limits on working time</strong> and protection from unfair dismissal.</li></ul><p><strong>The chains:</strong></p><ul><li><strong>Workers:</strong> higher minimum pay and safer conditions → higher real incomes and better wellbeing.</li><li><strong>Firms:</strong> higher labour and admin costs → lower margins or higher prices, though better-treated staff may stay longer and work harder.</li></ul><p><strong>It depends on:</strong> firm size, since the paperwork weighs more heavily on a small business than a large one; and the labour market, since where employers have monopsony power, a minimum wage can raise pay without cutting jobs.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "employee-protection",
+        "national-minimum-wage",
+        "monopsony",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-2-2-business-regulation.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-3-def-01",
+      "specCode": "4.2.3",
+      "topic": "4.2 Market Power and Market Failure",
+      "subtopic": "4-2-3-arguments-for-and-against-regulation",
+      "cardType": "definition",
+      "front": "<p>Define <strong>regulatory capture</strong>. Why does it happen, and what does it do? Name the two other common reasons regulation fails.</p>",
+      "back": "<p><strong>Regulatory capture</strong> — when a regulator comes to serve the interests of the firms it regulates instead of the public.</p><p>When regulation makes things worse, that is government failure.</p><ul><li><strong>Why capture happens:</strong> the regulator relies on the firms for information, and staff often move between the two.</li><li><strong>What it does:</strong> a captured regulator sets lenient price caps and weak targets → firms keep high prices and profits → consumers lose out.</li></ul><p><strong>The other two causes:</strong></p><ul><li><strong>Poor information:</strong> the firm knows its own costs better than the regulator → caps and targets are set at the wrong level.</li><li><strong>Unintended consequences:</strong> a firm meets the letter of a rule but not its purpose. An energy network with a target to answer complaints within a day might send a quick standard reply without fixing the problem.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "regulatory-capture",
+        "government-failure",
+        "regulation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-2-3-arguments-for-and-against-regulation.html",
+        "origin": "notes-verbatim",
+        "verbatim": "when a regulator comes to serve the interests of the firms it regulates instead of the public."
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-3-chain-01",
+      "specCode": "4.2.3",
+      "topic": "4.2 Market Power and Market Failure",
+      "subtopic": "4-2-3-arguments-for-and-against-regulation",
+      "cardType": "chain",
+      "front": "<p>Build the chains for five <strong>benefits</strong> of regulating business.</p>",
+      "back": "<ul><li><strong>Lower prices:</strong> price caps and competition law stop firms exploiting market power → consumers pay less and buy more.</li><li><strong>Safety and quality:</strong> minimum standards → consumers can trust what they buy without checking every detail.</li><li><strong>Fair competition:</strong> the same rules for every firm → honest firms don't lose out to rivals who cut corners.</li><li><strong>Protected workers:</strong> minimum pay and safe conditions → higher living standards and fewer injuries.</li><li><strong>Wider society:</strong> rules on pollution and safety → less harm to people outside the market.</li></ul><p>Each benefit comes with a cost to someone, so pair each one with a cost when you evaluate.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "regulation",
+        "market-failure",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-2-3-arguments-for-and-against-regulation.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-3-chain-02",
+      "specCode": "4.2.3",
+      "topic": "4.2 Market Power and Market Failure",
+      "subtopic": "4-2-3-arguments-for-and-against-regulation",
+      "cardType": "chain",
+      "front": "<p>Build the chains for five <strong>costs</strong> of regulating business.</p>",
+      "back": "<ul><li><strong>Compliance costs:</strong> paperwork, inspections and new equipment → higher costs → higher prices or lower profit.</li><li><strong>A barrier to entry:</strong> rules cost a small firm as much as a large one → fewer new firms → less competition.</li><li><strong>Less investment and innovation:</strong> a tight price cap leaves less profit → less spent on new products or upgrades.</li><li><strong>Fewer jobs:</strong> higher labour costs → some firms hire fewer staff or automate.</li><li><strong>Cost to taxpayers:</strong> regulators and enforcement have to be paid for → less to spend elsewhere.</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "regulation",
+        "compliance-costs",
+        "barriers-to-entry",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-2-3-arguments-for-and-against-regulation.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-3-eval-01",
+      "specCode": "4.2.3",
+      "topic": "4.2 Market Power and Market Failure",
+      "subtopic": "4-2-3-arguments-for-and-against-regulation",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate:</strong> do the benefits of regulating business outweigh its costs?</p>",
+      "back": "<p>Regulation corrects market failure, but it is not free: lower prices, safer products and fairer competition come with compliance costs, a higher barrier to entry and possibly less investment.</p><p><strong>Whether the benefits outweigh the costs depends on:</strong></p><ul><li><strong>The size of the market failure:</strong> a monopoly over an essential service, such as an energy network, justifies more regulation than a minor problem in a competitive market.</li><li><strong>How the rules are designed:</strong> simple, targeted rules cost less to follow than broad ones.</li><li><strong>The regulator's independence:</strong> a regulator free from capture and political pressure is more likely to protect consumers.</li><li><strong>Firm size:</strong> large firms can absorb compliance costs that may force a small business to close.</li></ul><p><strong>Judgement:</strong> regulation is rarely good or bad for everyone, so name who gains and who pays. A price cap helps consumers now but may cost them later if investment falls. Weigh the two sides for the stakeholder the question asks about, and say which matters more in the case given.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "regulation",
+        "government-failure",
+        "stakeholders",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-2-3-arguments-for-and-against-regulation.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-2-3-app-01",
+      "specCode": "4.2.3",
+      "topic": "4.2 Market Power and Market Failure",
+      "subtopic": "4-2-3-arguments-for-and-against-regulation",
+      "cardType": "application",
+      "front": "<p>A regulator oversees the one firm that owns a region's broadband network. It plans to cut the firm's price cap sharply, and to fine it whenever a fault takes more than two days to fix.</p><p>Analyse the likely effects on (a) households now, (b) households later and (c) the firm. (d) How could the plan fail?</p>",
+      "back": "<p><strong>(a) Households now:</strong> the cap stops the firm exploiting its market power → lower prices. The target → faults fixed faster → better quality.</p><p><strong>(b) Households later:</strong> a tight cap leaves less profit → less spent on upgrades → the network may fall behind, so households could lose out over time.</p><p><strong>(c) The firm:</strong> lower prices and the cost of meeting the target → lower profit. Paying for more repairs and the reporting the regulator asks for adds compliance costs.</p><p><strong>(d) How it could fail:</strong></p><ul><li><strong>Poor information:</strong> the firm knows its costs better than the regulator, so the cap may be set at the wrong level.</li><li><strong>Unintended consequences:</strong> the firm could meet the letter of the target but not its purpose, for example by closing a hard fault and logging it again as a new one.</li><li><strong>Regulatory capture:</strong> if the regulator grows too close to the firm, the cap and target may be set leniently.</li></ul><p><strong>Judgement:</strong> households gain now. Whether they gain overall depends on how far investment falls.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "regulation",
+        "price-cap",
+        "unintended-consequences",
+        "application"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-2-3-arguments-for-and-against-regulation.html",
+        "origin": "card-authored"
+      }
     }
   ]
 }
