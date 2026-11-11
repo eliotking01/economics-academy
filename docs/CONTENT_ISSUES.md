@@ -927,7 +927,8 @@ Format per entry:
 - **Confidence** — medium (the label is loose rather than wrong; "the
   competitive price" can be read as "the price competition has settled
   at"). Not a chip, so no glossary coupling.
-- **Status** — open.
+- **Status** — open, deferred (Eliot, 2026-11-11: leave it for now; it
+  is a change to a figure shared by three boards, for a later look).
 
 ## 47. The perfect competition figures use one Q label for the market and the firm
 
@@ -953,7 +954,8 @@ Format per entry:
   on three boards. The wording is Eliot's call.
 - **Confidence** — low (a labelling convention, widely used). Not a chip,
   so no glossary coupling.
-- **Status** — open.
+- **Status** — closed, no change (Eliot, 2026-11-11: the figures stay
+  as drawn).
 
 ## 48. Edexcel B 4.1.2 equates limit pricing with pricing at about average cost
 
@@ -974,4 +976,5 @@ Format per entry:
   accurate version for A level and consistent with A and AQA. The wording
   is Eliot's call.
 - **Confidence** — low. Not a chip on B, so no glossary coupling.
-- **Status** — open.
+- **Status** — closed, no change (Eliot, 2026-11-11: the page stays as
+  written).
