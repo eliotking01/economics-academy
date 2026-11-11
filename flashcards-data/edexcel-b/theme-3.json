@@ -91,7 +91,7 @@
       "subtopic": "3-1-1-growing-economies",
       "cardType": "formula",
       "front": "<p>Define <strong>nominal value</strong> and <strong>real value</strong>. State the formula for converting a nominal value into a real one.</p>",
-      "back": "<p><strong>Nominal value</strong> — a value measured in the prices of the time, not adjusted for inflation.</p><p><strong>Real value</strong> — a value adjusted for inflation, so it shows the change in the amount that can be bought or produced.</p><p>Divide the nominal value by a price index and multiply by 100. The answer is in the prices of the price index's base year.</p><p>Comparing incomes over time means removing the effect of rising prices first. If wages triple while prices triple, real wages have not changed.</p>",
+      "back": "<p><strong>Nominal value</strong> — a value measured in the prices of the time, with no adjustment for inflation.</p><p><strong>Real value</strong> — a value adjusted for inflation, so it shows what has happened to the amount bought or produced.</p><p>Divide the nominal value by a price index and multiply by 100. The answer is in the prices of the price index's base year.</p><p>Comparing incomes over time means removing the effect of rising prices first. If wages triple while prices triple, real wages have not changed.</p>",
       "formula": "\\text{Real value} = \\frac{\\text{Nominal value}}{\\text{Price index}} \\times 100",
       "svgRef": null,
       "difficulty": "standard",
@@ -108,7 +108,7 @@
       "source": {
         "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-1-growing-economies.html",
         "origin": "notes-verbatim",
-        "verbatim": "a value measured in the prices of the time, not adjusted for inflation."
+        "verbatim": "a value measured in the prices of the time, with no adjustment for inflation."
       }
     },
     {
@@ -169,7 +169,7 @@
       "subtopic": "3-1-2-trade-and-growth",
       "cardType": "definition",
       "front": "<p>Define <strong>trade liberalisation</strong>. In what three ways have trade barriers fallen, and can the trend go into reverse?</p>",
-      "back": "<p><strong>Trade liberalisation</strong> — the reduction or removal of barriers to trade between countries, such as tariffs and quotas.</p><ul><li><strong>WTO talks:</strong> countries have agreed tariff cuts through the World Trade Organisation.</li><li><strong>Trading blocs:</strong> members have removed barriers on trade with each other.</li><li><strong>Cuts made alone:</strong> countries have cut their own tariffs as they opened up. India's average tariff on imports fell from 56% in 1990 to under 5% by 2022.</li></ul><p><strong>The trend can reverse.</strong> Since 2018 the US has raised tariffs, first on Chinese goods and then on imports from most countries. When the UK left the EU single market, its firms faced new customs checks on trade with Europe.</p>",
+      "back": "<p><strong>Trade liberalisation</strong> — the reduction or removal of barriers to trade, such as tariffs (taxes on imports) and quotas (limits on the quantity that can be imported).</p><ul><li><strong>WTO talks:</strong> countries have agreed tariff cuts through the World Trade Organisation.</li><li><strong>Trading blocs:</strong> members have removed barriers on trade with each other.</li><li><strong>Cuts made alone:</strong> countries have cut their own tariffs as they opened up. India's average tariff on imports fell from 56% in 1990 to under 5% by 2022.</li></ul><p><strong>The trend can reverse.</strong> Since 2018 the US has raised tariffs, first on Chinese goods and then on imports from most countries. When the UK left the EU single market, its firms faced new customs checks on trade with Europe.</p>",
       "svgRef": null,
       "difficulty": "foundation",
       "tags": [
@@ -184,7 +184,7 @@
       "source": {
         "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-2-trade-and-growth.html",
         "origin": "notes-verbatim",
-        "verbatim": "the reduction or removal of barriers to trade between countries, such as tariffs and quotas."
+        "verbatim": "the reduction or removal of barriers to trade, such as tariffs (taxes on imports) and quotas (limits on the quantity that can be imported)."
       }
     },
     {
@@ -498,7 +498,7 @@
       "subtopic": "3-1-4-trade-policy-and-trade-negotiations",
       "cardType": "definition",
       "front": "<p>Define a <strong>non-tariff barrier</strong> and a <strong>subsidy</strong>. Name four non-tariff barriers. How does a domestic subsidy protect home producers, and who pays for it?</p>",
-      "back": "<p><strong>Non-tariff barrier</strong> — any restriction on imports other than a tariff or a quota.</p><ul><li><strong>Government legislation:</strong> laws on product safety, labelling or how food is produced, which can keep out goods made to another country's rules.</li><li><strong>Paperwork and checks:</strong> customs forms, licences and inspections at the border add cost and delay, and hit small exporters hardest.</li><li><strong>Voluntary export restraints:</strong> the exporting country agrees to limit how much it sells, usually to head off a tighter barrier.</li><li><strong>Embargoes:</strong> a complete ban on trade with a country, usually for political reasons.</li></ul><p>Rules like these often have genuine aims, such as safety. They count as protectionism when their main effect is to keep foreign goods out.</p><p><strong>Subsidy</strong> — a payment from the government to producers that lowers their costs.</p><ul><li><strong>Home producers:</strong> the subsidy lowers their unit costs → they can match the price of imports → they win back sales at home and abroad.</li><li><strong>Consumers and taxpayers:</strong> prices don't rise, unlike with a tariff → but the subsidy has to be paid for through taxes or borrowing, or by spending less elsewhere.</li></ul>",
+      "back": "<p><strong>Non-tariff barrier</strong> — any restriction on imports other than a tariff or a quota.</p><ul><li><strong>Government legislation:</strong> laws on product safety, labelling or how food is produced, which can keep out goods made to another country's rules.</li><li><strong>Paperwork and checks:</strong> customs forms, licences and inspections at the border add cost and delay, and hit small exporters hardest.</li><li><strong>Voluntary export restraints:</strong> the exporting country agrees to limit how much it sells, usually to head off a tighter barrier.</li><li><strong>Embargoes:</strong> a complete ban on trade with a country, usually for political reasons.</li></ul><p>Rules like these often have genuine aims, such as safety. They count as protectionism when their main effect is to keep foreign goods out.</p><p><strong>Subsidy</strong> — a payment from the government to producers that lowers their cost of each unit, so they supply more at a lower price.</p><ul><li><strong>Home producers:</strong> the subsidy lowers their unit costs → they can match the price of imports → they win back sales at home and abroad.</li><li><strong>Consumers and taxpayers:</strong> prices don't rise, unlike with a tariff → but the subsidy has to be paid for through taxes or borrowing, or by spending less elsewhere.</li></ul>",
       "svgRef": null,
       "difficulty": "standard",
       "tags": [
@@ -653,7 +653,7 @@
       "subtopic": "3-1-5-exchange-rate-changes",
       "cardType": "evaluation",
       "front": "<p>Define the <strong>current account</strong>. <strong>Evaluate</strong> whether a depreciation of the pound will improve the UK's current account and raise growth.</p>",
-      "back": "<p><strong>Current account</strong> — the part of the balance of payments that records trade in goods and services, plus income such as interest and profits flowing in and out of the country.</p><p><strong>For:</strong> UK exports get cheaper abroad and imports dearer → export sales rise and imports fall → the current account improves → net exports raise aggregate demand → higher real GDP and more jobs.</p><p><strong>It depends on:</strong></p><ul><li><strong>The Marshall-Lerner condition:</strong> if the price elasticities of demand for exports and imports add up to less than 1, the current account gets worse.</li><li><strong>Time (the J-curve):</strong> demand is inelastic at first, so the trade balance worsens before it improves.</li><li><strong>Spare capacity:</strong> with unemployed workers and idle factories, firms can raise output, so growth and jobs gain most. Near full capacity, the extra demand mainly raises prices.</li><li><strong>Import content of exports:</strong> many UK exports use imported parts. Their costs rise with the depreciation, so part of the price advantage is lost.</li></ul><p><strong>Judgement:</strong> a weaker pound can improve the current account and raise growth, but only after a lag and only if demand is elastic enough. If the economy is near full capacity, the main result may be inflation.</p>",
+      "back": "<p><strong>Current account</strong> — the part of the balance of payments that records trade in goods and services, plus income such as profits and interest earned abroad and transfers such as foreign aid.</p><p><strong>For:</strong> UK exports get cheaper abroad and imports dearer → export sales rise and imports fall → the current account improves → net exports raise aggregate demand → higher real GDP and more jobs.</p><p><strong>It depends on:</strong></p><ul><li><strong>The Marshall-Lerner condition:</strong> if the price elasticities of demand for exports and imports add up to less than 1, the current account gets worse.</li><li><strong>Time (the J-curve):</strong> demand is inelastic at first, so the trade balance worsens before it improves.</li><li><strong>Spare capacity:</strong> with unemployed workers and idle factories, firms can raise output, so growth and jobs gain most. Near full capacity, the extra demand mainly raises prices.</li><li><strong>Import content of exports:</strong> many UK exports use imported parts. Their costs rise with the depreciation, so part of the price advantage is lost.</li></ul><p><strong>Judgement:</strong> a weaker pound can improve the current account and raise growth, but only after a lag and only if demand is elastic enough. If the economy is near full capacity, the main result may be inflation.</p>",
       "svgRef": null,
       "difficulty": "stretch",
       "tags": [
@@ -669,7 +669,7 @@
       "source": {
         "notesPage": "/revision-notes/edexcel-b-theme-3/3-1-5-exchange-rate-changes.html",
         "origin": "notes-verbatim",
-        "verbatim": "the part of the balance of payments that records trade in goods and services, plus income such as interest and profits flowing in and out of the country."
+        "verbatim": "the part of the balance of payments that records trade in goods and services, plus income such as profits and interest earned abroad and transfers such as foreign aid."
       }
     },
     {

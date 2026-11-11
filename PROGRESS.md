@@ -260,11 +260,30 @@ sheets: `05-website/drafts/all-boards-parity/review/flashcards-unit-X-Y.md`.
   cars an inferior good, and 2.4.1 app-01 says China joining the WTO is
   also trade liberalisation. `trade-cycle.svg`'s "Boom" moves to y=284 to
   clear the curve by 8px; that SVG is shared with the live Edexcel A and
-  AQA decks, so they change at the next push. **Still open:** the 3.3.2
-  niche-market chip keeps the old "clearly defined" wording, which the
-  approved fix did not cover. It needs aligning before the B glossary,
-  which needs one wording per term.
-- **Open:** Themes 3 and 4 not started.
+  AQA decks, so they change at the next push. The 3.3.2 niche-market chip
+  this left behind was aligned on 2026-11-10 (`db6bb8e3`).
+- **Theme 3 written: 100 cards across 19 topics, units 3.1 to 3.6**
+  (`1ef93593` to `a635ab49`), with a review sheet per unit.
+  CONTENT_ISSUES #42 and #43 fixed, #44 and #45 closed with no change.
+- **Theme 3 QA applied and diagrams approved (Eliot, 2026-11-11, all
+  fixes accepted):** `review/qa-flashcards-theme-3.md` found no high
+  defects and no factual or calculation errors. Five 3.1 chips now take the
+  earlier B wording, and their cards follow: nominal value and real value
+  (3.1.1, from 2.5.3), trade liberalisation (3.1.2, from 2.4.1), subsidy
+  (3.1.4, from 1.5.2) and current account (3.1.5, from 2.6.1, which adds
+  transfers). Two shared SVGs get 8px label clearance: on `j-curve.svg`,
+  "Depreciation occurs" is centred over its guide at y=44 and both guides
+  stop at y=496, above "Deficit (X<M)"; on `tariff.svg`, "Ddomestic" moves
+  to y=508. Both are shared with the live Edexcel A and AQA decks, so those
+  change at the next push. All six Theme 3 diagrams are then approved
+  (`review/flashcard-diagrams-theme-3.md`, Q1 answered by the QA fix).
+  **Still open, before the B glossary (one wording per term):** subsidy
+  has a third chip on 1.3.2 ("…to producers, which lowers their costs"),
+  which the approved fix did not name. Trading bloc, appreciation and
+  exchange rate differ only by an example sentence, so the glossary takes
+  the shared first sentence. The B practice question 3.1.4 working still
+  quotes the old subsidy wording; it is not a chip, so it was left.
+- **Open:** Theme 4 not started.
 
 ### All-boards parity — Phase 1, Edexcel B practice questions (2026-10-25 to 2026-11-08) — LAUNCHED ON BRANCH, PUSHED, NOT MERGED (branch `feature/edexcel-b-questions`)
 
