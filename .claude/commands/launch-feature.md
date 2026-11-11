@@ -34,6 +34,8 @@ Draft all new visible wording from the Edexcel A pattern into `/Users/eliotking/
 - hubs and board indexes: `build_questions.HUB_SECTIONS`, `build_glossary.BOARD_COPY`, the flashcards hub, the bank's board cascade
 - the home page resource cards and the FAQ "Which exam boards are covered?" answer
 - the lines on `revision-notes/index.html` that name boards
+- **`pastPaperBank` only: the flashcard deck pages' third button.** A board whose flashcards launched before its bank (Edexcel B, 2026-11-11) shows "{board} past papers" linking `papersUrl` there; `build_flashcards.PAPERS_LINK` flips it to "Search {board} past paper questions" and `/past-paper-questions/<questionBank slug>/` once the bank is in `features`. Check in the built deck pages that it flipped and that the target exists, and name the change in the launch sheet (it is visible wording on every deck of the board).
+- **Any other link a staged-first family pointed at a sibling family that was not live yet.** Grep the built pages for the board's slugs of every family not yet in `features`; a hit is a 404 waiting to ship (that is how the deck button above was caught).
 
 Frozen heads stay byte-identical (PROGRESS.md trap 8). Never change economics wording.
 

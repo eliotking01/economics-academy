@@ -141,6 +141,10 @@ FLASHCARDS_OF_DIR = {
     "edexcel-theme-2": ("/flashcards/edexcel-a/theme-2/", "Theme 2"),
     "edexcel-theme-3": ("/flashcards/edexcel-a/theme-3/", "Theme 3"),
     "edexcel-theme-4": ("/flashcards/edexcel-a/theme-4/", "Theme 4"),
+    "edexcel-b-theme-1": ("/flashcards/edexcel-b/theme-1/", "Theme 1"),
+    "edexcel-b-theme-2": ("/flashcards/edexcel-b/theme-2/", "Theme 2"),
+    "edexcel-b-theme-3": ("/flashcards/edexcel-b/theme-3/", "Theme 3"),
+    "edexcel-b-theme-4": ("/flashcards/edexcel-b/theme-4/", "Theme 4"),
     "aqa-a2-micro": ("/flashcards/aqa/micro/", "AQA microeconomics"),
     "aqa-a2-macro": ("/flashcards/aqa/macro/", "AQA macroeconomics"),
 }

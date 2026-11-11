@@ -138,8 +138,7 @@
     },
 
     "edexcel-b": {
-      "features": ["notes", "practiceQuestions"],
-      "staged": ["flashcards"],
+      "features": ["notes", "practiceQuestions", "flashcards"],
       "_features_why": "Edexcel B (9EB0) opened with revision notes and nothing else (D66, 2026-09-26). D67 (2026-10-24) gives it the full set, each family added to `features` only when it is complete for all four themes; until then board_data.load(family) and groups(family) leave it out. While a family's data is being written it is listed in `staged` instead: its generator validates the data and writes no page, and /launch-feature moves it to `features` (D68). The slugs and group slugs below were approved on 2026-10-24 (D68) ahead of their families; nothing reads them until a family is staged or live. Group names for those families are visible wording, drafted for Eliot's approval while the family is staged and shown on no page until it launches.",
       "names": {
         "short": "Edexcel B",
@@ -169,6 +168,7 @@
           "names": {
             "notesLabel": "Edexcel B Theme 1",
             "notesTitle": "Markets, Consumers and Firms",
+            "flashcards": "Markets, Consumers and Firms",
             "practiceQuestions": "Markets, Consumers and Firms",
             "practiceQuestionsLabel": "Edexcel B Theme 1",
             "practiceQuestionsButton": "Theme 1: Markets, Consumers and Firms"
@@ -182,6 +182,7 @@
           "names": {
             "notesLabel": "Edexcel B Theme 2",
             "notesTitle": "The Wider Economic Environment",
+            "flashcards": "The Wider Economic Environment",
             "practiceQuestions": "The Wider Economic Environment",
             "practiceQuestionsLabel": "Edexcel B Theme 2",
             "practiceQuestionsButton": "Theme 2: The Wider Economic Environment"
@@ -195,6 +196,7 @@
           "names": {
             "notesLabel": "Edexcel B Theme 3",
             "notesTitle": "The Global Economy",
+            "flashcards": "The Global Economy",
             "practiceQuestions": "The Global Economy",
             "practiceQuestionsLabel": "Edexcel B Theme 3",
             "practiceQuestionsButton": "Theme 3: The Global Economy"
@@ -208,6 +210,7 @@
           "names": {
             "notesLabel": "Edexcel B Theme 4",
             "notesTitle": "Making Markets Work",
+            "flashcards": "Making Markets Work",
             "practiceQuestions": "Making Markets Work",
             "practiceQuestionsLabel": "Edexcel B Theme 4",
             "practiceQuestionsButton": "Theme 4: Making Markets Work"

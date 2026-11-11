@@ -28,7 +28,7 @@ the four entries hardest to resist undoing, because a sweep for inline styles
 hits them first and removing any one breaks a formula silently.
 
 So they are asserted, not merely skipped. EXPECTED_KATEX_PAGES pins the exact
-7 paths and their counts. A sweep that "tidied" them turns this red, and so
+10 paths and their counts. A sweep that "tidied" them turns this red, and so
 does a KaTeX upgrade that changes what it emits - the second is a legitimate
 change that must be declared here, in the same commit, exactly as
 verify_page_shell.py's tables work.
@@ -62,6 +62,11 @@ EXPECTED_KATEX_PAGES = {
     "flashcards/aqa/micro/index.html": 19,
     "flashcards/aqa/macro/index.html": 15,
     "flashcards/edexcel-a/theme-1/index.html": 13,
+    # Edexcel B's decks, launched 2026-11-11. The Theme 1 deck has no
+    # formulaHtml card, so its page has no KaTeX output.
+    "flashcards/edexcel-b/theme-2/index.html": 13,
+    "flashcards/edexcel-b/theme-3/index.html": 16,
+    "flashcards/edexcel-b/theme-4/index.html": 16,
 }
 
 # Authored inline styles. 322 across 44 files until 2026-08-13; 0 since.

@@ -95,11 +95,21 @@ GROUP_ORDER = {
     for i, (_key, board, group) in enumerate(board_data.groups("flashcards"))
 }
 
-# Question-bank hub per board, for the cross-resource links. The bank's
-# slugs differ from the flashcards slugs ("edexcel" vs "edexcel-a"), which
-# is exactly why this is read from the record rather than derived.
-QB_SLUGS = {
-    board["slugs"]["flashcards"]: board["slugs"]["questionBank"]
+# The deck page's third button, per board: (href, board has a bank). With a
+# past-paper bank it is the bank's board hub, "Search {board} past paper
+# questions" - the bank's slugs differ from the flashcards slugs ("edexcel"
+# vs "edexcel-a"), which is exactly why this is read from the record rather
+# than derived. Without one it is the board's past-papers hub, "{board} past
+# papers", the notes tail's label for the same link: Edexcel B's flashcards
+# launched (2026-11-11) before its bank, and the bank button would have been
+# a 404 on all four decks. When B's pastPaperBank goes live the button flips
+# by itself; /launch-feature's pastPaperBank checklist names it so the flip
+# is checked, not assumed.
+PAPERS_LINK = {
+    board["slugs"]["flashcards"]: (
+        (f"/past-paper-questions/{board['slugs']['questionBank']}/", True)
+        if "pastPaperBank" in board_data.features(board)
+        else (board["papersUrl"], False))
     for _key, board, _group in board_data.groups("flashcards")
 }
 
@@ -441,7 +451,10 @@ def deck_page(deck, cards, topics):
     crumbs = [("Home", "/"), ("Flashcards", "/flashcards/"),
               (f"{deck['boardName']} {deck['themeName'].split(':')[0]}", None)]
     notes_dir = NOTES_DIRS[(deck["board"], deck["theme"])]
-    samples = "\n".join(sample_card_html(c) for c in pick_samples(cards))
+    papers_href, has_bank = PAPERS_LINK[deck["board"]]
+    papers_label = (f"Search {e(deck['boardName'])} past paper questions"
+                    if has_bank else f"{e(deck['boardName'])} past papers")
+    samples ="\n".join(sample_card_html(c) for c in pick_samples(cards))
     topic_items = "\n".join(
         f'            <li><a href="{t["notesUrl"]}">{e(t["title"])}</a>'
         f' <span class="fc-topic-count">{t["count"]} card'
@@ -522,8 +535,8 @@ def deck_page(deck, cards, topics):
             <a href="/practice-questions/{notes_dir}/" class="button">
               Try the practice questions
             </a>
-            <a href="/past-paper-questions/{QB_SLUGS[deck["board"]]}/" class="button">
-              Search {e(deck["boardName"])} past paper questions
+            <a href="{papers_href}" class="button">
+              {papers_label}
             </a>
           </section>
 {SERVICES_CTA}"""
@@ -552,7 +565,7 @@ def hub_page(decks):
         "@type": "CollectionPage",
         "name": "Free A-Level Economics Flashcards",
         "description": "Free interactive A-Level Economics flashcards for "
-                       "Edexcel A and AQA, with spaced repetition.",
+                       "Edexcel A, Edexcel B and AQA, with spaced repetition.",
         "url": f"{SITE}{path}",
         "inLanguage": "en-GB",
         # hasPart names each deck page, as the revision-notes hub does for
@@ -622,11 +635,11 @@ def hub_page(decks):
           </section>
 {SERVICES_CTA}"""
     return page_shell(
-        title="A-Level Economics Flashcards | Free Edexcel A & AQA "
-              "Revision Cards",
-        desc="Free interactive A-Level Economics flashcards for Edexcel A "
-             "and AQA: definitions, formulae, diagrams and evaluation "
-             "points with spaced repetition.",
+        title="A-Level Economics Flashcards | Free Edexcel A, Edexcel B & "
+              "AQA Revision Cards",
+        desc="Free interactive A-Level Economics flashcards for Edexcel A, "
+             "Edexcel B and AQA: definitions, formulae, diagrams and "
+             "evaluation points with spaced repetition.",
         path=path,
         crumbs=crumbs,
         body=body,
