@@ -899,3 +899,79 @@ Format per entry:
   chip, so no glossary coupling.
 - **Status** — closed, no change (Eliot, 2026-11-10: the list stays as
   written).
+
+## 46. The kinked demand curve labels the kink price "Pcompetitive"
+
+- **Location** — the figure `images/diagrams/kinked-demand-curve.png`, its
+  alt text on `revision-notes/edexcel-b-theme-4/4-1-3-oligopoly.html`,
+  "Interdependence and Price Stability", Figure 1 (source:
+  `notes-data/topics/edexcel-b-theme-4/4-1-3-oligopoly.html`). The same
+  PNG is on Edexcel A 3.4.4 and AQA 1.5.5, whose prose calls it
+  "P_competitive". The flashcard SVG `images/diagrams/svg/kinked-demand-curve.svg`
+  shortens it to "Pcomp" and is used by `edexcel-a-3-4-4-diagram-02`,
+  `aqa-1-5-5-diagram-02` and now `edexcel-b-4-1-3-diagram-01`.
+- **Issue** — the kink sits at the price the market has settled at. It is
+  not the competitive price in the textbook sense (P = MC, normal profit):
+  the same figure draws an AC curve giving C below the kink price, so the
+  firm is making supernormal profit there. A student could read
+  "competitive" as meaning the oligopoly prices like a competitive market.
+  "P1" or "Pcurrent" would be clearer. Found by the cold-solver verify pass
+  on Edexcel B flashcards unit 4.1 (`NOTES?` on
+  `edexcel-b-4-1-3-diagram-01`). The card no longer glosses the label as
+  "the competitive price". It says "the current price, labelled Pcomp".
+- **Proposed correction** — none recommended in this run. Relabelling is a
+  figure change across three boards (one PNG, one SVG and the A and AQA
+  prose that names the label), so it is a decision about the shared
+  diagram, not a B wording fix. Options: relabel to P1 everywhere, change
+  only the B alt text, or leave it. The wording is Eliot's call.
+- **Confidence** — medium (the label is loose rather than wrong; "the
+  competitive price" can be read as "the price competition has settled
+  at"). Not a chip, so no glossary coupling.
+- **Status** — open.
+
+## 47. The perfect competition figures use one Q label for the market and the firm
+
+- **Location** — `images/diagrams/perfect-competition-short-run-supernormal-profit.png`
+  and `images/diagrams/perfect-competition-profit-to-longrun.png`, as
+  described in the alt text on
+  `revision-notes/edexcel-b-theme-4/4-1-1-spectrum-of-competition.html`,
+  Figures 1 and 2 (source:
+  `notes-data/topics/edexcel-b-theme-4/4-1-1-spectrum-of-competition.html`).
+  Both PNGs are also on Edexcel A 3.4.2 and AQA 1.5.3.
+- **Issue** — the market panel and the firm panel both mark output Q1 in
+  Figure 1, and Q2 in Figure 2. The market's quantity and one firm's
+  quantity are not the same number. In Figure 2 the firm's output also
+  moves down its MC curve as the price falls, while the market quantity
+  rises, so the shared "Q2" suggests both rise. This is a common A-level
+  shortcut. Found by the cold-solver verify pass on Edexcel B flashcards
+  unit 4.1 (`NOTES?`, low priority, raised while checking
+  `edexcel-b-4-1-1-diagram-01`). The card uses the flashcard SVG for
+  Figure 1 only, which also labels both Q1, and does not depend on the
+  label.
+- **Proposed correction** — none recommended: leave the figures as drawn.
+  The alternative is to relabel the firm panels q1 and q2, a figure change
+  on three boards. The wording is Eliot's call.
+- **Confidence** — low (a labelling convention, widely used). Not a chip,
+  so no glossary coupling.
+- **Status** — open.
+
+## 48. Edexcel B 4.1.2 equates limit pricing with pricing at about average cost
+
+- **Location** — `revision-notes/edexcel-b-theme-4/4-1-2-barriers-to-entry.html`,
+  "Contestability and Ease of Entry", the "Prices" bullet (source:
+  `notes-data/topics/edexcel-b-theme-4/4-1-2-barriers-to-entry.html`).
+- **Issue** — the page says firms "keep prices close to average cost, a
+  tactic called limit pricing". Strictly, limit pricing means setting a
+  price just low enough to deter entry, which need not be average cost.
+  Equating the two is a simplification. It is the same one Edexcel A 3.4.7
+  and AQA 1.5.9 make in their `limit pricing` chip ("set price below the
+  profit-maximising level so that they earn only normal profit", "around
+  AR = AC"), so B is consistent with the rest of the site. Found by the
+  cold-solver verify pass on Edexcel B flashcards unit 4.1 (`NOTES?`, low
+  priority and "arguably fine", raised while checking
+  `edexcel-b-4-1-2-def-02`). The card follows the page.
+- **Proposed correction** — none recommended: leave it, as the simplest
+  accurate version for A level and consistent with A and AQA. The wording
+  is Eliot's call.
+- **Confidence** — low. Not a chip on B, so no glossary coupling.
+- **Status** — open.

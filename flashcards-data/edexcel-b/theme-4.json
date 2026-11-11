@@ -1,0 +1,689 @@
+{
+  "board": "edexcel-b",
+  "boardName": "Edexcel B",
+  "theme": "theme-4",
+  "themeName": "Theme 4: Making Markets Work",
+  "deckId": "edexcel-b-theme-4",
+  "deckTitle": "Edexcel B A-Level Economics Theme 4 Flashcards",
+  "metaDescription": "Free interactive flashcards for Edexcel B A-Level Economics Theme 4: competition and market power, market failure, regulation, macroeconomic policy, and risk and the financial sector, with spaced repetition.",
+  "intro": "Revise Theme 4 with interactive flashcards written to the Edexcel B (9EB0) specification — competition and market power, market power and market failure, market failure across the economy, macroeconomic policies and their impact on firms and individuals, and risk and the financial sector. Flip each card to check yourself, rate how well you knew it, and the deck brings back the cards you found hard. Every card links to the revision notes page that teaches it.",
+  "cards": [
+    {
+      "id": "edexcel-b-4-1-1-def-01",
+      "specCode": "4.1.1",
+      "topic": "4.1 Competition and Market Power",
+      "subtopic": "4-1-1-spectrum-of-competition",
+      "cardType": "definition",
+      "front": "<p>Define <strong>imperfect competition</strong> and <strong>monopolistic competition</strong>. Compare the four market structures on the spectrum of competition.</p>",
+      "back": "<p><strong>Imperfect competition</strong> — any market that is not perfectly competitive, so firms have some power over their price. Monopolistic competition, oligopoly and monopoly are all forms of imperfect competition.</p><p><strong>Monopolistic competition</strong> — a market with many firms and low barriers to entry, where each firm sells a slightly different product. Hairdressers, cafés and takeaways in a town are typical examples.</p><ul><li><strong>Perfect competition:</strong> very many small firms, no barriers to entry, identical products → no power over price: firms are price takers.</li><li><strong>Monopolistic competition:</strong> many firms, low barriers, slightly different products → a little power over price.</li><li><strong>Oligopoly:</strong> a few large firms dominate, high barriers, identical or branded products → considerable power, but each firm watches its rivals.</li><li><strong>Monopoly:</strong> one firm, very high barriers, no close substitutes → high power: a price maker.</li></ul><p>The further a market sits towards monopoly, the more <strong>market power</strong> each firm has: the ability to raise its price without losing all its customers.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "market-structures",
+        "imperfect-competition",
+        "monopolistic-competition",
+        "market-power"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-1-spectrum-of-competition.html",
+        "origin": "notes-verbatim",
+        "verbatim": "any market that is not perfectly competitive, so firms have some power over their price. Monopolistic competition, oligopoly and monopoly are all forms of imperfect competition."
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-1-diagram-01",
+      "specCode": "4.1.1",
+      "topic": "4.1 Competition and Market Power",
+      "subtopic": "4-1-1-spectrum-of-competition",
+      "cardType": "diagram",
+      "front": "<p>Define <strong>perfect competition</strong>. Sketch the market and the firm when demand has risen. What happens next, and where does the model fall short?</p>",
+      "back": "<p><strong>Perfect competition</strong> — a market with very many small firms selling homogeneous products, with perfect information and no barriers to entry or exit.</p><p>The market's demand and supply set the price, P1. Each firm is a <strong>price taker</strong>: a firm charging a penny more would sell nothing, so its demand curve is the horizontal line D=AR=MR=P1. It produces Q1, where MC cuts the price line.</p><ul><li><strong>Short run:</strong> P1 is above average cost C1 → the shaded rectangle is <strong>supernormal profit</strong>.</li><li><strong>Entry:</strong> the profit signals an opportunity → new firms join, which is easy with no barriers → market supply rises → the price falls.</li><li><strong>Long run:</strong> entry continues until the price equals the lowest average cost → each firm makes only <strong>normal profit</strong>.</li></ul><p><strong>Where it falls short:</strong> products are rarely identical, information is not perfect, entry is rarely free, and economies of scale mean firms are not all small. With every idea copied at once and profit competed away, firms also have little reason to innovate. It is a benchmark, not a description of real markets.</p>",
+      "svgRef": "/images/diagrams/svg/perfect-competition-short-run-supernormal-profit.svg",
+      "svgAlt": "Two diagrams side by side. Left, the market: price on the vertical axis and quantity on the horizontal, with demand D and supply S crossing at price P1 and quantity Q1. Right, the firm: cost and revenue on the vertical axis, a horizontal line D=AR=MR=P1, an MC=S curve and a U-shaped AC curve. The firm produces Q1, where MC meets the price line, at average cost C1, and the shaded rectangle between P1 and C1 is supernormal profit",
+      "difficulty": "standard",
+      "tags": [
+        "perfect-competition",
+        "supernormal-profit",
+        "normal-profit",
+        "price-taker",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-1-spectrum-of-competition.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a market with very many small firms selling homogeneous products, with perfect information and no barriers to entry or exit."
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-1-chain-01",
+      "specCode": "4.1.1",
+      "topic": "4.1 Competition and Market Power",
+      "subtopic": "4-1-1-spectrum-of-competition",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chains of reasoning</strong>: how does a firm's freedom to set its price change along the spectrum of competition, and which pricing strategies can it use?</p>",
+      "back": "<ul><li><strong>Perfect competition:</strong> firms take the market price → there is no pricing strategy to choose.</li><li><strong>Monopolistic competition:</strong> a loyal customer base → the firm can charge a little more than rivals without losing every sale → but a large gap sends customers elsewhere, so prices stay close to rivals'.</li><li><strong>Oligopoly:</strong> each firm's sales depend on what its rivals charge → a price cut is likely to be matched → firms avoid price wars, keep prices stable and often compete in other ways.</li><li><strong>Monopoly:</strong> no close substitutes → the firm sets its own price → it can price above cost and keep supernormal profit, because barriers stop rivals entering.</li></ul><p><strong>Strategies:</strong> competitive pricing, close to rivals', is the norm where products are similar. Price skimming only works while a product has no close rivals. Predatory pricing needs a large firm that can afford losses for a while.</p><p>In an answer, name the market structure first, then explain what it means for the firm's freedom to set prices.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "market-structures",
+        "pricing-strategies",
+        "oligopoly",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-1-spectrum-of-competition.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-1-def-02",
+      "specCode": "4.1.1",
+      "topic": "4.1 Competition and Market Power",
+      "subtopic": "4-1-1-spectrum-of-competition",
+      "cardType": "definition",
+      "front": "<p>Define <strong>non-price competition</strong>. In which market structures does it matter most, and how can it raise a firm's profit?</p>",
+      "back": "<p><strong>Non-price competition</strong> — ways of winning customers other than charging a lower price.</p><p>It matters most in <strong>monopolistic competition</strong> and <strong>oligopoly</strong>, where firms have products to set apart and, in oligopoly, a price cut would simply be matched.</p><p>Methods: branding and advertising, quality and design, customer service, loyalty schemes, and convenience, such as location, opening hours or a good app.</p><p>Successful non-price competition → customers see fewer close substitutes → demand becomes more price inelastic → the firm can charge more without losing many sales → higher profit.</p><p><strong>The catch:</strong> advertising and loyalty schemes are expensive, and rivals copy anything that works.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "non-price-competition",
+        "oligopoly",
+        "monopolistic-competition",
+        "price-elasticity"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-1-spectrum-of-competition.html",
+        "origin": "notes-verbatim",
+        "verbatim": "ways of winning customers other than charging a lower price."
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-1-eval-01",
+      "specCode": "4.1.1",
+      "topic": "4.1 Competition and Market Power",
+      "subtopic": "4-1-1-spectrum-of-competition",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> the claim that less competition in a market is always bad for consumers.</p>",
+      "back": "<p><strong>Why it can be bad:</strong></p><ul><li><strong>Higher prices:</strong> fewer rivals → less pressure to cut prices → consumers pay more and buy less.</li><li><strong>Less choice:</strong> fewer firms → fewer products to choose between → consumers lose out if the one on offer doesn't suit them.</li><li><strong>Weaker pressure on quality:</strong> customers have nowhere else to go → less need to improve service or products → quality can slip.</li></ul><p><strong>Why it may not be:</strong></p><ul><li><strong>Economies of scale:</strong> a large firm may have such low costs that it charges less than many small firms could, even with market power.</li><li><strong>Use of profit:</strong> supernormal profit can pay for research and new products, so consumers may gain in the long run.</li><li><strong>Contestability:</strong> if new firms could enter easily, even a dominant firm keeps its prices down to stop them.</li><li><strong>Regulation:</strong> regulators can cap prices or block mergers where market power harms consumers.</li></ul><p><strong>Judgement:</strong> not always. It depends most on how easily new firms could enter and whether the dominant firm's lower costs and profits are passed on to consumers.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "market-power",
+        "consumers",
+        "contestability",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-1-spectrum-of-competition.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-2-def-01",
+      "specCode": "4.1.2",
+      "topic": "4.1 Competition and Market Power",
+      "subtopic": "4-1-2-barriers-to-entry",
+      "cardType": "definition",
+      "front": "<p>Define <strong>barriers to entry</strong> and <strong>intellectual property rights</strong>. Name the seven types of barrier the page covers, with how each keeps new firms out.</p>",
+      "back": "<p><strong>Barriers to entry</strong> — anything that makes it hard or costly for a new firm to start selling in a market.</p><ul><li><strong>Product differentiation:</strong> the more customers see a product as unique, the fewer substitutes a newcomer can offer, so it has to spend heavily to win anyone over.</li><li><strong>Branding:</strong> loyal customers keep buying even when a newcomer is cheaper, so an entrant must spend large sums on advertising, a sunk cost if it fails.</li><li><strong>Start-up costs:</strong> a factory or a network of masts costs a fortune before the first sale, and lenders see a newcomer as risky.</li><li><strong>Intellectual property rights</strong> — legal rights over ideas and creative work, such as patents, trademarks and copyright. A UK patent can stop others making or selling an invention for up to 20 years.</li><li><strong>R&amp;D and technology change:</strong> heavy R&amp;D builds know-how newcomers cannot match quickly. But new technology can also knock barriers down, as online selling did for small retailers.</li><li><strong>Legal barriers:</strong> licences, such as a taxi licence or a bank's authorisation, limit the number of firms or make entry slow and costly.</li><li><strong>Anti-competitive practices:</strong> predatory pricing, exclusive dealing or refusing to supply shops that stock a rival. Competition law bans these when a dominant firm uses them.</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "barriers-to-entry",
+        "intellectual-property",
+        "patents",
+        "branding"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-2-barriers-to-entry.html",
+        "origin": "notes-verbatim",
+        "verbatim": "anything that makes it hard or costly for a new firm to start selling in a market."
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-2-def-02",
+      "specCode": "4.1.2",
+      "topic": "4.1 Competition and Market Power",
+      "subtopic": "4-1-2-barriers-to-entry",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>contestable market</strong>. What are sunk costs and hit-and-run entry? How do firms already in a contestable market behave?</p>",
+      "back": "<p><strong>Contestable market</strong> — a market where barriers to entry and exit are low, meaning firms can easily and cheaply enter and leave the market.</p><p>Contestability is about the <em>threat</em> of new rivals, not the number of firms already there. A market with two firms can still be contestable if others could join quickly.</p><p><strong>Sunk costs</strong> are money spent on entering that cannot be got back on exit, such as advertising or equipment with no resale value. Low sunk costs make <strong>hit-and-run entry</strong> possible: a firm joins to take a share of high profits and leaves when they fall.</p><ul><li><strong>Prices:</strong> high profits would attract entrants → firms keep prices close to average cost, called <strong>limit pricing</strong> → consumers pay less and firms earn close to normal profit.</li><li><strong>Quality and costs:</strong> an entrant could win customers with a better or cheaper product → firms keep costs down and service up → consumers gain even with few firms.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "contestability",
+        "sunk-costs",
+        "limit-pricing",
+        "barriers-to-entry"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-2-barriers-to-entry.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a market where barriers to entry and exit are low, meaning firms can easily and cheaply enter and leave the market."
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-2-chain-01",
+      "specCode": "4.1.2",
+      "topic": "4.1 Competition and Market Power",
+      "subtopic": "4-1-2-barriers-to-entry",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chains of reasoning</strong>: how does the height of barriers to entry decide a market's structure, and what decides how long a barrier protects the firms inside?</p>",
+      "back": "<ul><li><strong>High barriers:</strong> new firms are kept out → a few firms or one firm supplies the market → oligopoly or monopoly → firms keep supernormal profit in the long run and can charge consumers more.</li><li><strong>Low barriers:</strong> new firms enter whenever profits are high → many firms compete → monopolistic or near-perfect competition → profit is competed down to normal and prices fall towards average cost.</li></ul><p><strong>How much a barrier protects depends on:</strong></p><ul><li><strong>How long it lasts:</strong> patents expire and brands can fade, so supernormal profit may only be temporary.</li><li><strong>Technology:</strong> new ways of producing or selling can make an old barrier irrelevant.</li><li><strong>The size of the entrant:</strong> a large firm from another market can afford start-up costs and advertising that would stop a small business.</li><li><strong>Regulation:</strong> competition authorities can block mergers or practices that raise barriers on purpose.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "barriers-to-entry",
+        "market-structures",
+        "supernormal-profit",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-2-barriers-to-entry.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-2-chain-02",
+      "specCode": "4.1.2",
+      "topic": "4.1 Competition and Market Power",
+      "subtopic": "4-1-2-barriers-to-entry",
+      "cardType": "chain",
+      "front": "<p>Define <strong>economies of scale</strong>. Build the chains: how do they affect the costs and prices of a large firm, its consumers and a new entrant? When do consumers not gain?</p>",
+      "back": "<p><strong>Economies of scale</strong> — the fall in long-run average cost as a firm increases its scale of production.</p><p>Average cost falls until the <strong>minimum efficient scale (MES)</strong>. The main types are purchasing (bulk discounts), technical (automated machinery), financial (cheaper borrowing) and marketing (one campaign spread over more units).</p><ul><li><strong>The large firm:</strong> output rises → average cost falls → it can cut prices and still make a profit, or keep prices and earn a higher margin.</li><li><strong>Consumers:</strong> lower average cost is passed on → lower prices.</li><li><strong>A new entrant:</strong> it starts small → its average cost is higher than established rivals' → it cannot match their prices without a loss, so economies of scale work as a barrier to entry.</li></ul><p><strong>Consumers may not gain when:</strong> a firm protected by barriers keeps the savings as profit; growth goes past the MES and diseconomies push costs back up; or the MES is a large share of total demand, so the market only has room for a few firms.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "economies-of-scale",
+        "barriers-to-entry",
+        "minimum-efficient-scale",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-2-barriers-to-entry.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the fall in long-run average cost as a firm increases its scale of production."
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-2-eval-01",
+      "specCode": "4.1.2",
+      "topic": "4.1 Competition and Market Power",
+      "subtopic": "4-1-2-barriers-to-entry",
+      "cardType": "evaluation",
+      "front": "<p>One firm has 70% of a market. <strong>Evaluate</strong> whether it will be able to raise its prices well above its costs.</p>",
+      "back": "<p><strong>Why it may:</strong> a large share suggests high barriers, such as strong branding, high start-up costs or patents → rivals cannot enter to undercut it → it can charge more and keep supernormal profit.</p><p><strong>Why it may not:</strong></p><ul><li><strong>Contestability:</strong> if entry and exit are cheap, the threat of hit-and-run entry keeps its prices close to average cost, whatever its share.</li><li><strong>Barriers fade:</strong> a patent expires or a brand weakens, so the power may be temporary.</li><li><strong>Technology:</strong> a new way of producing or selling can let rivals get round an old barrier.</li><li><strong>Large entrants:</strong> a big firm from another market can afford the start-up and advertising costs.</li><li><strong>Regulation:</strong> competition authorities can act against practices that raise barriers on purpose.</li></ul><p><strong>Judgement:</strong> the market share alone does not answer it. Look for evidence on how easy entry is — start-up costs, patents, brand loyalty — before judging whether the firm can raise its prices. Competition and contestability are not the same thing.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "contestability",
+        "market-power",
+        "barriers-to-entry",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-2-barriers-to-entry.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-3-formula-01",
+      "specCode": "4.1.3",
+      "topic": "4.1 Competition and Market Power",
+      "subtopic": "4-1-3-oligopoly",
+      "cardType": "formula",
+      "front": "<p>Define an <strong>oligopoly</strong> and a <strong>concentration ratio</strong>. State the formula for an n-firm concentration ratio, and give two limits of the measure.</p>",
+      "back": "<p><strong>Oligopoly</strong> — a market dominated by a few large, interdependent firms, protected by high barriers to entry.</p><p><strong>Concentration ratio</strong> — the share of a market's total sales taken by its largest firms.</p><p>The higher the ratio, the more concentrated the market. A market is usually called an oligopoly when the top few firms hold most of it.</p><p><strong>Limits:</strong></p><ul><li>It does not show how sales are shared among the top firms: a 4-firm ratio of 80% could be one giant and three small firms, or four equals.</li><li>It depends on how the market is drawn: a firm with a small share of national sales might dominate one town.</li></ul>",
+      "formula": "\\text{n-firm concentration ratio} = \\frac{\\text{Sales of the largest n firms}}{\\text{Total market sales}} \\times 100",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "oligopoly",
+        "concentration-ratio",
+        "formula",
+        "quantitative-skills"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-3-oligopoly.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the share of a market's total sales taken by its largest firms"
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-3-calc-01",
+      "specCode": "4.1.3",
+      "topic": "4.1 Competition and Market Power",
+      "subtopic": "4-1-3-oligopoly",
+      "cardType": "calculation",
+      "front": "<p>A city's taxi firms take <strong>£80m</strong> a year in fares. The five largest firms take <strong>£24m</strong>, <strong>£16m</strong>, <strong>£12m</strong>, <strong>£8m</strong> and <strong>£4m</strong>.</p><p>(a) Calculate the 2-firm and 4-firm concentration ratios. (b) What share is left for the rest of the market? (c) A second city's 4-firm ratio is also 75%, with each of its four largest firms at about 19%. Are the two markets the same?</p>",
+      "back": "<p><strong>(a)</strong></p><ul><li>2-firm: (£24m + £16m) ÷ £80m × 100 = <strong>50%</strong></li><li>4-firm: (£24m + £16m + £12m + £8m) ÷ £80m × 100 = £60m ÷ £80m × 100 = <strong>75%</strong></li></ul><p><strong>(b)</strong> 100% − 75% = <strong>25%</strong> for every other taxi firm, the fifth largest included. Four firms share three quarters of the market, so it is concentrated, and each will watch what the other three charge.</p><p><strong>(c)</strong> No. The ratios match, but in the first city the largest firm alone has 30% (£24m ÷ £80m), while in the second the four are roughly equal. A concentration ratio does not show how sales are shared among the top firms.</p>",
+      "formula": "\\text{n-firm concentration ratio} = \\frac{\\text{Sales of the largest n firms}}{\\text{Total market sales}} \\times 100",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "concentration-ratio",
+        "oligopoly",
+        "calculation",
+        "quantitative-skills"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-3-oligopoly.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-3-diagram-01",
+      "specCode": "4.1.3",
+      "topic": "4.1 Competition and Market Power",
+      "subtopic": "4-1-3-oligopoly",
+      "cardType": "diagram",
+      "front": "<p>Define <strong>interdependence</strong>. Sketch the kinked demand curve and use it to explain why prices in an oligopoly tend to stay stable. When does stability break down?</p>",
+      "back": "<p><strong>Interdependence</strong> — when each firm's sales and profit depend on what its rivals do, so it has to predict their reaction before it acts.</p><p>The kink sits at the current price, labelled Pcomp, and output Q.</p><ul><li><strong>If the firm raises its price:</strong> rivals don't follow → customers switch to them → demand above the kink is price elastic → revenue falls.</li><li><strong>If it cuts its price:</strong> rivals match the cut → the firm gains few sales → demand below the kink is price inelastic → revenue falls.</li></ul><p>Either way it loses, so it leaves its price where it is and uses non-price competition instead.</p><p><strong>A second reason:</strong> the MR curve has a vertical gap at Q. Profit is maximised where MC = MR, so MC can rise or fall inside the gap with no change in the best price. Even a change in costs may leave prices unchanged.</p><p><strong>Breakdown:</strong> a firm with much lower costs, or a new entrant, cuts prices to win market share → rivals follow in a <strong>price war</strong> → consumers gain for a while, every firm's revenue and profit fall, and weaker firms may leave.</p>",
+      "svgRef": "/images/diagrams/svg/kinked-demand-curve.svg",
+      "svgAlt": "Kinked demand curve with cost and revenue on the vertical axis and quantity on the horizontal axis. The demand curve D=AR is flatter above the kink, labelled price elastic demand, and steeper below it, labelled price inelastic demand. The kink sits at price Pcomp and quantity Q. The MR curve has a vertical gap at Q, and the MC=S curve passes through the gap. An AC curve gives average cost C at Q",
+      "difficulty": "standard",
+      "tags": [
+        "oligopoly",
+        "interdependence",
+        "kinked-demand-curve",
+        "price-stability",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-3-oligopoly.html",
+        "origin": "notes-verbatim",
+        "verbatim": "when each firm's sales and profit depend on what its rivals do, so it has to predict their reaction before it acts."
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-3-chain-01",
+      "specCode": "4.1.3",
+      "topic": "4.1 Competition and Market Power",
+      "subtopic": "4-1-3-oligopoly",
+      "cardType": "chain",
+      "front": "<p>Define <strong>tacit agreement</strong>. Two ferry operators on one crossing each choose a high or a low fare. Yearly profits (Operator A, Operator B) are:</p><ul><li>Both high: £8m, £8m</li><li>A high, B low: £2m, £11m</li><li>A low, B high: £11m, £2m</li><li>Both low: £5m, £5m</li></ul><p>What will each choose, and why does this tempt firms into a tacit agreement? Who gains and loses from one, and when is it likely to hold?</p>",
+      "back": "<p><strong>Tacit agreement</strong> — firms coordinating their prices or output without any formal or spoken agreement, for example by following a price leader.</p><p><strong>The matrix:</strong> whatever B does, A earns more with the low fare (£11m beats £8m, and £5m beats £2m), and the same is true for B. So both choose low fares and earn £5m each, though both would earn £8m if they kept fares high. That is the pull towards an agreement.</p><p>An open agreement to fix prices, a <strong>cartel</strong>, is illegal in the UK. A tacit one has no meeting or contract, so it is much harder to prove, but the result can be the same.</p><ul><li><strong>Firms:</strong> prices stay above the competitive level → higher margins → supernormal profit.</li><li><strong>Consumers:</strong> prices are higher than with real competition → they pay more and buy less → lower real incomes.</li></ul><p><strong>More likely to hold when:</strong> there are very few firms, so a price cut is easy to spot; products and costs are similar; barriers to entry are high; and demand is stable, since a downturn strengthens the pull to cut prices.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "tacit-agreement",
+        "payoff-matrix",
+        "oligopoly",
+        "collusion",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-3-oligopoly.html",
+        "origin": "notes-verbatim",
+        "verbatim": "firms coordinating their prices or output without any formal or spoken agreement, for example by following a price leader."
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-3-diagram-02",
+      "specCode": "4.1.3",
+      "topic": "4.1 Competition and Market Power",
+      "subtopic": "4-1-3-oligopoly",
+      "cardType": "diagram",
+      "front": "<p>Define <strong>price discrimination</strong> and its three degrees. What three conditions does third-degree price discrimination need? Sketch it for two groups of customers.</p>",
+      "back": "<p><strong>Price discrimination</strong> — charging different customers different prices for the same product, where the difference is not caused by a difference in cost.</p><ul><li><strong>First-degree:</strong> each customer pays the most they are willing to pay, as at an auction.</li><li><strong>Second-degree:</strong> the price depends on how much is bought, such as bulk discounts.</li><li><strong>Third-degree:</strong> different groups of customers pay different prices.</li></ul><p><strong>Conditions:</strong> market power, as a price taker cannot set prices; groups with different PED that the firm can tell apart; and separate markets, so low-price buyers cannot resell to high-price ones.</p><p><strong>The diagram:</strong> the firm sets MC = MR in each sub-market. In the sub-market where demand is price inelastic it charges a high price, and in the one where demand is price elastic it charges a lower one. A gym might charge more for evening sessions, when people who work can only come then, than for weekday daytime ones.</p><p>The two shaded profit areas together are larger than the profit the firm would make charging one price across the combined market.</p>",
+      "svgRef": "/images/diagrams/svg/price-discrimination.svg",
+      "svgAlt": "Two panels with cost and revenue on the vertical axis and quantity on the horizontal axis, sharing one horizontal AC=MC line at C. Left, the inelastic sub-market: a steep D=AR and MR, output Q where MR meets MC, a high price P and a shaded profit rectangle between P and C. Right, the elastic sub-market: a flatter D=AR and MR, output Q, a lower price P and a shaded profit rectangle",
+      "difficulty": "standard",
+      "tags": [
+        "price-discrimination",
+        "price-elasticity",
+        "market-power",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-3-oligopoly.html",
+        "origin": "notes-verbatim",
+        "verbatim": "charging different customers different prices for the same product, where the difference is not caused by a difference in cost."
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-3-eval-01",
+      "specCode": "4.1.3",
+      "topic": "4.1 Competition and Market Power",
+      "subtopic": "4-1-3-oligopoly",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> third-degree price discrimination. Who gains, who loses, and is it good or bad overall?</p>",
+      "back": "<ul><li><strong>The firm gains:</strong> each group pays closer to the most it is willing to pay → more consumer surplus becomes revenue → higher profit than with one single price.</li><li><strong>Customers with inelastic demand lose:</strong> they are charged more than a single price → they lose consumer surplus.</li><li><strong>Customers with elastic demand can gain:</strong> they are charged less → some can now afford the product at all.</li></ul><p><strong>Whether it is good or bad depends on:</strong></p><ul><li><strong>Use of the extra profit:</strong> it may pay for investment, or keep a service running that would otherwise close, such as a lightly used rail route.</li><li><strong>Who pays more:</strong> it is harder to defend if the high price falls on people on low incomes with no choice.</li><li><strong>Use of capacity:</strong> cheap off-peak prices fill places that would otherwise be empty, at very little extra cost.</li></ul><p><strong>Judgement:</strong> the firm gains and customers with inelastic demand lose, so it is not good for everyone. It is easiest to defend where the low price brings in customers who would otherwise go without, and the extra profit keeps a service running.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "price-discrimination",
+        "consumer-surplus",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-3-oligopoly.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-4-formula-01",
+      "specCode": "4.1.4",
+      "topic": "4.1 Competition and Market Power",
+      "subtopic": "4-1-4-business-objectives-and-pricing-decisions",
+      "cardType": "formula",
+      "front": "<p>Define <strong>average cost (AC)</strong> and <strong>average revenue (AR)</strong>, with the formula for each. How can profit be found from the averages?</p>",
+      "back": "<p><strong>Average cost (AC)</strong> — the cost of producing each unit, found by dividing total cost by output. AC = Total cost ÷ Quantity.</p><p><strong>Average revenue (AR)</strong> — the revenue from each unit sold, found by dividing total revenue by output. AR = Total revenue ÷ Quantity.</p><p>If every unit sells for the same price, AR is simply the price. That is why a firm's demand curve is also its AR curve.</p><p><strong>Profit</strong> is total revenue minus total cost. From the averages, it is profit per unit (AR − AC) times the number sold.</p>",
+      "formula": "\\text{Profit} = (\\text{AR} - \\text{AC}) \\times \\text{Quantity}",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "average-cost",
+        "average-revenue",
+        "profit",
+        "formula"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-4-business-objectives-and-pricing-decisions.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the cost of producing each unit, found by dividing total cost by output"
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-4-formula-02",
+      "specCode": "4.1.4",
+      "topic": "4.1 Competition and Market Power",
+      "subtopic": "4-1-4-business-objectives-and-pricing-decisions",
+      "cardType": "formula",
+      "front": "<p>Define <strong>marginal cost (MC)</strong> and <strong>marginal revenue (MR)</strong>. Why is MR below the price for most firms? How do MC and MR link to contribution?</p>",
+      "back": "<p><strong>Marginal cost (MC)</strong> — the extra cost of producing one more unit.</p><p><strong>Marginal revenue (MR)</strong> — the extra revenue from selling one more unit. MR = Change in total revenue ÷ Change in quantity.</p><p><strong>MR below price:</strong> to sell more, most firms must cut the price, and the lower price applies to every unit, not just the extra one. So MR is below the price and falls faster than AR.</p><p><strong>Contribution:</strong> fixed costs don't change when one more unit is made, so MC is all variable cost. MR − MC is the <strong>contribution of the extra unit</strong>, towards fixed costs and then profit.</p><ul><li><strong>MR above MC:</strong> a positive contribution → total contribution and profit rise → produce it.</li><li><strong>MR below MC:</strong> a negative contribution → profit falls → don't.</li></ul><p>So profit is highest where <strong>MC = MR</strong>. Unlike break-even analysis, where every unit makes the same contribution, here it shrinks with each unit because the price has to fall to sell more.</p>",
+      "formula": "\\text{MC} = \\frac{\\text{Change in total cost}}{\\text{Change in quantity}}",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "marginal-cost",
+        "marginal-revenue",
+        "contribution",
+        "formula"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-4-business-objectives-and-pricing-decisions.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the extra cost of producing one more unit"
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-4-calc-01",
+      "specCode": "4.1.4",
+      "topic": "4.1 Competition and Market Power",
+      "subtopic": "4-1-4-business-objectives-and-pricing-decisions",
+      "cardType": "calculation",
+      "front": "<p>A workshop builds custom bicycle frames. To sell more each week it must lower its price. Fixed costs are £300 a week.</p><ul><li>Frames (Q): 1, 2, 3, 4, 5, 6, 7</li><li>Price: £500, £450, £400, £350, £300, £240, £190</li><li>Total cost: £400, £470, £540, £660, £840, £1,080, £1,330</li></ul><p>(a) Calculate MR and MC for the 4th and 5th frames, and find the profit-maximising output and price. (b) Show the maximum profit two ways. (c) What price would a revenue maximiser and a sales maximiser charge? (d) Profit per frame is highest at 3 frames. Why not make 3?</p>",
+      "back": "<p><strong>(a)</strong> TR at 3, 4 and 5 frames is £1,200, £1,400 and £1,500.</p><ul><li>4th frame: MR = £1,400 − £1,200 = £200; MC = £660 − £540 = £120. It adds £80, so make it.</li><li>5th frame: MR = £1,500 − £1,400 = £100; MC = £840 − £660 = £180. It adds −£80, so don't.</li></ul><p>Profit is maximised at <strong>4 frames</strong>, priced at <strong>£350</strong>.</p><p><strong>(b)</strong> TR − TC = £1,400 − £660 = <strong>£740</strong>. AC = £660 ÷ 4 = £165, so (AR − AC) × Q = (£350 − £165) × 4 = <strong>£740</strong>.</p><p><strong>(c)</strong> Revenue maximiser: TR peaks at £1,500 at 5 frames, and the 6th would cut it (MR = £1,440 − £1,500 = −£60), so it charges <strong>£300</strong>. Sales maximiser: at 7 frames AC = £1,330 ÷ 7 = £190 = AR, so it charges <strong>£190</strong> and just breaks even.</p><p><strong>(d)</strong> At 3 frames profit per unit is £400 − £180 = £220, against £185 at 4. But total profit is £660 at 3 and £740 at 4: the 4th frame lowers profit per unit yet still adds £80. Always compare MR with MC for the next unit.</p>",
+      "formula": "\\text{Profit} = (\\text{AR} - \\text{AC}) \\times \\text{Quantity}",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "marginal-analysis",
+        "profit-maximisation",
+        "revenue-maximisation",
+        "calculation",
+        "quantitative-skills"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-4-business-objectives-and-pricing-decisions.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-4-diagram-01",
+      "specCode": "4.1.4",
+      "topic": "4.1 Competition and Market Power",
+      "subtopic": "4-1-4-business-objectives-and-pricing-decisions",
+      "cardType": "diagram",
+      "front": "<p>Sketch the profit-maximising position of a firm with a downward-sloping demand curve. How do the price and output of a profit maximiser, a revenue maximiser and a sales maximiser differ?</p>",
+      "back": "<p>The firm produces Q, where <strong>MC = MR</strong>, and reads the price P off the demand curve (D=AR). Average cost at Q is C, so profit per unit is P − C, and total profit is (P − C) × Q.</p><ul><li><strong>Profit maximisation:</strong> produce where MC = MR → the highest price and the lowest output of the three → the most profit for the owners.</li><li><strong>Revenue maximisation:</strong> keep selling while each unit still adds revenue, so produce where MR = 0 → a lower price and more output → less profit, but a bigger business, which may suit managers paid on sales.</li><li><strong>Sales maximisation:</strong> sell as much as possible without making a loss, so produce where AR = AC → the lowest price and highest output → only normal profit, but more market share.</li></ul>",
+      "svgRef": "/images/diagrams/svg/profit-max.svg",
+      "svgAlt": "Firm diagram with cost and revenue on the vertical axis and quantity on the horizontal axis, showing a downward-sloping D=AR curve, a steeper MR curve, an MC=S curve and a U-shaped AC curve. A dot marks where MC crosses MR, at output Q. Dashed lines from Q go up to average cost C on the AC curve and price P on the demand curve",
+      "difficulty": "standard",
+      "tags": [
+        "profit-maximisation",
+        "revenue-maximisation",
+        "sales-maximisation",
+        "business-objectives",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-4-business-objectives-and-pricing-decisions.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-4-chain-01",
+      "specCode": "4.1.4",
+      "topic": "4.1 Competition and Market Power",
+      "subtopic": "4-1-4-business-objectives-and-pricing-decisions",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chains of reasoning</strong>: how do satisficing, growth, survival and ethical aims each affect the price a firm charges? What decides which objective it follows?</p>",
+      "back": "<ul><li><strong>Satisficing:</strong> aiming for enough profit to keep the owners content → managers have room to pursue their own aims → price and output usually sit between the profit- and sales-maximising levels.</li><li><strong>Growth or market share:</strong> a low starting price wins customers from rivals → sales and market share rise → profit is lower now, in the hope of more later.</li><li><strong>Survival:</strong> in a downturn the firm cuts prices to keep cash coming in → as long as price covers variable cost, each sale still makes a contribution to fixed costs.</li><li><strong>Ethical or social aims:</strong> paying suppliers a fair price raises costs → the firm charges more, relying on customers who value its stance.</li></ul><p><strong>Which objective, and so which price, depends on:</strong></p><ul><li><strong>Who runs it:</strong> owners usually want profit, while managers may prefer growth in sales, which brings them status and pay.</li><li><strong>Competition:</strong> a firm with close rivals has little room to price for anything but survival or market share.</li><li><strong>Its stage:</strong> a new firm may chase sales to get known, then switch to profit once it is established.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "business-objectives",
+        "pricing-strategies",
+        "satisficing",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-4-business-objectives-and-pricing-decisions.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-5-def-01",
+      "specCode": "4.1.5",
+      "topic": "4.1 Competition and Market Power",
+      "subtopic": "4-1-5-productive-and-allocative-efficiency",
+      "cardType": "definition",
+      "front": "<p>Define <strong>productive efficiency</strong> and <strong>allocative efficiency</strong>. How do they differ, and which market structures achieve them?</p>",
+      "back": "<p><strong>Productive efficiency</strong> — producing at the lowest possible average cost, where MC = AC.</p><p><strong>Allocative efficiency</strong> — producing the combination of goods and services that consumers value most, so society's welfare is maximised, where price equals marginal cost (P = MC).</p><p>Productive efficiency is about <em>how</em> things are made: no resources wasted, so each unit costs as little as possible. Allocative efficiency is about <em>what</em> is made. A factory making a product nobody wants at the lowest possible cost is productively efficient, but the resources would have been better used on something else.</p><ul><li><strong>Perfect competition:</strong> in the long run, a firm achieves both.</li><li><strong>Market power:</strong> a firm usually achieves neither. It sets a price above marginal cost and produces less than the lowest-cost output.</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "productive-efficiency",
+        "allocative-efficiency",
+        "market-structures"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-5-productive-and-allocative-efficiency.html",
+        "origin": "notes-verbatim",
+        "verbatim": "producing at the lowest possible average cost, where MC = AC."
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-5-chain-01",
+      "specCode": "4.1.5",
+      "topic": "4.1 Competition and Market Power",
+      "subtopic": "4-1-5-productive-and-allocative-efficiency",
+      "cardType": "chain",
+      "front": "<p>What does it mean to decide <strong>at the margin</strong>? Build the chains: why is P = MC a trade-off between opportunity costs?</p>",
+      "back": "<p>Firms and consumers rarely decide whether to make or buy anything at all. They decide whether to make or buy <strong>one more</strong>. That is thinking at the <strong>margin</strong>.</p><p>Every extra unit has an <strong>opportunity cost</strong>: the materials and labour it uses could have made something else. Marginal cost measures that cost, and the price measures how much consumers value the extra unit.</p><ul><li><strong>Price above MC:</strong> consumers value one more unit more than the resources it uses → society gains by producing more of it.</li><li><strong>Price below MC:</strong> the resources are worth more elsewhere → society gains by producing less and moving them to another use.</li></ul><p><strong>Allocative efficiency</strong> is the point where no such gain is left: producing more of one good would mean giving up something consumers value more.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "the-margin",
+        "opportunity-cost",
+        "allocative-efficiency",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-5-productive-and-allocative-efficiency.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-5-chain-02",
+      "specCode": "4.1.5",
+      "topic": "4.1 Competition and Market Power",
+      "subtopic": "4-1-5-productive-and-allocative-efficiency",
+      "cardType": "chain",
+      "front": "<p>Define <strong>productivity</strong>. Build the chains for the three ways the spec names to raise it and cut average cost. What limits the gain?</p>",
+      "back": "<p><strong>Productivity</strong> — output per unit of input, usually output per worker per hour.</p><p>If workers produce more in the same time, the wage bill and other costs are spread over more units, so average cost falls.</p><ul><li><strong>Technology:</strong> a print shop buys a faster press → more jobs printed per hour by the same staff → lower labour cost per job → lower average cost.</li><li><strong>Human capital:</strong> skills training and education → staff work faster and make fewer mistakes → less waste and rework → lower average cost.</li><li><strong>Quality of management:</strong> better planning of rotas, stock and workflow → less time idle or waiting → more output from the same inputs → lower average cost.</li></ul><p>Lower average cost lets the firm cut prices to win sales, or keep them and earn a higher margin. Either way it becomes more competitive.</p><p><strong>The gain depends on:</strong> cost and time lags, as machinery and training cost money up front; staff, who may resist new technology if they fear for their jobs; and demand, as lower average cost only helps if the extra output can be sold.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "productivity",
+        "average-cost",
+        "human-capital",
+        "chain-of-reasoning"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-5-productive-and-allocative-efficiency.html",
+        "origin": "notes-verbatim",
+        "verbatim": "output per unit of input, usually output per worker per hour"
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-5-def-02",
+      "specCode": "4.1.5",
+      "topic": "4.1 Competition and Market Power",
+      "subtopic": "4-1-5-productive-and-allocative-efficiency",
+      "cardType": "definition",
+      "front": "<p>Define <strong>market orientation</strong> and contrast it with product orientation. How does it link to allocative efficiency, and what are its limits?</p>",
+      "back": "<p><strong>Market orientation</strong> — a business finds out what consumers want first, then designs and produces to match.</p><p>The opposite is <strong>product orientation</strong>, where a firm makes what it is good at and then looks for buyers. A market-oriented snack maker might test new flavours with shoppers before deciding which to launch.</p><p>Market orientation is allocative efficiency at the level of one firm:</p><ul><li><strong>The firm:</strong> production matches what customers want → less unsold stock and fewer discounts → higher sales and profit.</li><li><strong>Consumers:</strong> the products they want are available → more satisfaction for the money they spend.</li></ul><p><strong>Limits:</strong> market research is expensive, and tastes can shift before production catches up.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "market-orientation",
+        "product-orientation",
+        "allocative-efficiency"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-5-productive-and-allocative-efficiency.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a business finds out what consumers want first, then designs and produces to match."
+      }
+    },
+    {
+      "id": "edexcel-b-4-1-5-app-01",
+      "specCode": "4.1.5",
+      "topic": "4.1 Competition and Market Power",
+      "subtopic": "4-1-5-productive-and-allocative-efficiency",
+      "cardType": "application",
+      "front": "<p>The price of petrol rises sharply. Trace the effects into <strong>a complement</strong>, <strong>a substitute</strong> and <strong>a labour market</strong>. What decides how big each knock-on effect is?</p>",
+      "back": "<ul><li><strong>Drivers:</strong> the cost of each car journey rises → people make fewer of them.</li><li><strong>A complement:</strong> fewer car journeys → lower demand for town-centre car parks and motorway service stations → lower sales and profit there.</li><li><strong>A substitute:</strong> more people take the bus or train → demand for bus and rail travel rises → higher revenue and profit for those firms.</li><li><strong>A labour market:</strong> bus firms run more services → demand for bus drivers rises → their wages rise.</li></ul><p>No market works alone. A change in one spreads to others through the goods consumers buy together or instead of each other, and through the materials and labour firms use. This is how the price mechanism moves resources between markets.</p><p><strong>The size of each effect</strong> depends on how close the link is: a close substitute, or a firm that relies on one input, feels it far more than a distant one.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "market-interaction",
+        "complements",
+        "substitutes",
+        "derived-demand",
+        "application"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-5-productive-and-allocative-efficiency.html",
+        "origin": "card-authored"
+      }
+    }
+  ]
+}
