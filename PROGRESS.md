@@ -283,7 +283,43 @@ sheets: `05-website/drafts/all-boards-parity/review/flashcards-unit-X-Y.md`.
   exchange rate differ only by an example sentence, so the glossary takes
   the shared first sentence. The B practice question 3.1.4 working still
   quotes the old subsidy wording; it is not a chip, so it was left.
-- **Open:** Theme 4 not started.
+- **Theme 4 written: 98 cards across 19 topics, units 4.1 to 4.5**
+  (`4b87b7da` to `f74e639f`), with a review sheet per unit.
+- **Theme 4 QA applied and diagrams approved (Eliot, 2026-11-11, all
+  fixes accepted):** `review/qa-flashcards-theme-4.md` found no high
+  defects and no factual or calculation errors.
+  - `natural-monopoly.svg`'s "D=AR" moves to (520, 550), below the axis
+    beside the end of its line, clearing LRMC. 4.2.1's
+    `natural-monopoly.png` was re-rasterised from it (headless Chrome at
+    2x, the 64-colour re-encode, a new WebP twin). Neither file is used
+    outside B.
+  - 4.1.1 def-01 gains a line saying that where the B spec lists imperfect
+    competition beside monopoly and oligopoly, it means monopolistic
+    competition. 4.1.2 def-01's front no longer mentions "the page".
+  - One wording per term, before the B glossary. (a) Each citing chip now
+    quotes the chip it cites, pointer kept: market failure on 4.2.1 (from
+    1.5.1), productivity on 4.1.5 (from 2.3.1) and trade union on 3.5.2
+    (from 4.2.1). (b) The 4.x chips take the earlier wording: average cost
+    on 4.1.4 (from 1.6.1's first sentence; its "Total cost ÷ Quantity"
+    formula is unchanged), economies of scale on 4.1.2 (from 2.1.1),
+    fiscal policy on 4.4.2 (from 2.6.2) and non-price competition on 4.1.1
+    (from 2.2.3, with its examples). The cards follow, with the verbatim
+    source updated. (c) Aggregate demand, monetary policy and supply-side
+    policies keep both chips; **the B glossary uses the fuller 4.x
+    wording** (4.4.1, 4.4.2, 4.4.3). (d) Risk (1.4.2 business risk, 4.5.1
+    measurable risk) and interdependence (3.1.3 countries, 4.1.3 firms)
+    keep both chips; **the B glossary gives each two senses under one
+    headword**.
+  - Diagram sheet (`review/flashcard-diagrams-theme-4.md`): Q1 (a), the new
+    `perfect-competition-profit-to-longrun.svg` and card 4.1.1 diagram-02,
+    so the deck is 99. Q2 (a), `perfect-competition-short-run-supernormal-profit.svg`'s
+    dashed price line stops at x=415, short of the firm's "P1". That SVG is
+    shared with the live Edexcel A and AQA decks, so they change at the next
+    push.
+  - **Still open:** the text of card 4.1.1 diagram-02 awaits Eliot's
+    approval. `perfect-competition-short-run-loss.svg` (A and AQA only) has
+    the same line-through-"P1" fault; Q2 (b) would fix it and was not
+    chosen. Unit 4.5 Q1–Q4 and CONTENT_ISSUES #46 and #52 remain with Eliot.
 
 ### All-boards parity — Phase 1, Edexcel B practice questions (2026-10-25 to 2026-11-08) — LAUNCHED ON BRANCH, PUSHED, NOT MERGED (branch `feature/edexcel-b-questions`)
 

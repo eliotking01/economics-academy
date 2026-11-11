@@ -15,7 +15,7 @@
       "subtopic": "4-1-1-spectrum-of-competition",
       "cardType": "definition",
       "front": "<p>Define <strong>imperfect competition</strong> and <strong>monopolistic competition</strong>. Compare the four market structures on the spectrum of competition.</p>",
-      "back": "<p><strong>Imperfect competition</strong> — any market that is not perfectly competitive, so firms have some power over their price. Monopolistic competition, oligopoly and monopoly are all forms of imperfect competition.</p><p><strong>Monopolistic competition</strong> — a market with many firms and low barriers to entry, where each firm sells a slightly different product. Hairdressers, cafés and takeaways in a town are typical examples.</p><ul><li><strong>Perfect competition:</strong> very many small firms, no barriers to entry, identical products → no power over price: firms are price takers.</li><li><strong>Monopolistic competition:</strong> many firms, low barriers, slightly different products → a little power over price.</li><li><strong>Oligopoly:</strong> a few large firms dominate, high barriers, identical or branded products → considerable power, but each firm watches its rivals.</li><li><strong>Monopoly:</strong> one firm, very high barriers, no close substitutes → high power: a price maker.</li></ul><p>The further a market sits towards monopoly, the more <strong>market power</strong> each firm has: the ability to raise its price without losing all its customers.</p>",
+      "back": "<p><strong>Imperfect competition</strong> — any market that is not perfectly competitive, so firms have some power over their price. Monopolistic competition, oligopoly and monopoly are all forms of imperfect competition.</p><p><strong>Monopolistic competition</strong> — a market with many firms and low barriers to entry, where each firm sells a slightly different product. Hairdressers, cafés and takeaways in a town are typical examples. Where the Edexcel B specification lists imperfect competition alongside monopoly and oligopoly, it means monopolistic competition.</p><ul><li><strong>Perfect competition:</strong> very many small firms, no barriers to entry, identical products → no power over price: firms are price takers.</li><li><strong>Monopolistic competition:</strong> many firms, low barriers, slightly different products → a little power over price.</li><li><strong>Oligopoly:</strong> a few large firms dominate, high barriers, identical or branded products → considerable power, but each firm watches its rivals.</li><li><strong>Monopoly:</strong> one firm, very high barriers, no close substitutes → high power: a price maker.</li></ul><p>The further a market sits towards monopoly, the more <strong>market power</strong> each firm has: the ability to raise its price without losing all its customers.</p>",
       "svgRef": null,
       "difficulty": "foundation",
       "tags": [
@@ -63,6 +63,32 @@
       }
     },
     {
+      "id": "edexcel-b-4-1-1-diagram-02",
+      "specCode": "4.1.1",
+      "topic": "4.1 Competition and Market Power",
+      "subtopic": "4-1-1-spectrum-of-competition",
+      "cardType": "diagram",
+      "front": "<p>Sketch the market and the firm in perfect competition after new firms have entered. Why does supernormal profit disappear, and what happens if demand falls instead?</p>",
+      "back": "<p><strong>Market:</strong> new firms enter → supply shifts right from S1 to S2 → the price falls from P1 to P2 and quantity rises from Q1 to Q2.</p><p><strong>Firm:</strong> the new price is its horizontal demand curve, D=AR=MR=P2. It just touches the lowest point of AC, where MC also crosses, so the firm produces Q2 and the price P2 equals average cost C2.</p><ul><li><strong>Why the profit goes:</strong> supernormal profit signals an opportunity → with no barriers, new firms keep joining → market supply keeps rising → the price keeps falling until it equals the lowest average cost → each firm makes only <strong>normal profit</strong>, just enough to stay in the market.</li><li><strong>If demand falls instead:</strong> the price falls below average cost → firms make losses → some leave → market supply falls → the price rises until normal profit returns.</li></ul><p>In the long run, consumers pay a price equal to the lowest average cost. This is the price mechanism at work.</p>",
+      "svgRef": "/images/diagrams/svg/perfect-competition-profit-to-longrun.svg",
+      "svgAlt": "Two diagrams side by side. Left, the market: price on the vertical axis and quantity on the horizontal, where new firms entering shift supply from S1 to S2, so the price falls from P1 to P2 and quantity rises from Q1 to Q2. Right, the firm: cost and revenue on the vertical axis, a horizontal line D=AR=MR=P2 that just touches the lowest point of the U-shaped AC curve, where the MC=S curve also crosses, at output Q2. Price P2 equals average cost C2, so the firm makes normal profit",
+      "difficulty": "standard",
+      "tags": [
+        "perfect-competition",
+        "normal-profit",
+        "long-run",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-1-spectrum-of-competition.html",
+        "origin": "card-authored"
+      }
+    },
+    {
       "id": "edexcel-b-4-1-1-chain-01",
       "specCode": "4.1.1",
       "topic": "4.1 Competition and Market Power",
@@ -94,7 +120,7 @@
       "subtopic": "4-1-1-spectrum-of-competition",
       "cardType": "definition",
       "front": "<p>Define <strong>non-price competition</strong>. In which market structures does it matter most, and how can it raise a firm's profit?</p>",
-      "back": "<p><strong>Non-price competition</strong> — ways of winning customers other than charging a lower price.</p><p>It matters most in <strong>monopolistic competition</strong> and <strong>oligopoly</strong>, where firms have products to set apart and, in oligopoly, a price cut would simply be matched.</p><p>Methods: branding and advertising, quality and design, customer service, loyalty schemes, and convenience, such as location, opening hours or a good app.</p><p>Successful non-price competition → customers see fewer close substitutes → demand becomes more price inelastic → the firm can charge more without losing many sales → higher profit.</p><p><strong>The catch:</strong> advertising and loyalty schemes are expensive, and rivals copy anything that works.</p>",
+      "back": "<p><strong>Non-price competition</strong> — winning customers through anything other than a lower price, such as quality, branding, advertising or where the product is sold.</p><p>It matters most in <strong>monopolistic competition</strong> and <strong>oligopoly</strong>, where firms have products to set apart and, in oligopoly, a price cut would simply be matched.</p><p>Methods: branding and advertising, quality and design, customer service, loyalty schemes, and convenience, such as location, opening hours or a good app.</p><p>Successful non-price competition → customers see fewer close substitutes → demand becomes more price inelastic → the firm can charge more without losing many sales → higher profit.</p><p><strong>The catch:</strong> advertising and loyalty schemes are expensive, and rivals copy anything that works.</p>",
       "svgRef": null,
       "difficulty": "standard",
       "tags": [
@@ -110,7 +136,7 @@
       "source": {
         "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-1-spectrum-of-competition.html",
         "origin": "notes-verbatim",
-        "verbatim": "ways of winning customers other than charging a lower price."
+        "verbatim": "winning customers through anything other than a lower price, such as quality, branding, advertising or where the product is sold."
       }
     },
     {
@@ -144,7 +170,7 @@
       "topic": "4.1 Competition and Market Power",
       "subtopic": "4-1-2-barriers-to-entry",
       "cardType": "definition",
-      "front": "<p>Define <strong>barriers to entry</strong> and <strong>intellectual property rights</strong>. Name the seven types of barrier the page covers, with how each keeps new firms out.</p>",
+      "front": "<p>Define <strong>barriers to entry</strong> and <strong>intellectual property rights</strong>. Name seven types of barrier to entry, with how each keeps new firms out.</p>",
       "back": "<p><strong>Barriers to entry</strong> — anything that makes it hard or costly for a new firm to start selling in a market.</p><ul><li><strong>Product differentiation:</strong> the more customers see a product as unique, the fewer substitutes a newcomer can offer, so it has to spend heavily to win anyone over.</li><li><strong>Branding:</strong> loyal customers keep buying even when a newcomer is cheaper, so an entrant must spend large sums on advertising, a sunk cost if it fails.</li><li><strong>Start-up costs:</strong> a factory or a network of masts costs a fortune before the first sale, and lenders see a newcomer as risky.</li><li><strong>Intellectual property rights</strong> — legal rights over ideas and creative work, such as patents, trademarks and copyright. A UK patent can stop others making or selling an invention for up to 20 years.</li><li><strong>R&amp;D and technology change:</strong> heavy R&amp;D builds know-how newcomers cannot match quickly. But new technology can also knock barriers down, as online selling did for small retailers.</li><li><strong>Legal barriers:</strong> licences, such as a taxi licence or a bank's authorisation, limit the number of firms or make entry slow and costly.</li><li><strong>Anti-competitive practices:</strong> predatory pricing, exclusive dealing or refusing to supply shops that stock a rival. Competition law bans these when a dominant firm uses them.</li></ul>",
       "svgRef": null,
       "difficulty": "foundation",
@@ -222,7 +248,7 @@
       "subtopic": "4-1-2-barriers-to-entry",
       "cardType": "chain",
       "front": "<p>Define <strong>economies of scale</strong>. Build the chains: how do they affect the costs and prices of a large firm, its consumers and a new entrant? When do consumers not gain?</p>",
-      "back": "<p><strong>Economies of scale</strong> — the fall in long-run average cost as a firm increases its scale of production.</p><p>Average cost falls until the <strong>minimum efficient scale (MES)</strong>. The main types are purchasing (bulk discounts), technical (automated machinery), financial (cheaper borrowing) and marketing (one campaign spread over more units).</p><ul><li><strong>The large firm:</strong> output rises → average cost falls → it can cut prices and still make a profit, or keep prices and earn a higher margin.</li><li><strong>Consumers:</strong> lower average cost is passed on → lower prices.</li><li><strong>A new entrant:</strong> it starts small → its average cost is higher than established rivals' → it cannot match their prices without a loss, so economies of scale work as a barrier to entry.</li></ul><p><strong>Consumers may not gain when:</strong> a firm protected by barriers keeps the savings as profit; growth goes past the MES and diseconomies push costs back up; or the MES is a large share of total demand, so the market only has room for a few firms.</p>",
+      "back": "<p><strong>Economies of scale</strong> — the fall in long-run average cost that comes from producing on a larger scale.</p><p>Average cost falls until the <strong>minimum efficient scale (MES)</strong>. The main types are purchasing (bulk discounts), technical (automated machinery), financial (cheaper borrowing) and marketing (one campaign spread over more units).</p><ul><li><strong>The large firm:</strong> output rises → average cost falls → it can cut prices and still make a profit, or keep prices and earn a higher margin.</li><li><strong>Consumers:</strong> lower average cost is passed on → lower prices.</li><li><strong>A new entrant:</strong> it starts small → its average cost is higher than established rivals' → it cannot match their prices without a loss, so economies of scale work as a barrier to entry.</li></ul><p><strong>Consumers may not gain when:</strong> a firm protected by barriers keeps the savings as profit; growth goes past the MES and diseconomies push costs back up; or the MES is a large share of total demand, so the market only has room for a few firms.</p>",
       "svgRef": null,
       "difficulty": "standard",
       "tags": [
@@ -238,7 +264,7 @@
       "source": {
         "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-2-barriers-to-entry.html",
         "origin": "notes-verbatim",
-        "verbatim": "the fall in long-run average cost as a firm increases its scale of production."
+        "verbatim": "the fall in long-run average cost that comes from producing on a larger scale."
       }
     },
     {
@@ -432,7 +458,7 @@
       "subtopic": "4-1-4-business-objectives-and-pricing-decisions",
       "cardType": "formula",
       "front": "<p>Define <strong>average cost (AC)</strong> and <strong>average revenue (AR)</strong>, with the formula for each. How can profit be found from the averages?</p>",
-      "back": "<p><strong>Average cost (AC)</strong> — the cost of producing each unit, found by dividing total cost by output. AC = Total cost ÷ Quantity.</p><p><strong>Average revenue (AR)</strong> — the revenue from each unit sold, found by dividing total revenue by output. AR = Total revenue ÷ Quantity.</p><p>If every unit sells for the same price, AR is simply the price. That is why a firm's demand curve is also its AR curve.</p><p><strong>Profit</strong> is total revenue minus total cost. From the averages, it is profit per unit (AR − AC) times the number sold.</p>",
+      "back": "<p><strong>Average cost (AC)</strong> — the cost of producing one unit, found by dividing total costs by output. AC = Total cost ÷ Quantity.</p><p><strong>Average revenue (AR)</strong> — the revenue from each unit sold, found by dividing total revenue by output. AR = Total revenue ÷ Quantity.</p><p>If every unit sells for the same price, AR is simply the price. That is why a firm's demand curve is also its AR curve.</p><p><strong>Profit</strong> is total revenue minus total cost. From the averages, it is profit per unit (AR − AC) times the number sold.</p>",
       "formula": "\\text{Profit} = (\\text{AR} - \\text{AC}) \\times \\text{Quantity}",
       "svgRef": null,
       "difficulty": "foundation",
@@ -449,7 +475,7 @@
       "source": {
         "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-4-business-objectives-and-pricing-decisions.html",
         "origin": "notes-verbatim",
-        "verbatim": "the cost of producing each unit, found by dividing total cost by output"
+        "verbatim": "the cost of producing one unit, found by dividing total costs by output"
       }
     },
     {
@@ -615,7 +641,7 @@
       "subtopic": "4-1-5-productive-and-allocative-efficiency",
       "cardType": "chain",
       "front": "<p>Define <strong>productivity</strong>. Build the chains for the three ways the spec names to raise it and cut average cost. What limits the gain?</p>",
-      "back": "<p><strong>Productivity</strong> — output per unit of input, usually output per worker per hour.</p><p>If workers produce more in the same time, the wage bill and other costs are spread over more units, so average cost falls.</p><ul><li><strong>Technology:</strong> a print shop buys a faster press → more jobs printed per hour by the same staff → lower labour cost per job → lower average cost.</li><li><strong>Human capital:</strong> skills training and education → staff work faster and make fewer mistakes → less waste and rework → lower average cost.</li><li><strong>Quality of management:</strong> better planning of rotas, stock and workflow → less time idle or waiting → more output from the same inputs → lower average cost.</li></ul><p>Lower average cost lets the firm cut prices to win sales, or keep them and earn a higher margin. Either way it becomes more competitive.</p><p><strong>The gain depends on:</strong> cost and time lags, as machinery and training cost money up front; staff, who may resist new technology if they fear for their jobs; and demand, as lower average cost only helps if the extra output can be sold.</p>",
+      "back": "<p><strong>Productivity</strong> — output per unit of input in a given time period.</p><p>If workers produce more in the same time, the wage bill and other costs are spread over more units, so average cost falls.</p><ul><li><strong>Technology:</strong> a print shop buys a faster press → more jobs printed per hour by the same staff → lower labour cost per job → lower average cost.</li><li><strong>Human capital:</strong> skills training and education → staff work faster and make fewer mistakes → less waste and rework → lower average cost.</li><li><strong>Quality of management:</strong> better planning of rotas, stock and workflow → less time idle or waiting → more output from the same inputs → lower average cost.</li></ul><p>Lower average cost lets the firm cut prices to win sales, or keep them and earn a higher margin. Either way it becomes more competitive.</p><p><strong>The gain depends on:</strong> cost and time lags, as machinery and training cost money up front; staff, who may resist new technology if they fear for their jobs; and demand, as lower average cost only helps if the extra output can be sold.</p>",
       "svgRef": null,
       "difficulty": "standard",
       "tags": [
@@ -631,7 +657,7 @@
       "source": {
         "notesPage": "/revision-notes/edexcel-b-theme-4/4-1-5-productive-and-allocative-efficiency.html",
         "origin": "notes-verbatim",
-        "verbatim": "output per unit of input, usually output per worker per hour"
+        "verbatim": "output per unit of input in a given time period"
       }
     },
     {
@@ -799,7 +825,7 @@
       "subtopic": "4-2-1-market-power-and-market-failure",
       "cardType": "evaluation",
       "front": "<p>Define <strong>market failure</strong> and explain why market power causes it. <strong>Evaluate</strong> the effects on economic agents and the government: what decides how serious the failure is?</p>",
-      "back": "<p><strong>Market failure</strong> — when a free market allocates resources inefficiently, resulting in a social welfare loss.</p><p><strong>Why market power causes it:</strong> a firm with little competition can raise its price above marginal cost and supply less → resources are under-allocated to the good → allocative inefficiency.</p><ul><li><strong>Consumers:</strong> higher prices and less choice → lower real incomes and less consumer surplus.</li><li><strong>Workers:</strong> a monopsony employer pays less → lower living standards and less spending in the local economy.</li><li><strong>Suppliers and small firms:</strong> squeezed by a dominant buyer or kept out by restrictive practices → lower profits, less investment and some closures.</li><li><strong>Firms with power:</strong> supernormal profit → higher returns for owners, and funds for investment.</li><li><strong>The government:</strong> it has to fund competition authorities and regulators → less to spend elsewhere, and it may pay more for services it buys from a dominant supplier.</li></ul><p><strong>How serious it is depends on:</strong> economies of scale, since a large firm's costs may be low enough that prices are no higher than with many small firms; the use of profit, since research and new products can benefit consumers over time; contestability, since the threat of entry limits price rises; and regulation, which can correct much of the failure, at a cost.</p><p><strong>Judgement:</strong> name the type of market power first, because the fix differs. Breaking up a cartel would not raise costs, but breaking up a natural monopoly would.</p>",
+      "back": "<p><strong>Market failure</strong> — when the free market leads to too much or too little of a good being produced or consumed, so resources are not allocated in the best way for society.</p><p><strong>Why market power causes it:</strong> a firm with little competition can raise its price above marginal cost and supply less → resources are under-allocated to the good → allocative inefficiency.</p><ul><li><strong>Consumers:</strong> higher prices and less choice → lower real incomes and less consumer surplus.</li><li><strong>Workers:</strong> a monopsony employer pays less → lower living standards and less spending in the local economy.</li><li><strong>Suppliers and small firms:</strong> squeezed by a dominant buyer or kept out by restrictive practices → lower profits, less investment and some closures.</li><li><strong>Firms with power:</strong> supernormal profit → higher returns for owners, and funds for investment.</li><li><strong>The government:</strong> it has to fund competition authorities and regulators → less to spend elsewhere, and it may pay more for services it buys from a dominant supplier.</li></ul><p><strong>How serious it is depends on:</strong> economies of scale, since a large firm's costs may be low enough that prices are no higher than with many small firms; the use of profit, since research and new products can benefit consumers over time; contestability, since the threat of entry limits price rises; and regulation, which can correct much of the failure, at a cost.</p><p><strong>Judgement:</strong> name the type of market power first, because the fix differs. Breaking up a cartel would not raise costs, but breaking up a natural monopoly would.</p>",
       "svgRef": null,
       "difficulty": "stretch",
       "tags": [
@@ -815,7 +841,7 @@
       "source": {
         "notesPage": "/revision-notes/edexcel-b-theme-4/4-2-1-market-power-and-market-failure.html",
         "origin": "notes-verbatim",
-        "verbatim": "when a free market allocates resources inefficiently, resulting in a social welfare loss"
+        "verbatim": "when the free market leads to too much or too little of a good being produced or consumed, so resources are not allocated in the best way for society"
       }
     },
     {
@@ -1644,7 +1670,7 @@
       "subtopic": "4-4-2-demand-side-policies",
       "cardType": "definition",
       "front": "<p>Define <strong>demand-side policies</strong>. Then define <strong>fiscal policy</strong> and <strong>monetary policy</strong>: who runs each, and what are its tools?</p>",
-      "back": "<p><strong>Demand-side policies</strong> — policies that change the level of aggregate demand (AD) to steer growth, unemployment and inflation.</p><p><strong>Fiscal policy</strong> — the use of government spending and taxation to influence aggregate demand.</p><ul><li>Run by the government, through the Chancellor's Budget. Taxes are direct (on income and profit, such as income tax and corporation tax) or indirect (on spending, such as VAT and fuel duty).</li><li><strong>Expansionary:</strong> more spending or lower taxes → AD shifts right. <strong>Contractionary</strong> is the opposite. Spending above tax revenue is a budget deficit, which the government borrows to cover.</li></ul><p><strong>Monetary policy</strong> — the use of interest rates and the money supply to influence aggregate demand, mainly to control inflation.</p><ul><li>Run by the Bank of England's Monetary Policy Committee, independently of the government, to keep CPI inflation at the government's 2% target.</li><li>Two tools: <strong>Bank Rate</strong>, which banks' own rates on loans, mortgages and savings follow, and <strong>quantitative easing</strong>.</li></ul><p>The government does not set interest rates. Name the right body.</p>",
+      "back": "<p><strong>Demand-side policies</strong> — policies that change the level of aggregate demand (AD) to steer growth, unemployment and inflation.</p><p><strong>Fiscal policy</strong> — changing the levels of government spending and taxation to affect aggregate demand.</p><ul><li>Run by the government, through the Chancellor's Budget. Taxes are direct (on income and profit, such as income tax and corporation tax) or indirect (on spending, such as VAT and fuel duty).</li><li><strong>Expansionary:</strong> more spending or lower taxes → AD shifts right. <strong>Contractionary</strong> is the opposite. Spending above tax revenue is a budget deficit, which the government borrows to cover.</li></ul><p><strong>Monetary policy</strong> — the use of interest rates and the money supply to influence aggregate demand, mainly to control inflation.</p><ul><li>Run by the Bank of England's Monetary Policy Committee, independently of the government, to keep CPI inflation at the government's 2% target.</li><li>Two tools: <strong>Bank Rate</strong>, which banks' own rates on loans, mortgages and savings follow, and <strong>quantitative easing</strong>.</li></ul><p>The government does not set interest rates. Name the right body.</p>",
       "svgRef": null,
       "difficulty": "foundation",
       "tags": [
