@@ -1070,6 +1070,390 @@
         "notesPage": "/revision-notes/edexcel-b-theme-4/4-2-3-arguments-for-and-against-regulation.html",
         "origin": "card-authored"
       }
+    },
+    {
+      "id": "edexcel-b-4-3-1-def-01",
+      "specCode": "4.3.1",
+      "topic": "4.3 Market Failure Across the Economy",
+      "subtopic": "4-3-1-market-failure-in-society",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>merit good</strong> and a <strong>public good</strong>. Why does the free market provide too little of each?</p>",
+      "back": "<p><strong>Merit good</strong> — a good or service with positive externalities in its consumption or production, so it is under-provided by the free market. Education, healthcare and vaccinations are examples.</p><p><strong>Why too little:</strong> buyers count only their private benefit and ignore the external benefit to others → they consume less than the social optimum. Many also underestimate the private benefit itself.</p><p><strong>Consequences:</strong> individuals gain fewer skills and lower lifetime earnings; firms get a less skilled, less healthy workforce and higher costs per unit; the government pays for more costly NHS treatment when poor health is caught late.</p><p><strong>Public good</strong> — a good that is non-excludable, so non-payers cannot be stopped from using it, and non-rival, so one person's use does not reduce what is left for others. Street lighting and flood defences are examples.</p><p><strong>Why little or none:</strong> nobody can be made to pay → people wait for someone else to buy it, the <strong>free rider problem</strong> → firms cannot make a profit → the market provides little or none of the good, even though society values it.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "merit-good",
+        "public-good",
+        "free-rider",
+        "market-failure"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-3-1-market-failure-in-society.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a good or service with positive externalities in its consumption or production, so it is under-provided by the free market."
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-1-diagram-01",
+      "specCode": "4.3.1",
+      "topic": "4.3 Market Failure Across the Economy",
+      "subtopic": "4-3-1-market-failure-in-society",
+      "cardType": "diagram",
+      "front": "<p>Define a <strong>demerit good</strong>. Sketch the diagram for its over-consumption, marking the market outcome, the social optimum and the welfare loss. Who bears the consequences?</p>",
+      "back": "<p><strong>Demerit good</strong> — a good or service with negative externalities in its consumption or production, so it is over-provided by the free market. Cigarettes, alcohol and gambling are examples.</p><p><strong>Why too much:</strong> buyers count only their private cost and ignore the harm to others. Many also underestimate the harm to themselves.</p><p><strong>The diagram:</strong> MSB lies below D=MPB. Supply is S=MPC=MSC.</p><ul><li><strong>Market:</strong> where D=MPB meets supply, at P1 and Q1.</li><li><strong>Social optimum:</strong> where MSB meets supply, at P2 and Q2. Q1 is more than Q2, so there is <strong>over-consumption</strong>.</li><li><strong>Welfare loss:</strong> the shaded triangle between Q2 and Q1. Each of those units costs more to supply than it is worth to society.</li></ul><p><strong>Consequences:</strong></p><ul><li><strong>Individuals:</strong> ill health → lost earnings and a lower quality of life.</li><li><strong>Firms:</strong> staff off sick → lost output and cover costs → lower productivity.</li><li><strong>The government:</strong> more treatment and policing → higher spending on the NHS and services.</li></ul>",
+      "svgRef": "/images/diagrams/svg/overconsumption.svg",
+      "svgAlt": "Costs, benefits on the vertical axis and quantity on the horizontal axis. Supply is S=MPC=MSC. D=MPB slopes down, and MSB lies below it. The market equilibrium is at P1 and Q1, where supply meets D=MPB. The social optimum is at P2 and Q2, where supply meets MSB, with Q2 less than Q1 and P2 below P1. A shaded triangle between Q2 and Q1, between the supply curve and MSB, is the welfare loss",
+      "difficulty": "standard",
+      "tags": [
+        "demerit-good",
+        "overconsumption",
+        "welfare-loss",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-3-1-market-failure-in-society.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a good or service with negative externalities in its consumption or production, so it is over-provided by the free market."
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-1-def-02",
+      "specCode": "4.3.1",
+      "topic": "4.3 Market Failure Across the Economy",
+      "subtopic": "4-3-1-market-failure-in-society",
+      "cardType": "definition",
+      "front": "<p>Define <strong>factor immobility</strong>. Name its two types for labour, and explain why it is a market failure.</p>",
+      "back": "<p><strong>Factor immobility</strong> — when factors of production, such as labour and capital, cannot move easily between different uses or locations.</p><ul><li><strong>Occupational immobility:</strong> workers lack the skills for the jobs on offer. A steelworker cannot simply become an accountant.</li><li><strong>Geographical immobility:</strong> workers cannot move to where the jobs are, because of housing costs, family ties or not knowing about vacancies elsewhere.</li></ul><p><strong>Why it is a market failure:</strong> the market does not clear. One region has unemployed workers while firms elsewhere cannot fill vacancies → those firms raise wages or turn down orders → higher costs and lost output. Meanwhile unemployment stays high where the jobs have gone.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "factor-immobility",
+        "occupational-immobility",
+        "geographical-immobility",
+        "market-failure"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-3-1-market-failure-in-society.html",
+        "origin": "notes-verbatim",
+        "verbatim": "when factors of production, such as labour and capital, cannot move easily between different uses or locations."
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-1-def-03",
+      "specCode": "4.3.1",
+      "topic": "4.3 Market Failure Across the Economy",
+      "subtopic": "4-3-1-market-failure-in-society",
+      "cardType": "definition",
+      "front": "<p>Define <strong>imperfect information</strong> and <strong>asymmetric information</strong>. How does each lead to market failure?</p>",
+      "back": "<p><strong>Imperfect information</strong> — when buyers or sellers lack the information they need to make the best decision.</p><p><strong>Asymmetric information</strong> — when one party to a transaction has more or better information than the other.</p><ul><li><strong>Imperfect information</strong> makes merit and demerit goods worse: people misjudge their own costs and benefits → too little of merit goods is consumed and too much of demerit goods.</li><li><strong>Asymmetric information</strong> lets the better-informed side take advantage. A landlord knows about damp that a new tenant cannot see, and a mechanic knows whether a repair is really needed.</li><li><strong>Buyers who fear being misled</strong> may stop buying altogether → even good products go unsold.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "imperfect-information",
+        "asymmetric-information",
+        "market-failure"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-3-1-market-failure-in-society.html",
+        "origin": "notes-verbatim",
+        "verbatim": "when buyers or sellers lack the information they need to make the best decision."
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-1-eval-01",
+      "specCode": "4.3.1",
+      "topic": "4.3 Market Failure Across the Economy",
+      "subtopic": "4-3-1-market-failure-in-society",
+      "cardType": "evaluation",
+      "front": "<p>Why does the free market produce too much pollution and too many greenhouse gas emissions? Build the chains for the consequences of climate change, and <strong>evaluate</strong> what decides how serious they are.</p>",
+      "back": "<p><strong>Why too much:</strong> pollution and emissions are external costs, so the market produces too much of them. The damage builds up over time and falls on people far away and on future generations, who play no part in the market.</p><ul><li><strong>Firms:</strong> more floods, droughts and heatwaves → damaged property and disrupted supply chains → higher costs and insurance premiums.</li><li><strong>Farming:</strong> less reliable harvests → more volatile food prices → lower real incomes for households.</li><li><strong>Some industries gain:</strong> demand for renewable energy, insulation and flood defences rises → new investment and jobs.</li><li><strong>The government:</strong> flood defences, disaster relief and health costs → higher public spending.</li></ul><p><strong>How serious it is depends on:</strong> time, since much of the damage comes decades after the emissions and is easy to ignore now; location, since coastal and farming regions are hit far harder than others; and action by other countries, since emissions affect the whole planet, so one country cutting back achieves little alone.</p><p><strong>Judgement:</strong> not everyone loses, since some industries gain. But the largest costs fall far away and in the future, on people with no part in today's market, which is why the market leaves them out.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "environmental-change",
+        "climate-change",
+        "external-costs",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-3-1-market-failure-in-society.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-2-diagram-01",
+      "specCode": "4.3.2",
+      "topic": "4.3 Market Failure Across the Economy",
+      "subtopic": "4-3-2-externalities",
+      "cardType": "diagram",
+      "front": "<p>Define <strong>internalising an externality</strong>. On a diagram for a good whose price leaves out an external cost, show what happens to price, output and the welfare loss when the externality is internalised.</p>",
+      "back": "<p><strong>Internalising an externality</strong> — making the producer or consumer pay for the external cost, so it becomes part of their private cost and the price.</p><p><strong>The diagram:</strong> MSC lies above S=MPC, and the gap between them is the external cost of each unit. Demand is D=MPB=MSB.</p><ul><li><strong>Price leaves out the external cost:</strong> the market charges P1 and produces Q1, where S=MPC meets demand. Q1 is above the social optimum Q2, and the shaded triangle is the welfare loss.</li><li><strong>Externality internalised:</strong> the price now covers the full social cost → it rises to P2 → output falls to Q2, where MSC meets demand → the welfare loss is removed.</li></ul><p><strong>Example:</strong> an airline's fares cover fuel, staff and aircraft, but not the damage done by the carbon its flights release.</p>",
+      "svgRef": "/images/diagrams/svg/overproduction.svg",
+      "svgAlt": "Costs, benefits on the vertical axis and quantity on the horizontal axis. Demand is D=MPB=MSB. MSC lies above S=MPC. The market equilibrium is at P1 and Q1, where S=MPC meets demand. The social optimum is at P2 and Q2, where MSC meets demand, with Q2 less than Q1 and P2 above P1. A shaded triangle between Q2 and Q1, between MSC and demand, is the welfare loss",
+      "difficulty": "standard",
+      "tags": [
+        "internalising-externalities",
+        "external-costs",
+        "overproduction",
+        "diagram"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-3-2-externalities.html",
+        "origin": "notes-verbatim",
+        "verbatim": "making the producer or consumer pay for the external cost, so it becomes part of their private cost and the price."
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-2-chain-01",
+      "specCode": "4.3.2",
+      "topic": "4.3 Market Failure Across the Economy",
+      "subtopic": "4-3-2-externalities",
+      "cardType": "chain",
+      "front": "<p>A firm's price covers only its private costs and leaves out an external cost. Build the chains for the four effects on society.</p>",
+      "back": "<ul><li><strong>Over-production:</strong> the price is too low → demand is higher than it should be → output goes above the social optimum → a welfare loss to society.</li><li><strong>Third parties pay:</strong> the cost of the damage falls on people outside the market → through worse health, flood damage or clean-up bills → lower real incomes for people who gained nothing from the sale.</li><li><strong>Clean firms lose out:</strong> the polluting firm's costs look lower than a clean rival's → it can charge less → the clean firm loses sales and has less reason to invest.</li><li><strong>Wrong signals for investment:</strong> polluting methods stay cheap → firms keep using them → too little is spent on cleaner technology.</li></ul><p><strong>The reverse:</strong> if buyers pay only for their private benefit, goods with external benefits are under-consumed, and society misses out on gains it would value.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "external-costs",
+        "third-parties",
+        "price-signals",
+        "chain"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-3-2-externalities.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-2-def-01",
+      "specCode": "4.3.2",
+      "topic": "4.3 Market Failure Across the Economy",
+      "subtopic": "4-3-2-externalities",
+      "cardType": "definition",
+      "front": "<p>Define an <strong>environmental externality</strong>. Give one external cost and one external benefit, and say whether the free market provides too much or too little of each.</p>",
+      "back": "<p><strong>Environmental externality</strong> — an external cost or benefit that affects the natural environment, such as air, water, land or the climate.</p><ul><li><strong>External cost:</strong> fertiliser washing off farmland into a river and harming its wildlife. The farm's prices leave out the damage → the market produces <strong>too much</strong> of its crops.</li><li><strong>External benefit:</strong> a landowner planting trees, which take in carbon. Nobody pays the landowner for that gain → the market provides <strong>too little</strong> tree planting.</li></ul><p>The market ignores both, because the people affected are not part of the deal and are not paid or charged for them.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "environmental-externality",
+        "external-costs",
+        "external-benefits"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-3-2-externalities.html",
+        "origin": "notes-verbatim",
+        "verbatim": "an external cost or benefit that affects the natural environment, such as air, water, land or the climate."
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-2-chain-02",
+      "specCode": "4.3.2",
+      "topic": "4.3 Market Failure Across the Economy",
+      "subtopic": "4-3-2-externalities",
+      "cardType": "chain",
+      "front": "<p>Why are environmental externalities harder to correct than most? Give four reasons.</p>",
+      "back": "<ul><li><strong>They are hard to measure:</strong> putting a money value on a lost wetland or cleaner air involves a lot of guesswork.</li><li><strong>They cross borders:</strong> carbon emitted in one country warms the whole planet → no single government can fix it.</li><li><strong>They build up over time:</strong> much of the cost falls on future generations → who have no say in today's market.</li><li><strong>Nobody owns the environment:</strong> there is no owner to charge for its use → firms treat clean air and water as free.</li></ul><p>Governments try to internalise these costs with policies such as taxes and tradable pollution permits.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "environmental-externality",
+        "measurement",
+        "future-generations",
+        "chain"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-3-2-externalities.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-2-app-01",
+      "specCode": "4.3.2",
+      "topic": "4.3 Market Failure Across the Economy",
+      "subtopic": "4-3-2-externalities",
+      "cardType": "application",
+      "front": "<p>For each, name who bears the external cost or misses out on the external benefit, and say why the price leaves it out:</p><ul><li>a quarry whose blasting and dust affect the village next to it</li><li>a delivery firm whose diesel vans fill a busy high street with fumes</li><li>a household deciding whether to fit solar panels, which cut emissions from power stations.</li></ul>",
+      "back": "<ul><li><strong>The quarry:</strong> villagers bear the noise, dust and cleaning bills. They are not part of the deal between the quarry and its buyers and are not compensated → the price of stone leaves out the damage → <strong>over-production</strong>.</li><li><strong>The vans:</strong> people who live and shop on the street breathe the fumes. The firm pays for fuel and drivers, not for the harm to their health → too many van journeys.</li><li><strong>Solar panels:</strong> the household counts only its own lower bills. Cutting emissions also helps everyone affected by climate change, including future generations, who pay nothing → too few panels are fitted: <strong>under-consumption</strong>.</li></ul><p><strong>On the diagram:</strong> for an external cost, the gap between MPC and MSC is the external cost of each unit, and the triangle is the welfare loss.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "third-parties",
+        "external-costs",
+        "external-benefits",
+        "application"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-3-2-externalities.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-3-def-01",
+      "specCode": "4.3.3",
+      "topic": "4.3 Market Failure Across the Economy",
+      "subtopic": "4-3-3-policies-to-deal-with-market-failure",
+      "cardType": "definition",
+      "front": "<p>Define <strong>tradable pollution permits</strong>. How does a permit scheme work, and what does it do to polluting firms, the environment and consumers?</p>",
+      "back": "<p><strong>Tradable pollution permits</strong> — permits, each allowing a set amount of pollution, that firms must hold to cover their emissions and can buy and sell.</p><p><strong>How it works:</strong> the government sets a cap on total pollution and issues that many permits. A firm that cuts its emissions cheaply can sell its spare permits, and a firm that cannot must buy more. The cap is lowered over time. The UK Emissions Trading Scheme works this way for power stations, heavy industry and aviation.</p><ul><li><strong>Polluting firms:</strong> pollution now has a price → higher costs → an incentive to invest in cleaner methods.</li><li><strong>The environment:</strong> the cap fixes total emissions → pollution falls as the cap tightens.</li><li><strong>Consumers:</strong> firms pass on the cost → higher prices for energy and goods made with it.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "tradable-pollution-permits",
+        "cap-and-trade",
+        "uk-ets",
+        "environment"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-3-3-policies-to-deal-with-market-failure.html",
+        "origin": "notes-verbatim",
+        "verbatim": "permits, each allowing a set amount of pollution, that firms must hold to cover their emissions and can buy and sell."
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-3-calc-01",
+      "specCode": "4.3.3",
+      "topic": "4.3 Market Failure Across the Economy",
+      "subtopic": "4-3-3-policies-to-deal-with-market-failure",
+      "cardType": "calculation",
+      "front": "<p>Under a tradable permit scheme, a cement maker emits <strong>1,000 tonnes</strong> of carbon a year but holds permits for only <strong>800 tonnes</strong>. A permit for one tonne sells for <strong>£50</strong>, and the firm can cut its emissions at a cost of <strong>£30 a tonne</strong>.</p><p>(a) What would it cost to cover the gap by buying permits, and what would it cost to cut its emissions instead? Which does it choose? (b) If it could cut further at £30 a tonne, why would it keep cutting? (c) Why do total emissions not rise when another firm chooses to buy permits instead?</p>",
+      "back": "<p><strong>(a)</strong> The gap is 1,000 − 800 = <strong>200 tonnes</strong>. Buying permits costs 200 × £50 = <strong>£10,000</strong>. Cutting costs 200 × £30 = <strong>£6,000</strong>. Cutting is £4,000 cheaper, so it cuts its emissions.</p><p><strong>(b)</strong> Each further tonne it cuts costs £30 and frees a permit it can sell for £50 → a £20 gain on each tonne → pollution having a price gives it a reason to keep cutting.</p><p><strong>(c)</strong> Every tonne emitted needs a permit, and the government issues only as many permits as the cap allows → a firm that buys permits uses ones another firm no longer needs → the cap fixes total emissions, and they fall as the cap is lowered.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "tradable-pollution-permits",
+        "cap-and-trade",
+        "calculation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-3-3-policies-to-deal-with-market-failure.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-3-chain-01",
+      "specCode": "4.3.3",
+      "topic": "4.3 Market Failure Across the Economy",
+      "subtopic": "4-3-3-policies-to-deal-with-market-failure",
+      "cardType": "chain",
+      "front": "<p>Build the chains: how do <strong>government provision</strong> and <strong>provision of information</strong> correct market failure? Give the cost or limit of each.</p>",
+      "back": "<p><strong>Government provision</strong> of public and merit goods, paid for through taxes. The market provides little or no public goods, such as national defence, so the state supplies them itself. Merit goods, such as vaccinations, are made free at the point of use, so cost does not stop anyone using them.</p><ul><li><strong>Consumers:</strong> a zero price → consumption rises towards the social optimum → a healthier, better-educated population. In the long term, a more skilled workforce brings higher productivity and tax revenue.</li><li><strong>The cost:</strong> provision has to be paid for → higher taxes or borrowing, or less spent on something else.</li></ul><p><strong>Provision of information</strong>, such as health warnings, campaigns, or rules making firms publish information about what they sell.</p><ul><li>Better information → consumers make choices closer to the social optimum → less over-consumption of demerit goods and more use of merit goods.</li><li><strong>The limit:</strong> it is cheap, but people may ignore it, especially where a habit or addiction is involved. Attitudes shift only slowly, as with smoking.</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": [
+        "government-provision",
+        "provision-of-information",
+        "public-good",
+        "merit-good",
+        "chain"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-3-3-policies-to-deal-with-market-failure.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-3-eval-01",
+      "specCode": "4.3.3",
+      "topic": "4.3 Market Failure Across the Economy",
+      "subtopic": "4-3-3-policies-to-deal-with-market-failure",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> policies to deal with market failure using the time frame. Give the short-term and long-term impact of an indirect tax, a subsidy, tradable permits, and legislation and regulation. What decides whether a policy works?</p>",
+      "back": "<ul><li><strong>Indirect tax:</strong> short term, higher prices, habits barely change where demand is price inelastic, and it hits poorer households hardest. Long term, people quit or switch, and firms change products, such as cutting sugar.</li><li><strong>Subsidy:</strong> short term, higher government spending and more of the good bought. Long term, firms may come to rely on it, but the habit, such as better insulated homes, can last after it ends.</li><li><strong>Tradable permits:</strong> short term, higher costs and prices for energy users. Long term, investment in clean technology, and emissions fall as the cap tightens.</li><li><strong>Legislation and regulation:</strong> short term, harm is cut quickly, with compliance costs for firms. Long term, it can push firms to innovate, or drive trade to an illegal market.</li></ul><p><strong>Whether it works depends on:</strong></p><ul><li><strong>PED:</strong> a tax cuts consumption only if demand is price elastic enough to respond.</li><li><strong>Information:</strong> the government rarely knows the exact external cost, so taxes and caps may be set at the wrong level.</li><li><strong>Time lags:</strong> new technology, skills and habits take years to change.</li><li><strong>Who bears the cost:</strong> taxes on necessities, such as energy, take a larger share of poorer households' income.</li><li><strong>Government failure:</strong> poorly designed policy can leave things worse than before.</li></ul><p><strong>Judgement:</strong> ask what the policy does in the first year and after ten. A permit scheme raises energy prices now but pays for cleaner technology later. Say which effect matters more in the case given.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": [
+        "short-run-long-run",
+        "indirect-tax",
+        "subsidy",
+        "tradable-pollution-permits",
+        "evaluation"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-3-3-policies-to-deal-with-market-failure.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-b-4-3-3-app-01",
+      "specCode": "4.3.3",
+      "topic": "4.3 Market Failure Across the Economy",
+      "subtopic": "4-3-3-policies-to-deal-with-market-failure",
+      "cardType": "application",
+      "front": "<p>Choose a policy for each market failure, and explain why it fits:</p><ul><li>ships need a lighthouse on a dangerous stretch of coast, but no firm will build one</li><li>a chemical that factories release is found to cause serious harm to health</li><li>many power stations and steelworks emit carbon, and some can cut their emissions far more cheaply than others</li><li>people underestimate the long-term harm of heavy drinking.</li></ul>",
+      "back": "<ul><li><strong>Lighthouse: government provision.</strong> It is a public good: no ship can be made to pay, so no firm can make a profit. The state provides it, paid for through taxes.</li><li><strong>Chemical: legislation and regulation.</strong> A ban or an emissions limit works quickly and with certainty where the harm is serious. The costs are enforcement and higher compliance costs for firms.</li><li><strong>Carbon: tradable pollution permits.</strong> The cap fixes total emissions. Firms that can cut cheaply do so and sell their spare permits, and the cap is lowered over time.</li><li><strong>Heavy drinking: provision of information</strong>, such as health warnings and campaigns, so people choose closer to the social optimum. It is cheap but may be ignored where there is a habit or addiction. An indirect tax can add to it, but cuts drinking only if demand is price elastic enough to respond.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": [
+        "policy-choice",
+        "government-provision",
+        "regulation",
+        "tradable-pollution-permits",
+        "application"
+      ],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-11-11",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-b-theme-4/4-3-3-policies-to-deal-with-market-failure.html",
+        "origin": "card-authored"
+      }
     }
   ]
 }
