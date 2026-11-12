@@ -295,8 +295,14 @@ def topic_rows(dirs: list[list]) -> list[list]:
 
 # ------------------------------------------------------------- glossary
 
-# boards bitmask, in boards.json group order: Edexcel first.
-GLOSSARY_BOARDS = (("edexcel-a", 1), ("aqa", 2))
+# boards bitmask, one bit per LIVE glossary board in boards.json order:
+# Edexcel A 1, AQA 2, and Edexcel B 4 once its glossary launches (a staged
+# board's terms are not in terms.json). Derived since Phase 3 (2026-11-12);
+# it was a two-board literal. js/components/site-search.js decodes the bits
+# by the same order and must gain a line for any board added after B.
+GLOSSARY_BOARDS = tuple(
+    (b["slugs"]["glossary"], 1 << i)
+    for i, b in enumerate(board_data.load("glossary").values()))
 
 
 def glossary_rows() -> list[list]:

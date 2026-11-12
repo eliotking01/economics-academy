@@ -179,6 +179,7 @@
       var links = [];
       if (g[2] & 1) links.push(["Edexcel", "/revision-notes/glossary/edexcel-a/#" + g[1]]);
       if (g[2] & 2) links.push(["AQA", "/revision-notes/glossary/aqa/#" + g[1]]);
+      if (g[2] & 4) links.push(["Edexcel B", "/revision-notes/glossary/edexcel-b/#" + g[1]]);
       var row = makeRow(
         "glossary", g[0], links[0][1],
         g[3] ? "Formula" : "Glossary",

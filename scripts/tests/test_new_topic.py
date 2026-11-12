@@ -160,6 +160,12 @@ class StagedTests(unittest.TestCase):
     def test_staged_accepted(self):
         board_data._features_are_coherent(
             self.record(["notes"], ["practiceQuestions", "flashcards"]))
+        # Phase 3: the glossary is stageable, given practice questions live
+        # (Edexcel B's case) or staged beside it.
+        board_data._features_are_coherent(
+            self.record(["notes", "practiceQuestions"], ["glossary"]))
+        board_data._features_are_coherent(
+            self.record(["notes"], ["practiceQuestions", "glossary"]))
 
     def test_staged_counts_only_when_asked(self):
         b = {"features": ["notes"], "staged": ["flashcards"]}

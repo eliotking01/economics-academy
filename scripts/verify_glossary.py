@@ -49,7 +49,10 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "glossary-data" / "terms.json"
 GLOSSARY = ROOT / "revision-notes" / "glossary"
-BOARD_DIR = {"edexcel-a": "edexcel-a", "aqa": "aqa"}
+# BOARD_DIR, {glossary board: page directory}, is set in main() from
+# build_glossary.BOARDS - the LIVE boards. Was a two-board literal; a staged
+# board (D68) has no page to check, and build_glossary validates it instead.
+BOARD_DIR: dict = {}
 
 
 def load(name):
@@ -94,6 +97,9 @@ def page_text(eg, path: pathlib.Path) -> str:
 
 def main():
     fails = []
+
+    bg = load("build_glossary")
+    BOARD_DIR.update({b: m["slug"] for b, m in bg.BOARDS.items()})
 
     if not DATA.is_file():
         print("error: glossary-data/terms.json is missing - run "
@@ -158,35 +164,19 @@ def main():
           f"{'stale' if stale else 'current'}")
 
     # ---- 3. the pages are current -----------------------------------------
-    bg = load("build_glossary")
+    # build_glossary.render_all() is the generator's own render, groups and
+    # maths included: rebuilding that here by hand is how this check came to
+    # key groups on the bare slug, which Edexcel B's theme-1..4 would collide
+    # on (Phase 0 hazard 1).
     tax = json.loads((ROOT / "past-paper-questions-data" / "taxonomy.json")
                      .read_text(encoding="utf-8"))
-    groups, order = {}, 0
-    for b in tax["boards"]:
-        for g in b["groups"]:
-            groups[g["slug"]] = {"label": g["label"], "name": g["name"],
-                                 "order": order}
-            order += 1
     try:
-        latex = [f["latex"] for f in data["formulae"]]
-        rendered = dict(zip(latex, bg.katex(latex)))
-        import html as _h
-        inline = sorted({
-            _h.unescape(m).strip()
-            for t in data["terms"] for src in t["sources"]
-            for m in bg.INLINE_TEX.findall(src["definitionHtml"])
-        })
-        inline_map = dict(zip(inline, bg._katex(inline, False)))
+        pages = bg.render_all(data, tax, bg.BOARDS)
     except bg.BuildError as exc:
         fails.append(f"[3] {exc}")
-        rendered = inline_map = None
+        pages = {}
 
-    pages = {}
-    if rendered is not None:
-        pages[GLOSSARY / "index.html"] = bg.render_landing(data)
-        for board in bg.BOARDS:
-            pages[GLOSSARY / bg.BOARDS[board]["slug"] / "index.html"] = \
-                bg.render_board(data, board, groups, rendered, inline_map)
+    if pages:
         for path, expected in pages.items():
             actual = path.read_text(encoding="utf-8")
             # Wave 2 Phase 7: the generator bakes the header and footer in

@@ -99,31 +99,63 @@ BOARD_COPY = {
             "notes. Search or print."
         ),
     },
+    # DRAFT, Phase 3 (2026-11-12), for Eliot's approval in
+    # review/glossary-b.md. Copied from Edexcel A's with B's name and code. B
+    # is STAGED, so no page prints this until /launch-feature.
+    "edexcel-b": {
+        "intro": (
+            "Every key term and formula you need for <strong>Edexcel A-Level "
+            "Economics B (9EB0)</strong>, covering Themes 1 to 4. Each "
+            "definition comes from the revision notes on this site, and links "
+            "back to the topic page it came from."
+        ),
+        "meta": (
+            "Every key term and formula for Edexcel A-Level Economics B "
+            "(9EB0), taken from our Theme 1-4 revision notes. Search, "
+            "browse A-Z or print."
+        ),
+    },
 }
 
-BOARDS = {}
-for _b in board_data.load("glossary").values():
-    _slug = _b["slugs"]["glossary"]
-    if _slug not in BOARD_COPY:
-        sys.exit(f"boards.json records glossary board {_slug!r} and BOARD_COPY "
-                 f"has no intro or meta for it. A board page cannot be built "
-                 f"without both - add the copy here, in this file.")
-    BOARDS[_slug] = {
-        "slug": _slug,
-        "name": _b["names"]["display"],
-        "long": _b["names"]["long"],
-        "taxonomy": _b["slugs"]["taxonomy"],
-        "notesUrl": _b["notesUrl"],
-        **BOARD_COPY[_slug],
-    }
+def board_table(staged: bool = False) -> dict:
+    """{glossary slug: page metadata} for the live glossary boards, or with
+    staged=True the staged ones too (D68) - which build_glossary renders in
+    memory to validate and never writes."""
+    out = {}
+    for b in board_data.load("glossary", staged=staged).values():
+        slug = b["slugs"]["glossary"]
+        if slug not in BOARD_COPY:
+            sys.exit(f"boards.json records glossary board {slug!r} and "
+                     f"BOARD_COPY has no intro or meta for it. A board page "
+                     f"cannot be built without both - add the copy here, in "
+                     f"this file.")
+        out[slug] = {
+            "slug": slug,
+            "name": b["names"]["display"],
+            "long": b["names"]["long"],
+            "taxonomy": b["slugs"]["taxonomy"],
+            "notesUrl": b["notesUrl"],
+            **BOARD_COPY[slug],
+        }
+    return out
 
-_orphaned = sorted(set(BOARD_COPY) - set(BOARDS))
+
+BOARDS = board_table()
+STAGED_BOARDS = board_table(staged=True)
+
+_orphaned = sorted(set(BOARD_COPY) - set(STAGED_BOARDS))
 if _orphaned:
     sys.exit(f"BOARD_COPY has page copy for {_orphaned}, which boards.json "
              f"does not record as a glossary board. Delete it, or add the "
              f"board to the record.")
 
 INLINE_TEX = re.compile(r"\\\((.+?)\\\)", re.S)
+# Display maths INSIDE a definition. Edexcel B's notes (Phase 3) state a
+# formula in the chip's own paragraph as \[ ... \] - "Average cost: the cost
+# of producing one unit ...: \[ AC = ... \]" - where Edexcel A and AQA wrote
+# it inline. It is part of the notes' own definition, so it is pre-rendered
+# in display mode like a formula, not stripped. No live definition had one.
+DISPLAY_TEX = re.compile(r"\\\[(.+?)\\\]", re.S)
 
 # ------------------------------------------------------------ capitalisation
 #
@@ -213,11 +245,46 @@ def rewrite(term_id: str, fragment: str, table: dict) -> str:
             f"been fixed at source.")
     return rule["to"] + fragment[len(rule["from"]):]
 
-LANDING_META = (
-    "Free A-Level Economics glossary. Choose your exam board for every "
-    "definition and formula you need, taken from our Edexcel and "
-    "AQA revision notes."
-)
+# The landing page's copy depends on which boards it lists, so it is keyed on
+# them, in boards.json order. Edexcel A + AQA is what is live. The three-board
+# entry is a DRAFT (Phase 3, 2026-11-12) for Eliot's approval in
+# review/glossary-b.md, printed by no page until Edexcel B's glossary launches.
+# Any other set of boards stops the build until it has copy here.
+LANDING_COPY = {
+    ("edexcel-a", "aqa"): {
+        "meta": (
+            "Free A-Level Economics glossary. Choose your exam board for every "
+            "definition and formula you need, taken from our Edexcel and "
+            "AQA revision notes."
+        ),
+        "intro": """Every definition and formula you need, in one place. Pick your exam
+              board - the two specifications share most of their vocabulary, but
+              not all of it, and each glossary carries only what its own
+              specification asks for.""",
+    },
+    ("edexcel-a", "aqa", "edexcel-b"): {
+        "meta": (
+            "Free A-Level Economics glossary. Choose your exam board for every "
+            "definition and formula you need, taken from our Edexcel A, "
+            "Edexcel B and AQA revision notes."
+        ),
+        "intro": """Every definition and formula you need, in one place. Pick your exam
+              board - the three specifications share most of their vocabulary,
+              but not all of it, and each glossary carries only what its own
+              specification asks for.""",
+    },
+}
+
+
+def landing_copy(boards: dict) -> dict:
+    key = tuple(boards)
+    if key not in LANDING_COPY:
+        sys.exit(f"the glossary landing page has no copy for the boards "
+                 f"{key}. Add an entry to LANDING_COPY in this file.")
+    return LANDING_COPY[key]
+
+
+LANDING_META = landing_copy(BOARDS)["meta"]
 
 
 class BuildError(Exception):
@@ -249,7 +316,7 @@ def tex_to_text(s: str) -> str:
               .replace(r"\Delta", "change in").replace(r"\infty", "infinity"))
         t = re.sub(r"\\[a-zA-Z]+", " ", t)
         return re.sub(r"\s+", " ", t.replace("{", "").replace("}", "")).strip()
-    return INLINE_TEX.sub(one, s)
+    return DISPLAY_TEX.sub(one, INLINE_TEX.sub(one, s))
 
 
 def plain(fragment: str) -> str:
@@ -279,7 +346,7 @@ def katex(latex_list):
     return _katex(latex_list, True)
 
 
-def render_inline_maths(definition: str, inline_map) -> str:
+def render_inline_maths(definition: str, inline_map, display_map=None) -> str:
     """Swap \\( ... \\) inside a definition for pre-rendered KaTeX.
 
     Fifteen definitions state their formula inline - "Average Cost (AC):
@@ -287,6 +354,10 @@ def render_inline_maths(definition: str, inline_map) -> str:
     so without this those definitions display their LaTeX source to the reader.
     Display formulae are handled separately; only the inline form appears here.
     """
+    if display_map is not None:
+        definition = DISPLAY_TEX.sub(
+            lambda m: display_map[html.unescape(m.group(1)).strip()],
+            definition)
     return INLINE_TEX.sub(
         lambda m: inline_map[html.unescape(m.group(1)).strip()], definition)
 
@@ -329,8 +400,30 @@ def slug_ok(s: str) -> bool:
 
 # ---------------------------------------------------------------- validation
 
-def validate(data, groups):
+def taxonomy_groups(tax, boards) -> dict:
+    """{(glossary board, group slug): label, name, order} for `boards`.
+
+    Keyed on the board as well as the slug since Phase 3: Edexcel A and
+    Edexcel B both have groups `theme-1`..`theme-4`, and keyed on the slug
+    alone the second board's would overwrite the first's (Phase 0 hazard 1).
+    Glossary boards only: taxonomy.json can hold a board for the past-paper
+    bank alone, or for a staged glossary (board_data.TAXONOMY_READERS).
+    """
+    of_taxonomy = {m["taxonomy"]: slug for slug, m in boards.items()}
+    groups, order = {}, 0
+    for b in tax["boards"]:
+        if b["board"] not in of_taxonomy:
+            continue
+        for g in b["groups"]:
+            groups[(of_taxonomy[b["board"]], g["slug"])] = {
+                "label": g["label"], "name": g["name"], "order": order}
+            order += 1
+    return groups
+
+
+def validate(data, groups, boards=None):
     """Collect every failure. Nothing is written if there is one."""
+    boards = BOARDS if boards is None else boards
     errs = []
     seen = {}
 
@@ -344,11 +437,11 @@ def validate(data, groups):
         if not t["sources"]:
             errs.append(f"{where}: no sources")
         for s in t["sources"]:
-            if s["board"] not in BOARDS:
+            if s["board"] not in boards:
                 errs.append(f"{where}: unknown board '{s['board']}'")
             if s["notesUrl"] and not (ROOT / s["notesUrl"].lstrip("/")).is_file():
                 errs.append(f"{where}: notesUrl does not exist - {s['notesUrl']}")
-            if s["group"] not in groups:
+            if (s["board"], s["group"]) not in groups:
                 errs.append(f"{where}: unknown group '{s['group']}'")
             if s.get("definitionListHtml"):
                 lst = ALLOWED_LIST.sub("", s["definitionListHtml"])
@@ -379,12 +472,13 @@ def validate(data, groups):
             errs.append(f"{where}: unescaped % in the LaTeX, which TeX reads as "
                         f"a comment - it must be written \\%. Fix the notes page")
 
-    for board, meta in BOARDS.items():
+    for board, meta in boards.items():
         if not 120 <= len(meta["meta"]) <= 165:
             errs.append(f"{board}: meta description is {len(meta['meta'])} "
                         f"characters, needs 120-165")
-    if not 120 <= len(LANDING_META) <= 165:
-        errs.append(f"landing: meta description is {len(LANDING_META)} "
+    landing_meta = landing_copy(boards)["meta"]
+    if not 120 <= len(landing_meta) <= 165:
+        errs.append(f"landing: meta description is {len(landing_meta)} "
                     f"characters, needs 120-165")
     return errs
 
@@ -493,7 +587,7 @@ def ld_description(term, board, rules, approved):
     return text
 
 
-def entry_html(term, board, inline_map, approved, rules):
+def entry_html(term, board, inline_map, approved, rules, display_map=None):
     s = source_for(term, board)
     definition = rewrite(term["id"], s["definitionHtml"], rules)
     definition = capitalise(term["id"], definition, approved)
@@ -509,9 +603,11 @@ def entry_html(term, board, inline_map, approved, rules):
     dlist = ""
     if s.get("definitionListHtml"):
         dlist = ('<div class="gl-def-list">'
-                 + render_inline_maths(s["definitionListHtml"], inline_map)
+                 + render_inline_maths(s["definitionListHtml"], inline_map,
+                                       display_map)
                  + "</div>")
-    text = f'<p class="gl-text">{render_inline_maths(definition, inline_map)}</p>'
+    text = (f'<p class="gl-text">'
+            f'{render_inline_maths(definition, inline_map, display_map)}</p>')
     body = [dlist, text] if s.get("listIsDefinition") else [text, dlist]
     body_html = "\n                  ".join(p for p in body if p)
     groups = sorted({x["group"] for x in term["sources"] if x["board"] == board})
@@ -552,14 +648,15 @@ def formula_html(f, board, rendered, groups):
               <!-- prettier-ignore -->
               <div class="gl-math">{rendered}</div>
               <p class="gl-source">
-                <span class="gl-group">{e(groups[s['group']]['label'])}</span>
+                <span class="gl-group">{e(groups[(board, s['group'])]['label'])}</span>
                 <a href="{e(s['notesUrl'])}">{e(s['spec'])} {e(s['topic'])}</a>
               </p>
             </div>"""
 
 
-def render_board(data, board, groups, rendered_map, inline_map):
-    meta = BOARDS[board]
+def render_board(data, board, groups, rendered_map, inline_map, boards=None):
+    boards = BOARDS if boards is None else boards
+    meta = boards[board]
     approved = approved_capitalisations()
     rules = rewrites()
     terms = [t for t in data["terms"] if board in t["boards"]]
@@ -585,9 +682,9 @@ def render_board(data, board, groups, rendered_map, inline_map):
     board_groups = sorted(
         {g for t in terms for s in t["sources"] if s["board"] == board
          for g in [s["group"]]},
-        key=lambda g: groups[g]["order"])
+        key=lambda g: groups[(board, g)]["order"])
     options = "\n".join(
-        f'                <option value="{e(g)}">{e(groups[g]["label"])}</option>'
+        f'                <option value="{e(g)}">{e(groups[(board, g)]["label"])}</option>'
         for g in board_groups)
 
     sections = []
@@ -595,7 +692,7 @@ def render_board(data, board, groups, rendered_map, inline_map):
         if not by_letter[L]:
             continue
         entries = "\n".join(
-                entry_html(t, board, inline_map, approved, rules)
+                entry_html(t, board, inline_map, approved, rules, rendered_map)
                 for t in by_letter[L])
         sections.append(f"""          <section class="gl-letter" id="letter-{L.lower()}">
             <h2 class="gl-letter-head">{L}</h2>
@@ -604,7 +701,8 @@ def render_board(data, board, groups, rendered_map, inline_map):
             </dl>
           </section>""")
     if other:
-        entries = "\n".join(entry_html(t, board, inline_map, approved, rules) for t in other)
+        entries = "\n".join(entry_html(t, board, inline_map, approved, rules,
+                                        rendered_map) for t in other)
         sections.append(f"""          <section class="gl-letter" id="letter-other">
             <h2 class="gl-letter-head">Other</h2>
             <dl class="gl-list">
@@ -633,24 +731,14 @@ def render_board(data, board, groups, rendered_map, inline_map):
 """
 
     # PH01-012's exhibit: this was `"aqa" if board == "edexcel-a" else
-    # "edexcel-a"`, which silently assumes there will only ever be two boards -
-    # a third would have been sent to Edexcel A's glossary from every page, and
-    # never linked to from anywhere.
-    #
-    # The hero renders ONE "Switch to the ... glossary" link, so two boards is
-    # what this template can express. That assumption is now stated and checked
-    # rather than buried in a ternary; a third board fails here, loudly, in the
-    # one place that has to be redesigned to accept it.
-    others = [b for b in BOARDS if b != board]
-    if len(others) != 1:
-        sys.exit(f"the glossary hero links to 'the other board' and boards.json "
-                 f"records {len(BOARDS)}, so there are {len(others)} of them. "
-                 f"That link and this page's header need a design decision "
-                 f"before a third board can ship.")
-    other_board = others[0]
+    # "edexcel-a"`, which silently assumed there would only ever be two boards.
+    # With two, the hero still renders the one "Switch to the ... glossary"
+    # link it always has, byte for byte. With three (Edexcel B, Phase 3) it
+    # names each other board - see switch_html().
     crumbs = [("Home", "/"), ("Revision Notes", "/revision-notes/"),
               ("Glossary", "/revision-notes/glossary/"),
-              (BOARDS[board]["name"], None)]
+              (boards[board]["name"], None)]
+    switch = switch_html(board, boards)
 
     body = f"""{breadcrumb_html(crumbs)}
 
@@ -660,9 +748,7 @@ def render_board(data, board, groups, rendered_map, inline_map):
             <p class="gl-stats">
               <strong>{len(terms)}</strong> definitions and
               <strong>{len(formulae)}</strong> formulae.
-              <a href="/revision-notes/glossary/{BOARDS[other_board]['slug']}/"
-                >Switch to the {e(BOARDS[other_board]['name'])} glossary</a
-              >
+{switch}
             </p>
           </header>
 
@@ -759,11 +845,34 @@ def render_board(data, board, groups, rendered_map, inline_map):
     )
 
 
+def switch_html(board, boards):
+    """The hero's link to the other board's glossary - or, with more than one
+    other board, to each of them.
+
+    The two-board form is the markup the live pages have always carried, kept
+    byte-identical. The three-board form is a DRAFT (Phase 3, 2026-11-12) for
+    Eliot's approval in review/glossary-b.md; no page prints it until Edexcel
+    B's glossary launches.
+    """
+    others = [b for b in boards if b != board]
+    if len(others) == 1:
+        o = boards[others[0]]
+        return (f'              <a href="/revision-notes/glossary/{o["slug"]}/"\n'
+                f'                >Switch to the {e(o["name"])} glossary</a\n'
+                f'              >')
+    links = [f'<a href="/revision-notes/glossary/{boards[o]["slug"]}/"'
+             f'>{e(boards[o]["name"])}</a>' for o in others]
+    joined = ", ".join(links[:-1]) + " or " + links[-1]
+    return f"              Switch to the {joined} glossary."
+
+
 # ---------------------------------------------------------------- landing
 
-def render_landing(data):
+def render_landing(data, boards=None):
+    boards = BOARDS if boards is None else boards
+    copy = landing_copy(boards)
     counts = {}
-    for b in BOARDS:
+    for b in boards:
         counts[b] = (
             sum(1 for t in data["terms"] if b in t["boards"]),
             sum(1 for f in data["formulae"] if b in f["boards"]),
@@ -772,7 +881,7 @@ def render_landing(data):
               ("Glossary", None)]
 
     cards = []
-    for b, meta in BOARDS.items():
+    for b, meta in boards.items():
         n, nf = counts[b]
         cards.append(f"""            <div class="gl-card">
               <h2><a href="/revision-notes/glossary/{meta['slug']}/">{e(meta['long'])}</a></h2>
@@ -792,10 +901,7 @@ def render_landing(data):
           <header class="gl-hero">
             <h1>A-Level Economics Glossary</h1>
             <p class="gl-intro">
-              Every definition and formula you need, in one place. Pick your exam
-              board - the two specifications share most of their vocabulary, but
-              not all of it, and each glossary carries only what its own
-              specification asks for.
+              {copy["intro"]}
             </p>
             <p class="gl-intro">
               Every definition comes from the
@@ -830,7 +936,7 @@ def render_landing(data):
         "@context": "https://schema.org",
         "@type": "CollectionPage",
         "name": "A-Level Economics Glossary",
-        "description": LANDING_META,
+        "description": copy["meta"],
         "url": f"{SITE}/revision-notes/glossary/",
         "inLanguage": "en-GB",
         "isPartOf": {"@type": "WebSite", "name": "Economics Academy", "url": SITE},
@@ -839,19 +945,68 @@ def render_landing(data):
             {"@type": "DefinedTermSet",
              "name": f"{m['long']} Glossary",
              "url": f"{SITE}/revision-notes/glossary/{m['slug']}/"}
-            for m in BOARDS.values()
+            for m in boards.values()
         ],
     }
 
     return page_shell(
         title="A-Level Economics Glossary — Key Terms & Formulae | Economics Academy",
-        desc=LANDING_META,
+        desc=copy["meta"],
         path="/revision-notes/glossary/",
         crumbs=crumbs, body=body, jsonld=ld,
     )
 
 
 # ---------------------------------------------------------------- main
+
+# extract_glossary.py's staged run (D68). Read to validate, never published.
+STAGED_TERMS = ROOT / "_working" / "glossary" / "staged" / "terms.json"
+
+
+def render_all(data, tax, boards) -> dict:
+    """{path: page source} for the landing page and each board's page.
+    Raises BuildError on the first class of failure, writing nothing."""
+    groups = taxonomy_groups(tax, boards)
+    errs = validate(data, groups, boards)
+    if errs:
+        raise BuildError(f"{len(errs)} problem(s), nothing written:\n"
+                         + "\n".join(f"  - {x}" for x in errs))
+
+    # Display maths: every formula, plus any \[ \] inside a definition. The
+    # second set is empty for Edexcel A and AQA, so their render is unchanged.
+    latex = [f["latex"] for f in data["formulae"]]
+    seen = set(latex)
+    for t in data["terms"]:
+        for s in t["sources"]:
+            for m in DISPLAY_TEX.findall(s["definitionHtml"]
+                                         + s.get("definitionListHtml", "")):
+                m = html.unescape(m).strip()
+                if m not in seen:
+                    seen.add(m)
+                    latex.append(m)
+    rendered_map = dict(zip(latex, katex(latex)))
+    inline = sorted({
+        html.unescape(m).strip()
+        for t in data["terms"] for s in t["sources"]
+        for m in INLINE_TEX.findall(s["definitionHtml"]
+                                    + s.get("definitionListHtml", ""))
+    })
+    inline_map = dict(zip(inline, _katex(inline, False)))
+
+    pages = {OUT_DIR / "index.html": render_landing(data, boards)}
+    for board in boards:
+        pages[OUT_DIR / boards[board]["slug"] / "index.html"] = render_board(
+            data, board, groups, rendered_map, inline_map, boards)
+
+    for path, source in pages.items():
+        leftover = re.search(r"\\\(|\\\[", source)
+        if leftover:
+            i = leftover.start()
+            raise BuildError(f"{path.relative_to(ROOT)} still contains raw "
+                             f"LaTeX at {source[i:i + 60]!r} - it was not "
+                             f"pre-rendered")
+    return pages
+
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
@@ -866,51 +1021,33 @@ def main():
 
     data = json.loads(DATA.read_text(encoding="utf-8"))
     tax = json.loads(TAXONOMY.read_text(encoding="utf-8"))
-    groups, order = {}, 0
-    # Glossary boards only: taxonomy.json can hold a board for the past-paper
-    # bank alone (board_data.TAXONOMY_READERS).
-    glossary_tax = {b["taxonomy"] for b in BOARDS.values()}
-    for b in tax["boards"]:
-        if b["board"] not in glossary_tax:
-            continue
-        for g in b["groups"]:
-            groups[g["slug"]] = {"label": g["label"], "name": g["name"],
-                                 "order": order}
-            order += 1
-
-    errs = validate(data, groups)
-    if errs:
-        print(f"{len(errs)} problem(s), nothing written:", file=sys.stderr)
-        for x in errs:
-            print(f"  - {x}", file=sys.stderr)
-        return 1
 
     try:
-        latex = [f["latex"] for f in data["formulae"]]
-        rendered_map = dict(zip(latex, katex(latex)))
-        inline = sorted({
-            html.unescape(m).strip()
-            for t in data["terms"] for s in t["sources"]
-            for m in INLINE_TEX.findall(s["definitionHtml"])
-        })
-        inline_map = dict(zip(inline, _katex(inline, False)))
+        pages = render_all(data, tax, BOARDS)
     except BuildError as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 1
 
-    pages = {OUT_DIR / "index.html": render_landing(data)}
-    for board in BOARDS:
-        pages[OUT_DIR / BOARDS[board]["slug"] / "index.html"] = \
-            render_board(data, board, groups, rendered_map, inline_map)
-
-    for path, source in pages.items():
-        leftover = re.search(r"\\\(|\\\[", source)
-        if leftover:
-            i = leftover.start()
-            print(f"error: {path.name} still contains raw LaTeX at "
-                  f"{source[i:i + 60]!r} - it was not pre-rendered",
-                  file=sys.stderr)
+    # STAGED boards (D68): every page rendered again, in memory, from
+    # extract_glossary.py's staged run, with every check above - and nothing
+    # written. That includes the live boards' pages as they would be at
+    # launch, so their three-board copy is validated too.
+    staged = sorted(set(STAGED_BOARDS) - set(BOARDS))
+    if staged:
+        if not STAGED_TERMS.is_file():
+            print(f"error: {', '.join(staged)} glossary is staged and "
+                  f"{STAGED_TERMS.relative_to(ROOT)} is missing - run "
+                  f"scripts/extract_glossary.py first", file=sys.stderr)
             return 1
+        try:
+            staged_pages = render_all(
+                json.loads(STAGED_TERMS.read_text(encoding="utf-8")), tax,
+                STAGED_BOARDS)
+        except BuildError as exc:
+            print(f"error (staged {', '.join(staged)}): {exc}", file=sys.stderr)
+            return 1
+        print(f"  validated the staged {', '.join(staged)} glossary: "
+              f"{len(staged_pages)} pages rendered in memory, none written")
 
     for b in BOARDS:
         n = sum(1 for t in data["terms"] if b in t["boards"])

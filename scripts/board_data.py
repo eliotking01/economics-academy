@@ -117,8 +117,15 @@ FAMILIES = FEATURES + ("taxonomy",)
 
 # A family can be STAGED - its data being written, validated by its
 # generator, no page written - only where the generator honours that. The
-# glossary and the bank join when Phases 3 and 4 teach their generators to.
-STAGEABLE = ("practiceQuestions", "flashcards")
+# glossary joined in Phase 3 (2026-11-12): extract_glossary.py extracts a
+# staged board into _working/glossary/staged/ rather than terms.json, and
+# build_glossary.py renders its page in memory and writes nothing. The bank
+# joins when Phase 4 teaches its generator to.
+#
+# A staged glossary puts its board in taxonomy.json (load("taxonomy",
+# staged=True)): taxonomy.json is data, published nowhere, and every reader of
+# it filters to its own LIVE family, so the board reaches no page through it.
+STAGEABLE = ("practiceQuestions", "flashcards", "glossary")
 
 # EA_PREVIEW="edexcel-b:practiceQuestions[,board:feature...]" promotes a
 # staged family to live for one local run, so its pages can be opened in
@@ -272,6 +279,14 @@ def _features_are_coherent(data: dict) -> None:
                          f"practiceQuestions. taxonomy.json, which {reader} "
                          f"reads, is built from the questions-data/ topic "
                          f"records - switch practiceQuestions on first")
+            # A STAGED reader puts the board in taxonomy.json too (Phase 3),
+            # so it needs the same records - live or staged themselves.
+            if (reader in staged and "practiceQuestions" not in have
+                    and "practiceQuestions" not in staged):
+                sys.exit(f"boards.json: {key} stages {reader} without "
+                         f"practiceQuestions. A staged {reader} puts the board "
+                         f"in taxonomy.json, which is built from the "
+                         f"questions-data/ topic records")
 
 
 def _ordering_is_significant(data: dict) -> None:

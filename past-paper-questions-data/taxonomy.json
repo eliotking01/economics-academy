@@ -1616,6 +1616,873 @@
           ]
         }
       ]
+    },
+    {
+      "board": "edexcel-b",
+      "slug": "edexcel-b",
+      "name": "Edexcel B",
+      "qualification": "A Level Economics B (9EB0)",
+      "papersUrl": "/past-papers/edexcel-b/",
+      "groups": [
+        {
+          "slug": "theme-1",
+          "label": "Theme 1",
+          "name": "Markets, Consumers and Firms",
+          "fullName": "Edexcel B Theme 1: Markets, Consumers and Firms",
+          "notesDir": "edexcel-b-theme-1",
+          "notesIndexUrl": "/revision-notes/edexcel-b-theme-1/",
+          "units": [
+            {
+              "unit": "1.1",
+              "name": "Scarcity, Choice and Potential Conflicts",
+              "topics": [
+                {
+                  "spec": "1.1.1",
+                  "slug": "1-1-1-the-economic-problem",
+                  "title": "The Economic Problem",
+                  "shortTitle": "The Economic Problem",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-1/1-1-1-the-economic-problem.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-1/1-1-1-the-economic-problem.html"
+                },
+                {
+                  "spec": "1.1.2",
+                  "slug": "1-1-2-business-objectives",
+                  "title": "Business Objectives",
+                  "shortTitle": "Business Objectives",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-1/1-1-2-business-objectives.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-1/1-1-2-business-objectives.html"
+                },
+                {
+                  "spec": "1.1.3",
+                  "slug": "1-1-3-stakeholders-and-their-objectives",
+                  "title": "Stakeholders and Their Objectives",
+                  "shortTitle": "Stakeholders and Their Objectives",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-1/1-1-3-stakeholders-and-their-objectives.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-1/1-1-3-stakeholders-and-their-objectives.html"
+                }
+              ]
+            },
+            {
+              "unit": "1.2",
+              "name": "Enterprise, Business and the Economy",
+              "topics": [
+                {
+                  "spec": "1.2.1",
+                  "slug": "1-2-1-role-of-an-entrepreneur",
+                  "title": "Role of an Entrepreneur",
+                  "shortTitle": "Role of an Entrepreneur",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-1/1-2-1-role-of-an-entrepreneur.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-1/1-2-1-role-of-an-entrepreneur.html"
+                },
+                {
+                  "spec": "1.2.2",
+                  "slug": "1-2-2-entrepreneurial-motives",
+                  "title": "Entrepreneurial Motives",
+                  "shortTitle": "Entrepreneurial Motives",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-1/1-2-2-entrepreneurial-motives.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-1/1-2-2-entrepreneurial-motives.html"
+                },
+                {
+                  "spec": "1.2.3",
+                  "slug": "1-2-3-factors-of-production",
+                  "title": "Factors of Production",
+                  "shortTitle": "Factors of Production",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-1/1-2-3-factors-of-production.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-1/1-2-3-factors-of-production.html"
+                },
+                {
+                  "spec": "1.2.4",
+                  "slug": "1-2-4-specialisation",
+                  "title": "Specialisation",
+                  "shortTitle": "Specialisation",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-1/1-2-4-specialisation.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-1/1-2-4-specialisation.html"
+                },
+                {
+                  "spec": "1.2.5",
+                  "slug": "1-2-5-the-wider-economic-environment",
+                  "title": "The Wider Economic Environment",
+                  "shortTitle": "The Wider Economic Environment",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-1/1-2-5-the-wider-economic-environment.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-1/1-2-5-the-wider-economic-environment.html"
+                }
+              ]
+            },
+            {
+              "unit": "1.3",
+              "name": "Introducing the Market",
+              "topics": [
+                {
+                  "spec": "1.3.1",
+                  "slug": "1-3-1-demand",
+                  "title": "Demand",
+                  "shortTitle": "Demand",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-1/1-3-1-demand.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-1/1-3-1-demand.html"
+                },
+                {
+                  "spec": "1.3.2",
+                  "slug": "1-3-2-supply",
+                  "title": "Supply",
+                  "shortTitle": "Supply",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-1/1-3-2-supply.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-1/1-3-2-supply.html"
+                },
+                {
+                  "spec": "1.3.3",
+                  "slug": "1-3-3-price-determination",
+                  "title": "Price Determination",
+                  "shortTitle": "Price Determination",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-1/1-3-3-price-determination.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-1/1-3-3-price-determination.html"
+                },
+                {
+                  "spec": "1.3.4",
+                  "slug": "1-3-4-price-mechanism",
+                  "title": "Price Mechanism",
+                  "shortTitle": "Price Mechanism",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-1/1-3-4-price-mechanism.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-1/1-3-4-price-mechanism.html"
+                },
+                {
+                  "spec": "1.3.5",
+                  "slug": "1-3-5-understanding-the-consumer",
+                  "title": "Understanding the Consumer",
+                  "shortTitle": "Understanding the Consumer",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-1/1-3-5-understanding-the-consumer.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-1/1-3-5-understanding-the-consumer.html"
+                },
+                {
+                  "spec": "1.3.6",
+                  "slug": "1-3-6-the-competition",
+                  "title": "The Competition",
+                  "shortTitle": "The Competition",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-1/1-3-6-the-competition.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-1/1-3-6-the-competition.html"
+                }
+              ]
+            },
+            {
+              "unit": "1.4",
+              "name": "The Role of Credit in the Economy",
+              "topics": [
+                {
+                  "spec": "1.4.1",
+                  "slug": "1-4-1-role-of-banks-in-the-economy",
+                  "title": "Role of Banks in the Economy",
+                  "shortTitle": "Role of Banks in the Economy",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-1/1-4-1-role-of-banks-in-the-economy.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-1/1-4-1-role-of-banks-in-the-economy.html"
+                },
+                {
+                  "spec": "1.4.2",
+                  "slug": "1-4-2-risk-and-liability",
+                  "title": "Risk and Liability",
+                  "shortTitle": "Risk and Liability",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-1/1-4-2-risk-and-liability.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-1/1-4-2-risk-and-liability.html"
+                },
+                {
+                  "spec": "1.4.3",
+                  "slug": "1-4-3-types-and-sources-of-credit",
+                  "title": "Types and Sources of Credit",
+                  "shortTitle": "Types and Sources of Credit",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-1/1-4-3-types-and-sources-of-credit.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-1/1-4-3-types-and-sources-of-credit.html"
+                }
+              ]
+            },
+            {
+              "unit": "1.5",
+              "name": "Market Failure and Government Intervention",
+              "topics": [
+                {
+                  "spec": "1.5.1",
+                  "slug": "1-5-1-market-failure-and-externalities",
+                  "title": "Market Failure and Externalities",
+                  "shortTitle": "Market Failure and Externalities",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-1/1-5-1-market-failure-and-externalities.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-1/1-5-1-market-failure-and-externalities.html"
+                },
+                {
+                  "spec": "1.5.2",
+                  "slug": "1-5-2-government-intervention-and-failure",
+                  "title": "Government Intervention and Failure",
+                  "shortTitle": "Government Intervention and Failure",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-1/1-5-2-government-intervention-and-failure.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-1/1-5-2-government-intervention-and-failure.html"
+                }
+              ]
+            },
+            {
+              "unit": "1.6",
+              "name": "Revenue, Costs, Profits and Cash",
+              "topics": [
+                {
+                  "spec": "1.6.1",
+                  "slug": "1-6-1-revenue-and-costs",
+                  "title": "Revenue and Costs",
+                  "shortTitle": "Revenue and Costs",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-1/1-6-1-revenue-and-costs.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-1/1-6-1-revenue-and-costs.html"
+                },
+                {
+                  "spec": "1.6.2",
+                  "slug": "1-6-2-break-even-analysis",
+                  "title": "Break-Even Analysis",
+                  "shortTitle": "Break-Even Analysis",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-1/1-6-2-break-even-analysis.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-1/1-6-2-break-even-analysis.html"
+                },
+                {
+                  "spec": "1.6.3",
+                  "slug": "1-6-3-profit-and-loss",
+                  "title": "Profit and Loss",
+                  "shortTitle": "Profit and Loss",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-1/1-6-3-profit-and-loss.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-1/1-6-3-profit-and-loss.html"
+                },
+                {
+                  "spec": "1.6.4",
+                  "slug": "1-6-4-business-survival-and-cash-flow",
+                  "title": "Business Survival and Cash Flow",
+                  "shortTitle": "Business Survival and Cash Flow",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-1/1-6-4-business-survival-and-cash-flow.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-1/1-6-4-business-survival-and-cash-flow.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "theme-2",
+          "label": "Theme 2",
+          "name": "The Wider Economic Environment",
+          "fullName": "Edexcel B Theme 2: The Wider Economic Environment",
+          "notesDir": "edexcel-b-theme-2",
+          "notesIndexUrl": "/revision-notes/edexcel-b-theme-2/",
+          "units": [
+            {
+              "unit": "2.1",
+              "name": "Business Growth and Competitive Advantage",
+              "topics": [
+                {
+                  "spec": "2.1.1",
+                  "slug": "2-1-1-growth",
+                  "title": "Growth",
+                  "shortTitle": "Growth",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-2/2-1-1-growth.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-2/2-1-1-growth.html"
+                },
+                {
+                  "spec": "2.1.2",
+                  "slug": "2-1-2-methods-of-growth",
+                  "title": "Methods of Growth",
+                  "shortTitle": "Methods of Growth",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-2/2-1-2-methods-of-growth.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-2/2-1-2-methods-of-growth.html"
+                },
+                {
+                  "spec": "2.1.3",
+                  "slug": "2-1-3-research-and-development-and-innovation",
+                  "title": "Research and Development (R&D) and Innovation",
+                  "shortTitle": "Research and Development and Innovation",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-2/2-1-3-research-and-development-and-innovation.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-2/2-1-3-research-and-development-and-innovation.html"
+                },
+                {
+                  "spec": "2.1.4",
+                  "slug": "2-1-4-the-digital-economy",
+                  "title": "How the Digital Economy Affects Markets and Firms",
+                  "shortTitle": "The Digital Economy",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-2/2-1-4-the-digital-economy.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-2/2-1-4-the-digital-economy.html"
+                },
+                {
+                  "spec": "2.1.5",
+                  "slug": "2-1-5-how-small-firms-compete",
+                  "title": "How Small Firms Compete",
+                  "shortTitle": "How Small Firms Compete",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-2/2-1-5-how-small-firms-compete.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-2/2-1-5-how-small-firms-compete.html"
+                }
+              ]
+            },
+            {
+              "unit": "2.2",
+              "name": "Firms, Consumers and Elasticities of Demand",
+              "topics": [
+                {
+                  "spec": "2.2.1",
+                  "slug": "2-2-1-price-elasticity-of-demand",
+                  "title": "Price Elasticity of Demand (PED)",
+                  "shortTitle": "Price Elasticity of Demand",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-2/2-2-1-price-elasticity-of-demand.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-2/2-2-1-price-elasticity-of-demand.html"
+                },
+                {
+                  "spec": "2.2.2",
+                  "slug": "2-2-2-competing-on-price",
+                  "title": "Competing on Price",
+                  "shortTitle": "Competing on Price",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-2/2-2-2-competing-on-price.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-2/2-2-2-competing-on-price.html"
+                },
+                {
+                  "spec": "2.2.3",
+                  "slug": "2-2-3-non-price-competition",
+                  "title": "Types of Non-Price Competition",
+                  "shortTitle": "Non-Price Competition",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-2/2-2-3-non-price-competition.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-2/2-2-3-non-price-competition.html"
+                },
+                {
+                  "spec": "2.2.4",
+                  "slug": "2-2-4-income-elasticity-of-demand",
+                  "title": "Income Elasticity of Demand (YED)",
+                  "shortTitle": "Income Elasticity of Demand",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-2/2-2-4-income-elasticity-of-demand.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-2/2-2-4-income-elasticity-of-demand.html"
+                }
+              ]
+            },
+            {
+              "unit": "2.3",
+              "name": "Productive Efficiency",
+              "topics": [
+                {
+                  "spec": "2.3.1",
+                  "slug": "2-3-1-productivity",
+                  "title": "Productivity",
+                  "shortTitle": "Productivity",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-2/2-3-1-productivity.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-2/2-3-1-productivity.html"
+                },
+                {
+                  "spec": "2.3.2",
+                  "slug": "2-3-2-capacity-utilisation",
+                  "title": "Capacity Utilisation",
+                  "shortTitle": "Capacity Utilisation",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-2/2-3-2-capacity-utilisation.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-2/2-3-2-capacity-utilisation.html"
+                },
+                {
+                  "spec": "2.3.3",
+                  "slug": "2-3-3-lean-production",
+                  "title": "Efficiency and Competitiveness Using Lean Production",
+                  "shortTitle": "Lean Production",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-2/2-3-3-lean-production.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-2/2-3-3-lean-production.html"
+                },
+                {
+                  "spec": "2.3.4",
+                  "slug": "2-3-4-impact-on-costs-and-sales-revenue",
+                  "title": "Impact on Costs and Sales Revenue",
+                  "shortTitle": "Impact on Costs and Sales Revenue",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-2/2-3-4-impact-on-costs-and-sales-revenue.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-2/2-3-4-impact-on-costs-and-sales-revenue.html"
+                }
+              ]
+            },
+            {
+              "unit": "2.4",
+              "name": "Life in a Global Economy",
+              "topics": [
+                {
+                  "spec": "2.4.1",
+                  "slug": "2-4-1-globalisation",
+                  "title": "Globalisation",
+                  "shortTitle": "Globalisation",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-2/2-4-1-globalisation.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-2/2-4-1-globalisation.html"
+                },
+                {
+                  "spec": "2.4.2",
+                  "slug": "2-4-2-developed-emerging-and-developing-economies",
+                  "title": "Developed, Emerging and Developing Economies",
+                  "shortTitle": "Developed, Emerging and Developing Economies",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-2/2-4-2-developed-emerging-and-developing-economies.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-2/2-4-2-developed-emerging-and-developing-economies.html"
+                },
+                {
+                  "spec": "2.4.3",
+                  "slug": "2-4-3-international-trade",
+                  "title": "International Trade",
+                  "shortTitle": "International Trade",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-2/2-4-3-international-trade.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-2/2-4-3-international-trade.html"
+                },
+                {
+                  "spec": "2.4.4",
+                  "slug": "2-4-4-exchange-rates",
+                  "title": "Exchange Rates",
+                  "shortTitle": "Exchange Rates",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-2/2-4-4-exchange-rates.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-2/2-4-4-exchange-rates.html"
+                }
+              ]
+            },
+            {
+              "unit": "2.5",
+              "name": "The Economic Cycle",
+              "topics": [
+                {
+                  "spec": "2.5.1",
+                  "slug": "2-5-1-the-economic-cycle",
+                  "title": "The Economic Cycle",
+                  "shortTitle": "The Economic Cycle",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-2/2-5-1-the-economic-cycle.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-2/2-5-1-the-economic-cycle.html"
+                },
+                {
+                  "spec": "2.5.2",
+                  "slug": "2-5-2-circular-flow-of-income",
+                  "title": "Circular Flow of Income, Expenditure and Output",
+                  "shortTitle": "Circular Flow of Income",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-2/2-5-2-circular-flow-of-income.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-2/2-5-2-circular-flow-of-income.html"
+                },
+                {
+                  "spec": "2.5.3",
+                  "slug": "2-5-3-inflation",
+                  "title": "Inflation",
+                  "shortTitle": "Inflation",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-2/2-5-3-inflation.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-2/2-5-3-inflation.html"
+                },
+                {
+                  "spec": "2.5.4",
+                  "slug": "2-5-4-employment-and-unemployment",
+                  "title": "Employment and Unemployment",
+                  "shortTitle": "Employment and Unemployment",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-2/2-5-4-employment-and-unemployment.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-2/2-5-4-employment-and-unemployment.html"
+                }
+              ]
+            },
+            {
+              "unit": "2.6",
+              "name": "Introduction to Macroeconomic Policy",
+              "topics": [
+                {
+                  "spec": "2.6.1",
+                  "slug": "2-6-1-macroeconomic-objectives",
+                  "title": "Possible Macroeconomic Objectives",
+                  "shortTitle": "Macroeconomic Objectives",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-2/2-6-1-macroeconomic-objectives.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-2/2-6-1-macroeconomic-objectives.html"
+                },
+                {
+                  "spec": "2.6.2",
+                  "slug": "2-6-2-policy-instruments",
+                  "title": "Policy Instruments",
+                  "shortTitle": "Policy Instruments",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-2/2-6-2-policy-instruments.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-2/2-6-2-policy-instruments.html"
+                },
+                {
+                  "spec": "2.6.3",
+                  "slug": "2-6-3-policy-conflicts-and-trade-offs",
+                  "title": "Potential Policy Conflicts and Trade-Offs",
+                  "shortTitle": "Policy Conflicts and Trade-Offs",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-2/2-6-3-policy-conflicts-and-trade-offs.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-2/2-6-3-policy-conflicts-and-trade-offs.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "theme-3",
+          "label": "Theme 3",
+          "name": "The Global Economy",
+          "fullName": "Edexcel B Theme 3: The Global Economy",
+          "notesDir": "edexcel-b-theme-3",
+          "notesIndexUrl": "/revision-notes/edexcel-b-theme-3/",
+          "units": [
+            {
+              "unit": "3.1",
+              "name": "Globalisation",
+              "topics": [
+                {
+                  "spec": "3.1.1",
+                  "slug": "3-1-1-growing-economies",
+                  "title": "Growing Economies",
+                  "shortTitle": "Growing Economies",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-3/3-1-1-growing-economies.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-3/3-1-1-growing-economies.html"
+                },
+                {
+                  "spec": "3.1.2",
+                  "slug": "3-1-2-trade-and-growth",
+                  "title": "Trade and Growth",
+                  "shortTitle": "Trade and Growth",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-3/3-1-2-trade-and-growth.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-3/3-1-2-trade-and-growth.html"
+                },
+                {
+                  "spec": "3.1.3",
+                  "slug": "3-1-3-trading-blocs",
+                  "title": "Trading Blocs",
+                  "shortTitle": "Trading Blocs",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-3/3-1-3-trading-blocs.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-3/3-1-3-trading-blocs.html"
+                },
+                {
+                  "spec": "3.1.4",
+                  "slug": "3-1-4-trade-policy-and-trade-negotiations",
+                  "title": "Trade Policy and Trade Negotiations",
+                  "shortTitle": "Trade Policy and Trade Negotiations",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-3/3-1-4-trade-policy-and-trade-negotiations.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-3/3-1-4-trade-policy-and-trade-negotiations.html"
+                },
+                {
+                  "spec": "3.1.5",
+                  "slug": "3-1-5-exchange-rate-changes",
+                  "title": "Exchange Rate Changes",
+                  "shortTitle": "Exchange Rate Changes",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-3/3-1-5-exchange-rate-changes.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-3/3-1-5-exchange-rate-changes.html"
+                }
+              ]
+            },
+            {
+              "unit": "3.2",
+              "name": "Economic Factors in Business Expansion",
+              "topics": [
+                {
+                  "spec": "3.2.1",
+                  "slug": "3-2-1-conditions-that-prompt-trade",
+                  "title": "Conditions That Prompt Trade",
+                  "shortTitle": "Conditions That Prompt Trade",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-3/3-2-1-conditions-that-prompt-trade.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-3/3-2-1-conditions-that-prompt-trade.html"
+                },
+                {
+                  "spec": "3.2.2",
+                  "slug": "3-2-2-assessing-the-potential-of-different-economies",
+                  "title": "Assessing the Potential of Different Economies",
+                  "shortTitle": "Assessing the Potential of Different Economies",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-3/3-2-2-assessing-the-potential-of-different-economies.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-3/3-2-2-assessing-the-potential-of-different-economies.html"
+                }
+              ]
+            },
+            {
+              "unit": "3.3",
+              "name": "Impact of Globalisation on Global Companies",
+              "topics": [
+                {
+                  "spec": "3.3.1",
+                  "slug": "3-3-1-responding-to-global-demand",
+                  "title": "Responding to Global Demand",
+                  "shortTitle": "Responding to Global Demand",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-3/3-3-1-responding-to-global-demand.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-3/3-3-1-responding-to-global-demand.html"
+                },
+                {
+                  "spec": "3.3.2",
+                  "slug": "3-3-2-demand-side-factors-in-global-markets",
+                  "title": "Demand-Side Factors in Global Markets",
+                  "shortTitle": "Demand-Side Factors in Global Markets",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-3/3-3-2-demand-side-factors-in-global-markets.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-3/3-3-2-demand-side-factors-in-global-markets.html"
+                }
+              ]
+            },
+            {
+              "unit": "3.4",
+              "name": "Impact of Globalisation on Local and National Economies",
+              "topics": [
+                {
+                  "spec": "3.4.1",
+                  "slug": "3-4-1-the-impact-of-multinational-corporations",
+                  "title": "The Impact of Multinational Corporations (MNCs)",
+                  "shortTitle": "The Impact of Multinational Corporations (MNCs)",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-3/3-4-1-the-impact-of-multinational-corporations.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-3/3-4-1-the-impact-of-multinational-corporations.html"
+                },
+                {
+                  "spec": "3.4.2",
+                  "slug": "3-4-2-ethical-issues",
+                  "title": "Ethical Issues",
+                  "shortTitle": "Ethical Issues",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-3/3-4-2-ethical-issues.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-3/3-4-2-ethical-issues.html"
+                },
+                {
+                  "spec": "3.4.3",
+                  "slug": "3-4-3-controlling-mncs",
+                  "title": "Controlling MNCs",
+                  "shortTitle": "Controlling MNCs",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-3/3-4-3-controlling-mncs.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-3/3-4-3-controlling-mncs.html"
+                }
+              ]
+            },
+            {
+              "unit": "3.5",
+              "name": "Global Labour Markets",
+              "topics": [
+                {
+                  "spec": "3.5.1",
+                  "slug": "3-5-1-employment-patterns",
+                  "title": "Employment Patterns",
+                  "shortTitle": "Employment Patterns",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-3/3-5-1-employment-patterns.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-3/3-5-1-employment-patterns.html"
+                },
+                {
+                  "spec": "3.5.2",
+                  "slug": "3-5-2-wage-rates",
+                  "title": "Wage Rates",
+                  "shortTitle": "Wage Rates",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-3/3-5-2-wage-rates.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-3/3-5-2-wage-rates.html"
+                },
+                {
+                  "spec": "3.5.3",
+                  "slug": "3-5-3-minimum-wage-legislation",
+                  "title": "Minimum Wage Legislation",
+                  "shortTitle": "Minimum Wage Legislation",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-3/3-5-3-minimum-wage-legislation.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-3/3-5-3-minimum-wage-legislation.html"
+                }
+              ]
+            },
+            {
+              "unit": "3.6",
+              "name": "Inequality and Redistribution",
+              "topics": [
+                {
+                  "spec": "3.6.1",
+                  "slug": "3-6-1-poverty-and-inequality",
+                  "title": "Poverty and Inequality",
+                  "shortTitle": "Poverty and Inequality",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-3/3-6-1-poverty-and-inequality.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-3/3-6-1-poverty-and-inequality.html"
+                },
+                {
+                  "spec": "3.6.2",
+                  "slug": "3-6-2-reducing-poverty",
+                  "title": "Reducing Poverty",
+                  "shortTitle": "Reducing Poverty",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-3/3-6-2-reducing-poverty.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-3/3-6-2-reducing-poverty.html"
+                },
+                {
+                  "spec": "3.6.3",
+                  "slug": "3-6-3-the-impact-of-inequality",
+                  "title": "The Impact of Inequality on Economic Agents",
+                  "shortTitle": "The Impact of Inequality on Economic Agents",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-3/3-6-3-the-impact-of-inequality.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-3/3-6-3-the-impact-of-inequality.html"
+                },
+                {
+                  "spec": "3.6.4",
+                  "slug": "3-6-4-redistribution-of-income-and-wealth",
+                  "title": "Redistribution of Income and Wealth",
+                  "shortTitle": "Redistribution of Income and Wealth",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-3/3-6-4-redistribution-of-income-and-wealth.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-3/3-6-4-redistribution-of-income-and-wealth.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "theme-4",
+          "label": "Theme 4",
+          "name": "Making Markets Work",
+          "fullName": "Edexcel B Theme 4: Making Markets Work",
+          "notesDir": "edexcel-b-theme-4",
+          "notesIndexUrl": "/revision-notes/edexcel-b-theme-4/",
+          "units": [
+            {
+              "unit": "4.1",
+              "name": "Competition and Market Power",
+              "topics": [
+                {
+                  "spec": "4.1.1",
+                  "slug": "4-1-1-spectrum-of-competition",
+                  "title": "Spectrum of Competition",
+                  "shortTitle": "Spectrum of Competition",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-4/4-1-1-spectrum-of-competition.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-4/4-1-1-spectrum-of-competition.html"
+                },
+                {
+                  "spec": "4.1.2",
+                  "slug": "4-1-2-barriers-to-entry",
+                  "title": "Barriers to Entry",
+                  "shortTitle": "Barriers to Entry",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-4/4-1-2-barriers-to-entry.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-4/4-1-2-barriers-to-entry.html"
+                },
+                {
+                  "spec": "4.1.3",
+                  "slug": "4-1-3-oligopoly",
+                  "title": "Oligopoly",
+                  "shortTitle": "Oligopoly",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-4/4-1-3-oligopoly.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-4/4-1-3-oligopoly.html"
+                },
+                {
+                  "spec": "4.1.4",
+                  "slug": "4-1-4-business-objectives-and-pricing-decisions",
+                  "title": "Business Objectives and Pricing Decisions",
+                  "shortTitle": "Business Objectives and Pricing Decisions",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-4/4-1-4-business-objectives-and-pricing-decisions.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-4/4-1-4-business-objectives-and-pricing-decisions.html"
+                },
+                {
+                  "spec": "4.1.5",
+                  "slug": "4-1-5-productive-and-allocative-efficiency",
+                  "title": "Productive and Allocative Efficiency",
+                  "shortTitle": "Productive and Allocative Efficiency",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-4/4-1-5-productive-and-allocative-efficiency.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-4/4-1-5-productive-and-allocative-efficiency.html"
+                }
+              ]
+            },
+            {
+              "unit": "4.2",
+              "name": "Market Power and Market Failure",
+              "topics": [
+                {
+                  "spec": "4.2.1",
+                  "slug": "4-2-1-market-power-and-market-failure",
+                  "title": "Market Power and Market Failure",
+                  "shortTitle": "Market Power and Market Failure",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-4/4-2-1-market-power-and-market-failure.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-4/4-2-1-market-power-and-market-failure.html"
+                },
+                {
+                  "spec": "4.2.2",
+                  "slug": "4-2-2-business-regulation",
+                  "title": "Business Regulation",
+                  "shortTitle": "Business Regulation",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-4/4-2-2-business-regulation.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-4/4-2-2-business-regulation.html"
+                },
+                {
+                  "spec": "4.2.3",
+                  "slug": "4-2-3-arguments-for-and-against-regulation",
+                  "title": "Arguments For and Against Regulation",
+                  "shortTitle": "Arguments For and Against Regulation",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-4/4-2-3-arguments-for-and-against-regulation.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-4/4-2-3-arguments-for-and-against-regulation.html"
+                }
+              ]
+            },
+            {
+              "unit": "4.3",
+              "name": "Market Failure Across the Economy",
+              "topics": [
+                {
+                  "spec": "4.3.1",
+                  "slug": "4-3-1-market-failure-in-society",
+                  "title": "Market Failure in Society",
+                  "shortTitle": "Market Failure in Society",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-4/4-3-1-market-failure-in-society.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-4/4-3-1-market-failure-in-society.html"
+                },
+                {
+                  "spec": "4.3.2",
+                  "slug": "4-3-2-externalities",
+                  "title": "Externalities",
+                  "shortTitle": "Externalities",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-4/4-3-2-externalities.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-4/4-3-2-externalities.html"
+                },
+                {
+                  "spec": "4.3.3",
+                  "slug": "4-3-3-policies-to-deal-with-market-failure",
+                  "title": "Policies to Deal with Market Failure",
+                  "shortTitle": "Policies to Deal with Market Failure",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-4/4-3-3-policies-to-deal-with-market-failure.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-4/4-3-3-policies-to-deal-with-market-failure.html"
+                }
+              ]
+            },
+            {
+              "unit": "4.4",
+              "name": "Macroeconomic Policies and Impact on Firms and Individuals",
+              "topics": [
+                {
+                  "spec": "4.4.1",
+                  "slug": "4-4-1-the-ad-as-model",
+                  "title": "The AD/AS Model",
+                  "shortTitle": "The AD/AS Model",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-4/4-4-1-the-ad-as-model.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-4/4-4-1-the-ad-as-model.html"
+                },
+                {
+                  "spec": "4.4.2",
+                  "slug": "4-4-2-demand-side-policies",
+                  "title": "Demand-Side Policies",
+                  "shortTitle": "Demand-Side Policies",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-4/4-4-2-demand-side-policies.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-4/4-4-2-demand-side-policies.html"
+                },
+                {
+                  "spec": "4.4.3",
+                  "slug": "4-4-3-supply-side-policies",
+                  "title": "Supply-Side Policies",
+                  "shortTitle": "Supply-Side Policies",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-4/4-4-3-supply-side-policies.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-4/4-4-3-supply-side-policies.html"
+                },
+                {
+                  "spec": "4.4.4",
+                  "slug": "4-4-4-the-impact-of-macroeconomic-policies",
+                  "title": "The Impact of Macroeconomic Policies",
+                  "shortTitle": "The Impact of Macroeconomic Policies",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-4/4-4-4-the-impact-of-macroeconomic-policies.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-4/4-4-4-the-impact-of-macroeconomic-policies.html"
+                }
+              ]
+            },
+            {
+              "unit": "4.5",
+              "name": "Risk and the Financial Sector",
+              "topics": [
+                {
+                  "spec": "4.5.1",
+                  "slug": "4-5-1-risks-and-uncertainty",
+                  "title": "Risks and Uncertainty",
+                  "shortTitle": "Risks and Uncertainty",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-4/4-5-1-risks-and-uncertainty.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-4/4-5-1-risks-and-uncertainty.html"
+                },
+                {
+                  "spec": "4.5.2",
+                  "slug": "4-5-2-the-role-of-the-financial-sector",
+                  "title": "The Role of the Financial Sector",
+                  "shortTitle": "The Role of the Financial Sector",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-4/4-5-2-the-role-of-the-financial-sector.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-4/4-5-2-the-role-of-the-financial-sector.html"
+                },
+                {
+                  "spec": "4.5.3",
+                  "slug": "4-5-3-the-role-of-the-central-bank",
+                  "title": "The Role of the Central Bank",
+                  "shortTitle": "The Role of the Central Bank",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-4/4-5-3-the-role-of-the-central-bank.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-4/4-5-3-the-role-of-the-central-bank.html"
+                },
+                {
+                  "spec": "4.5.4",
+                  "slug": "4-5-4-the-global-financial-crisis",
+                  "title": "The Global Financial Crisis",
+                  "shortTitle": "The Global Financial Crisis",
+                  "notesUrl": "/revision-notes/edexcel-b-theme-4/4-5-4-the-global-financial-crisis.html",
+                  "questionsUrl": "/practice-questions/edexcel-b-theme-4/4-5-4-the-global-financial-crisis.html"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
