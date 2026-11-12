@@ -23,9 +23,12 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| All-boards parity (D67) — Phase 1: Edexcel B practice questions, staged; unit 1.1 of 23 done (3 of 85 sets) | in progress on `feature/edexcel-b-questions`, not pushed | — | — |
-| All-boards parity (D67) — Phase 0 groundwork: per-board feature flags, originality corpus, cold-solver, three commands | committed, not pushed; URL list awaiting Eliot | — | — |
-| Edexcel B notes — Theme 3: 19 pages, index card, site search; Edexcel B complete, 85 pages | complete, PR open | — | — |
+| All-boards parity (D67) — Phase 2: Edexcel B flashcards, all four decks, launched (8 new URLs) | launched on `feature/edexcel-b-flashcards`, PR #49 open; not merged | — | — |
+| All-boards parity (D67) — Phase 1: Edexcel B practice questions, all 85 sets, launched (89 new URLs) | live (PR #48) | 2026-11-08 | `39403ead` |
+| June 2025 papers added to the past-paper question bank | live (PR #47) | 2026-10-24 | `d96b0928` |
+| June 2025 papers and the June 2023 Edexcel B mark schemes published | live (PR #46) | 2026-10-24 | `ed1d9539` |
+| All-boards parity (D67) — Phase 0 groundwork: per-board feature flags, originality corpus, cold-solver, three commands | live (PR #45) | 2026-10-24 | `fafdf34f` |
+| Edexcel B notes — Theme 3: 19 pages, index card, site search; Edexcel B complete, 85 pages | live (PR #44) | 2026-10-21 | `755c56e0` |
 | Edexcel B notes — Theme 2: 24 pages, index card, site search | live | 2026-10-19 | `ada29e8b` |
 | Edexcel B notes — Theme 4: 19 pages, index card, site search | live | 2026-10-17 | `fec344d2` |
 | Edexcel B notes — Theme 1: 23 pages, index section, site search | live | 2026-10-15 | `782bafd7` |
@@ -212,13 +215,170 @@ session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
 
-### All-boards parity — Phase 1, Edexcel B practice questions (from 2026-10-25) — IN PROGRESS (branch `feature/edexcel-b-questions`)
+### All-boards parity — Phase 2, Edexcel B flashcards (2026-11-08 to —) — LAUNCHED ON THE BRANCH, PR #49 OPEN; NOT MERGED (branch `feature/edexcel-b-flashcards`)
+
+`/edexcel-b-flashcards`, one unit per run, into
+`flashcards-data/edexcel-b/theme-N.json`. B's `flashcards` is **staged** in
+`boards.json`, so the decks are validated and no page is written. Review
+sheets: `05-website/drafts/all-boards-parity/review/flashcards-unit-X-Y.md`.
+
+- **Theme 1 written: 142 cards, units 1.1 to 1.6.** Every card verified
+  cold against its notes page. Deck-level wording approved 2026-11-09.
+- **Card budget (Eliot, 2026-11-09):** Theme 1 stays at 142. Themes 2 to 4
+  aim for about 5 cards a topic (about 120, 95 and 95), more only for a
+  diagram or calculation that needs its own card, named in the unit sheet.
+  Written into the skill.
+- **Answers to the Theme 1 sheets, 2026-11-09:** four notes wording changes
+  on Edexcel B Theme 1 pages (the 1.6.3 profit chip now matches 1.2.2's;
+  `CONTENT_ISSUES.md` #38 and #39 fixed; 1.5.2 "a larger share of a poorer
+  household's income"), and the excess-demand/supply SVG `<desc>` text
+  aligned to Qd/Qs.
+- **Theme 1 diagrams approved (Eliot, 2026-11-09):** each of the 11 diagram
+  cards' SVGs rendered headless and compared with its notes-page PNG in
+  `review/flashcard-diagrams-theme-1.md`. Every label, curve and number
+  the card text relies on is present. No SVG or card changed; nine of the
+  SVGs are shared with the Edexcel A and AQA decks.
+- **Numbered PPF drawn, 2026-11-09:** `images/diagrams/svg/ppf-numbered.svg`
+  is a new file; `ppf-basic.svg` is untouched. Q2 answered (a): 1.1.1
+  diagram-01 and calc-01 now use it, with alt text that gives the four
+  points' figures. Fronts and backs unchanged.
+- **Theme 1 QA applied (Eliot, 2026-11-09, all four fixes approved):**
+  `review/qa-flashcards-theme-1.md` found no high or medium defects. The
+  1.2.5 interest-rate chip now uses 1.4.1's wording ("…or the reward for
+  saving it, shown as a percentage of the amount borrowed or saved per
+  year"), and card 1.2.5 def-01 follows it. Three shared SVGs get label
+  clearance under `DIAGRAM_STYLE.md`'s 8px rule: `excess-demand.svg`'s
+  "Excess demand" gains a white halo over the guides, and the "Government
+  expenditure" / "Government revenue" labels move off the P1 guide. Those
+  three also change the live Edexcel A and AQA decks at the next push.
+- **Theme 2 written: 126 cards across 24 topics, units 2.1 to 2.6**,
+  including the new PED-ranges diagram card for 2.2.1 (its 800×960 SVG and
+  the multi-panel canvas line in `DIAGRAM_STYLE.md` approved in
+  `review/flashcard-diagrams-theme-2.md`, Q1 (a) and Q2 (a)).
+- **Theme 2 QA applied (Eliot, 2026-11-10, all four fixes approved):**
+  `review/qa-flashcards-theme-2.md` found no high or medium defects. The
+  niche-market chips on 2.1.5 and 2.2.1 and the trade-off chip on 2.6.3
+  now use the Theme 1 wording (1.3.4 and 1.1.1), and cards 2.1.5 def-02
+  and 2.6.3 diagram-01 follow them. 2.2.4 eval-01 no longer calls used
+  cars an inferior good, and 2.4.1 app-01 says China joining the WTO is
+  also trade liberalisation. `trade-cycle.svg`'s "Boom" moves to y=284 to
+  clear the curve by 8px; that SVG is shared with the live Edexcel A and
+  AQA decks, so they change at the next push. The 3.3.2 niche-market chip
+  this left behind was aligned on 2026-11-10 (`db6bb8e3`).
+- **Theme 3 written: 100 cards across 19 topics, units 3.1 to 3.6**
+  (`1ef93593` to `a635ab49`), with a review sheet per unit.
+  CONTENT_ISSUES #42 and #43 fixed, #44 and #45 closed with no change.
+- **Theme 3 QA applied and diagrams approved (Eliot, 2026-11-11, all
+  fixes accepted):** `review/qa-flashcards-theme-3.md` found no high
+  defects and no factual or calculation errors. Five 3.1 chips now take the
+  earlier B wording, and their cards follow: nominal value and real value
+  (3.1.1, from 2.5.3), trade liberalisation (3.1.2, from 2.4.1), subsidy
+  (3.1.4, from 1.5.2) and current account (3.1.5, from 2.6.1, which adds
+  transfers). Two shared SVGs get 8px label clearance: on `j-curve.svg`,
+  "Depreciation occurs" is centred over its guide at y=44 and both guides
+  stop at y=496, above "Deficit (X<M)"; on `tariff.svg`, "Ddomestic" moves
+  to y=508. Both are shared with the live Edexcel A and AQA decks, so those
+  change at the next push. All six Theme 3 diagrams are then approved
+  (`review/flashcard-diagrams-theme-3.md`, Q1 answered by the QA fix).
+  **Still open, before the B glossary (one wording per term):** subsidy
+  has a third chip on 1.3.2 ("…to producers, which lowers their costs"),
+  which the approved fix did not name. Trading bloc, appreciation and
+  exchange rate differ only by an example sentence, so the glossary takes
+  the shared first sentence. The B practice question 3.1.4 working still
+  quotes the old subsidy wording; it is not a chip, so it was left.
+- **Theme 4 written: 98 cards across 19 topics, units 4.1 to 4.5**
+  (`4b87b7da` to `f74e639f`), with a review sheet per unit.
+- **Theme 4 QA applied and diagrams approved (Eliot, 2026-11-11, all
+  fixes accepted):** `review/qa-flashcards-theme-4.md` found no high
+  defects and no factual or calculation errors.
+  - `natural-monopoly.svg`'s "D=AR" moves to (520, 550), below the axis
+    beside the end of its line, clearing LRMC. 4.2.1's
+    `natural-monopoly.png` was re-rasterised from it (headless Chrome at
+    2x, the 64-colour re-encode, a new WebP twin). Neither file is used
+    outside B.
+  - 4.1.1 def-01 gains a line saying that where the B spec lists imperfect
+    competition beside monopoly and oligopoly, it means monopolistic
+    competition. 4.1.2 def-01's front no longer mentions "the page".
+  - One wording per term, before the B glossary. (a) Each citing chip now
+    quotes the chip it cites, pointer kept: market failure on 4.2.1 (from
+    1.5.1), productivity on 4.1.5 (from 2.3.1) and trade union on 3.5.2
+    (from 4.2.1). (b) The 4.x chips take the earlier wording: average cost
+    on 4.1.4 (from 1.6.1's first sentence; its "Total cost ÷ Quantity"
+    formula is unchanged), economies of scale on 4.1.2 (from 2.1.1),
+    fiscal policy on 4.4.2 (from 2.6.2) and non-price competition on 4.1.1
+    (from 2.2.3, with its examples). The cards follow, with the verbatim
+    source updated. (c) Aggregate demand, monetary policy and supply-side
+    policies keep both chips; **the B glossary uses the fuller 4.x
+    wording** (4.4.1, 4.4.2, 4.4.3). (d) Risk (1.4.2 business risk, 4.5.1
+    measurable risk) and interdependence (3.1.3 countries, 4.1.3 firms)
+    keep both chips; **the B glossary gives each two senses under one
+    headword**.
+  - Diagram sheet (`review/flashcard-diagrams-theme-4.md`): Q1 (a), the new
+    `perfect-competition-profit-to-longrun.svg` and card 4.1.1 diagram-02,
+    so the deck is 99. Q2 (a), `perfect-competition-short-run-supernormal-profit.svg`'s
+    dashed price line stops at x=415, short of the firm's "P1". That SVG is
+    shared with the live Edexcel A and AQA decks, so they change at the next
+    push.
+  - Eliot approved the text of card 4.1.1 diagram-02 on 2026-11-11.
+  - `perfect-competition-short-run-loss.svg` (A and AQA only) had the same
+    line-through-"P1" fault. Eliot asked for the same fix on 2026-11-11:
+    its dashed price line now stops at x=415, 8px short of the firm's "P1".
+    Its firm-panel Q1 guide also ran through the "1" of "D=AR=MR=P1"; it
+    now breaks around the label (y 393 to 428), 8px clear of the ink
+    above and below. It is shared with the live Edexcel A and AQA decks,
+    so they change at the next push.
+- **Unit 4.5 answers (Eliot, 2026-11-11, all four recommendations taken):**
+  CONTENT_ISSUES #54 fixed. 4.5.3 now says "the Bank regularly checks" and
+  the 4.5.4 table says "Regular stress tests", because since 2025 the Bank
+  runs its main capital stress test every other year (checked on
+  bankofengland.co.uk the same day; the entry cites the pages). #53 and
+  #55 closed with no change. The two stress-test cards keep "regularly" /
+  "Regular", and 4.5.3 def-02 keeps its added sentence. **Theme 4 is
+  accepted as complete at 99 cards.**
+- **Launched, 2026-11-11 (`4cfe0dac`, sitemap `740dfc17`; PR #49).**
+  `/launch-feature edexcel-b flashcards`: 85 of 85 topics carried, 467
+  cards, and the throwaway-worktree build wrote exactly the 8 URLs of
+  Phase 0 Q6. `flashcards` moved from `staged` to `features`. Eliot's
+  answers to `review/launch-flashcards.md` (F1 to F5) applied: the B
+  notes tails, the `/flashcards/` hub head, the home page card, FAQ and B
+  board card, and `names.flashcards` on the B groups.
+  **F1, for the B bank launch:** B deck pages' third button links
+  "Edexcel B past papers" (`papersUrl`), because the bank button would
+  have been a 404. `build_flashcards.PAPERS_LINK` flips it to the bank
+  when B's `pastPaperBank` goes live; `/launch-feature` step 4 now has
+  the check. The search-index test's deck count is now derived, and
+  `EXPECTED_KATEX_PAGES` declares B Themes 2 to 4.
+- **Five Theme 1 cards removed (Eliot, 2026-11-12), not replaced:**
+  `1-1-2-def-01`, `1-1-3-eval-01`, `1-1-3-eval-02`, `1-2-1-chain-01`,
+  `1-2-2-eval-01`. Theme 1 is now 137, B 462, all decks 1,133; still 85 of
+  85 topics carried, and the Theme 1 sample cards are unchanged.
+- **Still open:** CONTENT_ISSUES #46 and #52, both deferred by Eliot.
+  Merge PR #49 (merge commit, not squash), then record the merge commit here.
+
+### All-boards parity — Phase 1, Edexcel B practice questions (2026-10-25 to 2026-11-08) — LIVE, MERGED 2026-11-08 AS PR #48 (`39403ead`, branch `feature/edexcel-b-questions`)
 
 `/edexcel-b-questions <unit>`, one unit per run. Each unit gets a review
-sheet, `review/questions-unit-X-Y.md`. B's `practiceQuestions` is **staged**
-in `boards.json`, so its sets are validated and no page is written until
-`/launch-feature edexcel-b practiceQuestions`. Count what is done with
+sheet, `review/questions-unit-X-Y.md`. Count the sets with
 `ls questions-data/edexcel-b-theme-*/`, not from this list.
+
+- **Launched 2026-11-08** (`3e764789`, sitemap `6ceb448d`, pushed to the
+  branch; live only once the branch merges into `main`). `/launch-feature
+  edexcel-b practiceQuestions` moved the family from `staged` to
+  `features`. A throwaway build first confirmed it mints exactly the 89
+  URLs approved in Phase 0 Q5. Launch wording is in
+  `review/launch-practiceQuestions.md`, W1-W7, answered by Eliot the same
+  day. The two that matter: B's board indexes say the sets "test your
+  knowledge of the … content" and the hub intro keeps the real-papers
+  claim for Edexcel A and AQA only, because 9EB0 sets no MCQs (D67). Also:
+  the Edexcel B menu group (desktop and mobile), "Edexcel A Economics" on
+  the hub, the home page practice card, FAQ and B board card, practice
+  links on the B cards of `/revision-notes/` (replacing a stand-in
+  past-papers link), and 2.1.3's set title with "(R&D)". The full suite
+  passed, 27/27, before the push.
+- **Before the merge:** check the pages in Live Server at desktop and
+  360 px (the hub, a B board index, two B topic pages, a B notes tail, the
+  menu, `/` and `/revision-notes/`). Then open the PR; it merges with a
+  merge commit, so CI sees the trailers.
 
 - **Unit 1.1** (`f8506b72`, answered 2026-10-26): 22 questions across
   1.1.1-1.1.3, 22/22 cold, 0 exact / 0 near. The first unit also staged the
@@ -231,7 +391,7 @@ in `boards.json`, so its sets are validated and no page is written until
   `/launch-feature` needs no new wording for those two lines or for
   `HUB_SECTIONS`.
 
-### All-boards parity — Phase 0 groundwork (2026-10-24) — COMMITTED, NOT PUSHED (branch `feature/all-boards-groundwork`)
+### All-boards parity — Phase 0 groundwork (2026-10-24) — LIVE (merged 2026-10-24, `fafdf34f`, PR #45; branch `feature/all-boards-groundwork`)
 
 D67 (2026-10-24) gives Edexcel B practice questions, flashcards, a glossary
 and a past-paper bank, and widens the bank to Edexcel A Section A short
@@ -279,7 +439,7 @@ committed tree exactly, with 0 differences.
 
 Phase 1 (`/edexcel-b-questions`) can start.
 
-### Edexcel B revision notes — Theme 3 (2026-10-20) — COMPLETE, PR into main opened 2026-10-20 (branch `feature/edexcel-b-theme-3`)
+### Edexcel B revision notes — Theme 3 (2026-10-20) — LIVE (merged 2026-10-21, `755c56e0`, PR #44)
 
 The fourth and last theme in publishing order (1, 4, 2, 3; D66). **With it,
 Edexcel B is complete: all 85 topic pages across Themes 1-4**, and the

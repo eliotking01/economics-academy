@@ -1,0 +1,77 @@
+<svg viewBox="0 0 800 960" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">The five price elasticity of demand ranges</title>
+  <desc id="d">Five demand diagrams with P on the vertical axis and Q on the horizontal axis, in order from perfectly price inelastic to perfectly price elastic. Perfectly price inelastic: a vertical demand curve D at Q1, so a fall in price from P1 to P2 leaves quantity unchanged. Relatively price inelastic: a steep D, where the fall from P1 to P2 raises quantity only a little, from Q1 to Q2. Unitary price elastic: a curved D bowed in towards the origin. Relatively price elastic: a shallow D, where a small fall from P1 to P2 raises quantity a lot, from Q1 to Q2. Perfectly price elastic: a horizontal D at P1, with quantity anywhere from Q1 to Q2 at that price.</desc>
+  <!-- geometry
+       on-curve: 190,140 190,200 560,120 608,240 130,490 235,550 530,470 650,510 340,810 430,810
+       Generated from computed geometry. Straight demand curves are not 45 degrees on
+       purpose: relatively inelastic has screen slope 3, relatively elastic 1/3. The
+       unitary curve is a polyline of exact points on P x Q = 7000 (local axis units),
+       a rectangular hyperbola, so PED = -1 all along it.
+  -->
+  <!-- Perfectly Price Inelastic -->
+  <text x="195" y="30" font-size="24" fill="#333333" text-anchor="middle">Perfectly Price Inelastic</text>
+  <line x1="60" y1="75" x2="60" y2="270" stroke="#333333" stroke-width="2.5" stroke-linecap="square"/>
+  <line x1="60" y1="270" x2="330" y2="270" stroke="#333333" stroke-width="2.5" stroke-linecap="square"/>
+  <text x="48" y="88" font-size="26" fill="#333333" text-anchor="end">P</text>
+  <text x="342" y="279" font-size="26" fill="#333333">Q</text>
+  <line x1="60" y1="140" x2="190" y2="140" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="60" y1="200" x2="190" y2="200" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="190" y1="85" x2="190" y2="270" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <text x="200" y="100" font-size="26" font-weight="700" fill="#1d70b8">D</text>
+  <text x="52" y="148" font-size="24" fill="#333333" text-anchor="end">P1</text>
+  <text x="52" y="208" font-size="24" fill="#333333" text-anchor="end">P2</text>
+  <text x="190" y="298" font-size="24" fill="#333333" text-anchor="middle">Q1</text>
+  <!-- Relatively Price Inelastic -->
+  <text x="595" y="30" font-size="24" fill="#333333" text-anchor="middle">Relatively Price Inelastic</text>
+  <line x1="460" y1="75" x2="460" y2="270" stroke="#333333" stroke-width="2.5" stroke-linecap="square"/>
+  <line x1="460" y1="270" x2="730" y2="270" stroke="#333333" stroke-width="2.5" stroke-linecap="square"/>
+  <text x="448" y="88" font-size="26" fill="#333333" text-anchor="end">P</text>
+  <text x="742" y="279" font-size="26" fill="#333333">Q</text>
+  <line x1="460" y1="120" x2="560" y2="120" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="560" y1="120" x2="560" y2="270" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="460" y1="240" x2="608" y2="240" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="608" y1="240" x2="608" y2="270" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="546" y1="85" x2="612" y2="250" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <text x="620" y="258" font-size="26" font-weight="700" fill="#1d70b8">D</text>
+  <text x="452" y="128" font-size="24" fill="#333333" text-anchor="end">P1</text>
+  <text x="452" y="248" font-size="24" fill="#333333" text-anchor="end">P2</text>
+  <text x="560" y="298" font-size="24" fill="#333333" text-anchor="middle">Q1</text>
+  <text x="608" y="298" font-size="24" fill="#333333" text-anchor="middle">Q2</text>
+  <!-- Unitary Price Elastic -->
+  <text x="195" y="350" font-size="24" fill="#333333" text-anchor="middle">Unitary Price Elastic</text>
+  <line x1="60" y1="395" x2="60" y2="590" stroke="#333333" stroke-width="2.5" stroke-linecap="square"/>
+  <line x1="60" y1="590" x2="330" y2="590" stroke="#333333" stroke-width="2.5" stroke-linecap="square"/>
+  <text x="48" y="408" font-size="26" fill="#333333" text-anchor="end">P</text>
+  <text x="342" y="599" font-size="26" fill="#333333">Q</text>
+  <path d="M 98.89 410 L 99.92 414.64 L 100.97 419.16 L 102.06 423.57 L 103.17 427.86 L 104.31 432.04 L 105.49 436.11 L 106.69 440.08 L 107.93 443.94 L 109.19 447.71 L 110.5 451.38 L 111.83 454.95 L 113.2 458.43 L 114.61 461.82 L 116.06 465.13 L 117.54 468.35 L 119.06 471.48 L 120.63 474.54 L 122.23 477.52 L 123.88 480.42 L 125.57 483.24 L 127.3 485.99 L 129.08 488.67 L 130.91 491.29 L 132.79 493.83 L 134.71 496.31 L 136.69 498.73 L 138.72 501.08 L 140.8 503.37 L 142.94 505.6 L 145.14 507.78 L 147.39 509.9 L 149.7 511.97 L 152.08 513.98 L 154.51 515.94 L 157.02 517.85 L 159.58 519.71 L 162.22 521.52 L 164.92 523.28 L 167.7 525 L 170.55 526.68 L 173.47 528.31 L 176.48 529.9 L 179.56 531.45 L 182.72 532.96 L 185.97 534.43 L 189.31 535.86 L 192.73 537.26 L 196.24 538.62 L 199.84 539.94 L 203.55 541.23 L 207.34 542.49 L 211.24 543.72 L 215.25 544.91 L 219.35 546.07 L 223.57 547.2 L 227.9 548.31 L 232.34 549.38 L 236.9 550.43 L 241.58 551.45 L 246.39 552.44 L 251.32 553.41 L 256.38 554.36 L 261.58 555.27 L 266.92 556.17 L 272.39 557.04 L 278.01 557.89 L 283.78 558.72 L 289.7 559.53 L 295.78 560.31 L 302.02 561.08 L 308.43 561.82 L 315 562.55" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="325" y="568" font-size="26" font-weight="700" fill="#1d70b8">D</text>
+  <!-- Relatively Price Elastic -->
+  <text x="595" y="350" font-size="24" fill="#333333" text-anchor="middle">Relatively Price Elastic</text>
+  <line x1="460" y1="395" x2="460" y2="590" stroke="#333333" stroke-width="2.5" stroke-linecap="square"/>
+  <line x1="460" y1="590" x2="730" y2="590" stroke="#333333" stroke-width="2.5" stroke-linecap="square"/>
+  <text x="448" y="408" font-size="26" fill="#333333" text-anchor="end">P</text>
+  <text x="742" y="599" font-size="26" fill="#333333">Q</text>
+  <line x1="460" y1="470" x2="530" y2="470" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="530" y1="470" x2="530" y2="590" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="460" y1="510" x2="650" y2="510" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="650" y1="510" x2="650" y2="590" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="490" y1="456.67" x2="690" y2="523.33" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <text x="700" y="532" font-size="26" font-weight="700" fill="#1d70b8">D</text>
+  <text x="452" y="478" font-size="24" fill="#333333" text-anchor="end">P1</text>
+  <text x="452" y="518" font-size="24" fill="#333333" text-anchor="end">P2</text>
+  <text x="530" y="618" font-size="24" fill="#333333" text-anchor="middle">Q1</text>
+  <text x="650" y="618" font-size="24" fill="#333333" text-anchor="middle">Q2</text>
+  <!-- Perfectly Price Elastic -->
+  <text x="395" y="670" font-size="24" fill="#333333" text-anchor="middle">Perfectly Price Elastic</text>
+  <line x1="260" y1="715" x2="260" y2="910" stroke="#333333" stroke-width="2.5" stroke-linecap="square"/>
+  <line x1="260" y1="910" x2="530" y2="910" stroke="#333333" stroke-width="2.5" stroke-linecap="square"/>
+  <text x="248" y="728" font-size="26" fill="#333333" text-anchor="end">P</text>
+  <text x="542" y="919" font-size="26" fill="#333333">Q</text>
+  <line x1="340" y1="810" x2="340" y2="910" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="430" y1="810" x2="430" y2="910" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="260" y1="810" x2="490" y2="810" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <text x="500" y="818" font-size="26" font-weight="700" fill="#1d70b8">D</text>
+  <text x="252" y="818" font-size="24" fill="#333333" text-anchor="end">P1</text>
+  <text x="340" y="938" font-size="24" fill="#333333" text-anchor="middle">Q1</text>
+  <text x="430" y="938" font-size="24" fill="#333333" text-anchor="middle">Q2</text>
+</svg>

@@ -17,7 +17,7 @@
   <path d="M 100,430 Q 250,265 400,280 Q 505,290 610,175" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
   <!-- labels -->
   <text x="700" y="146" font-size="26" font-weight="700" fill="#0f7b6c" text-anchor="end">Trend rate of growth</text>
-  <text x="250" y="290" font-size="24" fill="#333333" text-anchor="middle">Boom</text>
+  <text x="250" y="284" font-size="24" fill="#333333" text-anchor="middle">Boom</text>
   <text x="390" y="244" font-size="24" fill="#333333" text-anchor="middle">Downturn</text>
   <text x="505" y="320" font-size="24" fill="#333333" text-anchor="middle">Recession</text>
   <text x="620" y="200" font-size="24" fill="#333333">Recovery</text>

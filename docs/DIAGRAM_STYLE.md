@@ -19,6 +19,11 @@ the PNG where they conflict; conflicts are logged in docs/CONTENT_ISSUES.md.
 - Plot area: x from 100 to 690, y from 60 to 520 (i.e. margins: left 100,
   bottom 80, top 60, right 110). The right margin holds end-of-curve labels;
   the left and bottom hold axis titles.
+- **Multi-panel figures** (approved by Eliot 2026-11-09, with
+  `price-elasticity-demand-ranges.svg`): a figure with more panels than fit
+  800×600 at the text sizes below may extend the height in 320px rows; the
+  width stays 800. Shrinking the text to fit is not allowed — the deck shows
+  diagrams at most 380px wide, where two-thirds-size labels are about 7px.
 
 ## Palette
 

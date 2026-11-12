@@ -23,8 +23,8 @@
   <line x1="170" y1="490" x2="590" y2="70" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
   <line x1="170" y1="370" x2="470" y2="70" stroke="#d52349" stroke-width="3.5" stroke-linecap="round"/>
   <!-- annotations -->
-  <text x="175" y="292" font-size="22" fill="#333333" text-anchor="middle">Government</text>
-  <text x="175" y="318" font-size="22" fill="#333333" text-anchor="middle">revenue</text>
+  <text x="175" y="290" font-size="22" fill="#333333" text-anchor="middle">Government</text>
+  <text x="160" y="322" font-size="22" fill="#333333" text-anchor="middle">revenue</text>
   <!-- labels -->
   <text x="478" y="64" font-size="26" font-weight="700" fill="#d52349">S+Tax</text>
   <text x="598" y="62" font-size="26" font-weight="700" fill="#1d70b8">S</text>

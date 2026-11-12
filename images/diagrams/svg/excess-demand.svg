@@ -1,6 +1,6 @@
 <svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
   <title id="t">Excess demand</title>
-  <desc id="d">At a price P1 set below the equilibrium price Pe, quantity demanded QD exceeds quantity supplied QS. The horizontal gap between them is excess demand — a shortage — and the arrows along the curves show the price being bid back up towards equilibrium.</desc>
+  <desc id="d">At a price P1 set below the equilibrium price Pe, quantity demanded Qd exceeds quantity supplied Qs. The horizontal gap between them is excess demand — a shortage — and the arrows along the curves show the price being bid back up towards equilibrium.</desc>
   <!-- geometry
        intersections: 360,300
        on-curve: 300,360 420,360
@@ -31,7 +31,7 @@
   <line x1="300" y1="375" x2="420" y2="375" stroke="#333333" stroke-width="2"/>
   <line x1="300" y1="369" x2="300" y2="381" stroke="#333333" stroke-width="2"/>
   <line x1="420" y1="369" x2="420" y2="381" stroke="#333333" stroke-width="2"/>
-  <text x="360" y="405" font-size="22" fill="#333333" text-anchor="middle">Excess demand</text>
+  <text x="360" y="405" font-size="22" fill="#333333" text-anchor="middle" paint-order="stroke" stroke="#ffffff" stroke-width="6" stroke-linejoin="round">Excess demand</text>
   <!-- labels -->
   <text x="598" y="62" font-size="26" font-weight="700" fill="#1d70b8">S</text>
   <text x="558" y="498" font-size="26" font-weight="700" fill="#1d70b8">D</text>

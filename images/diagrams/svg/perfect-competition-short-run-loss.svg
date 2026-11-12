@@ -13,12 +13,14 @@
   <!-- shaded loss -->
   <rect x="460" y="341.3" width="168.95" height="21.2" fill="#d52349" fill-opacity="0.15"/>
   <!-- the market price carried across to the firm -->
-  <line x1="70" y1="362.5" x2="460" y2="362.5" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="70" y1="362.5" x2="415" y2="362.5" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
   <!-- guides: market panel -->
   <line x1="220" y1="362.5" x2="220" y2="460" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
   <!-- guides: firm panel -->
   <line x1="460" y1="341.3" x2="628.95" y2="341.3" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
-  <line x1="628.95" y1="362.5" x2="628.95" y2="460" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- the Q1 guide breaks around "D=AR=MR=P1" (ink y 401.4 to 420), 8px clear each side -->
+  <line x1="628.95" y1="362.5" x2="628.95" y2="393" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="628.95" y1="428" x2="628.95" y2="460" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
   <!-- axes: market panel -->
   <line x1="70" y1="120" x2="70" y2="460" stroke="#333333" stroke-width="2.5"/>
   <line x1="70" y1="460" x2="370" y2="460" stroke="#333333" stroke-width="2.5"/>

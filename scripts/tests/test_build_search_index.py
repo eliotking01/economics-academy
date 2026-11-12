@@ -33,7 +33,12 @@ class TestSearchIndex(unittest.TestCase):
         self.assertEqual(len(idx["topics"]),
                          sum(len(notes_sequence.hub_topics(d))
                              for d in notes_extras.BOARD_OF_DIR))
-        self.assertEqual(len(idx["decks"]), 6)
+        # One deck per group of every board with flashcards live - derived,
+        # so a board's flashcards launch moves it (6 until 2026-11-11).
+        import board_data
+        self.assertEqual(len(idx["decks"]),
+                         sum(len(b["groups"]) for b in
+                             board_data.load("flashcards").values()))
         data = json.loads((ROOT / "glossary-data" / "terms.json")
                           .read_text(encoding="utf-8"))
         self.assertEqual(len(idx["glossary"]),

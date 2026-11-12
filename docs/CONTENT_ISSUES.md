@@ -687,3 +687,481 @@ Format per entry:
 - **Confidence** — high (the SVGs and the deck JSON visibly disagree
   today).
 - **Status** — open.
+
+## 38. Edexcel B 1.4.3 exam tip offers trade credit for paying staff
+
+- **Location** — `revision-notes/edexcel-b-theme-1/1-4-3-types-and-sources-of-credit.html`,
+  "Comparing Sources of Finance", the "Match the finance to what it is for"
+  exam tip (source: `notes-data/topics/edexcel-b-theme-1/1-4-3-types-and-sources-of-credit.html`).
+- **Issue** — the tip reads "A short-term need, such as paying staff while
+  waiting for a customer to pay, suits an overdraft or trade credit." Trade
+  credit comes from suppliers: it defers what a business owes for goods and
+  cannot pay wages. At best it helps indirectly, by freeing up cash that would
+  otherwise go to suppliers. The page's own definition says this ("a supplier
+  lets a business take goods now and pay for them later"). Found by the
+  cold-solver verify pass on Edexcel B flashcards unit 1.4 (`NOTES?` on
+  `edexcel-b-1-4-3-app-01`). The card now says "Overdraft" alone and does
+  not rely on this sentence.
+- **Proposed correction** — either change the example so both sources fit:
+  "A short-term need, such as buying stock or covering a gap while waiting for
+  a customer to pay, suits an overdraft or trade credit." Or keep the example
+  and drop trade credit: "A short-term need, such as paying staff while
+  waiting for a customer to pay, suits an overdraft." The wording is Eliot's
+  call.
+- **Confidence** — medium-high (standard theory; the page's own trade-credit
+  definition). It is a loose example, not a false principle.
+- **Status** — fixed (approved by Eliot 2026-11-09: the second
+  wording, trade credit dropped; "...suits an overdraft." No glossary
+  coupling, the tip is not a chip).
+
+## 39. Edexcel B 1.6.4 worked example treats a cash surplus as proof of profit
+
+- **Location** — `revision-notes/edexcel-b-theme-1/1-6-4-business-survival-and-cash-flow.html`,
+  "Worked Example: Rosa's Christmas Rush", the paragraph under the table
+  (source: `notes-data/topics/edexcel-b-theme-1/1-6-4-business-survival-and-cash-flow.html`).
+- **Issue** — the page reads "Over the three months Rosa takes £24,000 and
+  spends £14,000, so the quarter is profitable: her bank balance ends £10,000
+  higher than it started." That reasons from cash to profit, on the page whose
+  point is that the two differ. It roughly holds here, because all Rosa's
+  customers pay straight away, but materials bought in October and not yet
+  used by the end of December would not be a cost of the quarter, so the cash
+  surplus and the profit need not match. Found by the cold-solver verify pass
+  on Edexcel B flashcards unit 1.6 (`NOTES?`). No card depends on this
+  sentence.
+- **Proposed correction** — keep the cash fact and drop the inference, e.g.
+  "Over the three months Rosa takes £24,000 and spends £14,000, so her bank
+  balance ends £10,000 higher than it started, and the season is a good one."
+  Or keep "profitable" and say why it holds here: "...and because her
+  customers pay straight away and she uses the materials she buys, the
+  quarter is profitable too." The wording is Eliot's call.
+- **Confidence** — medium (the sentence is not false for Rosa; it models a
+  shortcut the page warns against).
+- **Status** — fixed (approved by Eliot 2026-11-09: the first
+  wording, verbatim. No card or glossary coupling).
+
+## 40. Edexcel B 2.3.1 states a capital-intensive firm always has the higher break-even output
+
+- **Location** — `revision-notes/edexcel-b-theme-2/2-3-1-productivity.html`,
+  "Labour-Intensive and Capital-Intensive Production", the paragraph under the
+  comparison table (source: `notes-data/topics/edexcel-b-theme-2/2-3-1-productivity.html`).
+- **Issue** — the page reads "Because its costs are mostly fixed, a
+  capital-intensive firm has a higher break-even output than a labour-intensive
+  one." Break-even output is fixed costs ÷ contribution per unit. A
+  capital-intensive firm usually has lower variable cost per unit, so a larger
+  contribution, which pulls break-even output down. Higher break-even output is
+  likely but not certain. It is a common textbook simplification, stated here
+  as a rule. Found by the cold-solver verify pass on Edexcel B flashcards unit
+  2.3 (`NOTES?` on `edexcel-b-2-3-1-def-02`). The card now stops at "it needs
+  high output to keep average cost down" and does not rely on this sentence.
+- **Proposed correction** — hedge it, e.g. "Because its costs are mostly
+  fixed, a capital-intensive firm usually has a higher break-even output than
+  a labour-intensive one." Or leave it as written, as a deliberate
+  simplification. The wording is Eliot's call.
+- **Confidence** — medium (standard theory; the claim holds in the typical
+  case and the page's own context).
+- **Status** — fixed (approved by Eliot 2026-11-09: "usually" added,
+  "...a capital-intensive firm usually has a higher break-even output than a
+  labour-intensive one". No glossary coupling, the sentence is not a chip.
+  The card `edexcel-b-2-3-1-def-02` stays without the clause).
+
+## 41. Edexcel B 2.5.3 says the ONS does not count RPI as an official statistic
+
+- **Location** — `revision-notes/edexcel-b-theme-2/2-5-3-inflation.html`,
+  "Price Indices: CPI and RPI", the RPI paragraph (source:
+  `notes-data/topics/edexcel-b-theme-2/2-5-3-inflation.html`).
+- **Issue** — the page reads "The ONS says RPI is not good enough to be an
+  official statistic, but still publishes it because some long-term
+  contracts are linked to it." RPI lost its *National Statistic* (now
+  "accredited official statistic") status in 2013, but it is still
+  produced and published as an official statistic. "Not good enough to be
+  an official statistic" overstates the downgrade. Found by the cold-solver
+  verify pass on Edexcel B flashcards unit 2.5 (`NOTES?` on
+  `edexcel-b-2-5-3-formula-01`). The card now says only "It is still
+  published because some long-term contracts are linked to it." It does
+  not rely on the doubtful clause.
+- **Proposed correction** — "The ONS no longer treats RPI as an accredited
+  National Statistic, because it is a poor measure of inflation, but still
+  publishes it because some long-term contracts are linked to it." Or,
+  simpler: "RPI is no longer an accredited National Statistic, but the ONS
+  still publishes it because some long-term contracts are linked to it."
+  The wording is Eliot's call.
+- **Confidence** — medium-high (the 2013 de-designation of RPI as a
+  National Statistic is well documented; checked from memory, not against
+  the ONS or UK Statistics Authority page in this session). Not a chip, so
+  no glossary coupling.
+- **Status** — fixed (approved by Eliot 2026-11-09, the simpler wording:
+  "RPI is no longer an accredited National Statistic, but the ONS still
+  publishes it because some long-term contracts are linked to it." The
+  card `edexcel-b-2-5-3-formula-01` stays as it is: it no longer makes the
+  claim either way).
+
+## 42. Edexcel B 3.1.4 labels the tariff diagram's green area as "revenue and profit"
+
+- **Location** — `revision-notes/edexcel-b-theme-3/3-1-4-trade-policy-and-trade-negotiations.html`,
+  "Tariffs", the "Home producers gain" bullet under Figure 1 (source:
+  `notes-data/topics/edexcel-b-theme-3/3-1-4-trade-policy-and-trade-negotiations.html`).
+- **Issue** — the page reads "they expand output from Q1 to Q2 → higher
+  revenue and profit (the green area), and more jobs." The green area, to
+  the left of Sdomestic between Sworld and Sworld+tariff, is the gain in
+  domestic producer surplus. The rise in revenue is larger: it is the green
+  area plus the cost of producing the extra units Q1 to Q2, which is the
+  area under Sdomestic between Q1 and Q2 (the left red triangle and the
+  rectangle below Sworld). So "revenue" is not the green area. "Profit"
+  is close enough at A level, since producer surplus is usually taught as
+  the producers' gain. Found by the cold-solver verify
+  pass on Edexcel B flashcards unit 3.1 (`NOTES?` on
+  `edexcel-b-3-1-4-diagram-01`). The card now says "a gain in producer
+  surplus (the green area), and more jobs".
+- **Proposed correction** — "→ higher revenue and profit, and more jobs.
+  The green area is their gain in producer surplus." Or, shorter: "→ a gain
+  in producer surplus (the green area), and more jobs." Or leave it as
+  written, as a deliberate simplification. The wording is Eliot's call.
+- **Confidence** — medium (standard welfare analysis; the bullet is loose,
+  not backwards). Not a chip, so no glossary coupling. The same sentence
+  does not appear in the figure's caption or alt text.
+- **Status** — fixed (approved by Eliot 2026-11-10, the shorter wording:
+  "→ a gain in producer surplus (the green area), and more jobs." The card
+  `edexcel-b-3-1-4-diagram-01` already says the same, so it is unchanged).
+
+## 43. Edexcel B 3.2.1 gives lower foreign wages as the cost saving from outsourcing as well as offshoring
+
+- **Location** — `revision-notes/edexcel-b-theme-3/3-2-1-conditions-that-prompt-trade.html`,
+  "Offshoring and Outsourcing", the "Costs" bullet under "When a firm
+  offshores or outsources:" (source:
+  `notes-data/topics/edexcel-b-theme-3/3-2-1-conditions-that-prompt-trade.html`).
+- **Issue** — the bullet reads "Costs: wages and rents are lower abroad →
+  lower unit costs → the firm can cut prices or earn a higher margin." The
+  list is introduced as applying to a firm that "offshores or outsources",
+  but the page's own exam tip says outsourcing hands work to another firm
+  "which may be in the same town". For outsourcing within the UK, lower
+  wages abroad are not why it saves money. The section's opening line,
+  "Firms also trade by buying from abroad", has the same slant, though
+  that line is about trade and is fair in context. Found by the cold-solver
+  verify pass on Edexcel B flashcards unit 3.2 (`NOTES?` on
+  `edexcel-b-3-2-1-eval-01`). The card now reads "Lower costs: when the
+  work moves abroad, wages and rents are lower → …".
+- **Proposed correction** — "Costs: when the work moves abroad, wages and
+  rents are lower → lower unit costs → …". Or leave it as written: the
+  section is about trade, so the reader can take it as offshoring. The
+  wording is Eliot's call.
+- **Confidence** — low (the bullet is loose, not wrong for the offshoring
+  case the section is mainly about). Not a chip, so no glossary coupling.
+- **Status** — fixed (approved by Eliot 2026-11-10, the proposed wording:
+  "Costs: when the work moves abroad, wages and rents are lower → lower
+  unit costs → …". The card `edexcel-b-3-2-1-eval-01` already says the
+  same, so it is unchanged).
+
+## 44. Edexcel B 3.3.2 sends the reader to the PED page for mass and niche markets
+
+- **Location** — `revision-notes/edexcel-b-theme-3/3-3-2-demand-side-factors-in-global-markets.html`,
+  "How Firms Respond to Demand-Side Factors", second paragraph: "How far a
+  firm then adapts its marketing depends on whether it sells to a mass
+  market or a niche (unit 2.2.1)" (source:
+  `notes-data/topics/edexcel-b-theme-3/3-3-2-demand-side-factors-in-global-markets.html`).
+- **Issue** — the cross-reference goes to
+  `2-2-1-price-elasticity-of-demand.html`. The cold-solver verify pass on
+  Edexcel B flashcards unit 3.3 (`NOTES?`, raised while checking
+  `edexcel-b-3-3-2-def-02`) questioned whether a PED page is the right
+  place to send a reader for mass and niche markets. Checked: 2.2.1 has a
+  section, "Pricing in Niche and Mass Markets", with chips for both terms,
+  so the link lands on a definition. B also defines both terms in 1.3.4
+  (`1-3-4-price-mechanism.html`) and niche markets in 2.1.5. The card does
+  not depend on the link and is unchanged.
+- **Proposed correction** — none recommended: leave the link as written.
+  The alternative is to point it at 1.3.4, where B first teaches the two
+  terms. The wording is Eliot's call.
+- **Confidence** — low (the link is defensible; this is a choice of
+  target, not an error). Not a chip, so no glossary coupling.
+- **Status** — closed, no change (Eliot, 2026-11-10: the link stays on
+  2.2.1).
+
+## 45. Edexcel B 3.5.2 lists the cost to firms under "Both can push wages up"
+
+- **Location** — `revision-notes/edexcel-b-theme-3/3-5-2-wage-rates.html`,
+  "Trade Unions and Professional Bodies", the list introduced by "Both can
+  push wages up:" (source:
+  `notes-data/topics/edexcel-b-theme-3/3-5-2-wage-rates.html`).
+- **Issue** — the list has three bullets: collective bargaining, entry
+  requirements and "The cost to firms: pay rises → labour costs rise → the
+  firm raises prices, accepts lower profit or employs fewer people". The
+  third is a consequence of higher pay, not a way a union or professional
+  body pushes wages up, so it sits under a heading it does not answer. The
+  economics is right; only the grouping is off. Found by the cold-solver
+  verify pass on Edexcel B flashcards unit 3.5 (`NOTES?`, raised while
+  rechecking `edexcel-b-3-5-2-eval-01`). The cards `3-5-2-def-03` and
+  `3-5-2-eval-01` give the cost its own line and do not depend on the
+  heading.
+- **Proposed correction** — either change the lead-in to something like
+  "Both can push wages up, at a cost to firms:", or move the third bullet
+  out of the list into its own sentence before "Firms can gain too." Or
+  leave it as written. The wording is Eliot's call.
+- **Confidence** — low (a structure point, not an error of fact). Not a
+  chip, so no glossary coupling.
+- **Status** — closed, no change (Eliot, 2026-11-10: the list stays as
+  written).
+
+## 46. The kinked demand curve labels the kink price "Pcompetitive"
+
+- **Location** — the figure `images/diagrams/kinked-demand-curve.png`, its
+  alt text on `revision-notes/edexcel-b-theme-4/4-1-3-oligopoly.html`,
+  "Interdependence and Price Stability", Figure 1 (source:
+  `notes-data/topics/edexcel-b-theme-4/4-1-3-oligopoly.html`). The same
+  PNG is on Edexcel A 3.4.4 and AQA 1.5.5, whose prose calls it
+  "P_competitive". The flashcard SVG `images/diagrams/svg/kinked-demand-curve.svg`
+  shortens it to "Pcomp" and is used by `edexcel-a-3-4-4-diagram-02`,
+  `aqa-1-5-5-diagram-02` and now `edexcel-b-4-1-3-diagram-01`.
+- **Issue** — the kink sits at the price the market has settled at. It is
+  not the competitive price in the textbook sense (P = MC, normal profit):
+  the same figure draws an AC curve giving C below the kink price, so the
+  firm is making supernormal profit there. A student could read
+  "competitive" as meaning the oligopoly prices like a competitive market.
+  "P1" or "Pcurrent" would be clearer. Found by the cold-solver verify pass
+  on Edexcel B flashcards unit 4.1 (`NOTES?` on
+  `edexcel-b-4-1-3-diagram-01`). The card no longer glosses the label as
+  "the competitive price". It says "the current price, labelled Pcomp".
+- **Proposed correction** — none recommended in this run. Relabelling is a
+  figure change across three boards (one PNG, one SVG and the A and AQA
+  prose that names the label), so it is a decision about the shared
+  diagram, not a B wording fix. Options: relabel to P1 everywhere, change
+  only the B alt text, or leave it. The wording is Eliot's call.
+- **Confidence** — medium (the label is loose rather than wrong; "the
+  competitive price" can be read as "the price competition has settled
+  at"). Not a chip, so no glossary coupling.
+- **Status** — open, deferred (Eliot, 2026-11-11: leave it for now; it
+  is a change to a figure shared by three boards, for a later look).
+
+## 47. The perfect competition figures use one Q label for the market and the firm
+
+- **Location** — `images/diagrams/perfect-competition-short-run-supernormal-profit.png`
+  and `images/diagrams/perfect-competition-profit-to-longrun.png`, as
+  described in the alt text on
+  `revision-notes/edexcel-b-theme-4/4-1-1-spectrum-of-competition.html`,
+  Figures 1 and 2 (source:
+  `notes-data/topics/edexcel-b-theme-4/4-1-1-spectrum-of-competition.html`).
+  Both PNGs are also on Edexcel A 3.4.2 and AQA 1.5.3.
+- **Issue** — the market panel and the firm panel both mark output Q1 in
+  Figure 1, and Q2 in Figure 2. The market's quantity and one firm's
+  quantity are not the same number. In Figure 2 the firm's output also
+  moves down its MC curve as the price falls, while the market quantity
+  rises, so the shared "Q2" suggests both rise. This is a common A-level
+  shortcut. Found by the cold-solver verify pass on Edexcel B flashcards
+  unit 4.1 (`NOTES?`, low priority, raised while checking
+  `edexcel-b-4-1-1-diagram-01`). The card uses the flashcard SVG for
+  Figure 1 only, which also labels both Q1, and does not depend on the
+  label.
+- **Proposed correction** — none recommended: leave the figures as drawn.
+  The alternative is to relabel the firm panels q1 and q2, a figure change
+  on three boards. The wording is Eliot's call.
+- **Confidence** — low (a labelling convention, widely used). Not a chip,
+  so no glossary coupling.
+- **Status** — closed, no change (Eliot, 2026-11-11: the figures stay
+  as drawn).
+
+## 48. Edexcel B 4.1.2 equates limit pricing with pricing at about average cost
+
+- **Location** — `revision-notes/edexcel-b-theme-4/4-1-2-barriers-to-entry.html`,
+  "Contestability and Ease of Entry", the "Prices" bullet (source:
+  `notes-data/topics/edexcel-b-theme-4/4-1-2-barriers-to-entry.html`).
+- **Issue** — the page says firms "keep prices close to average cost, a
+  tactic called limit pricing". Strictly, limit pricing means setting a
+  price just low enough to deter entry, which need not be average cost.
+  Equating the two is a simplification. It is the same one Edexcel A 3.4.7
+  and AQA 1.5.9 make in their `limit pricing` chip ("set price below the
+  profit-maximising level so that they earn only normal profit", "around
+  AR = AC"), so B is consistent with the rest of the site. Found by the
+  cold-solver verify pass on Edexcel B flashcards unit 4.1 (`NOTES?`, low
+  priority and "arguably fine", raised while checking
+  `edexcel-b-4-1-2-def-02`). The card follows the page.
+- **Proposed correction** — none recommended: leave it, as the simplest
+  accurate version for A level and consistent with A and AQA. The wording
+  is Eliot's call.
+- **Confidence** — low. Not a chip on B, so no glossary coupling.
+- **Status** — closed, no change (Eliot, 2026-11-11: the page stays as
+  written).
+
+## 49. Edexcel B 4.4.3 says privatisation lowers barriers to entry
+
+- **Location** — `revision-notes/edexcel-b-theme-4/4-4-3-supply-side-policies.html`,
+  "Policies for Each Aim" table, the "Promote competition" row, market-based
+  column (source:
+  `notes-data/topics/edexcel-b-theme-4/4-4-3-supply-side-policies.html`).
+- **Issue** — the cell reads "Deregulation and privatisation, lowering
+  barriers to entry". Deregulation lowers barriers to entry. Privatisation
+  on its own only moves a firm from public to private ownership: a
+  privatised monopoly stays a monopoly unless the market is also opened to
+  new firms. The cell lets a reader take the two together. Found by the
+  cold-solver verify pass on Edexcel B flashcards unit 4.4 (`NOTES?`,
+  raised while checking `edexcel-b-4-4-3-app-01`). The card now says only
+  that privatisation is market-based and promotes competition, which is
+  the row it sits in.
+- **Proposed correction** — "Deregulation, lowering barriers to entry;
+  privatisation, with markets opened to new firms". Or leave it as the
+  simplest version for A level. The wording is Eliot's call.
+- **Confidence** — medium (standard theory: privatisation and
+  liberalisation are separate policies). Not a chip, so no glossary
+  coupling.
+- **Status** — approved (Eliot, 2026-11-11: the proposed wording);
+  fixed in the commit that applies Eliot's answers to the unit 4.4
+  flashcard sheet. The cell now reads "Deregulation, lowering barriers to
+  entry; privatisation, with markets opened to new firms".
+
+## 50. Edexcel B 4.4.3 classes R&D tax relief as interventionist
+
+- **Location** — same page, "Policies for Each Aim" table, the "Increase
+  incentives" row, interventionist column.
+- **Issue** — the cell reads "Tax relief or grants for research and
+  development, and for investment in new equipment". Grants are clearly
+  interventionist. Tax relief is classed either way in textbooks: some
+  call any tax incentive market-based. On the page's own chips, relief
+  targeted at one activity is the government directing resources, so
+  interventionist is defensible, but a student who reads "market-based
+  ... incentives are stronger" could fairly answer market-based. Found by
+  the cold-solver verify pass on Edexcel B flashcards unit 4.4 (`NOTES?`,
+  "a wording risk, not an error"). The card no longer uses this item.
+- **Proposed correction** — none needed for accuracy. Optionally "Grants
+  for research and development and for new equipment, or tax relief
+  targeted at them" to show why it counts as directing resources. The
+  wording is Eliot's call.
+- **Confidence** — low (a classification convention). Not a chip, so no
+  glossary coupling.
+- **Status** — closed, no change (Eliot, 2026-11-11: the page stays as
+  written).
+
+## 51. Edexcel B 4.4.3 says a Keynesian LRAS shift always lowers the price level
+
+- **Location** — same page, "Showing Supply-Side Policies on a Diagram",
+  the sentence before Figure 2 and the Figure 2 caption.
+- **Issue** — on the Keynesian diagram, a right shift of LRAS lowers the
+  price level and raises real GDP only where AD crosses LRAS on its rising
+  or vertical section. Where AD crosses the flat section, output and
+  prices barely change. The page states the result without that
+  condition, though its own "No help in a recession" bullet makes the same
+  point in words. Found by the cold-solver verify pass on Edexcel B
+  flashcards unit 4.4 (`NOTES?`, "minor, possibly not worth logging",
+  raised while checking `edexcel-b-4-4-3-diagram-01`). The card follows
+  the page and the figure, which draws AD on the rising section.
+- **Proposed correction** — none recommended: Figure 2 shows the case the
+  sentence describes, and the recession bullet covers the rest. Leaving it
+  keeps the page simple.
+- **Confidence** — low. Not a chip, so no glossary coupling.
+- **Status** — closed, no change (Eliot, 2026-11-11: the page stays as
+  written).
+
+## 52. Three shared AD/AS SVGs have loose `<desc>` text
+
+- **Location** — `images/diagrams/svg/lras-keynesian.svg`,
+  `images/diagrams/svg/keynesian-ad-shift-right.svg` and
+  `images/diagrams/svg/classical-lras-shift-right.svg`, the `<desc>`
+  element in each. All three are used by flashcards on Edexcel A, AQA and
+  now Edexcel B.
+- **Issue** — the two Keynesian SVGs describe the curve as "L-shaped",
+  which is a poor description of a curve that is flat, then rises, then is
+  vertical. The classical one says "Full-employment output", where the
+  notes say "full capacity output". The text is not visible, but a screen
+  reader may announce it with the card's `svgAlt`. Found by the cold-solver
+  verify pass on Edexcel B flashcards unit 4.4 (a remark, not a `NOTES?`).
+  The cards do not depend on it: each card's own `svgAlt` describes the
+  figure correctly.
+- **Proposed correction** — Keynesian: "flat at low output, then rising,
+  then vertical at full capacity output (Yfe)". Classical: "full capacity
+  output". The exact wording is Eliot's call.
+- **Confidence** — high that the wording is loose. Not a chip, so no
+  glossary coupling.
+- **Status** — open, deferred (Eliot, 2026-11-11: keep it flagged, to be
+  fixed later; the fix touches SVGs shared by three boards).
+
+## 53. Edexcel B 4.5.3 states the FPC mortgage limit without its size
+
+- **Location** — `revision-notes/edexcel-b-theme-4/4-5-3-the-role-of-the-central-bank.html`,
+  "Regulating the Banking Industry: the Financial Policy Committee", the
+  "Limits on risky mortgages" bullet (source slice
+  `notes-data/topics/edexcel-b-theme-4/4-5-3-the-role-of-the-central-bank.html`).
+- **Issue** — "it caps the share of new mortgages lenders can make at 4.5
+  times or more a borrower's income" is correct, but without the size of
+  the cap a student can read it as "no mortgage may exceed 4.5 times
+  income", that is, a ban rather than a limit on the share. Found by the
+  cold-solver verify pass on Edexcel B flashcards unit 4.5 (`NOTES?`, low
+  confidence, raised while checking `edexcel-b-4-5-3-def-02` and
+  `edexcel-b-4-5-3-app-01`). The verifier recalled the limit as 15% of new
+  lending and thought the Bank changed how it applies to individual lenders
+  in 2025, but said that is from memory and must be checked against the
+  Bank of England's current policy. Not checked: the Bank's documents are
+  not in this repo. The cards follow the page and add one sentence of their
+  own, "Such loans are allowed, but only as a limited part of new lending",
+  which follows from "caps the share" and needs no figure.
+  **Checked 2026-11-11** (Bank of England high loan to income lending
+  page, and its July 2025 Financial Stability Report remarks): the 4.5
+  times definition and the 15% limit still stand, but since July 2025 the
+  15% applies to all new lending in aggregate and an individual lender may
+  go above it. The page's "caps the share of new mortgages lenders can
+  make" is still right read as lenders taken together; read as each
+  lender, it is now out of date.
+- **Proposed correction** — either leave it (simplest), or make the
+  aggregate explicit, such as "it caps the share of all new mortgages made
+  at 4.5 times or more a borrower's income". Adding the percentage is not recommended: it is the
+  kind of figure that dates.
+- **Confidence** — low. Not a chip, so no glossary coupling.
+- **Status** — closed, no change (Eliot, 2026-11-11: the page stays as
+  it is. The cards keep their added sentence, "Such loans are allowed, but
+  only as a limited part of new lending").
+
+## 54. Edexcel B 4.5.3 and 4.5.4 say the Bank stress-tests banks every year
+
+- **Location** — `revision-notes/edexcel-b-theme-4/4-5-3-the-role-of-the-central-bank.html`,
+  the FPC's "Stress tests" bullet ("each year the Bank checks whether the
+  largest banks could survive a severe recession"), and
+  `revision-notes/edexcel-b-theme-4/4-5-4-the-global-financial-crisis.html`,
+  the regulation table's "Annual stress tests" row (source slices in
+  `notes-data/topics/edexcel-b-theme-4/`).
+- **Issue** — from 2025 the Bank of England runs its main Bank Capital
+  Stress Test every other year, not every year (announced November 2024;
+  the 2025 test was launched in March 2025 and is described by the Bank as
+  the first of a biennial cycle, with lighter exercises in between).
+  Found by the cold-solver verify pass on Edexcel B flashcards unit 4.5
+  (`NOTES?`, medium-low confidence, raised while re-checking
+  `edexcel-b-4-5-3-def-02`), then checked against the Bank's stress-testing
+  pages. The cards say "the Bank regularly checks" and "Regular stress
+  tests", which is true either way and does not contradict the page.
+  **Checked 2026-11-11 on bankofengland.co.uk:**
+  - "The Bank of England's approach to stress testing the UK banking
+    system", published 29 November 2024 and covering "from 2025 onwards"
+    (`https://www.bankofengland.co.uk/stress-testing/2024/boes-approach-to-stress-testing-the-uk-banking-system`):
+    "the Bank expects to carry out a Bank Capital Stress Test every other
+    year", with lighter stress testing "in the intervening years".
+  - Financial Stability Report, December 2025, published 2 December 2025
+    (`https://www.bankofengland.co.uk/financial-stability-report/2025/december-2025`):
+    the FPC lists "reducing the frequency of its main Bank Capital Stress
+    Tests to every other year" among its steps.
+  - The main stress-testing page
+    (`https://www.bankofengland.co.uk/stress-testing`, last updated 3 July
+    2026) gives no frequency either way.
+- **Proposed correction** — 4.5.3: "the Bank regularly checks whether the
+  largest banks could survive a severe recession". 4.5.4 table: "Regular
+  stress tests". Both drop a detail that dates, which fits keeping the
+  notes simple.
+- **Confidence** — high that "each year" is out of date. Not a chip, so no
+  glossary coupling.
+- **Status** — approved (Eliot, 2026-11-11: the proposed wording, on both
+  pages); fixed in the commit that applies Eliot's answers to the unit 4.5
+  flashcard sheet. 4.5.3 now reads "the Bank regularly checks whether the
+  largest banks could survive a severe recession", and the 4.5.4 table row
+  reads "Regular stress tests". The cards `edexcel-b-4-5-3-def-02` and
+  `edexcel-b-4-5-4-eval-01` already said "regularly" and "Regular", and
+  now match the pages.
+
+## 55. Edexcel B 4.5.2 says lending for houses adds nothing to capacity
+
+- **Location** — `revision-notes/edexcel-b-theme-4/4-5-2-the-role-of-the-financial-sector.html`,
+  "Why the Financial Sector Matters", the "Who gets the credit" bullet.
+- **Issue** — "lending for houses and existing assets raises prices
+  without adding to what the economy can produce". Lending to build new
+  houses does add to output; the claim holds for buying existing houses.
+  Found by the cold-solver verify pass on Edexcel B flashcards unit 4.5
+  (`NOTES?`, raised while re-checking `edexcel-b-4-5-2-eval-01`, which
+  carries the sentence).
+- **Proposed correction** — "lending to buy existing houses and other
+  assets raises prices without adding to what the economy can produce", or
+  no change: the simplification is a common one.
+- **Confidence** — low. Not a chip, so no glossary coupling.
+- **Status** — closed, no change (Eliot, 2026-11-11: the page stays as
+  it is).

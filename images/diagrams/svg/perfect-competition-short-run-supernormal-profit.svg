@@ -12,7 +12,7 @@
   <!-- shaded supernormal profit -->
   <rect x="460" y="350" width="202.5" height="51" fill="#0f7b6c" fill-opacity="0.15"/>
   <!-- the market price carried across to the firm -->
-  <line x1="70" y1="350" x2="460" y2="350" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="70" y1="350" x2="415" y2="350" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
   <!-- guides: market panel -->
   <line x1="220" y1="350" x2="220" y2="460" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
   <!-- guides: firm panel -->
