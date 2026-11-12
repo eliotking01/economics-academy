@@ -175,29 +175,6 @@
       }
     },
     {
-      "id": "edexcel-b-1-1-2-def-01",
-      "specCode": "1.1.2",
-      "topic": "1.1 Scarcity, Choice and Potential Conflicts",
-      "subtopic": "1-1-2-business-objectives",
-      "cardType": "definition",
-      "front": "<p>Define a <strong>business objective</strong>.</p>",
-      "back": "<p><strong>Business objective</strong> — a target a business sets itself, which guides its decisions and gives it a way to judge how well it is doing.</p><p>Economic theory usually assumes firms want the most profit they can make, but real businesses vary: a new café may simply want to get through its first year.</p>",
-      "svgRef": null,
-      "difficulty": "foundation",
-      "tags": [
-        "business-objectives"
-      ],
-      "premium": false,
-      "acceptableAnswers": [],
-      "version": 1,
-      "lastVerified": "2026-11-08",
-      "source": {
-        "notesPage": "/revision-notes/edexcel-b-theme-1/1-1-2-business-objectives.html",
-        "origin": "notes-verbatim",
-        "verbatim": "a target a business sets itself, which guides its decisions and gives it a way to judge how well it is doing."
-      }
-    },
-    {
       "id": "edexcel-b-1-1-2-def-02",
       "specCode": "1.1.2",
       "topic": "1.1 Scarcity, Choice and Potential Conflicts",
@@ -541,52 +518,6 @@
       }
     },
     {
-      "id": "edexcel-b-1-1-3-eval-01",
-      "specCode": "1.1.3",
-      "topic": "1.1 Scarcity, Choice and Potential Conflicts",
-      "subtopic": "1-1-3-stakeholders-and-their-objectives",
-      "cardType": "evaluation",
-      "front": "<p><strong>Evaluate</strong>: what decides how serious a conflict between stakeholders is?</p>",
-      "back": "<ul><li><strong>How well the business is doing</strong> — a firm that is growing can pay higher wages, more tax and bigger dividends all at once.</li><li><strong>The time period</strong> — a pay rise costs profit now, but satisfied customers and staff tend to make a business more profitable in the long run.</li><li><strong>Power</strong> — the group with the most power usually wins. Shareholders can vote out directors, a trade union can threaten strike action, and the government can pass laws.</li></ul>",
-      "svgRef": null,
-      "difficulty": "standard",
-      "tags": [
-        "stakeholders",
-        "evaluation"
-      ],
-      "premium": false,
-      "acceptableAnswers": [],
-      "version": 1,
-      "lastVerified": "2026-11-08",
-      "source": {
-        "notesPage": "/revision-notes/edexcel-b-theme-1/1-1-3-stakeholders-and-their-objectives.html",
-        "origin": "card-authored"
-      }
-    },
-    {
-      "id": "edexcel-b-1-1-3-eval-02",
-      "specCode": "1.1.3",
-      "topic": "1.1 Scarcity, Choice and Potential Conflicts",
-      "subtopic": "1-1-3-stakeholders-and-their-objectives",
-      "cardType": "evaluation",
-      "front": "<p><strong>Evaluate</strong> corporate social responsibility. Give the arguments for and against.</p>",
-      "back": "<p><strong>For</strong></p><ul><li>A good reputation attracts customers, some of whom will pay more for ethical products.</li><li>It helps recruit and keep staff who care about how their employer behaves.</li><li>Acting before the law forces it can head off tougher regulation later.</li></ul><p><strong>Against</strong></p><ul><li>It raises costs, which means lower profit or higher prices.</li><li>A business's job is to make a profit within the law. Spending shareholders' money on causes they did not choose is unfair to them.</li><li>Some firms exaggerate their good deeds for publicity: <strong>greenwashing</strong> when the claims are environmental.</li></ul><p><strong>It depends on the business</strong>: CSR is easier to justify for a well-known brand whose customers notice how it behaves than for a small firm competing only on price.</p>",
-      "svgRef": null,
-      "difficulty": "stretch",
-      "tags": [
-        "csr",
-        "evaluation"
-      ],
-      "premium": false,
-      "acceptableAnswers": [],
-      "version": 1,
-      "lastVerified": "2026-11-08",
-      "source": {
-        "notesPage": "/revision-notes/edexcel-b-theme-1/1-1-3-stakeholders-and-their-objectives.html",
-        "origin": "card-authored"
-      }
-    },
-    {
       "id": "edexcel-b-1-2-1-def-01",
       "specCode": "1.2.1",
       "topic": "1.2 Enterprise, Business and the Economy",
@@ -653,29 +584,6 @@
         "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-1-role-of-an-entrepreneur.html",
         "origin": "notes-verbatim",
         "verbatim": "the selling price of a product minus the cost of its inputs."
-      }
-    },
-    {
-      "id": "edexcel-b-1-2-1-chain-01",
-      "specCode": "1.2.1",
-      "topic": "1.2 Enterprise, Business and the Economy",
-      "subtopic": "1-2-1-role-of-an-entrepreneur",
-      "cardType": "chain",
-      "front": "<p>Build the <strong>chain of reasoning</strong> for both halves of creative destruction. Why does the economy gain over time?</p>",
-      "back": "<p><strong>Creative:</strong> an entrepreneur offers something better or cheaper → customers switch their spending → the new firm's sales grow → new jobs, and more choice and better value for consumers.</p><p><strong>Destructive:</strong> firms that fail to adapt lose customers → revenue falls → they close → their workers lose their jobs, and those with skills specific to the old industry may struggle to find new ones.</p><p><strong>Over time:</strong> labour and capital leave firms that use them poorly and end up in firms that use them well, so the country can produce more with the same resources.</p>",
-      "svgRef": null,
-      "difficulty": "standard",
-      "tags": [
-        "entrepreneurship",
-        "chain-of-reasoning"
-      ],
-      "premium": false,
-      "acceptableAnswers": [],
-      "version": 1,
-      "lastVerified": "2026-11-08",
-      "source": {
-        "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-1-role-of-an-entrepreneur.html",
-        "origin": "card-authored"
       }
     },
     {
@@ -760,30 +668,6 @@
         "entrepreneurship",
         "profit",
         "chain-of-reasoning"
-      ],
-      "premium": false,
-      "acceptableAnswers": [],
-      "version": 1,
-      "lastVerified": "2026-11-08",
-      "source": {
-        "notesPage": "/revision-notes/edexcel-b-theme-1/1-2-2-entrepreneurial-motives.html",
-        "origin": "card-authored"
-      }
-    },
-    {
-      "id": "edexcel-b-1-2-2-eval-01",
-      "specCode": "1.2.2",
-      "topic": "1.2 Enterprise, Business and the Economy",
-      "subtopic": "1-2-2-entrepreneurial-motives",
-      "cardType": "evaluation",
-      "front": "<p><strong>Evaluate</strong>: is profit or a non-financial motive more important to an entrepreneur?</p>",
-      "back": "<p><strong>Profit has to beat the opportunity cost.</strong> Someone who leaves a £35,000-a-year job to run a business making £20,000 profit is £15,000 a year worse off in money terms. If they stay, something other than money is keeping them there.</p><p><strong>But the two are not either/or.</strong> A social enterprise that makes a loss cannot keep helping anyone, and an ethical brand may earn more because of its stance, as some customers pay a premium.</p><p><strong>It depends on the entrepreneur:</strong> judge which motive comes first for them, then explain how it still depends on the business covering its costs.</p>",
-      "svgRef": null,
-      "difficulty": "stretch",
-      "tags": [
-        "entrepreneurship",
-        "profit",
-        "evaluation"
       ],
       "premium": false,
       "acceptableAnswers": [],

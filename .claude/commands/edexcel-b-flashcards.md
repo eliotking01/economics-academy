@@ -16,7 +16,7 @@ Write the flashcards for every Edexcel B topic in spec unit **$ARGUMENTS**, into
 
 - One deck per theme: `flashcards-data/edexcel-b/theme-N.json`. If it does not exist yet, draft the deck-level fields (`board`, `boardName`, `theme`, `themeName`, `deckId`, `deckTitle`, `metaDescription`, `intro`) from the Edexcel A pattern and **list them for approval** in `review/flashcards-decks.md`. They are visible wording: never publish them unapproved.
 - Mix roughly as the A decks: about half definitions, then diagram, chain, evaluation, formula, calculation and application cards.
-- **Card budget (Eliot, 2026-11-09).** Theme 1 stays at 142 as built. Themes 2-4: **about 5 cards per topic**, so roughly 120 for Theme 2 (24 topics) and 95 each for Themes 3 and 4 (19 topics each). Go above 5 on a topic only where it has a diagram or calculation that needs its own card, and name each such topic and its extra card in the unit sheet. The decision is recorded in `review/flashcards-unit-2-1.md`.
+- **Card budget (Eliot, 2026-11-09).** Theme 1 stays at 137: 142 as built, less five cards Eliot removed on 2026-11-12 (not to be replaced). Themes 2-4: **about 5 cards per topic**, so roughly 120 for Theme 2 (24 topics) and 95 each for Themes 3 and 4 (19 topics each). Go above 5 on a topic only where it has a diagram or calculation that needs its own card, and name each such topic and its extra card in the unit sheet. The decision is recorded in `review/flashcards-unit-2-1.md`.
 
 ## For each topic in the unit, in spec order
 

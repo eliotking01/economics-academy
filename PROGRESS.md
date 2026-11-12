@@ -348,6 +348,10 @@ sheets: `05-website/drafts/all-boards-parity/review/flashcards-unit-X-Y.md`.
   when B's `pastPaperBank` goes live; `/launch-feature` step 4 now has
   the check. The search-index test's deck count is now derived, and
   `EXPECTED_KATEX_PAGES` declares B Themes 2 to 4.
+- **Five Theme 1 cards removed (Eliot, 2026-11-12), not replaced:**
+  `1-1-2-def-01`, `1-1-3-eval-01`, `1-1-3-eval-02`, `1-2-1-chain-01`,
+  `1-2-2-eval-01`. Theme 1 is now 137, B 462, all decks 1,133; still 85 of
+  85 topics carried, and the Theme 1 sample cards are unchanged.
 - **Still open:** CONTENT_ISSUES #46 and #52, both deferred by Eliot.
   Merge PR #49 (merge commit, not squash), then record the merge commit here.
 
