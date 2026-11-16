@@ -23,7 +23,7 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| All-boards parity (D67) — Phase 4: Edexcel B past-paper bank — steps 1–2, extraction (37 of 37 papers, one by OCR) and first-pass tags | on `feature/edexcel-b-bank`; tag disagreements awaiting Eliot (`review/bank-b-tags.md`); not built or published | — | — |
+| All-boards parity (D67) — Phase 4: Edexcel B past-paper bank — steps 1–2, extraction (37 of 37 papers, one by OCR) and tags | tagged on `feature/edexcel-b-bank` (decisions approved 2026-11-16); not built or published | — | — |
 | All-boards parity (D67) — Phase 2: Edexcel B flashcards, all four decks, launched (8 new URLs) | launched on `feature/edexcel-b-flashcards`, PR #49 open; not merged | — | — |
 | All-boards parity (D67) — Phase 1: Edexcel B practice questions, all 85 sets, launched (89 new URLs) | live (PR #48) | 2026-11-08 | `39403ead` |
 | June 2025 papers added to the past-paper question bank | live (PR #47) | 2026-10-24 | `d96b0928` |
@@ -216,7 +216,7 @@ session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
 
-### All-boards parity — Phase 4, Edexcel B past-paper bank (2026-11-16 to —) — STEPS 1–2 DONE, TAG DECISIONS PENDING (branch `feature/edexcel-b-bank`)
+### All-boards parity — Phase 4, Edexcel B past-paper bank (2026-11-16 to —) — STEPS 1–2 DONE, TAGGED (branch `feature/edexcel-b-bank`)
 
 Step 1 of brief §11. The review sheet is `review/phase-4-extraction.md`, with
 a side-by-side page for A Level Paper 1 June 2019 beside it. Eliot approved
@@ -292,8 +292,19 @@ Q1-Q6 on 2026-11-16.
     were tagged, so they were compared against a fresh second run instead.
   - The card's "Revision notes" link goes to a question's **first** topic,
     so lead-topic order is a real disagreement, not a cosmetic one.
+  - **Eliot approved every recommendation (2026-11-16).** The rules are:
+    - Q1: tag both themes where the spec teaches a topic twice.
+    - Q2: tag 1.6.1 only when the percentage change is the answer.
+    - Q3: use an out-of-paper topic only where the spec teaches it nowhere
+      else.
+    - Q4: on a supply and demand diagram, the curve that shifts leads.
+
+    All 129 rows were applied, changing 92 entries. Two agreed-but-wrong
+    tags were also fixed, found by checking the mark schemes. With the
+    final tags, 79 B topics would reach the gate of 2.
+  - Taxonomy note for Step 3: 3.5.3 is titled "Minimum Wage Legislation"
+    but also carries skills shortages and migration (spec 3.5.3 b, c).
 - **Not yet:**
-  - Eliot's decisions on `review/bank-b-tags.md` (Q1–Q5), applied by hand.
   - The bank does not read B: `build_past_paper_questions.PAPER_DIRS`
     lists A and AQA only. That's Step 3.
 
