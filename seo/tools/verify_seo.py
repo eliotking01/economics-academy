@@ -282,6 +282,16 @@ def main() -> int:
          "revision-notes/glossary/edexcel-a/index.html"),
         ("revision-notes/glossary/edexcel-a/index.html",
          "revision-notes/glossary/aqa/index.html"),
+        # Edexcel B's glossary, launched 2026-11-16: each board page now
+        # offers the other two.
+        ("revision-notes/glossary/aqa/index.html",
+         "revision-notes/glossary/edexcel-b/index.html"),
+        ("revision-notes/glossary/edexcel-a/index.html",
+         "revision-notes/glossary/edexcel-b/index.html"),
+        ("revision-notes/glossary/edexcel-b/index.html",
+         "revision-notes/glossary/edexcel-a/index.html"),
+        ("revision-notes/glossary/edexcel-b/index.html",
+         "revision-notes/glossary/aqa/index.html"),
     }
 
     # AMENDED 2026-08-23 by the hub redesign. Each of the six notes board hubs

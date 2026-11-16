@@ -185,7 +185,7 @@ PINNED = {
     "edexcel-b.features.0": "notes",
     "edexcel-b.features.1": "practiceQuestions",
     "edexcel-b.features.2": "flashcards",
-    "edexcel-b.staged.0": "glossary",
+    "edexcel-b.features.3": "glossary",
     "edexcel-b.names.short": "Edexcel B",
     "edexcel-b.names.display": "Edexcel B",
     "edexcel-b.names.long": "Edexcel A-Level Economics B",

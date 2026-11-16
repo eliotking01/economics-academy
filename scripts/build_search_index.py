@@ -153,6 +153,7 @@ BOARD_HUBS = (
     "/practice-questions/edexcel-b-theme-1/", "/practice-questions/edexcel-b-theme-2/",
     "/practice-questions/edexcel-b-theme-3/", "/practice-questions/edexcel-b-theme-4/",
     "/revision-notes/glossary/edexcel-a/", "/revision-notes/glossary/aqa/",
+    "/revision-notes/glossary/edexcel-b/",
 )
 
 H1_RE = re.compile(r"<h1[^>]*>(.*?)</h1>", re.S)
