@@ -10,13 +10,21 @@ Eliot sells. The two never share a data path.
 **Mark scheme content is never extracted.** Each question deep-links to the
 site's own hosted PDF at the right page.
 
-## Scope, permanently
+## Scope
 
-| In scope | Out of scope, permanently |
+Widened by D67 (2026-10-24). Each change lands with the code that implements it.
+
+| In scope | Out of scope |
 | --- | --- |
-| Edexcel A **A Level** (9EC0), Papers 1–3 | **Section A, every board and qualification.** Do not extract it |
-| Edexcel A **AS Level** (8EC0), Papers 1–2 | **AQA AS papers.** When AQA extends, A Level only |
-| AQA A Level (7136) | Edexcel B, OCR, AQA specimen papers |
+| Edexcel A **A Level** (9EC0), Papers 1–3 | **The multiple-choice / short-answer Section A**: Edexcel A Papers 1–2 (9EC0 and 8EC0) and AQA Paper 3. Not yet: D67 brings Edexcel A's short answers in (Phase 6) and real MCQs as search-only cards with no key (Phase 7). Until each phase, do not extract it |
+| Edexcel A **AS Level** (8EC0), Papers 1–2 | **AQA AS papers**, permanently. When AQA extends, A Level only |
+| AQA A Level (7136) | OCR and AQA specimen papers, permanently |
+| Edexcel B **A Level** (9EB0), Papers 1–3, and **AS Level** (8EB0), Papers 1–2, **every section**: B has no MCQs and no optional questions. Extracted into `edexcel-b/` and `edexcel-b-as/`; not read by the build until the Phase 4 launch | |
+
+**Edexcel B prints a lead-in above many parts** ("New Balance operates in a
+competitive market. / (b) Explain…"). It is part of the question and is kept,
+verbatim, at the start of `questionText`. A figure printed inside a question
+(Paper 2 June 2022 1(b)) is not reproduced; its card links to the page.
 
 **8EC0 has no Section C** — verified from all 16 papers, not from the
 specification. Section B is `Q6(a)–(g)`: (a)–(e) compulsory then **(f) OR (g)**,
@@ -32,10 +40,13 @@ HTML, never applied by script, so it is never optional.
 
 ## Files
 
-- `edexcel-a/*.json`, `edexcel-a-as/*.json`, `aqa/*.json` — one per paper,
-  machine-written by `scripts/extract_past_paper_questions.swift` (Swift +
-  PDFKit). **Never hand-edit.** Two Edexcel directories because both
-  qualifications have a Paper 1 in the same series.
+- `edexcel-a/*.json`, `edexcel-a-as/*.json`, `edexcel-b/*.json`,
+  `edexcel-b-as/*.json`, `aqa/*.json` — one per paper, machine-written by
+  `scripts/extract_past_paper_questions.swift` (Swift + PDFKit; AQA by
+  `extract_aqa_questions.py`). **Never hand-edit.** Two directories per
+  Edexcel board because both qualifications have a Paper 1 in the same
+  series. `verify_past_paper_extraction.swift` checks all four Edexcel
+  directories against the PDFs.
 - `tags.json` — topics and keywords, **hand-written**. Separate so re-extraction
   cannot destroy it.
 - `taxonomy.json` — generated from the existing Edexcel topic records. The bank

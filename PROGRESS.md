@@ -23,6 +23,7 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
+| All-boards parity (D67) — Phase 4: Edexcel B past-paper bank — step 1, extraction (36 of 37 papers) | extracted on `feature/edexcel-b-bank`; not built, tagged or published | — | — |
 | All-boards parity (D67) — Phase 2: Edexcel B flashcards, all four decks, launched (8 new URLs) | launched on `feature/edexcel-b-flashcards`, PR #49 open; not merged | — | — |
 | All-boards parity (D67) — Phase 1: Edexcel B practice questions, all 85 sets, launched (89 new URLs) | live (PR #48) | 2026-11-08 | `39403ead` |
 | June 2025 papers added to the past-paper question bank | live (PR #47) | 2026-10-24 | `d96b0928` |
@@ -214,6 +215,60 @@ what changed file by file, how it was verified, and its "things a future
 session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
+
+### All-boards parity — Phase 4, Edexcel B past-paper bank (2026-11-16 to —) — STEP 1 DONE, EXTRACTION ONLY (branch `feature/edexcel-b-bank`)
+
+Step 1 of brief §11. The review sheet is `review/phase-4-extraction.md`, with
+a side-by-side page for A Level Paper 1 June 2019 beside it. Eliot approved
+Q1-Q6 on 2026-11-16.
+
+- **Extractor.** `extract_past_paper_questions.swift` gains `extractB()` for
+  9EB0 and 8EB0, routed by filename. Before this, a B filename matched the
+  Edexcel A pattern and would have been written over
+  `edexcel-a/p1-<series>.json` as 9EC0. The structure is read from the page:
+  - Sections come from the "before answering" openers. Parts run (a)-(h),
+    and a single 20-mark question has no parts.
+  - Each question's tariffs must sum to its printed "Total for Question".
+  - Lead-ins are kept verbatim at the start of `questionText` (Q2).
+  - P2 June 2022 1(b)'s in-question table is not reproduced (Q3).
+  - The parse stops at "TOTAL FOR PAPER", so P3's bound-in pre-release
+    insert (June 2017, November 2021) is skipped.
+  - Two mark-scheme heading layouts are used for B only.
+  - **Edexcel A re-extracted byte-identical**, all 45 papers.
+- **Data.** `edexcel-b/` and `edexcel-b-as/` (Phase 0 Q8). Counts come
+  from the extractor's run, and today they are:
+  - 36 papers and 351 questions, all high confidence;
+  - every mark-scheme page matched;
+  - `strip_source_attributions.py`: 0 changes.
+
+  Ids are `edexcel-b-p1-2019-jun-q1a` and `edexcel-b-as-…` (Q6).
+- **Verifier.** `verify_past_paper_extraction.swift` reads the B
+  directories, with four checks of its own (5-8):
+  - the closing words are on the question page;
+  - the label heads a mark-scheme row next to "Knowledge" (a bare "2" proves
+    nothing);
+  - the marks sum to the printed total;
+  - the context page carries an extract, and there are no choice groups.
+
+  A mutation test confirmed all four fire. It checks 693 questions across
+  81 papers and passes, with three warnings:
+  - Edexcel A P3 November 2021 2(d) and Edexcel B AS P1 October 2020 2(d):
+    the scheme labels each "(d)" without the question number.
+  - Edexcel B P1 June 2025 prints no "Sources for use with SECTION B" booklet
+    heading. Its Q2 links Extract G (p25), found by name; the first pass
+    linked its own question page, which the verifier caught.
+- **Open, for Eliot (Q4).** AS Paper 2 June 2019's question paper is an
+  image-only scan ("Microsoft: Print To PDF"), which PDFKit reads as 24 blank
+  pages. Eliot is to download Pearson's text-layer copy. It replaces the
+  hosted file at the same URL, and then that paper gets extracted.
+- **Approved wording, for Step 3 (Q5).** The Paper 3 card note reads:
+  "Paper 3 is set on a broad context that Pearson pre-released the November
+  before the exam. The extracts in the paper were unseen on the day." It
+  comes from the 9EB0 specification.
+- **Not yet:**
+  - The bank does not read B: `build_past_paper_questions.PAPER_DIRS` and
+    `verify_past_paper_tags.py` still list A and AQA only.
+  - Next is Step 2, tagging.
 
 ### All-boards parity — Phase 3, Edexcel B glossary (2026-11-12 to —) — STAGED, NOT LAUNCHED (branch `feature/edexcel-b-glossary`)
 

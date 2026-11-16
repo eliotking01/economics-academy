@@ -1,10 +1,17 @@
-// Extract Edexcel A (9EC0) A-Level Paper 1 and Paper 2 Section B and Section C
-// questions into JSON, one file per paper.
+// Extract past-paper questions into JSON, one file per paper:
+//
+//   Edexcel A (9EC0 / 8EC0): Section B and Section C of Papers 1 and 2, and
+//     both sections of Paper 3, into edexcel-a/ and edexcel-a-as/.
+//   Edexcel B (9EB0 / 8EB0): every question of every paper - B has no
+//     multiple choice and no optional questions - into edexcel-b/ and
+//     edexcel-b-as/. See extractB().
 //
 //   swift scripts/extract_past_paper_questions.swift <question-paper.pdf> ...
 //
-// Writes past-paper-questions-data/edexcel-a/<paper>-<series>.json and prints a
-// one-line summary per paper to stderr.
+// Run from the repo root. Writes past-paper-questions-data/<dir>/<paper>-<series>.json
+// and prints a one-line summary per paper to stderr. The board is read from the
+// filename: edexcel-b-* files are routed to the B parser before the Edexcel A
+// pattern is tried, because that pattern matches a B filename too.
 //
 // Why Swift: this repo has no Python PDF library, no requirements.txt and no
 // venv, but macOS ships PDFKit. docs/QUESTIONS_PROGRESS.md section 7 already
@@ -210,6 +217,50 @@ struct PaperMeta {
     /// the filenames would otherwise collide.
     var level: String
     var isAS: Bool { level == "as-level" }
+    // Board identity and output directory travel with the paper, so an
+    // Edexcel B file can never be written into edexcel-a/. The defaults are
+    // Edexcel A's, which keeps its output byte-identical.
+    var board: String = "edexcel"
+    var boardName: String = "Edexcel"
+    var outDir: String = ""
+    var isB: Bool { board == "edexcel-b" }
+}
+
+/// 9EB0 / 8EB0 paper names, as printed on the covers (all 36 covers with a
+/// text layer agree, bar spacing).
+let bPaperNames = [
+    1: "Markets and how they work",
+    2: "Competing in the global economy",
+    3: "The economic environment and business",
+]
+let bASPaperNames = [
+    1: "Markets, consumers and firms",
+    2: "The wider economic environment",
+]
+
+func parseMetaB(_ path: String) -> PaperMeta? {
+    let file = (path as NSString).lastPathComponent
+    guard
+        let m = rx("^edexcel-b-(a|as)-level-economics-paper-(\\d)-([a-z]+)-(\\d{4})-question-paper\\.pdf$")
+            .firstMatch(file),
+        let paper = Int(m[2]!), let year = Int(m[4]!),
+        let seriesName = seriesNames[m[3]!]
+    else { return nil }
+    let isAS = m[1]! == "as"
+    guard let paperName = (isAS ? bASPaperNames : bPaperNames)[paper] else { return nil }
+    let short = String(seriesName.lowercased().prefix(3))
+    let stem = isAS ? "edexcel-b-as" : "edexcel-b"
+    var meta = PaperMeta(
+        paper: paper, paperName: paperName, year: year, series: seriesName,
+        seriesSlug: "\(m[3]!)-\(year)", qpPath: path,
+        msPath: path.replacingOccurrences(of: "-question-paper.pdf", with: "-mark-scheme.pdf"),
+        idStem: "\(stem)-p\(paper)-\(year)-\(short)",
+        qualification: isAS ? "AS Level Economics B (8EB0)" : "A Level Economics B (9EB0)",
+        level: isAS ? "as-level" : "a-level")
+    meta.board = "edexcel-b"
+    meta.boardName = "Edexcel B"
+    meta.outDir = isAS ? "edexcel-b-as" : "edexcel-b"
+    return meta
 }
 
 // The 2024 covers abbreviate two of these ("Market and Business Behaviour",
@@ -279,7 +330,7 @@ let allocation = "(?:Knowledge|Analysis|Application|Evaluation|Indicative|The on
 /// can otherwise collide ("Question Paper Log Number 73999").
 /// Page number, and whether the question label was matched exactly or by the
 /// looser fallback described below.
-func markSchemePage(_ pages: [String], question: String, part: String?)
+func markSchemePage(_ pages: [String], question: String, part: String?, bScheme: Bool = false)
     -> (page: Int, exact: Bool)?
 {
     // Tolerate "6(a)" and "6 (a)"; reject a longer number ("7" must not hit "70").
@@ -300,6 +351,19 @@ func markSchemePage(_ pages: [String], question: String, part: String?)
     for (i, page) in pages.enumerated() where i >= 2 {
         if byHeader.matches(page) || byBareLabel.matches(page) {
             return (i + 1, true)
+        }
+    }
+
+    // 9EB0/8EB0 only (so 9EC0/8EC0 output cannot move): two more
+    // layouts. "Question Number Answer 1(a) Knowledge/understanding 1" (Paper 2
+    // October 2020, AS Paper 2 June 2016), and the 2024 schemes that reprint
+    // the question, wrapping its last words onto the label's line:
+    // "1(b) show your working. / Knowledge/understanding 1".
+    if bScheme {
+        let byAnswer = rx("Number[\\s\u{00A0}]+Answer[\\s\u{00A0}]*\(label)\\s+\(allocation)")
+        let byReprint = rx("(?m)^[ \\t]*\(label)[ \\t]+[^\\n]{0,120}\\n[ \\t]*\(allocation)")
+        for (i, page) in pages.enumerated() where i >= 2 {
+            if byAnswer.matches(page) || byReprint.matches(page) { return (i + 1, true) }
         }
     }
 
@@ -648,6 +712,243 @@ func extractPaper3(pages: [String], meta: PaperMeta, msPages: [String])
     return (out, problems)
 }
 
+// ------------------------------------------------------------ edexcel b
+
+// Edexcel B (9EB0 A Level, 8EB0 AS). Read from all 37 papers, June 2016 to
+// June 2025, not assumed from Edexcel A (review sheet phase-4-extraction.md,
+// approved by Eliot 2026-11-16):
+//
+//   A Level P1, P2  Section A Q1 (a)-(h) = 60; Sections B and C one 20-mark
+//                   question each (Q2, Q3), no parts.
+//   A Level P3      Sections A and B, Q1 and Q2, each (a)-(d) = 50. The
+//                   pre-release insert bound into two of the PDFs is skipped.
+//   AS P1, P2       Q1 and Q2 (a)-(e) = 30 each; Section C one 20-mark Q3.
+//
+// Everything is compulsory, so choiceGroup is always null. A sentence printed
+// above a part label (the lead-in) is part of the question and is kept,
+// verbatim, at the start of questionText - as Edexcel A's Section C and AQA
+// already carry their stems.
+
+/// Candidate instructions between a section heading and its first question.
+/// Removed, never rewritten. The "Read ... before answering" sentence can wrap
+/// across a line (Paper 3 November 2021), hence the bounded any-character run.
+let bInstructions: [NSRegularExpression] = [
+    rx("Read\\b(?:(?!\\bRead\\b)[\\s\\S]){0,200}?before\\s+answering\\s+Question\\s+\\d+\\.?"),
+    rx("(?m)^\\s*Answer ALL questions\\.?\\s*$"),
+    rx("(?m)^\\s*SECTION [A-C](?: BEGINS ON THE NEXT PAGE\\.)?\\s*$"),
+    rx("(?m)^\\s*Write your answers? in the spaces? provided\\.?\\s*$"),
+    rx("(?m)^\\s*You are advised to spend[^\\n]*$"),
+    rx("(?m)^\\s*\\(Total for Question \\d+ = \\d+ marks\\)\\s*$"),
+    rx("(?m)^\\s*TOTAL FOR (?:SECTION [A-C]|PAPER) = \\d+ MARKS\\s*$"),
+]
+
+func stripInstructions(_ s: String) -> String {
+    var out = s
+    for r in bInstructions {
+        out = r.stringByReplacingMatches(
+            in: out, range: NSRange(location: 0, length: (out as NSString).length),
+            withTemplate: " ")
+    }
+    return out
+}
+
+/// What 9EB0 / 8EB0 print, read from all 36 question papers with a text layer
+/// (AS Paper 2 June 2019 is a scan). Used only to CHECK the derived structure:
+/// the parts and tariffs themselves are read from the page.
+struct BSection { let letter: String; let question: String; let parts: Int; let total: Int }
+func expectedB(_ meta: PaperMeta) -> [BSection] {
+    if meta.isAS {
+        return [BSection(letter: "A", question: "1", parts: 5, total: 30),
+                BSection(letter: "B", question: "2", parts: 5, total: 30),
+                BSection(letter: "C", question: "3", parts: 0, total: 20)]
+    }
+    if meta.paper == 3 {
+        return [BSection(letter: "A", question: "1", parts: 4, total: 50),
+                BSection(letter: "B", question: "2", parts: 4, total: 50)]
+    }
+    return [BSection(letter: "A", question: "1", parts: 8, total: 60),
+            BSection(letter: "B", question: "2", parts: 0, total: 20),
+            BSection(letter: "C", question: "3", parts: 0, total: 20)]
+}
+
+let extractHeading = rx("(?m)^\\s*Extract [A-Z]\\s*$")
+
+/// The page a student should open first: the first extract the section's own
+/// instruction names ("extracts (D to F)" -> Extract D), found in the section's
+/// pages or, on a booklet paper, in its booklet block.
+func bContextPage(_ pages: [String], start: Int, range: Range<Int>) -> Int {
+    if let m = rx("[Ee]xtracts?\\s*\\(?\\s*([A-Z])\\b").firstMatch(pages[start]), let l = m[1],
+        let hit = range.first(where: { rx("(?m)^\\s*Extract \(l)\\b").matches(pages[$0]) })
+    {
+        return hit + 1
+    }
+    if let hit = range.first(where: { extractHeading.matches(pages[$0]) }) { return hit + 1 }
+    return range.lowerBound + 1
+}
+
+func extractB(pages: [String], meta: PaperMeta, msPages: [String]) -> ([QuestionOut], [String]) {
+    var out: [QuestionOut] = []
+    var problems: [String] = []
+
+    // Question pages end at the booklet (June 2025) or after "TOTAL FOR PAPER",
+    // which keeps Paper 3's bound-in pre-release insert (June 2017, November
+    // 2021) out of every search.
+    let booklet = sourceBooklet(pages)
+    var questionPages = booklet.first?.page ?? pages.count
+    if let last = (0..<questionPages).first(where: { pages[$0].contains("TOTAL FOR PAPER") }) {
+        questionPages = min(questionPages, last + 1)
+    }
+
+    var starts: [(page: Int, question: String)] = []
+    for i in 0..<questionPages {
+        guard let m = beforeAnswering.firstMatch(pages[i]), let n = m[1] else { continue }
+        if !starts.contains(where: { $0.question == n }) { starts.append((i, n)) }
+    }
+    if !pages[0..<questionPages].contains(where: { $0.contains("Answer ALL questions") }) {
+        problems.append("no 'Answer ALL questions' instruction")
+    }
+    if pages[0..<questionPages].contains(where: { rx("(?m)^\\s*(EITHER|OR)\\s*$").matches($0) }) {
+        problems.append("an EITHER/OR choice was printed; 9EB0/8EB0 should have none")
+    }
+
+    let expected = expectedB(meta)
+    if starts.map({ $0.question }) != expected.map({ $0.question }) {
+        problems.append(
+            "expected questions \(expected.map { $0.question }.joined(separator: ",")), "
+                + "found \(starts.map { $0.question }.joined(separator: ","))")
+    }
+
+    for (idx, start) in starts.enumerated() {
+        let qnum = start.question
+        let next = idx + 1 < starts.count ? starts[idx + 1].page : questionPages
+        let totalRe = rx("\\(Total for Question \(qnum) = (\\d+) marks\\)")
+        let totalPage = (start.page..<next).first(where: { totalRe.matches(pages[$0]) })
+        let total = totalPage.flatMap { totalRe.firstMatch(pages[$0])?[1] }.flatMap { Int($0) }
+        let end = totalPage.map { $0 + 1 } ?? next
+
+        // Section letter as printed on the opener page; position only as a fallback.
+        let printed = rx("(?m)^\\s*SECTION ([A-C])\\s*$").firstMatch(pages[start.page])?[1]
+        let section = printed ?? ["A", "B", "C"][min(idx, 2)]
+        if printed == nil { problems.append("Q\(qnum): no SECTION heading on its opener page; labelled \(section) by position") }
+
+        // The extract named in the section's own instruction, looked for in the
+        // section's booklet block; on a booklet paper that prints no block
+        // heading for this section (Paper 1 June 2025 has none for Section B,
+        // so Extract G sits under Section A's), in the whole booklet; and on
+        // an older paper, in the section's own pages.
+        let sources = bookletRange(booklet, section: section, pageCount: pages.count)
+        let ctxRange = sources ?? (booklet.isEmpty ? start.page..<end : booklet[0].page..<pages.count)
+        let ctx = bContextPage(pages, start: start.page, range: ctxRange)
+
+        let partRe = rx("\\(([a-h])\\)\\s*(.+?)\\s*\\((\\d{1,2})\\)", [.dotMatchesLineSeparators])
+        var parts: [QuestionOut] = []
+        var seen = Set<String>()
+
+        for i in start.page..<end {
+            let cleaned = stripInstructions(stripFurniture(pages[i]))
+            let ns = cleaned as NSString
+            var cursor = 0
+            for m in partRe.matches(in: cleaned, range: NSRange(location: 0, length: ns.length)) {
+                let letter = ns.substring(with: m.range(at: 1))
+                let rawBody = ns.substring(with: m.range(at: 2))
+                let marks = Int(ns.substring(with: m.range(at: 3)))!
+                // Text printed above the part label on the same page: the
+                // lead-in ("New Balance operates in a competitive market.").
+                // Part of the question as printed, so kept, verbatim.
+                var segment = ns.substring(with: NSRange(location: cursor, length: m.range.location - cursor))
+                cursor = m.range.location + m.range.length
+                var notes: [String] = []
+                var confidence = "high"
+                // Where the question number is printed, the lead-in starts
+                // after it ("1 Estimated global sales ... (a) Using ...") -
+                // which also stops an extract sharing the page being swallowed.
+                let seg = segment as NSString
+                let numLine = rx("(?m)^[ \\t]*\(qnum)(?:[ \\t]+|$)").matches(
+                    in: segment, range: NSRange(location: 0, length: seg.length)).last
+                if let n = numLine {
+                    segment = seg.substring(from: n.range.location + n.range.length)
+                } else if extractHeading.matches(segment) {
+                    segment = ""
+                    confidence = "low"
+                    notes.append("part shares a page with an extract and no question number anchors a lead-in; check the page")
+                }
+                // A figure printed inside the question (P2 June 2022 1(b)): its
+                // cells flatten into nonsense, so the text starts after its label
+                // and the card's question-paper link carries the figure.
+                let figs = rx("(?m)^[ \\t]*Figure \\d+[ \\t]*$").matches(
+                    in: segment, range: NSRange(location: 0, length: (segment as NSString).length))
+                if let f = figs.last {
+                    segment = (segment as NSString).substring(from: f.range.location + f.range.length)
+                    notes.append("a figure printed on the question page is not reproduced; see the question paper page")
+                }
+                let lead = normalise(segment)
+                guard !seen.contains(letter) else { continue }
+                let body = normalise(rawBody)
+                if body.count < 15 || rx("\\([a-h]\\)").matches(body) { continue }
+                seen.insert(letter)
+
+                if !lead.isEmpty {
+                    notes.append("lead-in printed above the part label is included")
+                    if lead.count > 400 || lead.contains("©") {
+                        confidence = "low"
+                        notes.append("lead-in may contain extract text")
+                    }
+                }
+                let cited = stripAttribution(lead.isEmpty ? body : lead + " " + body)
+                let hit = markSchemePage(msPages, question: qnum, part: letter, bScheme: true)
+                if hit == nil { confidence = "low"; notes.append("mark scheme page for \(qnum)(\(letter)) could not be verified") }
+                parts.append(QuestionOut(
+                    id: "\(meta.idStem)-q\(qnum)\(letter)", section: section,
+                    questionNumber: "\(qnum)(\(letter))", parentQuestion: qnum, choiceGroup: nil,
+                    marks: marks, questionText: cited.text, sourceAttribution: cited.attribution,
+                    contextPage: ctx, qpPage: i + 1, msPage: hit?.page, msVerified: hit != nil,
+                    confidence: confidence, notes: notes))
+            }
+        }
+
+        if parts.isEmpty {
+            // A single extended response: "2 Evaluate ... (20)", or with a
+            // printed stem first: "3 The UK government intervenes ... Evaluate ... (20)".
+            let single = rx("(?:^|\\n)\\s*\(qnum)\\s+(\\S[\\s\\S]*?)\\s*\\((\\d{1,2})\\)")
+            var found: QuestionOut? = nil
+            for i in start.page..<end where !extractHeading.matches(pages[i]) {
+                let cleaned = stripInstructions(stripFurniture(pages[i]))
+                guard let m = single.firstMatch(cleaned), let raw = m[1], let mk = m[2].flatMap({ Int($0) })
+                else { continue }
+                let cited = stripAttribution(normalise(raw))
+                var notes: [String] = []
+                var confidence = "high"
+                if cited.text.count < 40 { confidence = "low"; notes.append("extracted text is suspiciously short") }
+                let hit = markSchemePage(msPages, question: qnum, part: nil, bScheme: true)
+                if hit == nil { confidence = "low"; notes.append("mark scheme page for Q\(qnum) could not be verified") }
+                found = QuestionOut(
+                    id: "\(meta.idStem)-q\(qnum)", section: section, questionNumber: qnum,
+                    parentQuestion: nil, choiceGroup: nil, marks: mk, questionText: cited.text,
+                    sourceAttribution: cited.attribution, contextPage: ctx, qpPage: i + 1,
+                    msPage: hit?.page, msVerified: hit != nil, confidence: confidence, notes: notes)
+                break
+            }
+            if let f = found { parts = [f] } else { problems.append("Q\(qnum): question text not found") }
+        }
+
+        // Independent checks: tariffs sum to the printed total, letters run
+        // from (a) without a gap, and the shape matches what B prints.
+        let sum = parts.reduce(0) { $0 + $1.marks }
+        if let t = total, t != sum { problems.append("Q\(qnum): tariffs sum to \(sum), paper prints \(t)") }
+        if total == nil { problems.append("Q\(qnum): no '(Total for Question \(qnum) = N marks)' line") }
+        let letters = parts.compactMap { $0.parentQuestion == nil ? nil : String($0.questionNumber.dropFirst(qnum.count + 1).prefix(1)) }
+        let run = "abcdefgh".prefix(letters.count).map { String($0) }
+        if letters != run { problems.append("Q\(qnum): parts \(letters.joined()) are not a run from (a)") }
+        if let e = expected.first(where: { $0.question == qnum }) {
+            if e.letter != section { problems.append("Q\(qnum): printed section \(section), expected \(e.letter)") }
+            if e.parts != letters.count { problems.append("Q\(qnum): \(letters.count) parts, expected \(e.parts)") }
+            if e.total != sum { problems.append("Q\(qnum): \(sum) marks, expected \(e.total)") }
+        }
+        out += parts
+    }
+    return (out, problems)
+}
+
 // ------------------------------------------------------------------ emit
 
 func jsonEscape(_ s: String) -> String {
@@ -682,8 +983,8 @@ func emit(meta: PaperMeta, questions: [QuestionOut], problems: [String]) -> Stri
     var lines: [String] = []
     lines.append("{")
     lines.append("  \"qualification\": \"\(jsonEscape(meta.qualification))\",")
-    lines.append("  \"board\": \"edexcel\",")
-    lines.append("  \"boardName\": \"Edexcel\",")
+    lines.append("  \"board\": \"\(meta.board)\",")
+    lines.append("  \"boardName\": \"\(meta.boardName)\",")
     lines.append("  \"level\": \"\(meta.level)\",")
     lines.append("  \"paper\": \(meta.paper),")
     lines.append("  \"paperName\": \"\(jsonEscape(meta.paperName))\",")
@@ -715,7 +1016,7 @@ func emit(meta: PaperMeta, questions: [QuestionOut], problems: [String]) -> Stri
         if let cp = q.contextPage {
             f.append(
                 "      \"context\": { \"type\": \"extracts\", "
-                    + "\"label\": \"Extracts and figures for Question \(q.parentQuestion ?? "6")\", "
+                    + "\"label\": \"Extracts and figures for Question \(q.parentQuestion ?? q.questionNumber)\", "
                     + "\"pdfUrl\": \"\(jsonEscape(qpUrl))\", \"page\": \(cp) }")
         } else {
             f.append("      \"context\": null")
@@ -773,7 +1074,10 @@ for dir in outDirs.values {
 var exitCode: Int32 = 0
 
 for path in args {
-    guard let meta = parseMeta(path) else {
+    // An Edexcel B filename also matches the Edexcel A pattern, and used to be
+    // written into edexcel-a/ as if it were 9EC0. Route B first.
+    let isBFile = (path as NSString).lastPathComponent.hasPrefix("edexcel-b-")
+    guard let meta = isBFile ? parseMetaB(path) : parseMeta(path) else {
         FileHandle.standardError.write("SKIP (unparseable name): \(path)\n".data(using: .utf8)!)
         exitCode = 1
         continue
@@ -793,7 +1097,9 @@ for path in args {
     var questions: [QuestionOut] = []
     var problems: [String] = []
 
-    if meta.paper == 3 {
+    if meta.isB {
+        (questions, problems) = extractB(pages: qpPages, meta: meta, msPages: msPages)
+    } else if meta.paper == 3 {
         // Paper 3 has no Section C and its sections mean something different,
         // which is why `section` is a free string on the record rather than an
         // enum shared with Papers 1 and 2.
@@ -812,7 +1118,9 @@ for path in args {
     }
 
     let name = "p\(meta.paper)-\(meta.seriesSlug).json"
-    let dest = outDirs[meta.level]!.appendingPathComponent(name)
+    let dir = meta.isB ? URL(fileURLWithPath: "past-paper-questions-data/\(meta.outDir)") : outDirs[meta.level]!
+    try? FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
+    let dest = dir.appendingPathComponent(name)
     try! emit(meta: meta, questions: questions, problems: problems)
         .write(to: dest, atomically: true, encoding: .utf8)
 

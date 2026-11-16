@@ -1,4 +1,5 @@
-// Independently verify past-paper-questions-data/edexcel-a/*.json against the PDFs.
+// Independently verify the Edexcel A and Edexcel B extraction data
+// (past-paper-questions-data/edexcel-{a,a-as,b,b-as}/*.json) against the PDFs.
 //
 //   swift scripts/verify_past_paper_extraction.swift
 //
@@ -16,6 +17,25 @@
 //   4. The Section B context page really is part of the extract block: before
 //      the question, or - on a Source Booklet paper, June 2025 onwards - in the
 //      booklet block for the question's own section.
+//
+// Edexcel B (9EB0 / 8EB0) adds four, because its single 20-mark questions are
+// numbered "2" and "3" and a bare digit on a mark-scheme page proves nothing,
+// and because its records carry a lead-in printed above the part label:
+//
+//   5. The question paper page also holds the CLOSING words of the text, so a
+//      lead-in or body cut short or run on is caught at either end.
+//   6. The mark scheme page opens a line with the label (or prints it straight
+//      after the table's "Number"/"Answer" header), and "Knowledge" - the
+//      first assessment objective every B heading names - is on that line or
+//      the three after it. Three, because two short questions often share a
+//      page and interleave their headers ("1(c) Question / Number / 1(d)
+//      Answer Knowledge..."), and the 2022-24 schemes reprint the question
+//      around the label. Line-by-line string scan, no regex. A heading that
+//      drops the question number ("(d)") is a warning, as in check 3.
+//   7. Each question's marks sum to the "(Total for Question N = M marks)"
+//      line printed on the question paper.
+//   8. The context page carries an extract, and nothing has a choiceGroup
+//      (B has no optional questions).
 //
 // Exit status is non-zero if any check fails. Nothing is written.
 
@@ -38,12 +58,46 @@ func opening(_ text: String, words: Int) -> String {
     return text.components(separatedBy: " ").prefix(words).joined(separator: " ")
 }
 
+/// Last n words, for the Edexcel B closing-words check.
+func closing(_ text: String, words: Int) -> String {
+    return text.components(separatedBy: " ").suffix(words).joined(separator: " ")
+}
+
+/// A page squashed, with the rotated margin warning taken out: PDFKit drops it
+/// into the reading order mid-sentence, so it can split any run of words.
+func squashedPage(_ s: String) -> String {
+    return squashed(s).replacingOccurrences(of: "DONOTWRITEINTHISAREA", with: "")
+}
+
+/// Check 6: does this Edexcel B mark-scheme page head a row with `label`?
+func bSchemeNames(_ page: String, label: String) -> Bool {
+    let lines = page.components(separatedBy: .newlines).map(squashed)
+    for (i, line) in lines.enumerated() {
+        var rest: Substring? = nil
+        if line.hasPrefix(label) {
+            rest = line.dropFirst(label.count)
+        } else {
+            for header in ["Number", "Answer"] {
+                if let r = line.range(of: header + label) { rest = line[r.upperBound...] }
+            }
+        }
+        // "2" must not be the start of "2(a)" or "20"; "1(a)" must not be "1(a)(i)".
+        guard let after = rest, !(after.first.map { $0.isNumber || $0 == "(" } ?? false)
+        else { continue }
+        let window = lines[i..<min(i + 4, lines.count)].joined().lowercased()
+        if window.contains("knowledge") { return true }
+    }
+    return false
+}
+
 let fm = FileManager.default
 // Both Edexcel qualifications. They are separate directories because 9EC0 and
 // 8EC0 each have a Paper 1 in the same series, so the filenames collide.
 let dataDirs = [
     "past-paper-questions-data/edexcel-a",
     "past-paper-questions-data/edexcel-a-as",
+    "past-paper-questions-data/edexcel-b",
+    "past-paper-questions-data/edexcel-b-as",
 ]
 var files: [(dir: String, name: String)] = []
 for dir in dataDirs {
@@ -89,6 +143,10 @@ for (dir, file) in files {
         continue
     }
 
+    let isB = (root["board"] as? String) == "edexcel-b"
+    var marksByQuestion: [String: Int] = [:]
+    var paperUrl: String? = nil
+
     for q in questions {
         guard let id = q["id"] as? String,
             let text = q["questionText"] as? String,
@@ -118,6 +176,23 @@ for (dir, file) in files {
                         id: id, check: "qp-text-not-on-page",
                         detail: "p\(qpPage) lacks: \(opening(text, words: 6))"))
             }
+            // ---- 5 (B): and its closing words
+            if isB && !squashedPage(qpPages[qpPage - 1]).contains(squashed(closing(text, words: 6))) {
+                failures.append(
+                    Failure(
+                        id: id, check: "b-qp-closing-not-on-page",
+                        detail: "p\(qpPage) lacks: \(closing(text, words: 6))"))
+            }
+        }
+
+        if isB {
+            paperUrl = qpUrl
+            let parent = (q["parentQuestion"] as? String) ?? number
+            marksByQuestion[parent, default: 0] += (q["marks"] as? Int) ?? 0
+            // ---- 8 (B): no optional questions
+            if !(q["choiceGroup"] is NSNull) {
+                failures.append(Failure(id: id, check: "b-choice-group", detail: "B has no choices"))
+            }
         }
 
         // ---- 3: mark scheme page names the question
@@ -132,6 +207,22 @@ for (dir, file) in files {
                 failures.append(
                     Failure(
                         id: id, check: "ms-page-range", detail: "p\(msPage) of \(msPages.count)"))
+            } else if isB {
+                // ---- 6 (B): the label heads a row on that page
+                let label = squashed(number)
+                let bare = label.contains("(") ? String(label[label.firstIndex(of: "(")!...]) : ""
+                if bSchemeNames(msPages[msPage - 1], label: label) {
+                    // named in full
+                } else if !bare.isEmpty && bSchemeNames(msPages[msPage - 1], label: bare) {
+                    warnings.append(
+                        "\(id): mark scheme p\(msPage) labels this \(bare), "
+                            + "omitting the question number")
+                } else {
+                    failures.append(
+                        Failure(
+                            id: id, check: "b-ms-label-not-heading",
+                            detail: "p\(msPage) has no row headed \(number)"))
+                }
             } else if !squashed(msPages[msPage - 1]).contains(squashed(number)) {
                 // Some schemes drop the question number from a part heading and
                 // print just "(d)". That is a real Pearson inconsistency, not an
@@ -167,7 +258,18 @@ for (dir, file) in files {
                 // question. It must then sit in the block for the question's
                 // own section, and that page must actually carry source material.
                 let section = q["section"] as? String ?? "?"
-                if block != section {
+                let headed = qpPages.contains { $0.contains("Sources for use with SECTION \(section)") }
+                if block != section && isB && !headed
+                    && qpPages[ctxPage - 1].contains("Extract")
+                {
+                    // Edexcel B Paper 1 June 2025 prints no "Sources for use
+                    // with SECTION B" heading, so Extract G sits under Section
+                    // A's. Accepted only when the PDF has no heading for the
+                    // question's section anywhere, and reported.
+                    warnings.append(
+                        "\(id): the booklet prints no SECTION \(section) heading; "
+                            + "context p\(ctxPage) accepted as an extract page")
+                } else if block != section {
                     failures.append(
                         Failure(
                             id: id, check: "context-wrong-booklet-block",
@@ -181,11 +283,35 @@ for (dir, file) in files {
                             id: id, check: "context-not-source",
                             detail: "booklet p\(ctxPage) has no extract or figure"))
                 }
+            } else if isB && !qpPages[ctxPage - 1].contains("Extract") {
+                // ---- 8 (B): the context page is an extract page
+                failures.append(
+                    Failure(id: id, check: "b-context-not-extract", detail: "p\(ctxPage) has no extract"))
             } else if ctxPage >= qpPage {
                 failures.append(
                     Failure(
                         id: id, check: "context-after-question",
                         detail: "extract p\(ctxPage) is not before question p\(qpPage)"))
+            }
+        }
+    }
+
+    // ---- 7 (B): marks per question match the printed total
+    if isB, let url = paperUrl, let qpPages = pages(url) {
+        let all = qpPages.joined(separator: "\n")
+        for (n, sum) in marksByQuestion {
+            let marker = "(Total for Question \(n) = "
+            guard let r = all.range(of: marker),
+                let printed = Int(all[r.upperBound...].prefix(while: { $0.isNumber }))
+            else {
+                failures.append(Failure(id: file, check: "b-total-missing", detail: "Q\(n)"))
+                continue
+            }
+            if printed != sum {
+                failures.append(
+                    Failure(
+                        id: file, check: "b-total-mismatch",
+                        detail: "Q\(n) records \(sum) marks, paper prints \(printed)"))
             }
         }
     }
