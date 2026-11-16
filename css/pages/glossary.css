@@ -33,6 +33,7 @@
 /* Long words in a definition, and the KaTeX boxes, must never widen the page.
  * The body scrolling sideways on a phone is the failure this prevents. */
 .glossary-page .gl-entry,
+.glossary-page .gl-senses li,
 .glossary-page .gl-text,
 .glossary-page .gl-def-list,
 .glossary-page .gl-source,
@@ -354,6 +355,26 @@
   padding-left: 0.2em;
   color: var(--gl-body);
   line-height: 1.6;
+}
+
+/* One headword, two meanings (curation.json `senses`, Edexcel B risk and
+ * interdependence). Each numbered item is a notes definition with its own
+ * source line, so the gap between items is the gap between two entries' worth
+ * of text, not between list bullets. */
+.glossary-page .gl-senses {
+  margin: 0;
+  padding-left: 1.3em;
+  list-style: decimal;
+}
+
+.glossary-page .gl-senses li {
+  margin-bottom: 0.75em;
+  padding-left: 0.2em;
+  color: var(--gl-body);
+}
+
+.glossary-page .gl-senses li:last-child {
+  margin-bottom: 0;
 }
 
 .glossary-page .gl-source,

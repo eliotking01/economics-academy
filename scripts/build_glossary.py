@@ -99,9 +99,9 @@ BOARD_COPY = {
             "notes. Search or print."
         ),
     },
-    # DRAFT, Phase 3 (2026-11-12), for Eliot's approval in
-    # review/glossary-b.md. Copied from Edexcel A's with B's name and code. B
-    # is STAGED, so no page prints this until /launch-feature.
+    # Phase 3: copied from Edexcel A's with B's name and code, approved by
+    # Eliot on 2026-11-16 (review/glossary-b.md Q1). B is STAGED, so no page
+    # prints this until /launch-feature.
     "edexcel-b": {
         "intro": (
             "Every key term and formula you need for <strong>Edexcel A-Level "
@@ -245,11 +245,41 @@ def rewrite(term_id: str, fragment: str, table: dict) -> str:
             f"been fixed at source.")
     return rule["to"] + fragment[len(rule["from"]):]
 
+
+# ---------------------------------------------------------------- senses
+#
+# One headword, two meanings. Edexcel B defines `risk` twice (1.4.2 business
+# risk, 4.5.1 measurable risk) and `interdependence` twice (3.1.3 countries,
+# 4.1.3 firms), and the wordings are different concepts rather than variants
+# of one. Eliot decided on 2026-11-11 that the B glossary shows both, under
+# one headword; the rendering was approved on 2026-11-16 (review/glossary-b.md
+# Q10). curation.json `senses.entries` names, per term key and board, the
+# sources to show as numbered senses, in order. Each is still a notes chip,
+# word for word, with its own page link. Every other entry is unchanged.
+
+
+def senses() -> dict:
+    cur = json.loads(CURATION.read_text(encoding="utf-8"))
+    return cur.get("senses", {}).get("entries", {})
+
+
+def sense_sources(term, board, table):
+    """The sources shown as numbered senses for this board, or []."""
+    urls = table.get(term["key"], {}).get(board, [])
+    mine = {x["notesUrl"]: x for x in term["sources"] if x["board"] == board}
+    missing = [u for u in urls if u not in mine]
+    if missing:
+        raise BuildError(
+            f"senses for '{term['term']}' ({board}) name {missing}, which are "
+            f"not its {board} sources - fix glossary-data/curation.json")
+    return [mine[u] for u in urls]
+
+
 # The landing page's copy depends on which boards it lists, so it is keyed on
 # them, in boards.json order. Edexcel A + AQA is what is live. The three-board
-# entry is a DRAFT (Phase 3, 2026-11-12) for Eliot's approval in
-# review/glossary-b.md, printed by no page until Edexcel B's glossary launches.
-# Any other set of boards stops the build until it has copy here.
+# entry was approved by Eliot on 2026-11-16 (Phase 3, review/glossary-b.md Q3)
+# and is printed by no page until Edexcel B's glossary launches. Any other set
+# of boards stops the build until it has copy here.
 LANDING_COPY = {
     ("edexcel-a", "aqa"): {
         "meta": (
@@ -574,7 +604,16 @@ def ld_description(term, board, rules, approved):
     Where the list carries the meaning, "e.g. USMCA" on its own would be a
     useless description, so the list is folded in - as a sentence, since
     structured data takes plain text and cannot show bullets.
+
+    An entry shown as numbered senses (senses()) carries them all, numbered
+    as the page numbers them.
     """
+    numbered = sense_sources(term, board, senses())
+    if numbered:
+        return " ".join(
+            f"{i}. " + plain(capitalise(term["id"], rewrite(
+                term["id"], x["definitionHtml"], rules), approved))
+            for i, x in enumerate(numbered, 1))
     s = source_for(term, board)
     text = plain(capitalise(term["id"],
                             rewrite(term["id"], s["definitionHtml"], rules),
@@ -587,7 +626,54 @@ def ld_description(term, board, rules, approved):
     return text
 
 
-def entry_html(term, board, inline_map, approved, rules, display_map=None):
+def senses_html(term, board, numbered, inline_map, approved, rules,
+                display_map):
+    """An entry whose meanings are listed as numbered senses (see senses())."""
+    items = []
+    for x in numbered:
+        if x.get("definitionListHtml"):
+            raise BuildError(f"'{term['term']}': a sense cannot carry a "
+                             f"continuation list")
+        d = capitalise(term["id"], rewrite(term["id"], x["definitionHtml"],
+                                           rules), approved)
+        items.append(
+            "<li>\n"
+            f'                      <p class="gl-text">'
+            f"{render_inline_maths(d, inline_map, display_map)}</p>\n"
+            f'                      <p class="gl-source">{source_link(x)}</p>\n'
+            "                    </li>")
+    groups = sorted({x["group"] for x in term["sources"] if x["board"] == board})
+    others = [x for x in term["sources"]
+              if x["board"] == board and x not in numbered]
+    also = ""
+    if others:
+        links = ", ".join(
+            f'<a href="{x["notesUrl"]}">{e(x["spec"])}</a>' for x in others)
+        also = (f'\n                <p class="gl-also">Also covered in '
+                f"{links}</p>")
+    body = "\n                    ".join(items)
+    return f"""              <div
+                class="gl-entry"
+                id="{e(term['id'])}"
+                data-term="{e(term['term'].lower())}"
+                data-groups="{e(' '.join(groups))}"
+                data-origin="{e(numbered[0].get('origin', 'notes'))}"
+              >
+                <dt class="gl-term">{e(term['term'])}</dt>
+                <dd class="gl-def">
+                  <ol class="gl-senses">
+                    {body}
+                  </ol>{also}
+                </dd>
+              </div>"""
+
+
+def entry_html(term, board, inline_map, approved, rules, display_map=None,
+               sense_table=None):
+    numbered = sense_sources(term, board, sense_table or {})
+    if numbered:
+        return senses_html(term, board, numbered, inline_map, approved, rules,
+                           display_map)
     s = source_for(term, board)
     definition = rewrite(term["id"], s["definitionHtml"], rules)
     definition = capitalise(term["id"], definition, approved)
@@ -659,6 +745,7 @@ def render_board(data, board, groups, rendered_map, inline_map, boards=None):
     meta = boards[board]
     approved = approved_capitalisations()
     rules = rewrites()
+    sense_table = senses()
     terms = [t for t in data["terms"] if board in t["boards"]]
     formulae = [f for f in data["formulae"] if board in f["boards"]]
     # Sort on the canonical key so a leading article is ignored here too,
@@ -692,7 +779,8 @@ def render_board(data, board, groups, rendered_map, inline_map, boards=None):
         if not by_letter[L]:
             continue
         entries = "\n".join(
-                entry_html(t, board, inline_map, approved, rules, rendered_map)
+                entry_html(t, board, inline_map, approved, rules, rendered_map,
+                           sense_table)
                 for t in by_letter[L])
         sections.append(f"""          <section class="gl-letter" id="letter-{L.lower()}">
             <h2 class="gl-letter-head">{L}</h2>
@@ -702,7 +790,8 @@ def render_board(data, board, groups, rendered_map, inline_map, boards=None):
           </section>""")
     if other:
         entries = "\n".join(entry_html(t, board, inline_map, approved, rules,
-                                        rendered_map) for t in other)
+                                        rendered_map, sense_table)
+                             for t in other)
         sections.append(f"""          <section class="gl-letter" id="letter-other">
             <h2 class="gl-letter-head">Other</h2>
             <dl class="gl-list">
@@ -850,9 +939,9 @@ def switch_html(board, boards):
     other board, to each of them.
 
     The two-board form is the markup the live pages have always carried, kept
-    byte-identical. The three-board form is a DRAFT (Phase 3, 2026-11-12) for
-    Eliot's approval in review/glossary-b.md; no page prints it until Edexcel
-    B's glossary launches.
+    byte-identical. The three-board form was approved by Eliot on 2026-11-16
+    (Phase 3, review/glossary-b.md Q2); no page prints it until Edexcel B's
+    glossary launches.
     """
     others = [b for b in boards if b != board]
     if len(others) == 1:

@@ -151,7 +151,7 @@ anything.
 | Item | What it needs |
 | --- | --- |
 | **Twin links** between the B pages and their Edexcel A / AQA counterparts | `notes_twins.board_of_dir` returns `"edexcel"` for every directory that is not AQA, so it treats `edexcel-b-*` as Edexcel A. Fix that first (checked 2026-10-20) |
-| **An Edexcel B glossary** | Deferred in D66. Until it exists, the index's glossary line ("with a page for Edexcel A and AQA") stays true and is left alone |
+| **An Edexcel B glossary** | Staged on `feature/edexcel-b-glossary` (Phase 3, below). Until it launches, the index's glossary line ("with a page for Edexcel A and AQA") stays true and is left alone; its replacement is approved |
 | **National Living Wage on 3.5.3** | Dates every April. Next change: April 2027 |
 | **The other dated figures** | Re-check once a year: the poverty line, aid, the CMA thresholds, Bank Rate history, PPP shares. Sources are in the unit review sheets |
 
@@ -214,6 +214,61 @@ what changed file by file, how it was verified, and its "things a future
 session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
+
+### All-boards parity — Phase 3, Edexcel B glossary (2026-11-12 to —) — STAGED, NOT LAUNCHED (branch `feature/edexcel-b-glossary`)
+
+The B glossary is built and checked in full, and no page is written (D68).
+Every live page, `terms.json` and the search index were byte-identical at
+each commit. The review sheet is `review/glossary-b.md`: Eliot took every
+recommendation on Q1-Q13 on 2026-11-16.
+
+- **Staging, and what it found** (`fd7452ae`). `board_data` can stage the
+  glossary, and a staged glossary puts its board in `taxonomy.json`.
+  `extract_glossary.py` runs a second extraction into the gitignored
+  `_working/glossary/staged/`. That run fails on B's problems, and on any
+  change launching B would make to a live page (`launch_impact`). The guard
+  caught B's formula headings taking two live anchors. **`GENERATION`** now
+  settles names, labels and ids oldest board first, so a later board never
+  renames an earlier one's entry. `build_glossary.py` keys groups on
+  (board, slug) and renders the staged pages in memory. It also pre-renders
+  display maths inside a definition (17 B chips). `check_glossary_
+  capitalisation.py --staged`. The search bitmask is derived (B = 4) and
+  `site-search.js` decodes it; this is dormant until launch.
+- **Eliot's answers applied** (the commit after `fd7452ae`):
+  - Q1-Q3: B's intro and meta, the three-board "Switch to the … or …
+    glossary" hero, and the landing copy ("three specifications", "Edexcel
+    A, Edexcel B and AQA"). They are in `build_glossary.py` and print on no
+    page until launch.
+  - Q6: 35 B formula labels in `curation.formulaLabel`, with no exclusions.
+  - Q7: no authored definitions for B. **The B glossary is entirely the B
+    notes' own words.**
+  - Q8: every B definition capitalised at render time
+    (`--approve --staged`, plus "man-made" and "supply-side" added to the
+    classifier). The approve run dropped two stale `regulation` "leave"
+    keys that matched no current definition.
+  - Q9: B shows 2.5.3 for inflation, 2.5.4 unemployment, 2.4.2 economic
+    growth, 4.2.1 trade union, 3.1.5 appreciation and 1.5.2 subsidy, plus
+    the 4.x wording for aggregate demand, monetary policy and supply-side
+    policies (decided 2026-11-11).
+  - Q10: risk and interdependence show two numbered senses under one
+    headword (`curation.senses`, `.gl-senses` in `glossary.css`).
+  - Q11: on B 1.3.1 and 1.3.2, each chip now has its own paragraph. This is
+    markup only, with no wording changed. B gains Substitutes and
+    Complements, and indirect tax no longer runs on into the subsidy
+    sentence. This closes the Theme 3 QA item "subsidy has a third chip on
+    1.3.2": the glossary shows 1.5.2.
+  - Q12: "average cost" is aliased into "Average Cost (AC)". Q13: no table
+    harvests.
+- **Still open:** rationalisation (2.3.2 "cutting capacity…" against 3.1.1
+  "reorganising a business…"). Should it be two senses, or 2.3.2 only? It
+  shows 2.3.2, with 3.1.1 under "Also covered in", until Eliot says.
+- **At `/launch-feature`** (wording approved): move glossary from `staged`
+  to `features`. Change the `revision-notes/index.html` card line to "…with a
+  page for Edexcel A, Edexcel B and AQA." (Q4). Change site search's Edexcel
+  A glossary label from "Edexcel" to "Edexcel A" (Q5). Add
+  `/revision-notes/glossary/edexcel-b/` to `build_search_index.BOARD_HUBS`.
+  Add `Text-Change:` trailers on the landing page, both live glossary pages
+  and the index. Run the sitemap after the push.
 
 ### All-boards parity — Phase 2, Edexcel B flashcards (2026-11-08 to —) — LAUNCHED ON THE BRANCH, PR #49 OPEN; NOT MERGED (branch `feature/edexcel-b-flashcards`)
 

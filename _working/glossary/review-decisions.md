@@ -371,30 +371,31 @@ These were decided from the evidence and are live in `glossary-data/curation.jso
 | **S37** | `types of indirect tax` | **S38** | `what it is` | **S39** | `what it shows` |
 | **S40** | `why` | **S41** | `why it matters` | **S42** | `why?` |
 
-### Merged (20)
+### Merged (21)
 
 | # | Variant | Merged into |
 | ---: | --- | --- |
 | **M1** | abnormal/supernormal profit | supernormal profit |
 | **M2** | altruism & fairness | altruism |
-| **M3** | basics of demand | demand |
-| **M4** | behavioural economic theory | behavioural economics |
-| **M5** | demerit goods | demerit good |
-| **M6** | externalities | externality |
-| **M7** | indirect taxation | indirect taxes |
-| **M8** | information provision (negative advertising) | information provision |
-| **M9** | information provision (positive advertising) | information provision |
-| **M10** | measuring economic growth: gross domestic product (gdp) | gross domestic product (gdp) |
-| **M11** | merit goods | merit good |
-| **M12** | regulation and legislation | regulation |
-| **M13** | rule of thumb/habit | rule of thumb |
-| **M14** | sras curve | short-run aggregate supply (sras) |
-| **M15** | sras curve: a recap | short-run aggregate supply (sras) |
-| **M16** | what is aggregate demand? | aggregate demand (ad) |
-| **M17** | what is an output gap? | output gaps |
-| **M18** | what is lras? | long-run aggregate supply (lras) |
-| **M19** | what is the multiplier? | multiplier |
-| **M20** | what is the trade cycle? | trade cycle |
+| **M3** | average cost | average cost (ac) |
+| **M4** | basics of demand | demand |
+| **M5** | behavioural economic theory | behavioural economics |
+| **M6** | demerit goods | demerit good |
+| **M7** | externalities | externality |
+| **M8** | indirect taxation | indirect taxes |
+| **M9** | information provision (negative advertising) | information provision |
+| **M10** | information provision (positive advertising) | information provision |
+| **M11** | measuring economic growth: gross domestic product (gdp) | gross domestic product (gdp) |
+| **M12** | merit goods | merit good |
+| **M13** | regulation and legislation | regulation |
+| **M14** | rule of thumb/habit | rule of thumb |
+| **M15** | sras curve | short-run aggregate supply (sras) |
+| **M16** | sras curve: a recap | short-run aggregate supply (sras) |
+| **M17** | what is aggregate demand? | aggregate demand (ad) |
+| **M18** | what is an output gap? | output gaps |
+| **M19** | what is lras? | long-run aggregate supply (lras) |
+| **M20** | what is the multiplier? | multiplier |
+| **M21** | what is the trade cycle? | trade cycle |
 
 ### Renamed for display (20)
 

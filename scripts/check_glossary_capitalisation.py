@@ -64,6 +64,9 @@ PHRASE_LEAD = {
     "a", "an", "the", "any", "all", "one", "each", "every", "no",
     "when", "where", "who", "whether",
     "goods", "natural", "spillover", "policies", "costs", "payments",
+    # Edexcel B (Phase 3): "man-made resources ..." (capital) and
+    # "supply-side policies ..." (interventionist, market-based policies).
+    "man-made", "supply-side",
 }
 
 # Leading words that require the term as their grammatical subject. A
