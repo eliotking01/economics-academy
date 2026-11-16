@@ -61,14 +61,20 @@ BOARDS = [
             for g in b["groups"]
         ],
     }
-    for b in board_data.load("taxonomy").values()
+    for b in board_data.load("taxonomy", staged=True).values()
 ]
+
+# staged=True, here and below: a board whose glossary is STAGED (D68) needs its
+# topics in taxonomy.json for extract_glossary.py to validate it. That reaches
+# no page - taxonomy.json is data, published nowhere, and the glossary and the
+# bank each filter it to their own LIVE boards - and it means the count guard
+# below holds a staged board's topics to its declaration too.
 
 # The loud-failure guard PH09-022 singled out as worth preserving: a board whose
 # data does not match its declaration fails here rather than silently emitting a
 # short taxonomy. The declaration moved into the record; the property did not.
 EXPECTED = {b["slugs"]["taxonomy"]: b["expectedTopics"]
-            for b in board_data.load("taxonomy").values()}
+            for b in board_data.load("taxonomy", staged=True).values()}
 
 
 def load_topics(board_dir):

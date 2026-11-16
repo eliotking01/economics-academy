@@ -5,7 +5,8 @@
  * upgrades every .site-search-open control to open the overlay instead. The
  * overlay DOM is built here at first open, so no page carries hidden markup.
  *
- * The index (/search-index.json, ~118 KB raw / ~33 KB gzipped) is fetched
+ * The index (/search-index.json; its size cap and the reason for it are in
+ * scripts/tests/test_build_search_index.py, test_size_budget) is fetched
  * ONCE, lazily, the first time the overlay opens - never on page load. Its
  * compact schema is documented in scripts/build_search_index.py; the two
  * files must move together.
@@ -177,8 +178,9 @@
     for (i = 0; i < data.glossary.length; i++) {
       var g = data.glossary[i]; // [title, id, boards, kind, definition]
       var links = [];
-      if (g[2] & 1) links.push(["Edexcel", "/revision-notes/glossary/edexcel-a/#" + g[1]]);
+      if (g[2] & 1) links.push(["Edexcel A", "/revision-notes/glossary/edexcel-a/#" + g[1]]);
       if (g[2] & 2) links.push(["AQA", "/revision-notes/glossary/aqa/#" + g[1]]);
+      if (g[2] & 4) links.push(["Edexcel B", "/revision-notes/glossary/edexcel-b/#" + g[1]]);
       var row = makeRow(
         "glossary", g[0], links[0][1],
         g[3] ? "Formula" : "Glossary",

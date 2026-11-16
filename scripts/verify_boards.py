@@ -185,6 +185,7 @@ PINNED = {
     "edexcel-b.features.0": "notes",
     "edexcel-b.features.1": "practiceQuestions",
     "edexcel-b.features.2": "flashcards",
+    "edexcel-b.features.3": "glossary",
     "edexcel-b.names.short": "Edexcel B",
     "edexcel-b.names.display": "Edexcel B",
     "edexcel-b.names.long": "Edexcel A-Level Economics B",
@@ -205,6 +206,7 @@ PINNED = {
     "edexcel-b.groups.0.label": "Theme 1",
     "edexcel-b.groups.0.names.notesLabel": "Edexcel B Theme 1",
     "edexcel-b.groups.0.names.notesTitle": "Markets, Consumers and Firms",
+    "edexcel-b.groups.0.names.taxonomy": "Markets, Consumers and Firms",
     "edexcel-b.groups.0.names.flashcards": "Markets, Consumers and Firms",
     "edexcel-b.groups.0.names.practiceQuestions": "Markets, Consumers and Firms",
     "edexcel-b.groups.0.names.practiceQuestionsLabel": "Edexcel B Theme 1",
@@ -215,6 +217,7 @@ PINNED = {
     "edexcel-b.groups.1.label": "Theme 2",
     "edexcel-b.groups.1.names.notesLabel": "Edexcel B Theme 2",
     "edexcel-b.groups.1.names.notesTitle": "The Wider Economic Environment",
+    "edexcel-b.groups.1.names.taxonomy": "The Wider Economic Environment",
     "edexcel-b.groups.1.names.flashcards": "The Wider Economic Environment",
     "edexcel-b.groups.1.names.practiceQuestions": "The Wider Economic Environment",
     "edexcel-b.groups.1.names.practiceQuestionsLabel": "Edexcel B Theme 2",
@@ -225,6 +228,7 @@ PINNED = {
     "edexcel-b.groups.2.label": "Theme 3",
     "edexcel-b.groups.2.names.notesLabel": "Edexcel B Theme 3",
     "edexcel-b.groups.2.names.notesTitle": "The Global Economy",
+    "edexcel-b.groups.2.names.taxonomy": "The Global Economy",
     "edexcel-b.groups.2.names.flashcards": "The Global Economy",
     "edexcel-b.groups.2.names.practiceQuestions": "The Global Economy",
     "edexcel-b.groups.2.names.practiceQuestionsLabel": "Edexcel B Theme 3",
@@ -235,6 +239,7 @@ PINNED = {
     "edexcel-b.groups.3.label": "Theme 4",
     "edexcel-b.groups.3.names.notesLabel": "Edexcel B Theme 4",
     "edexcel-b.groups.3.names.notesTitle": "Making Markets Work",
+    "edexcel-b.groups.3.names.taxonomy": "Making Markets Work",
     "edexcel-b.groups.3.names.flashcards": "Making Markets Work",
     "edexcel-b.groups.3.names.practiceQuestions": "Making Markets Work",
     "edexcel-b.groups.3.names.practiceQuestionsLabel": "Edexcel B Theme 4",
@@ -356,6 +361,9 @@ def main() -> int:
         def has(b):
             have = b["features"]
             if family == "taxonomy":
+                # A STAGED reader counts too (Phase 3): the staged glossary
+                # needs its board's topics in taxonomy.json to be validated.
+                have = have + b.get("staged", [])
                 return "glossary" in have or "pastPaperBank" in have
             return family in have
         return {k: b for k, b in record.items() if has(b)}

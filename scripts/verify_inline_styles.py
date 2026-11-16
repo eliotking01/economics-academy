@@ -57,6 +57,8 @@ import site_layout  # noqa: E402  - the publish rules
 EXPECTED_KATEX_PAGES = {
     "revision-notes/glossary/aqa/index.html": 609,
     "revision-notes/glossary/edexcel-a/index.html": 488,
+    # Edexcel B's glossary, launched 2026-11-16.
+    "revision-notes/glossary/edexcel-b/index.html": 690,
     "flashcards/edexcel-a/theme-2/index.html": 22,
     "flashcards/edexcel-a/theme-3/index.html": 21,
     "flashcards/aqa/micro/index.html": 19,

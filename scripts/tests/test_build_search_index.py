@@ -50,8 +50,13 @@ class TestSearchIndex(unittest.TestCase):
         self.assertEqual(bsi.render(self.index), bsi.render(bsi.build()))
 
     def test_size_budget(self):
+        # 150,000 until 2026-11-16. Edexcel B's glossary took the index to
+        # 175,125 bytes (49.9 KB gzipped), all of it definitions, and no trim
+        # got it back under without breaking search. Eliot raised the cap to
+        # 200,000 (D69): the file loads only when search first opens, never
+        # on page load, and is not crawled.
         raw = bsi.render(self.index).encode("utf-8")
-        self.assertLess(len(raw), 150_000,
+        self.assertLess(len(raw), 200_000,
                         "the index has outgrown its budget - trim before "
                         "shipping, do not just raise this number")
 
@@ -109,6 +114,8 @@ class TestSearchIndex(unittest.TestCase):
             1: (ROOT / "revision-notes/glossary/edexcel-a/index.html")
                 .read_text(encoding="utf-8"),
             2: (ROOT / "revision-notes/glossary/aqa/index.html")
+                .read_text(encoding="utf-8"),
+            4: (ROOT / "revision-notes/glossary/edexcel-b/index.html")
                 .read_text(encoding="utf-8"),
         }
         for title, ident, mask, kind, definition in self.index["glossary"]:

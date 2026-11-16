@@ -57,6 +57,11 @@ CURATION = DATA / "curation.json"
 AUTHORED = DATA / "authored.json"
 TERMS_OUT = DATA / "terms.json"
 INVENTORY = ROOT / "_working" / "glossary" / "inventory.md"
+# A STAGED board's extraction (D68). Gitignored: it is a validation run's
+# record, never published and never read by a page generator except to
+# validate - build_glossary.py renders the staged pages in memory from it.
+STAGED_DIR = ROOT / "_working" / "glossary" / "staged"
+STAGED_TERMS = STAGED_DIR / "terms.json"
 
 SITE = "https://economicsacademy.co.uk"
 
@@ -78,28 +83,84 @@ VOID = {"br", "img", "hr", "input", "meta", "link", "source", "area", "base",
 #                       key called `taxonomy` because something had to hold it.
 # GLOSSARY_OF_SHORTNAME the word a spec-alert actually prints - "Specification
 #                       Coverage: Edexcel unit 1.1.1" - mapped to the same key.
-GLOSSARY_OF_TAXONOMY = {b["slugs"]["taxonomy"]: b["slugs"]["glossary"]
-                        for b in board_data.load("glossary").values()}
-GLOSSARY_OF_SHORTNAME = {b["names"]["short"]: b["slugs"]["glossary"]
-                         for b in board_data.load("glossary").values()}
-# Every board taxonomy.json may hold, glossary or not: a board can be there for
-# the past-paper bank alone (board_data.TAXONOMY_READERS), and is skipped.
-TAXONOMY_SLUGS = {b["slugs"]["taxonomy"]
-                  for b in board_data.load("taxonomy").values()}
+def board_maps(staged: bool = False):
+    """(GLOSSARY_OF_TAXONOMY, GLOSSARY_OF_SHORTNAME, SPEC_ALERT_RE) for the
+    glossary's boards - the live ones, or with staged=True the staged ones too.
 
-# Longest name first. Alternation in `re` is ordered and the first branch that
-# matches wins, so a board whose short name is a prefix of another's would
-# shadow it - "Edexcel" would swallow the start of "Edexcel B" and report the
-# wrong board. Nothing collides today; sorting means nothing has to notice when
-# something does.
-SPEC_ALERT_RE = re.compile(
-    r"Specification Coverage:\s*("
-    + "|".join(re.escape(n) for n in
-               sorted(GLOSSARY_OF_SHORTNAME, key=len, reverse=True))
-    + r")\s+unit\s+([\d.]+)\s*"
-    r"(?:[-–—]\s*)?(.*?)\.(?:\s|$)",
-    re.S,
-)
+    A function rather than three constants since Phase 3 (2026-11-12): a
+    STAGED board (D68) is extracted in a second run whose output goes to
+    _working/glossary/staged/ and never into terms.json, so the live run has
+    to be able to leave it out. The live values are still bound below under
+    their old names.
+    """
+    boards = board_data.load("glossary", staged=staged).values()
+    of_taxonomy = {b["slugs"]["taxonomy"]: b["slugs"]["glossary"]
+                   for b in boards}
+    of_shortname = {b["names"]["short"]: b["slugs"]["glossary"]
+                    for b in boards}
+    # Longest name first. Alternation in `re` is ordered and the first branch
+    # that matches wins, so "Edexcel" would swallow the start of "Edexcel B"
+    # and report the wrong board. Edexcel B (Phase 3) is the first board for
+    # which this matters.
+    alert_re = re.compile(
+        r"Specification Coverage:\s*("
+        + "|".join(re.escape(n) for n in
+                   sorted(of_shortname, key=len, reverse=True))
+        + r")\s+unit\s+([\d.]+)\s*"
+        r"(?:[-–—]\s*)?(.*?)\.(?:\s|$)",
+        re.S,
+    )
+    return of_taxonomy, of_shortname, alert_re
+
+
+GLOSSARY_OF_TAXONOMY, GLOSSARY_OF_SHORTNAME, SPEC_ALERT_RE = board_maps()
+# Every board taxonomy.json may hold, glossary or not: a board can be there for
+# the past-paper bank alone (board_data.TAXONOMY_READERS), or for a staged
+# glossary, and is skipped by a run that does not build it.
+TAXONOMY_SLUGS = {b["slugs"]["taxonomy"]
+                  for b in board_data.load("taxonomy", staged=True).values()}
+
+# One letter per board in the generated review files (_working/glossary/).
+# Was `"E" if board == "edexcel-a" else "A"`, which filed Edexcel B as AQA.
+BOARD_LETTER = {"edexcel-a": "E", "aqa": "A", "edexcel-b": "B"}
+
+
+def letters(boards) -> str:
+    return "".join(BOARD_LETTER.get(b, "?") for b in boards)
+
+
+# The order boards JOINED the glossary, by glossary slug. Permanent: it is not
+# the live/staged state, which changes at launch, but the history the ids are
+# built on. A board that joins later never renames an earlier board's entry:
+#
+#   - a term's display name is chosen from its earliest generation's sources;
+#   - a formula's label comes from its earliest generation's sources;
+#   - a formula id is settled among its own generation and those before it,
+#     so a newcomer whose heading gives an id already in use takes the hash
+#     suffix, and the id already published keeps its bare form.
+#
+# Found in Phase 3 (2026-11-12): Edexcel B's "Concentration Ratios" and
+# "Percentage Change" headings gave the ids of Edexcel A's and AQA's, the old
+# all-at-once collision rule hashed both, and two live anchors and a curated
+# label would have changed at launch. An anchor id is a deep link (site search
+# links to it) and a label is published wording. A new board goes at the end,
+# with the next number.
+GENERATION = {"edexcel-a": 0, "aqa": 0, "edexcel-b": 1}
+
+
+def generation(board: str) -> int:
+    if board not in GENERATION:
+        sys.exit(f"extract_glossary: board {board!r} has no GENERATION. Add "
+                 f"it at the end, with the next number - see the comment there")
+    return GENERATION[board]
+
+
+def earliest(srcs):
+    """The sources from the earliest generation present, in their order."""
+    first = min(generation(s["board"]) for s in srcs)
+    return [s for s in srcs if generation(s["board"]) == first]
+
+
 DISPLAY_TEX_RE = re.compile(r"\\\[(.+?)\\\]", re.S)
 INLINE_TEX_RE = re.compile(r"\\\((.+?)\\\)", re.S)
 
@@ -305,13 +366,14 @@ def letter_of(term: str) -> str:
 
 # ---------------------------------------------------------------- pages
 
-def board_index():
+def board_index(of_taxonomy=None):
     """notesDir -> board and group metadata, straight from taxonomy.json.
 
     The taxonomy already carries every name the glossary needs and is itself
     generated from the notes, so redeclaring any of it here would create a
     second source of truth that could drift.
     """
+    of_taxonomy = GLOSSARY_OF_TAXONOMY if of_taxonomy is None else of_taxonomy
     tax = json.loads(TAXONOMY.read_text(encoding="utf-8"))
     out = {}
     for b in tax["boards"]:
@@ -320,11 +382,11 @@ def board_index():
                      f"boards-data/boards.json does not record as a "
                      f"slugs.taxonomy. Re-run build_past_paper_taxonomy.py, or "
                      f"declare the board in the record.")
-        if b["slug"] not in GLOSSARY_OF_TAXONOMY:
-            continue  # in the taxonomy for the bank, not for the glossary
+        if b["slug"] not in of_taxonomy:
+            continue  # in the taxonomy for the bank, or staged and not built
         for g in b["groups"]:
             out[g["notesDir"]] = {
-                "board": GLOSSARY_OF_TAXONOMY[b["slug"]],
+                "board": of_taxonomy[b["slug"]],
                 "boardName": b["name"],
                 "qualification": b.get("qualification", ""),
                 "group": g["slug"],
@@ -334,7 +396,8 @@ def board_index():
     return out
 
 
-def page_meta(root: Node, path: pathlib.Path, meta, problems):
+def page_meta(root: Node, path: pathlib.Path, meta, problems,
+              of_shortname=None, alert_re=None):
     """Board, spec code and topic title, taken from the spec-alert line.
 
     Not from the JSON-LD: its isPartOf names have about twenty inconsistent
@@ -342,17 +405,19 @@ def page_meta(root: Node, path: pathlib.Path, meta, problems):
     exactly and the five that do not differ only by a missing ' - ' separator,
     which the optional dash in the pattern absorbs.
     """
+    of_shortname = GLOSSARY_OF_SHORTNAME if of_shortname is None else of_shortname
+    alert_re = SPEC_ALERT_RE if alert_re is None else alert_re
     alert = next((n for n in walk(root) if "spec-alert" in n.cls()), None)
     rel = path.relative_to(ROOT).as_posix()
     if alert is None:
         problems.append(f"{rel}: no spec-alert block")
         return None
-    m = SPEC_ALERT_RE.search(squash(text_of(alert)))
+    m = alert_re.search(squash(text_of(alert)))
     if not m:
         problems.append(f"{rel}: spec-alert does not parse")
         return None
 
-    stated = GLOSSARY_OF_SHORTNAME[m.group(1)]
+    stated = of_shortname[m.group(1)]
     if stated != meta["board"]:
         problems.append(
             f"{rel}: spec-alert says {m.group(1)} but the file is in "
@@ -679,7 +744,10 @@ def merge(records):
     return grouped
 
 
-def build():
+def build(staged: bool = False):
+    """Extract the glossary. staged=True includes the boards whose glossary is
+    STAGED (D68); main() writes that run to _working/glossary/staged/ only."""
+    of_taxonomy, of_shortname, alert_re = board_maps(staged)
     problems, notes = [], []
     curation = json.loads(CURATION.read_text(encoding="utf-8"))
     stop = {canonical_key(s) for s in curation.get("stopTerms", [])}
@@ -696,7 +764,7 @@ def build():
                   for k, v in curation.get("preferredSources", {}).items()}
     # Chips whose following list is the definition - see chips_on().
     attach = {canonical_key(k) for k in curation.get("attachList", [])}
-    boards = board_index()
+    boards = board_index(of_taxonomy)
 
     term_records, formula_records, table_candidates = [], [], []
     page_ctx = {}
@@ -710,7 +778,8 @@ def build():
                 continue
             page_count += 1
             root = parse(path.read_text(encoding="utf-8"))
-            ctx = page_meta(root, path, boards[notes_dir], problems)
+            ctx = page_meta(root, path, boards[notes_dir], problems,
+                            of_shortname, alert_re)
             if ctx is None:
                 continue
             body = next((n for n in walk(root)
@@ -760,7 +829,8 @@ def build():
                                  if s["notesUrl"] in rank else len(rank),
                                  s["board"], s["spec"]))
         variants = {s["definitionHtml"] for s in srcs}
-        pretty = display.get(key) or max((s["term"] for s in srcs), key=len)
+        pretty = display.get(key) or max((s["term"] for s in earliest(srcs)),
+                                         key=len)
         review = []
         if any(s["fromHeading"] for s in srcs):
             review.append("term taken from a section heading, needs naming")
@@ -810,7 +880,9 @@ def build():
     f_exclude = set(curation.get("formulaExclude", []))
     f_label = curation.get("formulaLabel", {})
     for key, entry in sorted(merge(formula_records).items()):
-        srcs = entry["sources"]
+        # Earliest generation first (stable, so its own order is kept): the
+        # label below is srcs[0]'s.
+        srcs = sorted(entry["sources"], key=lambda s: generation(s["board"]))
         formulae.append({
             "id": "f-" + slugify(srcs[0]["label"] or srcs[0]["topic"])[:60],
             "latex": srcs[0]["latex"],
@@ -836,11 +908,22 @@ def build():
     # landed on the wrong one, and the curated labels for "Real GDP Growth" and
     # "Real GDP per Capita" swapped. Hashing the LaTeX makes an id depend only
     # on the formula it names, so an unrelated edit cannot move it.
-    base_count = collections.Counter(f["id"] for f in formulae)
-    for f in formulae:
-        if base_count[f["id"]] > 1:
-            digest = hashlib.sha1(f["latex"].encode("utf-8")).hexdigest()[:4]
-            f["id"] = f"{f['id']}-{digest}"
+    #
+    # Generation by generation (see GENERATION): collisions within one
+    # generation are hashed on every member, exactly as before, and a later
+    # generation's formula is hashed if its id is taken by an earlier one's.
+    # The earlier id never moves.
+    taken = set()
+    for gen in sorted({min(generation(s["board"]) for s in f["sources"])
+                       for f in formulae}):
+        cohort = [f for f in formulae
+                  if min(generation(s["board"]) for s in f["sources"]) == gen]
+        base_count = collections.Counter(f["id"] for f in cohort)
+        for f in cohort:
+            if base_count[f["id"]] > 1 or f["id"] in taken:
+                digest = hashlib.sha1(f["latex"].encode("utf-8")).hexdigest()[:4]
+                f["id"] = f"{f['id']}-{digest}"
+        taken |= {f["id"] for f in cohort}
     for f in formulae:
         f["label"] = f_label.get(f["id"], f["label"])
     formulae = [f for f in formulae if f["id"] not in f_exclude]
@@ -869,7 +952,7 @@ def build():
 
 # ---------------------------------------------------------------- output
 
-def write_inventory(terms, formulae, stats, skipped):
+def write_inventory(terms, formulae, stats, skipped, out=None):
     """The whole inventory, rewritten each run.
 
     Deliberately not appended incrementally: extraction over 166 pages takes a
@@ -892,7 +975,7 @@ def write_inventory(terms, formulae, stats, skipped):
           "gap-report item.", "",
           "| # | Term | B | V | Sources |", "| ---: | --- | --- | ---: | --- |"]
     for i, t in enumerate(terms, 1):
-        b = "".join("E" if s == "edexcel-a" else "A" for s in t["boards"])
+        b = letters(t["boards"])
         src = ", ".join(f"{s['groupLabel']} {s['spec']}" for s in t["sources"])
         L.append(f"| **T{i}** | {t['term']} | {b} | {t['definitionVariants']} | {src} |")
 
@@ -902,7 +985,7 @@ def write_inventory(terms, formulae, stats, skipped):
           "| ---: | --- | --- | --- | --- |"]
     for i, f in enumerate(formulae, 1):
         tex = f["latex"].replace("|", "\\|")
-        b = "".join("E" if s == "edexcel-a" else "A" for s in f["boards"])
+        b = letters(f["boards"])
         L.append(f"| **B{i}** | {f['label']} | `{tex}` | {b} | "
                  f"{'no' if f['outsideFormulaBox'] else 'yes'} |")
 
@@ -913,10 +996,10 @@ def write_inventory(terms, formulae, stats, skipped):
     for i, (page, why, term) in enumerate(skipped, 1):
         L.append(f"| **X{i}** | {page} | {why} | {term} |")
 
-    INVENTORY.write_text("\n".join(L) + "\n", encoding="utf-8")
+    (out or INVENTORY).write_text("\n".join(L) + "\n", encoding="utf-8")
 
 
-def write_review(terms, formulae, tables, curation):
+def write_review(terms, formulae, tables, curation, out_dir=None):
     """Everything the extractor refused to decide, in one reviewable file.
 
     Regenerated on every run, so it shrinks as decisions land in curation.json.
@@ -1001,7 +1084,7 @@ def write_review(terms, formulae, tables, curation):
           "| # | label | LaTeX | boards | in a formula-box | id |",
           "| ---: | --- | --- | --- | --- | --- |"]
     for i, f in enumerate(formulae, 1):
-        b = "".join("E" if s == "edexcel-a" else "A" for s in f["boards"])
+        b = letters(f["boards"])
         L.append(f"| **B{i}** | {f['label']} | "
                  f"`{f['latex'].replace('|', chr(92) + '|')}` | {b} | "
                  f"{'no' if f['outsideFormulaBox'] else 'yes'} | `{f['id']}` |")
@@ -1040,7 +1123,7 @@ def write_review(terms, formulae, tables, curation):
               "| # | Term | Boards | Source(s) | Definition as extracted |",
               "| ---: | --- | --- | --- | --- |"]
         for i, t in enumerate(rows, 1):
-            b = "".join("E" if s == "edexcel-a" else "A" for s in t["boards"])
+            b = letters(t["boards"])
             src = "<br>".join(f"{s['groupLabel']} {s['spec']}" for s in t["sources"])
             if letter == "E":
                 # One line per source, each separately numbered, so a reply can
@@ -1079,11 +1162,11 @@ def write_review(terms, formulae, tables, curation):
     for i, (k, v) in enumerate(sorted(curation["display"].items()), 1):
         L.append(f"| **R{i}** | {k} | {v} |")
 
-    (INVENTORY.parent / "review-decisions.md").write_text(
+    ((out_dir or INVENTORY.parent) / "review-decisions.md").write_text(
         "\n".join(L) + "\n", encoding="utf-8")
 
 
-def write_authored_review(terms, formulae):
+def write_authored_review(terms, formulae, out_dir=None):
     """Every authored definition, for review of the economics.
 
     These are the only entries on the site that are not the notes' own words,
@@ -1125,7 +1208,7 @@ def write_authored_review(terms, formulae):
          "| ---: | --- | --- | --- | --- |"]
     for i, (t, src) in enumerate(
             sorted(auth, key=lambda x: (x[0]["term"].lower(), x[1]["board"])), 1):
-        b = "E" if src["board"] == "edexcel-a" else "A"
+        b = BOARD_LETTER.get(src["board"], "?")
         where = (f"{src['groupLabel']} {src['spec']}" if src["notesUrl"]
                  else "**no page**")
         other = [o for o in t["sources"] if o.get("origin") != "authored"]
@@ -1139,12 +1222,52 @@ def write_authored_review(terms, formulae):
         L += ["", "## Authored formulae", "",
               "| # | Label | LaTeX | B |", "| ---: | --- | --- | --- |"]
         for i, f in enumerate(sorted(af, key=lambda x: x["label"].lower()), 1):
-            b = "".join("E" if s == "edexcel-a" else "A" for s in f["boards"])
+            b = letters(f["boards"])
             L.append(f"| **F{i}** | {f['label']} | "
                      f"`{f['latex'].replace('|', chr(92) + '|')}` | {b} |")
 
-    (INVENTORY.parent / "authored-review.md").write_text(
+    ((out_dir or INVENTORY.parent) / "authored-review.md").write_text(
         "\n".join(L) + "\n", encoding="utf-8")
+
+
+def entry_view(terms, formulae, board):
+    """What one board's page renders from the data, reduced to the fields a
+    reader can see or link to: each term's id, name and letter and the source
+    the page shows; each formula's id, label and LaTeX. Two runs whose views
+    agree render that board's page the same."""
+    view = {}
+    for t in terms:
+        if board not in t["boards"]:
+            continue
+        mine = [s for s in t["sources"] if s["board"] == board]
+        view[("term", t["id"])] = (t["term"], t["letter"],
+                                   mine[0]["notesUrl"],
+                                   mine[0]["definitionHtml"],
+                                   tuple(s["notesUrl"] for s in mine))
+    for f in formulae:
+        if board not in f["boards"]:
+            continue
+        view[("formula", f["id"])] = (f["label"], f["latex"])
+    return view
+
+
+def launch_impact(live, staged):
+    """Every way the staged run would change a LIVE board's page at launch.
+
+    A new board's sources merge into the existing entries, keyed on the term.
+    That must not rename a live term, move it to another letter, change which
+    source it shows, or relabel a formula - an anchor id is a deep link, and a
+    name or label is published wording. Returns one line per difference.
+    """
+    out = []
+    for board in board_data.load("glossary"):
+        slug = board_data.load("glossary")[board]["slugs"]["glossary"]
+        a = entry_view(*live, slug)
+        b = entry_view(*staged, slug)
+        for k in sorted(set(a) | set(b)):
+            if a.get(k) != b.get(k):
+                out.append(f"{slug} {k[0]} {k[1]}: {a.get(k)!r} -> {b.get(k)!r}")
+    return out
 
 
 def main():
@@ -1162,12 +1285,70 @@ def main():
         for p in problems:
             print(f"  - {p}", file=sys.stderr)
 
+    # STAGED boards (D68): extracted with every normal rule, written only to
+    # _working/glossary/staged/, never to terms.json. Their problems fail the
+    # run like a live board's. And because their sources merge into the live
+    # boards' entries, the run also fails if launching them would change what
+    # a live page shows - see launch_impact().
+    staged_boards = sorted(set(board_data.load("glossary", staged=True))
+                           - set(board_data.load("glossary")))
+    staged_problems, impact, staged_run = [], [], None
+    if staged_boards:
+        staged_run = build(staged=True)
+        s_terms, s_formulae, s_stats = staged_run[:3]
+        staged_problems = staged_run[4]
+        impact = launch_impact((terms, formulae), (s_terms, s_formulae))
+        print(f"\nstaged ({', '.join(staged_boards)}): "
+              f"{s_stats['pages']} pages, {s_stats['uniqueTerms']} terms, "
+              f"{s_stats['uniqueFormulae']} formulae across every board")
+        for slug in (board_data.load("glossary", staged=True)[b]["slugs"]["glossary"]
+                     for b in staged_boards):
+            mine = [t for t in s_terms if slug in t["boards"]]
+            srcs = [s for t in mine for s in t["sources"] if s["board"] == slug]
+            by_origin = collections.Counter(s["origin"] for s in srcs)
+            print(f"  {slug}: {len(mine)} terms "
+                  f"({sum(1 for t in mine if t['boards'] == [slug])} on this "
+                  f"board only), sources by origin "
+                  f"{dict(sorted(by_origin.items()))}, "
+                  f"{sum(1 for f in s_formulae if slug in f['boards'])} formulae")
+        for p in staged_problems:
+            if p not in problems:
+                print(f"  - staged problem: {p}", file=sys.stderr)
+        for line in impact:
+            print(f"  - launch would change a live page: {line}",
+                  file=sys.stderr)
+    failed = bool(problems or staged_problems or impact)
+
     if args.check:
         print("\n--check: nothing written")
-        return 1 if problems else 0
+        return 1 if failed else 0
 
     DATA.mkdir(exist_ok=True)
-    TERMS_OUT.write_text(json.dumps({
+    TERMS_OUT.write_text(terms_json(terms, formulae, stats), encoding="utf-8")
+    write_inventory(terms, formulae, stats, skipped)
+    write_review(terms, formulae, tables, curation)
+    write_authored_review(terms, formulae)
+    print(f"\nwrote {TERMS_OUT.relative_to(ROOT)}")
+    print(f"wrote {INVENTORY.relative_to(ROOT)}")
+    if staged_run is not None:
+        s_terms, s_formulae, s_stats, s_skipped, _p, s_tables, _c = staged_run
+        STAGED_DIR.mkdir(parents=True, exist_ok=True)
+        STAGED_TERMS.write_text(terms_json(s_terms, s_formulae, s_stats),
+                                encoding="utf-8")
+        write_inventory(s_terms, s_formulae, s_stats, s_skipped,
+                        STAGED_DIR / "inventory.md")
+        write_review(s_terms, s_formulae, s_tables, curation, STAGED_DIR)
+        write_authored_review(s_terms, s_formulae, STAGED_DIR)
+        print(f"wrote {STAGED_DIR.relative_to(ROOT)}/ (staged, gitignored)")
+    elif STAGED_TERMS.exists():
+        # Nothing staged any more: a leftover file must not be validated as
+        # if it were current.
+        STAGED_TERMS.unlink()
+    return 1 if failed else 0
+
+
+def terms_json(terms, formulae, stats) -> str:
+    return json.dumps({
         "source": "Generated by scripts/extract_glossary.py from the revision "
                   "notes. Do not hand-edit; re-run it. Hand-written judgement "
                   "belongs in glossary-data/curation.json.",
@@ -1175,13 +1356,7 @@ def main():
         "stats": stats,
         "terms": terms,
         "formulae": formulae,
-    }, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    write_inventory(terms, formulae, stats, skipped)
-    write_review(terms, formulae, tables, curation)
-    write_authored_review(terms, formulae)
-    print(f"\nwrote {TERMS_OUT.relative_to(ROOT)}")
-    print(f"wrote {INVENTORY.relative_to(ROOT)}")
-    return 1 if problems else 0
+    }, indent=2, ensure_ascii=False) + "\n"
 
 
 if __name__ == "__main__":

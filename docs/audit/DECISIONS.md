@@ -2432,3 +2432,25 @@ approves are permanent.
 - **The originality bar** (Q12): `scripts/check_originality.py` EXACT or
   NEAR fails; READ and REVIEW lines are judged by hand in each unit's review
   sheet. The thresholds are in its docstring.
+
+### D69 — Site search's size cap rises to 200,000 bytes at the Edexcel B glossary launch
+
+**2026-11-16, Eliot, answering `05-website/drafts/all-boards-parity/review/launch-glossary.md`
+G1 (option A).**
+
+- **The cap in `test_build_search_index.test_size_budget` rises from
+  150,000 to 200,000 bytes.** Launching B's glossary took
+  `/search-index.json` from 133,950 to 175,125 bytes (49.9 KB gzipped).
+  All of the growth is glossary definitions: 261 B-only terms, which the
+  search card shows and the matcher searches at low weight.
+- **Why not trim.** Shipping only each definition's first sentence saved
+  15.7 KB and left 159 KB, still over the old cap. It would also have cut
+  the card's text and the words search matches on. Splitting definitions
+  into a second file would mint a permanent URL and add a second fetch for
+  the same bytes.
+- **Why the cost is acceptable.** The file loads once, lazily, when search
+  first opens, never on page load. No page links it, the sitemap does not
+  list it, and no crawler fetches it, so SEO and Core Web Vitals are
+  unaffected. A visitor who opens search pays about 13 KB more, gzipped.
+- **The cap is still a guard.** Outgrowing 200,000 is a decision again,
+  not a number to bump.

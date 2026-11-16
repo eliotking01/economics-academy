@@ -32,6 +32,13 @@ from glossary-data/curation.json.
 --check exits non-zero when a lower-case definition is not accounted for by
 curation.json, so a newly written notes chip cannot reintroduce this silently.
 
+--staged reads extract_glossary.py's STAGED run instead of terms.json (D68,
+Phase 3) - every live board plus any board whose glossary is staged - and
+writes its report beside that data, in _working/glossary/staged/. --approve
+rewrites the whole "capitalise" block from the rows it reads, so while a
+board is staged it must be given --staged, or it would drop that board's
+rulings; it refuses otherwise.
+
 Standard library only.
 """
 
@@ -57,6 +64,9 @@ PHRASE_LEAD = {
     "a", "an", "the", "any", "all", "one", "each", "every", "no",
     "when", "where", "who", "whether",
     "goods", "natural", "spillover", "policies", "costs", "payments",
+    # Edexcel B (Phase 3): "man-made resources ..." (capital) and
+    # "supply-side policies ..." (interventionist, market-based policies).
+    "man-made", "supply-side",
 }
 
 # Leading words that require the term as their grammatical subject. A
@@ -345,7 +355,24 @@ def main() -> int:
                     help="validate only: fail on an unaccounted lower-case start")
     ap.add_argument("--approve", action="store_true",
                     help="write the classification into curation.json")
+    ap.add_argument("--staged", action="store_true",
+                    help="read the staged extraction (_working/glossary/"
+                         "staged/terms.json), live boards included")
     args = ap.parse_args()
+
+    global DATA, REPORT
+    staged_file = ROOT / "_working" / "glossary" / "staged" / "terms.json"
+    if args.staged:
+        if not staged_file.is_file():
+            print("no staged glossary extraction - nothing is staged, or run "
+                  "scripts/extract_glossary.py first", file=sys.stderr)
+            return 1
+        DATA, REPORT = staged_file, staged_file.parent / REPORT.name
+    elif args.approve and staged_file.is_file():
+        print("a glossary board is staged: --approve rewrites the whole "
+              "capitalise block, so run it with --staged or the staged "
+              "board's rulings are dropped", file=sys.stderr)
+        return 1
 
     data = json.loads(DATA.read_text(encoding="utf-8"))
     rows = classify(data)

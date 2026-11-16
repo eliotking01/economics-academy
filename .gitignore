@@ -45,3 +45,6 @@ seo/lh-*/
 # exam-board text, is regenerable in minutes, and must never share a data
 # path with questions-data/ (CLAUDE.md rule 4).
 _working/originality-corpus/
+
+# A staged glossary board's extraction (D68): a validation record, never published.
+_working/glossary/staged/
