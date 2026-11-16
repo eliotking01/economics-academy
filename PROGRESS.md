@@ -272,7 +272,8 @@ Q1-Q6 on 2026-11-16.
     it requires the whole question text, not just the opening and closing
     words (check 9). Three planted transcript misreads were all caught; the
     mid-sentence one only by check 9.
-  - Eliot to spot-check `review/phase-4-ocr-as-p2-june-2019.html`.
+  - Spot-checked by Eliot against the page images, 2026-11-16
+    (`review/phase-4-ocr-as-p2-june-2019.html`): confirmed.
   - The Phase 4 totals are 37 papers and 362 questions, with the verifier at
     704 questions across 82 papers.
 - **Approved wording, for Step 3 (Q5).** The Paper 3 card note reads:
