@@ -23,7 +23,7 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| All-boards parity (D67) — Phase 4: Edexcel B past-paper bank — step 1, extraction (36 of 37 papers) | extracted on `feature/edexcel-b-bank`; not built, tagged or published | — | — |
+| All-boards parity (D67) — Phase 4: Edexcel B past-paper bank — step 1, extraction (37 of 37 papers, one by OCR) | extracted on `feature/edexcel-b-bank`; not built, tagged or published | — | — |
 | All-boards parity (D67) — Phase 2: Edexcel B flashcards, all four decks, launched (8 new URLs) | launched on `feature/edexcel-b-flashcards`, PR #49 open; not merged | — | — |
 | All-boards parity (D67) — Phase 1: Edexcel B practice questions, all 85 sets, launched (89 new URLs) | live (PR #48) | 2026-11-08 | `39403ead` |
 | June 2025 papers added to the past-paper question bank | live (PR #47) | 2026-10-24 | `d96b0928` |
@@ -237,7 +237,8 @@ Q1-Q6 on 2026-11-16.
   - **Edexcel A re-extracted byte-identical**, all 45 papers.
 - **Data.** `edexcel-b/` and `edexcel-b-as/` (Phase 0 Q8). Counts come
   from the extractor's run, and today they are:
-  - 36 papers and 351 questions, all high confidence;
+  - 36 papers and 351 questions from text-layer PDFs (the 37th is by OCR,
+    below), all high confidence;
   - every mark-scheme page matched;
   - `strip_source_attributions.py`: 0 changes.
 
@@ -257,10 +258,23 @@ Q1-Q6 on 2026-11-16.
   - Edexcel B P1 June 2025 prints no "Sources for use with SECTION B" booklet
     heading. Its Q2 links Extract G (p25), found by name; the first pass
     linked its own question page, which the verifier caught.
-- **Open, for Eliot (Q4).** AS Paper 2 June 2019's question paper is an
-  image-only scan ("Microsoft: Print To PDF"), which PDFKit reads as 24 blank
-  pages. Eliot is to download Pearson's text-layer copy. It replaces the
-  hosted file at the same URL, and then that paper gets extracted.
+- **AS Paper 2 June 2019 by OCR (Q4, option A of the follow-up).** The
+  question paper is an image-only scan ("Microsoft: Print To PDF"). Eliot
+  found no text-layer copy anywhere, so it was OCRed:
+  - `scripts/ocr_pdf_pages.swift` uses Apple Vision and needs no new
+    dependency.
+  - Every question and structural line was checked word by word against the
+    page images, with four glyph corrections (‘ ’ and –).
+  - The checked transcript is committed as
+    `past-paper-questions-data/ocr/…june-2019-question-paper.txt`, and the
+    extractor reads it for that paper only, giving 11 questions.
+  - The verifier runs its own OCR at different settings. For a scanned paper
+    it requires the whole question text, not just the opening and closing
+    words (check 9). Three planted transcript misreads were all caught; the
+    mid-sentence one only by check 9.
+  - Eliot to spot-check `review/phase-4-ocr-as-p2-june-2019.html`.
+  - The Phase 4 totals are 37 papers and 362 questions, with the verifier at
+    704 questions across 82 papers.
 - **Approved wording, for Step 3 (Q5).** The Paper 3 card note reads:
   "Paper 3 is set on a broad context that Pearson pre-released the November
   before the exam. The extracts in the paper were unseen on the day." It

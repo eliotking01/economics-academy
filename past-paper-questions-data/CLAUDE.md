@@ -47,6 +47,14 @@ HTML, never applied by script, so it is never optional.
   Edexcel board because both qualifications have a Paper 1 in the same
   series. `verify_past_paper_extraction.swift` checks all four Edexcel
   directories against the PDFs.
+- `ocr/` — reviewed OCR transcripts, one per question paper that has no text
+  layer. Today there's one: Edexcel B AS Paper 2 June 2019, which Pearson
+  publishes only as a scan. **A transcript is a checked source, not generated
+  output.** Its header says what was checked against the page images and what
+  was corrected. Edit it only to correct it against those images, and say so
+  in the commit. The extractor fails loudly on a text-less PDF that has no
+  transcript. The verifier checks the paper against its own OCR, never against
+  the transcript.
 - `tags.json` — topics and keywords, **hand-written**. Separate so re-extraction
   cannot destroy it.
 - `taxonomy.json` — generated from the existing Edexcel topic records. The bank

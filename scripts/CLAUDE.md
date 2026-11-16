@@ -145,6 +145,15 @@ use **Swift + PDFKit** — there is no Python PDF library here, but macOS ships
 PDFKit. `extract_aqa_questions.py` is the exception and needs `pdfplumber` from
 `requirements.txt` in `.venv/`.
 
+`ocr_pdf_pages.swift` (Swift + Vision, also built into macOS) OCRs a question
+paper with no text layer. Today that's only Edexcel B AS Paper 2 June 2019, a
+scan with no text-layer copy anywhere. Its output is a draft. It becomes
+`past-paper-questions-data/ocr/<pdf name>.txt` only after a word-by-word check
+against the page images, and the extractor reads that transcript in place of
+the empty text layer. **It is never re-run by a build**, because OCR output can
+shift between macOS versions. The verifier runs its own OCR of the scan and
+never reads the transcript.
+
 ## Where a number lives
 
 **If a number is one a script computes, cite the script, not the value.** Counts

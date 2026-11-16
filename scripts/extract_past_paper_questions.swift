@@ -1053,6 +1053,29 @@ func pageTexts(_ path: String) -> [String]? {
     return (0..<doc.pageCount).map { doc.page(at: $0)?.string ?? "" }
 }
 
+/// Where the reviewed OCR transcript for an image-only question paper lives:
+/// past-paper-questions-data/ocr/<the PDF's name>.txt. See ocr_pdf_pages.swift.
+func transcriptPath(_ qpPath: String) -> String {
+    let name = ((qpPath as NSString).lastPathComponent as NSString).deletingPathExtension
+    return "past-paper-questions-data/ocr/\(name).txt"
+}
+
+/// The pages of a reviewed transcript: everything under each
+/// "=== PAGE n ===" marker; the header above the first marker is ignored.
+/// Returns nil if the file is missing or its page count disagrees with the PDF.
+func transcriptPages(_ path: String, expected: Int) -> [String]? {
+    guard let raw = try? String(contentsOfFile: path, encoding: .utf8) else { return nil }
+    var pages: [String] = []
+    for line in raw.components(separatedBy: "\n") {
+        if line.hasPrefix("=================== PAGE ") {
+            pages.append("")
+        } else if !pages.isEmpty {
+            pages[pages.count - 1] += line + "\n"
+        }
+    }
+    return pages.count == expected ? pages : nil
+}
+
 let args = Array(CommandLine.arguments.dropFirst())
 guard !args.isEmpty else {
     FileHandle.standardError.write(
@@ -1082,10 +1105,26 @@ for path in args {
         exitCode = 1
         continue
     }
-    guard let qpPages = pageTexts(meta.qpPath) else {
+    guard var qpPages = pageTexts(meta.qpPath) else {
         FileHandle.standardError.write("FAIL (cannot open QP): \(path)\n".data(using: .utf8)!)
         exitCode = 1
         continue
+    }
+    // A question paper with no text layer at all (one today: Edexcel B AS
+    // Paper 2 June 2019, a scan) is read from its reviewed OCR transcript.
+    // Without one it fails loudly rather than writing an empty paper.
+    var transcript: String? = nil
+    if qpPages.allSatisfy({ $0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }) {
+        let t = transcriptPath(meta.qpPath)
+        guard let ocr = transcriptPages(t, expected: qpPages.count) else {
+            FileHandle.standardError.write(
+                ("FAIL (no text layer, and no transcript with \(qpPages.count) pages at \(t); "
+                    + "see scripts/ocr_pdf_pages.swift): \(path)\n").data(using: .utf8)!)
+            exitCode = 1
+            continue
+        }
+        qpPages = ocr
+        transcript = t
     }
     guard let msPages = pageTexts(meta.msPath) else {
         FileHandle.standardError.write(
@@ -1115,6 +1154,13 @@ for path in args {
         let (c, cProblems) = extractSectionC(pages: qpPages, meta: meta, msPages: msPages)
         questions = b + c
         problems = bProblems + cProblems
+    }
+
+    if let t = transcript {
+        for i in questions.indices {
+            questions[i].notes.append(
+                "the question paper is an image-only scan; text read from the reviewed OCR transcript \(t)")
+        }
     }
 
     let name = "p\(meta.paper)-\(meta.seriesSlug).json"
