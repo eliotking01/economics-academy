@@ -13,6 +13,13 @@ Checks:
   3. Every topic slug exists in taxonomy.json.
   4. Every question has at least one topic and one keyword.
   5. No duplicate topics within a question.
+  6. Every topic belongs to the question's own board: an Edexcel B question
+     tagged with an Edexcel A slug passes check 3 and is still wrong.
+
+Every extracted board is checked, including one whose bank is not live yet
+(Edexcel B, staged until Phase 4's launch): its tags are written before its
+pages, and a bad slug is cheaper to catch now. Only live boards count towards
+the gate, because only they get topic pages.
 
 Also prints the topic coverage histogram, which is what decides how many topic
 pages clear the volume gate (build_past_paper_questions.GATE).
@@ -36,6 +43,12 @@ DATA = ROOT / "past-paper-questions-data"
 # scripts/CLAUDE.md runs the other way).
 sys.path.insert(0, str(ROOT / "scripts"))
 from build_past_paper_questions import GATE  # noqa: E402
+import board_data  # noqa: E402
+
+# Every directory an extractor writes, live or staged. Not
+# build_past_paper_questions.PAPER_DIRS, which is the live bank only: this
+# verifier must see a staged board's tags before the build reads them.
+BOARD_DIRS = ("edexcel-a", "edexcel-a-as", "edexcel-b", "edexcel-b-as", "aqa")
 
 
 def main():
@@ -48,11 +61,16 @@ def main():
         for t in u["topics"]
     }
 
+    live = {b["slugs"]["taxonomy"] for b in board_data.load("pastPaperBank").values()}
+
     questions = {}
-    for board_dir in ("edexcel-a", "edexcel-a-as", "aqa"):
+    board_of = {}
+    for board_dir in BOARD_DIRS:
         for path in sorted((DATA / board_dir).glob("*.json")):
-            for q in json.loads(path.read_text(encoding="utf-8"))["questions"]:
+            paper = json.loads(path.read_text(encoding="utf-8"))
+            for q in paper["questions"]:
                 questions[q["id"]] = q
+                board_of[q["id"]] = paper["board"]
 
     tags = json.loads((DATA / "tags.json").read_text(encoding="utf-8"))
     tags.pop("_comment", None)
@@ -78,6 +96,9 @@ def main():
         for slug in topics:
             if slug not in valid:
                 errors.append(f"{qid}: unknown topic slug {slug!r}")
+            elif valid[slug]["board"] != board_of[qid]:
+                errors.append(f"{qid}: topic {slug!r} is {valid[slug]['board']}'s, "
+                              f"not {board_of[qid]}'s")
 
     counts = collections.Counter(
         slug
@@ -88,13 +109,16 @@ def main():
 
     print(f"{len(questions)} questions, {len(tags)} tagged")
     print(f"{len(counts)} of {len(valid)} topics have at least one question")
-    print(f"{sum(1 for n in counts.values() if n >= GATE)} topics reach the "
-          f"gate of {GATE} and have their own page")
+    print(f"{sum(1 for s, n in counts.items() if n >= GATE and valid[s]['board'] in live)} "
+          f"topics reach the gate of {GATE} and have their own page")
+    for board in sorted({valid[s]["board"] for s in counts} - live):
+        n = sum(1 for s, c in counts.items() if c >= GATE and valid[s]["board"] == board)
+        print(f"  {board} is not in the bank yet: {n} of its topics would reach the gate")
     print()
-    print("Topic coverage, most-tagged first:")
+    print("Topic coverage, most-tagged first (* = has its own page, + = would, once launched):")
     for slug, n in counts.most_common():
-        mark = "*" if n >= GATE else " "
-        print(f"  {mark} {n:2}  {valid[slug]['board']:8} {valid[slug]['spec']:7} {valid[slug]['title']}")
+        mark = " " if n < GATE else ("*" if valid[slug]["board"] in live else "+")
+        print(f"  {mark} {n:2}  {valid[slug]['board']:9} {valid[slug]['spec']:7} {valid[slug]['title']}")
 
     untagged = [s for s in valid if s not in counts]
     print(f"\n{len(untagged)} topics have no question yet.")

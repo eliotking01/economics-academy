@@ -23,7 +23,7 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| All-boards parity (D67) — Phase 4: Edexcel B past-paper bank — step 1, extraction (37 of 37 papers, one by OCR) | extracted on `feature/edexcel-b-bank`; not built, tagged or published | — | — |
+| All-boards parity (D67) — Phase 4: Edexcel B past-paper bank — steps 1–2, extraction (37 of 37 papers, one by OCR) and first-pass tags | on `feature/edexcel-b-bank`; tag disagreements awaiting Eliot (`review/bank-b-tags.md`); not built or published | — | — |
 | All-boards parity (D67) — Phase 2: Edexcel B flashcards, all four decks, launched (8 new URLs) | launched on `feature/edexcel-b-flashcards`, PR #49 open; not merged | — | — |
 | All-boards parity (D67) — Phase 1: Edexcel B practice questions, all 85 sets, launched (89 new URLs) | live (PR #48) | 2026-11-08 | `39403ead` |
 | June 2025 papers added to the past-paper question bank | live (PR #47) | 2026-10-24 | `d96b0928` |
@@ -216,7 +216,7 @@ session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
 
-### All-boards parity — Phase 4, Edexcel B past-paper bank (2026-11-16 to —) — STEP 1 DONE, EXTRACTION ONLY (branch `feature/edexcel-b-bank`)
+### All-boards parity — Phase 4, Edexcel B past-paper bank (2026-11-16 to —) — STEPS 1–2 DONE, TAG DECISIONS PENDING (branch `feature/edexcel-b-bank`)
 
 Step 1 of brief §11. The review sheet is `review/phase-4-extraction.md`, with
 a side-by-side page for A Level Paper 1 June 2019 beside it. Eliot approved
@@ -280,10 +280,22 @@ Q1-Q6 on 2026-11-16.
   "Paper 3 is set on a broad context that Pearson pre-released the November
   before the exam. The extracts in the paper were unseen on the day." It
   comes from the 9EB0 specification.
+- **Step 2, tagging (2026-11-16).** Every B question has a first-pass entry
+  in `tags.json`.
+  - `verify_past_paper_tags.py` reads the two B directories. It gains
+    check 6, a topic must be the question's own board's, which a planted
+    Edexcel A slug confirmed. It counts only live boards towards the gate.
+  - A blind `cold-solver` pass in tag mode saw the question text and a
+    taxonomy excerpt only. The disagreements, with a recommendation each,
+    are in `review/bank-b-tags.md`.
+  - The first blind run for Paper 3 and AS came back before those groups
+    were tagged, so they were compared against a fresh second run instead.
+  - The card's "Revision notes" link goes to a question's **first** topic,
+    so lead-topic order is a real disagreement, not a cosmetic one.
 - **Not yet:**
-  - The bank does not read B: `build_past_paper_questions.PAPER_DIRS` and
-    `verify_past_paper_tags.py` still list A and AQA only.
-  - Next is Step 2, tagging.
+  - Eliot's decisions on `review/bank-b-tags.md` (Q1–Q5), applied by hand.
+  - The bank does not read B: `build_past_paper_questions.PAPER_DIRS`
+    lists A and AQA only. That's Step 3.
 
 ### All-boards parity — Phase 3, Edexcel B glossary (2026-11-12 to —) — STAGED, NOT LAUNCHED (branch `feature/edexcel-b-glossary`)
 
