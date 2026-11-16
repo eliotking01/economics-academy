@@ -259,9 +259,10 @@ recommendation on Q1-Q13 on 2026-11-16.
     1.3.2": the glossary shows 1.5.2.
   - Q12: "average cost" is aliased into "Average Cost (AC)". Q13: no table
     harvests.
-- **Still open:** rationalisation (2.3.2 "cutting capacity…" against 3.1.1
-  "reorganising a business…"). Should it be two senses, or 2.3.2 only? It
-  shows 2.3.2, with 3.1.1 under "Also covered in", until Eliot says.
+- **Rationalisation** (2.3.2 "cutting capacity…" against 3.1.1
+  "reorganising a business…"): Eliot, 2026-11-16, said 2.3.2 only. It shows
+  2.3.2, with 3.1.1 under "Also covered in", which is the default, so no
+  curation is needed. Nothing in Phase 3 is still open before launch.
 - **At `/launch-feature`** (wording approved): move glossary from `staged`
   to `features`. Change the `revision-notes/index.html` card line to "…with a
   page for Edexcel A, Edexcel B and AQA." (Q4). Change site search's Edexcel
