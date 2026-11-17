@@ -398,7 +398,7 @@
    * stay flat; one that only some boards have (Section C, AS Level) is listed
    * under the names of the boards that have it, so nothing implies another
    * board offers it. It is listed ONCE, under all of those names together
-   * ("Edexcel and Edexcel B"): these values are not board-qualified, so the
+   * ("Edexcel A and Edexcel B"): these values are not board-qualified, so the
    * same value under two board labels would look like two choices and act
    * as one. With two boards this is one board's name, as it always was. */
   function sharedThenBoardSpecific(data, board, valuesFor) {
@@ -487,7 +487,7 @@
 
     /* The board narrowing the board-shaped selects. A pre-filtered page fixes
      * it (a topic implies its board); the master page reads the Board select,
-     * which starts empty - "Both boards". */
+     * which starts empty - "All boards". */
     function effectiveBoard() {
       if (preBoard) return preBoard;
       if (preTopic && topics[preTopic]) return topics[preTopic].board;
@@ -633,7 +633,7 @@
 
     /* A topic or theme belongs to exactly one board (an invariant
      * scripts/test_question_search.js pins), so choosing one while the Board
-     * select still says "Both boards" decides the board, and the other
+     * select still says "All boards" decides the board, and the other
      * dropdowns narrow to match. */
     function adoptBoard(name, value) {
       if (!cascades || !value || filters.board.value) return;
@@ -839,7 +839,7 @@
           sel.value = "";
         });
         if (els.sort) els.sort.value = "relevance";
-        // With no board in play any more, the grouped "Both boards" lists
+        // With no board in play any more, the grouped "All boards" lists
         // come back in full.
         if (cascades) populateBoardShaped();
         run();

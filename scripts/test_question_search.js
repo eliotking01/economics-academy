@@ -728,7 +728,7 @@ const opts = (sel) => sel._options.slice(1); // drop the "All ..." option
 const hasOptgroup = (sel) => sel.innerHTML.indexOf("<optgroup") !== -1;
 const boardShaped = ["level", "group", "section", "topic"];
 
-// -- the "Both boards" state
+// -- the "All boards" state
 
 {
   const h = makeRoot();
@@ -766,7 +766,7 @@ const boardShaped = ["level", "group", "section", "topic"];
       .every((o) => o.group === null),
   );
   // A value only some boards set is listed once, under all their names:
-  // "Edexcel" with Edexcel A and AQA, "Edexcel and Edexcel B" with B too.
+  // "Edexcel A" with Edexcel A and AQA, "Edexcel A and Edexcel B" with B too.
   const namesWith = (has) => {
     const names = data.boards
       .filter((b) => data.questions.some((q) => q.board === b.board && has(q)))
@@ -897,7 +897,7 @@ const boardShaped = ["level", "group", "section", "topic"];
   check("clear all: Theme / area is grouped again", hasOptgroup(h.sel.group));
 }
 
-// -- picking a topic or theme while "Both boards" adopts its board
+// -- picking a topic or theme while "All boards" adopts its board
 
 {
   const aqaSlug = Object.keys(data.topics).filter(
@@ -973,7 +973,7 @@ if (data.boards.some((b) => b.board === "edexcel-b")) {
       themeOne.some(
         (o) =>
           o.value === "edexcel:theme-1" &&
-          o.group === "Edexcel" &&
+          o.group === "Edexcel A" &&
           o.label.indexOf("Introduction to Markets") !== -1,
       ) &&
       themeOne.some(

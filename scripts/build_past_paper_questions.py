@@ -170,10 +170,21 @@ def load(*, staged=False):
     # The bank's boards only. taxonomy.json can hold a board for its glossary
     # alone (board_data.TAXONOMY_READERS); reaching this index it would join the
     # master search's board list with no questions behind it.
-    bank = {b["slugs"]["taxonomy"]
+    bank = {b["slugs"]["taxonomy"]: b["names"]["display"]
             for b in board_data.load("pastPaperBank", staged=staged).values()}
     taxonomy["boards"] = [b for b in taxonomy["boards"] if b["board"] in bank]
+    # The bank names a board by its display name ("Edexcel A"), not the
+    # taxonomy's short one ("Edexcel"): with Edexcel B in the bank, a bare
+    # "Edexcel" beside it was ambiguous. Eliot, 2026-11-17 (B bank launch,
+    # review/launch-pastPaperBank.md L7). Set here, once, for the board
+    # records and for each paper's boardName (the card badge), because the
+    # extracted paper files carry the short name and are never hand-edited.
+    # load_bank() is untouched, so the notes tail, which reads it, is too.
+    for b in taxonomy["boards"]:
+        b["name"] = bank[b["board"]]
     tags, papers = load_bank(staged=staged)
+    for p in papers:
+        p["boardName"] = bank[p["board"]]
     return taxonomy, tags, papers
 
 
@@ -375,7 +386,19 @@ def build(taxonomy, tags, papers):
 # The master page covers every board in the bank, so its title must not name
 # one. Naming Edexcel here made it byte-identical to the Edexcel board page's
 # generated title and gave the site its only pair of duplicate titles.
-TITLE = "A-Level Economics Past Paper Questions | Edexcel & AQA | Economics Academy"
+#
+# How the master page names the boards, keyed by the set of bank boards with
+# questions: (title phrase, prose phrase). Visible wording, so each is
+# approved rather than derived - joining names with "and" gave "Edexcel and
+# AQA and Edexcel B". The three-board pair follows the practice and
+# flashcards hubs; approved by Eliot, 2026-11-17 (launch-pastPaperBank.md
+# L1). A live set with no phrase stops the build rather than guess one.
+BOARDS_PHRASE = {
+    frozenset({"edexcel", "aqa"}): ("Edexcel & AQA", "Edexcel and AQA"),
+    frozenset({"edexcel", "aqa", "edexcel-b"}): (
+        "Edexcel A, Edexcel B & AQA", "Edexcel A, Edexcel B and AQA"),
+}
+TITLE = "A-Level Economics Past Paper Questions | {} | Economics Academy"
 
 # The description is derived, not written down. The hard-coded one it replaced
 # was authored before AQA and the Edexcel AS papers joined the bank and still
@@ -460,7 +483,7 @@ def search_component(topic="", board="", group="", src="", hub=False):
     # "Section" here is the paper's section (A/B/C), distinct from the board's
     # section grouping, which is labelled Theme or Micro/Macroeconomics.
     fields = [
-        ("board", "Board", "Both boards"),
+        ("board", "Board", "All boards"),
         # Defaults to showing both, per the owner's decision: an AS question is
         # still a real question on a Theme 1-2 topic, and hiding it by default
         # would make the Theme 1-2 pages look emptier than they are. The badge
@@ -902,7 +925,14 @@ def render_index(index):
     boards_with = [
         b for b in index["boards"] if questions_for(index, board=b["board"])
     ]
-    names = " and ".join(b["name"] for b in boards_with)
+    live = frozenset(b["board"] for b in boards_with)
+    if live not in BOARDS_PHRASE:
+        sys.exit(
+            f"build_past_paper_questions: BOARDS_PHRASE has no wording for "
+            f"the bank boards {sorted(live)}. The master page's title, "
+            f"description and intro name them, so add an approved phrase."
+        )
+    title_names, names = BOARDS_PHRASE[live]
     meta = (
         f'{index["count"]} questions &middot; {years[0]}&ndash;{years[-1]} '
         f'&middot; {len(index["topics"])} topics &middot; free, no sign-up'
@@ -961,9 +991,9 @@ def render_index(index):
             <h2>Browse by specification</h2>
           </header>
           <p>
-            The two specifications number their topics differently, so each board
+            The specifications number their topics differently, so each board
             keeps its own pages and its own codes. A question is never shown
-            under the other board's numbering.
+            under another board's numbering.
           </p>
 
 {chr(10).join(blocks)}
@@ -971,7 +1001,7 @@ def render_index(index):
 {CTA}"""
 
     return page_shell(
-        TITLE,
+        TITLE.format(title_names),
         desc,
         "/past-paper-questions/",
         [("Home", "/"), ("Past Paper Questions", None)],

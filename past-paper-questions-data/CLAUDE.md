@@ -19,7 +19,7 @@ Widened by D67 (2026-10-24). Each change lands with the code that implements it.
 | Edexcel A **A Level** (9EC0), Papers 1–3 | **The multiple-choice / short-answer Section A**: Edexcel A Papers 1–2 (9EC0 and 8EC0) and AQA Paper 3. Not yet: D67 brings Edexcel A's short answers in (Phase 6) and real MCQs as search-only cards with no key (Phase 7). Until each phase, do not extract it |
 | Edexcel A **AS Level** (8EC0), Papers 1–2 | **AQA AS papers**, permanently. When AQA extends, A Level only |
 | AQA A Level (7136) | OCR and AQA specimen papers, permanently |
-| Edexcel B **A Level** (9EB0), Papers 1–3, and **AS Level** (8EB0), Papers 1–2, **every section**: B has no MCQs and no optional questions. Extracted into `edexcel-b/` and `edexcel-b-as/`. The build reads them by `boards.json`'s flag (`BANK_DIRS`, `paper_dirs()`): **staged** until `/launch-feature edexcel-b pastPaperBank`, so validated and rendered in memory, published nowhere; `EA_PREVIEW=edexcel-b:pastPaperBank` previews it | |
+| Edexcel B **A Level** (9EB0), Papers 1–3, and **AS Level** (8EB0), Papers 1–2, **every section**: B has no MCQs and no optional questions. Extracted into `edexcel-b/` and `edexcel-b-as/`. The build reads them by `boards.json`'s flag (`BANK_DIRS`, `paper_dirs()`). **Live** since `/launch-feature edexcel-b pastPaperBank` (2026-11-17) | |
 
 **Edexcel B prints a lead-in above many parts** ("New Balance operates in a
 competitive market. / (b) Explain…"). It is part of the question and is kept,
