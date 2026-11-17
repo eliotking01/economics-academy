@@ -120,12 +120,14 @@ FAMILIES = FEATURES + ("taxonomy",)
 # glossary joined in Phase 3 (2026-11-12): extract_glossary.py extracts a
 # staged board into _working/glossary/staged/ rather than terms.json, and
 # build_glossary.py renders its page in memory and writes nothing. The bank
-# joins when Phase 4 teaches its generator to.
+# joined in Phase 4 Step 3 (2026-11-17): build_past_paper_questions.py builds
+# a staged board's index in memory, with every check it runs on a live one,
+# and writes no page, payload or count from it.
 #
 # A staged glossary puts its board in taxonomy.json (load("taxonomy",
 # staged=True)): taxonomy.json is data, published nowhere, and every reader of
 # it filters to its own LIVE family, so the board reaches no page through it.
-STAGEABLE = ("practiceQuestions", "flashcards", "glossary")
+STAGEABLE = ("practiceQuestions", "flashcards", "glossary", "pastPaperBank")
 
 # EA_PREVIEW="edexcel-b:practiceQuestions[,board:feature...]" promotes a
 # staged family to live for one local run, so its pages can be opened in

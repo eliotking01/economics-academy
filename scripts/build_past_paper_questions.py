@@ -98,12 +98,55 @@ HUB_CARDS = 20
 # Edexcel spans two qualifications in two directories - 9EC0 and 8EC0 each
 # have a Paper 1 in the same series, so one directory would mean colliding
 # filenames. They share a board, and their questions mix freely from here on:
-# the qualification is a field and a badge, not a separate namespace.
-PAPER_DIRS = ("edexcel-a", "edexcel-a-as", "aqa")
+# the qualification is a field and a badge, not a separate namespace. Edexcel
+# B is the same shape: 9EB0 and 8EB0.
+#
+# Keyed by boards.json key. Which of them the bank READS is boards.json's
+# business, not this table's: paper_dirs() asks board_data for the boards with
+# pastPaperBank, so a board's papers reach the build only once its bank is
+# live (or staged, for validation). Boards are read in boards.json order and
+# each board's directories in the order below, which keeps the paper table -
+# and so every q.p index in the published payloads - stable as a board joins:
+# a new board's papers append after the existing ones.
+BANK_DIRS = {
+    "edexcel-a": ("edexcel-a", "edexcel-a-as"),
+    "aqa": ("aqa",),
+    "edexcel-b": ("edexcel-b", "edexcel-b-as"),
+}
+
+# A note printed on every card of these papers, under the question. Edexcel B
+# Paper 3 is set on a context Pearson pre-releases, so a student meeting a
+# Paper 3 question cold should know the paper's candidates had met its
+# context, if not its extracts. Wording approved by Eliot, 2026-11-16
+# (review/phase-4-extraction.md Q5), from the 9EB0 specification. Keyed
+# (board, level, paper); carried in the paper table as `note` only where it
+# applies, so no other paper's payload gains a byte.
+PAPER_NOTES = {
+    ("edexcel-b", "a-level", 3): (
+        "Paper 3 is set on a broad context that Pearson pre-released the "
+        "November before the exam. The extracts in the paper were unseen on "
+        "the day."
+    ),
+}
 
 
-def load_bank():
-    """(tags, papers): the hand-written tags and every extracted paper.
+def paper_dirs(*, staged=False):
+    """The extraction directories of the bank's boards, live ones only
+    unless staged=True. A board with the family and no BANK_DIRS row fails
+    here rather than building a bank that silently lacks its papers."""
+    out = []
+    for key in board_data.load("pastPaperBank", staged=staged):
+        if key not in BANK_DIRS:
+            sys.exit(f"build_past_paper_questions: {key} has pastPaperBank in "
+                     f"boards.json but no BANK_DIRS row - name its "
+                     f"past-paper-questions-data/ directories")
+        out.extend(BANK_DIRS[key])
+    return tuple(out)
+
+
+def load_bank(*, staged=False):
+    """(tags, papers): the hand-written tags and every extracted paper of
+    the bank's live boards (staged=True: and of its staged ones).
 
     Split out of load() on 2026-08-23 so that scripts/notes_extras.py can
     count a topic's tagged questions from the SAME source files this index is
@@ -116,20 +159,21 @@ def load_bank():
     tags = json.loads((DATA / "tags.json").read_text(encoding="utf-8"))
     tags.pop("_comment", None)
     papers = []
-    for board_dir in PAPER_DIRS:
+    for board_dir in paper_dirs(staged=staged):
         for path in sorted((DATA / board_dir).glob("*.json")):
             papers.append(json.loads(path.read_text(encoding="utf-8")))
     return tags, papers
 
 
-def load():
+def load(*, staged=False):
     taxonomy = json.loads((DATA / "taxonomy.json").read_text(encoding="utf-8"))
     # The bank's boards only. taxonomy.json can hold a board for its glossary
     # alone (board_data.TAXONOMY_READERS); reaching this index it would join the
     # master search's board list with no questions behind it.
-    bank = {b["slugs"]["taxonomy"] for b in board_data.load("pastPaperBank").values()}
+    bank = {b["slugs"]["taxonomy"]
+            for b in board_data.load("pastPaperBank", staged=staged).values()}
     taxonomy["boards"] = [b for b in taxonomy["boards"] if b["board"] in bank]
-    tags, papers = load_bank()
+    tags, papers = load_bank(staged=staged)
     return taxonomy, tags, papers
 
 
@@ -191,6 +235,8 @@ def build(taxonomy, tags, papers):
             "levelLabel": "AS Level" if p["level"] == "as-level" else "A Level",
             "questionPaperUrl": p["questionPaperUrl"],
             "markSchemeUrl": p["markSchemeUrl"],
+            **({"note": PAPER_NOTES[(p["board"], p["level"], p["paper"])]}
+               if (p["board"], p["level"], p["paper"]) in PAPER_NOTES else {}),
         }
         for p in papers
     ]
@@ -534,9 +580,12 @@ def render_card(q, index):
         f'<span class="ppq-badge">{e(paper["series"] + " " + str(paper["year"]))}</span>',
         f'<span class="ppq-badge ppq-badge-marks">{q["marks"]} marks</span>',
     ]
-    groups = {g["slug"]: g for b in index["boards"] for g in b["groups"]}
+    # Keyed (board, slug): Edexcel A and Edexcel B both have a theme-1.
+    groups = {(b["board"], g["slug"]): g
+              for b in index["boards"] for g in b["groups"]}
     for slug in q["groups"]:
-        label = groups[slug]["label"] if slug in groups else slug
+        g = groups.get((q["board"], slug))
+        label = g["label"] if g else slug
         badges.append(f'<span class="ppq-badge ppq-badge-theme">{e(label)}</span>')
 
     links = []
@@ -581,6 +630,10 @@ def render_card(q, index):
             "Model answer</a>"
         )
 
+    note = ""
+    if paper.get("note"):
+        note = f'<p class="ppq-note">{e(paper["note"])}</p>'
+
     choice = ""
     if q["choiceGroup"]:
         choice = (
@@ -592,6 +645,7 @@ def render_card(q, index):
         f'<article class="ppq-card" id="{e(q["id"])}">'
         f'<div class="ppq-badges">{"".join(badges)}</div>'
         f'<p class="ppq-question">{e(q["questionText"])}</p>'
+        f"{note}"
         f"{choice}"
         + (f'<p class="ppq-topics">{topic_links}</p>' if topic_links else "")
         + f'<div class="ppq-actions">{"".join(actions)}</div>'
@@ -1322,6 +1376,55 @@ def update_sitemap(index, paths):
     return False
 
 
+def staged_boards():
+    """Board keys whose bank is staged (D68): in the staged load, not the live."""
+    return sorted(set(board_data.load("pastPaperBank", staged=True))
+                  - set(board_data.load("pastPaperBank")))
+
+
+def validate_staged():
+    """Build the bank WITH its staged boards, in memory, and write nothing.
+
+    Runs every check build() runs on a live board - unknown or cross-board
+    tags, a missing mark scheme - and renders every page the staged board
+    would publish, so a fault that would stop a launch stops this build
+    instead. Exits 1 on any error. Returns the summary lines to print.
+    """
+    keys = staged_boards()
+    if not keys:
+        return []
+    taxonomy, tags, papers = load(staged=True)
+    index, _counts, gated, errors, untagged = build(taxonomy, tags, papers)
+    slugs = {board_data.load("pastPaperBank", staged=True)[k]["slugs"]["taxonomy"]
+             for k in keys}
+    own = [u for u in untagged
+           if any(u.startswith(s + "-") for s in slugs)]
+    if own:
+        errors.append(f"staged board has {len(own)} untagged question(s), "
+                      f"e.g. {own[0]} - every question is tagged before launch")
+    if errors:
+        for err in errors:
+            print(f"ERROR (staged) {err}", file=sys.stderr)
+        sys.exit(1)
+    lines = []
+    collisions = title_collisions(index)
+    for board in index["boards"]:
+        if board["board"] not in slugs:
+            continue
+        qs = questions_for(index, board=board["board"])
+        pages = [render_board_page(index, board)]
+        pages += [render_group_page(index, board, g) for g in board["groups"]
+                  if questions_for(index, board=board["board"], group=g["slug"])]
+        topics = [s for s in gated if index["topics"][s]["board"] == board["board"]]
+        pages += [render_topic_page(index, s, collisions) for s in topics]
+        lines.append(
+            f"  STAGED {board['board']}: {len(qs)} questions, "
+            f"{len(pages) - 1 - len(topics)} section pages and {len(topics)} "
+            f"topic pages at the gate of {GATE}, rendered in memory - nothing "
+            f"written (EA_PREVIEW={keys[0]}:pastPaperBank to preview)")
+    return lines
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument(
@@ -1338,6 +1441,7 @@ def main():
         for e in errors:
             print(f"ERROR {e}", file=sys.stderr)
         sys.exit(1)
+    staged_report = validate_staged()
 
     years = sorted({p["year"] for p in index["papers"]})
     marks = sorted({q["marks"] for q in index["questions"]})
@@ -1351,6 +1455,8 @@ def main():
     print(f"  marks  {', '.join(str(m) for m in marks)}")
     print(f"  topics {len(counts)} with questions, {len(gated)} at or above the "
           f"gate of {GATE}")
+    for line in staged_report:
+        print(line)
 
     if args.check:
         print("check only - nothing written")

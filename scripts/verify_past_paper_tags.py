@@ -42,13 +42,14 @@ DATA = ROOT / "past-paper-questions-data"
 # importing a generator is the verify_boards.py pattern (the ban in
 # scripts/CLAUDE.md runs the other way).
 sys.path.insert(0, str(ROOT / "scripts"))
-from build_past_paper_questions import GATE  # noqa: E402
+from build_past_paper_questions import BANK_DIRS, GATE  # noqa: E402
 import board_data  # noqa: E402
 
-# Every directory an extractor writes, live or staged. Not
-# build_past_paper_questions.PAPER_DIRS, which is the live bank only: this
-# verifier must see a staged board's tags before the build reads them.
-BOARD_DIRS = ("edexcel-a", "edexcel-a-as", "edexcel-b", "edexcel-b-as", "aqa")
+# Every directory an extractor writes, live, staged or neither: all of
+# BANK_DIRS, not build_past_paper_questions.paper_dirs(), which follows
+# boards.json. This verifier must see a board's tags before the build reads
+# them.
+BOARD_DIRS = tuple(d for dirs in BANK_DIRS.values() for d in dirs)
 
 
 def main():

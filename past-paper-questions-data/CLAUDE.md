@@ -19,12 +19,16 @@ Widened by D67 (2026-10-24). Each change lands with the code that implements it.
 | Edexcel A **A Level** (9EC0), Papers 1–3 | **The multiple-choice / short-answer Section A**: Edexcel A Papers 1–2 (9EC0 and 8EC0) and AQA Paper 3. Not yet: D67 brings Edexcel A's short answers in (Phase 6) and real MCQs as search-only cards with no key (Phase 7). Until each phase, do not extract it |
 | Edexcel A **AS Level** (8EC0), Papers 1–2 | **AQA AS papers**, permanently. When AQA extends, A Level only |
 | AQA A Level (7136) | OCR and AQA specimen papers, permanently |
-| Edexcel B **A Level** (9EB0), Papers 1–3, and **AS Level** (8EB0), Papers 1–2, **every section**: B has no MCQs and no optional questions. Extracted into `edexcel-b/` and `edexcel-b-as/`; not read by the build until the Phase 4 launch | |
+| Edexcel B **A Level** (9EB0), Papers 1–3, and **AS Level** (8EB0), Papers 1–2, **every section**: B has no MCQs and no optional questions. Extracted into `edexcel-b/` and `edexcel-b-as/`. The build reads them by `boards.json`'s flag (`BANK_DIRS`, `paper_dirs()`): **staged** until `/launch-feature edexcel-b pastPaperBank`, so validated and rendered in memory, published nowhere; `EA_PREVIEW=edexcel-b:pastPaperBank` previews it | |
 
 **Edexcel B prints a lead-in above many parts** ("New Balance operates in a
 competitive market. / (b) Explain…"). It is part of the question and is kept,
 verbatim, at the start of `questionText`. A figure printed inside a question
 (Paper 2 June 2022 1(b)) is not reproduced; its card links to the page.
+**Every B A Level Paper 3 card carries a pre-release note** under the
+question, approved wording from the 9EB0 specification (Phase 4 Q5). It lives
+once, in `build_past_paper_questions.PAPER_NOTES`, and reaches the card
+through the paper record's `note`, which no other paper carries.
 
 **8EC0 has no Section C** — verified from all 16 papers, not from the
 specification. Section B is `Q6(a)–(g)`: (a)–(e) compulsory then **(f) OR (g)**,
@@ -75,8 +79,9 @@ would silently re-point every question at the wrong paper. The master
 `questions.json` is unchanged by either; the master page and
 `build_questions.py` still read it.
 
-**The two board hubs bake only the 20 most recent cards** (`HUB_CARDS`, held
+**Each board hub bakes only the 20 most recent cards** (`HUB_CARDS`, held
 equal to the component's `PAGE_SIZE` by `scripts/test_question_search.js`),
-followed by a static note inside the results container; the 6 section pages
-and 81 topic pages still bake every card and are the no-JS list. Do not add
+followed by a static note inside the results container; the section and
+topic pages (counts: `build_past_paper_questions.py --check`) still bake
+every card and are the no-JS list. Do not add
 the rest back to the hubs: `edexcel/` was 799 KB and ~5,600 DOM nodes.
