@@ -23,8 +23,9 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| All-boards parity (D67) — Phase 4: Edexcel B past-paper bank, launched (84 new pages, 362 questions) | launched on `feature/edexcel-b-bank` (`64331b4e`), pushed 2026-11-17; not merged | — | — |
-| All-boards parity (D67) — Phase 2: Edexcel B flashcards, all four decks, launched (8 new URLs) | launched on `feature/edexcel-b-flashcards`, PR #49 open; not merged | — | — |
+| All-boards parity (D67) — Phase 4: Edexcel B past-paper bank, launched (84 new pages, 362 questions) | live (PR #51) | 2026-11-17 | `ce9369ed` |
+| All-boards parity (D67) — Phase 3: Edexcel B glossary, launched (1 new URL) | live (PR #50) | 2026-11-16 | `b7e12e77` |
+| All-boards parity (D67) — Phase 2: Edexcel B flashcards, all four decks, launched (8 new URLs) | live (PR #49) | 2026-11-12 | `9576a168` |
 | All-boards parity (D67) — Phase 1: Edexcel B practice questions, all 85 sets, launched (89 new URLs) | live (PR #48) | 2026-11-08 | `39403ead` |
 | June 2025 papers added to the past-paper question bank | live (PR #47) | 2026-10-24 | `d96b0928` |
 | June 2025 papers and the June 2023 Edexcel B mark schemes published | live (PR #46) | 2026-10-24 | `ed1d9539` |
@@ -216,7 +217,7 @@ session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
 
-### All-boards parity — Phase 4, Edexcel B past-paper bank (2026-11-16 to —) — LAUNCHED, PUSHED, NOT MERGED (branch `feature/edexcel-b-bank`)
+### All-boards parity — Phase 4, Edexcel B past-paper bank (2026-11-16 to 2026-11-17) — LIVE, MERGED 2026-11-17 AS PR #51 (`ce9369ed`, branch `feature/edexcel-b-bank`)
 
 Step 1 of brief §11. The review sheet is `review/phase-4-extraction.md`, with
 a side-by-side page for A Level Paper 1 June 2019 beside it. Eliot approved
@@ -358,9 +359,15 @@ Q1-Q6 on 2026-11-16.
   - **Derived, in A/AQA wording:** the 85 B notes tails, the 85 B practice
     pages and 4 board indexes, the 4 deck buttons (`PAPERS_LINK`), the bank
     link on 79 B topics in site search, and the `/past-papers/` count.
-- **Not yet:** merge to `main`, which publishes it.
+- **CI caught a pinned count** on PR #51: `verify_page_shell` pins each
+  family's page count, and the 84 pages took `ppq` from 141 to 225. It
+  passed locally because it counts committed files and the pages were
+  untracked when the suite ran. Reseeded in `0fe2c8de`. **Run the whole
+  suite again after the launch commit**, not just the checks that look
+  commit-dependent.
+- **Merged 2026-11-17 as PR #51 (`ce9369ed`).**
 
-### All-boards parity — Phase 3, Edexcel B glossary (2026-11-12 to —) — STAGED, NOT LAUNCHED (branch `feature/edexcel-b-glossary`)
+### All-boards parity — Phase 3, Edexcel B glossary (2026-11-12 to 2026-11-16) — LIVE, MERGED 2026-11-16 AS PR #50 (`b7e12e77`, branch `feature/edexcel-b-glossary`)
 
 The B glossary is built and checked in full, and no page is written (D68).
 Every live page, `terms.json` and the search index were byte-identical at
@@ -415,8 +422,11 @@ recommendation on Q1-Q13 on 2026-11-16.
   `/revision-notes/glossary/edexcel-b/` to `build_search_index.BOARD_HUBS`.
   Add `Text-Change:` trailers on the landing page, both live glossary pages
   and the index. Run the sitemap after the push.
+- **Launched, 2026-11-16 (`ba780911`, sitemap `43d4c14a`;
+  `review/launch-glossary.md`, G1 A recorded as D69, G2 A). Merged
+  2026-11-16 as PR #50 (`b7e12e77`).**
 
-### All-boards parity — Phase 2, Edexcel B flashcards (2026-11-08 to —) — LAUNCHED ON THE BRANCH, PR #49 OPEN; NOT MERGED (branch `feature/edexcel-b-flashcards`)
+### All-boards parity — Phase 2, Edexcel B flashcards (2026-11-08 to 2026-11-12) — LIVE, MERGED 2026-11-12 AS PR #49 (`9576a168`, branch `feature/edexcel-b-flashcards`)
 
 `/edexcel-b-flashcards`, one unit per run, into
 `flashcards-data/edexcel-b/theme-N.json`. B's `flashcards` is **staged** in
@@ -554,7 +564,7 @@ sheets: `05-website/drafts/all-boards-parity/review/flashcards-unit-X-Y.md`.
   `1-2-2-eval-01`. Theme 1 is now 137, B 462, all decks 1,133; still 85 of
   85 topics carried, and the Theme 1 sample cards are unchanged.
 - **Still open:** CONTENT_ISSUES #46 and #52, both deferred by Eliot.
-  Merge PR #49 (merge commit, not squash), then record the merge commit here.
+- **Merged 2026-11-12 as PR #49 (`9576a168`).**
 
 ### All-boards parity — Phase 1, Edexcel B practice questions (2026-10-25 to 2026-11-08) — LIVE, MERGED 2026-11-08 AS PR #48 (`39403ead`, branch `feature/edexcel-b-questions`)
 
