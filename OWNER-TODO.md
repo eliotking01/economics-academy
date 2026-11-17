@@ -139,18 +139,12 @@ decisions waiting in those logs; it does not repeat them.
       Association.** Membership has a fee and gives a directory listing
       and a badge — your call whether the badge earns it. First Tutors
       and Tutor Hunt free listings are already named above.
-- [ ] **Check each exam board's licensing terms for hosting past papers.**
-      The site already hosts all 281 paper PDFs itself, so this is due
-      diligence on something already published, not a future decision. Look
-      for the "copyright" or "using our materials" page on Pearson/Edexcel,
-      AQA and OCR: is hosting complete past papers for free educational use
-      permitted, is attribution wording required, does any embargo apply to
-      recent series. **While you are there, cover the question bank too**
-      (raised during the bank build, never answered):
-      `/past-paper-questions/` reproduces Pearson and AQA question text
-      verbatim on the site's own pages — a wider use than hosting the
-      PDFs. Nothing needs taking down unless a term says so. (Source:
-      `_archive/PAST-PAPERS-PROGRESS.md`, open question 2.)
+- [x] ~~**Check each exam board's licensing terms for hosting past papers.**~~
+      **Closed: checked by Eliot, 2026-10** (recorded in D67, 2026-10-24).
+      It covered both questions it asked: hosting the paper PDFs, and the
+      question bank reproducing Pearson and AQA question text verbatim on
+      the site's own pages. Closed here 2026-11-17, in Phase 4 Step 3 of
+      the Edexcel B bank, which the brief tied it to.
 - [ ] **OCR A Level Paper 3, June 2023 — the question paper is missing.** Both
       PDFs at that path are the mark scheme, byte-identical. Download H460/03
       June 2023 from OCR and save it over the existing question-paper

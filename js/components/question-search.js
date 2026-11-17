@@ -127,8 +127,8 @@
     data.boards.forEach(function (b) {
       boards[b.board] = b;
       b.groups.forEach(function (g) {
-        groups[g.slug] = g;
-        groupLabels[g.slug] = g.label;
+        groups[groupKey(b.board, g.slug)] = g;
+        groupLabels[groupKey(b.board, g.slug)] = g.label;
       });
     });
 
@@ -141,7 +141,7 @@
         if (t) parts.push(t.title, t.shortTitle, t.spec, t.unitName);
       });
       q.groups.forEach(function (slug) {
-        var g = groups[slug];
+        var g = groups[groupKey(q.board, slug)];
         if (g) parts.push(g.label, g.name);
       });
       if (boards[q.board]) parts.push(boards[q.board].name);
@@ -220,6 +220,15 @@
    * is called with only the topics table, so they live here. */
   var groupLabels = {};
 
+  /* A group slug is unique within a board, not across boards: Edexcel A and
+   * Edexcel B both have a theme-1. Every lookup by group, and the Theme /
+   * area select's option values, use this key. A question's own q.groups
+   * and data-prefilter-group stay plain slugs, read with the board beside
+   * them. Must match the (board, slug) key in render_card(). */
+  function groupKey(board, slug) {
+    return board + ":" + slug;
+  }
+
   function cardHtml(record, topics) {
     var q = record.q;
     var paper = record.paper;
@@ -247,7 +256,7 @@
       '<span class="ppq-badge ppq-badge-marks">' + q.marks + " marks</span>",
     ];
     q.groups.forEach(function (slug) {
-      var g = groupLabels[slug];
+      var g = groupLabels[groupKey(q.board, slug)];
       badges.push(
         '<span class="ppq-badge ppq-badge-theme">' +
           escapeHtml(g || slug) +
@@ -312,6 +321,12 @@
       );
     }
 
+    // Edexcel B Paper 3's pre-release note, carried on the paper record only
+    // where it applies (build_past_paper_questions.PAPER_NOTES).
+    var note = paper.note
+      ? '<p class="ppq-note">' + escapeHtml(paper.note) + "</p>"
+      : "";
+
     var choice = q.choiceGroup
       ? '<p class="ppq-choice">One of two options in Section ' +
         escapeHtml(q.section) +
@@ -328,6 +343,7 @@
       '<p class="ppq-question">' +
       escapeHtml(q.questionText) +
       "</p>" +
+      note +
       choice +
       (topicLinks ? '<p class="ppq-topics">' + topicLinks + "</p>" : "") +
       '<div class="ppq-actions">' +
@@ -379,9 +395,12 @@
   }
 
   /* Paper section and Qualification: most values exist on every board and
-   * stay flat; one that only some boards have (Edexcel's Section C, AS Level)
-   * is listed under its board's name, so nothing implies the other board
-   * offers it. */
+   * stay flat; one that only some boards have (Section C, AS Level) is listed
+   * under the names of the boards that have it, so nothing implies another
+   * board offers it. It is listed ONCE, under all of those names together
+   * ("Edexcel A and Edexcel B"): these values are not board-qualified, so the
+   * same value under two board labels would look like two choices and act
+   * as one. With two boards this is one board's name, as it always was. */
   function sharedThenBoardSpecific(data, board, valuesFor) {
     if (board) return valuesFor(board);
     var lists = valuesByBoard(data, valuesFor);
@@ -392,11 +411,28 @@
       });
     });
     var out = shared.slice();
+    var byLabel = {};
     lists.forEach(function (l) {
-      var own = l.values.filter(function (v) {
-        return shared.indexOf(v) === -1;
+      l.values.forEach(function (v) {
+        if (shared.indexOf(v) !== -1) return;
+        var names = lists
+          .filter(function (m) {
+            return m.values.indexOf(v) !== -1;
+          })
+          .map(function (m) {
+            return m.name;
+          });
+        var label =
+          names.length === 1
+            ? names[0]
+            : names.slice(0, -1).join(", ") + " and " + names[names.length - 1];
+        if (!byLabel[label]) {
+          byLabel[label] = { label: label, values: [] };
+          out.push(byLabel[label]);
+        }
+        if (byLabel[label].values.indexOf(v) === -1)
+          byLabel[label].values.push(v);
       });
-      if (own.length) out.push({ label: l.name, values: own });
     });
     return out;
   }
@@ -430,14 +466,17 @@
     var preBoard = root.getAttribute("data-prefilter-board") || "";
     var preGroup = root.getAttribute("data-prefilter-group") || "";
 
-    // Group slug -> record (for labels) and -> board (for adopting a board
-    // from a chosen theme or area).
-    var groupsBySlug = {};
+    // Group key -> record (for labels) and -> board (for adopting a board
+    // from a chosen theme or area), and -> plain slug (for matching q.groups).
+    var groupsByKey = {};
     var groupBoard = {};
+    var groupSlug = {};
     data.boards.forEach(function (b) {
       b.groups.forEach(function (g) {
-        groupsBySlug[g.slug] = g;
-        groupBoard[g.slug] = b.board;
+        var k = groupKey(b.board, g.slug);
+        groupsByKey[k] = g;
+        groupBoard[k] = b.board;
+        groupSlug[k] = g.slug;
       });
     });
 
@@ -448,7 +487,7 @@
 
     /* The board narrowing the board-shaped selects. A pre-filtered page fixes
      * it (a topic implies its board); the master page reads the Board select,
-     * which starts empty - "Both boards". */
+     * which starts empty - "All boards". */
     function effectiveBoard() {
       if (preBoard) return preBoard;
       if (preTopic && topics[preTopic]) return topics[preTopic].board;
@@ -523,7 +562,7 @@
       data.boards.forEach(function (b) {
         if (board && b.board !== board) return;
         b.groups.forEach(function (g) {
-          slugs.push(g.slug);
+          slugs.push(groupKey(b.board, g.slug));
         });
       });
       return slugs;
@@ -538,7 +577,8 @@
       return Object.keys(topics)
         .filter(function (s) {
           if (board && topics[s].board !== board) return false;
-          if (group && topics[s].group !== group) return false;
+          if (group && groupKey(topics[s].board, topics[s].group) !== group)
+            return false;
           return true;
         })
         .sort(function (a, b) {
@@ -569,7 +609,7 @@
           filters.group,
           groupedByBoard(data, board, groupSlugsFor),
           function (v) {
-            var g = groupsBySlug[v];
+            var g = groupsByKey[v];
             return g ? g.label + ": " + g.name : v;
           },
         );
@@ -593,7 +633,7 @@
 
     /* A topic or theme belongs to exactly one board (an invariant
      * scripts/test_question_search.js pins), so choosing one while the Board
-     * select still says "Both boards" decides the board, and the other
+     * select still says "All boards" decides the board, and the other
      * dropdowns narrow to match. */
     function adoptBoard(name, value) {
       if (!cascades || !value || filters.board.value) return;
@@ -693,7 +733,8 @@
       if (
         filters.group &&
         filters.group.value &&
-        q.groups.indexOf(filters.group.value) === -1
+        (q.board !== groupBoard[filters.group.value] ||
+          q.groups.indexOf(groupSlug[filters.group.value]) === -1)
       )
         return false;
       if (
@@ -798,7 +839,7 @@
           sel.value = "";
         });
         if (els.sort) els.sort.value = "relevance";
-        // With no board in play any more, the grouped "Both boards" lists
+        // With no board in play any more, the grouped "All boards" lists
         // come back in full.
         if (cascades) populateBoardShaped();
         run();

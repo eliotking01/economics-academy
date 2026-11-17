@@ -182,8 +182,11 @@ check(
 //            Paper 3     both sections are case studies
 //   AQA      Papers 1-2  Section A has extracts, Section B is free-standing essays
 //            Paper 3     Section B is a case study
+//   Edexcel B every paper, every section: each question sits under data, and
+//            the 20-mark essay is set on Section C's own extract
 function expectsExtract(q) {
   const paper = data.papers[q.p];
+  if (paper.board === "edexcel-b") return true;
   if (paper.board === "edexcel") return q.section !== "C";
   if (paper.paper === 3) return true;
   return q.section === "A";
@@ -247,7 +250,11 @@ check(
 // Pick by what the card must show, not by section letter: AQA's Section B is
 // three free-standing essays with no extract, while Edexcel's has one.
 const sectionB = index.filter((r) => r.q.ctxPage !== null)[0];
-const sectionC = index.filter((r) => r.q.section === "C")[0];
+// Edexcel A's Section C: the one section that is an either/or with no
+// extract. Edexcel B's Section C has both an extract and no choice.
+const sectionC = index.filter(
+  (r) => r.q.section === "C" && r.paper.board === "edexcel",
+)[0];
 const cardB = M.cardHtml(sectionB, data.topics);
 const cardC = M.cardHtml(sectionC, data.topics);
 
@@ -721,7 +728,7 @@ const opts = (sel) => sel._options.slice(1); // drop the "All ..." option
 const hasOptgroup = (sel) => sel.innerHTML.indexOf("<optgroup") !== -1;
 const boardShaped = ["level", "group", "section", "topic"];
 
-// -- the "Both boards" state
+// -- the "All boards" state
 
 {
   const h = makeRoot();
@@ -758,19 +765,31 @@ const boardShaped = ["level", "group", "section", "topic"];
       .filter((o) => ["A", "B"].indexOf(o.value) !== -1)
       .every((o) => o.group === null),
   );
+  // A value only some boards set is listed once, under all their names:
+  // "Edexcel A" with Edexcel A and AQA, "Edexcel A and Edexcel B" with B too.
+  const namesWith = (has) => {
+    const names = data.boards
+      .filter((b) => data.questions.some((q) => q.board === b.board && has(q)))
+      .map((b) => b.name);
+    return names.length === 1
+      ? names[0]
+      : names.slice(0, -1).join(", ") + " and " + names[names.length - 1];
+  };
+  const cLabel = namesWith((q) => q.section === "C");
+  const asLabel = namesWith((q) => data.papers[q.p].level === "as-level");
   check(
-    "both boards: Section C sits under Edexcel's name",
-    opts(h.sel.section)
-      .filter((o) => o.value === "C")
-      .every((o) => o.group === "Edexcel") &&
-      opts(h.sel.section).some((o) => o.value === "C"),
+    "both boards: Section C is listed once, under " + cLabel,
+    opts(h.sel.section).filter((o) => o.value === "C").length === 1 &&
+      opts(h.sel.section)
+        .filter((o) => o.value === "C")
+        .every((o) => o.group === cLabel),
   );
   check(
-    "both boards: AS Level sits under Edexcel's name",
-    opts(h.sel.level)
-      .filter((o) => o.value === "as-level")
-      .every((o) => o.group === "Edexcel") &&
-      opts(h.sel.level).some((o) => o.value === "as-level"),
+    "both boards: AS Level is listed once, under " + asLabel,
+    opts(h.sel.level).filter((o) => o.value === "as-level").length === 1 &&
+      opts(h.sel.level)
+        .filter((o) => o.value === "as-level")
+        .every((o) => o.group === asLabel),
   );
 
   // -- the cascade: Board narrows the four board-shaped selects
@@ -791,9 +810,10 @@ const boardShaped = ["level", "group", "section", "topic"];
     "cascade: every Topic option belongs to Edexcel",
     opts(h.sel.topic).every((o) => data.topics[o.value].board === "edexcel"),
   );
+  // Option values are board-qualified (groupKey in the component).
   const edexcelGroups = data.boards
     .filter((b) => b.board === "edexcel")[0]
-    .groups.map((g) => g.slug);
+    .groups.map((g) => "edexcel:" + g.slug);
   check(
     "cascade: every Theme / area option belongs to Edexcel",
     opts(h.sel.group).every((o) => edexcelGroups.indexOf(o.value) !== -1),
@@ -838,7 +858,8 @@ const boardShaped = ["level", "group", "section", "topic"];
     "cascade: a chosen theme narrows Topic to its own topics",
     opts(h.sel.topic).length > 0 &&
       opts(h.sel.topic).every(
-        (o) => data.topics[o.value].group === edexcelGroups[2],
+        (o) =>
+          "edexcel:" + data.topics[o.value].group === edexcelGroups[2],
       ),
   );
   const kept = opts(h.sel.topic)[0].value;
@@ -876,7 +897,7 @@ const boardShaped = ["level", "group", "section", "topic"];
   check("clear all: Theme / area is grouped again", hasOptgroup(h.sel.group));
 }
 
-// -- picking a topic or theme while "Both boards" adopts its board
+// -- picking a topic or theme while "All boards" adopts its board
 
 {
   const aqaSlug = Object.keys(data.topics).filter(
@@ -901,10 +922,88 @@ const boardShaped = ["level", "group", "section", "topic"];
 
   const h2 = makeRoot();
   M.init(h2.root, data);
-  h2.sel.group.change("microeconomics");
+  h2.sel.group.change("aqa:microeconomics");
   check(
     "adopt: picking an AQA area sets Board to AQA",
-    h2.sel.board.value === "aqa" && h2.sel.group.value === "microeconomics",
+    h2.sel.board.value === "aqa" && h2.sel.group.value === "aqa:microeconomics",
+  );
+}
+
+// -- Edexcel B (D67 Phase 4): runs whenever the data carries the board, so
+// in an EA_PREVIEW build before launch and on every run after it.
+
+if (data.boards.some((b) => b.board === "edexcel-b")) {
+  const bQs = index.filter((r) => r.paper.board === "edexcel-b");
+  check("edexcel-b: the bank carries its questions", bQs.length > 0);
+  check(
+    "edexcel-b: no question is one of a choice (9EB0 and 8EB0 set none)",
+    bQs.every((r) => r.q.choiceGroup === null),
+  );
+  const isP3 = (r) =>
+    r.paper.board === "edexcel-b" &&
+    r.paper.level === "a-level" &&
+    r.paper.paper === 3;
+  check(
+    "edexcel-b: every A Level Paper 3 card carries the pre-release note",
+    index.filter(isP3).length > 0 &&
+      index
+        .filter(isP3)
+        .every(
+          (r) =>
+            M.cardHtml(r, data.topics).indexOf(
+              '<p class="ppq-note">Paper 3 is set on a broad context',
+            ) !== -1,
+        ),
+  );
+  check(
+    "edexcel-b: no other card carries a note",
+    index
+      .filter((r) => !isP3(r))
+      .every((r) => M.cardHtml(r, data.topics).indexOf("ppq-note") === -1),
+  );
+
+  // Edexcel A and B both have theme-1..theme-4: one key each, not one key
+  // for both, or B's names would label A's themes and adopt the wrong board.
+  const h = makeRoot();
+  M.init(h.root, data);
+  const themeOne = opts(h.sel.group).filter((o) => /:theme-1$/.test(o.value));
+  check(
+    "edexcel-b: Theme 1 is offered once per board, each under its own name",
+    themeOne.length === 2 &&
+      themeOne.some(
+        (o) =>
+          o.value === "edexcel:theme-1" &&
+          o.group === "Edexcel A" &&
+          o.label.indexOf("Introduction to Markets") !== -1,
+      ) &&
+      themeOne.some(
+        (o) =>
+          o.value === "edexcel-b:theme-1" &&
+          o.group === "Edexcel B" &&
+          o.label.indexOf("Markets, Consumers and Firms") !== -1,
+      ),
+    themeOne.map((o) => o.value + "=" + o.group).join(", "),
+  );
+  h.sel.group.change("edexcel-b:theme-1");
+  check(
+    "edexcel-b: picking B's Theme 1 sets Board to Edexcel B",
+    h.sel.board.value === "edexcel-b",
+  );
+  check(
+    "edexcel-b: B's Theme 1 narrows Topic to B's Theme 1 topics",
+    opts(h.sel.topic).length > 0 &&
+      opts(h.sel.topic).every(
+        (o) =>
+          data.topics[o.value].board === "edexcel-b" &&
+          data.topics[o.value].group === "theme-1",
+      ),
+  );
+  const h2 = makeRoot();
+  M.init(h2.root, data);
+  h2.sel.group.change("edexcel:theme-1");
+  check(
+    "edexcel-b: picking Edexcel A's Theme 1 still sets Board to Edexcel",
+    h2.sel.board.value === "edexcel",
   );
 }
 
@@ -972,7 +1071,7 @@ const boardShaped = ["level", "group", "section", "topic"];
     opts(h.sel.topic).length === Object.keys(boardData.topics).length,
   );
   const topicHtml = h.sel.topic.innerHTML;
-  h.sel.group.change("theme-1");
+  h.sel.group.change("edexcel:theme-1");
   check(
     "prefiltered hub: choosing a theme does not reshape the Topic list",
     h.sel.topic.innerHTML === topicHtml,

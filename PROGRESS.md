@@ -23,6 +23,7 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
+| All-boards parity (D67) — Phase 4: Edexcel B past-paper bank, launched (84 new pages, 362 questions) | launched on `feature/edexcel-b-bank` (`64331b4e`), pushed 2026-11-17; not merged | — | — |
 | All-boards parity (D67) — Phase 2: Edexcel B flashcards, all four decks, launched (8 new URLs) | launched on `feature/edexcel-b-flashcards`, PR #49 open; not merged | — | — |
 | All-boards parity (D67) — Phase 1: Edexcel B practice questions, all 85 sets, launched (89 new URLs) | live (PR #48) | 2026-11-08 | `39403ead` |
 | June 2025 papers added to the past-paper question bank | live (PR #47) | 2026-10-24 | `d96b0928` |
@@ -214,6 +215,150 @@ what changed file by file, how it was verified, and its "things a future
 session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
+
+### All-boards parity — Phase 4, Edexcel B past-paper bank (2026-11-16 to —) — LAUNCHED, PUSHED, NOT MERGED (branch `feature/edexcel-b-bank`)
+
+Step 1 of brief §11. The review sheet is `review/phase-4-extraction.md`, with
+a side-by-side page for A Level Paper 1 June 2019 beside it. Eliot approved
+Q1-Q6 on 2026-11-16.
+
+- **Extractor.** `extract_past_paper_questions.swift` gains `extractB()` for
+  9EB0 and 8EB0, routed by filename. Before this, a B filename matched the
+  Edexcel A pattern and would have been written over
+  `edexcel-a/p1-<series>.json` as 9EC0. The structure is read from the page:
+  - Sections come from the "before answering" openers. Parts run (a)-(h),
+    and a single 20-mark question has no parts.
+  - Each question's tariffs must sum to its printed "Total for Question".
+  - Lead-ins are kept verbatim at the start of `questionText` (Q2).
+  - P2 June 2022 1(b)'s in-question table is not reproduced (Q3).
+  - The parse stops at "TOTAL FOR PAPER", so P3's bound-in pre-release
+    insert (June 2017, November 2021) is skipped.
+  - Two mark-scheme heading layouts are used for B only.
+  - **Edexcel A re-extracted byte-identical**, all 45 papers.
+- **Data.** `edexcel-b/` and `edexcel-b-as/` (Phase 0 Q8). Counts come
+  from the extractor's run, and today they are:
+  - 36 papers and 351 questions from text-layer PDFs (the 37th is by OCR,
+    below), all high confidence;
+  - every mark-scheme page matched;
+  - `strip_source_attributions.py`: 0 changes.
+
+  Ids are `edexcel-b-p1-2019-jun-q1a` and `edexcel-b-as-…` (Q6).
+- **Verifier.** `verify_past_paper_extraction.swift` reads the B
+  directories, with four checks of its own (5-8):
+  - the closing words are on the question page;
+  - the label heads a mark-scheme row next to "Knowledge" (a bare "2" proves
+    nothing);
+  - the marks sum to the printed total;
+  - the context page carries an extract, and there are no choice groups.
+
+  A mutation test confirmed all four fire. It checks 693 questions across
+  81 papers and passes, with three warnings:
+  - Edexcel A P3 November 2021 2(d) and Edexcel B AS P1 October 2020 2(d):
+    the scheme labels each "(d)" without the question number.
+  - Edexcel B P1 June 2025 prints no "Sources for use with SECTION B" booklet
+    heading. Its Q2 links Extract G (p25), found by name; the first pass
+    linked its own question page, which the verifier caught.
+- **AS Paper 2 June 2019 by OCR (Q4, option A of the follow-up).** The
+  question paper is an image-only scan ("Microsoft: Print To PDF"). Eliot
+  found no text-layer copy anywhere, so it was OCRed:
+  - `scripts/ocr_pdf_pages.swift` uses Apple Vision and needs no new
+    dependency.
+  - Every question and structural line was checked word by word against the
+    page images, with four glyph corrections (‘ ’ and –).
+  - The checked transcript is committed as
+    `past-paper-questions-data/ocr/…june-2019-question-paper.txt`, and the
+    extractor reads it for that paper only, giving 11 questions.
+  - The verifier runs its own OCR at different settings. For a scanned paper
+    it requires the whole question text, not just the opening and closing
+    words (check 9). Three planted transcript misreads were all caught; the
+    mid-sentence one only by check 9.
+  - Spot-checked by Eliot against the page images, 2026-11-16
+    (`review/phase-4-ocr-as-p2-june-2019.html`): confirmed.
+  - The Phase 4 totals are 37 papers and 362 questions, with the verifier at
+    704 questions across 82 papers.
+- **Approved wording, for Step 3 (Q5).** The Paper 3 card note reads:
+  "Paper 3 is set on a broad context that Pearson pre-released the November
+  before the exam. The extracts in the paper were unseen on the day." It
+  comes from the 9EB0 specification.
+- **Step 2, tagging (2026-11-16).** Every B question has a first-pass entry
+  in `tags.json`.
+  - `verify_past_paper_tags.py` reads the two B directories. It gains
+    check 6, a topic must be the question's own board's, which a planted
+    Edexcel A slug confirmed. It counts only live boards towards the gate.
+  - A blind `cold-solver` pass in tag mode saw the question text and a
+    taxonomy excerpt only. The disagreements, with a recommendation each,
+    are in `review/bank-b-tags.md`.
+  - The first blind run for Paper 3 and AS came back before those groups
+    were tagged, so they were compared against a fresh second run instead.
+  - The card's "Revision notes" link goes to a question's **first** topic,
+    so lead-topic order is a real disagreement, not a cosmetic one.
+  - **Eliot approved every recommendation (2026-11-16).** The rules are:
+    - Q1: tag both themes where the spec teaches a topic twice.
+    - Q2: tag 1.6.1 only when the percentage change is the answer.
+    - Q3: use an out-of-paper topic only where the spec teaches it nowhere
+      else.
+    - Q4: on a supply and demand diagram, the curve that shifts leads.
+
+    All 129 rows were applied, changing 92 entries. Two agreed-but-wrong
+    tags were also fixed, found by checking the mark schemes. With the
+    final tags, 79 B topics would reach the gate of 2.
+  - Taxonomy note for Step 3: 3.5.3 is titled "Minimum Wage Legislation"
+    but also carries skills shortages and migration (spec 3.5.3 b, c).
+- **Step 3, the build (2026-11-17, `e6cd7f8f`).** B stages
+  `pastPaperBank`, so a normal build checks B and publishes nothing
+  (`build.py` and `verify_generated`: 0 files). The review sheet is
+  `review/phase-4-build.md`.
+  - **How the build reads B.** The generator reads paper directories by
+    flag (`BANK_DIRS`, `paper_dirs()`). B's papers append after A and AQA,
+    so no live `q.p` index moves. `validate_staged()` builds B's index and
+    renders its pages in memory, and fails on an untagged B question.
+  - **The Paper 3 note** sits under the question on all 72 B A Level
+    Paper 3 cards. It's held once, in `PAPER_NOTES`.
+  - **The master search.** `question-search.js` keys groups by board and
+    slug, because Edexcel A and B share `theme-1`..`theme-4`. Keyed by
+    slug alone, B's names labelled A's themes and picking A's Theme 1
+    adopted Edexcel B. Section C and AS Level are now listed once, under
+    every board that sets them.
+  - **Tests.** `test_question_search.js` runs B-only checks whenever the
+    data carries B.
+  - **Docs.** The scope table in `past-paper-questions-data/CLAUDE.md` is
+    updated per D67. The OWNER-TODO licensing item is closed: checked by
+    Eliot, 2026-10.
+  - **The preview** (`EA_PREVIEW=edexcel-b:pastPaperBank`) had 983
+    questions, with B adding a hub, 4 theme pages and 79 topic pages.
+    Every new path is under `/past-paper-questions/edexcel-b/`, and every
+    topic slug is its notes page's own.
+  - **Eliot approved the preview, the 84 URLs and Q1–Q3 (2026-11-17):**
+    - the note stays under the question;
+    - 3.5.3 keeps the spec's title;
+    - the hub intro keeps the 9EB0-only pattern Edexcel A's uses.
+
+    The preview was then removed from the tree.
+- **Step 4, the launch (2026-11-17, `64331b4e`; sitemap `e9aa2ca4`).**
+  `/launch-feature edexcel-b pastPaperBank`. The review sheet is
+  `review/launch-pastPaperBank.md`; Eliot took L1–L6 as recommended and
+  L7 B.
+  - **URLs.** A feature-on worktree wrote exactly the 84 approved pages and
+    their 80 payloads, all under `/past-paper-questions/edexcel-b/`. No
+    live `q.p` index moved.
+  - **Master page** (L1–L3). The boards are named from an approved phrase
+    per board set (`BOARDS_PHRASE`; an unknown set stops the build):
+    "Edexcel A, Edexcel B & AQA" in the title, "… and AQA" in prose. The
+    Board select says "All boards". "The specifications number their
+    topics differently…" has no count.
+  - **`/past-papers/`** (L4) names the three boards and gains "Search
+    Edexcel B questions"; the A button says "Search Edexcel A questions".
+  - **`/past-papers/edexcel-b/` and the four B notes hubs** (L5, L6) carry
+    Edexcel A's resource strips in A's wording. That closes a gap the
+    practice and flashcards launches left. Frozen heads untouched.
+  - **The bank calls Edexcel A "Edexcel A"** (L7), from `names.display`,
+    set once in `build_past_paper_questions.load()`. About 70 indexed A
+    bank titles changed; no URL did. Eliot kept "Edexcel A A-Level
+    Economics …" on the A hub as it reads.
+  - **Derived, in A/AQA wording:** the 85 B notes tails, the 85 B practice
+    pages and 4 board indexes, the 4 deck buttons (`PAPERS_LINK`), the bank
+    link on 79 B topics in site search, and the `/past-papers/` count.
+- **Not yet:** merge to `main`, which publishes it.
 
 ### All-boards parity — Phase 3, Edexcel B glossary (2026-11-12 to —) — STAGED, NOT LAUNCHED (branch `feature/edexcel-b-glossary`)
 

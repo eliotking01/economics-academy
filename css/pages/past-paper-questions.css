@@ -259,7 +259,8 @@
   color: #252122;
 }
 
-.past-paper-questions-page .ppq-choice {
+.past-paper-questions-page .ppq-choice,
+.past-paper-questions-page .ppq-note {
   font-size: 0.85em;
   color: var(--ppq-muted);
   margin-bottom: 0.8rem;
