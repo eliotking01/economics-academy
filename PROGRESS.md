@@ -23,7 +23,7 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| All-boards parity (D67) — Phase 4: Edexcel B past-paper bank — steps 1–2, extraction (37 of 37 papers, one by OCR) and tags | tagged on `feature/edexcel-b-bank` (decisions approved 2026-11-16); not built or published | — | — |
+| All-boards parity (D67) — Phase 4: Edexcel B past-paper bank — steps 1–3: extraction (37 of 37 papers, one by OCR), tags, and the build behind the flag | staged on `feature/edexcel-b-bank`, preview approved 2026-11-17; not launched or published | — | — |
 | All-boards parity (D67) — Phase 2: Edexcel B flashcards, all four decks, launched (8 new URLs) | launched on `feature/edexcel-b-flashcards`, PR #49 open; not merged | — | — |
 | All-boards parity (D67) — Phase 1: Edexcel B practice questions, all 85 sets, launched (89 new URLs) | live (PR #48) | 2026-11-08 | `39403ead` |
 | June 2025 papers added to the past-paper question bank | live (PR #47) | 2026-10-24 | `d96b0928` |
@@ -216,7 +216,7 @@ session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
 
-### All-boards parity — Phase 4, Edexcel B past-paper bank (2026-11-16 to —) — STEPS 1–2 DONE, TAGGED (branch `feature/edexcel-b-bank`)
+### All-boards parity — Phase 4, Edexcel B past-paper bank (2026-11-16 to —) — STEPS 1–3 DONE, STAGED, PREVIEW APPROVED (branch `feature/edexcel-b-bank`)
 
 Step 1 of brief §11. The review sheet is `review/phase-4-extraction.md`, with
 a side-by-side page for A Level Paper 1 June 2019 beside it. Eliot approved
@@ -304,9 +304,43 @@ Q1-Q6 on 2026-11-16.
     final tags, 79 B topics would reach the gate of 2.
   - Taxonomy note for Step 3: 3.5.3 is titled "Minimum Wage Legislation"
     but also carries skills shortages and migration (spec 3.5.3 b, c).
+- **Step 3, the build (2026-11-17, `e6cd7f8f`).** B stages
+  `pastPaperBank`, so a normal build checks B and publishes nothing
+  (`build.py` and `verify_generated`: 0 files). The review sheet is
+  `review/phase-4-build.md`.
+  - **How the build reads B.** The generator reads paper directories by
+    flag (`BANK_DIRS`, `paper_dirs()`). B's papers append after A and AQA,
+    so no live `q.p` index moves. `validate_staged()` builds B's index and
+    renders its pages in memory, and fails on an untagged B question.
+  - **The Paper 3 note** sits under the question on all 72 B A Level
+    Paper 3 cards. It's held once, in `PAPER_NOTES`.
+  - **The master search.** `question-search.js` keys groups by board and
+    slug, because Edexcel A and B share `theme-1`..`theme-4`. Keyed by
+    slug alone, B's names labelled A's themes and picking A's Theme 1
+    adopted Edexcel B. Section C and AS Level are now listed once, under
+    every board that sets them.
+  - **Tests.** `test_question_search.js` runs B-only checks whenever the
+    data carries B.
+  - **Docs.** The scope table in `past-paper-questions-data/CLAUDE.md` is
+    updated per D67. The OWNER-TODO licensing item is closed: checked by
+    Eliot, 2026-10.
+  - **The preview** (`EA_PREVIEW=edexcel-b:pastPaperBank`) had 983
+    questions, with B adding a hub, 4 theme pages and 79 topic pages.
+    Every new path is under `/past-paper-questions/edexcel-b/`, and every
+    topic slug is its notes page's own.
+  - **Eliot approved the preview, the 84 URLs and Q1–Q3 (2026-11-17):**
+    - the note stays under the question;
+    - 3.5.3 keeps the spec's title;
+    - the hub intro keeps the 9EB0-only pattern Edexcel A's uses.
+
+    The preview was then removed from the tree.
 - **Not yet:**
-  - The bank does not read B: `build_past_paper_questions.PAPER_DIRS`
-    lists A and AQA only. That's Step 3.
+  - `/launch-feature edexcel-b pastPaperBank`. Its sheet drafts the master
+    page wording a third board makes wrong: the title ("Edexcel & AQA"),
+    "Both boards", "The two specifications", and the intro's "Edexcel and
+    AQA and Edexcel B". It also covers the derived lines that switch on at
+    launch: B's notes tails, practice pages and deck buttons, and the
+    `/past-papers/` count.
 
 ### All-boards parity — Phase 3, Edexcel B glossary (2026-11-12 to —) — STAGED, NOT LAUNCHED (branch `feature/edexcel-b-glossary`)
 
