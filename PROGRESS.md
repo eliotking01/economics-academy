@@ -23,7 +23,7 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| All-boards parity (D67) — Phase 4: Edexcel B past-paper bank — steps 1–3: extraction (37 of 37 papers, one by OCR), tags, and the build behind the flag | staged on `feature/edexcel-b-bank`, preview approved 2026-11-17; not launched or published | — | — |
+| All-boards parity (D67) — Phase 4: Edexcel B past-paper bank, launched (84 new pages, 362 questions) | launched on `feature/edexcel-b-bank` (`64331b4e`), pushed 2026-11-17; not merged | — | — |
 | All-boards parity (D67) — Phase 2: Edexcel B flashcards, all four decks, launched (8 new URLs) | launched on `feature/edexcel-b-flashcards`, PR #49 open; not merged | — | — |
 | All-boards parity (D67) — Phase 1: Edexcel B practice questions, all 85 sets, launched (89 new URLs) | live (PR #48) | 2026-11-08 | `39403ead` |
 | June 2025 papers added to the past-paper question bank | live (PR #47) | 2026-10-24 | `d96b0928` |
@@ -216,7 +216,7 @@ session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
 
-### All-boards parity — Phase 4, Edexcel B past-paper bank (2026-11-16 to —) — STEPS 1–3 DONE, STAGED, PREVIEW APPROVED (branch `feature/edexcel-b-bank`)
+### All-boards parity — Phase 4, Edexcel B past-paper bank (2026-11-16 to —) — LAUNCHED, PUSHED, NOT MERGED (branch `feature/edexcel-b-bank`)
 
 Step 1 of brief §11. The review sheet is `review/phase-4-extraction.md`, with
 a side-by-side page for A Level Paper 1 June 2019 beside it. Eliot approved
@@ -334,13 +334,31 @@ Q1-Q6 on 2026-11-16.
     - the hub intro keeps the 9EB0-only pattern Edexcel A's uses.
 
     The preview was then removed from the tree.
-- **Not yet:**
-  - `/launch-feature edexcel-b pastPaperBank`. Its sheet drafts the master
-    page wording a third board makes wrong: the title ("Edexcel & AQA"),
-    "Both boards", "The two specifications", and the intro's "Edexcel and
-    AQA and Edexcel B". It also covers the derived lines that switch on at
-    launch: B's notes tails, practice pages and deck buttons, and the
-    `/past-papers/` count.
+- **Step 4, the launch (2026-11-17, `64331b4e`; sitemap `e9aa2ca4`).**
+  `/launch-feature edexcel-b pastPaperBank`. The review sheet is
+  `review/launch-pastPaperBank.md`; Eliot took L1–L6 as recommended and
+  L7 B.
+  - **URLs.** A feature-on worktree wrote exactly the 84 approved pages and
+    their 80 payloads, all under `/past-paper-questions/edexcel-b/`. No
+    live `q.p` index moved.
+  - **Master page** (L1–L3). The boards are named from an approved phrase
+    per board set (`BOARDS_PHRASE`; an unknown set stops the build):
+    "Edexcel A, Edexcel B & AQA" in the title, "… and AQA" in prose. The
+    Board select says "All boards". "The specifications number their
+    topics differently…" has no count.
+  - **`/past-papers/`** (L4) names the three boards and gains "Search
+    Edexcel B questions"; the A button says "Search Edexcel A questions".
+  - **`/past-papers/edexcel-b/` and the four B notes hubs** (L5, L6) carry
+    Edexcel A's resource strips in A's wording. That closes a gap the
+    practice and flashcards launches left. Frozen heads untouched.
+  - **The bank calls Edexcel A "Edexcel A"** (L7), from `names.display`,
+    set once in `build_past_paper_questions.load()`. About 70 indexed A
+    bank titles changed; no URL did. Eliot kept "Edexcel A A-Level
+    Economics …" on the A hub as it reads.
+  - **Derived, in A/AQA wording:** the 85 B notes tails, the 85 B practice
+    pages and 4 board indexes, the 4 deck buttons (`PAPERS_LINK`), the bank
+    link on 79 B topics in site search, and the `/past-papers/` count.
+- **Not yet:** merge to `main`, which publishes it.
 
 ### All-boards parity — Phase 3, Edexcel B glossary (2026-11-12 to —) — STAGED, NOT LAUNCHED (branch `feature/edexcel-b-glossary`)
 
