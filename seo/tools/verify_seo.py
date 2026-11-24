@@ -323,7 +323,7 @@ def main() -> int:
     # one with no way across - seo/14-notes-keyword-brief.md §8.
     #
     # The exemption is NOT "anything inside the twin block". It is the exact
-    # (source, target) pair appearing in scripts/notes_twins.TWINS, which is
+    # (source, target) pair appearing in scripts/notes_twins.PAIRS, which is
     # a written-down, hand-verified table with its evidence recorded per row.
     # So this assertion still fails on a cross-board link that the table does
     # not name - including one inside the twin block, if the generator ever
@@ -337,7 +337,7 @@ def main() -> int:
             parts = Path(p).parts
             return (parts[1], Path(p).stem) if len(parts) == 3 else None
         a, b = key(page), key(target)
-        return bool(a and b and notes_twins.TWINS.get(a) == b)
+        return bool(a and b and (a, b) in notes_twins.PAIRS)
 
     bad = []
     for page in g.pages:
@@ -355,7 +355,7 @@ def main() -> int:
                 continue
             bad.append(f"{page} -> {target} ({src} -> {dst}) {anchor!r}")
     check("13 no link crosses an exam board except a declared twin", bad,
-          f"{len(notes_twins.TWINS)} declared twin pairs, "
+          f"{len(notes_twins.PAIRS)} declared twin pairs, "
           f"{len(BOARD_SWITCHER)} glossary and hub switchers, plus the site nav")
 
     # 14 --------------------------------------------------------------------
@@ -492,16 +492,22 @@ def main() -> int:
     bad = []
     for p in topics:
         key = (Path(p).parts[1], Path(p).stem)
-        pair = notes_twins.TWINS.get(key)
-        if not pair:
+        pairs = notes_twins.twins(*key)
+        if not pairs:
             continue
-        want = f"/revision-notes/{pair[0]}/{pair[1]}.html"
         src = (REPO / p).read_text(encoding="utf-8", errors="replace")
-        n = src.count(f'class="topic-related__twin-link" href="{want}"')
-        if n != 1:
-            bad.append(f"{p}: {n} twin links to {want}, expected 1")
+        # Since 2026-11-24 a page can carry one twin per other board, so the
+        # block must hold exactly its declared links and nothing else.
+        got = src.count('class="topic-related__twin-link"')
+        if got != len(pairs):
+            bad.append(f"{p}: {got} twin links, expected {len(pairs)}")
+        for tdir, tslug in pairs:
+            want = f"/revision-notes/{tdir}/{tslug}.html"
+            n = src.count(f'class="topic-related__twin-link" href="{want}"')
+            if n != 1:
+                bad.append(f"{p}: {n} twin links to {want}, expected 1")
     check("18 every notes topic with a declared twin links to it", bad,
-          f"{len(notes_twins.TWINS)} pairs")
+          f"{len(notes_twins.PAIRS)} pairs")
 
     # 19 --------------------------------------------------------------------
     # One <h1> per page is assertion 5; this is that no two notes pages ON THE

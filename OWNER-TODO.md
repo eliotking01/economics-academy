@@ -65,7 +65,7 @@ decisions waiting in those logs; it does not repeat them.
 - [ ] **Read the twin-board map — 20 minutes, the highest-value review on this
       list.** 109 links say "Studying AQA instead? *[topic]* covers this on
       AQA" (and the reverse). A wrong row sends a student to the wrong board's
-      content. Print it: `python3 scripts/notes_twins.py`; the 57 deliberately
+      content. Print it: `python3 scripts/notes_twins.py`; the deliberately
       unpaired: `python3 scripts/notes_twins.py --unpaired`. Start with the
       four rows I am least sure of, then skim the rest:
       - Edexcel 3.5.3 Wage Determination → AQA 1.6.3 Competitive Wage
