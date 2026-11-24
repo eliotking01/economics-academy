@@ -17,7 +17,7 @@ Widened by D67 (2026-10-24). Each change lands with the code that implements it.
 | In scope | Out of scope |
 | --- | --- |
 | Edexcel A **A Level** (9EC0), Papers 1–3 | **Multiple-choice questions**: the one MCQ in each Edexcel A Papers 1–2 Section A question (9EC0 and 8EC0), and AQA Paper 3 Section A. Not yet: D67 brings them in as search-only cards with no key (Phase 7). Until then, do not extract them |
-| Edexcel A Papers 1–2 **Section A written parts** (9EC0 and 8EC0), every part that prints no A–D answer boxes. Phase 6 (2026-11-24) | |
+| Edexcel A Papers 1–2 **Section A written parts** (9EC0 and 8EC0), every part that prints no A–D answer boxes: 259 parts from 36 papers (counts: `build_past_paper_questions.py --check`). Brought in by D67, Phase 6; tags settled in `review/section-a-tags.md` and built 2026-11-24 | |
 | Edexcel A **AS Level** (8EC0), Papers 1–2 | **AQA AS papers**, permanently. When AQA extends, A Level only |
 | AQA A Level (7136) | OCR and AQA specimen papers, permanently |
 | Edexcel B **A Level** (9EB0), Papers 1–3, and **AS Level** (8EB0), Papers 1–2, **every section**: B has no MCQs and no optional questions. Extracted into `edexcel-b/` and `edexcel-b-as/`. The build reads them by `boards.json`'s flag (`BANK_DIRS`, `paper_dirs()`). **Live** since `/launch-feature edexcel-b pastPaperBank` (2026-11-17) | |

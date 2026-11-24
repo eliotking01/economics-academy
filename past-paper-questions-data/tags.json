@@ -8,7 +8,7 @@
     "Validated by scripts/verify_past_paper_tags.py."
   ],
   "edexcel-a-p1-2017-jun-q1a": {
-    "topics": ["1-2-6-price-determination"],
+    "topics": ["1-2-2-demand", "1-2-4-supply", "1-2-6-price-determination"],
     "keywords": [
       "equilibrium price",
       "shifts in demand and supply",
@@ -41,7 +41,11 @@
     "keywords": ["subsidy", "incidence of a subsidy", "consumers", "producers"]
   },
   "edexcel-a-p1-2017-jun-q4a": {
-    "topics": ["3-3-4-normal-profits-supernormal-profits-losses"],
+    "topics": [
+      "3-3-4-normal-profits-supernormal-profits-losses",
+      "3-3-1-revenue",
+      "3-3-2-costs"
+    ],
     "keywords": ["cost and revenue diagram", "profit", "fall in demand", "JCB"]
   },
   "edexcel-a-p1-2017-jun-q5b": {
@@ -49,7 +53,10 @@
     "keywords": ["fixed costs", "variable costs", "Starbucks"]
   },
   "edexcel-a-p1-2017-jun-q5c": {
-    "topics": ["3-3-4-normal-profits-supernormal-profits-losses"],
+    "topics": [
+      "3-3-4-normal-profits-supernormal-profits-losses",
+      "3-3-2-costs"
+    ],
     "keywords": ["profit", "calculation", "Starbucks"]
   },
   "edexcel-a-p1-2017-jun-q6a": {
@@ -121,7 +128,10 @@
     ]
   },
   "edexcel-a-p1-2018-jun-q1a": {
-    "topics": ["1-1-4-production-possibility-frontiers"],
+    "topics": [
+      "1-1-4-production-possibility-frontiers",
+      "1-1-3-the-economic-problem"
+    ],
     "keywords": ["opportunity cost", "PPF", "capital goods", "calculation"]
   },
   "edexcel-a-p1-2018-jun-q1c": {
@@ -129,7 +139,7 @@
     "keywords": ["PPF", "capital goods", "consumer goods"]
   },
   "edexcel-a-p1-2018-jun-q2a": {
-    "topics": ["1-2-9-indirect-taxes-subsidies"],
+    "topics": ["1-2-9-indirect-taxes-subsidies", "3-3-1-revenue"],
     "keywords": ["indirect tax", "revenue", "National Lottery", "calculation"]
   },
   "edexcel-a-p1-2018-jun-q2b": {
@@ -146,7 +156,7 @@
     "keywords": ["percentage calculation", "estate agents", "revenue"]
   },
   "edexcel-a-p1-2018-jun-q3c": {
-    "topics": ["1-2-6-price-determination"],
+    "topics": ["1-2-6-price-determination", "1-2-2-demand", "1-2-4-supply"],
     "keywords": [
       "house prices",
       "demand and supply",
@@ -260,7 +270,7 @@
     "keywords": ["determinants of PES", "price elasticity of supply", "housing"]
   },
   "edexcel-a-p1-2019-jun-q2a": {
-    "topics": ["1-2-6-price-determination", "1-2-4-supply"],
+    "topics": ["1-2-4-supply", "1-2-6-price-determination"],
     "keywords": [
       "supply and demand diagram",
       "fall in supply",
@@ -269,7 +279,10 @@
     ]
   },
   "edexcel-a-p1-2019-jun-q3b": {
-    "topics": ["3-4-3-monopolistic-competition"],
+    "topics": [
+      "3-4-3-monopolistic-competition",
+      "3-3-4-normal-profits-supernormal-profits-losses"
+    ],
     "keywords": [
       "monopolistic competition",
       "long-run equilibrium",
@@ -280,12 +293,13 @@
   "edexcel-a-p1-2019-jun-q4b": {
     "topics": [
       "3-3-2-costs",
-      "3-3-4-normal-profits-supernormal-profits-losses"
+      "3-3-4-normal-profits-supernormal-profits-losses",
+      "3-3-1-revenue"
     ],
     "keywords": ["total costs", "profit", "total revenue", "calculation"]
   },
   "edexcel-a-p1-2019-jun-q5a": {
-    "topics": ["1-1-6-types-of-economies", "1-2-7-price-mechanism"],
+    "topics": ["1-2-7-price-mechanism", "1-1-6-types-of-economies"],
     "keywords": [
       "free market economy",
       "price mechanism",
@@ -358,7 +372,7 @@
     ]
   },
   "edexcel-a-p1-2022-jun-q1b": {
-    "topics": ["1-2-6-price-determination", "1-2-2-demand"],
+    "topics": ["1-2-2-demand", "1-2-6-price-determination"],
     "keywords": [
       "supply and demand diagram",
       "shift in demand",
@@ -392,7 +406,11 @@
     "keywords": ["internal economies of scale", "merger", "car industry"]
   },
   "edexcel-a-p1-2022-jun-q5c": {
-    "topics": ["3-6-1-government-intervention", "3-1-2-business-growth"],
+    "topics": [
+      "3-6-1-government-intervention",
+      "3-4-4-oligopoly",
+      "3-1-2-business-growth"
+    ],
     "keywords": ["competition policy", "merger", "market power", "car industry"]
   },
   "edexcel-a-p1-2022-jun-q6a": {
@@ -564,7 +582,7 @@
     "keywords": ["price elasticity of supply", "determinants of PES", "housing"]
   },
   "edexcel-a-p1-2024-jun-q3a": {
-    "topics": ["3-2-1-business-objectives"],
+    "topics": ["3-2-1-business-objectives", "3-3-1-revenue"],
     "keywords": [
       "profit maximisation",
       "revenue maximisation",
@@ -745,7 +763,7 @@
     "keywords": ["migration", "supply of labour", "wages", "engineers"]
   },
   "edexcel-a-p1-2021-nov-q2a": {
-    "topics": ["1-2-6-price-determination", "1-2-4-supply"],
+    "topics": ["1-2-4-supply", "1-2-2-demand", "1-2-6-price-determination"],
     "keywords": ["supply and demand diagram", "increase in supply", "cobalt"]
   },
   "edexcel-a-p1-2021-nov-q3a": {
@@ -761,7 +779,7 @@
     "keywords": ["total revenue", "calculation", "theatre"]
   },
   "edexcel-a-p1-2021-nov-q4b": {
-    "topics": ["1-2-9-indirect-taxes-subsidies", "3-3-2-costs"],
+    "topics": ["3-3-2-costs", "1-2-9-indirect-taxes-subsidies"],
     "keywords": ["subsidy", "total costs", "calculation", "theatre"]
   },
   "edexcel-a-p1-2021-nov-q5a": {
@@ -852,7 +870,10 @@
     ]
   },
   "edexcel-a-p1-2020-oct-q3a": {
-    "topics": ["1-4-1-government-intervention-in-markets"],
+    "topics": [
+      "1-4-1-government-intervention-in-markets",
+      "1-3-2-externalities"
+    ],
     "keywords": [
       "tradable pollution permits",
       "pollution",
@@ -931,7 +952,11 @@
     ]
   },
   "edexcel-a-p2-2017-jun-q1b": {
-    "topics": ["2-4-1-national-income", "2-1-3-employment-unemployment"],
+    "topics": [
+      "2-4-1-national-income",
+      "2-4-2-injections-withdrawals",
+      "2-1-3-employment-unemployment"
+    ],
     "keywords": [
       "circular flow of income",
       "unemployment",
@@ -939,7 +964,7 @@
     ]
   },
   "edexcel-a-p2-2017-jun-q2a": {
-    "topics": ["2-2-2-consumption"],
+    "topics": ["2-2-2-consumption", "2-4-4-the-multiplier"],
     "keywords": ["marginal propensity to save", "saving"]
   },
   "edexcel-a-p2-2017-jun-q2b": {
@@ -1021,7 +1046,11 @@
     "keywords": ["comparative advantage", "trade agreement", "EU", "Canada"]
   },
   "edexcel-a-p2-2018-jun-q2b": {
-    "topics": ["2-6-2-demand-side-policies", "2-2-1-aggregate-demand"],
+    "topics": [
+      "2-6-2-demand-side-policies",
+      "2-4-3-equilibrium-levels-of-real-national-output",
+      "2-2-1-aggregate-demand"
+    ],
     "keywords": ["AD/AS diagram", "interest rates", "monetary policy"]
   },
   "edexcel-a-p2-2018-jun-q3a": {
@@ -1034,11 +1063,14 @@
     ]
   },
   "edexcel-a-p2-2018-jun-q3b": {
-    "topics": ["2-1-4-balance-of-payments"],
+    "topics": ["2-1-4-balance-of-payments", "4-1-7-balance-of-payments"],
     "keywords": ["current account", "balance of payments"]
   },
   "edexcel-a-p2-2018-jun-q4a": {
-    "topics": ["4-5-3-public-sector-finances"],
+    "topics": [
+      "4-5-3-public-sector-finances",
+      "2-6-1-possible-macroeconomic-objectives"
+    ],
     "keywords": ["budget deficit", "budget surplus", "fiscal policy"]
   },
   "edexcel-a-p2-2018-jun-q4b": {
@@ -1130,7 +1162,11 @@
     "keywords": ["demand-pull inflation", "consumer credit", "inflation"]
   },
   "edexcel-a-p2-2019-jun-q2a": {
-    "topics": ["2-2-4-government-expenditure", "2-2-1-aggregate-demand"],
+    "topics": [
+      "2-2-4-government-expenditure",
+      "2-4-3-equilibrium-levels-of-real-national-output",
+      "2-3-3-long-run-aggregate-supply"
+    ],
     "keywords": ["AD/AS diagram", "government spending", "infrastructure"]
   },
   "edexcel-a-p2-2019-jun-q3a": {
@@ -1154,7 +1190,7 @@
     "keywords": ["Laffer curve", "corporation tax", "tax revenue"]
   },
   "edexcel-a-p2-2019-jun-q5a": {
-    "topics": ["4-2-2-inequality"],
+    "topics": ["2-4-1-national-income", "4-2-2-inequality"],
     "keywords": ["income", "wealth", "inequality"]
   },
   "edexcel-a-p2-2019-jun-q5b": {
@@ -1237,7 +1273,11 @@
     "keywords": ["investment", "interest rates", "base rate"]
   },
   "edexcel-a-p2-2022-jun-q4b": {
-    "topics": ["4-5-3-public-sector-finances", "2-6-2-demand-side-policies"],
+    "topics": [
+      "4-5-3-public-sector-finances",
+      "2-6-2-demand-side-policies",
+      "2-5-3-trade-cycle"
+    ],
     "keywords": [
       "automatic stabilisers",
       "discretionary fiscal policy",
@@ -1303,7 +1343,11 @@
     "keywords": ["globalisation", "global economy", "trade", "inequality"]
   },
   "edexcel-a-p2-2023-jun-q1a": {
-    "topics": ["2-6-2-demand-side-policies", "2-2-1-aggregate-demand"],
+    "topics": [
+      "2-6-2-demand-side-policies",
+      "2-4-3-equilibrium-levels-of-real-national-output",
+      "2-2-1-aggregate-demand"
+    ],
     "keywords": ["AD/AS diagram", "base interest rate", "monetary policy"]
   },
   "edexcel-a-p2-2023-jun-q2b": {
@@ -1315,7 +1359,7 @@
     "keywords": ["real GDP", "economic growth", "calculation"]
   },
   "edexcel-a-p2-2023-jun-q3b": {
-    "topics": ["2-1-1-economic-growth", "2-5-4-the-impact-of-economic-growth"],
+    "topics": ["2-5-4-the-impact-of-economic-growth", "2-5-3-trade-cycle"],
     "keywords": ["fall in real GDP", "recession", "costs"]
   },
   "edexcel-a-p2-2023-jun-q4b": {
@@ -1396,7 +1440,11 @@
     "keywords": ["household saving", "savings ratio", "consumer confidence"]
   },
   "edexcel-a-p2-2024-jun-q2b": {
-    "topics": ["2-2-3-investment", "2-2-1-aggregate-demand"],
+    "topics": [
+      "2-2-3-investment",
+      "2-2-1-aggregate-demand",
+      "2-3-3-long-run-aggregate-supply"
+    ],
     "keywords": ["investment", "aggregate demand", "European Union"]
   },
   "edexcel-a-p2-2024-jun-q3a": {
@@ -1479,11 +1527,19 @@
     "keywords": ["GDP per capita", "living standards", "HDI", "GNI"]
   },
   "edexcel-a-p2-2025-jun-q2b": {
-    "topics": ["2-1-4-balance-of-payments"],
+    "topics": [
+      "4-1-7-balance-of-payments",
+      "2-2-5-net-trade",
+      "2-1-4-balance-of-payments"
+    ],
     "keywords": ["current account deficit", "balance of payments"]
   },
   "edexcel-a-p2-2025-jun-q3b": {
-    "topics": ["2-1-1-economic-growth", "2-1-3-employment-unemployment"],
+    "topics": [
+      "2-5-4-the-impact-of-economic-growth",
+      "2-5-3-trade-cycle",
+      "2-1-3-employment-unemployment"
+    ],
     "keywords": ["fall in GDP", "recession", "workers", "government"]
   },
   "edexcel-a-p2-2025-jun-q4a": {
@@ -1567,7 +1623,10 @@
     "keywords": ["fiscal deficit", "national debt", "United States"]
   },
   "edexcel-a-p2-2021-nov-q2b": {
-    "topics": ["2-3-3-long-run-aggregate-supply"],
+    "topics": [
+      "2-3-3-long-run-aggregate-supply",
+      "2-4-3-equilibrium-levels-of-real-national-output"
+    ],
     "keywords": ["classical LRAS", "long run", "real output"]
   },
   "edexcel-a-p2-2021-nov-q2c": {
@@ -1579,7 +1638,7 @@
     "keywords": ["exchange rate", "depreciation", "current account"]
   },
   "edexcel-a-p2-2021-nov-q4a": {
-    "topics": ["2-3-3-long-run-aggregate-supply"],
+    "topics": ["2-3-3-long-run-aggregate-supply", "2-6-3-supply-side-policies"],
     "keywords": ["long-run aggregate supply", "infrastructure", "HS2"]
   },
   "edexcel-a-p2-2021-nov-q5b": {
@@ -1647,7 +1706,7 @@
     "keywords": ["real GDP", "nominal GDP"]
   },
   "edexcel-a-p2-2020-oct-q2b": {
-    "topics": ["2-4-4-the-multiplier"],
+    "topics": ["2-4-4-the-multiplier", "2-2-3-investment"],
     "keywords": ["multiplier", "investment", "aggregate demand"]
   },
   "edexcel-a-p2-2020-oct-q3a": {
@@ -1670,6 +1729,7 @@
   "edexcel-a-p2-2020-oct-q5a": {
     "topics": [
       "2-2-4-government-expenditure",
+      "2-4-3-equilibrium-levels-of-real-national-output",
       "2-3-3-long-run-aggregate-supply"
     ],
     "keywords": [
@@ -4262,7 +4322,7 @@
     ]
   },
   "edexcel-as-p1-2016-jun-q4a": {
-    "topics": ["1-2-1-rational-decision-making"],
+    "topics": ["1-2-2-demand"],
     "keywords": ["diminishing marginal utility", "utility", "all you can eat"]
   },
   "edexcel-as-p1-2016-jun-q5b": {
@@ -4348,11 +4408,11 @@
     "keywords": ["subsidies", "definition"]
   },
   "edexcel-as-p1-2017-jun-q3c": {
-    "topics": ["1-2-9-indirect-taxes-subsidies"],
+    "topics": ["1-2-9-indirect-taxes-subsidies", "1-2-6-price-determination"],
     "keywords": ["subsidy", "supply and demand diagram", "solar panels"]
   },
   "edexcel-as-p1-2017-jun-q4a": {
-    "topics": ["1-2-7-price-mechanism"],
+    "topics": ["1-2-7-price-mechanism", "1-2-6-price-determination"],
     "keywords": ["price mechanism", "excess supply", "steel"]
   },
   "edexcel-as-p1-2017-jun-q5a": {
@@ -4431,8 +4491,9 @@
   },
   "edexcel-as-p1-2018-jun-q3b": {
     "topics": [
-      "1-4-1-government-intervention-in-markets",
-      "1-3-4-information-gaps"
+      "1-3-4-information-gaps",
+      "1-3-2-externalities",
+      "1-1-6-types-of-economies"
     ],
     "keywords": ["state provision", "NHS dental treatment", "information gaps"]
   },
@@ -4622,7 +4683,8 @@
   "edexcel-as-p1-2022-jun-q2c": {
     "topics": [
       "1-4-1-government-intervention-in-markets",
-      "1-4-2-government-failure"
+      "1-4-2-government-failure",
+      "1-2-6-price-determination"
     ],
     "keywords": ["minimum price", "intervention buying", "excess supply", "CAP"]
   },
@@ -4801,13 +4863,14 @@
     "keywords": ["supply", "definition"]
   },
   "edexcel-as-p1-2024-jun-q2c": {
-    "topics": ["1-2-6-price-determination", "1-2-4-supply"],
+    "topics": ["1-2-4-supply", "1-2-6-price-determination"],
     "keywords": ["fall in supply", "equilibrium price", "vanilla", "diagram"]
   },
   "edexcel-as-p1-2024-jun-q3b": {
     "topics": [
       "1-3-2-externalities",
-      "1-4-1-government-intervention-in-markets"
+      "1-3-4-information-gaps",
+      "1-1-6-types-of-economies"
     ],
     "keywords": ["state provision", "education", "positive externalities"]
   },
@@ -4894,7 +4957,7 @@
     "keywords": ["public goods", "free rider problem", "private sector"]
   },
   "edexcel-as-p1-2025-jun-q4b": {
-    "topics": ["1-2-7-price-mechanism", "1-2-6-price-determination"],
+    "topics": ["1-2-6-price-determination", "1-2-7-price-mechanism"],
     "keywords": ["excess supply", "market forces", "price mechanism", "coffee"]
   },
   "edexcel-as-p1-2025-jun-q5b": {
@@ -4970,7 +5033,8 @@
   "edexcel-as-p1-2020-oct-q4b": {
     "topics": [
       "1-2-9-indirect-taxes-subsidies",
-      "1-4-1-government-intervention-in-markets"
+      "1-4-1-government-intervention-in-markets",
+      "1-3-2-externalities"
     ],
     "keywords": ["specific tax", "indirect tax", "government intervention"]
   },
@@ -4981,6 +5045,7 @@
   "edexcel-as-p1-2020-oct-q5b": {
     "topics": [
       "1-3-2-externalities",
+      "1-3-1-types-of-market-failure",
       "1-4-1-government-intervention-in-markets"
     ],
     "keywords": [
@@ -5053,7 +5118,10 @@
     "keywords": ["purchasing power parities", "PPP", "definition"]
   },
   "edexcel-as-p2-2016-jun-q2c": {
-    "topics": ["2-1-1-economic-growth", "2-2-1-aggregate-demand"],
+    "topics": [
+      "2-5-1-causes-of-growth",
+      "2-4-3-equilibrium-levels-of-real-national-output"
+    ],
     "keywords": ["actual economic growth", "AD/AS diagram"]
   },
   "edexcel-as-p2-2016-jun-q3a": {
@@ -5065,7 +5133,7 @@
     "keywords": ["claimant count", "percentage change", "calculation"]
   },
   "edexcel-as-p2-2016-jun-q4b": {
-    "topics": ["2-1-4-balance-of-payments"],
+    "topics": ["2-2-5-net-trade", "2-1-4-balance-of-payments"],
     "keywords": ["trade deficit", "balance of trade", "current account"]
   },
   "edexcel-as-p2-2016-jun-q5a": {
@@ -5136,7 +5204,11 @@
     "keywords": ["negative output gap", "trade cycle diagram"]
   },
   "edexcel-as-p2-2017-jun-q4a": {
-    "topics": ["2-2-1-aggregate-demand", "2-6-2-demand-side-policies"],
+    "topics": [
+      "2-6-2-demand-side-policies",
+      "2-4-3-equilibrium-levels-of-real-national-output",
+      "2-2-2-consumption"
+    ],
     "keywords": [
       "AD/AS diagram",
       "income tax",
@@ -5216,7 +5288,11 @@
     "keywords": ["recession", "characteristics of a recession"]
   },
   "edexcel-as-p2-2018-jun-q3a": {
-    "topics": ["2-6-2-demand-side-policies"],
+    "topics": [
+      "2-6-2-demand-side-policies",
+      "2-1-2-inflation",
+      "2-6-1-possible-macroeconomic-objectives"
+    ],
     "keywords": [
       "Monetary Policy Committee",
       "base interest rate",
@@ -5228,7 +5304,10 @@
     "keywords": ["aggregate demand", "definition"]
   },
   "edexcel-as-p2-2018-jun-q4b": {
-    "topics": ["2-3-2-short-run-aggregate-supply"],
+    "topics": [
+      "2-3-2-short-run-aggregate-supply",
+      "2-4-3-equilibrium-levels-of-real-national-output"
+    ],
     "keywords": ["SRAS", "raw material costs", "AD/AS diagram"]
   },
   "edexcel-as-p2-2018-jun-q5b": {
@@ -5304,7 +5383,7 @@
     "keywords": ["Keynesian LRAS", "diagram"]
   },
   "edexcel-as-p2-2019-jun-q2b": {
-    "topics": ["2-3-3-long-run-aggregate-supply", "2-5-2-output-gaps"],
+    "topics": ["2-5-2-output-gaps", "2-3-3-long-run-aggregate-supply"],
     "keywords": ["spare capacity", "Keynesian LRAS"]
   },
   "edexcel-as-p2-2019-jun-q3a": {
@@ -5312,11 +5391,18 @@
     "keywords": ["unemployment rate", "effects of unemployment"]
   },
   "edexcel-as-p2-2019-jun-q4a": {
-    "topics": ["2-4-3-equilibrium-levels-of-real-national-output"],
+    "topics": [
+      "2-1-2-inflation",
+      "2-4-3-equilibrium-levels-of-real-national-output"
+    ],
     "keywords": ["price level", "definition"]
   },
   "edexcel-as-p2-2019-jun-q4b": {
-    "topics": ["2-6-3-supply-side-policies", "2-3-3-long-run-aggregate-supply"],
+    "topics": [
+      "2-6-3-supply-side-policies",
+      "2-4-3-equilibrium-levels-of-real-national-output",
+      "2-3-3-long-run-aggregate-supply"
+    ],
     "keywords": ["supply-side policy", "competition", "LRAS", "AD/AS diagram"]
   },
   "edexcel-as-p2-2019-jun-q5b": {
@@ -5391,7 +5477,11 @@
     "keywords": ["exchange rate", "definition"]
   },
   "edexcel-as-p2-2022-jun-q4c": {
-    "topics": ["2-2-5-net-trade", "2-2-1-aggregate-demand"],
+    "topics": [
+      "2-2-5-net-trade",
+      "2-4-3-equilibrium-levels-of-real-national-output",
+      "2-2-1-aggregate-demand"
+    ],
     "keywords": ["net trade", "AD/AS diagram", "exports"]
   },
   "edexcel-as-p2-2022-jun-q5b": {
@@ -5446,7 +5536,7 @@
     "keywords": ["supply-side policies", "productivity", "long-run growth"]
   },
   "edexcel-as-p2-2023-jun-q1a": {
-    "topics": ["2-6-3-supply-side-policies"],
+    "topics": ["2-6-3-supply-side-policies", "2-3-3-long-run-aggregate-supply"],
     "keywords": ["supply-side policies", "healthcare", "aggregate supply"]
   },
   "edexcel-as-p2-2023-jun-q2a": {
@@ -5466,7 +5556,11 @@
     "keywords": ["investment", "definition"]
   },
   "edexcel-as-p2-2023-jun-q4c": {
-    "topics": ["2-2-3-investment", "2-2-1-aggregate-demand"],
+    "topics": [
+      "2-2-3-investment",
+      "2-4-3-equilibrium-levels-of-real-national-output",
+      "2-2-1-aggregate-demand"
+    ],
     "keywords": ["business investment", "AD/AS diagram"]
   },
   "edexcel-as-p2-2023-jun-q5b": {
@@ -5520,7 +5614,7 @@
     "keywords": ["GDP", "living standards", "developing countries"]
   },
   "edexcel-as-p2-2024-jun-q2a": {
-    "topics": ["2-2-2-consumption"],
+    "topics": ["2-4-4-the-multiplier"],
     "keywords": ["marginal propensity to consume", "definition"]
   },
   "edexcel-as-p2-2024-jun-q2b": {
@@ -5536,7 +5630,11 @@
     "keywords": ["investment", "definition"]
   },
   "edexcel-as-p2-2024-jun-q4b": {
-    "topics": ["2-2-3-investment", "2-2-1-aggregate-demand"],
+    "topics": [
+      "2-2-3-investment",
+      "2-4-3-equilibrium-levels-of-real-national-output",
+      "2-2-1-aggregate-demand"
+    ],
     "keywords": ["business investment", "AD/AS diagram"]
   },
   "edexcel-as-p2-2024-jun-q5a": {
@@ -5601,11 +5699,15 @@
     ]
   },
   "edexcel-as-p2-2025-jun-q1b": {
-    "topics": ["2-1-3-employment-unemployment", "2-6-2-demand-side-policies"],
+    "topics": [
+      "2-1-3-employment-unemployment",
+      "2-6-2-demand-side-policies",
+      "2-2-4-government-expenditure"
+    ],
     "keywords": ["unemployment", "government budget", "recession"]
   },
   "edexcel-as-p2-2025-jun-q2b": {
-    "topics": ["2-2-2-consumption"],
+    "topics": ["2-2-2-consumption", "2-4-1-national-income"],
     "keywords": ["house prices", "wealth effect", "homeowners"]
   },
   "edexcel-as-p2-2025-jun-q3b": {
@@ -5617,15 +5719,18 @@
     "keywords": ["trade cycle", "definition"]
   },
   "edexcel-as-p2-2025-jun-q4a": {
-    "topics": ["1-2-9-indirect-taxes-subsidies"],
+    "topics": ["2-6-2-demand-side-policies", "1-2-9-indirect-taxes-subsidies"],
     "keywords": ["indirect tax", "definition"]
   },
   "edexcel-as-p2-2025-jun-q4b": {
-    "topics": ["2-3-2-short-run-aggregate-supply"],
+    "topics": [
+      "2-3-2-short-run-aggregate-supply",
+      "2-4-3-equilibrium-levels-of-real-national-output"
+    ],
     "keywords": ["indirect tax", "SRAS", "AD/AS diagram"]
   },
   "edexcel-as-p2-2025-jun-q5b": {
-    "topics": ["2-1-4-balance-of-payments"],
+    "topics": ["2-2-5-net-trade", "2-1-4-balance-of-payments"],
     "keywords": ["balance of trade", "trade deficit"]
   },
   "edexcel-as-p2-2025-jun-q6a": {
@@ -5683,7 +5788,7 @@
     "keywords": ["classical LRAS", "long run"]
   },
   "edexcel-as-p2-2020-oct-q3b": {
-    "topics": ["2-1-4-balance-of-payments"],
+    "topics": ["2-2-5-net-trade", "2-1-4-balance-of-payments"],
     "keywords": ["balance of trade", "trade deficit"]
   },
   "edexcel-as-p2-2020-oct-q4a": {
@@ -5691,7 +5796,11 @@
     "keywords": ["interest rate", "definition"]
   },
   "edexcel-as-p2-2020-oct-q4b": {
-    "topics": ["2-6-2-demand-side-policies", "2-2-1-aggregate-demand"],
+    "topics": [
+      "2-6-2-demand-side-policies",
+      "2-4-3-equilibrium-levels-of-real-national-output",
+      "2-2-1-aggregate-demand"
+    ],
     "keywords": ["base interest rate", "AD/AS diagram", "monetary policy"]
   },
   "edexcel-as-p2-2020-oct-q5a": {
