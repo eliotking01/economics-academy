@@ -152,7 +152,6 @@ anything.
 
 | Item | What it needs |
 | --- | --- |
-| **Hub-level switch lines** for the four B hubs (the topic-level twins are Phase 5, below) | Pairings and wording to Eliot; `verify_seo` `HUB_TWINS` gains the pairs |
 | **An Edexcel B glossary** | Staged on `feature/edexcel-b-glossary` (Phase 3, below). Until it launches, the index's glossary line ("with a page for Edexcel A and AQA") stays true and is left alone; its replacement is approved |
 | **National Living Wage on 3.5.3** | Dates every April. Next change: April 2027 |
 | **The other dated figures** | Re-check once a year: the poverty line, aid, the CMA thresholds, Bank Rate history, PPP shares. Sources are in the unit review sheets |
@@ -235,8 +234,12 @@ Brief §12. The review sheet is `review/twins.md`, approved Q1-Q9 on
 - **Pages.** 175 notes pages rebuilt: every B page that gained a twin, and
   every Edexcel A / AQA page that gained a B twin or lost the bare
   "Edexcel". `dateModified` was not moved. Text-Change trailers on all 175.
-- **Still to do:** the hub switch lines (Q4: pairings and wording to
-  Eliot); push after approval, then `build.py --sitemap`.
+- **Hub switch lines** (Q4; H1-H3 approved 2026-11-24). The four B hubs
+  gain a "Studying Edexcel A or AQA instead?" line, and the six Edexcel A
+  and AQA hubs gain an Edexcel B sentence. The sources are in
+  `notes-data/hubs/`, edited by hand. `verify_seo` `HUB_TWINS` goes from 8
+  to 27 pairs. 10 hub pages rebuilt.
+- **Still to do:** push after approval.
 
 ### All-boards parity — Phase 4, Edexcel B past-paper bank (2026-11-16 to 2026-11-17) — LIVE, MERGED 2026-11-17 AS PR #51 (`ce9369ed`, branch `feature/edexcel-b-bank`)
 

@@ -2484,5 +2484,11 @@ Q1-Q9 (all recommendations accepted).**
   generated chrome; no slice changes.
 - **`notes_twins.board_of_dir` now returns `edexcel-b`** for B directories.
   It used to return `edexcel` for everything that was not AQA.
-- **Hub-level switch lines for the B hubs go ahead** (Q4), with the pairings
-  and wording still to be approved.
+- **Hub-level switch lines** (Q4, then H1-H3 approved the same day). Each
+  of the ten notes hubs names the hubs its topics' twins land in most. The
+  four B hubs gain *"Studying Edexcel A or AQA instead? The Edexcel A [Theme
+  N] notes and the [AQA ... notes] cover much of the same ground."* - "much
+  of", because no B theme maps onto one other theme. The six Edexcel A and
+  AQA hubs keep their sentence (with "Edexcel A" on the AQA two) and gain
+  *"On Edexcel B, the [Theme N] notes cover much of it."* `verify_seo`'s
+  `HUB_TWINS` goes from 8 pairs to 27.

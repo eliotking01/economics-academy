@@ -302,15 +302,27 @@ def main() -> int:
     # board should not land on the wrong one with no way across. Hub-level
     # pairs are many-to-one, so they are written down here as explicit
     # (source, target) pairs rather than derived, exactly as the twin table
-    # is. Eight pairs, no more: a ninth fails this assertion.
+    # is. AMENDED 2026-11-24 (D70): the Edexcel B hubs join, with the
+    # pairings approved in review/twins.md H1-H3 - each hub names the hubs
+    # its topics' twins land in most. 27 pairs, no more: a 28th fails this
+    # assertion.
     HUB_TWINS = {
-        "edexcel-theme-1": ["aqa-a2-micro"],
-        "edexcel-theme-3": ["aqa-a2-micro"],
-        "edexcel-theme-2": ["aqa-a2-macro"],
-        "edexcel-theme-4": ["aqa-a2-macro"],
-        "aqa-a2-micro": ["edexcel-theme-1", "edexcel-theme-3"],
-        "aqa-a2-macro": ["edexcel-theme-2", "edexcel-theme-4"],
+        "edexcel-theme-1": ["aqa-a2-micro", "edexcel-b-theme-1"],
+        "edexcel-theme-3": ["aqa-a2-micro", "edexcel-b-theme-4"],
+        "edexcel-theme-2": ["aqa-a2-macro", "edexcel-b-theme-4",
+                            "edexcel-b-theme-2"],
+        "edexcel-theme-4": ["aqa-a2-macro", "edexcel-b-theme-3"],
+        "aqa-a2-micro": ["edexcel-theme-1", "edexcel-theme-3",
+                         "edexcel-b-theme-4", "edexcel-b-theme-1"],
+        "aqa-a2-macro": ["edexcel-theme-2", "edexcel-theme-4",
+                         "edexcel-b-theme-2", "edexcel-b-theme-4"],
+        "edexcel-b-theme-1": ["edexcel-theme-1", "aqa-a2-micro"],
+        "edexcel-b-theme-2": ["edexcel-theme-2", "aqa-a2-macro"],
+        "edexcel-b-theme-3": ["edexcel-theme-4", "aqa-a2-macro"],
+        "edexcel-b-theme-4": ["edexcel-theme-3", "edexcel-theme-2",
+                              "aqa-a2-micro", "aqa-a2-macro"],
     }
+    assert sum(map(len, HUB_TWINS.values())) == 27
     BOARD_SWITCHER |= {
         (f"revision-notes/{src}/index.html", f"revision-notes/{dst}/index.html")
         for src, dsts in HUB_TWINS.items() for dst in dsts
