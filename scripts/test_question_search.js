@@ -184,6 +184,13 @@ check(
 //            Paper 3     Section B is a case study
 //   Edexcel B every paper, every section: each question sits under data, and
 //            the 20-mark essay is set on Section C's own extract
+//   Edexcel A Papers 1-2 Section A has no extract: its link goes to the page
+//            the question's stem is printed on, labelled, and only when the
+//            part is on a later page (checked separately below)
+function isEdexcelASectionA(q) {
+  const paper = data.papers[q.p];
+  return paper.board === "edexcel" && paper.paper !== 3 && q.section === "A";
+}
 function expectsExtract(q) {
   const paper = data.papers[q.p];
   if (paper.board === "edexcel-b") return true;
@@ -193,12 +200,26 @@ function expectsExtract(q) {
 }
 check(
   "extracts: present exactly where the paper carries a stimulus block",
-  data.questions.every((q) => expectsExtract(q) === (q.ctxPage !== null)),
   data.questions
-    .filter((q) => expectsExtract(q) !== (q.ctxPage !== null))
+    .filter((q) => !isEdexcelASectionA(q))
+    .every((q) => expectsExtract(q) === (q.ctxPage !== null) && !q.ctxLabel),
+  data.questions
+    .filter((q) => !isEdexcelASectionA(q))
+    .filter((q) => expectsExtract(q) !== (q.ctxPage !== null) || q.ctxLabel)
     .slice(0, 3)
     .map((q) => q.id)
     .join(", "),
+);
+check(
+  "extracts: an Edexcel A Section A link is labelled and points back to the stem",
+  data.questions
+    .filter(isEdexcelASectionA)
+    .every(
+      (q) =>
+        q.ctxPage === null ||
+        (q.ctxLabel === "Question " + q.parentQuestion + " as printed" &&
+          q.ctxPage < q.qpPage),
+    ),
 );
 check(
   "extracts: AQA Section B essays are free-standing",
@@ -249,7 +270,7 @@ check(
 
 // Pick by what the card must show, not by section letter: AQA's Section B is
 // three free-standing essays with no extract, while Edexcel's has one.
-const sectionB = index.filter((r) => r.q.ctxPage !== null)[0];
+const sectionB = index.filter((r) => r.q.ctxPage !== null && !r.q.ctxLabel)[0];
 // Edexcel A's Section C: the one section that is an either/or with no
 // extract. Edexcel B's Section C has both an extract and no choice.
 const sectionC = index.filter(
@@ -302,6 +323,18 @@ check(
 check(
   "card: Section C offers no extract link",
   cardC.indexOf("View the extract") === -1,
+);
+// Edexcel A Section A: a part printed after its stem's page links back to it
+// under its own label, never "View the extract".
+const sectionA = index.filter((r) => !!r.q.ctxLabel)[0];
+check("card: an Edexcel A Section A card links back to its stem", !!sectionA);
+const cardA = sectionA ? M.cardHtml(sectionA, data.topics) : "";
+check(
+  "card: Edexcel A Section A labels its link to the stem page",
+  !!sectionA &&
+    cardA.indexOf(sectionA.q.ctxLabel + " &mdash; p." + sectionA.q.ctxPage) !==
+      -1 &&
+    cardA.indexOf("View the extract") === -1,
 );
 check(
   "card: Section C is labelled as one of two options",

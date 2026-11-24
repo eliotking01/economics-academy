@@ -132,6 +132,78 @@ func bSchemeNames(_ page: String, label: String) -> Bool {
     return false
 }
 
+// ---- Edexcel A Papers 1 and 2, Section A (Phase 6). Checked against the PDF
+// in ways the extractor does not use, because the extractor drops figure text
+// and joins the stem, lead-ins and the part's own text into one string:
+//
+//   A1. Every word comes off the pages from the question's first page (the
+//       context page) to the part's, in contiguous runs of at least two
+//       words: the extractor may drop lines between sentences, never join
+//       half-lines into wording no page holds. This replaces check 2, whose
+//       fixed six-word window straddles the join of a stem and a short part.
+//   A2. The text's closing run - at least three words, or all of it - is on
+//       the part's own page, tariffs and answer lines taken out (a
+//       sub-part's "(2)" sits between "(i) workers" and "(ii)").
+//   A3. (folded into A1 and A2: the page claims are the run claims.)
+//   A4. No card is a multiple-choice question ("which one of the following").
+//   A5. For each question, the printed total less the recorded marks is
+//       exactly 1: the one MCQ every Section A question sets, left to Phase 7.
+
+/// A page squashed for the run search: margin warnings, answer boxes (private
+/// use glyphs), answer-line leaders, barcode references and tariffs removed.
+func runPage(_ s: String) -> String {
+    var o = squashedPage(s)
+    o = String(String.UnicodeScalarView(o.unicodeScalars.filter { !(0xE000...0xF8FF).contains($0.value) }))
+    for p in ["\\.{4,}", "\\*[A-Z]\\d{5,6}[A-Z]?\\d{4,6}\\*", "\\(\\d{1,2}\\)"] {
+        o = o.replacingOccurrences(of: p, with: "", options: .regularExpression)
+    }
+    return o
+}
+
+func sectionACheck(id: String, text: String, pages: [String], from: Int, to: Int) {
+    guard from >= 1, to <= pages.count, from <= to else {
+        failures.append(Failure(id: id, check: "a-page-order", detail: "stem p\(from), part p\(to)"))
+        return
+    }
+    // Stripping the answer-line leaders takes a printed full stop with them
+    // where the leaders start straight after it ("(ii) 2016............").
+    func on(_ hay: String, _ s: String) -> Bool {
+        hay.contains(s) || (s.hasSuffix(".") && hay.contains(String(s.dropLast())))
+    }
+    let words = text.split(separator: " ").map(String.init)
+    let partPage = runPage(pages[to - 1])
+    var k = words.count
+    while k > 0 && on(partPage, squashed(words[(k - 1)...].joined())) { k -= 1 }
+    if words.count - k < min(3, words.count) {
+        failures.append(Failure(id: id, check: "a-closing-not-on-page", detail: "p\(to) lacks: \(closing(text, words: 3))"))
+    }
+    if text.lowercased().contains("which one of the following") {
+        failures.append(Failure(id: id, check: "a-mcq-text", detail: "card reads as a multiple-choice question"))
+    }
+    let hay = (from...to).map { runPage(pages[$0 - 1]) }.joined()
+    var i = 0
+    while i < words.count {
+        var j = i
+        while j < words.count && on(hay, squashed(words[i...j].joined())) { j += 1 }
+        let run = j - i
+        if run == 0 {
+            failures.append(Failure(id: id, check: "a-word-not-on-pages", detail: "'\(words[i])' is on none of p\(from)-p\(to)"))
+            return
+        }
+        if run < 2 && j < words.count {
+            failures.append(Failure(id: id, check: "a-short-run", detail: "'\(words[i])' is joined to text it is not printed beside"))
+            return
+        }
+        i = j
+    }
+}
+
+/// The context page of a Section A record, whose context is its stem's page.
+func ctxOf(_ q: [String: Any]) -> Int? {
+    guard let c = q["context"] as? [String: Any], (c["type"] as? String) == "question" else { return nil }
+    return c["page"] as? Int
+}
+
 let fm = FileManager.default
 // Both Edexcel qualifications. They are separate directories because 9EC0 and
 // 8EC0 each have a Paper 1 in the same series, so the filenames collide.
@@ -192,6 +264,9 @@ for (dir, file) in files {
     let isB = (root["board"] as? String) == "edexcel-b"
     var marksByQuestion: [String: Int] = [:]
     var paperUrl: String? = nil
+    let isEdexcelAP12 = (root["board"] as? String) == "edexcel" && (root["paper"] as? Int) != 3
+    var marksByQuestionA: [String: Int] = [:]
+    var paperUrlA: String? = nil
 
     for q in questions {
         guard let id = q["id"] as? String,
@@ -205,6 +280,7 @@ for (dir, file) in files {
             continue
         }
         checked += 1
+        let isSectionA = isEdexcelAP12 && (q["section"] as? String) == "A"
 
         // ---- 1 & 2: question paper page holds the text we extracted
         guard let qpPages = pages(qpUrl) else {
@@ -218,12 +294,22 @@ for (dir, file) in files {
             // Folding is the identity on a text-layer paper.
             let ocr = ocrRead.contains(String(qpUrl.dropFirst()))
             let fold: (String) -> String = { ocr ? folded($0) : $0 }
+            // A Section A card joins its stem to its part's own text, so a
+            // fixed six-word window can straddle a join no page prints as one
+            // run; A1-A3 check it run by run instead.
+            let openPage = isSectionA ? (ctxOf(q) ?? qpPage) : qpPage
             let needle = fold(squashed(opening(text, words: 6)))
-            if !fold(squashed(qpPages[qpPage - 1])).contains(needle) {
+            if !isSectionA && !fold(squashed(qpPages[qpPage - 1])).contains(needle) {
                 failures.append(
                     Failure(
                         id: id, check: "qp-text-not-on-page",
-                        detail: "p\(qpPage) lacks: \(opening(text, words: 6))"))
+                        detail: "p\(openPage) lacks: \(opening(text, words: 6))"))
+            }
+            if isSectionA {
+                sectionACheck(id: id, text: text, pages: qpPages, from: openPage, to: qpPage)
+                let parent = (q["parentQuestion"] as? String) ?? number
+                marksByQuestionA[parent, default: 0] += (q["marks"] as? Int) ?? 0
+                paperUrlA = qpUrl
             }
             // ---- 5 (B): and its closing words
             // ---- 9 (OCR): on a scanned paper the WHOLE text must be in this
@@ -356,6 +442,29 @@ for (dir, file) in files {
                         id: id, check: "context-after-question",
                         detail: "extract p\(ctxPage) is not before question p\(qpPage)"))
             }
+        }
+    }
+
+    // ---- A5: each Section A question is short by exactly its one MCQ mark
+    if let url = paperUrlA, let qpPages = pages(url) {
+        let all = qpPages.joined(separator: "\n")
+        for (n, sum) in marksByQuestionA.sorted(by: { $0.key < $1.key }) {
+            let marker = "(Total for Question \(n) = "
+            guard let r = all.range(of: marker),
+                let printed = Int(all[r.upperBound...].prefix(while: { $0.isNumber }))
+            else {
+                failures.append(Failure(id: file, check: "a-total-missing", detail: "Q\(n)"))
+                continue
+            }
+            if printed - sum != 1 {
+                failures.append(
+                    Failure(
+                        id: file, check: "a-mcq-gap",
+                        detail: "Q\(n) records \(sum) of \(printed) marks; expected all but the 1-mark MCQ"))
+            }
+        }
+        if marksByQuestionA.count != 5 {
+            failures.append(Failure(id: file, check: "a-question-count", detail: "\(marksByQuestionA.count) of 5 questions have a written part"))
         }
     }
 

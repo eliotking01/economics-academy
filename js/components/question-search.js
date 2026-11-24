@@ -285,11 +285,15 @@
         q.qpPage +
         "</a>",
     ];
+    // Edexcel A Section A links to the page its question's stem is printed
+    // on, not an extract, and the payload names it: "Question 3 as printed".
     if (q.ctxPage) {
       actions.push(
         '<a class="ppq-action" href="' +
           escapeHtml(paper.questionPaperUrl + "#page=" + q.ctxPage) +
-          '" target="_blank" rel="noopener noreferrer">View the extract &mdash; p.' +
+          '" target="_blank" rel="noopener noreferrer">' +
+          (q.ctxLabel ? escapeHtml(q.ctxLabel) : "View the extract") +
+          " &mdash; p." +
           q.ctxPage +
           "</a>",
       );

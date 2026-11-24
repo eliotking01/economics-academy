@@ -312,6 +312,14 @@ def build(taxonomy, tags, papers):
                 # "View the extract" link. Null for Section C, which has none.
                 "ctxPage": q["context"]["page"] if q["context"] else None,
                 "modelAnswer": q["modelAnswer"],
+                # Edexcel A Papers 1-2 Section A (Phase 6): the link goes to
+                # the page the question's stem is printed on, not an extract,
+                # so it carries its own label - "Question 3 as printed",
+                # approved by Eliot 2026-11-24. Emitted only for those
+                # records, which leaves every other card's payload unchanged.
+                **({"ctxLabel": q["context"]["label"]}
+                   if q["context"] and q["context"].get("type") == "question"
+                   else {}),
             }
             questions.append(entry)
 
@@ -632,9 +640,10 @@ def render_card(q, index):
     ]
     if q["ctxPage"]:
         ctx = e(paper["questionPaperUrl"] + "#page=" + str(q["ctxPage"]))
+        ctx_label = e(q["ctxLabel"]) if q.get("ctxLabel") else "View the extract"
         actions.append(
             f'<a class="ppq-action" href="{ctx}" target="_blank" '
-            f'rel="noopener noreferrer">View the extract &mdash; p.{q["ctxPage"]}</a>'
+            f'rel="noopener noreferrer">{ctx_label} &mdash; p.{q["ctxPage"]}</a>'
         )
     ms = e(paper["markSchemeUrl"] + "#page=" + str(q["msPage"]))
     actions.append(
