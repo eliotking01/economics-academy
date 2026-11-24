@@ -563,10 +563,13 @@ def main() -> int:
 
 # Steps 3-5 of the checklist, which differ for a board without practice
 # questions (Edexcel B until D67's launch).
-FULL_STEPS = """ 3. Twin row: scripts/notes_twins.py is a written-down table - add the
-    (board, slug) pair for this topic's counterpart on the other board, or
-    leave it unpaired on purpose (verify_seo.py assertion 13 permits only
-    the pairs the table names).
+TWIN_STEP = """ 3. Twin rows: scripts/notes_twins.py is a written-down table, one
+    target per other board. Add this topic's counterpart on each other board
+    to the table for that direction (TWINS for Edexcel A <-> AQA; B_TO_A,
+    B_TO_AQA and TO_B for Edexcel B), or leave it unpaired on purpose
+    (verify_seo.py assertion 13 permits only the pairs the tables name)."""
+
+FULL_STEPS = TWIN_STEP + """
  4. questions-data/{notes_dir}/{code}.json - the practice
     questions. build_notes_pages.py needs it for the page's generated tail
     (the "Practice questions" panel is derived from it) and
@@ -579,8 +582,7 @@ FULL_STEPS = """ 3. Twin row: scripts/notes_twins.py is a written-down table - a
     past-paper questions to the slug in past-paper-questions-data/tags.json
     and the page's past-paper line updates itself on the next build."""
 
-NOTES_ONLY_STEPS = """ 3. No twin row yet: twin links for Edexcel B are D67 Phase 5, and
-    notes_twins.board_of_dir needs fixing first.
+NOTES_ONLY_STEPS = TWIN_STEP + """
  4. No questions-data record: this board has no practiceQuestions in
     boards.json's features yet. The page's tail is the board's past-papers
     panel.

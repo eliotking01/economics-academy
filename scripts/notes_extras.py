@@ -51,10 +51,14 @@ through the file - every string below was approved by Eliot, the first nine
 on 2026-08-21, the rest on 2026-08-23 with the tail redesign:
 
     "Updated"                     "On this page"
-    "Related topics"              "Studying AQA instead?"
-    "Studying Edexcel instead?"   "covers this on AQA."
-    "covers this on Edexcel."     "Written by"
+    "Related topics"              "Written by"
     "About the author"
+    the twin sentence (2026-11-24, D67 Phase 5), one per page, naming at
+    most one twin per other board - "Edexcel A", "AQA", "Edexcel B":
+      "Studying <X> instead? <link> covers this on <X>."
+      "Studying <X> or <Y> instead? <link> covers this on <X>, and <link>
+       on <Y>."
+    ("Edexcel" became "Edexcel A" in the same change.)
     "Carry on with this topic"
     "Practice questions: <spec> <shortTitle>"
     "Flashcards: <spec> <shortTitle>"
@@ -471,12 +475,37 @@ def related_slugs(notes_dir: str, slug: str, limit: int = 3) -> list[str]:
     return pick(order)
 
 
+def twin_sentence(pairs: list[tuple[str, str]], pad: str) -> str:
+    """The "Studying X instead?" paragraph for one or two twins.
+
+    One twin keeps the 2026-08-21 shape. Two name both boards in one
+    sentence, in notes_twins.BOARD_ORDER, so the block stays one paragraph.
+    """
+    links = []
+    for tdir, tslug in pairs:
+        name = html.escape(label_for(tdir, tslug), quote=False)
+        links.append((
+            notes_twins.BOARD_LABEL[notes_twins.board_of_dir(tdir)],
+            f'<a class="topic-related__twin-link"'
+            f' href="/revision-notes/{tdir}/{tslug}.html">{name}</a>'))
+    if len(links) == 1:
+        (b1, a1), = links
+        lines = [f"Studying {b1} instead?", a1, f"covers this on {b1}."]
+    elif len(links) == 2:
+        (b1, a1), (b2, a2) = links
+        lines = [f"Studying {b1} or {b2} instead?", a1,
+                 f"covers this on {b1}, and", a2, f"on {b2}."]
+    else:
+        raise ValueError(f"at most two twins per page, got {pairs}")
+    return (f'{pad}  <p class="topic-related__twin">\n'
+            + "".join(f"{pad}    {line}\n" for line in lines)
+            + f'{pad}  </p>\n')
+
+
 def related_block(notes_dir: str, slug: str, pad: str) -> str:
-    board, _ = BOARD_OF_DIR[notes_dir]
-    other = "AQA" if board == "Edexcel" else "Edexcel"
     siblings = related_slugs(notes_dir, slug)
-    pair = notes_twins.twin(notes_dir, slug)
-    if not siblings and not pair:
+    pairs = notes_twins.twins(notes_dir, slug)
+    if not siblings and not pairs:
         return ""
 
     body = ""
@@ -490,16 +519,8 @@ def related_block(notes_dir: str, slug: str, pad: str) -> str:
         body += (f'{pad}  <ul class="topic-related__list">\n'
                  f'{items}'
                  f'{pad}  </ul>\n')
-    if pair:
-        tdir, tslug = pair
-        name = html.escape(label_for(tdir, tslug), quote=False)
-        body += (
-            f'{pad}  <p class="topic-related__twin">\n'
-            f'{pad}    Studying {other} instead?\n'
-            f'{pad}    <a class="topic-related__twin-link"'
-            f' href="/revision-notes/{tdir}/{tslug}.html">{name}</a>\n'
-            f'{pad}    covers this on {other}.\n'
-            f'{pad}  </p>\n')
+    if pairs:
+        body += twin_sentence(pairs, pad)
 
     return (
         f'{pad}<nav class="topic-related" aria-label="Related topics">\n'

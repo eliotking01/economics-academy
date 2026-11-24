@@ -2454,3 +2454,41 @@ G1 (option A).**
   unaffected. A visitor who opens search pays about 13 KB more, gzipped.
 - **The cap is still a guard.** Outgrowing 200,000 is a decision again,
   not a number to bump.
+
+### D70 — Twin links across three boards: one twin per other board, and "Edexcel A"
+
+**2026-11-24, Eliot, answering `05-website/drafts/all-boards-parity/review/twins.md`
+Q1-Q9 (all recommendations accepted).**
+
+- **The twin map is directed, with at most one twin per other board.** An
+  Edexcel B page can link to one Edexcel A page and one AQA page, and an
+  Edexcel A or AQA page keeps its existing twin and can gain one B page. The
+  B rows live in their own tables in `scripts/notes_twins.py` (`B_TO_A`,
+  `B_TO_AQA`, `TO_B`). `TWINS`, the Edexcel A <-> AQA table, is unchanged.
+- **One sentence names both twins:** "Studying Edexcel A or AQA instead?
+  [X] covers this on Edexcel A, and [Y] on AQA." A page with one twin keeps
+  the 2026-08-21 shape.
+- **"Edexcel" becomes "Edexcel A"** in the twin sentence on AQA pages.
+  Beside an Edexcel B link the bare name is ambiguous, and the menu already
+  says "Edexcel A".
+- **The B rows are judged on content, not prose similarity.** The B pages
+  were written fresh, so the shingle measure behind `TWINS` scores every B
+  pair at 0.014 or less and says nothing. Each B row was judged on the two
+  pages' `<h2>` sections and defined terms. A twin is linked when it is the
+  other board's home for the B page's main subject; 22 candidates whose main
+  subject is different were dropped, and three loose ones were kept.
+- **Where two B pages compete for one reverse link:** externalities → B
+  1.5.1 (as built, the fuller page, not 4.3.2 as the coverage map planned);
+  exchange rates → B 3.1.5; AQA 2.4.4 → B 4.5.3; AQA 2.6.5 → B 2.4.2.
+- **`dateModified` is not refreshed** (D58 precedent). The twin block is
+  generated chrome; no slice changes.
+- **`notes_twins.board_of_dir` now returns `edexcel-b`** for B directories.
+  It used to return `edexcel` for everything that was not AQA.
+- **Hub-level switch lines** (Q4, then H1-H3 approved the same day). Each
+  of the ten notes hubs names the hubs its topics' twins land in most. The
+  four B hubs gain *"Studying Edexcel A or AQA instead? The Edexcel A [Theme
+  N] notes and the [AQA ... notes] cover much of the same ground."* - "much
+  of", because no B theme maps onto one other theme. The six Edexcel A and
+  AQA hubs keep their sentence (with "Edexcel A" on the AQA two) and gain
+  *"On Edexcel B, the [Theme N] notes cover much of it."* `verify_seo`'s
+  `HUB_TWINS` goes from 8 pairs to 27.

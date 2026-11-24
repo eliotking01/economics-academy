@@ -179,5 +179,47 @@ class TailShapeTests(unittest.TestCase):
             ne.with_tail(bad, "aqa-a2-micro", "1-6-6-the-national-minimum-wage")
 
 
+class TwinTests(unittest.TestCase):
+    """The twin sentence over three boards (D67 Phase 5, 2026-11-24)."""
+
+    def test_board_of_dir_separates_edexcel_b(self):
+        import notes_twins as nt
+        self.assertEqual(nt.board_of_dir("edexcel-theme-3"), "edexcel")
+        self.assertEqual(nt.board_of_dir("edexcel-b-theme-3"), "edexcel-b")
+        self.assertEqual(nt.board_of_dir("aqa-a2-micro"), "aqa")
+
+    def test_at_most_one_twin_per_other_board(self):
+        import notes_twins as nt
+        topics = {(p.parent.name, p.stem) for p in
+                  (ROOT / "notes-data" / "topics").glob("*/*.json")}
+        for key in topics:
+            boards = [nt.board_of_dir(d) for d, _ in nt.twins(*key)]
+            self.assertEqual(len(boards), len(set(boards)), key)
+            self.assertNotIn(nt.board_of_dir(key[0]), boards, key)
+            self.assertEqual(boards, sorted(boards, key=nt.BOARD_ORDER.index))
+
+    def test_one_twin_keeps_the_old_shape(self):
+        out = ne.twin_sentence(
+            [("aqa-a2-micro", "1-5-5-oligopoly")], "")
+        self.assertIn("Studying AQA instead?\n", out)
+        self.assertIn("covers this on AQA.\n", out)
+        self.assertEqual(out.count('class="topic-related__twin-link"'), 1)
+
+    def test_two_twins_one_sentence(self):
+        out = ne.twin_sentence(
+            [("edexcel-theme-3", "3-4-4-oligopoly"),
+             ("aqa-a2-micro", "1-5-5-oligopoly")], "")
+        self.assertIn("Studying Edexcel A or AQA instead?\n", out)
+        self.assertIn("covers this on Edexcel A, and\n", out)
+        self.assertIn("on AQA.\n", out)
+        self.assertEqual(out.count("<p "), 1)
+        self.assertLess(out.index("edexcel-theme-3/"), out.index("aqa-a2-micro/"))
+
+    def test_bare_edexcel_is_gone(self):
+        out = ne.twin_sentence([("edexcel-theme-3", "3-4-4-oligopoly")], "")
+        self.assertIn("Studying Edexcel A instead?", out)
+        self.assertNotIn("Edexcel instead", out)
+
+
 if __name__ == "__main__":
     unittest.main()

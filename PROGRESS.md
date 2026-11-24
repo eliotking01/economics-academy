@@ -152,7 +152,6 @@ anything.
 
 | Item | What it needs |
 | --- | --- |
-| **Twin links** between the B pages and their Edexcel A / AQA counterparts | `notes_twins.board_of_dir` returns `"edexcel"` for every directory that is not AQA, so it treats `edexcel-b-*` as Edexcel A. Fix that first (checked 2026-10-20) |
 | **An Edexcel B glossary** | Staged on `feature/edexcel-b-glossary` (Phase 3, below). Until it launches, the index's glossary line ("with a page for Edexcel A and AQA") stays true and is left alone; its replacement is approved |
 | **National Living Wage on 3.5.3** | Dates every April. Next change: April 2027 |
 | **The other dated figures** | Re-check once a year: the poverty line, aid, the CMA thresholds, Bank Rate history, PPP shares. Sources are in the unit review sheets |
@@ -216,6 +215,31 @@ what changed file by file, how it was verified, and its "things a future
 session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
+
+### All-boards parity — Phase 5, twin links across three boards (2026-11-24) — COMMITTED, NOT PUSHED (branch `feature/edexcel-b-twins`)
+
+Brief §12. The review sheet is `review/twins.md`, approved Q1-Q9 on
+2026-11-24 (D70).
+
+- **`scripts/notes_twins.py`.** `board_of_dir` returns `edexcel-b` for B
+  directories. Three new directed tables (`B_TO_A`, `B_TO_AQA`, `TO_B`) sit
+  beside the unchanged `TWINS`. `twins()` returns at most one twin per other
+  board; `PAIRS` is every declared pair. `main()` checks that each table only
+  crosses its own boundary. Counts: `python3 scripts/notes_twins.py`.
+- **`scripts/notes_extras.py`.** `twin_sentence()` renders one or two twins
+  as one sentence. "Edexcel" became "Edexcel A".
+- **`seo/tools/verify_seo.py`.** Assertion 13 reads `PAIRS`. Assertion 18
+  checks every declared twin, and that a block holds no others.
+- **`scripts/new_topic.py`.** The twin step is shared by both checklists.
+- **Pages.** 175 notes pages rebuilt: every B page that gained a twin, and
+  every Edexcel A / AQA page that gained a B twin or lost the bare
+  "Edexcel". `dateModified` was not moved. Text-Change trailers on all 175.
+- **Hub switch lines** (Q4; H1-H3 approved 2026-11-24). The four B hubs
+  gain a "Studying Edexcel A or AQA instead?" line, and the six Edexcel A
+  and AQA hubs gain an Edexcel B sentence. The sources are in
+  `notes-data/hubs/`, edited by hand. `verify_seo` `HUB_TWINS` goes from 8
+  to 27 pairs. 10 hub pages rebuilt.
+- **Still to do:** push after approval.
 
 ### All-boards parity — Phase 4, Edexcel B past-paper bank (2026-11-16 to 2026-11-17) — LIVE, MERGED 2026-11-17 AS PR #51 (`ce9369ed`, branch `feature/edexcel-b-bank`)
 
