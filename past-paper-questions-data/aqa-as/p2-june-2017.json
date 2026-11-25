@@ -791,7 +791,7 @@
           "text": "the basic rate of income tax."
         }
       ],
-      "usesFigure": true,
+      "usesFigure": false,
       "context": null,
       "questionPaper": {
         "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-question-paper.pdf",
@@ -804,9 +804,7 @@
       },
       "modelAnswer": null,
       "extractionConfidence": "high",
-      "extractionNotes": [
-        "1 line(s) of figure or table text printed with the question are not reproduced; see the question paper"
-      ]
+      "extractionNotes": []
     }
   ]
 }

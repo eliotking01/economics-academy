@@ -406,8 +406,11 @@ SCRIPT_MAX_SIZE = 9.5
 # meets that glyph's right edge, and it sits within half a line of its baseline.
 SCRIPT_X_GAP = 1.0
 SCRIPT_Y_RANGE = 8.0
-# Wrapped option text is indented past the option letter by about 14pt.
-CONTINUATION_INDENT = (10.0, 18.0)
+# Wrapped option text is indented past the option letter by about 14pt; a
+# line that opens with "£" starts up to 18.3pt in, because of the glyph's
+# side bearing (AS P1 June 2017 Q16: "B Exactly 50% ... higher than /
+# £32 100").
+CONTINUATION_INDENT = (10.0, 19.0)
 # A wrapped line sits one line below the line it continues: about 13pt.
 WRAP_LINE_GAP = 16.0
 ALIGN_TOLERANCE = 2.0
@@ -425,7 +428,7 @@ MCQ_TARIFF_RE = re.compile(r"^\[1 mark\]$")
 # false usesFigure on Q20 (Phase 9 dry run, AS Paper 1 June 2016).
 MCQ_FURNITURE_RE = re.compile(
     r"^(?:Turn over for (?:the next question|Section B)|Turn over ►?|Do not write outside the box|"
-    r"END OF SECTION A|QUESTION \d+ IS THE LAST|QUESTION IN SECTION A|"
+    r"END OF SECTION A|QUESTION \d+ IS THE LAST|QUESTION IN SECTION A\.?|"
     r"Section [AB]|\d{1,3}|\*.*|IB/[A-Z]/\S+)$"
 )
 
