@@ -53,6 +53,13 @@
       .replace(/"/g, "&quot;");
   }
 
+  // "1 mark", singular, on the card badge and in the Marks filter: Section A
+  // brought the bank's first 1-mark cards (Eliot, 2026-11-25). The card half
+  // is mirrored in build_past_paper_questions.card_html().
+  function marksLabel(n) {
+    return n + (Number(n) === 1 ? " mark" : " marks");
+  }
+
   /* Bounded Levenshtein: returns true when a and b are within max edits.
    * Bailing out on the row minimum keeps this cheap on long non-matches. */
   function withinDistance(a, b, max) {
@@ -253,7 +260,9 @@
       '<span class="ppq-badge">' +
         escapeHtml(paper.series + " " + paper.year) +
         "</span>",
-      '<span class="ppq-badge ppq-badge-marks">' + q.marks + " marks</span>",
+      '<span class="ppq-badge ppq-badge-marks">' +
+        marksLabel(q.marks) +
+        "</span>",
     ];
     q.groups.forEach(function (slug) {
       var g = groupLabels[groupKey(q.board, slug)];
@@ -673,7 +682,7 @@
         });
       if (filters.marks)
         optionList(filters.marks, marks, function (v) {
-          return v + " marks";
+          return marksLabel(v);
         });
       if (filters.board)
         optionList(

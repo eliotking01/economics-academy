@@ -336,6 +336,19 @@ check(
       -1 &&
     cardA.indexOf("View the extract") === -1,
 );
+// "1 mark", singular (Eliot, 2026-11-25); every other tariff stays plural.
+const oneMark = index.filter((r) => r.q.marks === 1)[0];
+check("card: a 1-mark card exists to check the singular", !!oneMark);
+check(
+  "card: a 1-mark card reads '1 mark', not '1 marks'",
+  !!oneMark &&
+    M.cardHtml(oneMark, data.topics).indexOf(">1 mark<") !== -1 &&
+    M.cardHtml(oneMark, data.topics).indexOf("1 marks") === -1,
+);
+check(
+  "card: a 2-mark-or-more card stays plural",
+  cardB.indexOf(">" + sectionB.q.marks + " marks<") !== -1,
+);
 check(
   "card: Section C is labelled as one of two options",
   cardC.indexOf("One of two options") !== -1,

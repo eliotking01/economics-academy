@@ -609,7 +609,11 @@ def render_card(q, index):
         f'{e(paper["levelLabel"])}</span>',
         f'<span class="ppq-badge ppq-badge-paper">Paper {paper["paper"]}</span>',
         f'<span class="ppq-badge">{e(paper["series"] + " " + str(paper["year"]))}</span>',
-        f'<span class="ppq-badge ppq-badge-marks">{q["marks"]} marks</span>',
+        # "1 mark", singular: Section A brought the bank's first 1-mark
+        # cards (Eliot, 2026-11-25, review/launch-section-a.md W1). Kept
+        # character-equal with cardHtml() in question-search.js.
+        f'<span class="ppq-badge ppq-badge-marks">{q["marks"]} '
+        f'{"mark" if q["marks"] == 1 else "marks"}</span>',
     ]
     # Keyed (board, slug): Edexcel A and Edexcel B both have a theme-1.
     groups = {(b["board"], g["slug"]): g
