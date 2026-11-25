@@ -188,10 +188,7 @@
     ]
   },
   "edexcel-a-p1-2018-jun-q2c": {
-    "topics": [
-      "1-3-3-public-goods",
-      "1-4-1-government-intervention-in-markets"
-    ],
+    "topics": ["1-3-3-public-goods"],
     "keywords": ["public goods", "flood defences", "state provision"]
   },
   "edexcel-a-p1-2018-jun-q3a": {
@@ -459,7 +456,7 @@
     ]
   },
   "edexcel-a-p1-2022-jun-q1a": {
-    "topics": ["3-3-1-revenue"],
+    "topics": ["3-3-1-revenue", "1-2-2-demand"],
     "keywords": ["revenue", "increase in demand", "Disney+"]
   },
   "edexcel-a-p1-2022-jun-q1b": {
@@ -737,7 +734,7 @@
     ]
   },
   "edexcel-a-p1-2024-jun-q3b": {
-    "topics": ["3-2-1-business-objectives", "3-3-1-revenue"],
+    "topics": ["3-2-1-business-objectives"],
     "keywords": ["sales maximisation", "business objectives", "average revenue"]
   },
   "edexcel-a-p1-2024-jun-q4a": {
@@ -841,7 +838,7 @@
     ]
   },
   "edexcel-a-p1-2025-jun-q1b": {
-    "topics": ["3-3-1-revenue"],
+    "topics": ["3-3-1-revenue", "1-2-2-demand"],
     "keywords": ["average revenue", "marginal revenue", "fall in demand"]
   },
   "edexcel-a-p1-2025-jun-q2a": {
@@ -1013,11 +1010,7 @@
     ]
   },
   "edexcel-a-p1-2021-nov-q5b": {
-    "topics": [
-      "3-4-1-efficiency",
-      "3-4-2-perfect-competition",
-      "3-3-4-normal-profits-supernormal-profits-losses"
-    ],
+    "topics": ["3-4-1-efficiency", "3-4-2-perfect-competition"],
     "keywords": [
       "allocative efficiency",
       "productive efficiency",
@@ -1512,11 +1505,7 @@
     "keywords": ["AD/AS diagram", "government spending", "infrastructure"]
   },
   "edexcel-a-p2-2019-jun-q2b": {
-    "topics": [
-      "4-5-1-public-expenditure",
-      "2-2-4-government-expenditure",
-      "2-6-3-supply-side-policies"
-    ],
+    "topics": ["4-5-1-public-expenditure", "2-6-3-supply-side-policies"],
     "keywords": ["infrastructure", "government spending", "capital expenditure"]
   },
   "edexcel-a-p2-2019-jun-q3a": {
@@ -1536,7 +1525,7 @@
     "keywords": ["unit labour costs", "index numbers", "Austria", "calculation"]
   },
   "edexcel-a-p2-2019-jun-q4a": {
-    "topics": ["2-6-3-supply-side-policies", "4-5-2-taxation"],
+    "topics": ["2-6-3-supply-side-policies"],
     "keywords": ["corporation tax", "supply-side policy"]
   },
   "edexcel-a-p2-2019-jun-q4b": {
@@ -1627,11 +1616,11 @@
     ]
   },
   "edexcel-a-p2-2022-jun-q1b": {
-    "topics": ["2-4-2-injections-withdrawals"],
+    "topics": ["2-4-2-injections-withdrawals", "2-4-1-national-income"],
     "keywords": ["injections", "circular flow of income", "investment"]
   },
   "edexcel-a-p2-2022-jun-q2a": {
-    "topics": ["2-2-2-consumption"],
+    "topics": ["2-2-2-consumption", "2-1-2-inflation"],
     "keywords": [
       "house prices",
       "annual percentage change",
@@ -1671,7 +1660,10 @@
     "keywords": ["financial markets", "loans", "small businesses"]
   },
   "edexcel-a-p2-2022-jun-q5b": {
-    "topics": ["4-4-2-market-failure-in-the-financial-sector"],
+    "topics": [
+      "4-4-2-market-failure-in-the-financial-sector",
+      "1-3-4-information-gaps"
+    ],
     "keywords": ["asymmetric information", "loan scheme", "financial sector"]
   },
   "edexcel-a-p2-2022-jun-q6a": {
@@ -2076,7 +2068,7 @@
     ]
   },
   "edexcel-a-p2-2021-nov-q1a": {
-    "topics": ["2-4-2-injections-withdrawals"],
+    "topics": ["2-4-2-injections-withdrawals", "2-4-1-national-income"],
     "keywords": ["withdrawals", "circular flow of income", "taxation"]
   },
   "edexcel-a-p2-2021-nov-q1b": {
@@ -2124,7 +2116,7 @@
     "keywords": ["long-run aggregate supply", "infrastructure", "HS2"]
   },
   "edexcel-a-p2-2021-nov-q4b": {
-    "topics": ["4-5-1-public-expenditure", "2-2-4-government-expenditure"],
+    "topics": ["4-5-1-public-expenditure"],
     "keywords": ["capital expenditure", "current expenditure", "High Speed 2"]
   },
   "edexcel-a-p2-2021-nov-q5a": {
@@ -2254,11 +2246,7 @@
     ]
   },
   "edexcel-a-p2-2020-oct-q5b": {
-    "topics": [
-      "2-5-2-output-gaps",
-      "2-2-4-government-expenditure",
-      "2-6-2-demand-side-policies"
-    ],
+    "topics": ["2-5-2-output-gaps", "2-6-2-demand-side-policies"],
     "keywords": ["negative output gap", "government spending", "fiscal policy"]
   },
   "edexcel-a-p2-2020-oct-q6a": {
@@ -4677,7 +4665,10 @@
     "keywords": ["marginal revenue product", "demand for labour"]
   },
   "aqa-p3-2017-jun-q10": {
-    "topics": ["1-3-5-the-determination-of-equilibrium-market-prices"],
+    "topics": [
+      "1-3-5-the-determination-of-equilibrium-market-prices",
+      "1-3-1-the-determinants-of-the-demand-for-goods-and-services"
+    ],
     "keywords": ["excess demand", "market equilibrium", "price mechanism"]
   },
   "aqa-p3-2017-jun-q11": {
@@ -4700,7 +4691,7 @@
     ]
   },
   "aqa-p3-2017-jun-q14": {
-    "topics": ["2-1-3-uses-of-index-numbers"],
+    "topics": ["2-1-3-uses-of-index-numbers", "2-1-2-macroeconomic-indicators"],
     "keywords": ["index numbers", "base year", "real GDP", "calculation"]
   },
   "aqa-p3-2017-jun-q15": {
@@ -4860,7 +4851,10 @@
     ]
   },
   "aqa-p3-2018-jun-q5": {
-    "topics": ["1-8-9-government-intervention-in-markets"],
+    "topics": [
+      "1-8-9-government-intervention-in-markets",
+      "1-3-5-the-determination-of-equilibrium-market-prices"
+    ],
     "keywords": ["subsidy", "producer revenue", "renewable energy"]
   },
   "aqa-p3-2018-jun-q6": {
@@ -4892,8 +4886,8 @@
   "aqa-p3-2018-jun-q11": {
     "topics": [
       "1-3-2-price-income-and-cross-elasticities-of-demand",
-      "1-3-5-the-determination-of-equilibrium-market-prices",
-      "1-3-4-price-elasticity-of-supply"
+      "1-3-4-price-elasticity-of-supply",
+      "1-3-5-the-determination-of-equilibrium-market-prices"
     ],
     "keywords": [
       "income elasticity of demand",
@@ -5001,8 +4995,9 @@
   },
   "aqa-p3-2018-jun-q27": {
     "topics": [
+      "1-6-3-wage-determination-perfectly-competitive-labour-markets",
       "1-6-2-influence-upon-the-supply-of-labour-to-different-markets",
-      "1-6-3-wage-determination-perfectly-competitive-labour-markets"
+      "1-6-1-the-demand-for-labour-marginal-productivity-theory"
     ],
     "keywords": ["wage differentials", "skilled labour", "supply of labour"]
   },
@@ -5027,8 +5022,7 @@
   "aqa-p3-2018-jun-q30": {
     "topics": [
       "2-3-3-inflation-and-deflation",
-      "2-3-1-economic-growth-and-the-economic-cycle",
-      "2-1-3-uses-of-index-numbers"
+      "2-3-1-economic-growth-and-the-economic-cycle"
     ],
     "keywords": ["recession", "disinflation", "index numbers"]
   },
@@ -5119,8 +5113,8 @@
   "aqa-p3-2019-jun-q10": {
     "topics": [
       "2-5-2-supply-side-policies",
-      "2-2-6-determinants-of-long-run-aggregate-supply",
-      "2-5-1-fiscal-policy"
+      "2-2-2-aggregate-demand-and-aggregate-supply-analysis",
+      "2-3-4-possible-conflicts-between-macroeconomic-policy-objectives"
     ],
     "keywords": [
       "supply-side policies",
@@ -5190,8 +5184,8 @@
   "aqa-p3-2019-jun-q19": {
     "topics": [
       "1-6-1-the-demand-for-labour-marginal-productivity-theory",
-      "2-6-2-trade",
-      "1-3-2-price-income-and-cross-elasticities-of-demand"
+      "1-3-6-the-interrelationship-between-markets",
+      "2-6-2-trade"
     ],
     "keywords": ["dumping", "steel", "derived demand"]
   },
@@ -5211,6 +5205,7 @@
   "aqa-p3-2019-jun-q22": {
     "topics": [
       "1-3-6-the-interrelationship-between-markets",
+      "1-3-3-the-determinants-of-the-supply-of-goods-and-services",
       "1-3-5-the-determination-of-equilibrium-market-prices"
     ],
     "keywords": ["joint supply", "substitutes", "beef and leather"]
@@ -5221,7 +5216,7 @@
   },
   "aqa-p3-2019-jun-q24": {
     "topics": [
-      "2-1-4-uses-of-national-income-data",
+      "2-1-2-macroeconomic-indicators",
       "2-2-1-the-circular-flow-of-income"
     ],
     "keywords": ["real GDP per capita", "nominal GDP", "population growth"]
@@ -5254,7 +5249,7 @@
     "keywords": ["price elasticity of supply", "PES calculation"]
   },
   "aqa-p3-2019-jun-q30": {
-    "topics": ["2-1-3-uses-of-index-numbers"],
+    "topics": ["2-1-3-uses-of-index-numbers", "2-1-2-macroeconomic-indicators"],
     "keywords": ["index numbers", "base year", "GDP", "calculation"]
   },
   "aqa-p3-2019-jun-q31": {
@@ -5324,7 +5319,11 @@
     "keywords": ["customs union", "common external tariff", "trade"]
   },
   "aqa-p3-2020-jun-q8": {
-    "topics": ["1-5-4-monopolistic-competition", "1-4-7-profit"],
+    "topics": [
+      "1-5-4-monopolistic-competition",
+      "1-4-7-profit",
+      "1-5-10-market-structure-efficiency-resource-allocation"
+    ],
     "keywords": [
       "monopolistic competition",
       "long-run equilibrium",
@@ -5463,7 +5462,7 @@
     "keywords": ["perfect competition", "marginal cost", "profit maximisation"]
   },
   "aqa-p3-2020-jun-q29": {
-    "topics": ["2-6-4-exchange-rate-systems"],
+    "topics": ["2-6-4-exchange-rate-systems", "2-6-3-the-balance-of-payments"],
     "keywords": [
       "exchange rate",
       "foreign exchange market",
@@ -5592,8 +5591,8 @@
   "aqa-p3-2021-jun-q15": {
     "topics": [
       "1-6-6-the-national-minimum-wage",
-      "1-7-3-government-policies-poverty-income-distribution",
-      "1-6-1-the-demand-for-labour-marginal-productivity-theory"
+      "1-6-1-the-demand-for-labour-marginal-productivity-theory",
+      "1-7-3-government-policies-poverty-income-distribution"
     ],
     "keywords": [
       "national minimum wage",
@@ -5629,8 +5628,7 @@
   "aqa-p3-2021-jun-q20": {
     "topics": [
       "1-3-2-price-income-and-cross-elasticities-of-demand",
-      "1-4-7-profit",
-      "1-5-4-monopolistic-competition"
+      "1-4-7-profit"
     ],
     "keywords": [
       "unitary price elasticity",
@@ -5650,8 +5648,7 @@
   "aqa-p3-2021-jun-q22": {
     "topics": [
       "2-3-1-economic-growth-and-the-economic-cycle",
-      "2-2-3-the-determinants-of-aggregate-demand",
-      "2-2-2-aggregate-demand-and-aggregate-supply-analysis"
+      "2-2-3-the-determinants-of-aggregate-demand"
     ],
     "keywords": [
       "output gap",
@@ -5665,7 +5662,7 @@
   },
   "aqa-p3-2021-jun-q24": {
     "topics": [
-      "1-3-6-the-interrelationship-between-markets",
+      "1-3-1-the-determinants-of-the-demand-for-goods-and-services",
       "1-3-3-the-determinants-of-the-supply-of-goods-and-services",
       "1-3-5-the-determination-of-equilibrium-market-prices"
     ],
@@ -5691,7 +5688,7 @@
     "keywords": ["supply of labour", "qualifications", "labour market"]
   },
   "aqa-p3-2021-jun-q28": {
-    "topics": ["2-1-3-uses-of-index-numbers"],
+    "topics": ["2-1-3-uses-of-index-numbers", "2-1-2-macroeconomic-indicators"],
     "keywords": ["index numbers", "real GDP", "base year", "calculation"]
   },
   "aqa-p3-2021-jun-q29": {
@@ -5947,6 +5944,7 @@
   "aqa-p3-2023-jun-q1": {
     "topics": [
       "1-3-3-the-determinants-of-the-supply-of-goods-and-services",
+      "1-3-1-the-determinants-of-the-demand-for-goods-and-services",
       "1-3-5-the-determination-of-equilibrium-market-prices"
     ],
     "keywords": ["shift in supply", "movement along demand curve", "lemons"]
@@ -6114,7 +6112,7 @@
   "aqa-p3-2023-jun-q28": {
     "topics": [
       "2-5-2-supply-side-policies",
-      "2-2-6-determinants-of-long-run-aggregate-supply",
+      "2-2-2-aggregate-demand-and-aggregate-supply-analysis",
       "2-6-3-the-balance-of-payments"
     ],
     "keywords": [
@@ -6214,7 +6212,7 @@
   "aqa-p3-2024-jun-q9": {
     "topics": [
       "2-5-2-supply-side-policies",
-      "2-2-6-determinants-of-long-run-aggregate-supply",
+      "2-6-3-the-balance-of-payments",
       "2-3-1-economic-growth-and-the-economic-cycle"
     ],
     "keywords": [
@@ -6232,7 +6230,10 @@
     "keywords": ["monopolistic competition", "long run", "average revenue"]
   },
   "aqa-p3-2024-jun-q12": {
-    "topics": ["1-5-5-oligopoly"],
+    "topics": [
+      "1-5-5-oligopoly",
+      "1-3-2-price-income-and-cross-elasticities-of-demand"
+    ],
     "keywords": ["kinked demand curve", "oligopoly", "price stability"]
   },
   "aqa-p3-2024-jun-q13": {
@@ -6240,10 +6241,7 @@
     "keywords": ["marginal revenue", "total revenue", "calculation"]
   },
   "aqa-p3-2024-jun-q14": {
-    "topics": [
-      "1-8-10-government-failure",
-      "1-8-9-government-intervention-in-markets"
-    ],
+    "topics": ["1-8-10-government-failure"],
     "keywords": [
       "government failure",
       "unintended consequences",
@@ -6284,7 +6282,10 @@
     ]
   },
   "aqa-p3-2024-jun-q20": {
-    "topics": ["1-5-10-market-structure-efficiency-resource-allocation"],
+    "topics": [
+      "1-5-10-market-structure-efficiency-resource-allocation",
+      "1-4-4-costs-of-production"
+    ],
     "keywords": ["productive efficiency", "marginal cost", "average total cost"]
   },
   "aqa-p3-2024-jun-q21": {
@@ -6311,7 +6312,10 @@
     ]
   },
   "aqa-p3-2024-jun-q23": {
-    "topics": ["2-2-6-determinants-of-long-run-aggregate-supply"],
+    "topics": [
+      "2-2-6-determinants-of-long-run-aggregate-supply",
+      "2-2-2-aggregate-demand-and-aggregate-supply-analysis"
+    ],
     "keywords": ["long-run aggregate supply", "immigration", "labour force"]
   },
   "aqa-p3-2024-jun-q24": {
@@ -6342,10 +6346,7 @@
     "keywords": ["disinflation", "price index", "inflation"]
   },
   "aqa-p3-2024-jun-q29": {
-    "topics": [
-      "2-6-5-economic-growth-and-development",
-      "1-8-8-public-ownership-privatisation-regulation-and-deregulation-of-markets"
-    ],
+    "topics": ["2-6-5-economic-growth-and-development"],
     "keywords": [
       "economic development",
       "market-based strategies",
@@ -6410,6 +6411,7 @@
   },
   "aqa-p3-2025-jun-q4": {
     "topics": [
+      "2-5-1-fiscal-policy",
       "2-2-5-determinants-of-short-run-aggregate-supply",
       "2-2-2-aggregate-demand-and-aggregate-supply-analysis"
     ],
@@ -6426,6 +6428,7 @@
   "aqa-p3-2025-jun-q6": {
     "topics": [
       "2-5-1-fiscal-policy",
+      "1-3-2-price-income-and-cross-elasticities-of-demand",
       "1-8-9-government-intervention-in-markets"
     ],
     "keywords": ["taxation", "pattern of economic activity", "externalities"]
@@ -6450,6 +6453,7 @@
   "aqa-p3-2025-jun-q9": {
     "topics": [
       "1-3-6-the-interrelationship-between-markets",
+      "1-3-1-the-determinants-of-the-demand-for-goods-and-services",
       "1-3-5-the-determination-of-equilibrium-market-prices"
     ],
     "keywords": ["composite demand", "land", "soya beans"]
@@ -6489,7 +6493,7 @@
     "topics": [
       "2-3-3-inflation-and-deflation",
       "2-3-2-employment-and-unemployment",
-      "2-1-3-uses-of-index-numbers"
+      "2-3-4-possible-conflicts-between-macroeconomic-policy-objectives"
     ],
     "keywords": ["inflation", "unemployment", "price index"]
   },
@@ -6537,8 +6541,7 @@
   "aqa-p3-2025-jun-q23": {
     "topics": [
       "1-7-2-the-problem-of-poverty",
-      "1-7-3-government-policies-poverty-income-distribution",
-      "2-3-3-inflation-and-deflation"
+      "1-7-3-government-policies-poverty-income-distribution"
     ],
     "keywords": ["relative poverty", "inflation", "necessities"]
   },
@@ -6578,10 +6581,7 @@
     "keywords": ["inflation", "real value", "mortgages"]
   },
   "aqa-p3-2025-jun-q30": {
-    "topics": [
-      "2-1-2-macroeconomic-indicators",
-      "2-1-4-uses-of-national-income-data"
-    ],
+    "topics": ["2-1-2-macroeconomic-indicators"],
     "keywords": ["GDP per capita", "mean", "calculation"]
   },
   "aqa-p3-2025-jun-q31": {
@@ -7039,7 +7039,7 @@
     ]
   },
   "edexcel-as-p1-2019-jun-q4a": {
-    "topics": ["1-2-9-indirect-taxes-subsidies"],
+    "topics": ["1-2-9-indirect-taxes-subsidies", "2-6-2-demand-side-policies"],
     "keywords": ["VAT", "indirect tax", "energy bills", "calculation"]
   },
   "edexcel-as-p1-2019-jun-q4b": {
@@ -7383,7 +7383,7 @@
     "keywords": ["fall in supply", "equilibrium price", "vanilla", "diagram"]
   },
   "edexcel-as-p1-2024-jun-q3a": {
-    "topics": ["1-1-6-types-of-economies"],
+    "topics": ["1-1-6-types-of-economies", "1-2-7-price-mechanism"],
     "keywords": ["free market economy", "price mechanism", "Karl Marx"]
   },
   "edexcel-as-p1-2024-jun-q3b": {
@@ -7633,7 +7633,7 @@
     ]
   },
   "edexcel-as-p1-2020-oct-q5c": {
-    "topics": ["1-2-2-demand", "1-4-1-government-intervention-in-markets"],
+    "topics": ["1-2-2-demand", "1-2-6-price-determination"],
     "keywords": [
       "shift in demand",
       "workplace parking tax",
@@ -7736,7 +7736,7 @@
     "keywords": ["claimant count", "unemployment", "measures of unemployment"]
   },
   "edexcel-as-p2-2016-jun-q4a": {
-    "topics": ["2-1-4-balance-of-payments"],
+    "topics": ["2-1-4-balance-of-payments", "4-1-7-balance-of-payments"],
     "keywords": ["balance of trade", "trade in goods", "trade deficit"]
   },
   "edexcel-as-p2-2016-jun-q4b": {
@@ -7951,7 +7951,7 @@
     ]
   },
   "edexcel-as-p2-2018-jun-q3b": {
-    "topics": ["2-6-2-demand-side-policies", "2-1-2-inflation"],
+    "topics": ["2-6-2-demand-side-policies"],
     "keywords": ["quantitative easing", "inflation", "monetary policy"]
   },
   "edexcel-as-p2-2018-jun-q4a": {
@@ -8175,7 +8175,7 @@
     "keywords": ["nominal GDP per capita", "calculation"]
   },
   "edexcel-as-p2-2022-jun-q3a": {
-    "topics": ["2-1-2-inflation"],
+    "topics": ["2-1-2-inflation", "2-1-1-economic-growth"],
     "keywords": ["real earnings", "nominal earnings", "inflation adjustment"]
   },
   "edexcel-as-p2-2022-jun-q3b": {
@@ -8187,7 +8187,7 @@
     "keywords": ["exchange rate", "definition"]
   },
   "edexcel-as-p2-2022-jun-q4b": {
-    "topics": ["2-2-5-net-trade"],
+    "topics": ["2-2-5-net-trade", "4-1-8-exchange-rates"],
     "keywords": ["exchange rate", "percentage change", "calculation"]
   },
   "edexcel-as-p2-2022-jun-q4c": {
@@ -8412,7 +8412,7 @@
     "keywords": ["budget deficit", "percentage change", "calculation"]
   },
   "edexcel-as-p2-2024-jun-q5c": {
-    "topics": ["2-6-2-demand-side-policies"],
+    "topics": ["2-6-2-demand-side-policies", "4-5-3-public-sector-finances"],
     "keywords": [
       "budget deficit",
       "taxation",
@@ -8521,7 +8521,7 @@
     "keywords": ["indirect tax", "VAT", "taxation"]
   },
   "edexcel-as-p2-2025-jun-q5a": {
-    "topics": ["2-1-4-balance-of-payments"],
+    "topics": ["2-1-4-balance-of-payments", "4-1-7-balance-of-payments"],
     "keywords": ["balance of trade", "imports", "exports"]
   },
   "edexcel-as-p2-2025-jun-q5b": {
@@ -8591,7 +8591,7 @@
     "keywords": ["market-based supply-side policy", "unemployment benefits"]
   },
   "edexcel-as-p2-2020-oct-q3a": {
-    "topics": ["2-1-4-balance-of-payments"],
+    "topics": ["2-1-4-balance-of-payments", "4-1-7-balance-of-payments"],
     "keywords": ["balance of trade", "imports", "exports"]
   },
   "edexcel-as-p2-2020-oct-q3b": {

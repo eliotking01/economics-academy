@@ -470,8 +470,10 @@ QUALIFICATION_PHRASE = {
 # cannot be shown (Phase 7). FIGURE_NOTE is W2, approved by Eliot 2026-11-25
 # (review/phase-7-mcqs.md). OPTIONS_NOTE replaces it when the options
 # themselves are not text - a table's rows, diagrams, fractions or bare
-# letters on a figure - and is a DRAFT until review/mcq-tags.md W3 is
-# answered. Restated character for character in question-search.js;
+# letters on a figure - and is W3 as reworded in review/mcq-tags.md (T3 A,
+# approved by Eliot 2026-11-25): one sentence true for every kind, since the
+# record does not say which kind it is. Restated character for character in
+# question-search.js;
 # scripts/test_question_search.js holds the two together.
 FIGURE_NOTE = ("Uses a table or diagram printed in the paper: open the "
                "question paper to see it.")
