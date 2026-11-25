@@ -455,28 +455,38 @@ def _lines_from_chars(chars):
     attached = []
     # Spaces are included: the space after a subscript is set at the
     # subscript's size and height ("(D1 and D2)", 2017 Q10), and would
-    # otherwise be lost. A space only ever chains; it never starts a script.
+    # otherwise be lost. So is a small space set after a full-size glyph:
+    # AS P1 November 2020 Q12 prints "Q2, the" with the space after the
+    # comma at 7pt, 4pt below the line, and on a line of its own it was
+    # dropped ("Q2,the"). A space joins a line; it never makes a script.
     small = sorted(
         (c for c in chars if c["size"] <= SCRIPT_MAX_SIZE),
         key=lambda c: c["x0"],
     )
     for c in small:
+        is_space = not c["text"].strip()
+        prev = [
+            a
+            for a in attached
+            if abs(a["x1"] - c["x0"]) <= SCRIPT_X_GAP and abs(a["top"] - c["top"]) <= 2.0
+        ]
+        # A space chains to the script it follows before anything else: the
+        # base search would otherwise reach a glyph on the next line down
+        # and carry the space there ("(D1and D2)", P3 June 2017 Q10).
+        if is_space and prev:
+            line_of[id(c)] = line_of[id(prev[-1])]
+            attached.append(c)
+            continue
         base = [
             b
             for b in full
-            if c["text"].strip()
-            and abs(b["x1"] - c["x0"]) <= SCRIPT_X_GAP
+            if abs(b["x1"] - c["x0"]) <= SCRIPT_X_GAP
             and abs(b["top"] - c["top"]) <= SCRIPT_Y_RANGE
         ]
         if base:
             line_of[id(c)] = min(base, key=lambda b: abs(b["x1"] - c["x0"]))["top"]
             attached.append(c)
             continue
-        prev = [
-            a
-            for a in attached
-            if abs(a["x1"] - c["x0"]) <= SCRIPT_X_GAP and abs(a["top"] - c["top"]) <= 2.0
-        ]
         if prev:
             line_of[id(c)] = line_of[id(prev[-1])]
             attached.append(c)
