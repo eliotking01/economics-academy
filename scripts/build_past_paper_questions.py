@@ -942,6 +942,22 @@ def year_span(index, questions):
     return f"set in {years[0]}" if len(questions) == 1 else f"all set in {years[0]}"
 
 
+def level_phrase(index, questions):
+    """Which qualifications' papers a set of questions came from, for the
+    topic and section heroes: "A-Level", "AS" or "A-Level and AS". The same
+    three readings as the notes tail (`notes_extras.past_paper_note()`).
+
+    Both heroes said "A-Level" whatever they held, so an AS-only page named
+    the wrong papers (launch-pastPaperMcqs.md N1, 2026-11-25). An A-Level-only
+    page reads exactly as it always has."""
+    levels = {index["papers"][q["p"]]["level"] for q in questions}
+    if levels == {"as-level"}:
+        return "AS"
+    if "as-level" in levels:
+        return "A-Level and AS"
+    return "A-Level"
+
+
 def static_cards(index, questions):
     """Questions as real HTML, so the page is complete before any script runs."""
     return "\n".join("            " + render_card(q, index) for q in questions)
@@ -1261,7 +1277,7 @@ def render_group_page(index, board, group):
             </h1>
             <p class="ppq-intro">
               {question_count_phrase(len(qs))} from the {e(board["name"])}
-              A-Level Economics papers, {span}, covering
+              {level_phrase(index, qs)} Economics papers, {span}, covering
               {e(group["label"])}. Every question links to the official mark
               scheme at the page its answer begins on.
             </p>
@@ -1434,7 +1450,7 @@ def render_topic_page(index, slug, collisions=frozenset()):
             </h1>
             <p class="ppq-intro">
               {question_count_phrase(len(qs))} on <strong>{e(name)}</strong>
-              ({e(board["name"])} specification {e(t["spec"])}) from the A-Level
+              ({e(board["name"])} specification {e(t["spec"])}) from the {level_phrase(index, qs)}
               Economics papers, {span}. Every question links to the official mark
               scheme at the page its answer begins on.
             </p>

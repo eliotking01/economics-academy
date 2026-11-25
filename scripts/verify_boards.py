@@ -95,7 +95,7 @@ PINNED = {
     "edexcel-a.features.2": "flashcards",
     "edexcel-a.features.3": "glossary",
     "edexcel-a.features.4": "pastPaperBank",
-    "edexcel-a.staged.0": "pastPaperMcqs",
+    "edexcel-a.features.5": "pastPaperMcqs",
     "edexcel-a.names.short": "Edexcel",
     "edexcel-a.names.display": "Edexcel A",
     "edexcel-a.names.long": "Edexcel A-Level Economics A",

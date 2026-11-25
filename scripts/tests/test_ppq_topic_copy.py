@@ -118,6 +118,23 @@ class TitleCollisionTests(unittest.TestCase):
         self.assertEqual(ppq.title_collisions(idx), set())
 
 
+class LevelPhraseTests(unittest.TestCase):
+    """level_phrase() names the papers a page's questions came from (N1)."""
+
+    def phrase(self, levels):
+        idx = {"papers": [{"level": lv} for lv in levels]}
+        return ppq.level_phrase(idx, [{"p": i} for i in range(len(levels))])
+
+    def test_a_level_only_is_unchanged(self):
+        self.assertEqual(self.phrase(["a-level", "a-level"]), "A-Level")
+
+    def test_as_only(self):
+        self.assertEqual(self.phrase(["as-level", "as-level"]), "AS")
+
+    def test_mixed(self):
+        self.assertEqual(self.phrase(["as-level", "a-level"]), "A-Level and AS")
+
+
 class CountPhraseTests(unittest.TestCase):
     def test_singular_and_plural(self):
         self.assertEqual(ppq.question_count_phrase(1), "1 question")
