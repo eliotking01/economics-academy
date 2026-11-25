@@ -218,11 +218,12 @@ session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
 
-### All-boards parity — Phase 7, real exam MCQs (2026-11-25) — AQA LAUNCHED ON THE BRANCH, NOT MERGED (branch `feature/bank-mcqs`, pushed); Edexcel A STAGED
+### All-boards parity — Phase 7, real exam MCQs (2026-11-25) — AQA AND EDEXCEL A LAUNCHED ON THE BRANCH, NOT MERGED (branch `feature/bank-mcqs`, pushed)
 
 Brief §13, D67. The review sheets are `review/phase-7-mcqs.md` (the design,
 answered 1-5 A and W1-W4), `review/mcq-tags.md` (the tags, T1-T3 A) and
-`review/launch-pastPaperMcqs.md` (the AQA launch, M1 A, M2 A).
+`review/launch-pastPaperMcqs.md` (the AQA launch, M1 A, M2 A; the
+Edexcel A launch, N1 A).
 
 - **Family.** `pastPaperMcqs` is a sixth feature in `boards.json`, inside
   the bank, so it can be staged while the bank stays live. Records sit in
@@ -251,13 +252,25 @@ answered 1-5 A and W1-W4), `review/mcq-tags.md` (the tags, T1-T3 A) and
   - Three question-search checks and one notes-tail test assumed no live
     MCQs, and now state the approved design.
   - The full suite passed before the push.
+- **Edexcel A launch** (`9e3a37fc`, sitemap `e2222ee5`, pushed
+  2026-11-25). `/launch-feature edexcel-a pastPaperMcqs`.
+  - The throwaway build minted exactly the 3 approved pages (2.3.1, 3.4.2,
+    4.5.1), and no AQA or Edexcel B file changed.
+  - The bank goes to 1,692 questions, and the Edexcel A hub from 601 to
+    781.
+  - N1: the bank's topic and section heroes said "A-Level Economics
+    papers" whatever they held. `level_phrase()` now says "AS" or
+    "A-Level and AS" where the questions are, on 100 Edexcel A and B
+    pages.
+  - `verify_page_shell.py`'s bank page count was reseeded from 238 to 253,
+    covering both launches. The AQA commit missed it: `pages()` counts
+    tracked files only, so the check passed while the new pages were
+    untracked. **Reseed in the same commit that adds pages.**
 - **Still open.**
-  - Check the pages in Live Server; the list is in the launch hand-over.
-  - Merge into `main` with a merge commit.
-  - Then `/launch-feature edexcel-a pastPaperMcqs` for the 180 Edexcel A
-    MCQs and their 3 pages (2.3.1, 3.4.2, 4.5.1).
-  - Payload size: the master `questions.json` went from 877 KB to 1,102 KB
-    (183 KB gzipped), and Edexcel A will add more. Nothing caps it.
+  - Check the pages in Live Server; the lists are in the two hand-overs.
+  - Merge both launches into `main` in one PR, with a merge commit.
+  - Payload size: the master `questions.json` went from 877 KB before
+    Phase 7 to 1,246 KB (204 KB gzipped). Nothing caps it.
 
 ### All-boards parity — Phase 6, Edexcel A Section A written parts (2026-11-24 to 2026-11-25) — LIVE, MERGED 2026-11-25 AS PR #54 (`96439950`, branch `feature/edexcel-a-section-a`)
 
