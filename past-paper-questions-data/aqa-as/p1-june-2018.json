@@ -846,7 +846,7 @@
           "text": "lower barriers to entry to the online clothes industry."
         }
       ],
-      "usesFigure": true,
+      "usesFigure": false,
       "context": null,
       "questionPaper": {
         "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-question-paper.pdf",
@@ -859,9 +859,7 @@
       },
       "modelAnswer": null,
       "extractionConfidence": "high",
-      "extractionNotes": [
-        "2 line(s) of figure or table text printed with the question are not reproduced; see the question paper"
-      ]
+      "extractionNotes": []
     }
   ]
 }

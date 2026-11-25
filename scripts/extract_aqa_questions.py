@@ -422,13 +422,15 @@ WORD_GAP = 0.2
 # before it.
 SPACE_OVERLAP = 1.0
 MCQ_TARIFF_RE = re.compile(r"^\[1 mark\]$")
-# The AS papers of 2016-2019 close Section A over two lines, "QUESTION 20 IS
-# THE LAST" / "QUESTION IN SECTION A", where Paper 3 and later AS papers print
-# "END OF SECTION A". Unmatched, the two lines read as figure text and set a
-# false usesFigure on Q20 (Phase 9 dry run, AS Paper 1 June 2016).
+# The AS papers of 2016-2019 close Section A over two lines, where Paper 3 and
+# later AS papers print "END OF SECTION A". The break falls in either place:
+# "QUESTION 20 IS THE LAST" / "QUESTION IN SECTION A" (2016; P2 2017 ends
+# "A."), or "QUESTION 20 IS THE" / "LAST QUESTION IN SECTION A" (P1 2017-2019,
+# P2 2018-2019). Unmatched, the two lines read as figure text and set a false
+# usesFigure on Q20 (Phase 9 dry run, AS Paper 1 June 2016; P1 June 2018).
 MCQ_FURNITURE_RE = re.compile(
     r"^(?:Turn over for (?:the next question|Section B)|Turn over ►?|Do not write outside the box|"
-    r"END OF SECTION A|QUESTION \d+ IS THE LAST|QUESTION IN SECTION A\.?|"
+    r"END OF SECTION A|QUESTION \d+ IS THE(?: LAST)?|(?:LAST )?QUESTION IN SECTION A\.?|"
     r"Section [AB]|\d{1,3}|\*.*|IB/[A-Z]/\S+)$"
 )
 
