@@ -23,6 +23,8 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
+| All-boards parity (D67) — Phase 6: Edexcel A Papers 1–2 Section A written parts in the past-paper bank (259 questions, 13 new pages) | live (PR #54) | 2026-11-25 | `96439950` |
+| All-boards parity (D67) — Phase 5: twin links across three boards (185 pages reworded, no new URLs) | live (PR #53) | 2026-11-24 | `f1110a8a` |
 | All-boards parity (D67) — Phase 4: Edexcel B past-paper bank, launched (84 new pages, 362 questions) | live (PR #51) | 2026-11-17 | `ce9369ed` |
 | All-boards parity (D67) — Phase 3: Edexcel B glossary, launched (1 new URL) | live (PR #50) | 2026-11-16 | `b7e12e77` |
 | All-boards parity (D67) — Phase 2: Edexcel B flashcards, all four decks, launched (8 new URLs) | live (PR #49) | 2026-11-12 | `9576a168` |
@@ -152,7 +154,7 @@ anything.
 
 | Item | What it needs |
 | --- | --- |
-| **An Edexcel B glossary** | Staged on `feature/edexcel-b-glossary` (Phase 3, below). Until it launches, the index's glossary line ("with a page for Edexcel A and AQA") stays true and is left alone; its replacement is approved |
+| **An Edexcel B glossary** | **Closed.** Launched in `ba780911` and merged 2026-11-16 as PR #50 (`b7e12e77`), Phase 3 below. The index's glossary card took its approved wording at launch, and "with a page for Edexcel A and AQA" no longer appears on it |
 | **National Living Wage on 3.5.3** | Dates every April. Next change: April 2027 |
 | **The other dated figures** | Re-check once a year: the poverty line, aid, the CMA thresholds, Bank Rate history, PPP shares. Sources are in the unit review sheets |
 
@@ -216,7 +218,57 @@ session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
 
-### All-boards parity — Phase 5, twin links across three boards (2026-11-24) — COMMITTED, NOT PUSHED (branch `feature/edexcel-b-twins`)
+### All-boards parity — Phase 6, Edexcel A Section A written parts (2026-11-24 to 2026-11-25) — LIVE, MERGED 2026-11-25 AS PR #54 (`96439950`, branch `feature/edexcel-a-section-a`)
+
+Brief §13. The review sheets are `review/phase-6-section-a.md` (the split
+and the card shape), `review/section-a-tags.md` (the tags, answered
+2026-11-24) and `review/launch-section-a.md` (W1-W3, answered 2026-11-25).
+
+- **Scope.** Section A of every 9EC0 and 8EC0 Paper 1 and 2, 36 papers:
+  **259 written parts**, 124 A Level and 135 AS. A part is an MCQ if and
+  only if it prints A-D answer boxes; each question's one 1-mark MCQ is
+  not extracted and waits for Phase 7.
+- **Extraction** (`a112e1fe`). `extractSectionA()` in
+  `scripts/extract_past_paper_questions.swift`. Each card carries its
+  question's stem and lead-ins verbatim, then its own text; sub-parts stay
+  inside their part with the marks summed. A part printed on a later page
+  than its stem links back to it: "Question N as printed". One glued table
+  cell is removed by a named exception that fails loudly if the layout
+  changes. Every existing record, and every Edexcel B and Paper 3 file, is
+  byte-identical, and a re-run changes nothing.
+- **Verification.** `verify_past_paper_extraction.swift` gains Section A
+  checks: words come off the pages in runs, the closing run is on the
+  part's page, no card reads as an MCQ, and each question sits exactly one
+  mark short of its printed total. Planted errors were caught three times
+  out of four; the fourth, the glued-cell class, only the rendered page
+  shows.
+- **Tags** (`08e5466a`, `a3a315e5`). A first pass in `tags.json`, then a
+  blind `cold-solver` pass that agreed exactly on 182 of 259. Eliot took
+  option A on R1-R4 and the recommendation on all 80 rows, so 63 entries
+  changed. R5 approved the 13 new topic pages (D60 gate of 2); every
+  existing topic page keeps its place.
+- **Pages** (`a3a315e5`). 13 new topic pages under
+  `/past-paper-questions/edexcel/`. The bank goes from 983 to 1242
+  questions and the Edexcel A hub from 342 to 601. 72 Edexcel A notes
+  pages show new "real exam questions" counts, and on 8 of them the
+  past-paper link now points at a new topic page instead of a search
+  (Markup-Change).
+- **Wording** (`review/launch-section-a.md`). W1: "1 mark", singular, on
+  the bank's first 1-mark cards (45 parts) and the Marks filter
+  (`88aa1b55`). W2 option A and W3: the Edexcel A and Edexcel B hubs and
+  the master page name both qualifications, A Level and AS, through
+  `QUALIFICATION_PHRASE` in `build_past_paper_questions.py` (`a6e5d03d`).
+  AQA and `boards.json` are unchanged.
+- **The pinned count missed again.** `a3a315e5` added the 13 pages but
+  left `verify_page_shell`'s `ppq` count at 225; it passed until the
+  pages were committed. Reseeded to 238 in `88aa1b55`. This is the Phase 4
+  lesson recurring: **run the whole suite again after the commit that
+  adds pages.**
+- **Documentation.** The scope table in
+  `past-paper-questions-data/CLAUDE.md` records Section A as built.
+- **Merged 2026-11-25 as PR #54 (`96439950`).**
+
+### All-boards parity — Phase 5, twin links across three boards (2026-11-24) — LIVE, MERGED 2026-11-24 AS PR #53 (`f1110a8a`, branch `feature/edexcel-b-twins`)
 
 Brief §12. The review sheet is `review/twins.md`, approved Q1-Q9 on
 2026-11-24 (D70).
@@ -239,7 +291,7 @@ Brief §12. The review sheet is `review/twins.md`, approved Q1-Q9 on
   and AQA hubs gain an Edexcel B sentence. The sources are in
   `notes-data/hubs/`, edited by hand. `verify_seo` `HUB_TWINS` goes from 8
   to 27 pairs. 10 hub pages rebuilt.
-- **Still to do:** push after approval.
+- **Merged 2026-11-24 as PR #53 (`f1110a8a`).**
 
 ### All-boards parity — Phase 4, Edexcel B past-paper bank (2026-11-16 to 2026-11-17) — LIVE, MERGED 2026-11-17 AS PR #51 (`ce9369ed`, branch `feature/edexcel-b-bank`)
 
