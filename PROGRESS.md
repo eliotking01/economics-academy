@@ -23,7 +23,7 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| All-boards parity (D67) — Phase 9: AQA AS (7135) Section A MCQs in the past-paper bank (360 questions, about 3 new pages) | in progress: design approved (D71), extractor ready; extraction and tagging not started (branch `feature/aqa-as-mcqs`) | — | — |
+| All-boards parity (D67) — Phase 9: AQA AS (7135) Section A MCQs in the past-paper bank (360 questions, about 3 new pages) | in progress: design approved (D71), 360 extracted and verified (untagged, unpublished); tagging next (branch `feature/aqa-as-mcqs`) | — | — |
 | All-boards parity (D67) — Phase 7: real exam MCQs in the past-paper bank, AQA and Edexcel A (450 questions, 15 new pages) | live (PR #56) | 2026-11-25 | `ed377dc7` |
 | All-boards parity (D67) — Phase 6: Edexcel A Papers 1–2 Section A written parts in the past-paper bank (259 questions, 13 new pages) | live (PR #54) | 2026-11-25 | `96439950` |
 | All-boards parity (D67) — Phase 5: twin links across three boards (185 pages reworded, no new URLs) | live (PR #53) | 2026-11-24 | `f1110a8a` |
@@ -241,9 +241,15 @@ records, is `review/phase-9-dry-run.html`.
   The verifier's M4 counts twenty on AS. `aqa-as` is in `BANK_DIRS`.
   `test_question_search.js` holds AS as shared once every board sets it,
   and gains an AQA AS block that runs once the data has one.
-- **Next.** Extract, which adds `past-paper-questions-data/aqa-as` to the
-  verifier's `dataDirs` and moves the scope row in
-  `past-paper-questions-data/CLAUDE.md`. Then tag: a first pass, a blind
+- **Done: extraction (2026-11-25).** All 18 papers, 20 records each, every
+  one high confidence with its key-list page and no answer field;
+  `verify_past_paper_extraction.swift` reads `aqa-as/` (M1–M5, M4 at
+  twenty) and passes. One more extractor fix: an option that wraps back to
+  the letter column rather than the indent (AS P2 June 2016 Q4 "…and a
+  higher / exchange rate") continues the option above when it sits between
+  two option rows. The 27 A-level files are still byte-identical. Untagged,
+  so nothing publishes.
+- **Next.** Tag: a first pass, a blind
   `cold-solver` pass, a disagreements sheet, and the page list
   (1.1.2, 1.1.3, 1.4.2 are the only AQA topics left below the gate). At
   launch, `QUALIFICATION_PHRASE` gains its `aqa` entry (W1–W3, "A Level

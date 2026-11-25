@@ -1,0 +1,871 @@
+{
+  "qualification": "AS Economics (7135)",
+  "board": "aqa",
+  "boardName": "AQA",
+  "level": "as-level",
+  "paper": 2,
+  "paperName": "The National Economy in a Global Context",
+  "year": 2024,
+  "series": "June",
+  "seriesSlug": "june-2024",
+  "questionPaperUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-question-paper.pdf",
+  "markSchemeUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-mark-scheme.pdf",
+  "problems": [],
+  "questions": [
+    {
+      "id": "aqa-as-p2-2024-jun-q1",
+      "section": "A",
+      "questionNumber": "1",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following is a measure of productivity?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Employment divided by output"
+        },
+        {
+          "letter": "B",
+          "text": "Output of goods per worker"
+        },
+        {
+          "letter": "C",
+          "text": "Production multiplied by quantity of labour"
+        },
+        {
+          "letter": "D",
+          "text": "Volume of goods produced"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-question-paper.pdf",
+        "page": 2
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p2-2024-jun-q2",
+      "section": "A",
+      "questionNumber": "2",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Between 2021 and 2022, the weight applied to the restaurant and hotels sector in the Consumer Prices Index rose from 97 to 102. As a result of this change, it must be true that",
+      "options": [
+        {
+          "letter": "A",
+          "text": "average prices in the restaurant and hotels sector rose by just over 5% between 2021 and 2022."
+        },
+        {
+          "letter": "B",
+          "text": "restaurant and hotel prices rose by less than the overall average for consumer prices in 2021."
+        },
+        {
+          "letter": "C",
+          "text": "the proportion of average consumer expenditure relating to restaurants and hotels rose in 2022."
+        },
+        {
+          "letter": "D",
+          "text": "total consumer expenditure on restaurant and hotel services was higher in 2022 than in 2021."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-question-paper.pdf",
+        "page": 2
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p2-2024-jun-q3",
+      "section": "A",
+      "questionNumber": "3",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Table 1 shows selected data for a country for 2022 and 2023. The country’s national income was in equilibrium in 2022 and 2023. All other things being equal, which one of the following is most likely to have occurred in this country in 2023 to maintain equilibrium national income?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A decrease in tax revenue"
+        },
+        {
+          "letter": "B",
+          "text": "A fall in the value of imports"
+        },
+        {
+          "letter": "C",
+          "text": "A rise in the budget deficit"
+        },
+        {
+          "letter": "D",
+          "text": "An increase in savings"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-question-paper.pdf",
+        "page": 3
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "5 line(s) of figure or table text printed with the question are not reproduced; see the question paper"
+      ]
+    },
+    {
+      "id": "aqa-as-p2-2024-jun-q4",
+      "section": "A",
+      "questionNumber": "4",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "An aggregate demand and short-run aggregate supply diagram is used to illustrate the effect of a rise in imports of goods and services into an economy. All other things being equal, which one of the following would be shown on the diagram?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A leftward movement along the aggregate demand curve"
+        },
+        {
+          "letter": "B",
+          "text": "A leftward movement along the short-run aggregate supply curve"
+        },
+        {
+          "letter": "C",
+          "text": "A rightward shift of the aggregate demand curve"
+        },
+        {
+          "letter": "D",
+          "text": "A rightward shift of the short-run aggregate supply curve"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-question-paper.pdf",
+        "page": 3
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p2-2024-jun-q5",
+      "section": "A",
+      "questionNumber": "5",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "All other things being equal, which one of the following is the most likely cause of a reduction in a country’s surplus on its balance of payments on current account?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A depreciation in the exchange rate"
+        },
+        {
+          "letter": "B",
+          "text": "Contractionary fiscal policy"
+        },
+        {
+          "letter": "C",
+          "text": "Falling labour productivity"
+        },
+        {
+          "letter": "D",
+          "text": "Growth in export markets"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-question-paper.pdf",
+        "page": 4
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p2-2024-jun-q6",
+      "section": "A",
+      "questionNumber": "6",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Disinflation exists when",
+      "options": [
+        {
+          "letter": "A",
+          "text": "an economy experiences a fall in the cost of living."
+        },
+        {
+          "letter": "B",
+          "text": "deflation has occurred for two or more successive quarters."
+        },
+        {
+          "letter": "C",
+          "text": "nominal incomes are rising more slowly than prices."
+        },
+        {
+          "letter": "D",
+          "text": "the price level is rising less quickly than previously."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-question-paper.pdf",
+        "page": 4
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p2-2024-jun-q7",
+      "section": "A",
+      "questionNumber": "7",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following is most likely to cause a rightward shift of the long-run aggregate supply curve?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A fall in the supply of credit"
+        },
+        {
+          "letter": "B",
+          "text": "A reduction in geographical immobility of labour"
+        },
+        {
+          "letter": "C",
+          "text": "A rise in the cost of new technology"
+        },
+        {
+          "letter": "D",
+          "text": "An increase in welfare benefit payments"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-question-paper.pdf",
+        "page": 4
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p2-2024-jun-q8",
+      "section": "A",
+      "questionNumber": "8",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Figure 1 shows the rate of unemployment in an economy over a period of time. At which one of the following points was the economy most likely to be in the recovery phase of the economic cycle?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Point A"
+        },
+        {
+          "letter": "B",
+          "text": "Point B"
+        },
+        {
+          "letter": "C",
+          "text": "Point C"
+        },
+        {
+          "letter": "D",
+          "text": "Point D"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-question-paper.pdf",
+        "page": 5
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "1 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the question prints a diagram or chart (an image)"
+      ]
+    },
+    {
+      "id": "aqa-as-p2-2024-jun-q9",
+      "section": "A",
+      "questionNumber": "9",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which type of unemployment is caused by a fall in aggregate demand leading to a fall in the demand for labour?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Cyclical"
+        },
+        {
+          "letter": "B",
+          "text": "Frictional"
+        },
+        {
+          "letter": "C",
+          "text": "Seasonal"
+        },
+        {
+          "letter": "D",
+          "text": "Structural"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-question-paper.pdf",
+        "page": 6
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p2-2024-jun-q10",
+      "section": "A",
+      "questionNumber": "10",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Country W is operating at its normal capacity level of output. When one of its trading partners experiences economic growth, this leads to a rise in demand for Country W’s exports. All other things being equal, what is the most likely consequence of this for Country W?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A fall in employment and a reduction in cost-push inflation"
+        },
+        {
+          "letter": "B",
+          "text": "A negative output gap and a period of disinflation"
+        },
+        {
+          "letter": "C",
+          "text": "A positive output gap and an increase in demand-pull inflation"
+        },
+        {
+          "letter": "D",
+          "text": "An increase in unemployment and a fall in the price level"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-question-paper.pdf",
+        "page": 6
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p2-2024-jun-q11",
+      "section": "A",
+      "questionNumber": "11",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following explains the operation of the accelerator process in an economy?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Increasing investment leads to a rise in aggregate demand"
+        },
+        {
+          "letter": "B",
+          "text": "National income increases as a result of rising investment"
+        },
+        {
+          "letter": "C",
+          "text": "National income rises as a result of an increase in aggregate demand"
+        },
+        {
+          "letter": "D",
+          "text": "Rising national income leads to an increase in investment"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-question-paper.pdf",
+        "page": 7
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p2-2024-jun-q12",
+      "section": "A",
+      "questionNumber": "12",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "A government is considering how to fund additional spending on healthcare. One option is to raise the rate of tax charged on the whole of firms’ profits from 19% to 25%. All other things being equal, for every 10 firms earning profits of £1 million, by how much could the government increase its spending on healthcare without affecting the budget balance?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "£60 000"
+        },
+        {
+          "letter": "B",
+          "text": "£250 000"
+        },
+        {
+          "letter": "C",
+          "text": "£600 000"
+        },
+        {
+          "letter": "D",
+          "text": "£2 500 000"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-question-paper.pdf",
+        "page": 7
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p2-2024-jun-q13",
+      "section": "A",
+      "questionNumber": "13",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Figure 2 shows the aggregate demand (AD), short-run aggregate supply (SRAS) and long-run aggregate supply (LRAS) curves for an economy. All other things being equal, which one of the following is the most likely consequence for firms if an increase in government spending shifts the aggregate demand curve from AD to AD2?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Increase in spare capacity"
+        },
+        {
+          "letter": "B",
+          "text": "Less corporation tax is paid"
+        },
+        {
+          "letter": "C",
+          "text": "More goods are exported"
+        },
+        {
+          "letter": "D",
+          "text": "Shortages of skilled labour"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-question-paper.pdf",
+        "page": 8
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "1 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the question prints a diagram or chart (an image)",
+        "1 subscript or superscript glyph(s) set flush against their base"
+      ]
+    },
+    {
+      "id": "aqa-as-p2-2024-jun-q14",
+      "section": "A",
+      "questionNumber": "14",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following statements regarding UK monetary policy is true?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "The central bank considers the government’s fiscal policy when setting Bank Rate."
+        },
+        {
+          "letter": "B",
+          "text": "The central bank is responsible for setting the rate of corporation tax."
+        },
+        {
+          "letter": "C",
+          "text": "The central bank sets the target rate of inflation as measured by the Consumer Prices Index."
+        },
+        {
+          "letter": "D",
+          "text": "The central bank’s decisions do not affect the government’s budget balance."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-question-paper.pdf",
+        "page": 8
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p2-2024-jun-q15",
+      "section": "A",
+      "questionNumber": "15",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "A firm spent £12m on capital goods and its exports increased by £8m. As a result, national income increased by £24m. All other things being equal, what is the value of the multiplier?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "0.8"
+        },
+        {
+          "letter": "B",
+          "text": "1.2"
+        },
+        {
+          "letter": "C",
+          "text": "2"
+        },
+        {
+          "letter": "D",
+          "text": "3"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-question-paper.pdf",
+        "page": 9
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p2-2024-jun-q16",
+      "section": "A",
+      "questionNumber": "16",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "A government is concerned that aggregate demand is growing faster than the productive capacity of the economy. In addition, the deficit on its balance of payments on current account has worsened. Which one of the following policies is most likely to both reduce aggregate demand and help improve the balance of payments position?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A reduction in interest rates to cut mortgage repayments and lower the exchange rate"
+        },
+        {
+          "letter": "B",
+          "text": "A reduction in taxes on company profits to encourage more innovation and investment"
+        },
+        {
+          "letter": "C",
+          "text": "An increase in government borrowing to fund infrastructure spending and improve productivity"
+        },
+        {
+          "letter": "D",
+          "text": "An increase in tax rates and a reduction in welfare payments to create a budget surplus"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-question-paper.pdf",
+        "page": 9
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p2-2024-jun-q17",
+      "section": "A",
+      "questionNumber": "17",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Figure 3 shows the demand (D) and supply (S) curves for a good in a market. The diagram shows a shift of the supply curve for the good from S1 to S2 caused by the removal of a subsidy. All other things being equal, which one of the following is the most likely consequence of this action?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A change in the pattern of economic activity"
+        },
+        {
+          "letter": "B",
+          "text": "A decrease in the budget surplus"
+        },
+        {
+          "letter": "C",
+          "text": "A reduction in the balance of payments deficit"
+        },
+        {
+          "letter": "D",
+          "text": "An increase in direct tax revenue"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-question-paper.pdf",
+        "page": 10
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "1 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the question prints a diagram or chart (an image)",
+        "2 subscript or superscript glyph(s) set flush against their base"
+      ]
+    },
+    {
+      "id": "aqa-as-p2-2024-jun-q18",
+      "section": "A",
+      "questionNumber": "18",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Between October 2022 and July 2023, the value of the US Dollar (US$) in terms of the Swiss Franc (CHF) changed from US$ 1 = CHF 1 to US$ 1 = CHF 0.87. All other things being equal, this means that",
+      "options": [
+        {
+          "letter": "A",
+          "text": "the Swiss Franc and the US Dollar are no longer in equilibrium."
+        },
+        {
+          "letter": "B",
+          "text": "the Swiss Franc has become weaker against the US Dollar."
+        },
+        {
+          "letter": "C",
+          "text": "the volume of exports from Switzerland to the USA is likely to increase."
+        },
+        {
+          "letter": "D",
+          "text": "the volume of imports to Switzerland from the USA is likely to increase."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-question-paper.pdf",
+        "page": 11
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p2-2024-jun-q19",
+      "section": "A",
+      "questionNumber": "19",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Table 2 shows the indices of labour productivity and real GDP for Country A and Country B for 2 years. Which one of the following can be concluded from the data?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "In Year 2, labour productivity and real GDP were higher in Country A than Country B."
+        },
+        {
+          "letter": "B",
+          "text": "In Year 2, real GDP per capita was higher in Country A than Country B."
+        },
+        {
+          "letter": "C",
+          "text": "Labour productivity and real GDP grew more quickly in Country A than Country B over the period."
+        },
+        {
+          "letter": "D",
+          "text": "Real GDP per capita grew more quickly in Country A than in Country B."
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-question-paper.pdf",
+        "page": 11
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "5 line(s) of figure or table text printed with the question are not reproduced; see the question paper"
+      ]
+    },
+    {
+      "id": "aqa-as-p2-2024-jun-q20",
+      "section": "A",
+      "questionNumber": "20",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following is most likely to bring about a supply-side improvement in an economy? A fall in",
+      "options": [
+        {
+          "letter": "A",
+          "text": "company profits"
+        },
+        {
+          "letter": "B",
+          "text": "incentives for enterprise"
+        },
+        {
+          "letter": "C",
+          "text": "income tax rates"
+        },
+        {
+          "letter": "D",
+          "text": "labour productivity"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-question-paper.pdf",
+        "page": 12
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2024-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    }
+  ]
+}

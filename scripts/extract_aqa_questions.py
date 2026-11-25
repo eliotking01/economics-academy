@@ -408,6 +408,8 @@ SCRIPT_X_GAP = 1.0
 SCRIPT_Y_RANGE = 8.0
 # Wrapped option text is indented past the option letter by about 14pt.
 CONTINUATION_INDENT = (10.0, 18.0)
+# A wrapped line sits one line below the line it continues: about 13pt.
+WRAP_LINE_GAP = 16.0
 ALIGN_TOLERANCE = 2.0
 STEM_TOLERANCE = 5.0
 CELL_GAP = 15.0
@@ -682,7 +684,7 @@ def extract_mcqs(pdf, count=MCQ_COUNT):
         start_top = rows[0]["top"] if rows else None
 
         stem, options, order, dropped, trailing, closed = [], {}, [], [], [], False
-        current = None
+        current, last_top = None, None
         for ln in lines:
             t = ln["text"]
             if MCQ_FURNITURE_RE.match(t):
@@ -702,6 +704,7 @@ def extract_mcqs(pdf, count=MCQ_COUNT):
                 current = t[0]
                 order.append(current)
                 options[current] = [t[2:]] if len(t) > 2 else []
+                last_top = ln["top"]
             elif (
                 current
                 and CONTINUATION_INDENT[0] <= ln["x0"] - col <= CONTINUATION_INDENT[1]
@@ -709,8 +712,23 @@ def extract_mcqs(pdf, count=MCQ_COUNT):
                 and not ln["cells"]
             ):
                 options[current].append(t)
+                last_top = ln["top"]
             elif ln is first or (near and (start_top is None or ln["top"] < start_top)):
                 stem.append(t)
+            elif (
+                current
+                and near
+                and not ln["bold"]
+                and ln["top"] - last_top <= WRAP_LINE_GAP
+                and any(r["top"] > ln["top"] for r in rows)
+            ):
+                # An option wrapped back to the letter column rather than to
+                # the indent (AS P2 June 2016 Q4: "B More government spending
+                # on training and a higher / exchange rate"). Only between two
+                # option rows and directly under the line above; after D it is
+                # still reported below.
+                options[current].append(t)
+                last_top = ln["top"]
             elif current and near:
                 # Prose at the text column after the options: nothing should
                 # be printed there, so it is reported rather than guessed at.

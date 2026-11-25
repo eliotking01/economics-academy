@@ -1,6 +1,7 @@
 // Independently verify the Edexcel A and Edexcel B extraction data
 // (past-paper-questions-data/edexcel-{a,a-as,b,b-as}/*.json), and AQA's
-// Paper 3 multiple choice (aqa/p3-*.json), against the PDFs.
+// Paper 3 multiple choice (aqa/p3-*.json) and its AS Section A multiple
+// choice (aqa-as/*.json, D71), against the PDFs.
 //
 //   swift scripts/verify_past_paper_extraction.swift
 //
@@ -334,6 +335,9 @@ let dataDirs = [
     // Phase 7: AQA's Paper 3 MCQs only. Its written records are not checked
     // here (see the AQA guard in the loop).
     "past-paper-questions-data/aqa",
+    // Phase 9 (D71): AQA AS Section A, twenty MCQs per paper. Every record in
+    // these files is an MCQ, so every file is read.
+    "past-paper-questions-data/aqa-as",
 ]
 var files: [(dir: String, name: String)] = []
 for dir in dataDirs {
