@@ -45,6 +45,30 @@
       "extractionNotes": ["the question number is not in the text layer; the stem is read from the start of the question"]
     },
     {
+      "id": "edexcel-as-p2-2019-jun-q1c",
+      "section": "A",
+      "questionNumber": "1(c)",
+      "parentQuestion": "1",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "It is estimated that building a second runway at Gatwick airport will require an investment of £9.3 billion. The total increase in UK GDP as a result of this injection is expected to be around £44.1 billion. Which one of the following is a likely cause of a decrease in the value of the UK’s multiplier?",
+      "sourceAttribution": "(Source: adapted from www.gov.uk/government/uploads/system/uploads/attachment_ data/file/ 452267/AC01_tagged_amend_25_11.pdf © Crown Copyright)",
+      "options": [
+        { "letter": "A", "text": "A decrease in the marginal propensity to save" },
+        { "letter": "B", "text": "A decrease in the marginal propensity to tax" },
+        { "letter": "C", "text": "An increase in the marginal propensity to consume" },
+        { "letter": "D", "text": "An increase in the marginal propensity to import" }
+      ],
+      "usesFigure": false,
+      "context": { "type": "question", "label": "Question 1 as printed", "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2019-question-paper.pdf", "page": 2 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2019-question-paper.pdf", "page": 3 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2019-mark-scheme.pdf", "page": 4, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["the question number is not in the text layer; the stem is read from the start of the question"]
+    },
+    {
       "id": "edexcel-as-p2-2019-jun-q2a",
       "section": "A",
       "questionNumber": "2(a)",
@@ -75,6 +99,29 @@
       "extractionNotes": ["no stem text found above the parts", "figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
+      "id": "edexcel-as-p2-2019-jun-q2c",
+      "section": "A",
+      "questionNumber": "2(c)",
+      "parentQuestion": "2",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following is most likely to cause a movement along the AS curve? Changes in:",
+      "options": [
+        { "letter": "A", "text": "competition policy" },
+        { "letter": "B", "text": "relative productivity" },
+        { "letter": "C", "text": "the cost of raw materials" },
+        { "letter": "D", "text": "the level of aggregate demand" }
+      ],
+      "usesFigure": false,
+      "context": { "type": "question", "label": "Question 2 as printed", "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2019-question-paper.pdf", "page": 4 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2019-question-paper.pdf", "page": 5 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2019-mark-scheme.pdf", "page": 5, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-as-p2-2019-jun-q3a",
       "section": "A",
       "questionNumber": "3(a)",
@@ -85,6 +132,30 @@
       "sourceAttribution": "(Source: adapted from https://www.ons.gov.uk/employmentandlabourmarket/peoplenotinwork/unemployment/timeseries/mgsx Crown Copyright)",
       "context": null,
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2019-question-paper.pdf", "page": 6 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2019-mark-scheme.pdf", "page": 6, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-as-p2-2019-jun-q3b",
+      "section": "A",
+      "questionNumber": "3(b)",
+      "parentQuestion": "3",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "UK unemployment rate as a % of all those economically active, seasonally adjusted, from 2008 to 2018 Which one of the following policies is most likely to reduce the unemployment rate in the UK?",
+      "sourceAttribution": "(Source: adapted from https://www.ons.gov.uk/employmentandlabourmarket/peoplenotinwork/unemployment/timeseries/mgsx Crown Copyright)",
+      "options": [
+        { "letter": "A", "text": "A decrease in direct taxes on company profits" },
+        { "letter": "B", "text": "A decrease in quantitative easing" },
+        { "letter": "C", "text": "An increase in government payments to the unemployed" },
+        { "letter": "D", "text": "An increase in the UK base interest rate" }
+      ],
+      "usesFigure": true,
+      "context": { "type": "question", "label": "Question 3 as printed", "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2019-question-paper.pdf", "page": 6 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2019-question-paper.pdf", "page": 7 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2019-mark-scheme.pdf", "page": 6, "verified": true },
       "modelAnswer": null,
       "extractionConfidence": "high",
@@ -116,6 +187,52 @@
       "context": null,
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2019-question-paper.pdf", "page": 8 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2019-mark-scheme.pdf", "page": 7, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-as-p2-2019-jun-q4c",
+      "section": "A",
+      "questionNumber": "4(c)",
+      "parentQuestion": "4",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The diagram below shows the aggregate demand (AD) and a possible long-run aggregate supply (LRAS) for the UK. Which one of the following is an interventionist supply-side policy?",
+      "options": [
+        { "letter": "A", "text": "An improvement in infrastructure" },
+        { "letter": "B", "text": "An increase in indirect taxation" },
+        { "letter": "C", "text": "An increase in interest rates" },
+        { "letter": "D", "text": "An increase in the regulation of markets" }
+      ],
+      "usesFigure": true,
+      "context": { "type": "question", "label": "Question 4 as printed", "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2019-question-paper.pdf", "page": 8 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2019-question-paper.pdf", "page": 9 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2019-mark-scheme.pdf", "page": 7, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-as-p2-2019-jun-q5a",
+      "section": "A",
+      "questionNumber": "5(a)",
+      "parentQuestion": "5",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The table below shows average UK house prices between July 2014 and July 2017. Which one of the following is the most likely impact of an increase in average UK house prices on existing homeowners?",
+      "options": [
+        { "letter": "A", "text": "Greater confidence" },
+        { "letter": "B", "text": "Higher income" },
+        { "letter": "C", "text": "Lower consumption" },
+        { "letter": "D", "text": "Negative wealth effect" }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2019-question-paper.pdf", "page": 10 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2019-mark-scheme.pdf", "page": 8, "verified": true },
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]

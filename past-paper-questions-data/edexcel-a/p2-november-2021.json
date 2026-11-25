@@ -13,6 +13,30 @@
   "problems": [],
   "questions": [
     {
+      "id": "edexcel-a-p2-2021-nov-q1a",
+      "section": "A",
+      "questionNumber": "1(a)",
+      "parentQuestion": "1",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "After the Global Financial Crisis of 2008, the US President introduced expansionary fiscal policies of $800 billion. The International Monetary Fund estimated that the multiplier at the time was approximately 1.5. Which one of the following is a withdrawal from the circular flow of income?",
+      "sourceAttribution": "(Source adapted from: https://www.economist.com/the-economist-explains/2016/09/07/what-is-the-keynesian-multiplier)",
+      "options": [
+        { "letter": "A", "text": "Exports" },
+        { "letter": "B", "text": "Government spending" },
+        { "letter": "C", "text": "Investment" },
+        { "letter": "D", "text": "Taxation" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-november-2021-question-paper.pdf", "page": 2 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-november-2021-mark-scheme.pdf", "page": 4, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-a-p2-2021-nov-q1b",
       "section": "A",
       "questionNumber": "1(b)",
@@ -45,6 +69,24 @@
       "extractionNotes": []
     },
     {
+      "id": "edexcel-a-p2-2021-nov-q2a",
+      "section": "A",
+      "questionNumber": "2(a)",
+      "parentQuestion": "2",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following diagrams illustrates the impact of an increase in net exports along a Keynesian long-run aggregate supply curve?",
+      "options": null,
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-november-2021-question-paper.pdf", "page": 4 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-november-2021-mark-scheme.pdf", "page": 5, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["the options are bare letters beside a table or figure; only the letters are text", "figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
       "id": "edexcel-a-p2-2021-nov-q2b",
       "section": "A",
       "questionNumber": "2(b)",
@@ -73,6 +115,29 @@
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": ["no stem text found above the parts"]
+    },
+    {
+      "id": "edexcel-a-p2-2021-nov-q3a",
+      "section": "A",
+      "questionNumber": "3(a)",
+      "parentQuestion": "3",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "British pound to US dollar exchange rate (value of one pound in dollars), June 2017 to June 2019. Which one of the following has been the overall change in the British pound to US dollar exchange rate from 1st January 2018 to 1st January 2019?",
+      "options": [
+        { "letter": "A", "text": "Appreciation" },
+        { "letter": "B", "text": "Depreciation" },
+        { "letter": "C", "text": "Devaluation" },
+        { "letter": "D", "text": "Revaluation" }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-november-2021-question-paper.pdf", "page": 6 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-november-2021-mark-scheme.pdf", "page": 6, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
       "id": "edexcel-a-p2-2021-nov-q3b",
@@ -105,6 +170,53 @@
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": []
+    },
+    {
+      "id": "edexcel-a-p2-2021-nov-q4b",
+      "section": "A",
+      "questionNumber": "4(b)",
+      "parentQuestion": "4",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "A number of business groups have signed an open letter to the UK Government asking it to commit to delivering the full High Speed 2 rail link. This will connect London to the northern cities of Manchester and Leeds at a cost of £56 billion and reduce journey times by as much as 50%. Government spending on the High Speed 2 rail link is an example of which of the following?",
+      "sourceAttribution": "(Source adapted from: https://www.theguardian.com/uk-news/2019/jun/22/business-heads-urge-next-pm-to-commit-to-finishing-hs2)",
+      "options": [
+        { "letter": "A", "text": "Automatic stabilisers" },
+        { "letter": "B", "text": "Capital expenditure" },
+        { "letter": "C", "text": "Current expenditure" },
+        { "letter": "D", "text": "Transfer payments" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-november-2021-question-paper.pdf", "page": 8 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-november-2021-mark-scheme.pdf", "page": 8, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "edexcel-a-p2-2021-nov-q5a",
+      "section": "A",
+      "questionNumber": "5(a)",
+      "parentQuestion": "5",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "GDP at Purchasing Power Parities, Germany and France (nominal, trillions of US dollars) 2010–2017. From the data in the graph above, which one of the following may be deduced?",
+      "options": [
+        { "letter": "A", "text": "France’s rate of inflation was lower than Germany’s in 2017" },
+        { "letter": "B", "text": "Germany’s GDP is smaller than France’s in every year shown" },
+        { "letter": "C", "text": "In every year that France’s GDP fell compared to the previous year, Germany’s GDP did too" },
+        { "letter": "D", "text": "The GDP of both Germany and France fell between 2015 and 2016" }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-november-2021-question-paper.pdf", "page": 10 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-november-2021-mark-scheme.pdf", "page": 9, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
       "id": "edexcel-a-p2-2021-nov-q5b",

@@ -13,6 +13,1260 @@
   "problems": [],
   "questions": [
     {
+      "id": "aqa-p3-2022-jun-q1",
+      "section": "A",
+      "questionNumber": "1",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "A positive statement",
+      "options": [
+        {
+          "letter": "A",
+          "text": "does not take into account irrational behaviour."
+        },
+        {
+          "letter": "B",
+          "text": "enables accurate forecasts to be made."
+        },
+        {
+          "letter": "C",
+          "text": "includes a value judgement."
+        },
+        {
+          "letter": "D",
+          "text": "may be true or false."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 10
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2022-jun-q2",
+      "section": "A",
+      "questionNumber": "2",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following is a nudge technique that could be used to encourage healthy eating?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Banning supermarkets from selling high-calorie energy drinks"
+        },
+        {
+          "letter": "B",
+          "text": "Increasing taxes on high-fat products to raise their price"
+        },
+        {
+          "letter": "C",
+          "text": "Moving products with a high sugar content away from supermarket checkouts"
+        },
+        {
+          "letter": "D",
+          "text": "Subsidising fruit and vegetables to reduce their prices"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 10
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2022-jun-q3",
+      "section": "A",
+      "questionNumber": "3",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Figure 1 shows the production possibility diagram for an economy producing capital goods and consumer goods. The opportunity cost of producing an additional unit of capital goods is",
+      "options": [
+        {
+          "letter": "A",
+          "text": "greater at X than Y."
+        },
+        {
+          "letter": "B",
+          "text": "greater at Z than Y."
+        },
+        {
+          "letter": "C",
+          "text": "the same at X, Y and Z."
+        },
+        {
+          "letter": "D",
+          "text": "zero when 300 units of consumer goods are produced."
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 11
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "1 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the question prints a diagram or chart (an image)"
+      ]
+    },
+    {
+      "id": "aqa-p3-2022-jun-q4",
+      "section": "A",
+      "questionNumber": "4",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Table 1 shows the individual price indices and the weightings of the three goods that make up a price index. What was the percentage increase in the overall price index between April 2021 to April 2022?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "1.1%"
+        },
+        {
+          "letter": "B",
+          "text": "3%"
+        },
+        {
+          "letter": "C",
+          "text": "3.3%"
+        },
+        {
+          "letter": "D",
+          "text": "9%"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 12
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "7 line(s) of figure or table text printed with the question are not reproduced; see the question paper"
+      ]
+    },
+    {
+      "id": "aqa-p3-2022-jun-q5",
+      "section": "A",
+      "questionNumber": "5",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "When using data to make international comparisons of the standard of living, purchasing power parity (PPP) exchange rates are more useful than market exchange rates. This is because PPP exchange rates take into account differences in countries’",
+      "options": [
+        {
+          "letter": "A",
+          "text": "distribution of income."
+        },
+        {
+          "letter": "B",
+          "text": "levels of taxation."
+        },
+        {
+          "letter": "C",
+          "text": "price levels."
+        },
+        {
+          "letter": "D",
+          "text": "rates of population growth."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 12
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2022-jun-q6",
+      "section": "A",
+      "questionNumber": "6",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Figure 2 shows two aggregate demand (AD1 and AD2) curves and the short-run aggregate supply (SRAS) curve for an economy. Which one of the following is the government most likely to increase if it wishes to use fiscal policy to reduce national output from Y1 to Y2?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Infrastructure expenditure"
+        },
+        {
+          "letter": "B",
+          "text": "Interest rates"
+        },
+        {
+          "letter": "C",
+          "text": "Rates of income tax"
+        },
+        {
+          "letter": "D",
+          "text": "The budget deficit"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 13
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "1 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the question prints a diagram or chart (an image)",
+        "4 subscript or superscript glyph(s) set flush against their base"
+      ]
+    },
+    {
+      "id": "aqa-p3-2022-jun-q7",
+      "section": "A",
+      "questionNumber": "7",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following is a reason why the extension of property rights is likely to reduce market failure?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Merit goods will no longer be underconsumed in a free market."
+        },
+        {
+          "letter": "B",
+          "text": "Producers will be more likely to have to pay compensation for pollution."
+        },
+        {
+          "letter": "C",
+          "text": "Public goods will no longer be subject to the free-rider problem."
+        },
+        {
+          "letter": "D",
+          "text": "The inequality in the distribution of income and wealth will be reduced."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 14
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2022-jun-q8",
+      "section": "A",
+      "questionNumber": "8",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Figure 3 shows the demand curve for a firm’s scarves. Which one of the following statements is true when the price of scarves is reduced from £30 to £25?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Demand for scarves is price elastic."
+        },
+        {
+          "letter": "B",
+          "text": "Price elasticity of demand is –0.5."
+        },
+        {
+          "letter": "C",
+          "text": "The firm’s total revenue falls."
+        },
+        {
+          "letter": "D",
+          "text": "The firm’s total revenue increases."
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 14
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "1 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the question prints a diagram or chart (an image)"
+      ]
+    },
+    {
+      "id": "aqa-p3-2022-jun-q9",
+      "section": "A",
+      "questionNumber": "9",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "A firm charging different customers different prices for the same product is practising",
+      "options": [
+        {
+          "letter": "A",
+          "text": "limit pricing."
+        },
+        {
+          "letter": "B",
+          "text": "marginal cost pricing."
+        },
+        {
+          "letter": "C",
+          "text": "price discrimination."
+        },
+        {
+          "letter": "D",
+          "text": "price leadership."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 15
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2022-jun-q10",
+      "section": "A",
+      "questionNumber": "10",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "In an economy, an index showing the change in the money supply multiplied by the velocity of circulation increases from 100 to 115.5. At the same time, the final output produced by the economy increases from 100 to 110. According to Fisher’s equation of exchange, the price level will increase by",
+      "options": [
+        {
+          "letter": "A",
+          "text": "5%"
+        },
+        {
+          "letter": "B",
+          "text": "5.5%"
+        },
+        {
+          "letter": "C",
+          "text": "10%"
+        },
+        {
+          "letter": "D",
+          "text": "15.5%"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 15
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2022-jun-q11",
+      "section": "A",
+      "questionNumber": "11",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Systemic risk is most likely to occur in financial systems when",
+      "options": [
+        {
+          "letter": "A",
+          "text": "investment banks have low capital-output ratios."
+        },
+        {
+          "letter": "B",
+          "text": "most banks carry out both commercial and investment banking activities."
+        },
+        {
+          "letter": "C",
+          "text": "the central bank acts as lender of last resort to financial institutions."
+        },
+        {
+          "letter": "D",
+          "text": "the commercial banks have high liquidity ratios."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 15
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2022-jun-q12",
+      "section": "A",
+      "questionNumber": "12",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Figure 4 shows the aggregate demand (AD) curve, the short-run aggregate supply (SRAS1 and SRAS2) curves and the long-run aggregate supply (LRAS1 and LRAS2) curves for an economy. All other things being equal, which one of the following is most likely to move the economy from point M to point N?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A decrease in the natural rate of unemployment"
+        },
+        {
+          "letter": "B",
+          "text": "A loss of consumer and producer confidence"
+        },
+        {
+          "letter": "C",
+          "text": "A natural disaster, damaging productive capacity"
+        },
+        {
+          "letter": "D",
+          "text": "A rise in factor prices, resulting in cost-push inflation"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 16
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "1 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the question prints a diagram or chart (an image)",
+        "4 subscript or superscript glyph(s) set flush against their base"
+      ]
+    },
+    {
+      "id": "aqa-p3-2022-jun-q13",
+      "section": "A",
+      "questionNumber": "13",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following is a role of the World Trade Organisation?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Helping countries settle disputes over tariffs and quotas"
+        },
+        {
+          "letter": "B",
+          "text": "Lending money to countries with balance of payments problems"
+        },
+        {
+          "letter": "C",
+          "text": "Monitoring the stability of the international monetary system"
+        },
+        {
+          "letter": "D",
+          "text": "Providing loans at low rates of interest to low-income countries"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 17
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2022-jun-q14",
+      "section": "A",
+      "questionNumber": "14",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following is a reason why the supply of cars is likely to be price elastic in the short run when the price of cars increases?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Car manufacturers’ stocks of unsold cars are low"
+        },
+        {
+          "letter": "B",
+          "text": "The demand for cars is also price elastic"
+        },
+        {
+          "letter": "C",
+          "text": "The marginal cost of producing cars increases significantly with output"
+        },
+        {
+          "letter": "D",
+          "text": "There is considerable spare capacity in the car industry"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 17
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2022-jun-q15",
+      "section": "A",
+      "questionNumber": "15",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following diagrams, A, B, C or D, shows the most likely short-run impact on an economy of an improvement in technology in the production process?",
+      "options": null,
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 18
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "the question prints a diagram or chart (an image)",
+        "the options are diagrams printed as one image; the text layer has no option letters"
+      ]
+    },
+    {
+      "id": "aqa-p3-2022-jun-q16",
+      "section": "A",
+      "questionNumber": "16",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following best explains the existence of relative poverty?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Some households have to pay more in income tax than other households."
+        },
+        {
+          "letter": "B",
+          "text": "The Gini coefficient in some countries is low."
+        },
+        {
+          "letter": "C",
+          "text": "The income of some households is significantly less than the median household income."
+        },
+        {
+          "letter": "D",
+          "text": "The prices of items that are essential for life differ between countries."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 19
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2022-jun-q17",
+      "section": "A",
+      "questionNumber": "17",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Table 2 shows the amount paid in tax by individuals at different levels of income. This tax is an example of a",
+      "options": [
+        {
+          "letter": "A",
+          "text": "lump sum tax."
+        },
+        {
+          "letter": "B",
+          "text": "progressive tax."
+        },
+        {
+          "letter": "C",
+          "text": "proportional tax."
+        },
+        {
+          "letter": "D",
+          "text": "regressive tax."
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 19
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "6 line(s) of figure or table text printed with the question are not reproduced; see the question paper"
+      ]
+    },
+    {
+      "id": "aqa-p3-2022-jun-q18",
+      "section": "A",
+      "questionNumber": "18",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following is a supply-side policy aimed at reducing the natural rate of unemployment?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Government retraining schemes for structurally unemployed workers"
+        },
+        {
+          "letter": "B",
+          "text": "Increasing legal protection against unfair dismissal for employees"
+        },
+        {
+          "letter": "C",
+          "text": "Increasing the real value of the national minimum wage"
+        },
+        {
+          "letter": "D",
+          "text": "New government subsidies for developers of artificial intelligence"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 20
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2022-jun-q19",
+      "section": "A",
+      "questionNumber": "19",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Figure 5 shows the average revenue (AR), marginal revenue (MR) and marginal cost (MC) curves for an industry which was perfectly competitive but is now a monopoly. The cost and revenue curves remain unchanged. Which of the following areas shows the total deadweight loss of consumer and producer surplus resulting from the structure of the industry changing from perfect competition to monopoly?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "1 + 2"
+        },
+        {
+          "letter": "B",
+          "text": "3 + 4"
+        },
+        {
+          "letter": "C",
+          "text": "5 + 6"
+        },
+        {
+          "letter": "D",
+          "text": "7 + 8"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 20
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "1 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the question prints a diagram or chart (an image)"
+      ]
+    },
+    {
+      "id": "aqa-p3-2022-jun-q20",
+      "section": "A",
+      "questionNumber": "20",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "There is a reduction in the market demand for the product supplied by firms operating in a perfectly competitive industry. All other things being equal, which one of the following will happen to firms’ average and marginal revenue as a result of this change?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Average revenue and marginal revenue will both fall."
+        },
+        {
+          "letter": "B",
+          "text": "Average revenue and marginal revenue will not change."
+        },
+        {
+          "letter": "C",
+          "text": "Average revenue will fall and marginal revenue will increase."
+        },
+        {
+          "letter": "D",
+          "text": "Average revenue will increase and marginal revenue will fall."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 21
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2022-jun-q21",
+      "section": "A",
+      "questionNumber": "21",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Figure 6 shows the marginal utility that a consumer gains from eating apples. When 7 apples per day are consumed",
+      "options": [
+        {
+          "letter": "A",
+          "text": "average utility is maximised."
+        },
+        {
+          "letter": "B",
+          "text": "marginal utility is maximised."
+        },
+        {
+          "letter": "C",
+          "text": "opportunity cost is minimised."
+        },
+        {
+          "letter": "D",
+          "text": "total utility is maximised."
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 21
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "1 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the question prints a diagram or chart (an image)"
+      ]
+    },
+    {
+      "id": "aqa-p3-2022-jun-q22",
+      "section": "A",
+      "questionNumber": "22",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Table 3 shows different combinations of performance for three macroeconomic indicators. Which one of the combinations, A, B, C or D, is most likely to indicate an economy experiencing an economic boom?",
+      "options": null,
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 22
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "6 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the options are a table or formulae beside bare letters; only the letters are text"
+      ]
+    },
+    {
+      "id": "aqa-p3-2022-jun-q23",
+      "section": "A",
+      "questionNumber": "23",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Table 4 shows the values of nominal GDP and a price index in two different years. What was the value of real GDP in 2019, to the nearest £ billion, expressed in 2015 prices?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "£227 billion"
+        },
+        {
+          "letter": "B",
+          "text": "£261 billion"
+        },
+        {
+          "letter": "C",
+          "text": "£264 billion"
+        },
+        {
+          "letter": "D",
+          "text": "£319 billion"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 22
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "4 line(s) of figure or table text printed with the question are not reproduced; see the question paper"
+      ]
+    },
+    {
+      "id": "aqa-p3-2022-jun-q24",
+      "section": "A",
+      "questionNumber": "24",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Figure 7 shows the average revenue and marginal revenue (AR and MR) curves and the average cost and marginal cost (AC and MC) curves for a firm in monopolistic competition in the short run. At the profit maximising price and output the firm will",
+      "options": [
+        {
+          "letter": "A",
+          "text": "make supernormal profits."
+        },
+        {
+          "letter": "B",
+          "text": "produce the allocatively efficient output."
+        },
+        {
+          "letter": "C",
+          "text": "produce where average revenue = average cost."
+        },
+        {
+          "letter": "D",
+          "text": "set price equal to minimum average costs."
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 23
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "1 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the question prints a diagram or chart (an image)"
+      ]
+    },
+    {
+      "id": "aqa-p3-2022-jun-q25",
+      "section": "A",
+      "questionNumber": "25",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The price of a government bond was £10 000 when it was issued. The bond does not have a maturity date and the government is not intending to buy back the bond. The bond pays £200 per year to the bond holder and has a market price of £8 000. Which one of the following fractions represents the yield on the bond?",
+      "options": null,
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 24
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "the options are a table or formulae beside bare letters; only the letters are text"
+      ]
+    },
+    {
+      "id": "aqa-p3-2022-jun-q26",
+      "section": "A",
+      "questionNumber": "26",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Table 5 contains figures from the balance sheet of a commercial bank. What is the value of this bank’s total liquid assets?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "£70 bn"
+        },
+        {
+          "letter": "B",
+          "text": "£100 bn"
+        },
+        {
+          "letter": "C",
+          "text": "£130 bn"
+        },
+        {
+          "letter": "D",
+          "text": "£175 bn"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 25
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "12 line(s) of figure or table text printed with the question are not reproduced; see the question paper"
+      ]
+    },
+    {
+      "id": "aqa-p3-2022-jun-q27",
+      "section": "A",
+      "questionNumber": "27",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Changing patterns of consumption have meant that summer holidays at UK seaside towns have become less popular. As a result, UK seaside holiday towns are affected by seasonal unemployment and increasing structural unemployment. Which one of the following is the most likely consequence of this change in the pattern of consumption?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Occupational immobility of labour will help to reduce structural unemployment."
+        },
+        {
+          "letter": "B",
+          "text": "The cost of living for people who live in UK seaside towns will fall."
+        },
+        {
+          "letter": "C",
+          "text": "Unemployment is likely to be higher in the summer than the winter."
+        },
+        {
+          "letter": "D",
+          "text": "Wages in UK seaside towns will rise because firms want to retain workers."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 26
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2022-jun-q28",
+      "section": "A",
+      "questionNumber": "28",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Figure 8 shows the marginal cost (MCL), average cost (ACL) and marginal revenue product (MRPL) curves for labour in a specialised computer programming industry. Following a series of mergers between firms in this industry, a single large firm remains as a monopsony employer. Which one of the following is the most likely to result from a competitive labour market being replaced by a monopsony employer?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "The total amount paid in wages will fall from (W2 × Q2) to (W3 × Q1)."
+        },
+        {
+          "letter": "B",
+          "text": "The total amount paid in wages will increase from (W3 × Q1) to (W1 × Q1)."
+        },
+        {
+          "letter": "C",
+          "text": "The wage rate will fall from W1 to W2."
+        },
+        {
+          "letter": "D",
+          "text": "The wage rate will increase from W3 to W2."
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 26
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "1 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the question prints a diagram or chart (an image)",
+        "15 subscript or superscript glyph(s) set flush against their base"
+      ]
+    },
+    {
+      "id": "aqa-p3-2022-jun-q29",
+      "section": "A",
+      "questionNumber": "29",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Table 6 shows the value of the UK’s Human Development Index (HDI) over the period 2015 to 2019. All other things being equal, which one of the following is most likely to explain the trend shown in Table 6?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A fall in the sterling exchange rate"
+        },
+        {
+          "letter": "B",
+          "text": "Falling emissions of greenhouse gases"
+        },
+        {
+          "letter": "C",
+          "text": "Increasing life expectancy at birth"
+        },
+        {
+          "letter": "D",
+          "text": "Reductions in income inequality"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 27
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "3 line(s) of figure or table text printed with the question are not reproduced; see the question paper"
+      ]
+    },
+    {
+      "id": "aqa-p3-2022-jun-q30",
+      "section": "A",
+      "questionNumber": "30",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Unemployed workers in the south of a country are unable to take up jobs in the north of the country due to higher housing costs. This is an example of",
+      "options": [
+        {
+          "letter": "A",
+          "text": "cyclical unemployment."
+        },
+        {
+          "letter": "B",
+          "text": "frictional unemployment."
+        },
+        {
+          "letter": "C",
+          "text": "geographical immobility of labour."
+        },
+        {
+          "letter": "D",
+          "text": "occupational immobility of labour."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-question-paper.pdf",
+        "page": 27
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2022-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "aqa-p3-2022-jun-q31",
       "section": "B",
       "questionNumber": "31",

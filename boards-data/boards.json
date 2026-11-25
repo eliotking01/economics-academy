@@ -7,11 +7,11 @@
 
   "_adding_a_board": "Add an entry here with a `features` list naming only what is finished (`[\"notes\"]` to start), create the notes pages and source data, re-run the generators, add the nav entries in templates/header.html. `expectedTopics` keeps build_past_paper_taxonomy.py's loud-failure guard: a board in the taxonomy whose data does not match its declaration fails rather than emitting a short taxonomy.",
 
-  "_features": "Which resource families a board has, one list per board. The five names are scripts/board_data.py's FEATURES: notes, practiceQuestions, flashcards, glossary, pastPaperBank. board_data.load(family) and groups(family) return only the boards that have that family, so a generator never sees a board it has nothing to build for. A feature is added here when it is complete for all of the board's groups at once - one feature at a time, never half a board (D67). `taxonomy` is not a feature: it is the shared spine the glossary and the past-paper bank read, and board_data derives it - a board is in taxonomy.json when it has glossary or pastPaperBank. Both of those need practiceQuestions too, because taxonomy.json is built from the questions-data/ topic records and links each topic's practice page; board_data refuses the record otherwise. Edexcel A and AQA have all five; Edexcel B has notes (D66, superseded in part by D67).",
+  "_features": "Which resource families a board has, one list per board. The six names are scripts/board_data.py's FEATURES: notes, practiceQuestions, flashcards, glossary, pastPaperBank, pastPaperMcqs. pastPaperMcqs is the real exam multiple-choice questions inside the bank (D67, Phase 7): a family of its own so it can be staged while the bank stays live, and it needs pastPaperBank. board_data.load(family) and groups(family) return only the boards that have that family, so a generator never sees a board it has nothing to build for. A feature is added here when it is complete for all of the board's groups at once - one feature at a time, never half a board (D67). `taxonomy` is not a feature: it is the shared spine the glossary and the past-paper bank read, and board_data derives it - a board is in taxonomy.json when it has glossary or pastPaperBank. Both of those need practiceQuestions too, because taxonomy.json is built from the questions-data/ topic records and links each topic's practice page; board_data refuses the record otherwise. Edexcel A and AQA have all five; Edexcel B has notes (D66, superseded in part by D67).",
 
   "boards": {
     "edexcel-a": {
-      "features": ["notes", "practiceQuestions", "flashcards", "glossary", "pastPaperBank"],
+      "features": ["notes", "practiceQuestions", "flashcards", "glossary", "pastPaperBank", "pastPaperMcqs"],
       "names": {
         "short": "Edexcel",
         "display": "Edexcel A",
@@ -87,7 +87,7 @@
     },
 
     "aqa": {
-      "features": ["notes", "practiceQuestions", "flashcards", "glossary", "pastPaperBank"],
+      "features": ["notes", "practiceQuestions", "flashcards", "glossary", "pastPaperBank", "pastPaperMcqs"],
       "names": {
         "short": "AQA",
         "display": "AQA",

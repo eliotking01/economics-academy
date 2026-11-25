@@ -13,6 +13,30 @@
   "problems": [],
   "questions": [
     {
+      "id": "edexcel-as-p1-2023-jun-q1a",
+      "section": "A",
+      "questionNumber": "1(a)",
+      "parentQuestion": "1",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "In 2021, energy regulator Ofgem announced that the maximum price of energy will rise from £ 1 277 to £ 1 971 a year, for the average household bill. Which one of the following is the percentage increase in the maximum price to the average household bill?",
+      "sourceAttribution": "(Source: adapted from https://www.moneysavingexpert.com/utilities/what-is-the-energy-price-cap/)",
+      "options": [
+        { "letter": "A", "text": "35 %" },
+        { "letter": "B", "text": "45 %" },
+        { "letter": "C", "text": "54 %" },
+        { "letter": "D", "text": "694 %" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2023-question-paper.pdf", "page": 2 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2023-mark-scheme.pdf", "page": 4, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-as-p1-2023-jun-q1b",
       "section": "A",
       "questionNumber": "1(b)",
@@ -60,6 +84,29 @@
       "extractionNotes": []
     },
     {
+      "id": "edexcel-as-p1-2023-jun-q2b",
+      "section": "A",
+      "questionNumber": "2(b)",
+      "parentQuestion": "2",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The world’s largest producer of natural gas is the USA. In 2021 production fell even though the price increased. The table below shows estimates of the price elasticity of supply and price elasticity of demand for gas. Which one of the following can be inferred from the table?",
+      "options": [
+        { "letter": "A", "text": "A 10% increase in the price of gas would cause a more than 10% increase in the supply" },
+        { "letter": "B", "text": "Gas is a normal good with income inelastic demand" },
+        { "letter": "C", "text": "The demand and supply of gas are both price inelastic" },
+        { "letter": "D", "text": "The demand for gas is more responsive to changes in price than supply" }
+      ],
+      "usesFigure": true,
+      "context": { "type": "question", "label": "Question 2 as printed", "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2023-question-paper.pdf", "page": 4 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2023-question-paper.pdf", "page": 5 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2023-mark-scheme.pdf", "page": 6, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
       "id": "edexcel-as-p1-2023-jun-q3a",
       "section": "A",
       "questionNumber": "3(a)",
@@ -68,6 +115,30 @@
       "marks": 1,
       "questionText": "Disruption in the supply chains of essential goods and shortages of key medical products during the global health crisis have highlighted the links between countries and renewed the debate on the advantages and disadvantages of specialisation. Define the term ‘specialisation’.",
       "sourceAttribution": "(Source: adapted from https://commonslibrary.parliament.uk/research-briefings/cbp-8978/)",
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2023-question-paper.pdf", "page": 6 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2023-mark-scheme.pdf", "page": 7, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "edexcel-as-p1-2023-jun-q3b",
+      "section": "A",
+      "questionNumber": "3(b)",
+      "parentQuestion": "3",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Disruption in the supply chains of essential goods and shortages of key medical products during the global health crisis have highlighted the links between countries and renewed the debate on the advantages and disadvantages of specialisation. Which one of the following is a positive economic statement?",
+      "sourceAttribution": "(Source: adapted from https://commonslibrary.parliament.uk/research-briefings/cbp-8978/)",
+      "options": [
+        { "letter": "A", "text": "Disruption to global supply chains will reduce the level of trade" },
+        { "letter": "B", "text": "Supply chain disruption is the most important issue facing governments" },
+        { "letter": "C", "text": "The free market leads to the best allocation of resources" },
+        { "letter": "D", "text": "The government ought to increase healthcare spending" }
+      ],
+      "usesFigure": false,
       "context": null,
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2023-question-paper.pdf", "page": 6 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2023-mark-scheme.pdf", "page": 7, "verified": true },
@@ -108,6 +179,30 @@
       "extractionNotes": []
     },
     {
+      "id": "edexcel-as-p1-2023-jun-q4b",
+      "section": "A",
+      "questionNumber": "4(b)",
+      "parentQuestion": "4",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "During 2021 the UK experienced severe shortages of crisps, petrol and many other items. Esso, Tesco and Sainsbury’s all charge £ 1.48 for a litre of petrol. Which one of the following is the most likely cross price elasticity of demand for close substitutes?",
+      "sourceAttribution": "(Source: adapted from https://www.independent.co.uk/news/business/news/uk-shortages-covid-brexit-supply-chain-b1968458.html)",
+      "options": [
+        { "letter": "A", "text": "− 2.1" },
+        { "letter": "B", "text": "− 0.1" },
+        { "letter": "C", "text": "+ 0.1" },
+        { "letter": "D", "text": "+ 2.1" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2023-question-paper.pdf", "page": 7 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2023-mark-scheme.pdf", "page": 9, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["lead-in printed between parts is included"]
+    },
+    {
       "id": "edexcel-as-p1-2023-jun-q5a",
       "section": "A",
       "questionNumber": "5(a)",
@@ -132,6 +227,30 @@
       "marks": 1,
       "questionText": "During the global health crisis, 11.7 million jobs were furloughed, costing the UK Government £70 billion. This meant people were paid by the government 80% of their wages even though they did not work. Some private sector employers continued to pay the remaining 20 %. The diagram shows the production possibility frontier of an economy. Assuming the economy is at point W, annotate the diagram to show the opportunity cost of producing more consumer goods.",
       "sourceAttribution": "(Source: adapted from https://commonslibrary.parliament.uk/examining-the-end-of-the-furlough-scheme)",
+      "context": { "type": "question", "label": "Question 5 as printed", "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2023-question-paper.pdf", "page": 8 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2023-question-paper.pdf", "page": 9 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2023-mark-scheme.pdf", "page": 11, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "edexcel-as-p1-2023-jun-q5c",
+      "section": "A",
+      "questionNumber": "5(c)",
+      "parentQuestion": "5",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "During the global health crisis, 11.7 million jobs were furloughed, costing the UK Government £70 billion. This meant people were paid by the government 80% of their wages even though they did not work. Some private sector employers continued to pay the remaining 20 %. Which one of the following is a likely advantage of a command economy?",
+      "sourceAttribution": "(Source: adapted from https://commonslibrary.parliament.uk/examining-the-end-of-the-furlough-scheme)",
+      "options": [
+        { "letter": "A", "text": "Low levels of unemployment" },
+        { "letter": "B", "text": "Price acts as a signal to allocate resources" },
+        { "letter": "C", "text": "Price controls cause shortages of goods" },
+        { "letter": "D", "text": "The profit motive gives firms the incentive to be more efficient" }
+      ],
+      "usesFigure": false,
       "context": { "type": "question", "label": "Question 5 as printed", "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2023-question-paper.pdf", "page": 8 },
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2023-question-paper.pdf", "page": 9 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2023-mark-scheme.pdf", "page": 11, "verified": true },

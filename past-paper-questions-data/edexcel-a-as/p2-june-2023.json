@@ -28,6 +28,29 @@
       "extractionNotes": []
     },
     {
+      "id": "edexcel-as-p2-2023-jun-q1b",
+      "section": "A",
+      "questionNumber": "1(b)",
+      "parentQuestion": "1",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Between 2019 and 2020 the UK Government increased its expenditure on healthcare from £175.1 billion to £219.9 billion. Which one of the following is also an example of an interventionist supply-side policy?",
+      "options": [
+        { "letter": "A", "text": "A decrease in the level of unemployment benefits" },
+        { "letter": "B", "text": "A decrease in the regulation of product markets" },
+        { "letter": "C", "text": "An increase in the provision of training programmes" },
+        { "letter": "D", "text": "An increase in the rate of corporation tax" }
+      ],
+      "usesFigure": false,
+      "context": { "type": "question", "label": "Question 1 as printed", "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2023-question-paper.pdf", "page": 2 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2023-question-paper.pdf", "page": 3 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2023-mark-scheme.pdf", "page": 4, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-as-p2-2023-jun-q2a",
       "section": "A",
       "questionNumber": "2(a)",
@@ -36,6 +59,30 @@
       "marks": 1,
       "questionText": "The table below shows the UK’s real GDP per capita, in US dollars, measured at Purchasing Power Parities, 2018 to 2020. Define the term ‘GDP per capita’.",
       "sourceAttribution": "(Source: https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD?locations=GB)",
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2023-question-paper.pdf", "page": 4 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2023-mark-scheme.pdf", "page": 5, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-as-p2-2023-jun-q2b",
+      "section": "A",
+      "questionNumber": "2(b)",
+      "parentQuestion": "2",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The table below shows the UK’s real GDP per capita, in US dollars, measured at Purchasing Power Parities, 2018 to 2020. Which one of the following is the most likely effect of the change in real GDP per capita between 2019 and 2020?",
+      "sourceAttribution": "(Source: https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD?locations=GB)",
+      "options": [
+        { "letter": "A", "text": "Decrease in living standards" },
+        { "letter": "B", "text": "Decrease in unemployment" },
+        { "letter": "C", "text": "Higher consumer confidence" },
+        { "letter": "D", "text": "Higher price level" }
+      ],
+      "usesFigure": true,
       "context": null,
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2023-question-paper.pdf", "page": 4 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2023-mark-scheme.pdf", "page": 5, "verified": true },
@@ -55,6 +102,29 @@
       "context": { "type": "question", "label": "Question 2 as printed", "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2023-question-paper.pdf", "page": 4 },
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2023-question-paper.pdf", "page": 5 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2023-mark-scheme.pdf", "page": 5, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-as-p2-2023-jun-q3a",
+      "section": "A",
+      "questionNumber": "3(a)",
+      "parentQuestion": "3",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The chart below shows areas of UK Government tax revenues for 2021–22. The total tax revenue for the year was £820 billion. Which one of the following can be deduced from the above chart?",
+      "options": [
+        { "letter": "A", "text": "Corporation tax revenue is higher than excise duties" },
+        { "letter": "B", "text": "Income tax raises less revenue than Value Added Tax (VAT)" },
+        { "letter": "C", "text": "Tax revenue from business rates contributes to approximately 3% of the overall government tax revenue" },
+        { "letter": "D", "text": "Tax revenue from National Insurance contributions is five times greater than the tax revenue from council tax" }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2023-question-paper.pdf", "page": 6 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2023-mark-scheme.pdf", "page": 6, "verified": true },
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
@@ -91,6 +161,29 @@
       "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
+      "id": "edexcel-as-p2-2023-jun-q4b",
+      "section": "A",
+      "questionNumber": "4(b)",
+      "parentQuestion": "4",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The table below shows the UK business investment, in £ billions, 2019 and 2020. Assume 2019 is the base year. Which one of the following represents the index number for 2020?",
+      "options": [
+        { "letter": "A", "text": "9.7" },
+        { "letter": "B", "text": "90.3" },
+        { "letter": "C", "text": "109.7" },
+        { "letter": "D", "text": "110.8" }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2023-question-paper.pdf", "page": 8 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2023-mark-scheme.pdf", "page": 7, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
       "id": "edexcel-as-p2-2023-jun-q4c",
       "section": "A",
       "questionNumber": "4(c)",
@@ -101,6 +194,30 @@
       "context": { "type": "question", "label": "Question 4 as printed", "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2023-question-paper.pdf", "page": 8 },
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2023-question-paper.pdf", "page": 9 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2023-mark-scheme.pdf", "page": 7, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-as-p2-2023-jun-q5a",
+      "section": "A",
+      "questionNumber": "5(a)",
+      "parentQuestion": "5",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The chart below shows UK real GDP growth rate (%), Quarter 1 (Q1) 2019 to Quarter 3 (Q3) 2021. Which one of the following can be deduced from the chart?",
+      "sourceAttribution": "(Source adapted from: https://tradingeconomics.com/united-kingdom/gdp-growth)",
+      "options": [
+        { "letter": "A", "text": "In Q4 2020 the level of real GDP fell by 16.1 percentage points" },
+        { "letter": "B", "text": "The price level was rising at a slower rate between Q1 2019 and Q2 2019" },
+        { "letter": "C", "text": "The UK economy experienced a boom between Q3 2019 and Q1 2020" },
+        { "letter": "D", "text": "The UK economy experienced a recession in the first six months of 2020" }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2023-question-paper.pdf", "page": 10 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2023-mark-scheme.pdf", "page": 9, "verified": true },
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]

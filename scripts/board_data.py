@@ -107,7 +107,15 @@ EXPECTED_NOTES_DIRS = (
 # The resource families a board can have, as boards.json spells them. Order
 # is display order nowhere; it is only the order the record lists them in.
 FEATURES = ("notes", "practiceQuestions", "flashcards", "glossary",
-            "pastPaperBank")
+            "pastPaperBank", "pastPaperMcqs")
+
+# pastPaperMcqs is the real exam multiple-choice questions inside a board's
+# past-paper bank (D67, Phase 7): AQA Paper 3 Section A, Edexcel A Papers 1-2
+# Section A. It is a family of its own so that it can be STAGED while the
+# bank it sits in stays live: build_past_paper_questions.load_bank() drops a
+# board's MCQ records unless the board has it, so staging it publishes
+# nothing, EA_PREVIEW shows it, and /launch-feature launches it, exactly as
+# for the other families (D68). It needs pastPaperBank, which it lives in.
 
 # taxonomy.json is built for any board one of these reads it for. It is a
 # family a caller can ask for, never a feature a record can list.
@@ -127,7 +135,8 @@ FAMILIES = FEATURES + ("taxonomy",)
 # A staged glossary puts its board in taxonomy.json (load("taxonomy",
 # staged=True)): taxonomy.json is data, published nowhere, and every reader of
 # it filters to its own LIVE family, so the board reaches no page through it.
-STAGEABLE = ("practiceQuestions", "flashcards", "glossary", "pastPaperBank")
+STAGEABLE = ("practiceQuestions", "flashcards", "glossary", "pastPaperBank",
+             "pastPaperMcqs")
 
 # EA_PREVIEW="edexcel-b:practiceQuestions[,board:feature...]" promotes a
 # staged family to live for one local run, so its pages can be opened in
@@ -275,6 +284,16 @@ def _features_are_coherent(data: dict) -> None:
                          f"staged - /launch-feature moves it, not copies it")
         if len(set(staged)) != len(staged):
             sys.exit(f"boards.json: {key} stages a feature twice: {staged}")
+        # The MCQs live inside the bank: live MCQs need a live bank, and
+        # staged MCQs need a bank that is live or staged beside them.
+        if "pastPaperMcqs" in have and "pastPaperBank" not in have:
+            sys.exit(f"boards.json: {key} has pastPaperMcqs without "
+                     f"pastPaperBank. The multiple-choice questions are cards "
+                     f"in the bank - switch pastPaperBank on first")
+        if ("pastPaperMcqs" in staged and "pastPaperBank" not in have
+                and "pastPaperBank" not in staged):
+            sys.exit(f"boards.json: {key} stages pastPaperMcqs without "
+                     f"pastPaperBank, live or staged")
         for reader in TAXONOMY_READERS:
             if reader in have and "practiceQuestions" not in have:
                 sys.exit(f"boards.json: {key} has {reader} without "

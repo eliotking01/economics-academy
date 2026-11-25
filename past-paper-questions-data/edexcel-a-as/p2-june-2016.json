@@ -28,6 +28,29 @@
       "extractionNotes": ["no stem text found above the parts"]
     },
     {
+      "id": "edexcel-as-p2-2016-jun-q1b",
+      "section": "A",
+      "questionNumber": "1(b)",
+      "parentQuestion": "1",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following is an injection into the circular flow of income?",
+      "options": [
+        { "letter": "A", "text": "Taxation" },
+        { "letter": "B", "text": "Imports" },
+        { "letter": "C", "text": "Investment" },
+        { "letter": "D", "text": "Saving" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2016-question-paper.pdf", "page": 2 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2016-mark-scheme.pdf", "page": 4, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-as-p2-2016-jun-q1c",
       "section": "A",
       "questionNumber": "1(c)",
@@ -57,6 +80,30 @@
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": ["a table cell the text layer sets on the label's line is removed: 'Italy'", "figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-as-p2-2016-jun-q2b",
+      "section": "A",
+      "questionNumber": "2(b)",
+      "parentQuestion": "2",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The table below shows GDP per capita at purchasing power parities (PPPs) for a selection of European countries in 2013. The Office for National Statistics estimates that the UK population was 64 million in 2013. Using the data, what was the UK’s total GDP in 2013?",
+      "sourceAttribution": "(Source: http://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD)",
+      "options": [
+        { "letter": "A", "text": "$2 464 000 million" },
+        { "letter": "B", "text": "$2 272 000 million" },
+        { "letter": "C", "text": "$1 662 000 million" },
+        { "letter": "D", "text": "$2 112 000 million" }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2016-question-paper.pdf", "page": 3 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2016-mark-scheme.pdf", "page": 5, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
       "id": "edexcel-as-p2-2016-jun-q2c",
@@ -107,6 +154,53 @@
       "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
+      "id": "edexcel-as-p2-2016-jun-q3c",
+      "section": "A",
+      "questionNumber": "3(c)",
+      "parentQuestion": "3",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The table below shows claimant count data for the UK. Which one of the following is likely to cause a reduction in the claimant count?",
+      "sourceAttribution": "(Source: http://www.nomisweb.co.uk/query/construct/submit.asp?forward=yes&menuopt=201&subcomp=)",
+      "options": [
+        { "letter": "A", "text": "An increase in the weekly payment for claimants" },
+        { "letter": "B", "text": "A compulsory weekly interview for every claimant" },
+        { "letter": "C", "text": "An increase in the size of the workforce" },
+        { "letter": "D", "text": "A fall in employment" }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2016-question-paper.pdf", "page": 5 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2016-mark-scheme.pdf", "page": 7, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-as-p2-2016-jun-q4a",
+      "section": "A",
+      "questionNumber": "4(a)",
+      "parentQuestion": "4",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Figure 1 shows data on the UK’s balance of trade. Which one of the following can be inferred from Figure 1 in the period shown?",
+      "options": [
+        { "letter": "A", "text": "The total UK trade deficit was the largest in June 2013" },
+        { "letter": "B", "text": "The trade in goods was always in surplus between January 2013 and January 2015" },
+        { "letter": "C", "text": "The total UK trade deficit was the smallest in January 2014" },
+        { "letter": "D", "text": "The trade in goods deficit was the smallest in June 2013" }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2016-question-paper.pdf", "page": 6 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2016-mark-scheme.pdf", "page": 8, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
       "id": "edexcel-as-p2-2016-jun-q4b",
       "section": "A",
       "questionNumber": "4(b)",
@@ -131,6 +225,30 @@
       "marks": 3,
       "questionText": "In 2014 the Bank of England estimated the marginal propensity to consume of UK consumers to be 0.5. In 2014 the Chancellor of the Exchequer announced a £15 billion investment programme into UK road infrastructure. Using the information above, calculate the total increase in national income, resulting from the £15 billion investment.",
       "sourceAttribution": "(Sources: http://www.bankofengland.co.uk/publications/Documents/quarterlybulletin/2014/qb14q405.pdf and https://www.gov.uk/government/news/autumn-statement-2014-16-things-you-should-know)",
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2016-question-paper.pdf", "page": 8 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2016-mark-scheme.pdf", "page": 9, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "edexcel-as-p2-2016-jun-q5b",
+      "section": "A",
+      "questionNumber": "5(b)",
+      "parentQuestion": "5",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "In 2014 the Bank of England estimated the marginal propensity to consume of UK consumers to be 0.5. In 2014 the Chancellor of the Exchequer announced a £15 billion investment programme into UK road infrastructure. Which one of the following is most likely to cause a rightward shift in the aggregate supply curve?",
+      "sourceAttribution": "(Sources: http://www.bankofengland.co.uk/publications/Documents/quarterlybulletin/2014/qb14q405.pdf and https://www.gov.uk/government/news/autumn-statement-2014-16-things-you-should-know)",
+      "options": [
+        { "letter": "A", "text": "A decrease in real output" },
+        { "letter": "B", "text": "A rise in price level" },
+        { "letter": "C", "text": "A fall in price level" },
+        { "letter": "D", "text": "An increase in productivity" }
+      ],
+      "usesFigure": false,
       "context": null,
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2016-question-paper.pdf", "page": 8 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2016-mark-scheme.pdf", "page": 9, "verified": true },

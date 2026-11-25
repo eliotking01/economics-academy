@@ -26,12 +26,18 @@ Papers 1 and 2   Section A  Context 1: Q1 (2), Q2 (4), Q3 (9), Q4 (25)
                             Context 2: Q5 (2), Q6 (4), Q7 (9), Q8 (25)
                  Section B  three essays, each 15 + 25:
                             Q9/Q10, Q11/Q12, Q13/Q14
-Paper 3          Section A  Q1-Q30 multiple choice - EXCLUDED, by instruction
+Paper 3          Section A  Q1-Q30 multiple choice, 1 mark each (Phase 7)
                  Section B  Q31 (10), Q32 (15), Q33 (25)
 
 The tariff sequence is fixed, so it doubles as the acceptance test: a paper whose
 extracted tariffs do not match exactly is reported and written with low
 confidence rather than passed off as correct.
+
+Paper 3 Section A is read by extract_mcqs(), at the level of characters rather
+than words, because its stems print subscripts (SRAS1, E2) as 7pt glyphs set
+below the line, which a word crop scatters onto lines of their own. The record
+shape - type "mcq", options A-D as printed, usesFigure, and no answer key - was
+approved by Eliot on 2026-11-25 (review/phase-7-mcqs.md).
 
 This script NEVER invents, paraphrases or reconstructs question text.
 """
@@ -316,7 +322,8 @@ def context_pages(pdf, paper: int):
 
     Papers 1 and 2: Context 1 carries Q1-Q4 and Context 2 carries Q5-Q8, both
     with extracts. Section B is three free-standing essays with no stimulus, so
-    Q9-Q14 get nothing. Paper 3: Section A is multiple choice and excluded, and
+    Q9-Q14 get nothing. Paper 3: Section A is multiple choice, whose data is
+    printed with each question (extract_mcqs gives it no context), and
     Section B is a case study, so Q31-Q33 all point at where it starts.
 
     The cover lists "Context 1" and "Section B" in its bulleted instructions, so
@@ -349,6 +356,408 @@ def context_pages(pdf, paper: int):
         if 2 in found:
             out[n] = found[2]
     return out
+
+
+# ---------------------------------------------------------------- Paper 3 MCQs
+
+MCQ_COUNT = 30
+OPTION_LETTERS = "ABCD"
+# Body text is 11pt. A glyph this small inside the body column is either a
+# subscript or superscript (SRAS1, E2) or a label inside a figure.
+SCRIPT_MAX_SIZE = 9.5
+# A sub/superscript is set flush against the glyph it belongs to: its left edge
+# meets that glyph's right edge, and it sits within half a line of its baseline.
+SCRIPT_X_GAP = 1.0
+SCRIPT_Y_RANGE = 8.0
+# Wrapped option text is indented past the option letter by about 14pt.
+CONTINUATION_INDENT = (10.0, 18.0)
+ALIGN_TOLERANCE = 2.0
+STEM_TOLERANCE = 5.0
+CELL_GAP = 15.0
+WORD_GAP = 0.2
+MCQ_TARIFF_RE = re.compile(r"^\[1 mark\]$")
+MCQ_FURNITURE_RE = re.compile(
+    r"^(?:Turn over for (?:the next question|Section B)|Turn over ►?|Do not write outside the box|"
+    r"END OF SECTION A|Section [AB]|\d{1,3}|\*.*|IB/[A-Z]/\S+)$"
+)
+
+
+def _is_bold(ch) -> bool:
+    return "Bold" in ch.get("fontname", "")
+
+
+def _lines_from_chars(chars):
+    """Visual lines from characters, sub/superscripts moved onto their base line.
+
+    Each small glyph is attached to the full-size glyph whose right edge it
+    touches and whose baseline it sits within half a line of: "SRAS" + "1".
+    The digit is kept as printed, set flush against its base, the way PDFKit
+    returns Edexcel's "P1" - no Unicode subscript is invented. A script of
+    several glyphs ("OW" + "min", 2017 Q19) chains: each further glyph touches
+    the one before it on the same small baseline. A small glyph with no such
+    neighbour is figure text and keeps its own line.
+    """
+    full = [c for c in chars if c["size"] > SCRIPT_MAX_SIZE and c["text"].strip()]
+    line_of = {}
+    attached = []
+    # Spaces are included: the space after a subscript is set at the
+    # subscript's size and height ("(D1 and D2)", 2017 Q10), and would
+    # otherwise be lost. A space only ever chains; it never starts a script.
+    small = sorted(
+        (c for c in chars if c["size"] <= SCRIPT_MAX_SIZE),
+        key=lambda c: c["x0"],
+    )
+    for c in small:
+        base = [
+            b
+            for b in full
+            if c["text"].strip()
+            and abs(b["x1"] - c["x0"]) <= SCRIPT_X_GAP
+            and abs(b["top"] - c["top"]) <= SCRIPT_Y_RANGE
+        ]
+        if base:
+            line_of[id(c)] = min(base, key=lambda b: abs(b["x1"] - c["x0"]))["top"]
+            attached.append(c)
+            continue
+        prev = [
+            a
+            for a in attached
+            if abs(a["x1"] - c["x0"]) <= SCRIPT_X_GAP and abs(a["top"] - c["top"]) <= 2.0
+        ]
+        if prev:
+            line_of[id(c)] = line_of[id(prev[-1])]
+            attached.append(c)
+
+    keyed = sorted(chars, key=lambda c: line_of.get(id(c), c["top"]))
+    lines = []
+    for c in keyed:
+        top = line_of.get(id(c), c["top"])
+        if lines and abs(lines[-1]["top"] - top) <= LINE_TOLERANCE:
+            lines[-1]["chars"].append(c)
+        else:
+            lines.append({"top": top, "chars": [c]})
+
+    out = []
+    for ln in lines:
+        cs = sorted(ln["chars"], key=lambda c: c["x0"])
+        # A word break the PDF prints as a gap with no space glyph (2018 Q2,
+        # "financial year the") gets its space, as pdfplumber's own text
+        # extraction gives it: a gap wider than a fifth of the type size.
+        parts = []
+        for k, c in enumerate(cs):
+            if k and c["text"].strip() and cs[k - 1]["text"].strip():
+                gap = c["x0"] - cs[k - 1]["x1"]
+                if gap > WORD_GAP * max(c["size"], cs[k - 1]["size"]):
+                    parts.append(" ")
+            parts.append(c["text"])
+        text = re.sub(r"\s+", " ", "".join(parts)).strip()
+        if not text:
+            continue
+        first = next(c for c in cs if c["text"].strip())
+        inked = [c for c in cs if c["text"].strip()]
+        widest = max(
+            (b["x0"] - a["x1"] for a, b in zip(inked, inked[1:])), default=0.0
+        )
+        out.append(
+            {
+                "top": ln["top"],
+                "x0": first["x0"],
+                "bold": _is_bold(first),
+                "text": text,
+                "scripts": sum(1 for c in cs if id(c) in line_of and c["text"].strip()),
+                "small": all(c["size"] <= SCRIPT_MAX_SIZE for c in cs if c["text"].strip()),
+                # The widest space between two inked glyphs. Prose is set
+                # ragged right with ordinary word spaces; a gap this wide is
+                # the space between two cells of a table row.
+                "cells": widest > CELL_GAP,
+            }
+        )
+    return out
+
+
+def _option_rows(lines):
+    """The four option lines - bold, lettered A-D in order, at one x - or []."""
+    cands = [ln for ln in lines if ln["bold"] and re.match(r"^[A-D](?: |$)", ln["text"])]
+    for a in (c for c in cands if c["text"][0] == "A"):
+        rows = [a]
+        for letter in OPTION_LETTERS[1:]:
+            nxt = next(
+                (
+                    c
+                    for c in cands
+                    if c["text"][0] == letter
+                    and c["top"] > rows[-1]["top"]
+                    and abs(c["x0"] - a["x0"]) <= ALIGN_TOLERANCE
+                ),
+                None,
+            )
+            if nxt is None:
+                break
+            rows.append(nxt)
+        if len(rows) == 4:
+            return rows
+    return []
+
+
+def _rejoin_option_letters(lines):
+    out = [dict(ln) for ln in lines]
+    used = set()
+    for i, ln in enumerate(out):
+        if not (ln["bold"] and re.fullmatch(r"[A-D]", ln["text"])):
+            continue
+        beside = [
+            j
+            for j, o in enumerate(out)
+            if j != i
+            and j not in used
+            and CONTINUATION_INDENT[0] <= o["x0"] - ln["x0"] <= CONTINUATION_INDENT[1]
+            and abs(o["top"] - ln["top"]) <= 4.5
+        ]
+        if len(beside) == 1:
+            j = beside[0]
+            used.add(j)
+            ln["text"] = ln["text"] + " " + out[j]["text"]
+            ln["scripts"] += out[j]["scripts"]
+    return [ln for j, ln in enumerate(out) if j not in used]
+
+
+def _region_lines(page, top, bottom, body_x):
+    chars = [
+        c
+        for c in page.chars
+        if c["top"] >= top
+        and c["bottom"] <= bottom + 1
+        and c["x0"] >= body_x
+        and c["x0"] < BODY_RIGHT_EDGE
+        and not (c["x0"] > MARGIN_MIN_X and c["size"] < MARGIN_MAX_HEIGHT)
+    ]
+    return _lines_from_chars(chars)
+
+
+def _images_in(page, top, bottom):
+    return [
+        im
+        for im in page.images
+        if im["bottom"] > top and im["top"] < bottom and (im["x1"] - im["x0"]) > 40
+    ]
+
+
+def extract_mcqs(pdf):
+    """Paper 3 Section A, Q1-Q30: stem and options A-D, as printed.
+
+    Each question is the body column between its number cell and the next (or
+    the foot of the page). Its lines are read by position:
+
+      - the options are four bold lines lettered A-D, in order, at one x;
+      - a line indented ~14pt past them continues the option above it;
+      - a line at the text column above option A is the stem;
+      - a line anywhere else is figure or table text - a data table's rows, a
+        diagram's labels - and is dropped and counted, never reproduced;
+      - "[1 mark]" must be present, but where it falls says nothing: it
+        follows option D up to 2021 and sits above option A from 2022.
+
+    usesFigure is true when anything was dropped, when an image is printed in
+    the question, or when the options are bare letters under diagrams or the
+    rows of a table (then options is null). Nothing is rewritten: lines are
+    kept whole or not at all, and the only repair is rejoin_hyphenation's, as
+    for every AQA question.
+    """
+    body_x = body_left_edge(pdf)
+    cells = [
+        (pi, top, n)
+        for pi, p in enumerate(pdf.pages)
+        for top, n, _r in number_cells(p)
+        if 1 <= n <= MCQ_COUNT
+    ]
+    problems = []
+    seen = [n for _pi, _t, n in cells]
+    if seen != list(range(1, MCQ_COUNT + 1)):
+        problems.append(f"Section A number cells read {seen}, expected 1-{MCQ_COUNT}")
+    all_cells = sorted(
+        (pi, top) for pi, p in enumerate(pdf.pages) for top, _n, _r in number_cells(p)
+    )
+
+    out = []
+    for pi, top, n in cells:
+        page = pdf.pages[pi]
+        later = [t for p2, t in all_cells if p2 == pi and t > top + 1]
+        bottom = min(later) if later else page.height
+        lines = _region_lines(page, top - 3, bottom - 1, body_x)
+        images = _images_in(page, top - 3, bottom)
+        notes = []
+
+        first = next((ln for ln in lines if abs(ln["top"] - top) <= 4), None)
+        if first is None:
+            problems.append(f"Q{n}: no stem line beside the number cell")
+            continue
+
+        # An option letter can sit a few points off its own text's baseline
+        # (2022 Q28: "B" at 691.8, its text at 688.7), so the two land on
+        # separate lines - and the text, read first, would join the option
+        # above. A bare bold letter takes the one line set beside it.
+        lines = _rejoin_option_letters(lines)
+
+        # The option rows: four bold lines lettered A-D, in order, at one x.
+        rows = _option_rows(lines)
+        # The stem's column. Its first line can start a few points left of
+        # the rest (2020 Q22: 88.0, then 91.5), and the option letters a few
+        # points right of it (2019 Q18: 95.8 against 92.6). Options within
+        # STEM_TOLERANCE of the first line are the question's own; a stem
+        # line must then sit within ALIGN_TOLERANCE of the first line or of
+        # the option letters - a table's row labels can start 4pt in (2024
+        # Q5: "Original", "Disposable" at 96.8 against 92.6).
+        col = first["x0"]
+        # Rows that are a table's (cells set apart on the line, 2020 Q3 "A
+        # -2%   0%   +2%") are table options wherever their letters sit.
+        text_options = (
+            bool(rows)
+            and abs(rows[0]["x0"] - col) <= STEM_TOLERANCE
+            and not any(r["cells"] for r in rows)
+        )
+        stem_xs = [col]
+        if text_options:
+            col = rows[0]["x0"]
+            stem_xs.append(col)
+        row_ids = {id(r) for r in rows} if text_options else set()
+        start_top = rows[0]["top"] if rows else None
+
+        stem, options, order, dropped, trailing, closed = [], {}, [], [], [], False
+        current = None
+        for ln in lines:
+            t = ln["text"]
+            if MCQ_FURNITURE_RE.match(t):
+                continue
+            # The tariff follows the options up to 2021 and the stem from 2022
+            # (it sits above option A), so it marks nothing; the question runs
+            # to the next number cell or the foot of the page.
+            if MCQ_TARIFF_RE.match(t):
+                closed = True
+                continue
+            near = (
+                min(abs(ln["x0"] - x) for x in stem_xs) <= ALIGN_TOLERANCE
+                and not ln["small"]
+                and not ln["cells"]
+            )
+            if id(ln) in row_ids:
+                current = t[0]
+                order.append(current)
+                options[current] = [t[2:]] if len(t) > 2 else []
+            elif (
+                current
+                and CONTINUATION_INDENT[0] <= ln["x0"] - col <= CONTINUATION_INDENT[1]
+                and not ln["small"]
+                and not ln["cells"]
+            ):
+                options[current].append(t)
+            elif ln is first or (near and (start_top is None or ln["top"] < start_top)):
+                stem.append(t)
+            elif current and near:
+                # Prose at the text column after the options: nothing should
+                # be printed there, so it is reported rather than guessed at.
+                trailing.append(t)
+            else:
+                dropped.append(t)
+
+        if not closed:
+            problems.append(f"Q{n}: no [1 mark] tariff before the next question")
+        if trailing:
+            problems.append(f"Q{n}: text at the column after option D: {trailing}")
+        # Options printed as the rows of a table (2017 Q20: "A Increase
+        # Increase Increases" under three column headings) start at the
+        # table's own left edge, well right of the stem, or set their cells
+        # apart on the line, so the pass above read them as table text. The letter may share a line with the first cell
+        # or stand alone in its own cell (2017 Q22, 2020 Q11, 2021 Q18). The
+        # cells mean nothing without their headings, so the options are not
+        # reproduced: options is null, as for diagrams.
+        table_options = bool(rows) and not text_options
+        # Four diagrams printed as one image, letters and all, so the text
+        # layer holds no option letter (2022 Q15). Accepted only when the
+        # image sits below the stem.
+        image_options = False
+        if not rows and images and stem:
+            stem_bottom = max(ln["top"] for ln in lines if ln["text"] in stem)
+            image_options = any(im["top"] > stem_bottom for im in images)
+        if table_options or image_options:
+            order = list(OPTION_LETTERS)
+            options = {L: [] for L in OPTION_LETTERS}
+        if order != list(OPTION_LETTERS):
+            problems.append(f"Q{n}: options read {''.join(order)}, expected ABCD")
+            continue
+
+        bare = [L for L in OPTION_LETTERS if not options[L]]
+        if bare and len(bare) != 4:
+            problems.append(f"Q{n}: options {''.join(bare)} have no text but the others do")
+            continue
+        figure_options = len(bare) == 4
+
+        text = rejoin_hyphenation(re.sub(r"\s+", " ", " ".join(stem)).strip())
+        opts = (
+            None
+            if figure_options
+            else [
+                {
+                    "letter": L,
+                    "text": rejoin_hyphenation(" ".join(options[L]).strip()),
+                }
+                for L in OPTION_LETTERS
+            ]
+        )
+        uses_figure = bool(dropped or images or figure_options)
+        if dropped:
+            notes.append(
+                f"{len(dropped)} line(s) of figure or table text printed with the "
+                "question are not reproduced; see the question paper"
+            )
+        if images:
+            notes.append("the question prints a diagram or chart (an image)")
+        if table_options:
+            notes.append("the options are the rows of a table; not reproduced")
+        elif image_options:
+            notes.append("the options are diagrams printed as one image; the text layer has no option letters")
+        elif figure_options and images:
+            notes.append("the options are diagrams; only the letters are text")
+        elif figure_options:
+            # Bare letters and no image: the options are the rows of a table
+            # whose letter column sits at the text column (2017 Q6), or
+            # printed fractions (2022 Q25).
+            notes.append("the options are a table or formulae beside bare letters; only the letters are text")
+        scripts = sum(ln["scripts"] for ln in lines)
+        if scripts:
+            notes.append(f"{scripts} subscript or superscript glyph(s) set flush against their base")
+        out.append(
+            {
+                "num": n,
+                "text": text,
+                "options": opts,
+                "usesFigure": uses_figure,
+                "page": pi + 1,
+                "notes": notes,
+            }
+        )
+    return out, problems
+
+
+def mcq_key_page(ms_path: Path):
+    """The mark-scheme page holding the Section A key list.
+
+    Verified by content, not position: the page must say SECTION A and KEY
+    LIST and print every question number 1-30. From 2021 the list reprints each
+    answer's wording beside its letter, so a number and its letter are no
+    longer neighbours in the text; only the numbers are required. The key
+    itself is never read into the data - only the page number is kept, as for
+    every card.
+    """
+    if not ms_path.is_file():
+        return None
+    with pdfplumber.open(ms_path) as ms:
+        for i, p in enumerate(ms.pages):
+            text = p.extract_text() or ""
+            if "KEY LIST" not in text.upper() or "SECTION A" not in text.upper():
+                continue
+            numbers = {int(a) for a in re.findall(r"(?<![\d£.,%])\b(\d{1,2})\b(?![\d.,%])", text)}
+            if set(range(1, MCQ_COUNT + 1)) <= numbers:
+                return i + 1
+    return None
 
 
 def tariffs_in_order(pdf):
@@ -389,9 +798,15 @@ def extract_paper(meta):
         pairs = extract_questions(pdf, first, expected)
         contexts = context_pages(pdf, meta["paper"])
         found_tariffs = tariffs_in_order(pdf)
-        # Paper 3's 30 one-mark MCQs come first and are excluded by instruction.
+        mcqs = []
+        # Paper 3's 30 one-mark MCQs come first: Section A, read separately.
         if meta["paper"] == 3:
-            found_tariffs = [t for t in found_tariffs if t != 1]
+            ones = found_tariffs[:MCQ_COUNT]
+            if ones != [1] * MCQ_COUNT:
+                problems.append(f"Section A tariffs {ones} are not thirty 1-mark questions")
+            found_tariffs = found_tariffs[MCQ_COUNT:]
+            mcqs, mcq_problems = extract_mcqs(pdf)
+            problems.extend(mcq_problems)
         page_count = len(pdf.pages)
 
     if found_tariffs != expected:
@@ -402,6 +817,37 @@ def extract_paper(meta):
     ms_pages = mark_scheme_pages(meta["msPath"], [n for n, _ in pairs])
 
     questions = []
+    key_page = mcq_key_page(meta["msPath"]) if mcqs else None
+    for m in mcqs:
+        notes = list(m["notes"])
+        confidence = "high"
+        if key_page is None:
+            confidence = "low"
+            notes.append("mark scheme key list page could not be verified")
+        if len(m["text"]) < 15:
+            confidence = "low"
+            notes.append(f"stem is only {len(m['text'])} characters")
+        questions.append(
+            {
+                "id": f"{meta['idStem']}-q{m['num']}",
+                "section": "A",
+                "questionNumber": str(m["num"]),
+                "parentQuestion": None,
+                "choiceGroup": None,
+                "marks": 1,
+                "type": "mcq",
+                "questionText": m["text"],
+                "options": m["options"],
+                "usesFigure": m["usesFigure"],
+                # Section A has no extracts: the stem's own data is on the
+                # question's page, which the question-paper link already opens.
+                "contextPage": None,
+                "qpPage": m["page"],
+                "msPage": key_page,
+                "confidence": confidence,
+                "notes": notes,
+            }
+        )
     for i, (num, hit) in enumerate(pairs):
         marks = expected[i]
         notes = []
@@ -488,7 +934,15 @@ def emit(meta, questions, problems):
                 "parentQuestion": q["parentQuestion"],
                 "choiceGroup": q["choiceGroup"],
                 "marks": q["marks"],
+                # Only an MCQ carries these three, so every written record keeps
+                # the shape it already has on disk, byte for byte.
+                **({"type": q["type"]} if "type" in q else {}),
                 "questionText": q["questionText"],
+                **(
+                    {"options": q["options"], "usesFigure": q["usesFigure"]}
+                    if "type" in q
+                    else {}
+                ),
                 "context": (
                     {
                         "type": "extracts",

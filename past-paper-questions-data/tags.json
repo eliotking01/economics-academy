@@ -16,6 +16,15 @@
       "calculation"
     ]
   },
+  "edexcel-a-p1-2017-jun-q1b": {
+    "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
+    "keywords": [
+      "cross elasticity of demand",
+      "XED calculation",
+      "e-cigarettes",
+      "tobacco"
+    ]
+  },
   "edexcel-a-p1-2017-jun-q2a": {
     "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
     "keywords": ["price elasticity of demand", "PED calculation", "tea"]
@@ -32,6 +41,10 @@
       "calculation"
     ]
   },
+  "edexcel-a-p1-2017-jun-q2c": {
+    "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
+    "keywords": ["income elasticity of demand", "inferior good", "tea"]
+  },
   "edexcel-a-p1-2017-jun-q3a": {
     "topics": ["1-2-9-indirect-taxes-subsidies"],
     "keywords": ["subsidy", "cost of a subsidy", "calculation", "cooking gas"]
@@ -40,6 +53,13 @@
     "topics": ["1-2-9-indirect-taxes-subsidies"],
     "keywords": ["subsidy", "incidence of a subsidy", "consumers", "producers"]
   },
+  "edexcel-a-p1-2017-jun-q3c": {
+    "topics": [
+      "1-2-9-indirect-taxes-subsidies",
+      "1-2-8-producer-consumer-surplus"
+    ],
+    "keywords": ["subsidy", "consumer surplus", "cooking gas"]
+  },
   "edexcel-a-p1-2017-jun-q4a": {
     "topics": [
       "3-3-4-normal-profits-supernormal-profits-losses",
@@ -47,6 +67,14 @@
       "3-3-2-costs"
     ],
     "keywords": ["cost and revenue diagram", "profit", "fall in demand", "JCB"]
+  },
+  "edexcel-a-p1-2017-jun-q4b": {
+    "topics": ["3-4-7-contestability", "3-4-4-oligopoly"],
+    "keywords": ["contestability", "market share", "barriers to entry", "JCB"]
+  },
+  "edexcel-a-p1-2017-jun-q5a": {
+    "topics": ["3-3-2-costs"],
+    "keywords": ["fixed costs", "variable costs", "Starbucks"]
   },
   "edexcel-a-p1-2017-jun-q5b": {
     "topics": ["3-3-2-costs"],
@@ -134,6 +162,14 @@
     ],
     "keywords": ["opportunity cost", "PPF", "capital goods", "calculation"]
   },
+  "edexcel-a-p1-2018-jun-q1b": {
+    "topics": ["1-1-4-production-possibility-frontiers"],
+    "keywords": [
+      "production possibility frontier",
+      "technological improvement",
+      "consumer goods"
+    ]
+  },
   "edexcel-a-p1-2018-jun-q1c": {
     "topics": ["1-1-4-production-possibility-frontiers"],
     "keywords": ["PPF", "capital goods", "consumer goods"]
@@ -151,9 +187,17 @@
       "gaming machines"
     ]
   },
+  "edexcel-a-p1-2018-jun-q2c": {
+    "topics": ["1-3-3-public-goods"],
+    "keywords": ["public goods", "flood defences", "state provision"]
+  },
   "edexcel-a-p1-2018-jun-q3a": {
     "topics": ["3-3-1-revenue"],
     "keywords": ["percentage calculation", "estate agents", "revenue"]
+  },
+  "edexcel-a-p1-2018-jun-q3b": {
+    "topics": ["1-2-6-price-determination"],
+    "keywords": ["house prices", "ratio", "calculation"]
   },
   "edexcel-a-p1-2018-jun-q3c": {
     "topics": ["1-2-6-price-determination", "1-2-2-demand", "1-2-4-supply"],
@@ -175,6 +219,18 @@
       "supernormal profit",
       "calculation"
     ]
+  },
+  "edexcel-a-p1-2018-jun-q4b": {
+    "topics": ["3-2-1-business-objectives", "3-3-1-revenue"],
+    "keywords": [
+      "sales maximisation",
+      "revenue maximisation",
+      "business objectives"
+    ]
+  },
+  "edexcel-a-p1-2018-jun-q5a": {
+    "topics": ["1-2-2-demand"],
+    "keywords": ["percentage change", "personal computers", "calculation"]
   },
   "edexcel-a-p1-2018-jun-q5b": {
     "topics": ["1-2-2-demand"],
@@ -265,6 +321,10 @@
       "new build houses"
     ]
   },
+  "edexcel-a-p1-2019-jun-q1b": {
+    "topics": ["1-2-5-price-elasticity-of-supply"],
+    "keywords": ["price elasticity of supply", "PES", "new build houses"]
+  },
   "edexcel-a-p1-2019-jun-q1c": {
     "topics": ["1-2-5-price-elasticity-of-supply"],
     "keywords": ["determinants of PES", "price elasticity of supply", "housing"]
@@ -278,6 +338,22 @@
       "natural disaster"
     ]
   },
+  "edexcel-a-p1-2019-jun-q2b": {
+    "topics": ["1-1-4-production-possibility-frontiers"],
+    "keywords": [
+      "production possibility frontier",
+      "natural disaster",
+      "Hurricane Harvey"
+    ]
+  },
+  "edexcel-a-p1-2019-jun-q3a": {
+    "topics": ["3-4-3-monopolistic-competition"],
+    "keywords": [
+      "monopolistic competition",
+      "barriers to entry",
+      "hair and beauty salons"
+    ]
+  },
   "edexcel-a-p1-2019-jun-q3b": {
     "topics": [
       "3-4-3-monopolistic-competition",
@@ -289,6 +365,10 @@
       "normal profit",
       "diagram"
     ]
+  },
+  "edexcel-a-p1-2019-jun-q4a": {
+    "topics": ["3-1-3-demergers"],
+    "keywords": ["demerger", "core business", "GoCompare"]
   },
   "edexcel-a-p1-2019-jun-q4b": {
     "topics": [
@@ -305,6 +385,10 @@
       "price mechanism",
       "resource allocation"
     ]
+  },
+  "edexcel-a-p1-2019-jun-q5b": {
+    "topics": ["1-1-6-types-of-economies"],
+    "keywords": ["Hayek", "Marx", "free market economy", "command economy"]
   },
   "edexcel-a-p1-2019-jun-q5c": {
     "topics": ["1-1-5-specialisation-division-of-labour"],
@@ -371,6 +455,10 @@
       "game theory"
     ]
   },
+  "edexcel-a-p1-2022-jun-q1a": {
+    "topics": ["3-3-1-revenue", "1-2-2-demand"],
+    "keywords": ["revenue", "increase in demand", "Disney+"]
+  },
   "edexcel-a-p1-2022-jun-q1b": {
     "topics": ["1-2-2-demand", "1-2-6-price-determination"],
     "keywords": [
@@ -388,6 +476,10 @@
     "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
     "keywords": ["cross elasticity of demand", "calculation", "bottled water"]
   },
+  "edexcel-a-p1-2022-jun-q2c": {
+    "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
+    "keywords": ["elasticity of demand", "drinks market", "Chile"]
+  },
   "edexcel-a-p1-2022-jun-q3a": {
     "topics": ["1-3-2-externalities"],
     "keywords": [
@@ -397,9 +489,24 @@
       "pollution"
     ]
   },
+  "edexcel-a-p1-2022-jun-q3b": {
+    "topics": [
+      "1-3-2-externalities",
+      "1-4-1-government-intervention-in-markets"
+    ],
+    "keywords": ["external costs", "fine", "pollution", "regulation"]
+  },
   "edexcel-a-p1-2022-jun-q4a": {
     "topics": ["3-4-4-oligopoly"],
     "keywords": ["game theory", "collusion", "price fixing", "payoff matrix"]
+  },
+  "edexcel-a-p1-2022-jun-q4b": {
+    "topics": ["3-4-4-oligopoly"],
+    "keywords": ["tacit collusion", "oligopoly", "price fixing"]
+  },
+  "edexcel-a-p1-2022-jun-q5a": {
+    "topics": ["3-1-2-business-growth"],
+    "keywords": ["horizontal integration", "merger", "Fiat and Vauxhall"]
   },
   "edexcel-a-p1-2022-jun-q5b": {
     "topics": ["3-3-3-economies-diseconomies-of-scale"],
@@ -474,6 +581,10 @@
     "topics": ["1-1-6-types-of-economies"],
     "keywords": ["free market economy", "command economy", "Cuba"]
   },
+  "edexcel-a-p1-2023-jun-q1b": {
+    "topics": ["1-1-6-types-of-economies"],
+    "keywords": ["command economy", "Karl Marx", "economic thinkers"]
+  },
   "edexcel-a-p1-2023-jun-q2a": {
     "topics": ["1-1-4-production-possibility-frontiers"],
     "keywords": ["opportunity cost", "PPF", "calculation", "farming"]
@@ -481,6 +592,14 @@
   "edexcel-a-p1-2023-jun-q2b": {
     "topics": ["1-1-4-production-possibility-frontiers"],
     "keywords": ["PPF", "efficiency", "farming"]
+  },
+  "edexcel-a-p1-2023-jun-q2c": {
+    "topics": ["1-1-4-production-possibility-frontiers"],
+    "keywords": ["production possibility frontier", "investment", "technology"]
+  },
+  "edexcel-a-p1-2023-jun-q3a": {
+    "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
+    "keywords": ["income elasticity of demand", "luxury good", "YED"]
   },
   "edexcel-a-p1-2023-jun-q3b": {
     "topics": [
@@ -501,6 +620,22 @@
   "edexcel-a-p1-2023-jun-q4b": {
     "topics": ["1-2-8-producer-consumer-surplus"],
     "keywords": ["consumer surplus", "price increase", "rail fares"]
+  },
+  "edexcel-a-p1-2023-jun-q4c": {
+    "topics": [
+      "1-2-8-producer-consumer-surplus",
+      "1-4-1-government-intervention-in-markets"
+    ],
+    "keywords": ["producer surplus", "minimum price", "sugary drinks"]
+  },
+  "edexcel-a-p1-2023-jun-q5a": {
+    "topics": ["3-5-3-wage-determination"],
+    "keywords": [
+      "public sector pay",
+      "private sector pay",
+      "ratio",
+      "calculation"
+    ]
   },
   "edexcel-a-p1-2023-jun-q5b": {
     "topics": ["3-4-6-monopsony", "3-5-3-wage-determination"],
@@ -577,9 +712,17 @@
       "bus tickets"
     ]
   },
+  "edexcel-a-p1-2024-jun-q1b": {
+    "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
+    "keywords": ["price elasticity of demand", "PED calculation", "bus tickets"]
+  },
   "edexcel-a-p1-2024-jun-q2a": {
     "topics": ["1-2-5-price-elasticity-of-supply"],
     "keywords": ["price elasticity of supply", "determinants of PES", "housing"]
+  },
+  "edexcel-a-p1-2024-jun-q2b": {
+    "topics": ["1-2-5-price-elasticity-of-supply"],
+    "keywords": ["price elasticity of supply", "PES calculation", "housing"]
   },
   "edexcel-a-p1-2024-jun-q3a": {
     "topics": ["3-2-1-business-objectives", "3-3-1-revenue"],
@@ -590,9 +733,25 @@
       "Peloton"
     ]
   },
+  "edexcel-a-p1-2024-jun-q3b": {
+    "topics": ["3-2-1-business-objectives"],
+    "keywords": ["sales maximisation", "business objectives", "average revenue"]
+  },
   "edexcel-a-p1-2024-jun-q4a": {
     "topics": ["1-4-1-government-intervention-in-markets"],
     "keywords": ["maximum price", "tuition fees", "government intervention"]
+  },
+  "edexcel-a-p1-2024-jun-q4b": {
+    "topics": [
+      "1-4-2-government-failure",
+      "1-4-1-government-intervention-in-markets"
+    ],
+    "keywords": [
+      "government failure",
+      "maximum price",
+      "distortion of price signals",
+      "tuition fees"
+    ]
   },
   "edexcel-a-p1-2024-jun-q5a": {
     "topics": ["3-4-4-oligopoly"],
@@ -602,6 +761,10 @@
       "mortgage lenders",
       "market share"
     ]
+  },
+  "edexcel-a-p1-2024-jun-q5b": {
+    "topics": ["3-4-4-oligopoly"],
+    "keywords": ["market share", "mortgage lenders", "calculation"]
   },
   "edexcel-a-p1-2024-jun-q6a": {
     "topics": ["1-2-6-price-determination"],
@@ -674,9 +837,29 @@
       "calculation"
     ]
   },
+  "edexcel-a-p1-2025-jun-q1b": {
+    "topics": ["3-3-1-revenue", "1-2-2-demand"],
+    "keywords": ["average revenue", "marginal revenue", "fall in demand"]
+  },
   "edexcel-a-p1-2025-jun-q2a": {
     "topics": ["1-2-5-price-elasticity-of-supply"],
     "keywords": ["price elasticity of supply", "oil", "North Sea"]
+  },
+  "edexcel-a-p1-2025-jun-q2b": {
+    "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
+    "keywords": ["cross elasticity of demand", "XED", "petrol and diesel cars"]
+  },
+  "edexcel-a-p1-2025-jun-q3a": {
+    "topics": [
+      "3-4-3-monopolistic-competition",
+      "3-3-4-normal-profits-supernormal-profits-losses",
+      "3-4-1-efficiency"
+    ],
+    "keywords": [
+      "monopolistic competition",
+      "supernormal profit",
+      "short-run equilibrium"
+    ]
   },
   "edexcel-a-p1-2025-jun-q3b": {
     "topics": ["1-3-2-externalities"],
@@ -696,6 +879,17 @@
       "misallocation of resources"
     ]
   },
+  "edexcel-a-p1-2025-jun-q4b": {
+    "topics": [
+      "1-2-1-rational-decision-making",
+      "1-2-10-alternative-views-of-consumer-behaviour"
+    ],
+    "keywords": [
+      "rational decision making",
+      "utility maximisation",
+      "Amazon Prime"
+    ]
+  },
   "edexcel-a-p1-2025-jun-q5a": {
     "topics": ["3-5-3-wage-determination"],
     "keywords": [
@@ -703,6 +897,10 @@
       "labour market diagram",
       "hospitality"
     ]
+  },
+  "edexcel-a-p1-2025-jun-q5b": {
+    "topics": ["3-5-2-supply-of-labour"],
+    "keywords": ["supply of labour", "agricultural workers", "wages"]
   },
   "edexcel-a-p1-2025-jun-q6a": {
     "topics": ["3-4-1-efficiency"],
@@ -758,6 +956,10 @@
       "skills"
     ]
   },
+  "edexcel-a-p1-2021-nov-q1a": {
+    "topics": ["1-1-2-positive-normative-statements"],
+    "keywords": ["positive statements", "normative statements", "migration"]
+  },
   "edexcel-a-p1-2021-nov-q1b": {
     "topics": ["3-5-2-supply-of-labour", "3-5-3-wage-determination"],
     "keywords": ["migration", "supply of labour", "wages", "engineers"]
@@ -765,6 +967,10 @@
   "edexcel-a-p1-2021-nov-q2a": {
     "topics": ["1-2-4-supply", "1-2-2-demand", "1-2-6-price-determination"],
     "keywords": ["supply and demand diagram", "increase in supply", "cobalt"]
+  },
+  "edexcel-a-p1-2021-nov-q2b": {
+    "topics": ["1-2-4-supply", "1-2-6-price-determination"],
+    "keywords": ["percentage change", "cobalt", "price fall", "calculation"]
   },
   "edexcel-a-p1-2021-nov-q3a": {
     "topics": ["3-4-5-monopoly"],
@@ -774,6 +980,10 @@
       "student discount"
     ]
   },
+  "edexcel-a-p1-2021-nov-q3b": {
+    "topics": ["3-4-5-monopoly"],
+    "keywords": ["price discrimination", "market power", "student discount"]
+  },
   "edexcel-a-p1-2021-nov-q4a": {
     "topics": ["3-3-1-revenue"],
     "keywords": ["total revenue", "calculation", "theatre"]
@@ -782,6 +992,14 @@
     "topics": ["3-3-2-costs", "1-2-9-indirect-taxes-subsidies"],
     "keywords": ["subsidy", "total costs", "calculation", "theatre"]
   },
+  "edexcel-a-p1-2021-nov-q4c": {
+    "topics": ["3-2-1-business-objectives", "3-3-1-revenue"],
+    "keywords": [
+      "revenue maximisation",
+      "marginal revenue",
+      "business objectives"
+    ]
+  },
   "edexcel-a-p1-2021-nov-q5a": {
     "topics": ["3-4-2-perfect-competition"],
     "keywords": [
@@ -789,6 +1007,14 @@
       "long-run equilibrium",
       "normal profit",
       "diagram"
+    ]
+  },
+  "edexcel-a-p1-2021-nov-q5b": {
+    "topics": ["3-4-1-efficiency", "3-4-2-perfect-competition"],
+    "keywords": [
+      "allocative efficiency",
+      "productive efficiency",
+      "perfect competition"
     ]
   },
   "edexcel-a-p1-2021-nov-q6a": {
@@ -860,6 +1086,18 @@
     "topics": ["1-2-9-indirect-taxes-subsidies"],
     "keywords": ["indirect tax", "tax incidence", "specific tax", "petrol"]
   },
+  "edexcel-a-p1-2020-oct-q1b": {
+    "topics": [
+      "1-2-9-indirect-taxes-subsidies",
+      "1-2-8-producer-consumer-surplus"
+    ],
+    "keywords": [
+      "indirect tax",
+      "fuel duty",
+      "consumer surplus",
+      "producer surplus"
+    ]
+  },
   "edexcel-a-p1-2020-oct-q2a": {
     "topics": ["1-3-2-externalities"],
     "keywords": [
@@ -868,6 +1106,10 @@
       "externalities diagram",
       "higher education"
     ]
+  },
+  "edexcel-a-p1-2020-oct-q2b": {
+    "topics": ["1-3-2-externalities"],
+    "keywords": ["private benefit", "external benefit", "higher education"]
   },
   "edexcel-a-p1-2020-oct-q3a": {
     "topics": [
@@ -880,9 +1122,20 @@
       "government intervention"
     ]
   },
+  "edexcel-a-p1-2020-oct-q3b": {
+    "topics": [
+      "1-4-2-government-failure",
+      "1-4-1-government-intervention-in-markets"
+    ],
+    "keywords": ["regulation", "unintended consequences", "government failure"]
+  },
   "edexcel-a-p1-2020-oct-q4a": {
     "topics": ["3-3-2-costs"],
     "keywords": ["average cost", "total cost", "cost curves"]
+  },
+  "edexcel-a-p1-2020-oct-q4b": {
+    "topics": ["3-3-2-costs"],
+    "keywords": ["average cost", "diseconomies", "doughnut producer"]
   },
   "edexcel-a-p1-2020-oct-q4c": {
     "topics": ["3-3-2-costs"],
@@ -895,6 +1148,10 @@
   "edexcel-a-p1-2020-oct-q5b": {
     "topics": ["3-1-2-business-growth"],
     "keywords": ["organic growth", "business growth", "Bettys"]
+  },
+  "edexcel-a-p1-2020-oct-q5c": {
+    "topics": ["3-1-2-business-growth"],
+    "keywords": ["vertical integration", "merger", "Bettys"]
   },
   "edexcel-a-p1-2020-oct-q6a": {
     "topics": ["1-2-9-indirect-taxes-subsidies"],
@@ -951,6 +1208,10 @@
       "suppliers"
     ]
   },
+  "edexcel-a-p2-2017-jun-q1a": {
+    "topics": ["2-1-3-employment-unemployment"],
+    "keywords": ["cyclical unemployment", "types of unemployment", "recession"]
+  },
   "edexcel-a-p2-2017-jun-q1b": {
     "topics": [
       "2-4-1-national-income",
@@ -971,6 +1232,19 @@
     "topics": ["2-4-4-the-multiplier"],
     "keywords": ["multiplier", "marginal propensity to save"]
   },
+  "edexcel-a-p2-2017-jun-q2c": {
+    "topics": ["2-4-4-the-multiplier"],
+    "keywords": [
+      "multiplier",
+      "marginal propensity to save",
+      "marginal propensity to import",
+      "calculation"
+    ]
+  },
+  "edexcel-a-p2-2017-jun-q3a": {
+    "topics": ["2-1-2-inflation"],
+    "keywords": ["disinflation", "Consumer Prices Index", "CPI"]
+  },
   "edexcel-a-p2-2017-jun-q3b": {
     "topics": ["2-1-2-inflation"],
     "keywords": ["CPI", "weights", "measuring inflation", "basket of goods"]
@@ -978,6 +1252,23 @@
   "edexcel-a-p2-2017-jun-q4a": {
     "topics": ["4-2-2-inequality"],
     "keywords": ["income inequality", "Gini coefficient"]
+  },
+  "edexcel-a-p2-2017-jun-q4b": {
+    "topics": ["4-2-2-inequality"],
+    "keywords": ["Gini coefficient", "income equality"]
+  },
+  "edexcel-a-p2-2017-jun-q5a": {
+    "topics": [
+      "4-3-1-measures-of-development",
+      "4-2-1-absolute-relative-poverty",
+      "2-1-1-economic-growth"
+    ],
+    "keywords": [
+      "measures of development",
+      "Vietnam",
+      "India",
+      "life expectancy"
+    ]
   },
   "edexcel-a-p2-2017-jun-q5b": {
     "topics": ["4-3-1-measures-of-development"],
@@ -1038,12 +1329,31 @@
       "commodity prices"
     ]
   },
+  "edexcel-a-p2-2018-jun-q1a": {
+    "topics": [
+      "4-1-5-trading-blocs-and-the-world-trade-organisation",
+      "4-1-6-restrictions-on-free-trade"
+    ],
+    "keywords": ["trade agreement", "CETA", "tariffs"]
+  },
   "edexcel-a-p2-2018-jun-q1b": {
     "topics": [
       "4-1-2-specialisation-trade",
       "4-1-5-trading-blocs-and-the-world-trade-organisation"
     ],
     "keywords": ["comparative advantage", "trade agreement", "EU", "Canada"]
+  },
+  "edexcel-a-p2-2018-jun-q2a": {
+    "topics": [
+      "2-2-1-aggregate-demand",
+      "2-2-2-consumption",
+      "2-4-4-the-multiplier"
+    ],
+    "keywords": [
+      "aggregate demand",
+      "marginal propensity to save",
+      "consumption"
+    ]
   },
   "edexcel-a-p2-2018-jun-q2b": {
     "topics": [
@@ -1066,6 +1376,15 @@
     "topics": ["2-1-4-balance-of-payments", "4-1-7-balance-of-payments"],
     "keywords": ["current account", "balance of payments"]
   },
+  "edexcel-a-p2-2018-jun-q3c": {
+    "topics": ["2-1-4-balance-of-payments", "4-1-7-balance-of-payments"],
+    "keywords": [
+      "current account",
+      "balance of payments",
+      "deficit",
+      "United States"
+    ]
+  },
   "edexcel-a-p2-2018-jun-q4a": {
     "topics": [
       "4-5-3-public-sector-finances",
@@ -1077,9 +1396,21 @@
     "topics": ["4-5-3-public-sector-finances"],
     "keywords": ["national debt", "budget deficit", "budget surplus"]
   },
+  "edexcel-a-p2-2018-jun-q4c": {
+    "topics": ["4-5-3-public-sector-finances", "2-6-2-demand-side-policies"],
+    "keywords": [
+      "budget surplus",
+      "discretionary fiscal policy",
+      "fiscal policy"
+    ]
+  },
   "edexcel-a-p2-2018-jun-q5a": {
     "topics": ["2-2-2-consumption"],
     "keywords": ["consumer borrowing", "bank lending", "interest rates"]
+  },
+  "edexcel-a-p2-2018-jun-q5b": {
+    "topics": ["2-2-2-consumption"],
+    "keywords": ["bank lending", "consumption", "credit"]
   },
   "edexcel-a-p2-2018-jun-q5c": {
     "topics": ["2-2-2-consumption"],
@@ -1148,6 +1479,10 @@
       "sterling"
     ]
   },
+  "edexcel-a-p2-2019-jun-q1a": {
+    "topics": ["2-2-2-consumption", "2-6-2-demand-side-policies"],
+    "keywords": ["credit card lending", "interest rates", "consumption"]
+  },
   "edexcel-a-p2-2019-jun-q1b": {
     "topics": ["2-2-2-consumption"],
     "keywords": [
@@ -1169,6 +1504,10 @@
     ],
     "keywords": ["AD/AS diagram", "government spending", "infrastructure"]
   },
+  "edexcel-a-p2-2019-jun-q2b": {
+    "topics": ["4-5-1-public-expenditure", "2-6-3-supply-side-policies"],
+    "keywords": ["infrastructure", "government spending", "capital expenditure"]
+  },
   "edexcel-a-p2-2019-jun-q3a": {
     "topics": ["4-1-9-international-competitiveness"],
     "keywords": ["unit labour costs", "competitiveness", "Estonia"]
@@ -1180,6 +1519,14 @@
       "unit labour costs",
       "Estonia"
     ]
+  },
+  "edexcel-a-p2-2019-jun-q3c": {
+    "topics": ["4-1-9-international-competitiveness"],
+    "keywords": ["unit labour costs", "index numbers", "Austria", "calculation"]
+  },
+  "edexcel-a-p2-2019-jun-q4a": {
+    "topics": ["2-6-3-supply-side-policies"],
+    "keywords": ["corporation tax", "supply-side policy"]
   },
   "edexcel-a-p2-2019-jun-q4b": {
     "topics": ["4-5-2-taxation"],
@@ -1196,6 +1543,10 @@
   "edexcel-a-p2-2019-jun-q5b": {
     "topics": ["4-2-2-inequality"],
     "keywords": ["wealth inequality", "global inequality", "Oxfam"]
+  },
+  "edexcel-a-p2-2019-jun-q5c": {
+    "topics": ["4-2-2-inequality", "4-5-2-taxation"],
+    "keywords": ["Gini coefficient", "progressive taxes", "inequality"]
   },
   "edexcel-a-p2-2019-jun-q6a": {
     "topics": ["4-1-8-exchange-rates", "4-4-1-role-of-financial-markets"],
@@ -1264,6 +1615,18 @@
       "calculation"
     ]
   },
+  "edexcel-a-p2-2022-jun-q1b": {
+    "topics": ["2-4-2-injections-withdrawals", "2-4-1-national-income"],
+    "keywords": ["injections", "circular flow of income", "investment"]
+  },
+  "edexcel-a-p2-2022-jun-q2a": {
+    "topics": ["2-2-2-consumption", "2-1-2-inflation"],
+    "keywords": [
+      "house prices",
+      "annual percentage change",
+      "data interpretation"
+    ]
+  },
   "edexcel-a-p2-2022-jun-q2b": {
     "topics": ["2-2-2-consumption"],
     "keywords": ["consumption", "wealth effect", "house prices"]
@@ -1271,6 +1634,14 @@
   "edexcel-a-p2-2022-jun-q3a": {
     "topics": ["2-2-3-investment", "2-6-2-demand-side-policies"],
     "keywords": ["investment", "interest rates", "base rate"]
+  },
+  "edexcel-a-p2-2022-jun-q3b": {
+    "topics": ["2-6-2-demand-side-policies", "4-1-8-exchange-rates"],
+    "keywords": ["base interest rate", "monetary policy", "exchange rate"]
+  },
+  "edexcel-a-p2-2022-jun-q4a": {
+    "topics": ["2-5-3-trade-cycle"],
+    "keywords": ["trade cycle", "boom", "inflation"]
   },
   "edexcel-a-p2-2022-jun-q4b": {
     "topics": [
@@ -1287,6 +1658,13 @@
   "edexcel-a-p2-2022-jun-q5a": {
     "topics": ["4-4-1-role-of-financial-markets"],
     "keywords": ["financial markets", "loans", "small businesses"]
+  },
+  "edexcel-a-p2-2022-jun-q5b": {
+    "topics": [
+      "4-4-2-market-failure-in-the-financial-sector",
+      "1-3-4-information-gaps"
+    ],
+    "keywords": ["asymmetric information", "loan scheme", "financial sector"]
   },
   "edexcel-a-p2-2022-jun-q6a": {
     "topics": ["4-2-2-inequality"],
@@ -1350,6 +1728,18 @@
     ],
     "keywords": ["AD/AS diagram", "base interest rate", "monetary policy"]
   },
+  "edexcel-a-p2-2023-jun-q1b": {
+    "topics": ["2-6-2-demand-side-policies", "2-1-2-inflation"],
+    "keywords": [
+      "base interest rate",
+      "demand-pull inflation",
+      "monetary policy"
+    ]
+  },
+  "edexcel-a-p2-2023-jun-q2a": {
+    "topics": ["2-1-3-employment-unemployment"],
+    "keywords": ["unemployment rate", "percentage point", "data interpretation"]
+  },
   "edexcel-a-p2-2023-jun-q2b": {
     "topics": ["2-1-3-employment-unemployment"],
     "keywords": ["unemployment", "causes of unemployment"]
@@ -1362,6 +1752,18 @@
     "topics": ["2-5-4-the-impact-of-economic-growth", "2-5-3-trade-cycle"],
     "keywords": ["fall in real GDP", "recession", "costs"]
   },
+  "edexcel-a-p2-2023-jun-q3c": {
+    "topics": ["2-5-1-causes-of-growth", "2-3-3-long-run-aggregate-supply"],
+    "keywords": [
+      "potential growth",
+      "technological advances",
+      "economic growth"
+    ]
+  },
+  "edexcel-a-p2-2023-jun-q4a": {
+    "topics": ["2-2-2-consumption"],
+    "keywords": ["consumption", "components of aggregate demand"]
+  },
   "edexcel-a-p2-2023-jun-q4b": {
     "topics": ["2-4-4-the-multiplier", "2-2-2-consumption"],
     "keywords": ["multiplier", "marginal propensity to consume", "real GDP"]
@@ -1373,6 +1775,10 @@
   "edexcel-a-p2-2023-jun-q5b": {
     "topics": ["4-5-3-public-sector-finances"],
     "keywords": ["fiscal deficit", "national debt"]
+  },
+  "edexcel-a-p2-2023-jun-q5c": {
+    "topics": ["4-5-3-public-sector-finances", "4-5-1-public-expenditure"],
+    "keywords": ["national debt", "crowding out", "United States"]
   },
   "edexcel-a-p2-2023-jun-q6a": {
     "topics": ["4-1-5-trading-blocs-and-the-world-trade-organisation"],
@@ -1431,6 +1837,10 @@
       "cost of living"
     ]
   },
+  "edexcel-a-p2-2024-jun-q1a": {
+    "topics": ["2-2-2-consumption"],
+    "keywords": ["household savings ratio", "savings", "data interpretation"]
+  },
   "edexcel-a-p2-2024-jun-q1b": {
     "topics": ["2-2-2-consumption"],
     "keywords": ["household saving", "savings ratio", "calculation"]
@@ -1438,6 +1848,15 @@
   "edexcel-a-p2-2024-jun-q1c": {
     "topics": ["2-2-2-consumption"],
     "keywords": ["household saving", "savings ratio", "consumer confidence"]
+  },
+  "edexcel-a-p2-2024-jun-q2a": {
+    "topics": ["2-2-3-investment"],
+    "keywords": [
+      "investment",
+      "percentage point",
+      "European Union",
+      "calculation"
+    ]
   },
   "edexcel-a-p2-2024-jun-q2b": {
     "topics": [
@@ -1456,6 +1875,18 @@
       "banks"
     ]
   },
+  "edexcel-a-p2-2024-jun-q3b": {
+    "topics": ["4-4-1-role-of-financial-markets"],
+    "keywords": [
+      "financial markets",
+      "forward markets",
+      "role of financial markets"
+    ]
+  },
+  "edexcel-a-p2-2024-jun-q4a": {
+    "topics": ["2-5-3-trade-cycle"],
+    "keywords": ["trade cycle", "boom"]
+  },
   "edexcel-a-p2-2024-jun-q4b": {
     "topics": ["2-4-4-the-multiplier"],
     "keywords": [
@@ -1468,6 +1899,10 @@
   "edexcel-a-p2-2024-jun-q5a": {
     "topics": ["4-1-6-restrictions-on-free-trade"],
     "keywords": ["tariffs", "protectionism", "steel"]
+  },
+  "edexcel-a-p2-2024-jun-q5b": {
+    "topics": ["4-1-2-specialisation-trade"],
+    "keywords": ["comparative advantage", "productivity", "steel"]
   },
   "edexcel-a-p2-2024-jun-q6a": {
     "topics": ["4-5-2-taxation"],
@@ -1522,9 +1957,17 @@
       "exports"
     ]
   },
+  "edexcel-a-p2-2025-jun-q1a": {
+    "topics": ["4-3-1-measures-of-development", "2-1-1-economic-growth"],
+    "keywords": ["HDI", "measures of development", "Morocco", "Pakistan"]
+  },
   "edexcel-a-p2-2025-jun-q1b": {
     "topics": ["2-1-1-economic-growth", "4-3-1-measures-of-development"],
     "keywords": ["GDP per capita", "living standards", "HDI", "GNI"]
+  },
+  "edexcel-a-p2-2025-jun-q2a": {
+    "topics": ["2-1-4-balance-of-payments", "4-1-7-balance-of-payments"],
+    "keywords": ["current account", "balance of payments", "deficit"]
   },
   "edexcel-a-p2-2025-jun-q2b": {
     "topics": [
@@ -1533,6 +1976,10 @@
       "2-1-4-balance-of-payments"
     ],
     "keywords": ["current account deficit", "balance of payments"]
+  },
+  "edexcel-a-p2-2025-jun-q3a": {
+    "topics": ["2-1-1-economic-growth", "2-5-3-trade-cycle"],
+    "keywords": ["real GDP growth", "recession", "economic growth"]
   },
   "edexcel-a-p2-2025-jun-q3b": {
     "topics": [
@@ -1546,6 +1993,10 @@
     "topics": ["4-1-4-terms-of-trade"],
     "keywords": ["terms of trade", "China"]
   },
+  "edexcel-a-p2-2025-jun-q4b": {
+    "topics": ["4-1-4-terms-of-trade"],
+    "keywords": ["terms of trade", "index numbers", "China", "calculation"]
+  },
   "edexcel-a-p2-2025-jun-q4c": {
     "topics": ["4-1-4-terms-of-trade", "4-1-7-balance-of-payments"],
     "keywords": ["terms of trade", "current account", "price elastic", "China"]
@@ -1557,6 +2008,13 @@
   "edexcel-a-p2-2025-jun-q5b": {
     "topics": ["2-1-3-employment-unemployment"],
     "keywords": ["economic inactivity", "labour force"]
+  },
+  "edexcel-a-p2-2025-jun-q5c": {
+    "topics": [
+      "2-1-3-employment-unemployment",
+      "2-5-4-the-impact-of-economic-growth"
+    ],
+    "keywords": ["employment", "living standards"]
   },
   "edexcel-a-p2-2025-jun-q6a": {
     "topics": ["4-5-2-taxation"],
@@ -1609,6 +2067,10 @@
       "Sudan"
     ]
   },
+  "edexcel-a-p2-2021-nov-q1a": {
+    "topics": ["2-4-2-injections-withdrawals", "2-4-1-national-income"],
+    "keywords": ["withdrawals", "circular flow of income", "taxation"]
+  },
   "edexcel-a-p2-2021-nov-q1b": {
     "topics": ["2-4-4-the-multiplier"],
     "keywords": [
@@ -1622,6 +2084,14 @@
     "topics": ["4-5-3-public-sector-finances"],
     "keywords": ["fiscal deficit", "national debt", "United States"]
   },
+  "edexcel-a-p2-2021-nov-q2a": {
+    "topics": [
+      "2-2-5-net-trade",
+      "2-4-3-equilibrium-levels-of-real-national-output",
+      "2-3-3-long-run-aggregate-supply"
+    ],
+    "keywords": ["Keynesian long-run aggregate supply", "net exports", "AD/AS"]
+  },
   "edexcel-a-p2-2021-nov-q2b": {
     "topics": [
       "2-3-3-long-run-aggregate-supply",
@@ -1633,6 +2103,10 @@
     "topics": ["2-2-2-consumption", "2-2-1-aggregate-demand"],
     "keywords": ["wealth effect", "house prices", "aggregate demand"]
   },
+  "edexcel-a-p2-2021-nov-q3a": {
+    "topics": ["4-1-8-exchange-rates"],
+    "keywords": ["exchange rate", "depreciation", "pound and dollar"]
+  },
   "edexcel-a-p2-2021-nov-q3b": {
     "topics": ["4-1-8-exchange-rates", "4-1-7-balance-of-payments"],
     "keywords": ["exchange rate", "depreciation", "current account"]
@@ -1640,6 +2114,14 @@
   "edexcel-a-p2-2021-nov-q4a": {
     "topics": ["2-3-3-long-run-aggregate-supply", "2-6-3-supply-side-policies"],
     "keywords": ["long-run aggregate supply", "infrastructure", "HS2"]
+  },
+  "edexcel-a-p2-2021-nov-q4b": {
+    "topics": ["4-5-1-public-expenditure"],
+    "keywords": ["capital expenditure", "current expenditure", "High Speed 2"]
+  },
+  "edexcel-a-p2-2021-nov-q5a": {
+    "topics": ["2-1-1-economic-growth"],
+    "keywords": ["GDP", "purchasing power parity", "Germany and France"]
   },
   "edexcel-a-p2-2021-nov-q5b": {
     "topics": ["2-1-1-economic-growth"],
@@ -1705,6 +2187,14 @@
     "topics": ["2-1-1-economic-growth"],
     "keywords": ["real GDP", "nominal GDP"]
   },
+  "edexcel-a-p2-2020-oct-q1c": {
+    "topics": ["2-1-1-economic-growth", "2-5-3-trade-cycle"],
+    "keywords": ["real GDP growth", "economic growth", "recession"]
+  },
+  "edexcel-a-p2-2020-oct-q2a": {
+    "topics": ["2-4-4-the-multiplier", "2-2-3-investment"],
+    "keywords": ["multiplier", "investment", "calculation"]
+  },
   "edexcel-a-p2-2020-oct-q2b": {
     "topics": ["2-4-4-the-multiplier", "2-2-3-investment"],
     "keywords": ["multiplier", "investment", "aggregate demand"]
@@ -1712,6 +2202,18 @@
   "edexcel-a-p2-2020-oct-q3a": {
     "topics": ["4-3-3-strategies-influencing-growth-development"],
     "keywords": ["IMF", "financial crisis", "Argentina", "bailout"]
+  },
+  "edexcel-a-p2-2020-oct-q3b": {
+    "topics": [
+      "4-1-8-exchange-rates",
+      "4-3-2-factors-influencing-growth-development"
+    ],
+    "keywords": [
+      "capital flight",
+      "depreciation",
+      "floating exchange rate",
+      "Argentina"
+    ]
   },
   "edexcel-a-p2-2020-oct-q4a": {
     "topics": ["2-1-3-employment-unemployment"],
@@ -1726,6 +2228,10 @@
     "topics": ["2-1-3-employment-unemployment"],
     "keywords": ["unemployment", "causes of unemployment"]
   },
+  "edexcel-a-p2-2020-oct-q4c": {
+    "topics": ["2-1-3-employment-unemployment"],
+    "keywords": ["structural unemployment", "technological change"]
+  },
   "edexcel-a-p2-2020-oct-q5a": {
     "topics": [
       "2-2-4-government-expenditure",
@@ -1738,6 +2244,10 @@
       "government spending",
       "LRAS"
     ]
+  },
+  "edexcel-a-p2-2020-oct-q5b": {
+    "topics": ["2-5-2-output-gaps", "2-6-2-demand-side-policies"],
+    "keywords": ["negative output gap", "government spending", "fiscal policy"]
   },
   "edexcel-a-p2-2020-oct-q6a": {
     "topics": ["4-3-3-strategies-influencing-growth-development"],
@@ -4100,6 +4610,191 @@
       "market-based"
     ]
   },
+  "aqa-p3-2017-jun-q1": {
+    "topics": ["1-1-1-economic-methodology"],
+    "keywords": [
+      "value judgements",
+      "positive and normative",
+      "economic methodology"
+    ]
+  },
+  "aqa-p3-2017-jun-q2": {
+    "topics": [
+      "1-2-4-behavioural-economics-and-economic-policy",
+      "1-3-1-the-determinants-of-the-demand-for-goods-and-services",
+      "1-8-9-government-intervention-in-markets"
+    ],
+    "keywords": ["nudge", "loft insulation", "shift in demand"]
+  },
+  "aqa-p3-2017-jun-q3": {
+    "topics": ["1-2-1-consumer-behaviour"],
+    "keywords": ["diminishing marginal utility", "utility"]
+  },
+  "aqa-p3-2017-jun-q4": {
+    "topics": [
+      "1-6-1-the-demand-for-labour-marginal-productivity-theory",
+      "1-6-3-wage-determination-perfectly-competitive-labour-markets"
+    ],
+    "keywords": ["derived demand", "bricklayers", "wage determination"]
+  },
+  "aqa-p3-2017-jun-q5": {
+    "topics": ["1-4-3-the-law-of-diminishing-returns-and-returns-to-scale"],
+    "keywords": ["constant returns to scale", "returns to scale"]
+  },
+  "aqa-p3-2017-jun-q6": {
+    "topics": ["1-4-8-technological-change"],
+    "keywords": ["invention", "innovation", "technological change"]
+  },
+  "aqa-p3-2017-jun-q7": {
+    "topics": [
+      "1-4-7-profit",
+      "1-4-4-costs-of-production",
+      "1-4-6-marginal-average-and-total-revenue"
+    ],
+    "keywords": ["profit maximisation", "average total cost", "average revenue"]
+  },
+  "aqa-p3-2017-jun-q8": {
+    "topics": [
+      "1-5-10-market-structure-efficiency-resource-allocation",
+      "1-5-6-monopoly-and-monopoly-power"
+    ],
+    "keywords": ["productive efficiency", "monopoly", "cost curves"]
+  },
+  "aqa-p3-2017-jun-q9": {
+    "topics": ["1-6-1-the-demand-for-labour-marginal-productivity-theory"],
+    "keywords": ["marginal revenue product", "demand for labour"]
+  },
+  "aqa-p3-2017-jun-q10": {
+    "topics": [
+      "1-3-5-the-determination-of-equilibrium-market-prices",
+      "1-3-1-the-determinants-of-the-demand-for-goods-and-services"
+    ],
+    "keywords": ["excess demand", "market equilibrium", "price mechanism"]
+  },
+  "aqa-p3-2017-jun-q11": {
+    "topics": ["1-7-1-the-distribution-of-income-and-wealth"],
+    "keywords": ["Gini coefficient", "inequality"]
+  },
+  "aqa-p3-2017-jun-q12": {
+    "topics": ["1-8-3-public-goods-private-goods-and-quasi-public-goods"],
+    "keywords": ["tragedy of the commons", "fishing", "over-fishing"]
+  },
+  "aqa-p3-2017-jun-q13": {
+    "topics": [
+      "1-8-6-market-imperfections",
+      "2-3-2-employment-and-unemployment"
+    ],
+    "keywords": [
+      "immobility of labour",
+      "structural unemployment",
+      "market failure"
+    ]
+  },
+  "aqa-p3-2017-jun-q14": {
+    "topics": ["2-1-3-uses-of-index-numbers", "2-1-2-macroeconomic-indicators"],
+    "keywords": ["index numbers", "base year", "real GDP", "calculation"]
+  },
+  "aqa-p3-2017-jun-q15": {
+    "topics": [
+      "2-1-4-uses-of-national-income-data",
+      "2-1-2-macroeconomic-indicators"
+    ],
+    "keywords": [
+      "standard of living",
+      "economic indicators",
+      "real GDP per capita"
+    ]
+  },
+  "aqa-p3-2017-jun-q16": {
+    "topics": ["2-2-4-aggregate-demand-and-the-level-of-economic-activity"],
+    "keywords": [
+      "multiplier",
+      "marginal propensity to consume",
+      "exports",
+      "calculation"
+    ]
+  },
+  "aqa-p3-2017-jun-q17": {
+    "topics": ["2-3-2-employment-and-unemployment"],
+    "keywords": [
+      "unemployment measure",
+      "Labour Force Survey",
+      "ILO unemployment"
+    ]
+  },
+  "aqa-p3-2017-jun-q18": {
+    "topics": [
+      "2-2-6-determinants-of-long-run-aggregate-supply",
+      "2-2-2-aggregate-demand-and-aggregate-supply-analysis"
+    ],
+    "keywords": ["long-run aggregate supply", "labour productivity", "AD/AS"]
+  },
+  "aqa-p3-2017-jun-q19": {
+    "topics": [
+      "2-3-2-employment-and-unemployment",
+      "1-6-5-the-influence-of-trade-unions-in-determining-wages-and-levels-of-employment"
+    ],
+    "keywords": ["real wage unemployment", "trade unions", "minimum wage"]
+  },
+  "aqa-p3-2017-jun-q20": {
+    "topics": ["2-4-2-commercial-banks-and-investment-banks"],
+    "keywords": ["commercial banks", "bank lending", "credit creation"]
+  },
+  "aqa-p3-2017-jun-q21": {
+    "topics": ["2-4-1-the-structure-of-financial-markets-and-financial-assets"],
+    "keywords": ["bonds", "bond yield", "bond price", "calculation"]
+  },
+  "aqa-p3-2017-jun-q22": {
+    "topics": ["2-4-1-the-structure-of-financial-markets-and-financial-assets"],
+    "keywords": ["money market", "capital market", "financial markets"]
+  },
+  "aqa-p3-2017-jun-q23": {
+    "topics": ["2-5-1-fiscal-policy"],
+    "keywords": ["income tax", "marginal tax rate", "calculation"]
+  },
+  "aqa-p3-2017-jun-q24": {
+    "topics": ["2-5-1-fiscal-policy"],
+    "keywords": ["national debt", "budget deficit"]
+  },
+  "aqa-p3-2017-jun-q25": {
+    "topics": ["2-6-2-trade"],
+    "keywords": ["comparative advantage", "opportunity cost", "trade"]
+  },
+  "aqa-p3-2017-jun-q26": {
+    "topics": ["2-6-5-economic-growth-and-development"],
+    "keywords": ["Human Development Index", "HDI", "development"]
+  },
+  "aqa-p3-2017-jun-q27": {
+    "topics": ["2-3-3-inflation-and-deflation", "2-1-3-uses-of-index-numbers"],
+    "keywords": [
+      "Consumer Prices Index",
+      "disinflation",
+      "deflation",
+      "inflation"
+    ]
+  },
+  "aqa-p3-2017-jun-q28": {
+    "topics": [
+      "2-2-5-determinants-of-short-run-aggregate-supply",
+      "2-2-2-aggregate-demand-and-aggregate-supply-analysis"
+    ],
+    "keywords": ["short-run aggregate supply", "commodity prices", "AD/AS"]
+  },
+  "aqa-p3-2017-jun-q29": {
+    "topics": [
+      "1-8-4-positive-and-negative-externalities-in-consumption-and-production",
+      "1-8-9-government-intervention-in-markets"
+    ],
+    "keywords": ["positive externalities", "subsidy", "deadweight loss"]
+  },
+  "aqa-p3-2017-jun-q30": {
+    "topics": ["1-3-2-price-income-and-cross-elasticities-of-demand"],
+    "keywords": [
+      "price elasticity of demand",
+      "PED calculation",
+      "games consoles"
+    ]
+  },
   "aqa-p3-2017-jun-q31": {
     "topics": [
       "2-3-1-economic-growth-and-the-economic-cycle",
@@ -4128,6 +4823,209 @@
       "UK"
     ]
   },
+  "aqa-p3-2018-jun-q1": {
+    "topics": ["1-8-5-merit-and-demerit-goods"],
+    "keywords": ["merit goods", "marginal social benefit"]
+  },
+  "aqa-p3-2018-jun-q2": {
+    "topics": ["2-5-1-fiscal-policy"],
+    "keywords": ["national debt", "government borrowing", "calculation"]
+  },
+  "aqa-p3-2018-jun-q3": {
+    "topics": ["1-1-5-production-possibility-diagrams"],
+    "keywords": [
+      "production possibility frontier",
+      "efficiency",
+      "capital goods"
+    ]
+  },
+  "aqa-p3-2018-jun-q4": {
+    "topics": [
+      "2-2-6-determinants-of-long-run-aggregate-supply",
+      "1-4-1-production-and-productivity"
+    ],
+    "keywords": [
+      "capital to labour ratio",
+      "investment",
+      "supply-side improvement"
+    ]
+  },
+  "aqa-p3-2018-jun-q5": {
+    "topics": [
+      "1-8-9-government-intervention-in-markets",
+      "1-3-5-the-determination-of-equilibrium-market-prices"
+    ],
+    "keywords": ["subsidy", "producer revenue", "renewable energy"]
+  },
+  "aqa-p3-2018-jun-q6": {
+    "topics": [
+      "1-8-9-government-intervention-in-markets",
+      "1-8-7-competition-policy",
+      "1-5-5-oligopoly"
+    ],
+    "keywords": ["government intervention", "market failure", "oligopoly"]
+  },
+  "aqa-p3-2018-jun-q7": {
+    "topics": ["2-4-3-central-banks-and-monetary-policy"],
+    "keywords": ["quantitative easing", "monetary policy"]
+  },
+  "aqa-p3-2018-jun-q8": {
+    "topics": ["1-3-2-price-income-and-cross-elasticities-of-demand"],
+    "keywords": ["cross elasticity of demand", "XED calculation", "substitutes"]
+  },
+  "aqa-p3-2018-jun-q9": {
+    "topics": [
+      "2-3-4-possible-conflicts-between-macroeconomic-policy-objectives"
+    ],
+    "keywords": ["Phillips curve", "inflation and unemployment trade-off"]
+  },
+  "aqa-p3-2018-jun-q10": {
+    "topics": ["1-2-3-aspects-of-behavioural-economic-theory"],
+    "keywords": ["behavioural economics", "biases", "bounded rationality"]
+  },
+  "aqa-p3-2018-jun-q11": {
+    "topics": [
+      "1-3-2-price-income-and-cross-elasticities-of-demand",
+      "1-3-4-price-elasticity-of-supply",
+      "1-3-5-the-determination-of-equilibrium-market-prices"
+    ],
+    "keywords": [
+      "income elasticity of demand",
+      "price elasticity of supply",
+      "equilibrium price"
+    ]
+  },
+  "aqa-p3-2018-jun-q12": {
+    "topics": [
+      "2-2-3-the-determinants-of-aggregate-demand",
+      "2-2-2-aggregate-demand-and-aggregate-supply-analysis"
+    ],
+    "keywords": ["aggregate demand", "exports", "real national output"]
+  },
+  "aqa-p3-2018-jun-q13": {
+    "topics": ["2-2-1-the-circular-flow-of-income", "2-5-1-fiscal-policy"],
+    "keywords": [
+      "circular flow of income",
+      "injections",
+      "withdrawals",
+      "budget deficit"
+    ]
+  },
+  "aqa-p3-2018-jun-q14": {
+    "topics": ["1-4-3-the-law-of-diminishing-returns-and-returns-to-scale"],
+    "keywords": ["diminishing marginal returns", "marginal product"]
+  },
+  "aqa-p3-2018-jun-q15": {
+    "topics": ["2-6-2-trade"],
+    "keywords": ["tariff", "protectionism", "tariff revenue"]
+  },
+  "aqa-p3-2018-jun-q16": {
+    "topics": ["1-2-1-consumer-behaviour"],
+    "keywords": ["total utility", "marginal utility", "utility maximisation"]
+  },
+  "aqa-p3-2018-jun-q17": {
+    "topics": ["2-4-4-the-regulation-of-the-financial-system"],
+    "keywords": ["systemic risk", "capital ratio", "financial crisis"]
+  },
+  "aqa-p3-2018-jun-q18": {
+    "topics": [
+      "2-2-6-determinants-of-long-run-aggregate-supply",
+      "2-2-5-determinants-of-short-run-aggregate-supply",
+      "2-2-2-aggregate-demand-and-aggregate-supply-analysis"
+    ],
+    "keywords": [
+      "long-run aggregate supply",
+      "short-run aggregate supply",
+      "renewable energy"
+    ]
+  },
+  "aqa-p3-2018-jun-q19": {
+    "topics": [
+      "2-6-4-exchange-rate-systems",
+      "2-1-4-uses-of-national-income-data"
+    ],
+    "keywords": ["exchange rates", "purchasing power parity", "depreciation"]
+  },
+  "aqa-p3-2018-jun-q20": {
+    "topics": [
+      "1-4-5-economies-and-diseconomies-of-scale",
+      "1-5-6-monopoly-and-monopoly-power"
+    ],
+    "keywords": ["economies of scale", "natural monopoly", "market power"]
+  },
+  "aqa-p3-2018-jun-q21": {
+    "topics": ["1-5-3-perfect-competition", "1-5-2-the-objectives-of-firms"],
+    "keywords": ["perfect competition", "profit maximisation", "short run"]
+  },
+  "aqa-p3-2018-jun-q22": {
+    "topics": [
+      "1-7-3-government-policies-poverty-income-distribution",
+      "1-8-9-government-intervention-in-markets"
+    ],
+    "keywords": ["poverty", "price ceiling", "energy prices"]
+  },
+  "aqa-p3-2018-jun-q23": {
+    "topics": ["2-6-3-the-balance-of-payments"],
+    "keywords": ["current account", "balance of payments", "primary income"]
+  },
+  "aqa-p3-2018-jun-q24": {
+    "topics": [
+      "2-6-1-globalisation",
+      "1-5-9-contestable-and-non-contestable-markets",
+      "2-6-2-trade"
+    ],
+    "keywords": ["globalisation", "contestable markets", "protectionism"]
+  },
+  "aqa-p3-2018-jun-q25": {
+    "topics": [
+      "2-4-3-central-banks-and-monetary-policy",
+      "2-6-4-exchange-rate-systems",
+      "2-4-1-the-structure-of-financial-markets-and-financial-assets"
+    ],
+    "keywords": [
+      "interest rates",
+      "monetary policy",
+      "exchange rate",
+      "inflation target"
+    ]
+  },
+  "aqa-p3-2018-jun-q26": {
+    "topics": ["1-5-5-oligopoly"],
+    "keywords": ["concentration ratio", "oligopoly"]
+  },
+  "aqa-p3-2018-jun-q27": {
+    "topics": [
+      "1-6-3-wage-determination-perfectly-competitive-labour-markets",
+      "1-6-2-influence-upon-the-supply-of-labour-to-different-markets",
+      "1-6-1-the-demand-for-labour-marginal-productivity-theory"
+    ],
+    "keywords": ["wage differentials", "skilled labour", "supply of labour"]
+  },
+  "aqa-p3-2018-jun-q28": {
+    "topics": [
+      "1-6-4-wage-determination-imperfectly-competitive-labour-markets"
+    ],
+    "keywords": [
+      "monopsony",
+      "marginal cost of labour",
+      "marginal revenue product"
+    ]
+  },
+  "aqa-p3-2018-jun-q29": {
+    "topics": ["2-5-1-fiscal-policy"],
+    "keywords": [
+      "structural budget deficit",
+      "cyclical deficit",
+      "ageing population"
+    ]
+  },
+  "aqa-p3-2018-jun-q30": {
+    "topics": [
+      "2-3-3-inflation-and-deflation",
+      "2-3-1-economic-growth-and-the-economic-cycle"
+    ],
+    "keywords": ["recession", "disinflation", "index numbers"]
+  },
   "aqa-p3-2018-jun-q31": {
     "topics": [
       "1-8-4-positive-and-negative-externalities-in-consumption-and-production"
@@ -4146,6 +5044,213 @@
   "aqa-p3-2018-jun-q33": {
     "topics": ["1-5-5-oligopoly", "2-6-2-trade"],
     "keywords": ["oil", "OPEC", "cartel", "oligopoly"]
+  },
+  "aqa-p3-2019-jun-q1": {
+    "topics": [
+      "1-4-6-marginal-average-and-total-revenue",
+      "1-5-4-monopolistic-competition"
+    ],
+    "keywords": ["monopolistic competition", "average revenue", "demand curve"]
+  },
+  "aqa-p3-2019-jun-q2": {
+    "topics": [
+      "2-3-4-possible-conflicts-between-macroeconomic-policy-objectives",
+      "2-3-3-inflation-and-deflation",
+      "2-1-2-macroeconomic-indicators"
+    ],
+    "keywords": [
+      "Phillips curve",
+      "unemployment",
+      "inflation",
+      "economic indicators"
+    ]
+  },
+  "aqa-p3-2019-jun-q3": {
+    "topics": [
+      "1-8-2-the-meaning-of-market-failure",
+      "1-8-3-public-goods-private-goods-and-quasi-public-goods"
+    ],
+    "keywords": ["complete market failure", "public goods", "non-excludability"]
+  },
+  "aqa-p3-2019-jun-q4": {
+    "topics": [
+      "2-2-5-determinants-of-short-run-aggregate-supply",
+      "2-2-2-aggregate-demand-and-aggregate-supply-analysis"
+    ],
+    "keywords": ["short-run aggregate supply", "productivity", "AD/AS"]
+  },
+  "aqa-p3-2019-jun-q5": {
+    "topics": [
+      "2-5-2-supply-side-policies",
+      "2-3-2-employment-and-unemployment"
+    ],
+    "keywords": ["supply-side policies", "natural rate of unemployment"]
+  },
+  "aqa-p3-2019-jun-q6": {
+    "topics": [
+      "1-3-2-price-income-and-cross-elasticities-of-demand",
+      "1-8-9-government-intervention-in-markets"
+    ],
+    "keywords": [
+      "price elasticity of demand",
+      "indirect tax",
+      "demerit good",
+      "calculation"
+    ]
+  },
+  "aqa-p3-2019-jun-q7": {
+    "topics": ["1-2-1-consumer-behaviour"],
+    "keywords": ["diminishing marginal utility", "demand curve"]
+  },
+  "aqa-p3-2019-jun-q8": {
+    "topics": ["1-2-2-imperfect-information"],
+    "keywords": ["asymmetric information", "used cars"]
+  },
+  "aqa-p3-2019-jun-q9": {
+    "topics": ["2-3-3-inflation-and-deflation"],
+    "keywords": ["quantity theory of money", "Fisher equation", "MV=PQ"]
+  },
+  "aqa-p3-2019-jun-q10": {
+    "topics": [
+      "2-5-2-supply-side-policies",
+      "2-2-2-aggregate-demand-and-aggregate-supply-analysis",
+      "2-3-4-possible-conflicts-between-macroeconomic-policy-objectives"
+    ],
+    "keywords": [
+      "supply-side policies",
+      "long-run aggregate supply",
+      "price stability"
+    ]
+  },
+  "aqa-p3-2019-jun-q11": {
+    "topics": ["1-4-4-costs-of-production"],
+    "keywords": ["average fixed cost", "costs", "calculation"]
+  },
+  "aqa-p3-2019-jun-q12": {
+    "topics": [
+      "1-8-4-positive-and-negative-externalities-in-consumption-and-production"
+    ],
+    "keywords": [
+      "negative externalities in consumption",
+      "marginal social benefit",
+      "misallocation"
+    ]
+  },
+  "aqa-p3-2019-jun-q13": {
+    "topics": [
+      "2-2-3-the-determinants-of-aggregate-demand",
+      "2-3-1-economic-growth-and-the-economic-cycle"
+    ],
+    "keywords": ["economic cycle", "recovery", "accelerator"]
+  },
+  "aqa-p3-2019-jun-q14": {
+    "topics": ["1-7-1-the-distribution-of-income-and-wealth"],
+    "keywords": ["income distribution", "inequality", "quintile"]
+  },
+  "aqa-p3-2019-jun-q15": {
+    "topics": [
+      "2-5-1-fiscal-policy",
+      "2-4-3-central-banks-and-monetary-policy",
+      "2-3-1-economic-growth-and-the-economic-cycle"
+    ],
+    "keywords": ["negative output gap", "fiscal policy", "interest rates"]
+  },
+  "aqa-p3-2019-jun-q16": {
+    "topics": [
+      "1-1-1-economic-methodology",
+      "1-7-1-the-distribution-of-income-and-wealth"
+    ],
+    "keywords": [
+      "positive statement",
+      "Gini coefficient",
+      "progressive taxation"
+    ]
+  },
+  "aqa-p3-2019-jun-q17": {
+    "topics": [
+      "2-6-3-the-balance-of-payments",
+      "1-4-1-production-and-productivity"
+    ],
+    "keywords": [
+      "international competitiveness",
+      "labour productivity",
+      "trade"
+    ]
+  },
+  "aqa-p3-2019-jun-q18": {
+    "topics": ["1-5-5-oligopoly"],
+    "keywords": ["kinked demand curve", "oligopoly", "price rigidity"]
+  },
+  "aqa-p3-2019-jun-q19": {
+    "topics": [
+      "1-6-1-the-demand-for-labour-marginal-productivity-theory",
+      "1-3-6-the-interrelationship-between-markets",
+      "2-6-2-trade"
+    ],
+    "keywords": ["dumping", "steel", "derived demand"]
+  },
+  "aqa-p3-2019-jun-q20": {
+    "topics": ["2-4-1-the-structure-of-financial-markets-and-financial-assets"],
+    "keywords": [
+      "corporate bonds",
+      "debt to equity ratio",
+      "shares",
+      "calculation"
+    ]
+  },
+  "aqa-p3-2019-jun-q21": {
+    "topics": ["2-4-3-central-banks-and-monetary-policy"],
+    "keywords": ["quantitative easing", "forward guidance", "inflation target"]
+  },
+  "aqa-p3-2019-jun-q22": {
+    "topics": [
+      "1-3-6-the-interrelationship-between-markets",
+      "1-3-3-the-determinants-of-the-supply-of-goods-and-services",
+      "1-3-5-the-determination-of-equilibrium-market-prices"
+    ],
+    "keywords": ["joint supply", "substitutes", "beef and leather"]
+  },
+  "aqa-p3-2019-jun-q23": {
+    "topics": ["2-4-4-the-regulation-of-the-financial-system"],
+    "keywords": ["liquidity ratio", "capital ratio", "bank stability"]
+  },
+  "aqa-p3-2019-jun-q24": {
+    "topics": [
+      "2-1-2-macroeconomic-indicators",
+      "2-2-1-the-circular-flow-of-income"
+    ],
+    "keywords": ["real GDP per capita", "nominal GDP", "population growth"]
+  },
+  "aqa-p3-2019-jun-q25": {
+    "topics": ["2-2-4-aggregate-demand-and-the-level-of-economic-activity"],
+    "keywords": ["multiplier", "marginal propensity to consume", "calculation"]
+  },
+  "aqa-p3-2019-jun-q26": {
+    "topics": ["1-6-1-the-demand-for-labour-marginal-productivity-theory"],
+    "keywords": [
+      "marginal revenue product",
+      "derived demand",
+      "demand for labour"
+    ]
+  },
+  "aqa-p3-2019-jun-q27": {
+    "topics": [
+      "1-5-9-contestable-and-non-contestable-markets",
+      "1-5-6-monopoly-and-monopoly-power"
+    ],
+    "keywords": ["contestable markets", "limit pricing", "normal profit"]
+  },
+  "aqa-p3-2019-jun-q28": {
+    "topics": ["2-6-4-exchange-rate-systems", "2-6-3-the-balance-of-payments"],
+    "keywords": ["capital outflow", "exchange rate", "financial account"]
+  },
+  "aqa-p3-2019-jun-q29": {
+    "topics": ["1-3-4-price-elasticity-of-supply"],
+    "keywords": ["price elasticity of supply", "PES calculation"]
+  },
+  "aqa-p3-2019-jun-q30": {
+    "topics": ["2-1-3-uses-of-index-numbers", "2-1-2-macroeconomic-indicators"],
+    "keywords": ["index numbers", "base year", "GDP", "calculation"]
   },
   "aqa-p3-2019-jun-q31": {
     "topics": ["1-3-5-the-determination-of-equilibrium-market-prices"],
@@ -4170,6 +5275,205 @@
       "affordability"
     ]
   },
+  "aqa-p3-2020-jun-q1": {
+    "topics": ["1-1-1-economic-methodology"],
+    "keywords": ["social science", "economic methodology"]
+  },
+  "aqa-p3-2020-jun-q2": {
+    "topics": ["1-6-1-the-demand-for-labour-marginal-productivity-theory"],
+    "keywords": [
+      "elasticity of demand for labour",
+      "derived demand",
+      "substitution of capital for labour"
+    ]
+  },
+  "aqa-p3-2020-jun-q3": {
+    "topics": [
+      "2-2-1-the-circular-flow-of-income",
+      "2-1-2-macroeconomic-indicators",
+      "2-3-3-inflation-and-deflation"
+    ],
+    "keywords": ["nominal GDP", "real GDP", "inflation"]
+  },
+  "aqa-p3-2020-jun-q4": {
+    "topics": [
+      "2-3-1-economic-growth-and-the-economic-cycle",
+      "2-3-2-employment-and-unemployment",
+      "2-2-2-aggregate-demand-and-aggregate-supply-analysis"
+    ],
+    "keywords": ["output gap", "cyclical unemployment", "AD/AS"]
+  },
+  "aqa-p3-2020-jun-q5": {
+    "topics": ["1-7-1-the-distribution-of-income-and-wealth"],
+    "keywords": ["distribution of income", "equality and equity", "decile"]
+  },
+  "aqa-p3-2020-jun-q6": {
+    "topics": [
+      "2-2-4-aggregate-demand-and-the-level-of-economic-activity",
+      "2-2-1-the-circular-flow-of-income"
+    ],
+    "keywords": ["marginal propensity to consume", "multiplier", "consumption"]
+  },
+  "aqa-p3-2020-jun-q7": {
+    "topics": ["2-6-2-trade"],
+    "keywords": ["customs union", "common external tariff", "trade"]
+  },
+  "aqa-p3-2020-jun-q8": {
+    "topics": [
+      "1-5-4-monopolistic-competition",
+      "1-4-7-profit",
+      "1-5-10-market-structure-efficiency-resource-allocation"
+    ],
+    "keywords": [
+      "monopolistic competition",
+      "long-run equilibrium",
+      "normal profit"
+    ]
+  },
+  "aqa-p3-2020-jun-q9": {
+    "topics": ["2-4-1-the-structure-of-financial-markets-and-financial-assets"],
+    "keywords": ["bonds", "bond yield", "coupon", "calculation"]
+  },
+  "aqa-p3-2020-jun-q10": {
+    "topics": [
+      "2-4-3-central-banks-and-monetary-policy",
+      "2-4-4-the-regulation-of-the-financial-system"
+    ],
+    "keywords": ["Bank Rate", "financial stability", "capital ratio"]
+  },
+  "aqa-p3-2020-jun-q11": {
+    "topics": ["1-4-6-marginal-average-and-total-revenue"],
+    "keywords": ["total revenue", "average revenue", "marginal revenue"]
+  },
+  "aqa-p3-2020-jun-q12": {
+    "topics": ["1-2-1-consumer-behaviour"],
+    "keywords": ["diminishing marginal utility", "total utility"]
+  },
+  "aqa-p3-2020-jun-q13": {
+    "topics": ["2-3-3-inflation-and-deflation"],
+    "keywords": ["money supply", "inflation", "value of money"]
+  },
+  "aqa-p3-2020-jun-q14": {
+    "topics": ["1-4-2-specialisation-division-of-labour-and-exchange"],
+    "keywords": ["specialisation", "division of labour", "efficiency"]
+  },
+  "aqa-p3-2020-jun-q15": {
+    "topics": [
+      "1-3-2-price-income-and-cross-elasticities-of-demand",
+      "1-4-6-marginal-average-and-total-revenue"
+    ],
+    "keywords": [
+      "price elasticity of demand",
+      "total revenue",
+      "marginal revenue"
+    ]
+  },
+  "aqa-p3-2020-jun-q16": {
+    "topics": ["1-8-3-public-goods-private-goods-and-quasi-public-goods"],
+    "keywords": ["public goods", "private goods", "rivalry"]
+  },
+  "aqa-p3-2020-jun-q17": {
+    "topics": [
+      "1-3-1-the-determinants-of-the-demand-for-goods-and-services",
+      "1-3-5-the-determination-of-equilibrium-market-prices"
+    ],
+    "keywords": [
+      "excess demand",
+      "excess supply",
+      "equilibrium price",
+      "incomes"
+    ]
+  },
+  "aqa-p3-2020-jun-q18": {
+    "topics": [
+      "1-8-9-government-intervention-in-markets",
+      "1-8-5-merit-and-demerit-goods"
+    ],
+    "keywords": ["government intervention", "minimum price", "demerit goods"]
+  },
+  "aqa-p3-2020-jun-q19": {
+    "topics": [
+      "2-3-4-possible-conflicts-between-macroeconomic-policy-objectives"
+    ],
+    "keywords": ["long-run Phillips curve", "natural rate of unemployment"]
+  },
+  "aqa-p3-2020-jun-q20": {
+    "topics": [
+      "1-6-4-wage-determination-imperfectly-competitive-labour-markets"
+    ],
+    "keywords": ["monopsony", "marginal cost of labour", "wages and employment"]
+  },
+  "aqa-p3-2020-jun-q21": {
+    "topics": ["2-5-1-fiscal-policy"],
+    "keywords": ["national debt", "budget deficit", "government bonds"]
+  },
+  "aqa-p3-2020-jun-q22": {
+    "topics": ["2-1-3-uses-of-index-numbers", "2-1-2-macroeconomic-indicators"],
+    "keywords": ["Consumer Prices Index", "CPI weights", "basket of goods"]
+  },
+  "aqa-p3-2020-jun-q23": {
+    "topics": [
+      "1-8-9-government-intervention-in-markets",
+      "1-8-4-positive-and-negative-externalities-in-consumption-and-production"
+    ],
+    "keywords": [
+      "subsidy",
+      "positive externalities",
+      "solar panels",
+      "calculation"
+    ]
+  },
+  "aqa-p3-2020-jun-q24": {
+    "topics": ["2-4-4-the-regulation-of-the-financial-system"],
+    "keywords": ["moral hazard", "financial markets"]
+  },
+  "aqa-p3-2020-jun-q25": {
+    "topics": ["2-3-2-employment-and-unemployment"],
+    "keywords": [
+      "natural rate of unemployment",
+      "frictional unemployment",
+      "structural unemployment",
+      "cyclical unemployment"
+    ]
+  },
+  "aqa-p3-2020-jun-q26": {
+    "topics": [
+      "2-2-3-the-determinants-of-aggregate-demand",
+      "2-2-6-determinants-of-long-run-aggregate-supply",
+      "2-2-2-aggregate-demand-and-aggregate-supply-analysis"
+    ],
+    "keywords": [
+      "exports",
+      "potential output",
+      "long-run aggregate supply",
+      "AD/AS"
+    ]
+  },
+  "aqa-p3-2020-jun-q27": {
+    "topics": ["2-5-1-fiscal-policy"],
+    "keywords": [
+      "proportional tax",
+      "average rate of tax",
+      "marginal rate of tax"
+    ]
+  },
+  "aqa-p3-2020-jun-q28": {
+    "topics": ["1-5-3-perfect-competition", "1-5-2-the-objectives-of-firms"],
+    "keywords": ["perfect competition", "marginal cost", "profit maximisation"]
+  },
+  "aqa-p3-2020-jun-q29": {
+    "topics": ["2-6-4-exchange-rate-systems", "2-6-3-the-balance-of-payments"],
+    "keywords": [
+      "exchange rate",
+      "foreign exchange market",
+      "interest rates",
+      "euro"
+    ]
+  },
+  "aqa-p3-2020-jun-q30": {
+    "topics": ["1-2-3-aspects-of-behavioural-economic-theory"],
+    "keywords": ["bounded rationality", "anchoring", "behavioural economics"]
+  },
   "aqa-p3-2020-jun-q31": {
     "topics": ["2-1-4-uses-of-national-income-data"],
     "keywords": [
@@ -4186,6 +5490,223 @@
   "aqa-p3-2020-jun-q33": {
     "topics": ["2-5-1-fiscal-policy"],
     "keywords": ["government policy", "living standards", "fiscal policy"]
+  },
+  "aqa-p3-2021-jun-q1": {
+    "topics": [
+      "1-6-1-the-demand-for-labour-marginal-productivity-theory",
+      "1-6-3-wage-determination-perfectly-competitive-labour-markets"
+    ],
+    "keywords": ["wage differentials", "graduates", "marginal revenue product"]
+  },
+  "aqa-p3-2021-jun-q2": {
+    "topics": ["2-5-2-supply-side-policies"],
+    "keywords": ["supply-side policies", "potential output", "trend growth"]
+  },
+  "aqa-p3-2021-jun-q3": {
+    "topics": [
+      "1-8-4-positive-and-negative-externalities-in-consumption-and-production"
+    ],
+    "keywords": [
+      "externalities in production and consumption",
+      "marginal social cost",
+      "marginal social benefit"
+    ]
+  },
+  "aqa-p3-2021-jun-q4": {
+    "topics": [
+      "2-3-4-possible-conflicts-between-macroeconomic-policy-objectives",
+      "2-1-1-the-objectives-of-government-economic-policy"
+    ],
+    "keywords": ["policy conflicts", "trade-off", "macroeconomic objectives"]
+  },
+  "aqa-p3-2021-jun-q5": {
+    "topics": [
+      "2-6-5-economic-growth-and-development",
+      "2-1-4-uses-of-national-income-data"
+    ],
+    "keywords": [
+      "Human Development Index",
+      "HDI",
+      "GDP per capita",
+      "living standards"
+    ]
+  },
+  "aqa-p3-2021-jun-q6": {
+    "topics": ["1-1-5-production-possibility-diagrams"],
+    "keywords": [
+      "production possibility curve",
+      "opportunity cost",
+      "capital goods"
+    ]
+  },
+  "aqa-p3-2021-jun-q7": {
+    "topics": ["2-4-2-commercial-banks-and-investment-banks"],
+    "keywords": ["bank balance sheet", "commercial bank", "customer deposits"]
+  },
+  "aqa-p3-2021-jun-q8": {
+    "topics": ["1-8-3-public-goods-private-goods-and-quasi-public-goods"],
+    "keywords": ["free-rider problem", "public goods"]
+  },
+  "aqa-p3-2021-jun-q9": {
+    "topics": [
+      "1-5-11-consumer-and-producer-surplus",
+      "1-8-9-government-intervention-in-markets"
+    ],
+    "keywords": ["consumer surplus", "free bus travel", "subsidy"]
+  },
+  "aqa-p3-2021-jun-q10": {
+    "topics": ["2-5-1-fiscal-policy"],
+    "keywords": ["national debt", "budget deficit", "government borrowing"]
+  },
+  "aqa-p3-2021-jun-q11": {
+    "topics": ["1-2-2-imperfect-information"],
+    "keywords": ["asymmetric information", "used motorbike"]
+  },
+  "aqa-p3-2021-jun-q12": {
+    "topics": [
+      "2-2-6-determinants-of-long-run-aggregate-supply",
+      "2-2-3-the-determinants-of-aggregate-demand",
+      "2-2-2-aggregate-demand-and-aggregate-supply-analysis"
+    ],
+    "keywords": [
+      "long-run aggregate supply",
+      "capital stock",
+      "investment",
+      "AD/AS"
+    ]
+  },
+  "aqa-p3-2021-jun-q13": {
+    "topics": ["1-2-4-behavioural-economics-and-economic-policy"],
+    "keywords": ["default choice", "nudge", "workplace pensions"]
+  },
+  "aqa-p3-2021-jun-q14": {
+    "topics": ["2-4-3-central-banks-and-monetary-policy"],
+    "keywords": [
+      "Bank Rate",
+      "Monetary Policy Committee",
+      "interest rates",
+      "savings"
+    ]
+  },
+  "aqa-p3-2021-jun-q15": {
+    "topics": [
+      "1-6-6-the-national-minimum-wage",
+      "1-6-1-the-demand-for-labour-marginal-productivity-theory",
+      "1-7-3-government-policies-poverty-income-distribution"
+    ],
+    "keywords": [
+      "national minimum wage",
+      "elasticity of demand for labour",
+      "distribution of income"
+    ]
+  },
+  "aqa-p3-2021-jun-q16": {
+    "topics": [
+      "1-5-3-perfect-competition",
+      "1-4-6-marginal-average-and-total-revenue"
+    ],
+    "keywords": ["perfect competition", "price taker", "marginal revenue"]
+  },
+  "aqa-p3-2021-jun-q17": {
+    "topics": [
+      "2-3-2-employment-and-unemployment",
+      "2-1-2-macroeconomic-indicators"
+    ],
+    "keywords": ["unemployment rate", "ILO unemployment", "calculation"]
+  },
+  "aqa-p3-2021-jun-q18": {
+    "topics": [
+      "1-8-9-government-intervention-in-markets",
+      "1-3-5-the-determination-of-equilibrium-market-prices"
+    ],
+    "keywords": ["indirect tax", "tax incidence", "sugar"]
+  },
+  "aqa-p3-2021-jun-q19": {
+    "topics": ["2-2-3-the-determinants-of-aggregate-demand"],
+    "keywords": ["accelerator", "investment"]
+  },
+  "aqa-p3-2021-jun-q20": {
+    "topics": [
+      "1-3-2-price-income-and-cross-elasticities-of-demand",
+      "1-4-7-profit"
+    ],
+    "keywords": [
+      "unitary price elasticity",
+      "total revenue",
+      "monopolistic competition",
+      "profit"
+    ]
+  },
+  "aqa-p3-2021-jun-q21": {
+    "topics": [
+      "1-5-6-monopoly-and-monopoly-power",
+      "1-4-7-profit",
+      "1-5-2-the-objectives-of-firms"
+    ],
+    "keywords": ["monopoly", "abnormal profit", "barriers to entry"]
+  },
+  "aqa-p3-2021-jun-q22": {
+    "topics": [
+      "2-3-1-economic-growth-and-the-economic-cycle",
+      "2-2-3-the-determinants-of-aggregate-demand"
+    ],
+    "keywords": [
+      "output gap",
+      "demand shocks",
+      "marginal propensity to consume"
+    ]
+  },
+  "aqa-p3-2021-jun-q23": {
+    "topics": ["1-4-8-technological-change"],
+    "keywords": ["technological change", "innovation", "unit costs"]
+  },
+  "aqa-p3-2021-jun-q24": {
+    "topics": [
+      "1-3-1-the-determinants-of-the-demand-for-goods-and-services",
+      "1-3-3-the-determinants-of-the-supply-of-goods-and-services",
+      "1-3-5-the-determination-of-equilibrium-market-prices"
+    ],
+    "keywords": ["substitutes", "tea and coffee", "demand and supply shifts"]
+  },
+  "aqa-p3-2021-jun-q25": {
+    "topics": ["2-3-1-economic-growth-and-the-economic-cycle"],
+    "keywords": [
+      "output gap",
+      "trend growth rate",
+      "actual growth",
+      "calculation"
+    ]
+  },
+  "aqa-p3-2021-jun-q26": {
+    "topics": ["2-4-1-the-structure-of-financial-markets-and-financial-assets"],
+    "keywords": ["money market", "financial markets"]
+  },
+  "aqa-p3-2021-jun-q27": {
+    "topics": [
+      "1-6-2-influence-upon-the-supply-of-labour-to-different-markets"
+    ],
+    "keywords": ["supply of labour", "qualifications", "labour market"]
+  },
+  "aqa-p3-2021-jun-q28": {
+    "topics": ["2-1-3-uses-of-index-numbers", "2-1-2-macroeconomic-indicators"],
+    "keywords": ["index numbers", "real GDP", "base year", "calculation"]
+  },
+  "aqa-p3-2021-jun-q29": {
+    "topics": ["2-6-3-the-balance-of-payments", "2-6-2-trade"],
+    "keywords": ["expenditure switching", "current account deficit", "tariffs"]
+  },
+  "aqa-p3-2021-jun-q30": {
+    "topics": [
+      "2-2-3-the-determinants-of-aggregate-demand",
+      "2-2-5-determinants-of-short-run-aggregate-supply",
+      "2-2-2-aggregate-demand-and-aggregate-supply-analysis"
+    ],
+    "keywords": [
+      "aggregate demand",
+      "short-run aggregate supply",
+      "raw materials",
+      "investment"
+    ]
   },
   "aqa-p3-2021-jun-q31": {
     "topics": [
@@ -4214,6 +5735,197 @@
       "government intervention"
     ]
   },
+  "aqa-p3-2022-jun-q1": {
+    "topics": ["1-1-1-economic-methodology"],
+    "keywords": ["positive statements", "value judgement"]
+  },
+  "aqa-p3-2022-jun-q2": {
+    "topics": ["1-2-4-behavioural-economics-and-economic-policy"],
+    "keywords": ["nudge", "healthy eating", "choice architecture"]
+  },
+  "aqa-p3-2022-jun-q3": {
+    "topics": ["1-1-5-production-possibility-diagrams"],
+    "keywords": ["production possibility diagram", "opportunity cost"]
+  },
+  "aqa-p3-2022-jun-q4": {
+    "topics": ["2-1-3-uses-of-index-numbers"],
+    "keywords": ["weighted price index", "index numbers", "calculation"]
+  },
+  "aqa-p3-2022-jun-q5": {
+    "topics": ["2-1-4-uses-of-national-income-data"],
+    "keywords": ["purchasing power parity", "PPP", "living standards"]
+  },
+  "aqa-p3-2022-jun-q6": {
+    "topics": [
+      "2-5-1-fiscal-policy",
+      "2-2-2-aggregate-demand-and-aggregate-supply-analysis"
+    ],
+    "keywords": ["fiscal policy", "income tax", "aggregate demand"]
+  },
+  "aqa-p3-2022-jun-q7": {
+    "topics": [
+      "1-8-9-government-intervention-in-markets",
+      "1-8-4-positive-and-negative-externalities-in-consumption-and-production"
+    ],
+    "keywords": ["property rights", "pollution", "externalities"]
+  },
+  "aqa-p3-2022-jun-q8": {
+    "topics": ["1-3-2-price-income-and-cross-elasticities-of-demand"],
+    "keywords": ["price elasticity of demand", "total revenue", "calculation"]
+  },
+  "aqa-p3-2022-jun-q9": {
+    "topics": ["1-5-7-price-discrimination"],
+    "keywords": [
+      "price discrimination",
+      "different prices for the same product"
+    ]
+  },
+  "aqa-p3-2022-jun-q10": {
+    "topics": ["2-3-3-inflation-and-deflation"],
+    "keywords": [
+      "Fisher equation",
+      "quantity theory of money",
+      "price level",
+      "calculation"
+    ]
+  },
+  "aqa-p3-2022-jun-q11": {
+    "topics": [
+      "2-4-4-the-regulation-of-the-financial-system",
+      "2-4-2-commercial-banks-and-investment-banks"
+    ],
+    "keywords": ["systemic risk", "capital ratio", "investment banks"]
+  },
+  "aqa-p3-2022-jun-q12": {
+    "topics": [
+      "2-2-6-determinants-of-long-run-aggregate-supply",
+      "2-2-5-determinants-of-short-run-aggregate-supply",
+      "2-2-2-aggregate-demand-and-aggregate-supply-analysis"
+    ],
+    "keywords": [
+      "long-run aggregate supply",
+      "natural disaster",
+      "productive capacity"
+    ]
+  },
+  "aqa-p3-2022-jun-q13": {
+    "topics": ["2-6-2-trade"],
+    "keywords": ["World Trade Organisation", "WTO", "trade disputes"]
+  },
+  "aqa-p3-2022-jun-q14": {
+    "topics": ["1-3-4-price-elasticity-of-supply"],
+    "keywords": ["price elasticity of supply", "spare capacity", "short run"]
+  },
+  "aqa-p3-2022-jun-q15": {
+    "topics": [
+      "2-2-5-determinants-of-short-run-aggregate-supply",
+      "2-2-2-aggregate-demand-and-aggregate-supply-analysis",
+      "1-4-8-technological-change"
+    ],
+    "keywords": ["technology", "short-run aggregate supply", "AD/AS"]
+  },
+  "aqa-p3-2022-jun-q16": {
+    "topics": ["1-7-2-the-problem-of-poverty"],
+    "keywords": ["relative poverty", "median income"]
+  },
+  "aqa-p3-2022-jun-q17": {
+    "topics": ["2-5-1-fiscal-policy"],
+    "keywords": ["regressive tax", "progressive tax", "proportional tax"]
+  },
+  "aqa-p3-2022-jun-q18": {
+    "topics": [
+      "2-5-2-supply-side-policies",
+      "2-3-2-employment-and-unemployment"
+    ],
+    "keywords": [
+      "supply-side policies",
+      "natural rate of unemployment",
+      "retraining"
+    ]
+  },
+  "aqa-p3-2022-jun-q19": {
+    "topics": [
+      "1-5-11-consumer-and-producer-surplus",
+      "1-5-6-monopoly-and-monopoly-power",
+      "1-5-3-perfect-competition"
+    ],
+    "keywords": [
+      "deadweight loss",
+      "consumer surplus",
+      "monopoly",
+      "perfect competition"
+    ]
+  },
+  "aqa-p3-2022-jun-q20": {
+    "topics": [
+      "1-5-3-perfect-competition",
+      "1-4-6-marginal-average-and-total-revenue"
+    ],
+    "keywords": ["perfect competition", "average revenue", "marginal revenue"]
+  },
+  "aqa-p3-2022-jun-q21": {
+    "topics": ["1-2-1-consumer-behaviour"],
+    "keywords": ["marginal utility", "total utility"]
+  },
+  "aqa-p3-2022-jun-q22": {
+    "topics": ["2-3-1-economic-growth-and-the-economic-cycle"],
+    "keywords": ["economic boom", "economic cycle", "macroeconomic indicators"]
+  },
+  "aqa-p3-2022-jun-q23": {
+    "topics": [
+      "2-1-3-uses-of-index-numbers",
+      "2-2-1-the-circular-flow-of-income"
+    ],
+    "keywords": ["real GDP", "nominal GDP", "price index", "calculation"]
+  },
+  "aqa-p3-2022-jun-q24": {
+    "topics": ["1-5-4-monopolistic-competition", "1-4-7-profit"],
+    "keywords": ["monopolistic competition", "short run", "supernormal profit"]
+  },
+  "aqa-p3-2022-jun-q25": {
+    "topics": ["2-4-1-the-structure-of-financial-markets-and-financial-assets"],
+    "keywords": ["bond yield", "government bonds", "coupon"]
+  },
+  "aqa-p3-2022-jun-q26": {
+    "topics": ["2-4-2-commercial-banks-and-investment-banks"],
+    "keywords": [
+      "liquid assets",
+      "commercial bank balance sheet",
+      "calculation"
+    ]
+  },
+  "aqa-p3-2022-jun-q27": {
+    "topics": [
+      "2-3-2-employment-and-unemployment",
+      "1-8-6-market-imperfections"
+    ],
+    "keywords": [
+      "structural unemployment",
+      "seasonal unemployment",
+      "seaside towns"
+    ]
+  },
+  "aqa-p3-2022-jun-q28": {
+    "topics": [
+      "1-6-4-wage-determination-imperfectly-competitive-labour-markets"
+    ],
+    "keywords": ["monopsony", "wages", "mergers"]
+  },
+  "aqa-p3-2022-jun-q29": {
+    "topics": ["2-6-5-economic-growth-and-development"],
+    "keywords": ["Human Development Index", "HDI", "life expectancy"]
+  },
+  "aqa-p3-2022-jun-q30": {
+    "topics": [
+      "1-8-6-market-imperfections",
+      "2-3-2-employment-and-unemployment"
+    ],
+    "keywords": [
+      "geographical immobility of labour",
+      "housing costs",
+      "unemployment"
+    ]
+  },
   "aqa-p3-2022-jun-q31": {
     "topics": ["1-5-5-oligopoly", "1-4-7-profit"],
     "keywords": ["Boeing", "Airbus", "duopoly", "data response"]
@@ -4229,6 +5941,199 @@
     ],
     "keywords": ["state aid", "subsidy", "industrial policy", "aerospace"]
   },
+  "aqa-p3-2023-jun-q1": {
+    "topics": [
+      "1-3-3-the-determinants-of-the-supply-of-goods-and-services",
+      "1-3-1-the-determinants-of-the-demand-for-goods-and-services",
+      "1-3-5-the-determination-of-equilibrium-market-prices"
+    ],
+    "keywords": ["shift in supply", "movement along demand curve", "lemons"]
+  },
+  "aqa-p3-2023-jun-q2": {
+    "topics": [
+      "1-1-3-economic-resources",
+      "1-1-4-scarcity-choice-and-the-allocation-of-resources"
+    ],
+    "keywords": ["scarcity", "opportunity cost", "environment"]
+  },
+  "aqa-p3-2023-jun-q3": {
+    "topics": ["1-3-2-price-income-and-cross-elasticities-of-demand"],
+    "keywords": ["cross elasticity of demand", "XED calculation", "substitutes"]
+  },
+  "aqa-p3-2023-jun-q4": {
+    "topics": [
+      "2-1-4-uses-of-national-income-data",
+      "2-2-1-the-circular-flow-of-income"
+    ],
+    "keywords": ["living standards", "nominal national income", "inflation"]
+  },
+  "aqa-p3-2023-jun-q5": {
+    "topics": ["2-2-1-the-circular-flow-of-income"],
+    "keywords": [
+      "circular flow of income",
+      "injections",
+      "withdrawals",
+      "net exports"
+    ]
+  },
+  "aqa-p3-2023-jun-q6": {
+    "topics": [
+      "2-4-3-central-banks-and-monetary-policy",
+      "2-1-1-the-objectives-of-government-economic-policy"
+    ],
+    "keywords": ["interest rates", "monetary policy", "inflation"]
+  },
+  "aqa-p3-2023-jun-q7": {
+    "topics": ["1-2-3-aspects-of-behavioural-economic-theory"],
+    "keywords": ["availability bias", "social norms", "behavioural economics"]
+  },
+  "aqa-p3-2023-jun-q8": {
+    "topics": ["1-5-3-perfect-competition"],
+    "keywords": ["perfect competition", "long run", "entry of new firms"]
+  },
+  "aqa-p3-2023-jun-q9": {
+    "topics": [
+      "1-5-8-the-dynamics-of-competition-and-competitive-market-processes",
+      "1-4-8-technological-change"
+    ],
+    "keywords": ["creative destruction", "patents", "innovation"]
+  },
+  "aqa-p3-2023-jun-q10": {
+    "topics": ["2-2-4-aggregate-demand-and-the-level-of-economic-activity"],
+    "keywords": ["multiplier", "marginal propensity to consume", "calculation"]
+  },
+  "aqa-p3-2023-jun-q11": {
+    "topics": ["2-3-1-economic-growth-and-the-economic-cycle"],
+    "keywords": ["output gap", "trend rate of growth", "real GDP"]
+  },
+  "aqa-p3-2023-jun-q12": {
+    "topics": ["2-3-3-inflation-and-deflation"],
+    "keywords": ["quantity theory of money", "Fisher equation", "monetarism"]
+  },
+  "aqa-p3-2023-jun-q13": {
+    "topics": ["1-4-3-the-law-of-diminishing-returns-and-returns-to-scale"],
+    "keywords": [
+      "diminishing marginal returns",
+      "marginal product",
+      "calculation"
+    ]
+  },
+  "aqa-p3-2023-jun-q14": {
+    "topics": ["1-4-6-marginal-average-and-total-revenue"],
+    "keywords": ["marginal revenue", "total revenue", "unitary elasticity"]
+  },
+  "aqa-p3-2023-jun-q15": {
+    "topics": ["1-5-2-the-objectives-of-firms"],
+    "keywords": [
+      "divorce of ownership from control",
+      "satisficing",
+      "principal-agent problem"
+    ]
+  },
+  "aqa-p3-2023-jun-q16": {
+    "topics": [
+      "2-3-4-possible-conflicts-between-macroeconomic-policy-objectives",
+      "2-3-3-inflation-and-deflation"
+    ],
+    "keywords": [
+      "Phillips curve",
+      "inflation expectations",
+      "natural rate of unemployment"
+    ]
+  },
+  "aqa-p3-2023-jun-q17": {
+    "topics": ["2-5-1-fiscal-policy"],
+    "keywords": [
+      "Office for Budget Responsibility",
+      "fiscal targets",
+      "fiscal policy"
+    ]
+  },
+  "aqa-p3-2023-jun-q18": {
+    "topics": ["2-4-3-central-banks-and-monetary-policy"],
+    "keywords": ["money supply", "quantitative easing", "Bank of England"]
+  },
+  "aqa-p3-2023-jun-q19": {
+    "topics": [
+      "1-8-1-how-markets-and-prices-allocate-resources",
+      "1-3-6-the-interrelationship-between-markets",
+      "1-3-3-the-determinants-of-the-supply-of-goods-and-services"
+    ],
+    "keywords": ["incentive function", "signalling", "competitive supply"]
+  },
+  "aqa-p3-2023-jun-q20": {
+    "topics": [
+      "1-8-4-positive-and-negative-externalities-in-consumption-and-production"
+    ],
+    "keywords": [
+      "socially optimal output",
+      "marginal social benefit",
+      "marginal social cost"
+    ]
+  },
+  "aqa-p3-2023-jun-q21": {
+    "topics": ["2-6-3-the-balance-of-payments"],
+    "keywords": ["secondary income", "current account", "balance of payments"]
+  },
+  "aqa-p3-2023-jun-q22": {
+    "topics": ["2-6-2-trade"],
+    "keywords": [
+      "comparative advantage",
+      "absolute advantage",
+      "opportunity cost"
+    ]
+  },
+  "aqa-p3-2023-jun-q23": {
+    "topics": ["2-6-4-exchange-rate-systems"],
+    "keywords": ["exchange rates", "appreciation", "depreciation"]
+  },
+  "aqa-p3-2023-jun-q24": {
+    "topics": [
+      "1-8-8-public-ownership-privatisation-regulation-and-deregulation-of-markets"
+    ],
+    "keywords": ["regulatory capture", "regulation", "government failure"]
+  },
+  "aqa-p3-2023-jun-q25": {
+    "topics": [
+      "1-6-3-wage-determination-perfectly-competitive-labour-markets",
+      "1-6-1-the-demand-for-labour-marginal-productivity-theory",
+      "1-6-2-influence-upon-the-supply-of-labour-to-different-markets"
+    ],
+    "keywords": ["wage determination", "demand for labour", "supply of labour"]
+  },
+  "aqa-p3-2023-jun-q26": {
+    "topics": ["1-6-1-the-demand-for-labour-marginal-productivity-theory"],
+    "keywords": ["elasticity of demand for labour", "labour costs"]
+  },
+  "aqa-p3-2023-jun-q27": {
+    "topics": ["1-7-1-the-distribution-of-income-and-wealth"],
+    "keywords": ["Lorenz curve", "Gini coefficient", "income distribution"]
+  },
+  "aqa-p3-2023-jun-q28": {
+    "topics": [
+      "2-5-2-supply-side-policies",
+      "2-2-2-aggregate-demand-and-aggregate-supply-analysis",
+      "2-6-3-the-balance-of-payments"
+    ],
+    "keywords": [
+      "supply-side policies",
+      "research and development",
+      "long-run aggregate supply",
+      "current account"
+    ]
+  },
+  "aqa-p3-2023-jun-q29": {
+    "topics": ["2-4-4-the-regulation-of-the-financial-system"],
+    "keywords": [
+      "moral hazard",
+      "financial regulation",
+      "lender of last resort"
+    ]
+  },
+  "aqa-p3-2023-jun-q30": {
+    "topics": ["2-5-1-fiscal-policy"],
+    "keywords": ["national debt", "budget deficit", "calculation"]
+  },
   "aqa-p3-2023-jun-q31": {
     "topics": ["2-6-5-economic-growth-and-development"],
     "keywords": ["development", "Sri Lanka", "indicators", "data response"]
@@ -4243,6 +6148,216 @@
   "aqa-p3-2023-jun-q33": {
     "topics": ["2-6-5-economic-growth-and-development"],
     "keywords": ["development strategies", "government policy", "Sri Lanka"]
+  },
+  "aqa-p3-2024-jun-q1": {
+    "topics": ["1-1-4-scarcity-choice-and-the-allocation-of-resources"],
+    "keywords": ["economic problem", "scarcity", "opportunity cost"]
+  },
+  "aqa-p3-2024-jun-q2": {
+    "topics": [
+      "1-2-2-imperfect-information",
+      "1-6-4-wage-determination-imperfectly-competitive-labour-markets"
+    ],
+    "keywords": ["asymmetric information", "recruitment", "labour market"]
+  },
+  "aqa-p3-2024-jun-q3": {
+    "topics": [
+      "1-1-5-production-possibility-diagrams",
+      "1-5-10-market-structure-efficiency-resource-allocation"
+    ],
+    "keywords": [
+      "production possibility boundary",
+      "productive efficiency",
+      "allocative efficiency"
+    ]
+  },
+  "aqa-p3-2024-jun-q4": {
+    "topics": ["1-3-2-price-income-and-cross-elasticities-of-demand"],
+    "keywords": [
+      "income elasticity of demand",
+      "YED",
+      "inferior goods",
+      "calculation"
+    ]
+  },
+  "aqa-p3-2024-jun-q5": {
+    "topics": [
+      "1-7-3-government-policies-poverty-income-distribution",
+      "1-7-1-the-distribution-of-income-and-wealth",
+      "2-5-1-fiscal-policy"
+    ],
+    "keywords": [
+      "redistribution",
+      "direct and indirect taxes",
+      "cash benefits",
+      "quintiles"
+    ]
+  },
+  "aqa-p3-2024-jun-q6": {
+    "topics": ["2-6-3-the-balance-of-payments"],
+    "keywords": ["balance of trade", "median", "current account", "calculation"]
+  },
+  "aqa-p3-2024-jun-q7": {
+    "topics": ["2-2-1-the-circular-flow-of-income"],
+    "keywords": ["injections", "circular flow of income", "investment"]
+  },
+  "aqa-p3-2024-jun-q8": {
+    "topics": ["1-2-1-consumer-behaviour"],
+    "keywords": [
+      "total utility",
+      "marginal utility",
+      "diminishing marginal utility"
+    ]
+  },
+  "aqa-p3-2024-jun-q9": {
+    "topics": [
+      "2-5-2-supply-side-policies",
+      "2-6-3-the-balance-of-payments",
+      "2-3-1-economic-growth-and-the-economic-cycle"
+    ],
+    "keywords": [
+      "supply-side policies",
+      "trend rate of growth",
+      "balance of payments"
+    ]
+  },
+  "aqa-p3-2024-jun-q10": {
+    "topics": ["1-3-6-the-interrelationship-between-markets"],
+    "keywords": ["competitive demand", "composite demand", "joint supply"]
+  },
+  "aqa-p3-2024-jun-q11": {
+    "topics": ["1-5-4-monopolistic-competition"],
+    "keywords": ["monopolistic competition", "long run", "average revenue"]
+  },
+  "aqa-p3-2024-jun-q12": {
+    "topics": [
+      "1-5-5-oligopoly",
+      "1-3-2-price-income-and-cross-elasticities-of-demand"
+    ],
+    "keywords": ["kinked demand curve", "oligopoly", "price stability"]
+  },
+  "aqa-p3-2024-jun-q13": {
+    "topics": ["1-4-6-marginal-average-and-total-revenue"],
+    "keywords": ["marginal revenue", "total revenue", "calculation"]
+  },
+  "aqa-p3-2024-jun-q14": {
+    "topics": ["1-8-10-government-failure"],
+    "keywords": [
+      "government failure",
+      "unintended consequences",
+      "landfill tax"
+    ]
+  },
+  "aqa-p3-2024-jun-q15": {
+    "topics": [
+      "2-4-1-the-structure-of-financial-markets-and-financial-assets",
+      "2-3-3-inflation-and-deflation"
+    ],
+    "keywords": ["functions of money", "store of value", "deflation"]
+  },
+  "aqa-p3-2024-jun-q16": {
+    "topics": [
+      "2-3-1-economic-growth-and-the-economic-cycle",
+      "2-3-4-possible-conflicts-between-macroeconomic-policy-objectives"
+    ],
+    "keywords": ["output gap", "inflationary pressure", "trend growth"]
+  },
+  "aqa-p3-2024-jun-q17": {
+    "topics": ["2-5-1-fiscal-policy"],
+    "keywords": ["progressive tax", "regressive tax", "proportional tax"]
+  },
+  "aqa-p3-2024-jun-q18": {
+    "topics": [
+      "1-4-3-the-law-of-diminishing-returns-and-returns-to-scale",
+      "1-4-4-costs-of-production"
+    ],
+    "keywords": ["increasing marginal returns", "short-run average cost"]
+  },
+  "aqa-p3-2024-jun-q19": {
+    "topics": ["2-5-1-fiscal-policy"],
+    "keywords": [
+      "national debt",
+      "debt to GDP ratio",
+      "nominal national income"
+    ]
+  },
+  "aqa-p3-2024-jun-q20": {
+    "topics": [
+      "1-5-10-market-structure-efficiency-resource-allocation",
+      "1-4-4-costs-of-production"
+    ],
+    "keywords": ["productive efficiency", "marginal cost", "average total cost"]
+  },
+  "aqa-p3-2024-jun-q21": {
+    "topics": [
+      "1-6-1-the-demand-for-labour-marginal-productivity-theory",
+      "1-4-7-profit"
+    ],
+    "keywords": [
+      "marginal revenue product",
+      "profit maximisation",
+      "employment",
+      "calculation"
+    ]
+  },
+  "aqa-p3-2024-jun-q22": {
+    "topics": [
+      "1-6-3-wage-determination-perfectly-competitive-labour-markets",
+      "1-6-1-the-demand-for-labour-marginal-productivity-theory"
+    ],
+    "keywords": [
+      "perfectly competitive labour market",
+      "derived demand",
+      "wage rate"
+    ]
+  },
+  "aqa-p3-2024-jun-q23": {
+    "topics": [
+      "2-2-6-determinants-of-long-run-aggregate-supply",
+      "2-2-2-aggregate-demand-and-aggregate-supply-analysis"
+    ],
+    "keywords": ["long-run aggregate supply", "immigration", "labour force"]
+  },
+  "aqa-p3-2024-jun-q24": {
+    "topics": [
+      "2-4-2-commercial-banks-and-investment-banks",
+      "2-4-4-the-regulation-of-the-financial-system"
+    ],
+    "keywords": [
+      "liquidity and profitability",
+      "commercial bank",
+      "mortgage lending"
+    ]
+  },
+  "aqa-p3-2024-jun-q25": {
+    "topics": ["2-6-2-trade"],
+    "keywords": ["customs union", "trade creation", "trade"]
+  },
+  "aqa-p3-2024-jun-q26": {
+    "topics": ["2-6-4-exchange-rate-systems", "2-6-3-the-balance-of-payments"],
+    "keywords": ["floating exchange rate", "balance of trade", "depreciation"]
+  },
+  "aqa-p3-2024-jun-q27": {
+    "topics": ["2-1-3-uses-of-index-numbers"],
+    "keywords": ["index numbers", "exports", "growth rate"]
+  },
+  "aqa-p3-2024-jun-q28": {
+    "topics": ["2-3-3-inflation-and-deflation", "2-1-3-uses-of-index-numbers"],
+    "keywords": ["disinflation", "price index", "inflation"]
+  },
+  "aqa-p3-2024-jun-q29": {
+    "topics": ["2-6-5-economic-growth-and-development"],
+    "keywords": [
+      "economic development",
+      "market-based strategies",
+      "privatisation"
+    ]
+  },
+  "aqa-p3-2024-jun-q30": {
+    "topics": [
+      "1-6-5-the-influence-of-trade-unions-in-determining-wages-and-levels-of-employment"
+    ],
+    "keywords": ["trade unions", "unemployment", "wages"]
   },
   "aqa-p3-2024-jun-q31": {
     "topics": ["1-7-1-the-distribution-of-income-and-wealth"],
@@ -4274,6 +6389,201 @@
       "supply-side"
     ]
   },
+  "aqa-p3-2025-jun-q1": {
+    "topics": ["1-2-4-behavioural-economics-and-economic-policy"],
+    "keywords": [
+      "mandated choice",
+      "choice architecture",
+      "behavioural economics"
+    ]
+  },
+  "aqa-p3-2025-jun-q2": {
+    "topics": ["1-1-5-production-possibility-diagrams"],
+    "keywords": [
+      "production possibility diagram",
+      "opportunity cost",
+      "public sector"
+    ]
+  },
+  "aqa-p3-2025-jun-q3": {
+    "topics": ["1-1-1-economic-methodology"],
+    "keywords": ["social science", "hypothesis", "economic methodology"]
+  },
+  "aqa-p3-2025-jun-q4": {
+    "topics": [
+      "2-5-1-fiscal-policy",
+      "2-2-5-determinants-of-short-run-aggregate-supply",
+      "2-2-2-aggregate-demand-and-aggregate-supply-analysis"
+    ],
+    "keywords": ["indirect tax", "short-run aggregate supply", "AD/AS"]
+  },
+  "aqa-p3-2025-jun-q5": {
+    "topics": ["2-3-2-employment-and-unemployment"],
+    "keywords": [
+      "frictional unemployment",
+      "Jobseeker's Allowance",
+      "job search"
+    ]
+  },
+  "aqa-p3-2025-jun-q6": {
+    "topics": [
+      "2-5-1-fiscal-policy",
+      "1-3-2-price-income-and-cross-elasticities-of-demand",
+      "1-8-9-government-intervention-in-markets"
+    ],
+    "keywords": ["taxation", "pattern of economic activity", "externalities"]
+  },
+  "aqa-p3-2025-jun-q7": {
+    "topics": [
+      "1-4-3-the-law-of-diminishing-returns-and-returns-to-scale",
+      "1-4-1-production-and-productivity",
+      "1-4-5-economies-and-diseconomies-of-scale"
+    ],
+    "keywords": ["returns to scale", "labour productivity", "calculation"]
+  },
+  "aqa-p3-2025-jun-q8": {
+    "topics": ["1-4-7-profit"],
+    "keywords": [
+      "abnormal profit",
+      "normal profit",
+      "opportunity cost",
+      "calculation"
+    ]
+  },
+  "aqa-p3-2025-jun-q9": {
+    "topics": [
+      "1-3-6-the-interrelationship-between-markets",
+      "1-3-1-the-determinants-of-the-demand-for-goods-and-services",
+      "1-3-5-the-determination-of-equilibrium-market-prices"
+    ],
+    "keywords": ["composite demand", "land", "soya beans"]
+  },
+  "aqa-p3-2025-jun-q10": {
+    "topics": ["2-2-3-the-determinants-of-aggregate-demand"],
+    "keywords": ["accelerator", "investment", "national income"]
+  },
+  "aqa-p3-2025-jun-q11": {
+    "topics": [
+      "2-3-1-economic-growth-and-the-economic-cycle",
+      "2-3-2-employment-and-unemployment"
+    ],
+    "keywords": ["economic cycle", "recession", "unemployment"]
+  },
+  "aqa-p3-2025-jun-q12": {
+    "topics": ["2-6-5-economic-growth-and-development"],
+    "keywords": ["Human Development Index", "HDI", "development"]
+  },
+  "aqa-p3-2025-jun-q13": {
+    "topics": ["1-3-4-price-elasticity-of-supply"],
+    "keywords": ["price elasticity of supply", "PES"]
+  },
+  "aqa-p3-2025-jun-q14": {
+    "topics": ["1-3-5-the-determination-of-equilibrium-market-prices"],
+    "keywords": ["disequilibrium", "excess supply", "rent"]
+  },
+  "aqa-p3-2025-jun-q15": {
+    "topics": ["1-5-2-the-objectives-of-firms"],
+    "keywords": [
+      "divorce of ownership from control",
+      "principal-agent problem",
+      "objectives of firms"
+    ]
+  },
+  "aqa-p3-2025-jun-q16": {
+    "topics": [
+      "2-3-3-inflation-and-deflation",
+      "2-3-2-employment-and-unemployment",
+      "2-3-4-possible-conflicts-between-macroeconomic-policy-objectives"
+    ],
+    "keywords": ["inflation", "unemployment", "price index"]
+  },
+  "aqa-p3-2025-jun-q17": {
+    "topics": ["2-4-1-the-structure-of-financial-markets-and-financial-assets"],
+    "keywords": ["money supply", "broad money", "narrow money"]
+  },
+  "aqa-p3-2025-jun-q18": {
+    "topics": [
+      "2-4-4-the-regulation-of-the-financial-system",
+      "2-4-2-commercial-banks-and-investment-banks"
+    ],
+    "keywords": ["liquidity ratio", "capital ratio", "bank profitability"]
+  },
+  "aqa-p3-2025-jun-q19": {
+    "topics": ["1-5-3-perfect-competition"],
+    "keywords": ["perfect competition", "entry", "normal profit"]
+  },
+  "aqa-p3-2025-jun-q20": {
+    "topics": [
+      "1-5-7-price-discrimination",
+      "1-5-11-consumer-and-producer-surplus"
+    ],
+    "keywords": [
+      "price discrimination",
+      "consumer surplus",
+      "peak and off-peak"
+    ]
+  },
+  "aqa-p3-2025-jun-q21": {
+    "topics": [
+      "1-6-5-the-influence-of-trade-unions-in-determining-wages-and-levels-of-employment"
+    ],
+    "keywords": [
+      "trade unions",
+      "membership",
+      "percentage change",
+      "calculation"
+    ]
+  },
+  "aqa-p3-2025-jun-q22": {
+    "topics": ["1-6-7-discrimination-in-the-labour-market"],
+    "keywords": ["wage discrimination", "labour market discrimination"]
+  },
+  "aqa-p3-2025-jun-q23": {
+    "topics": [
+      "1-7-2-the-problem-of-poverty",
+      "1-7-3-government-policies-poverty-income-distribution"
+    ],
+    "keywords": ["relative poverty", "inflation", "necessities"]
+  },
+  "aqa-p3-2025-jun-q24": {
+    "topics": ["2-6-2-trade", "1-1-5-production-possibility-diagrams"],
+    "keywords": [
+      "comparative advantage",
+      "absolute advantage",
+      "production possibility frontier"
+    ]
+  },
+  "aqa-p3-2025-jun-q25": {
+    "topics": ["2-6-2-trade"],
+    "keywords": ["tariff", "imports", "protectionism", "calculation"]
+  },
+  "aqa-p3-2025-jun-q26": {
+    "topics": ["2-5-2-supply-side-policies", "2-6-3-the-balance-of-payments"],
+    "keywords": ["supply-side policies", "balance of trade", "investment"]
+  },
+  "aqa-p3-2025-jun-q27": {
+    "topics": ["1-8-7-competition-policy", "1-5-5-oligopoly"],
+    "keywords": [
+      "competition policy",
+      "Competition and Markets Authority",
+      "concentration ratio"
+    ]
+  },
+  "aqa-p3-2025-jun-q28": {
+    "topics": [
+      "1-8-9-government-intervention-in-markets",
+      "1-8-4-positive-and-negative-externalities-in-consumption-and-production"
+    ],
+    "keywords": ["tradable pollution permits", "externalities", "incentives"]
+  },
+  "aqa-p3-2025-jun-q29": {
+    "topics": ["2-3-3-inflation-and-deflation"],
+    "keywords": ["inflation", "real value", "mortgages"]
+  },
+  "aqa-p3-2025-jun-q30": {
+    "topics": ["2-1-2-macroeconomic-indicators"],
+    "keywords": ["GDP per capita", "mean", "calculation"]
+  },
   "aqa-p3-2025-jun-q31": {
     "topics": ["2-1-2-macroeconomic-indicators"],
     "keywords": ["automotive industry", "UK economy", "output", "data response"]
@@ -4289,6 +6599,15 @@
     ],
     "keywords": ["subsidies", "gigafactories", "batteries", "industrial policy"]
   },
+  "edexcel-as-p1-2016-jun-q1a": {
+    "topics": ["1-1-5-specialisation-division-of-labour"],
+    "keywords": [
+      "division of labour",
+      "specialisation",
+      "unit cost",
+      "smartphones"
+    ]
+  },
   "edexcel-as-p1-2016-jun-q1b": {
     "topics": ["1-1-5-specialisation-division-of-labour"],
     "keywords": ["functions of money", "specialisation", "smartphones"]
@@ -4296,6 +6615,19 @@
   "edexcel-as-p1-2016-jun-q2a": {
     "topics": ["1-3-2-externalities"],
     "keywords": ["external benefits", "definition"]
+  },
+  "edexcel-as-p1-2016-jun-q2b": {
+    "topics": [
+      "1-4-1-government-intervention-in-markets",
+      "1-3-2-externalities",
+      "1-2-9-indirect-taxes-subsidies"
+    ],
+    "keywords": [
+      "positive externalities",
+      "subsidy",
+      "social optimum",
+      "nursery places"
+    ]
   },
   "edexcel-as-p1-2016-jun-q2c": {
     "topics": [
@@ -4308,6 +6640,10 @@
       "government intervention",
       "diagram"
     ]
+  },
+  "edexcel-as-p1-2016-jun-q3a": {
+    "topics": ["1-3-2-externalities"],
+    "keywords": ["external costs", "third parties", "Lake Naivasha"]
   },
   "edexcel-as-p1-2016-jun-q3b": {
     "topics": [
@@ -4324,6 +6660,18 @@
   "edexcel-as-p1-2016-jun-q4a": {
     "topics": ["1-2-2-demand"],
     "keywords": ["diminishing marginal utility", "utility", "all you can eat"]
+  },
+  "edexcel-as-p1-2016-jun-q4b": {
+    "topics": ["1-2-2-demand"],
+    "keywords": [
+      "extension in demand",
+      "movement along the demand curve",
+      "price fall"
+    ]
+  },
+  "edexcel-as-p1-2016-jun-q5a": {
+    "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
+    "keywords": ["price elasticity of demand", "PED calculation", "petrol"]
   },
   "edexcel-as-p1-2016-jun-q5b": {
     "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
@@ -4390,6 +6738,14 @@
     ],
     "keywords": ["opportunity cost", "PPF", "marginal analysis"]
   },
+  "edexcel-as-p1-2017-jun-q1b": {
+    "topics": ["1-1-4-production-possibility-frontiers"],
+    "keywords": [
+      "production possibility frontier",
+      "capital goods",
+      "economic growth"
+    ]
+  },
   "edexcel-as-p1-2017-jun-q2a": {
     "topics": ["1-2-4-supply"],
     "keywords": ["base year", "index numbers", "definition", "wheat"]
@@ -4403,9 +6759,20 @@
       "calculation"
     ]
   },
+  "edexcel-as-p1-2017-jun-q2c": {
+    "topics": ["1-2-4-supply"],
+    "keywords": ["percentage change", "wheat production", "calculation"]
+  },
   "edexcel-as-p1-2017-jun-q3a": {
     "topics": ["1-2-9-indirect-taxes-subsidies"],
     "keywords": ["subsidies", "definition"]
+  },
+  "edexcel-as-p1-2017-jun-q3b": {
+    "topics": [
+      "1-2-9-indirect-taxes-subsidies",
+      "1-2-8-producer-consumer-surplus"
+    ],
+    "keywords": ["subsidy", "consumer surplus", "solar panels"]
   },
   "edexcel-as-p1-2017-jun-q3c": {
     "topics": ["1-2-9-indirect-taxes-subsidies", "1-2-6-price-determination"],
@@ -4415,12 +6782,33 @@
     "topics": ["1-2-7-price-mechanism", "1-2-6-price-determination"],
     "keywords": ["price mechanism", "excess supply", "steel"]
   },
+  "edexcel-as-p1-2017-jun-q4b": {
+    "topics": [
+      "1-4-1-government-intervention-in-markets",
+      "1-3-2-externalities",
+      "1-2-9-indirect-taxes-subsidies"
+    ],
+    "keywords": [
+      "indirect taxes",
+      "carbon emissions",
+      "external costs",
+      "steel"
+    ]
+  },
   "edexcel-as-p1-2017-jun-q5a": {
     "topics": [
       "1-4-1-government-intervention-in-markets",
       "1-2-6-price-determination"
     ],
     "keywords": ["maximum price", "excess demand", "tuition fees"]
+  },
+  "edexcel-as-p1-2017-jun-q5b": {
+    "topics": ["1-3-2-externalities"],
+    "keywords": [
+      "positive externalities",
+      "marginal social benefit",
+      "university education"
+    ]
   },
   "edexcel-as-p1-2017-jun-q6a": {
     "topics": ["1-2-2-demand", "1-4-1-government-intervention-in-markets"],
@@ -4473,6 +6861,14 @@
       "demerit good"
     ]
   },
+  "edexcel-as-p1-2018-jun-q1a": {
+    "topics": ["1-1-2-positive-normative-statements"],
+    "keywords": [
+      "positive statements",
+      "normative statements",
+      "Cuba healthcare"
+    ]
+  },
   "edexcel-as-p1-2018-jun-q1b": {
     "topics": ["1-1-6-types-of-economies"],
     "keywords": ["calculation", "ratio", "healthcare", "Cuba"]
@@ -4485,9 +6881,21 @@
     "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
     "keywords": ["price elasticity of demand", "calculation", "newspapers"]
   },
+  "edexcel-as-p1-2018-jun-q2b": {
+    "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
+    "keywords": [
+      "determinants of price elasticity of demand",
+      "substitutes",
+      "newspapers"
+    ]
+  },
   "edexcel-as-p1-2018-jun-q2c": {
     "topics": ["1-1-1-economics-as-a-social-science"],
     "keywords": ["ceteris paribus", "definition"]
+  },
+  "edexcel-as-p1-2018-jun-q3a": {
+    "topics": ["1-2-7-price-mechanism"],
+    "keywords": ["price mechanism", "signalling function", "dental treatment"]
   },
   "edexcel-as-p1-2018-jun-q3b": {
     "topics": [
@@ -4500,6 +6908,10 @@
   "edexcel-as-p1-2018-jun-q3c": {
     "topics": ["1-3-4-information-gaps"],
     "keywords": ["asymmetric information", "definition"]
+  },
+  "edexcel-as-p1-2018-jun-q4a": {
+    "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
+    "keywords": ["median", "household income", "definition"]
   },
   "edexcel-as-p1-2018-jun-q4b": {
     "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
@@ -4517,6 +6929,10 @@
   "edexcel-as-p1-2018-jun-q5b": {
     "topics": ["1-1-4-production-possibility-frontiers"],
     "keywords": ["opportunity cost", "PPF", "BBC"]
+  },
+  "edexcel-as-p1-2018-jun-q5c": {
+    "topics": ["1-3-3-public-goods"],
+    "keywords": ["public goods", "non-rivalry", "BBC"]
   },
   "edexcel-as-p1-2018-jun-q6a": {
     "topics": ["1-2-6-price-determination"],
@@ -4577,6 +6993,10 @@
       "pollution"
     ]
   },
+  "edexcel-as-p1-2019-jun-q1a": {
+    "topics": ["1-1-5-specialisation-division-of-labour"],
+    "keywords": ["Adam Smith", "specialisation", "division of labour"]
+  },
   "edexcel-as-p1-2019-jun-q1b": {
     "topics": ["1-1-5-specialisation-division-of-labour"],
     "keywords": ["division of labour", "mass production", "Henry Ford"]
@@ -4590,9 +7010,24 @@
       "diagram"
     ]
   },
+  "edexcel-as-p1-2019-jun-q2b": {
+    "topics": [
+      "1-2-2-demand",
+      "1-2-3-price-income-cross-elasticities-of-demand"
+    ],
+    "keywords": ["complements", "demand for diesel", "shift in demand"]
+  },
   "edexcel-as-p1-2019-jun-q2c": {
     "topics": ["1-2-2-demand"],
     "keywords": ["demand", "definition"]
+  },
+  "edexcel-as-p1-2019-jun-q3a": {
+    "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
+    "keywords": [
+      "cross elasticity of demand",
+      "substitutes",
+      "streaming services"
+    ]
   },
   "edexcel-as-p1-2019-jun-q3b": {
     "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
@@ -4603,6 +7038,10 @@
       "calculation"
     ]
   },
+  "edexcel-as-p1-2019-jun-q4a": {
+    "topics": ["1-2-9-indirect-taxes-subsidies", "2-6-2-demand-side-policies"],
+    "keywords": ["VAT", "indirect tax", "energy bills", "calculation"]
+  },
   "edexcel-as-p1-2019-jun-q4b": {
     "topics": ["1-2-9-indirect-taxes-subsidies"],
     "keywords": ["indirect tax", "VAT", "supply and demand diagram", "energy"]
@@ -4610,6 +7049,10 @@
   "edexcel-as-p1-2019-jun-q4c": {
     "topics": ["1-2-9-indirect-taxes-subsidies"],
     "keywords": ["indirect tax", "definition"]
+  },
+  "edexcel-as-p1-2019-jun-q5a": {
+    "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
+    "keywords": ["income elasticity of demand", "inferior good", "calculation"]
   },
   "edexcel-as-p1-2019-jun-q5b": {
     "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
@@ -4672,6 +7115,10 @@
       "private provision"
     ]
   },
+  "edexcel-as-p1-2022-jun-q1a": {
+    "topics": ["1-3-3-public-goods"],
+    "keywords": ["private goods", "rivalry", "excludability"]
+  },
   "edexcel-as-p1-2022-jun-q1b": {
     "topics": ["1-3-3-public-goods"],
     "keywords": ["public goods", "free rider problem", "flood defences"]
@@ -4680,6 +7127,18 @@
     "topics": ["1-4-1-government-intervention-in-markets"],
     "keywords": ["minimum price", "definition"]
   },
+  "edexcel-as-p1-2022-jun-q2b": {
+    "topics": [
+      "1-4-1-government-intervention-in-markets",
+      "1-2-6-price-determination"
+    ],
+    "keywords": [
+      "minimum price",
+      "intervention buying",
+      "Common Agricultural Policy",
+      "buffer stocks"
+    ]
+  },
   "edexcel-as-p1-2022-jun-q2c": {
     "topics": [
       "1-4-1-government-intervention-in-markets",
@@ -4687,6 +7146,10 @@
       "1-2-6-price-determination"
     ],
     "keywords": ["minimum price", "intervention buying", "excess supply", "CAP"]
+  },
+  "edexcel-as-p1-2022-jun-q3a": {
+    "topics": ["1-1-5-specialisation-division-of-labour"],
+    "keywords": ["functions of money", "medium of exchange", "Bitcoin"]
   },
   "edexcel-as-p1-2022-jun-q3b": {
     "topics": ["1-1-5-specialisation-division-of-labour"],
@@ -4700,9 +7163,17 @@
       "value judgements"
     ]
   },
+  "edexcel-as-p1-2022-jun-q4b": {
+    "topics": ["1-3-2-externalities", "1-3-1-types-of-market-failure"],
+    "keywords": ["positive externalities", "vaccination", "market failure"]
+  },
   "edexcel-as-p1-2022-jun-q5a": {
     "topics": ["1-2-5-price-elasticity-of-supply"],
     "keywords": ["price elasticity of supply", "short run", "flour"]
+  },
+  "edexcel-as-p1-2022-jun-q5b": {
+    "topics": ["1-2-5-price-elasticity-of-supply"],
+    "keywords": ["price elasticity of supply", "PES calculation", "ice cream"]
   },
   "edexcel-as-p1-2022-jun-q6a": {
     "topics": [
@@ -4766,6 +7237,15 @@
       "tradable permits"
     ]
   },
+  "edexcel-as-p1-2023-jun-q1a": {
+    "topics": ["1-4-1-government-intervention-in-markets"],
+    "keywords": [
+      "maximum price",
+      "energy price cap",
+      "percentage change",
+      "calculation"
+    ]
+  },
   "edexcel-as-p1-2023-jun-q1b": {
     "topics": ["1-4-1-government-intervention-in-markets"],
     "keywords": ["maximum price", "energy price cap", "diagram"]
@@ -4782,9 +7262,24 @@
       "natural gas"
     ]
   },
+  "edexcel-as-p1-2023-jun-q2b": {
+    "topics": [
+      "1-2-5-price-elasticity-of-supply",
+      "1-2-3-price-income-cross-elasticities-of-demand"
+    ],
+    "keywords": [
+      "price elasticity of supply",
+      "price elasticity of demand",
+      "natural gas"
+    ]
+  },
   "edexcel-as-p1-2023-jun-q3a": {
     "topics": ["1-1-5-specialisation-division-of-labour"],
     "keywords": ["specialisation", "definition"]
+  },
+  "edexcel-as-p1-2023-jun-q3b": {
+    "topics": ["1-1-2-positive-normative-statements"],
+    "keywords": ["positive statements", "normative statements", "supply chains"]
   },
   "edexcel-as-p1-2023-jun-q3c": {
     "topics": ["1-1-5-specialisation-division-of-labour"],
@@ -4799,6 +7294,10 @@
       "shortages"
     ]
   },
+  "edexcel-as-p1-2023-jun-q4b": {
+    "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
+    "keywords": ["cross elasticity of demand", "close substitutes", "petrol"]
+  },
   "edexcel-as-p1-2023-jun-q5a": {
     "topics": ["1-1-6-types-of-economies"],
     "keywords": ["mixed economy", "definition", "furlough"]
@@ -4806,6 +7305,10 @@
   "edexcel-as-p1-2023-jun-q5b": {
     "topics": ["1-1-4-production-possibility-frontiers"],
     "keywords": ["opportunity cost", "PPF", "consumer goods"]
+  },
+  "edexcel-as-p1-2023-jun-q5c": {
+    "topics": ["1-1-6-types-of-economies"],
+    "keywords": ["command economy", "unemployment", "furlough"]
   },
   "edexcel-as-p1-2023-jun-q6a": {
     "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
@@ -4858,13 +7361,30 @@
     "topics": ["1-1-3-the-economic-problem"],
     "keywords": ["renewable resources", "non-renewable resources", "scarcity"]
   },
+  "edexcel-as-p1-2024-jun-q1b": {
+    "topics": ["1-1-3-the-economic-problem"],
+    "keywords": ["scarcity", "economic problem", "non-renewable resources"]
+  },
   "edexcel-as-p1-2024-jun-q2a": {
     "topics": ["1-2-4-supply"],
     "keywords": ["supply", "definition"]
   },
+  "edexcel-as-p1-2024-jun-q2b": {
+    "topics": ["1-1-4-production-possibility-frontiers"],
+    "keywords": [
+      "production possibility frontier",
+      "natural disaster",
+      "cyclone",
+      "Madagascar"
+    ]
+  },
   "edexcel-as-p1-2024-jun-q2c": {
     "topics": ["1-2-4-supply", "1-2-6-price-determination"],
     "keywords": ["fall in supply", "equilibrium price", "vanilla", "diagram"]
+  },
+  "edexcel-as-p1-2024-jun-q3a": {
+    "topics": ["1-1-6-types-of-economies", "1-2-7-price-mechanism"],
+    "keywords": ["free market economy", "price mechanism", "Karl Marx"]
   },
   "edexcel-as-p1-2024-jun-q3b": {
     "topics": [
@@ -4873,6 +7393,10 @@
       "1-1-6-types-of-economies"
     ],
     "keywords": ["state provision", "education", "positive externalities"]
+  },
+  "edexcel-as-p1-2024-jun-q4a": {
+    "topics": ["1-1-2-positive-normative-statements"],
+    "keywords": ["positive statements", "normative statements", "class sizes"]
   },
   "edexcel-as-p1-2024-jun-q4b": {
     "topics": ["1-1-3-the-economic-problem"],
@@ -4885,6 +7409,14 @@
   "edexcel-as-p1-2024-jun-q5b": {
     "topics": ["1-1-1-economics-as-a-social-science"],
     "keywords": ["ceteris paribus", "definition"]
+  },
+  "edexcel-as-p1-2024-jun-q5c": {
+    "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
+    "keywords": [
+      "determinants of price elasticity of demand",
+      "substitutes",
+      "Tesla"
+    ]
   },
   "edexcel-as-p1-2024-jun-q6a": {
     "topics": ["1-4-2-government-failure"],
@@ -4940,6 +7472,10 @@
       "regulation"
     ]
   },
+  "edexcel-as-p1-2025-jun-q1a": {
+    "topics": ["1-1-4-production-possibility-frontiers"],
+    "keywords": ["capital goods", "consumer goods"]
+  },
   "edexcel-as-p1-2025-jun-q1b": {
     "topics": ["1-1-3-the-economic-problem"],
     "keywords": ["renewable resources", "non-renewable resources"]
@@ -4948,17 +7484,42 @@
     "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
     "keywords": ["price elasticity of demand", "calculation", "sausage rolls"]
   },
+  "edexcel-as-p1-2025-jun-q2b": {
+    "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
+    "keywords": [
+      "price elasticity of demand",
+      "relatively inelastic",
+      "PED values"
+    ]
+  },
   "edexcel-as-p1-2025-jun-q3a": {
     "topics": ["1-1-6-types-of-economies"],
     "keywords": ["free market", "definition"]
+  },
+  "edexcel-as-p1-2025-jun-q3b": {
+    "topics": ["1-3-2-externalities", "1-3-1-types-of-market-failure"],
+    "keywords": ["external benefits", "social optimum", "market failure"]
   },
   "edexcel-as-p1-2025-jun-q3c": {
     "topics": ["1-3-3-public-goods"],
     "keywords": ["public goods", "free rider problem", "private sector"]
   },
+  "edexcel-as-p1-2025-jun-q4a": {
+    "topics": ["1-2-4-supply", "1-2-9-indirect-taxes-subsidies"],
+    "keywords": ["shift in supply", "subsidy", "conditions of supply", "coffee"]
+  },
   "edexcel-as-p1-2025-jun-q4b": {
     "topics": ["1-2-6-price-determination", "1-2-7-price-mechanism"],
     "keywords": ["excess supply", "market forces", "price mechanism", "coffee"]
+  },
+  "edexcel-as-p1-2025-jun-q5a": {
+    "topics": ["1-2-2-demand"],
+    "keywords": [
+      "shift in demand",
+      "advertising",
+      "conditions of demand",
+      "new cars"
+    ]
   },
   "edexcel-as-p1-2025-jun-q5b": {
     "topics": ["1-2-2-demand"],
@@ -5018,17 +7579,33 @@
     "topics": ["1-1-6-types-of-economies"],
     "keywords": ["free market economy", "definition"]
   },
+  "edexcel-as-p1-2020-oct-q1b": {
+    "topics": ["1-2-7-price-mechanism"],
+    "keywords": ["rationing function", "price mechanism", "shortage"]
+  },
   "edexcel-as-p1-2020-oct-q1c": {
     "topics": ["1-1-6-types-of-economies"],
     "keywords": ["free market economy", "command economy", "advantages"]
+  },
+  "edexcel-as-p1-2020-oct-q2a": {
+    "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
+    "keywords": ["income elasticity of demand", "inferior good", "bus travel"]
   },
   "edexcel-as-p1-2020-oct-q2b": {
     "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
     "keywords": ["price elasticity of demand", "total revenue", "firms"]
   },
+  "edexcel-as-p1-2020-oct-q3a": {
+    "topics": ["1-2-9-indirect-taxes-subsidies"],
+    "keywords": ["subsidy", "government spending on subsidy", "loft insulation"]
+  },
   "edexcel-as-p1-2020-oct-q3b": {
     "topics": ["1-1-3-the-economic-problem", "1-2-9-indirect-taxes-subsidies"],
     "keywords": ["opportunity cost", "subsidies", "loft insulation"]
+  },
+  "edexcel-as-p1-2020-oct-q4a": {
+    "topics": ["1-2-9-indirect-taxes-subsidies"],
+    "keywords": ["specific tax", "tax revenue", "indirect taxes"]
   },
   "edexcel-as-p1-2020-oct-q4b": {
     "topics": [
@@ -5053,6 +7630,15 @@
       "market failure",
       "HS2",
       "government intervention"
+    ]
+  },
+  "edexcel-as-p1-2020-oct-q5c": {
+    "topics": ["1-2-2-demand", "1-2-6-price-determination"],
+    "keywords": [
+      "shift in demand",
+      "workplace parking tax",
+      "rail travel",
+      "substitutes"
     ]
   },
   "edexcel-as-p1-2020-oct-q6a": {
@@ -5109,6 +7695,10 @@
     "topics": ["2-4-1-national-income"],
     "keywords": ["national income", "definition"]
   },
+  "edexcel-as-p2-2016-jun-q1b": {
+    "topics": ["2-4-2-injections-withdrawals"],
+    "keywords": ["injections", "circular flow of income", "investment"]
+  },
   "edexcel-as-p2-2016-jun-q1c": {
     "topics": ["2-4-1-national-income"],
     "keywords": ["circular flow of income", "definition"]
@@ -5116,6 +7706,15 @@
   "edexcel-as-p2-2016-jun-q2a": {
     "topics": ["2-1-1-economic-growth"],
     "keywords": ["purchasing power parities", "PPP", "definition"]
+  },
+  "edexcel-as-p2-2016-jun-q2b": {
+    "topics": ["2-1-1-economic-growth"],
+    "keywords": [
+      "GDP",
+      "GDP per capita",
+      "purchasing power parity",
+      "calculation"
+    ]
   },
   "edexcel-as-p2-2016-jun-q2c": {
     "topics": [
@@ -5132,6 +7731,14 @@
     "topics": ["2-1-3-employment-unemployment"],
     "keywords": ["claimant count", "percentage change", "calculation"]
   },
+  "edexcel-as-p2-2016-jun-q3c": {
+    "topics": ["2-1-3-employment-unemployment"],
+    "keywords": ["claimant count", "unemployment", "measures of unemployment"]
+  },
+  "edexcel-as-p2-2016-jun-q4a": {
+    "topics": ["2-1-4-balance-of-payments", "4-1-7-balance-of-payments"],
+    "keywords": ["balance of trade", "trade in goods", "trade deficit"]
+  },
   "edexcel-as-p2-2016-jun-q4b": {
     "topics": ["2-2-5-net-trade", "2-1-4-balance-of-payments"],
     "keywords": ["trade deficit", "balance of trade", "current account"]
@@ -5143,6 +7750,14 @@
       "marginal propensity to consume",
       "investment",
       "calculation"
+    ]
+  },
+  "edexcel-as-p2-2016-jun-q5b": {
+    "topics": ["2-3-1-aggregate-supply", "2-3-3-long-run-aggregate-supply"],
+    "keywords": [
+      "long-run aggregate supply",
+      "productivity",
+      "aggregate supply"
     ]
   },
   "edexcel-as-p2-2016-jun-q6a": {
@@ -5191,9 +7806,25 @@
     "topics": ["2-1-2-inflation"],
     "keywords": ["deflation", "definition"]
   },
+  "edexcel-as-p2-2017-jun-q1c": {
+    "topics": ["2-1-2-inflation", "2-3-2-short-run-aggregate-supply"],
+    "keywords": ["deflation", "oil prices", "Consumer Prices Index"]
+  },
   "edexcel-as-p2-2017-jun-q2a": {
     "topics": ["2-1-3-employment-unemployment"],
     "keywords": ["underemployment", "unemployment"]
+  },
+  "edexcel-as-p2-2017-jun-q2b": {
+    "topics": ["2-1-3-employment-unemployment", "2-2-2-consumption"],
+    "keywords": [
+      "unemployment rate",
+      "consumer spending",
+      "cyclical unemployment"
+    ]
+  },
+  "edexcel-as-p2-2017-jun-q3a": {
+    "topics": ["2-1-1-economic-growth"],
+    "keywords": ["real GDP", "index numbers", "economic growth"]
   },
   "edexcel-as-p2-2017-jun-q3b": {
     "topics": ["2-1-1-economic-growth"],
@@ -5220,9 +7851,21 @@
     "topics": ["2-6-2-demand-side-policies"],
     "keywords": ["direct tax", "definition"]
   },
+  "edexcel-as-p2-2017-jun-q4c": {
+    "topics": ["2-6-2-demand-side-policies"],
+    "keywords": ["direct tax", "corporation tax", "fiscal policy"]
+  },
   "edexcel-as-p2-2017-jun-q5a": {
     "topics": ["2-2-2-consumption"],
     "keywords": ["consumer confidence", "consumption"]
+  },
+  "edexcel-as-p2-2017-jun-q5b": {
+    "topics": ["2-2-2-consumption", "2-4-4-the-multiplier"],
+    "keywords": [
+      "consumer confidence",
+      "marginal propensity to save",
+      "consumption"
+    ]
   },
   "edexcel-as-p2-2017-jun-q6a": {
     "topics": ["2-2-5-net-trade"],
@@ -5279,6 +7922,10 @@
     "topics": ["2-1-1-economic-growth"],
     "keywords": ["GDP per capita", "calculation"]
   },
+  "edexcel-as-p2-2018-jun-q1c": {
+    "topics": ["2-5-4-the-impact-of-economic-growth", "2-1-1-economic-growth"],
+    "keywords": ["real GDP per capita", "living standards"]
+  },
   "edexcel-as-p2-2018-jun-q2a": {
     "topics": ["2-5-3-trade-cycle"],
     "keywords": ["recession", "definition"]
@@ -5286,6 +7933,10 @@
   "edexcel-as-p2-2018-jun-q2b": {
     "topics": ["2-5-3-trade-cycle"],
     "keywords": ["recession", "characteristics of a recession"]
+  },
+  "edexcel-as-p2-2018-jun-q2c": {
+    "topics": ["2-5-2-output-gaps", "2-5-3-trade-cycle"],
+    "keywords": ["trade cycle", "negative output gap"]
   },
   "edexcel-as-p2-2018-jun-q3a": {
     "topics": [
@@ -5299,6 +7950,10 @@
       "monetary policy"
     ]
   },
+  "edexcel-as-p2-2018-jun-q3b": {
+    "topics": ["2-6-2-demand-side-policies"],
+    "keywords": ["quantitative easing", "inflation", "monetary policy"]
+  },
   "edexcel-as-p2-2018-jun-q4a": {
     "topics": ["2-2-1-aggregate-demand"],
     "keywords": ["aggregate demand", "definition"]
@@ -5309,6 +7964,18 @@
       "2-4-3-equilibrium-levels-of-real-national-output"
     ],
     "keywords": ["SRAS", "raw material costs", "AD/AS diagram"]
+  },
+  "edexcel-as-p2-2018-jun-q4c": {
+    "topics": ["2-3-3-long-run-aggregate-supply"],
+    "keywords": ["long-run aggregate supply", "productivity"]
+  },
+  "edexcel-as-p2-2018-jun-q5a": {
+    "topics": ["2-2-4-government-expenditure"],
+    "keywords": [
+      "government spending",
+      "percentage change",
+      "data interpretation"
+    ]
   },
   "edexcel-as-p2-2018-jun-q5b": {
     "topics": ["2-2-4-government-expenditure"],
@@ -5378,6 +8045,14 @@
     "topics": ["2-4-4-the-multiplier"],
     "keywords": ["multiplier", "calculation", "Gatwick"]
   },
+  "edexcel-as-p2-2019-jun-q1c": {
+    "topics": ["2-4-4-the-multiplier"],
+    "keywords": [
+      "multiplier",
+      "marginal propensity to import",
+      "marginal propensity to save"
+    ]
+  },
   "edexcel-as-p2-2019-jun-q2a": {
     "topics": ["2-3-3-long-run-aggregate-supply"],
     "keywords": ["Keynesian LRAS", "diagram"]
@@ -5386,9 +8061,24 @@
     "topics": ["2-5-2-output-gaps", "2-3-3-long-run-aggregate-supply"],
     "keywords": ["spare capacity", "Keynesian LRAS"]
   },
+  "edexcel-as-p2-2019-jun-q2c": {
+    "topics": [
+      "2-3-1-aggregate-supply",
+      "2-4-3-equilibrium-levels-of-real-national-output"
+    ],
+    "keywords": ["aggregate supply", "movement along", "aggregate demand"]
+  },
   "edexcel-as-p2-2019-jun-q3a": {
     "topics": ["2-1-3-employment-unemployment"],
     "keywords": ["unemployment rate", "effects of unemployment"]
+  },
+  "edexcel-as-p2-2019-jun-q3b": {
+    "topics": [
+      "2-6-2-demand-side-policies",
+      "2-6-3-supply-side-policies",
+      "2-1-3-employment-unemployment"
+    ],
+    "keywords": ["unemployment", "corporation tax", "quantitative easing"]
   },
   "edexcel-as-p2-2019-jun-q4a": {
     "topics": [
@@ -5404,6 +8094,14 @@
       "2-3-3-long-run-aggregate-supply"
     ],
     "keywords": ["supply-side policy", "competition", "LRAS", "AD/AS diagram"]
+  },
+  "edexcel-as-p2-2019-jun-q4c": {
+    "topics": ["2-6-3-supply-side-policies"],
+    "keywords": ["interventionist supply-side policy", "infrastructure"]
+  },
+  "edexcel-as-p2-2019-jun-q5a": {
+    "topics": ["2-2-2-consumption", "2-4-1-national-income"],
+    "keywords": ["house prices", "wealth effect", "consumer confidence"]
   },
   "edexcel-as-p2-2019-jun-q5b": {
     "topics": ["2-2-2-consumption"],
@@ -5456,6 +8154,10 @@
       "trade-offs"
     ]
   },
+  "edexcel-as-p2-2022-jun-q1a": {
+    "topics": ["2-6-2-demand-side-policies"],
+    "keywords": ["quantitative easing", "money supply", "monetary policy"]
+  },
   "edexcel-as-p2-2022-jun-q1b": {
     "topics": ["2-6-2-demand-side-policies", "2-1-2-inflation"],
     "keywords": ["base interest rate", "inflation", "monetary policy"]
@@ -5464,9 +8166,17 @@
     "topics": ["2-1-1-economic-growth"],
     "keywords": ["nominal", "definition"]
   },
+  "edexcel-as-p2-2022-jun-q2b": {
+    "topics": ["2-1-1-economic-growth"],
+    "keywords": ["index numbers", "base year", "nominal GDP", "calculation"]
+  },
   "edexcel-as-p2-2022-jun-q2c": {
     "topics": ["2-1-1-economic-growth"],
     "keywords": ["nominal GDP per capita", "calculation"]
+  },
+  "edexcel-as-p2-2022-jun-q3a": {
+    "topics": ["2-1-2-inflation", "2-1-1-economic-growth"],
+    "keywords": ["real earnings", "nominal earnings", "inflation adjustment"]
   },
   "edexcel-as-p2-2022-jun-q3b": {
     "topics": ["2-1-1-economic-growth"],
@@ -5476,6 +8186,10 @@
     "topics": ["2-2-5-net-trade"],
     "keywords": ["exchange rate", "definition"]
   },
+  "edexcel-as-p2-2022-jun-q4b": {
+    "topics": ["2-2-5-net-trade", "4-1-8-exchange-rates"],
+    "keywords": ["exchange rate", "percentage change", "calculation"]
+  },
   "edexcel-as-p2-2022-jun-q4c": {
     "topics": [
       "2-2-5-net-trade",
@@ -5483,6 +8197,10 @@
       "2-2-1-aggregate-demand"
     ],
     "keywords": ["net trade", "AD/AS diagram", "exports"]
+  },
+  "edexcel-as-p2-2022-jun-q5a": {
+    "topics": ["2-1-2-inflation"],
+    "keywords": ["disinflation", "deflation", "Consumer Prices Index"]
   },
   "edexcel-as-p2-2022-jun-q5b": {
     "topics": ["2-1-2-inflation"],
@@ -5539,13 +8257,29 @@
     "topics": ["2-6-3-supply-side-policies", "2-3-3-long-run-aggregate-supply"],
     "keywords": ["supply-side policies", "healthcare", "aggregate supply"]
   },
+  "edexcel-as-p2-2023-jun-q1b": {
+    "topics": ["2-6-3-supply-side-policies"],
+    "keywords": ["interventionist supply-side policy", "training programmes"]
+  },
   "edexcel-as-p2-2023-jun-q2a": {
     "topics": ["2-1-1-economic-growth"],
     "keywords": ["GDP per capita", "definition"]
   },
+  "edexcel-as-p2-2023-jun-q2b": {
+    "topics": ["2-5-4-the-impact-of-economic-growth", "2-1-1-economic-growth"],
+    "keywords": [
+      "real GDP per capita",
+      "purchasing power parity",
+      "living standards"
+    ]
+  },
   "edexcel-as-p2-2023-jun-q2c": {
     "topics": ["2-1-1-economic-growth"],
     "keywords": ["purchasing power parities", "PPP", "GDP comparisons"]
+  },
+  "edexcel-as-p2-2023-jun-q3a": {
+    "topics": ["2-6-2-demand-side-policies"],
+    "keywords": ["tax revenue", "income tax", "VAT", "data interpretation"]
   },
   "edexcel-as-p2-2023-jun-q3b": {
     "topics": ["2-6-2-demand-side-policies"],
@@ -5555,6 +8289,15 @@
     "topics": ["2-2-3-investment"],
     "keywords": ["investment", "definition"]
   },
+  "edexcel-as-p2-2023-jun-q4b": {
+    "topics": ["2-2-3-investment"],
+    "keywords": [
+      "index numbers",
+      "business investment",
+      "base year",
+      "calculation"
+    ]
+  },
   "edexcel-as-p2-2023-jun-q4c": {
     "topics": [
       "2-2-3-investment",
@@ -5562,6 +8305,10 @@
       "2-2-1-aggregate-demand"
     ],
     "keywords": ["business investment", "AD/AS diagram"]
+  },
+  "edexcel-as-p2-2023-jun-q5a": {
+    "topics": ["2-5-3-trade-cycle", "2-1-1-economic-growth"],
+    "keywords": ["recession", "real GDP growth", "boom"]
   },
   "edexcel-as-p2-2023-jun-q5b": {
     "topics": ["2-5-4-the-impact-of-economic-growth"],
@@ -5609,6 +8356,10 @@
       "MPC"
     ]
   },
+  "edexcel-as-p2-2024-jun-q1a": {
+    "topics": ["2-5-1-causes-of-growth", "2-1-1-economic-growth"],
+    "keywords": ["actual economic growth", "potential growth", "real GDP"]
+  },
   "edexcel-as-p2-2024-jun-q1b": {
     "topics": ["2-1-1-economic-growth"],
     "keywords": ["GDP", "living standards", "developing countries"]
@@ -5620,6 +8371,17 @@
   "edexcel-as-p2-2024-jun-q2b": {
     "topics": ["2-2-2-consumption"],
     "keywords": ["consumption", "households"]
+  },
+  "edexcel-as-p2-2024-jun-q2c": {
+    "topics": ["2-4-4-the-multiplier"],
+    "keywords": ["multiplier", "marginal propensity to consume", "calculation"]
+  },
+  "edexcel-as-p2-2024-jun-q3a": {
+    "topics": [
+      "2-3-3-long-run-aggregate-supply",
+      "2-1-3-employment-unemployment"
+    ],
+    "keywords": ["migration", "net migration", "data interpretation"]
   },
   "edexcel-as-p2-2024-jun-q3b": {
     "topics": ["2-1-3-employment-unemployment"],
@@ -5637,6 +8399,10 @@
     ],
     "keywords": ["business investment", "AD/AS diagram"]
   },
+  "edexcel-as-p2-2024-jun-q4c": {
+    "topics": ["2-2-3-investment"],
+    "keywords": ["investment", "business expectations", "animal spirits"]
+  },
   "edexcel-as-p2-2024-jun-q5a": {
     "topics": ["2-6-2-demand-side-policies"],
     "keywords": ["budget deficit", "definition"]
@@ -5644,6 +8410,15 @@
   "edexcel-as-p2-2024-jun-q5b": {
     "topics": ["2-6-2-demand-side-policies"],
     "keywords": ["budget deficit", "percentage change", "calculation"]
+  },
+  "edexcel-as-p2-2024-jun-q5c": {
+    "topics": ["2-6-2-demand-side-policies", "4-5-3-public-sector-finances"],
+    "keywords": [
+      "budget deficit",
+      "taxation",
+      "government spending",
+      "fiscal policy"
+    ]
   },
   "edexcel-as-p2-2024-jun-q6a": {
     "topics": ["2-1-2-inflation"],
@@ -5698,6 +8473,10 @@
       "inflation target"
     ]
   },
+  "edexcel-as-p2-2025-jun-q1a": {
+    "topics": ["2-1-3-employment-unemployment"],
+    "keywords": ["cyclical unemployment", "recession", "types of unemployment"]
+  },
   "edexcel-as-p2-2025-jun-q1b": {
     "topics": [
       "2-1-3-employment-unemployment",
@@ -5706,9 +8485,17 @@
     ],
     "keywords": ["unemployment", "government budget", "recession"]
   },
+  "edexcel-as-p2-2025-jun-q2a": {
+    "topics": ["2-2-2-consumption"],
+    "keywords": ["house prices", "ratio", "index numbers", "calculation"]
+  },
   "edexcel-as-p2-2025-jun-q2b": {
     "topics": ["2-2-2-consumption", "2-4-1-national-income"],
     "keywords": ["house prices", "wealth effect", "homeowners"]
+  },
+  "edexcel-as-p2-2025-jun-q3a": {
+    "topics": ["2-5-2-output-gaps", "2-5-3-trade-cycle"],
+    "keywords": ["positive output gap", "trade cycle"]
   },
   "edexcel-as-p2-2025-jun-q3b": {
     "topics": ["2-5-2-output-gaps"],
@@ -5728,6 +8515,14 @@
       "2-4-3-equilibrium-levels-of-real-national-output"
     ],
     "keywords": ["indirect tax", "SRAS", "AD/AS diagram"]
+  },
+  "edexcel-as-p2-2025-jun-q4c": {
+    "topics": ["2-6-2-demand-side-policies", "1-2-9-indirect-taxes-subsidies"],
+    "keywords": ["indirect tax", "VAT", "taxation"]
+  },
+  "edexcel-as-p2-2025-jun-q5a": {
+    "topics": ["2-1-4-balance-of-payments", "4-1-7-balance-of-payments"],
+    "keywords": ["balance of trade", "imports", "exports"]
   },
   "edexcel-as-p2-2025-jun-q5b": {
     "topics": ["2-2-5-net-trade", "2-1-4-balance-of-payments"],
@@ -5779,6 +8574,10 @@
     "topics": ["2-1-2-inflation"],
     "keywords": ["causes of inflation", "demand-pull", "cost-push"]
   },
+  "edexcel-as-p2-2020-oct-q1c": {
+    "topics": ["2-1-2-inflation"],
+    "keywords": ["CPI", "RPI", "percentage point", "inflation"]
+  },
   "edexcel-as-p2-2020-oct-q2a": {
     "topics": ["2-3-3-long-run-aggregate-supply"],
     "keywords": ["classical LRAS", "diagram"]
@@ -5786,6 +8585,14 @@
   "edexcel-as-p2-2020-oct-q2b": {
     "topics": ["2-3-3-long-run-aggregate-supply"],
     "keywords": ["classical LRAS", "long run"]
+  },
+  "edexcel-as-p2-2020-oct-q2c": {
+    "topics": ["2-6-3-supply-side-policies"],
+    "keywords": ["market-based supply-side policy", "unemployment benefits"]
+  },
+  "edexcel-as-p2-2020-oct-q3a": {
+    "topics": ["2-1-4-balance-of-payments", "4-1-7-balance-of-payments"],
+    "keywords": ["balance of trade", "imports", "exports"]
   },
   "edexcel-as-p2-2020-oct-q3b": {
     "topics": ["2-2-5-net-trade", "2-1-4-balance-of-payments"],
@@ -5803,9 +8610,21 @@
     ],
     "keywords": ["base interest rate", "AD/AS diagram", "monetary policy"]
   },
+  "edexcel-as-p2-2020-oct-q4c": {
+    "topics": ["2-6-2-demand-side-policies"],
+    "keywords": [
+      "contractionary monetary policy",
+      "base interest rate",
+      "Monetary Policy Committee"
+    ]
+  },
   "edexcel-as-p2-2020-oct-q5a": {
     "topics": ["2-1-1-economic-growth"],
     "keywords": ["Gross National Income", "GNI", "definition"]
+  },
+  "edexcel-as-p2-2020-oct-q5b": {
+    "topics": ["2-1-1-economic-growth"],
+    "keywords": ["Gross National Income", "ratio", "calculation"]
   },
   "edexcel-as-p2-2020-oct-q5c": {
     "topics": ["2-1-1-economic-growth"],

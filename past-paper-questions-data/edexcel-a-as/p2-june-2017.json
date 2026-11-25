@@ -45,6 +45,30 @@
       "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
+      "id": "edexcel-as-p2-2017-jun-q1c",
+      "section": "A",
+      "questionNumber": "1(c)",
+      "parentQuestion": "1",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "UK Consumer Prices Index (the base year 2005=100) Which one of the following is most likely to be a cause of deflation? A fall in:",
+      "sourceAttribution": "(Source: http://www.ons.gov.uk/ons/publications/re-reference-tables.html?edition=tcm%3A77-323657)",
+      "options": [
+        { "letter": "A", "text": "oil prices" },
+        { "letter": "B", "text": "unemployment" },
+        { "letter": "C", "text": "income tax rates" },
+        { "letter": "D", "text": "interest rates" }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2017-question-paper.pdf", "page": 2 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2017-mark-scheme.pdf", "page": 4, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
       "id": "edexcel-as-p2-2017-jun-q2a",
       "section": "A",
       "questionNumber": "2(a)",
@@ -59,6 +83,53 @@
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": []
+    },
+    {
+      "id": "edexcel-as-p2-2017-jun-q2b",
+      "section": "A",
+      "questionNumber": "2(b)",
+      "parentQuestion": "2",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Between 2008 and 2014 the number of people in the UK looking to work longer hours and therefore receive more total pay increased from 76 482 to 142 788. Over the same period the unemployment rate fell to 5.7%. Which one of the following is the most likely reason for a fall in the unemployment rate?",
+      "sourceAttribution": "(Sources: https://www.gov.uk/government/statistics/numbers-of-part-timers-seeking-full-time-employment and http://www.ons.gov.uk/ons/taxonomy/index.html?nscl=Unemployment+Rates#tab-data-tables)",
+      "options": [
+        { "letter": "A", "text": "Increasing unemployment benefit payments" },
+        { "letter": "B", "text": "Decreasing real GDP" },
+        { "letter": "C", "text": "Decreasing funding for apprenticeships" },
+        { "letter": "D", "text": "Increasing consumer spending" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2017-question-paper.pdf", "page": 3 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2017-mark-scheme.pdf", "page": 5, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "edexcel-as-p2-2017-jun-q3a",
+      "section": "A",
+      "questionNumber": "3(a)",
+      "parentQuestion": "3",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Real GDP in selected economies (the base year 2008=100) Which one of the following can be inferred from the chart?",
+      "options": [
+        { "letter": "A", "text": "The UK’s real GDP is smaller in 2014 than it was in 2008" },
+        { "letter": "B", "text": "Between 2008 and 2014 France’s real GDP growth rate was higher than Italy’s" },
+        { "letter": "C", "text": "Between 2008 and 2014 inflation was lower in France than in the UK" },
+        { "letter": "D", "text": "France experienced a greater fall in real GDP than the UK in 2014" }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2017-question-paper.pdf", "page": 4 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2017-mark-scheme.pdf", "page": 6, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
       "id": "edexcel-as-p2-2017-jun-q3b",
@@ -125,6 +196,30 @@
       "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
+      "id": "edexcel-as-p2-2017-jun-q4c",
+      "section": "A",
+      "questionNumber": "4(c)",
+      "parentQuestion": "4",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The Chancellor announced in the 2015 Budget that the personal allowance (the annual income that can be earned before starting to pay income tax) would increase from £10 600 to £11 000 in April 2016. This means most consumers will pay less income tax. Which one of the following is an example of a direct tax?",
+      "sourceAttribution": "(Source: adapted from http://www.telegraph.co.uk/finance/personalfinance/how-budget-affect-me/11721785/Budget-2015-what-to-expect-for-income-tax-and-the-personal-allowance.html)",
+      "options": [
+        { "letter": "A", "text": "Value Added Tax" },
+        { "letter": "B", "text": "Vehicle Excise Duty" },
+        { "letter": "C", "text": "Corporation tax" },
+        { "letter": "D", "text": "Alcohol duty" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2017-question-paper.pdf", "page": 6 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2017-mark-scheme.pdf", "page": 9, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-as-p2-2017-jun-q5a",
       "section": "A",
       "questionNumber": "5(a)",
@@ -135,6 +230,30 @@
       "sourceAttribution": "(Source: http://www.ons.gov.uk/ons/dcp171778_418064.pdf)",
       "context": null,
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2017-question-paper.pdf", "page": 7 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2017-mark-scheme.pdf", "page": 9, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-as-p2-2017-jun-q5b",
+      "section": "A",
+      "questionNumber": "5(b)",
+      "parentQuestion": "5",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The chart below shows the results from a survey of UK consumers’ confidence in their financial situation. A negative balance means that, on average, consumers reported their financial situation got worse, a positive balance means they reported it improved and a zero balance indicates no change. This is recorded on a scale from –100 to +100. Which one of the following is most likely to result from an improvement in UK consumer confidence? A decrease in the marginal propensity to:",
+      "sourceAttribution": "(Source: http://www.ons.gov.uk/ons/dcp171778_418064.pdf)",
+      "options": [
+        { "letter": "A", "text": "consume" },
+        { "letter": "B", "text": "tax" },
+        { "letter": "C", "text": "import" },
+        { "letter": "D", "text": "save" }
+      ],
+      "usesFigure": true,
+      "context": { "type": "question", "label": "Question 5 as printed", "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2017-question-paper.pdf", "page": 7 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2017-question-paper.pdf", "page": 8 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2017-mark-scheme.pdf", "page": 9, "verified": true },
       "modelAnswer": null,
       "extractionConfidence": "high",

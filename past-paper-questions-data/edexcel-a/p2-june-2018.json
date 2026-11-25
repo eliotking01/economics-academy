@@ -13,6 +13,29 @@
   "problems": [],
   "questions": [
     {
+      "id": "edexcel-a-p2-2018-jun-q1a",
+      "section": "A",
+      "questionNumber": "1(a)",
+      "parentQuestion": "1",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The trade deal known as the Comprehensive Economic and Trade Agreement (CETA) is designed to eliminate or reduce trade barriers between the European Union (EU) and Canada. It is estimated that it will increase trade by 20% and boost EU GDP by 12 billion euros. Which one of the following is most likely to decrease as a result of CETA?",
+      "options": [
+        { "letter": "A", "text": "Economic growth in EU countries" },
+        { "letter": "B", "text": "Exports from EU countries to Canada" },
+        { "letter": "C", "text": "Imports from Canada to EU countries" },
+        { "letter": "D", "text": "Tariffs on European exports to Canada" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2018-question-paper.pdf", "page": 2 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2018-mark-scheme.pdf", "page": 4, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-a-p2-2018-jun-q1b",
       "section": "A",
       "questionNumber": "1(b)",
@@ -24,6 +47,29 @@
       "context": { "type": "question", "label": "Question 1 as printed", "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2018-question-paper.pdf", "page": 2 },
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2018-question-paper.pdf", "page": 3 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2018-mark-scheme.pdf", "page": 4, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "edexcel-a-p2-2018-jun-q2a",
+      "section": "A",
+      "questionNumber": "2(a)",
+      "parentQuestion": "2",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following would be most likely to cause aggregate demand to increase? A fall in:",
+      "options": [
+        { "letter": "A", "text": "government spending" },
+        { "letter": "B", "text": "net trade (X–M)" },
+        { "letter": "C", "text": "the marginal propensity to consume" },
+        { "letter": "D", "text": "the marginal propensity to save" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2018-question-paper.pdf", "page": 4 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2018-mark-scheme.pdf", "page": 5, "verified": true },
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": []
@@ -76,6 +122,30 @@
       "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
+      "id": "edexcel-a-p2-2018-jun-q3c",
+      "section": "A",
+      "questionNumber": "3(c)",
+      "parentQuestion": "3",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "United States current account of the balance of payments, 1993–2015 Using the chart on page 6, which one of the following may be inferred about the United States balance of payments?",
+      "sourceAttribution": "(Source: http://data.worldbank.org/indicator/BN.CAB.XOKA.CD?end=2015&locations=US&start=1993)",
+      "options": [
+        { "letter": "A", "text": "The current account deficit decreased between 2001 and 2006" },
+        { "letter": "B", "text": "The current account surplus increased between 2001 and 2006" },
+        { "letter": "C", "text": "There was a current account deficit for the entire period shown" },
+        { "letter": "D", "text": "There was a current account surplus for the entire period shown" }
+      ],
+      "usesFigure": true,
+      "context": { "type": "question", "label": "Question 3 as printed", "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2018-question-paper.pdf", "page": 6 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2018-question-paper.pdf", "page": 7 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2018-mark-scheme.pdf", "page": 6, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
       "id": "edexcel-a-p2-2018-jun-q4a",
       "section": "A",
       "questionNumber": "4(a)",
@@ -108,6 +178,30 @@
       "extractionNotes": []
     },
     {
+      "id": "edexcel-a-p2-2018-jun-q4c",
+      "section": "A",
+      "questionNumber": "4(c)",
+      "parentQuestion": "4",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The UK has experienced a budget deficit since 2001. The government aimed to reach a budget surplus by 2019, but in 2016 this target was abandoned. If a government takes decisions to target a budget surplus, this is an example of:",
+      "sourceAttribution": "(Source: adapted from https://www.gov.uk/government/news/autumn-statement-2016-some-of-the-things-weve-announced)",
+      "options": [
+        { "letter": "A", "text": "contractionary monetary policy" },
+        { "letter": "B", "text": "discretionary fiscal policy" },
+        { "letter": "C", "text": "expansionary fiscal policy" },
+        { "letter": "D", "text": "expansionary monetary policy" }
+      ],
+      "usesFigure": false,
+      "context": { "type": "question", "label": "Question 4 as printed", "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2018-question-paper.pdf", "page": 8 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2018-question-paper.pdf", "page": 9 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2018-mark-scheme.pdf", "page": 7, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-a-p2-2018-jun-q5a",
       "section": "A",
       "questionNumber": "5(a)",
@@ -116,6 +210,30 @@
       "marks": 2,
       "questionText": "UK total bank lending to individuals, percentage change on previous year Explain one likely reason why consumer demand for bank loans has increased.",
       "sourceAttribution": "(Source: Bank of England 2017)",
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2018-question-paper.pdf", "page": 10 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2018-mark-scheme.pdf", "page": 8, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-a-p2-2018-jun-q5b",
+      "section": "A",
+      "questionNumber": "5(b)",
+      "parentQuestion": "5",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "UK total bank lending to individuals, percentage change on previous year Which one of the following is most likely to result from an increase in bank lending to individuals?",
+      "sourceAttribution": "(Source: Bank of England 2017)",
+      "options": [
+        { "letter": "A", "text": "An improvement in net trade (X–M)" },
+        { "letter": "B", "text": "An increase in consumption" },
+        { "letter": "C", "text": "An increase in unemployment" },
+        { "letter": "D", "text": "Deflation" }
+      ],
+      "usesFigure": true,
       "context": null,
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2018-question-paper.pdf", "page": 10 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2018-mark-scheme.pdf", "page": 8, "verified": true },

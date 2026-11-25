@@ -13,6 +13,1277 @@
   "problems": [],
   "questions": [
     {
+      "id": "aqa-p3-2023-jun-q1",
+      "section": "A",
+      "questionNumber": "1",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Figure 1 shows the demand for lemons. The fall in price and increase in the quantity demanded of lemons could have been caused by",
+      "options": [
+        {
+          "letter": "A",
+          "text": "a fall in the price of a substitute for lemons, oranges."
+        },
+        {
+          "letter": "B",
+          "text": "a rise in the price of lemonade."
+        },
+        {
+          "letter": "C",
+          "text": "a reduction in the price of a complement for lemons, fish."
+        },
+        {
+          "letter": "D",
+          "text": "favourable weather leading to a record harvest."
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 10
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "1 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the question prints a diagram or chart (an image)"
+      ]
+    },
+    {
+      "id": "aqa-p3-2023-jun-q2",
+      "section": "A",
+      "questionNumber": "2",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The environment is a scarce resource. A consequence of this is that",
+      "options": [
+        {
+          "letter": "A",
+          "text": "all natural resources have a market price."
+        },
+        {
+          "letter": "B",
+          "text": "all natural resources will eventually be used up."
+        },
+        {
+          "letter": "C",
+          "text": "the environment has an opportunity cost."
+        },
+        {
+          "letter": "D",
+          "text": "the environment is a pure public good."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 11
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2023-jun-q3",
+      "section": "A",
+      "questionNumber": "3",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Table 1 shows the price of a packet of peanuts and the number of packets of cashew nuts sold in a shop in one month. The price of a packet of cashew nuts is unchanged. When the price of a packet of peanuts rises from £0.80 to £0.84, the cross elasticity of demand for cashew nuts with respect to the price of peanuts is",
+      "options": [
+        {
+          "letter": "A",
+          "text": "–12.5"
+        },
+        {
+          "letter": "B",
+          "text": "–0.08"
+        },
+        {
+          "letter": "C",
+          "text": "+0.08"
+        },
+        {
+          "letter": "D",
+          "text": "+12.5"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 11
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "8 line(s) of figure or table text printed with the question are not reproduced; see the question paper"
+      ]
+    },
+    {
+      "id": "aqa-p3-2023-jun-q4",
+      "section": "A",
+      "questionNumber": "4",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The change in nominal national income per head is an unsatisfactory indicator of the change in the living standards of a country’s citizens over a period of time. The main reason is that nominal national income per head does not take into account",
+      "options": [
+        {
+          "letter": "A",
+          "text": "consumer expenditure at market prices."
+        },
+        {
+          "letter": "B",
+          "text": "the output produced by different sectors of the economy."
+        },
+        {
+          "letter": "C",
+          "text": "the rate of inflation."
+        },
+        {
+          "letter": "D",
+          "text": "the size of the population."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 11
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2023-jun-q5",
+      "section": "A",
+      "questionNumber": "5",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Figure 2 shows the injections into and withdrawals from the circular flow of income of an economy which is in macroeconomic equilibrium. In the economy, net exports are –$50bn. Which one of the combinations, A, B, C or D, shows the levels of savings, taxation and imports?",
+      "options": null,
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 12
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "6 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the question prints a diagram or chart (an image)",
+        "the options are diagrams; only the letters are text"
+      ]
+    },
+    {
+      "id": "aqa-p3-2023-jun-q6",
+      "section": "A",
+      "questionNumber": "6",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "A central bank has raised interest rates as part of monetary policy. Which one of the following policy objectives is this most likely to assist the government in achieving?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A more equitable distribution of income"
+        },
+        {
+          "letter": "B",
+          "text": "Bringing down the rate of inflation"
+        },
+        {
+          "letter": "C",
+          "text": "Increasing the rate of economic growth"
+        },
+        {
+          "letter": "D",
+          "text": "Minimising the rate of unemployment"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 12
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2023-jun-q7",
+      "section": "A",
+      "questionNumber": "7",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Following flooding, described by the Environment Agency as a ‘once in a century event’, there is a sharp increase in the number of residents of a large town who buy additional flood insurance. Which one of these combinations of biases in decision making are the residents most likely to have experienced?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Anchoring and framing bias"
+        },
+        {
+          "letter": "B",
+          "text": "Availability bias and social norms"
+        },
+        {
+          "letter": "C",
+          "text": "Rules of thumb and anchoring"
+        },
+        {
+          "letter": "D",
+          "text": "Social norms and rules of thumb"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 13
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2023-jun-q8",
+      "section": "A",
+      "questionNumber": "8",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Figure 3 shows the marginal cost (MC) and average total cost (ATC) curves for a firm in the short run in a perfectly competitive market. It also shows the firm’s marginal revenue (MR) and average revenue (AR) curves. What changes can be expected as the market moves into the long run?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "New firms will enter the market, increasing supply"
+        },
+        {
+          "letter": "B",
+          "text": "Some firms will leave the market and the price will rise"
+        },
+        {
+          "letter": "C",
+          "text": "The firm will reduce its output to reduce its average total cost"
+        },
+        {
+          "letter": "D",
+          "text": "The firm will reduce its price to increase its market share"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 13
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "1 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the question prints a diagram or chart (an image)"
+      ]
+    },
+    {
+      "id": "aqa-p3-2023-jun-q9",
+      "section": "A",
+      "questionNumber": "9",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "In 2020, the market leader sold around three times as many vacuum cleaners in the UK as its closest rival. The market leader’s dominance was built on technical innovation, protected by legal patents. However, rivals have developed their own designs and are now challenging the market leader. What feature of competitive markets does this illustrate?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Collusive oligopoly"
+        },
+        {
+          "letter": "B",
+          "text": "Creative destruction"
+        },
+        {
+          "letter": "C",
+          "text": "Hit and run competition"
+        },
+        {
+          "letter": "D",
+          "text": "Static efficiency"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 14
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2023-jun-q10",
+      "section": "A",
+      "questionNumber": "10",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "A £2 billion rise in government spending has led to an increase of £5 billion in national income. All other things being equal, what is the value of the marginal propensity to consume?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "0.4"
+        },
+        {
+          "letter": "B",
+          "text": "0.6"
+        },
+        {
+          "letter": "C",
+          "text": "2.5"
+        },
+        {
+          "letter": "D",
+          "text": "3.0"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 14
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2023-jun-q11",
+      "section": "A",
+      "questionNumber": "11",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "An economy operating at its long-run productive capacity at the start of 2020 has a trend rate of growth of 6% per year. Real GDP increases by 2% in 2021 and 10% in 2022. Which one of the following accurately describes the position of the economy at the end of each year?",
+      "options": null,
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 14
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "5 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the options are a table or formulae beside bare letters; only the letters are text"
+      ]
+    },
+    {
+      "id": "aqa-p3-2023-jun-q12",
+      "section": "A",
+      "questionNumber": "12",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The quantity theory of money can be explained using Irving Fisher’s equation of exchange, MV=PQ. Monetarist economists believe that the theory helps to explain inflation because some parts of the equation are normally stable. Which parts of the equation do monetarist economists normally consider to be stable?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "M and P"
+        },
+        {
+          "letter": "B",
+          "text": "M and V"
+        },
+        {
+          "letter": "C",
+          "text": "P and Q"
+        },
+        {
+          "letter": "D",
+          "text": "V and Q"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 15
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2023-jun-q13",
+      "section": "A",
+      "questionNumber": "13",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Table 2 shows the relationship between the number of workers employed by a firm and the total output of a product. The amount of other factors of production employed remains the same. For this firm, diminishing marginal returns to labour occur when the",
+      "options": [
+        {
+          "letter": "A",
+          "text": "4th worker is employed."
+        },
+        {
+          "letter": "B",
+          "text": "5th worker is employed."
+        },
+        {
+          "letter": "C",
+          "text": "6th worker is employed."
+        },
+        {
+          "letter": "D",
+          "text": "7th worker is employed."
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 15
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "9 line(s) of figure or table text printed with the question are not reproduced; see the question paper"
+      ]
+    },
+    {
+      "id": "aqa-p3-2023-jun-q14",
+      "section": "A",
+      "questionNumber": "14",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "A firm faces a downward sloping demand curve. The firm discovers that any increase or decrease from its current level of output leads to a fall in total revenue. This means that at its current output marginal revenue is",
+      "options": [
+        {
+          "letter": "A",
+          "text": "equal to average revenue."
+        },
+        {
+          "letter": "B",
+          "text": "negative."
+        },
+        {
+          "letter": "C",
+          "text": "positive."
+        },
+        {
+          "letter": "D",
+          "text": "zero."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 16
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2023-jun-q15",
+      "section": "A",
+      "questionNumber": "15",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following is the most likely result of a divorce of ownership from control in an organisation?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Profits are maximised"
+        },
+        {
+          "letter": "B",
+          "text": "Shareholders make all organisational decisions"
+        },
+        {
+          "letter": "C",
+          "text": "The adoption of satisficing behaviour"
+        },
+        {
+          "letter": "D",
+          "text": "The free-rider problem"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 16
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2023-jun-q16",
+      "section": "A",
+      "questionNumber": "16",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Figure 4 shows a short-run Phillips curve (SRPC) and a long-run Phillips curve (LRPC). Government intervention moves the economy from position A to position B and then the economy moves from position B to position C. Which one of the following is most likely to explain the movement from position B to position C?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Demand for exports has risen as a result of the intervention"
+        },
+        {
+          "letter": "B",
+          "text": "Economic agents have higher inflation expectations due to the intervention"
+        },
+        {
+          "letter": "C",
+          "text": "The government cut taxes to reduce unemployment"
+        },
+        {
+          "letter": "D",
+          "text": "The intervention has increased the natural rate of unemployment"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 17
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "1 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the question prints a diagram or chart (an image)"
+      ]
+    },
+    {
+      "id": "aqa-p3-2023-jun-q17",
+      "section": "A",
+      "questionNumber": "17",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following is a role of the UK’s Office for Budget Responsibility?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Deciding how much public funding is given to each government department"
+        },
+        {
+          "letter": "B",
+          "text": "Enabling the government to run a budget deficit by issuing government bonds"
+        },
+        {
+          "letter": "C",
+          "text": "Evaluating the government’s performance against its own fiscal targets"
+        },
+        {
+          "letter": "D",
+          "text": "Making recommendations to the government on how to reduce its budget deficit"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 17
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2023-jun-q18",
+      "section": "A",
+      "questionNumber": "18",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following is a policy that the Bank of England is most likely to undertake if it wants to increase the money supply?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Increase its purchases of government securities"
+        },
+        {
+          "letter": "B",
+          "text": "Increase market interest rates by increasing Bank Rate"
+        },
+        {
+          "letter": "C",
+          "text": "Increase the capital ratio required of commercial banks"
+        },
+        {
+          "letter": "D",
+          "text": "Increase the liquidity ratio required of commercial banks"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 18
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2023-jun-q19",
+      "section": "A",
+      "questionNumber": "19",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Carrots and potatoes are grown using the same factors of production. Figure X shows the demand (DC) and supply (SC) curves for carrots. Figure Y shows the demand (DP) and supply (SP) curves for potatoes. A change in people’s preferences shifts the demand for carrots from DC1 to DC2. As a result, the supply of potatoes shifts from SP1 to SP2. Which one of the following statements correctly explains the changes shown in Figures X and Y?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "The demand curve for carrots shifts due to the rationing function of prices"
+        },
+        {
+          "letter": "B",
+          "text": "The price of carrots increases because carrots and potatoes are in derived demand"
+        },
+        {
+          "letter": "C",
+          "text": "The price of potatoes increases because potatoes and carrots are in joint supply"
+        },
+        {
+          "letter": "D",
+          "text": "The supply curve for potatoes shifts due to the incentive function of prices"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 19
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "1 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the question prints a diagram or chart (an image)",
+        "12 subscript or superscript glyph(s) set flush against their base"
+      ]
+    },
+    {
+      "id": "aqa-p3-2023-jun-q20",
+      "section": "A",
+      "questionNumber": "20",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Figure 5 shows the marginal private and social benefit (MPB and MSB) curves and the marginal private and social cost (MPC and MSC) curves for a product. The socially optimal level of output for this product is",
+      "options": [
+        {
+          "letter": "A",
+          "text": "2 units"
+        },
+        {
+          "letter": "B",
+          "text": "3 units"
+        },
+        {
+          "letter": "C",
+          "text": "4 units"
+        },
+        {
+          "letter": "D",
+          "text": "5 units"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 20
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "1 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the question prints a diagram or chart (an image)"
+      ]
+    },
+    {
+      "id": "aqa-p3-2023-jun-q21",
+      "section": "A",
+      "questionNumber": "21",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following would be classified as a debit item in the secondary income section of the current account of the UK balance of payments?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Dividends paid to overseas owners of shares in UK companies"
+        },
+        {
+          "letter": "B",
+          "text": "Emergency aid provided to another country following a natural disaster"
+        },
+        {
+          "letter": "C",
+          "text": "Investment in building a factory abroad by a UK firm"
+        },
+        {
+          "letter": "D",
+          "text": "Premiums paid by UK based organisations to foreign insurance companies"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 20
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2023-jun-q22",
+      "section": "A",
+      "questionNumber": "22",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Table 3 below shows the amount of coffee or tea that two countries can produce with a given amount of resources. Which one of the following statements is supported by the data in Table 3?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Country X has a comparative advantage in the production of both coffee and tea"
+        },
+        {
+          "letter": "B",
+          "text": "Country X has a comparative advantage in the production of coffee and has an absolute advantage in the production of tea"
+        },
+        {
+          "letter": "C",
+          "text": "The opportunity cost of producing both coffee and tea is higher in Country X than in Country Y"
+        },
+        {
+          "letter": "D",
+          "text": "The opportunity cost of producing tea in Country X is lower than the opportunity cost of producing tea in Country Y"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 21
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "5 line(s) of figure or table text printed with the question are not reproduced; see the question paper"
+      ]
+    },
+    {
+      "id": "aqa-p3-2023-jun-q23",
+      "section": "A",
+      "questionNumber": "23",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Table 4 shows the value of the pound sterling in euros and Canadian dollars at the beginning of 2021 and 2022. According to the data in Table 4, between the beginning of 2021 and the beginning of 2022, the Canadian dollar",
+      "options": [
+        {
+          "letter": "A",
+          "text": "strengthened against the pound sterling and strengthened against the euro."
+        },
+        {
+          "letter": "B",
+          "text": "strengthened against the pound sterling and weakened against the euro."
+        },
+        {
+          "letter": "C",
+          "text": "weakened against the pound sterling and strengthened against the euro."
+        },
+        {
+          "letter": "D",
+          "text": "weakened against the pound sterling and weakened against the euro."
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 22
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "4 line(s) of figure or table text printed with the question are not reproduced; see the question paper"
+      ]
+    },
+    {
+      "id": "aqa-p3-2023-jun-q24",
+      "section": "A",
+      "questionNumber": "24",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Regulatory capture describes a situation in which",
+      "options": [
+        {
+          "letter": "A",
+          "text": "firms suffer a fall in supernormal profit due to the actions of regulators."
+        },
+        {
+          "letter": "B",
+          "text": "government regulations reduce the impact of monopoly power."
+        },
+        {
+          "letter": "C",
+          "text": "government removes regulations that have been acting as a barrier to entry."
+        },
+        {
+          "letter": "D",
+          "text": "industry regulators grow too close to the firms they are regulating."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 22
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2023-jun-q25",
+      "section": "A",
+      "questionNumber": "25",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Figure 6 shows the supply of labour (SL) and demand for labour (DL) in a perfectly competitive labour market. All other things being equal, which one of the following combinations would mean that wages in this labour market are likely to increase from W1?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A fall in the demand for the final product and a rise in the number of workers training to enter this labour market"
+        },
+        {
+          "letter": "B",
+          "text": "A fall in wages in a labour market with similar skill requirements and a fall in the price of a substitute for the output produced"
+        },
+        {
+          "letter": "C",
+          "text": "An increase in the minimum qualifications required for workers in the industry and a fall in the price of a complement for the output produced"
+        },
+        {
+          "letter": "D",
+          "text": "An increase in the unemployment rate across the economy and firms substituting capital for labour in the production process"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 23
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "1 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the question prints a diagram or chart (an image)",
+        "3 subscript or superscript glyph(s) set flush against their base"
+      ]
+    },
+    {
+      "id": "aqa-p3-2023-jun-q26",
+      "section": "A",
+      "questionNumber": "26",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following is most likely to affect the elasticity of demand for labour in a particular occupation?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "The proportion of employers’ total costs which are made up by wages"
+        },
+        {
+          "letter": "B",
+          "text": "The quantity demanded of the final output that the workers produce"
+        },
+        {
+          "letter": "C",
+          "text": "The size of the pool of skilled labour available in the local area"
+        },
+        {
+          "letter": "D",
+          "text": "The time taken to achieve the qualifications needed for the role"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 23
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2023-jun-q27",
+      "section": "A",
+      "questionNumber": "27",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Figure 7 shows the income distribution of a country in Year 1 and Year 2. From Figure 7, it can be concluded that income distribution has become",
+      "options": [
+        {
+          "letter": "A",
+          "text": "less equal and the Gini coefficient has decreased."
+        },
+        {
+          "letter": "B",
+          "text": "less equal and the Gini coefficient has increased."
+        },
+        {
+          "letter": "C",
+          "text": "more equal and the Gini coefficient has decreased."
+        },
+        {
+          "letter": "D",
+          "text": "more equal and the Gini coefficient has increased."
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 24
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "1 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the question prints a diagram or chart (an image)"
+      ]
+    },
+    {
+      "id": "aqa-p3-2023-jun-q28",
+      "section": "A",
+      "questionNumber": "28",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Figure 8 shows the aggregate demand curve (AD) and the long-run aggregate supply curves (LRAS) for an economy. A redistribution of government spending from spending on welfare towards the funding of research and development shifts the long-run aggregate supply curve from LRAS1 to LRAS2. Which one of the following is the most likely effect of this policy?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A decrease in the number of people who are economically active"
+        },
+        {
+          "letter": "B",
+          "text": "An improvement in the balance of payments on current account"
+        },
+        {
+          "letter": "C",
+          "text": "An increase in the size of the government’s budget deficit"
+        },
+        {
+          "letter": "D",
+          "text": "The creation of a positive output gap"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 25
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "1 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the question prints a diagram or chart (an image)",
+        "2 subscript or superscript glyph(s) set flush against their base"
+      ]
+    },
+    {
+      "id": "aqa-p3-2023-jun-q29",
+      "section": "A",
+      "questionNumber": "29",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following is an example of moral hazard resulting from the regulation of a financial system?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Asymmetric information may lead bank customers to take out loans they cannot repay"
+        },
+        {
+          "letter": "B",
+          "text": "Banks may engage in more risky lending if they believe the central bank will support them in a crisis"
+        },
+        {
+          "letter": "C",
+          "text": "Banks may experience lower profits if the central bank imposes high capital requirements"
+        },
+        {
+          "letter": "D",
+          "text": "Regulations imposed by the central bank may make it harder for low-income groups to get loans"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 26
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2023-jun-q30",
+      "section": "A",
+      "questionNumber": "30",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Figure 9 shows the government budget balance for an economy from 2019 to 2023. All other things being equal, between 2019 and 2023, the national debt of this economy increased by",
+      "options": [
+        {
+          "letter": "A",
+          "text": "$50bn"
+        },
+        {
+          "letter": "B",
+          "text": "$200bn"
+        },
+        {
+          "letter": "C",
+          "text": "$275bn"
+        },
+        {
+          "letter": "D",
+          "text": "$325bn"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-question-paper.pdf",
+        "page": 27
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2023-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "1 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the question prints a diagram or chart (an image)"
+      ]
+    },
+    {
       "id": "aqa-p3-2023-jun-q31",
       "section": "B",
       "questionNumber": "31",

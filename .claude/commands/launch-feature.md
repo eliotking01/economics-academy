@@ -2,7 +2,7 @@
 description: Switch a finished resource family on for a board, e.g. /launch-feature edexcel-b practiceQuestions
 ---
 
-Launch **$ARGUMENTS** (`<board key> <feature>`, the feature being one of `practiceQuestions`, `flashcards`, `glossary`, `pastPaperBank`). D67. Run it on the feature's own branch, and only when Eliot says the feature is complete.
+Launch **$ARGUMENTS** (`<board key> <feature>`, the feature being one of `practiceQuestions`, `flashcards`, `glossary`, `pastPaperBank`, `pastPaperMcqs`). D67. Run it on the feature's own branch, and only when Eliot says the feature is complete.
 
 Launching publishes permanent URLs: GitHub Pages cannot redirect (CLAUDE.md rule 7). Every step below that adds a page or changes visible wording waits for Eliot.
 
@@ -12,6 +12,7 @@ Use counts from the scripts, never a number written down.
 - `practiceQuestions`: one `questions-data/<notesDir>/` record per topic for **every** group of the board, equal to `expectedTopics` (`python3 scripts/verify_notes_sequence.py` gives the per-board notes counts), and `python3 scripts/build_questions.py --check` clean.
 - `flashcards`: one deck per group in `flashcards-data/<board>/`, every topic of the board carried by at least one card, and the deck-level fields approved (`review/flashcards-decks.md`).
 - `glossary`: `practiceQuestions` already live (board_data refuses otherwise, because the taxonomy is built from those records). `extract_glossary.py` run, `verify_glossary.py` and `check_glossary_capitalisation.py --check` clean.
+- `pastPaperMcqs` (the real exam MCQs inside the bank, Phase 7): `pastPaperBank` already live. Every MCQ in scope extracted and verified (`verify_past_paper_extraction.swift`, checks M1-M5), `tags.json` complete for them, `build_past_paper_questions.py --check` clean. Its new URLs are topic pages only - the `--check` output lists each one - approved in `review/mcq-tags.md`, not `phase-0-groundwork.md`.
 - `pastPaperBank`: `practiceQuestions` already live. Every paper in scope extracted and verified, `tags.json` complete for them, `verify_past_paper_tags.py` and `strip_source_attributions.py` (0 changes) clean.
 
 If anything is short, stop and list it.

@@ -28,6 +28,29 @@
       "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
+      "id": "edexcel-a-p1-2018-jun-q1b",
+      "section": "A",
+      "questionNumber": "1(b)",
+      "parentQuestion": "1",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The diagram refers to production possibility frontiers for a country that produces capital goods and consumer goods. Originally, the economy has a production possibility frontier shown by the line XY, operating at point V. The production possibility frontier then moves to XZ, operating at point U. Which one of the following was the most likely cause of the movement in the production possibility frontier from XY to XZ?",
+      "options": [
+        { "letter": "A", "text": "A reduction in unemployment in consumer goods industries" },
+        { "letter": "B", "text": "A rise in the cost of producing consumer goods" },
+        { "letter": "C", "text": "An increase in demand for consumer goods" },
+        { "letter": "D", "text": "A technological improvement in the production of consumer goods" }
+      ],
+      "usesFigure": true,
+      "context": { "type": "question", "label": "Question 1 as printed", "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2018-question-paper.pdf", "page": 2 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2018-question-paper.pdf", "page": 3 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2018-mark-scheme.pdf", "page": 4, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
       "id": "edexcel-a-p1-2018-jun-q1c",
       "section": "A",
       "questionNumber": "1(c)",
@@ -74,6 +97,30 @@
       "extractionNotes": ["lead-in printed between parts is included"]
     },
     {
+      "id": "edexcel-a-p1-2018-jun-q2c",
+      "section": "A",
+      "questionNumber": "2(c)",
+      "parentQuestion": "2",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The number of individual weekly ticket sales from UK National Lottery games operated by Camelot was 73 million in the financial year 2015–2016. The sale price of each lottery ticket was £2. This figure included 24 pence of tax revenue on each ticket sold. Research conducted for HMRC estimated the cross elasticity of demand for using gaming machines to be 1.28 in response to changes in the price of national lottery tickets. In October 2013 Camelot increased the price of a national lottery ticket from £1 to £2. In 2016 a coastal flood defence scheme was completed at Broomhill Sands in Kent, protecting people, homes and businesses. A £30 million grant from the National Lottery paid for the scheme. The most likely reason for this grant is to ensure the:",
+      "sourceAttribution": "(Source: https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/322845/report313.pdf) (Source: https://www.gov.uk/government/news/30-million-project-set-to-reduce-flood-risk-in-kent)",
+      "options": [
+        { "letter": "A", "text": "exclusivity of Broomhill Sands" },
+        { "letter": "B", "text": "provision of a private good" },
+        { "letter": "C", "text": "provision of a public good" },
+        { "letter": "D", "text": "rivalry of Broomhill Sands" }
+      ],
+      "usesFigure": false,
+      "context": { "type": "question", "label": "Question 2 as printed", "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2018-question-paper.pdf", "page": 4 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2018-question-paper.pdf", "page": 6 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2018-mark-scheme.pdf", "page": 6, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["lead-in printed between parts is included"]
+    },
+    {
       "id": "edexcel-a-p1-2018-jun-q3a",
       "section": "A",
       "questionNumber": "3(a)",
@@ -88,6 +135,30 @@
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": []
+    },
+    {
+      "id": "edexcel-a-p1-2018-jun-q3b",
+      "section": "A",
+      "questionNumber": "3(b)",
+      "parentQuestion": "3",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The average fee charged by high-street estate agents to homeowners for selling property is 1.3% of the final sale price. In August 2016 the Office for National Statistics reported that the average house price in London was £489 000, whereas in the North East of England it was £127 000. The ratio of the average house price in London to the average house price in the North East of England is:",
+      "sourceAttribution": "(Source: http://www.which.co.uk/money/mortgages-and-property/home-movers/guides/selling-a-house/estate-agent-fees-and-contracts)",
+      "options": [
+        { "letter": "A", "text": "0.26" },
+        { "letter": "B", "text": "3.62" },
+        { "letter": "C", "text": "3.85" },
+        { "letter": "D", "text": "7.40" }
+      ],
+      "usesFigure": false,
+      "context": { "type": "question", "label": "Question 3 as printed", "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2018-question-paper.pdf", "page": 7 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2018-question-paper.pdf", "page": 8 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2018-mark-scheme.pdf", "page": 6, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["lead-in printed between parts is included"]
     },
     {
       "id": "edexcel-a-p1-2018-jun-q3c",
@@ -116,6 +187,52 @@
       "context": null,
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2018-question-paper.pdf", "page": 10 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2018-mark-scheme.pdf", "page": 8, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-a-p1-2018-jun-q4b",
+      "section": "A",
+      "questionNumber": "4(b)",
+      "parentQuestion": "4",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Emily owns and operates a nail ink salon. The diagram shows the cost and revenue curves for treatments at her nail ink salon. Initially, Emily sets her price to maximise profits. Emily now decides to change her objective from revenue maximisation to sales maximisation. This change will lead to:",
+      "options": [
+        { "letter": "A", "text": "a decrease in the number of customers" },
+        { "letter": "B", "text": "a decrease in the price of treatments" },
+        { "letter": "C", "text": "an increase in productive efficiency" },
+        { "letter": "D", "text": "an increase in the level of profit" }
+      ],
+      "usesFigure": true,
+      "context": { "type": "question", "label": "Question 4 as printed", "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2018-question-paper.pdf", "page": 10 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2018-question-paper.pdf", "page": 11 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2018-mark-scheme.pdf", "page": 8, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-a-p1-2018-jun-q5a",
+      "section": "A",
+      "questionNumber": "5(a)",
+      "parentQuestion": "5",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The following graph shows the global sales of personal computers (PCs) between 2011 and 2015. The percentage decrease in sales of PCs between 2011 and 2015 is:",
+      "options": [
+        { "letter": "A", "text": "21.5" },
+        { "letter": "B", "text": "27.3" },
+        { "letter": "C", "text": "31.5" },
+        { "letter": "D", "text": "75.7" }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2018-question-paper.pdf", "page": 12 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2018-mark-scheme.pdf", "page": 9, "verified": true },
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]

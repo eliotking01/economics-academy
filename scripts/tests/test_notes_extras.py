@@ -45,6 +45,16 @@ class PastPaperNoteTests(unittest.TestCase):
             "Three questions from the Edexcel A-Level and AS papers, "
             "2017&ndash;2024, 4 to 25 marks, each linked"))
 
+    def test_one_mark_is_singular_and_a_range_stays_plural(self):
+        self.assertIn(", worth 1 mark, linked",
+                      ne.past_paper_note("AQA", [(2023, "a-level", 1)]))
+        self.assertIn(", 1 mark each, each linked",
+                      ne.past_paper_note("AQA", [(2017, "a-level", 1),
+                                                 (2025, "a-level", 1)]))
+        self.assertIn(", 1 to 25 marks, each linked",
+                      ne.past_paper_note("AQA", [(2017, "a-level", 1),
+                                                 (2025, "a-level", 25)]))
+
     def test_large_counts_use_digits(self):
         qs = [(2020, "a-level", 25)] * 14
         self.assertTrue(ne.past_paper_note("AQA", qs).startswith("14 questions"))
@@ -162,9 +172,16 @@ class TailShapeTests(unittest.TestCase):
         self.assertNotIn("notes-cta", out)
 
     def test_untagged_topic_gets_the_hub_panel(self):
-        # AQA 1.1.1 has no tagged past-paper questions (as of 2026-08-23),
-        # and no AQA page carries a diagram-gallery line.
-        out = self.tail_of("aqa-a2-micro", "1-1-1-economic-methodology")
+        # Any AQA topic the bank has no tagged question for - derived, not
+        # named: AQA 1.1.1 was the example until its MCQs launched
+        # (2026-11-25). No AQA page carries a diagram-gallery line.
+        bank = ne.past_paper_bank()
+        untagged = [(d, p.stem) for d in ("aqa-a2-micro", "aqa-a2-macro")
+                    for p in sorted((ROOT / "notes-data" / "topics" / d).glob("*.html"))
+                    if p.stem not in bank]
+        if not untagged:
+            self.skipTest("every AQA topic has a tagged past-paper question")
+        out = self.tail_of(*untagged[0])
         self.assertEqual(out.count('href="/past-papers/aqa/"'), 1)
         self.assertNotIn("/past-paper-questions/", out)
         self.assertNotIn("notes-diagrams-link", out)

@@ -623,11 +623,14 @@ def past_paper_note(board: str, qs: list[tuple[int, str, int]]) -> str:
         papers = f"{board} A-Level and AS papers"
     span = (str(years[0]) if years[0] == years[-1]
             else f"{years[0]}&ndash;{years[-1]}")
+    # "1 mark", never "1 marks" (launch-pastPaperMcqs.md M1): a range stays
+    # plural, as "1 to 25 marks" should.
+    unit = "mark" if marks[0] == 1 else "marks"
     if n == 1:
-        return (f"One question from the {papers}, {span}, worth {marks[0]} marks, "
+        return (f"One question from the {papers}, {span}, worth {marks[0]} {unit}, "
                 f"linked to the page of the official mark scheme where its "
                 f"answer begins.")
-    tariff = (f"{marks[0]} marks each" if len(marks) == 1
+    tariff = (f"{marks[0]} {unit} each" if len(marks) == 1
               else f"{marks[0]} to {marks[-1]} marks")
     return (f"{WORDS.get(n, n)} questions from the {papers}, {span}, {tariff}, "
             f"each linked to the page of the official mark scheme where its "

@@ -218,6 +218,60 @@ session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
 
+### All-boards parity — Phase 7, real exam MCQs (2026-11-25) — AQA AND EDEXCEL A LAUNCHED ON THE BRANCH, NOT MERGED (branch `feature/bank-mcqs`, pushed)
+
+Brief §13, D67. The review sheets are `review/phase-7-mcqs.md` (the design,
+answered 1-5 A and W1-W4), `review/mcq-tags.md` (the tags, T1-T3 A) and
+`review/launch-pastPaperMcqs.md` (the AQA launch, M1 A, M2 A; the
+Edexcel A launch, N1 A).
+
+- **Family.** `pastPaperMcqs` is a sixth feature in `boards.json`, inside
+  the bank, so it can be staged while the bank stays live. Records sit in
+  the existing paper files with `type: "mcq"`, `options` (A-D as printed,
+  or null when they are not text) and `usesFigure`. They have **no answer
+  key anywhere**, and the verifier fails if one appears. Written records
+  are byte-identical.
+- **Extraction** (`11dca100`). 450 MCQs: 270 AQA Paper 3 Section A, 180
+  Edexcel A Papers 1-2 Section A. `verify_past_paper_extraction.swift`
+  gains M1-M5.
+- **Rendering** (`7e4b1713`). The card lists its options with no radio
+  buttons and carries a "Multiple choice" badge and a figure or options
+  note. A "Question type" filter is `hidden` wherever a page's payload has
+  one type. MCQs count toward the D60 gate (answer 4 A, which supersedes
+  D68's "mint no URLs").
+- **Tags** (`8578df10`, `f9d8376b`). A first pass, then a blind
+  `cold-solver` pass that agreed exactly on 355 of 450; 55 entries changed.
+  T2 approved 15 new topic pages: 12 AQA and 3 Edexcel A.
+- **AQA launch** (`cd53c005`, sitemap `1ca1662a`, pushed 2026-11-25).
+  `/launch-feature aqa pastPaperMcqs`.
+  - A throwaway build minted exactly the 12 approved AQA topic pages.
+  - The bank goes from 1,242 to 1,512 questions, and the AQA hub from 279
+    to 549.
+  - M1: the notes tail's "1 marks" became "1 mark", which also fixed the
+    live Edexcel A 1.1.1 page.
+  - Three question-search checks and one notes-tail test assumed no live
+    MCQs, and now state the approved design.
+  - The full suite passed before the push.
+- **Edexcel A launch** (`9e3a37fc`, sitemap `e2222ee5`, pushed
+  2026-11-25). `/launch-feature edexcel-a pastPaperMcqs`.
+  - The throwaway build minted exactly the 3 approved pages (2.3.1, 3.4.2,
+    4.5.1), and no AQA or Edexcel B file changed.
+  - The bank goes to 1,692 questions, and the Edexcel A hub from 601 to
+    781.
+  - N1: the bank's topic and section heroes said "A-Level Economics
+    papers" whatever they held. `level_phrase()` now says "AS" or
+    "A-Level and AS" where the questions are, on 100 Edexcel A and B
+    pages.
+  - `verify_page_shell.py`'s bank page count was reseeded from 238 to 253,
+    covering both launches. The AQA commit missed it: `pages()` counts
+    tracked files only, so the check passed while the new pages were
+    untracked. **Reseed in the same commit that adds pages.**
+- **Still open.**
+  - Check the pages in Live Server; the lists are in the two hand-overs.
+  - Merge both launches into `main` in one PR, with a merge commit.
+  - Payload size: the master `questions.json` went from 877 KB before
+    Phase 7 to 1,246 KB (204 KB gzipped). Nothing caps it.
+
 ### All-boards parity — Phase 6, Edexcel A Section A written parts (2026-11-24 to 2026-11-25) — LIVE, MERGED 2026-11-25 AS PR #54 (`96439950`, branch `feature/edexcel-a-section-a`)
 
 Brief §13. The review sheets are `review/phase-6-section-a.md` (the split

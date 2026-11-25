@@ -13,6 +13,24 @@
   "problems": [],
   "questions": [
     {
+      "id": "edexcel-as-p1-2018-jun-q1a",
+      "section": "A",
+      "questionNumber": "1(a)",
+      "parentQuestion": "1",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Statement 1: Cuba has a healthcare system with a patient to doctor ratio of 155:1. Statement 2: Other countries ought to adopt a similar healthcare system to that which exists in Cuba. Which one of the following best describes the two statements above?",
+      "options": null,
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2018-question-paper.pdf", "page": 2 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2018-mark-scheme.pdf", "page": 4, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["the options are the rows of a table under the heads 'Statement 1 Statement 2'; not reproduced", "figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
       "id": "edexcel-as-p1-2018-jun-q1b",
       "section": "A",
       "questionNumber": "1(b)",
@@ -58,6 +76,29 @@
       "extractionNotes": []
     },
     {
+      "id": "edexcel-as-p1-2018-jun-q2b",
+      "section": "A",
+      "questionNumber": "2(b)",
+      "parentQuestion": "2",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "In February 2016 the Daily Mail newspaper increased its price from 60p to 65p. By August 2016 its sales had fallen by 5.41%. Which one of the following is most likely to be a determinant of price elasticity of demand for the Daily Mail newspaper?",
+      "options": [
+        { "letter": "A", "text": "Availability of rival newspapers" },
+        { "letter": "B", "text": "Change in population size" },
+        { "letter": "C", "text": "Decrease in the cost of producing the Daily Mail newspaper" },
+        { "letter": "D", "text": "Expected rise in the price of the Daily Mail newspaper" }
+      ],
+      "usesFigure": false,
+      "context": { "type": "question", "label": "Question 2 as printed", "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2018-question-paper.pdf", "page": 4 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2018-question-paper.pdf", "page": 5 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2018-mark-scheme.pdf", "page": 5, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-as-p1-2018-jun-q2c",
       "section": "A",
       "questionNumber": "2(c)",
@@ -71,6 +112,29 @@
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": ["the text layer sets this label on an option of the MCQ above; read from after that MCQ's options"]
+    },
+    {
+      "id": "edexcel-as-p1-2018-jun-q3a",
+      "section": "A",
+      "questionNumber": "3(a)",
+      "parentQuestion": "3",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "In the UK charges for dental treatment vary. For example, the following charges can be made for a tooth filling: • National Health Service (NHS) dental treatment £50.50 • Private dental treatment £95–£700 A dentist can choose to offer NHS treatment, private treatment or both. Using the data above, which one of the following is a function of the price mechanism in the market for private dental care?",
+      "options": [
+        { "letter": "A", "text": "Acting as a signal to dentists when deciding whether to provide private dental treatment" },
+        { "letter": "B", "text": "Eliminating a shortage of private dentists by allowing the price of private treatment to fall" },
+        { "letter": "C", "text": "Encouraging government intervention to set dental care targets" },
+        { "letter": "D", "text": "Incentivising private dentists to offer only NHS treatment" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2018-question-paper.pdf", "page": 6 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2018-mark-scheme.pdf", "page": 6, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
     },
     {
       "id": "edexcel-as-p1-2018-jun-q3b",
@@ -97,6 +161,29 @@
       "questionText": "In the UK charges for dental treatment vary. For example, the following charges can be made for a tooth filling: • National Health Service (NHS) dental treatment £50.50 • Private dental treatment £95–£700 A dentist can choose to offer NHS treatment, private treatment or both. Define the term ‘asymmetric information’.",
       "context": { "type": "question", "label": "Question 3 as printed", "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2018-question-paper.pdf", "page": 6 },
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2018-question-paper.pdf", "page": 7 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2018-mark-scheme.pdf", "page": 7, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "edexcel-as-p1-2018-jun-q4a",
+      "section": "A",
+      "questionNumber": "4(a)",
+      "parentQuestion": "4",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Between 2013 and 2015, median household income in the UK increased from £24 200 to £25 700. Over the same period the demand for bus travel fell by 3%. Which one of the following is the most accurate explanation of the term ‘median household income’?",
+      "options": [
+        { "letter": "A", "text": "The difference between the highest level of household income and the lowest level of household income" },
+        { "letter": "B", "text": "The middle household income after placing all household incomes in numerical order" },
+        { "letter": "C", "text": "The most frequently occurring level of household income" },
+        { "letter": "D", "text": "Total household income divided by the number of households" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2018-question-paper.pdf", "page": 8 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2018-mark-scheme.pdf", "page": 7, "verified": true },
       "modelAnswer": null,
       "extractionConfidence": "high",
@@ -140,6 +227,29 @@
       "choiceGroup": null,
       "marks": 2,
       "questionText": "The British Broadcasting Corporation (BBC) is a TV broadcaster. It is financed through an annual TV licence fee of £145.50. At this fee level many TV owners benefit from consumer surplus. The diagram shows the production possibility frontier for the BBC. Assuming the BBC is at point W, annotate the diagram to show the opportunity cost of providing more educational programmes.",
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2018-question-paper.pdf", "page": 9 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2018-mark-scheme.pdf", "page": 9, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "edexcel-as-p1-2018-jun-q5c",
+      "section": "A",
+      "questionNumber": "5(c)",
+      "parentQuestion": "5",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The British Broadcasting Corporation (BBC) is a TV broadcaster. It is financed through an annual TV licence fee of £145.50. At this fee level many TV owners benefit from consumer surplus. BBC programmes are often referred to as being public goods. This is because:",
+      "options": [
+        { "letter": "A", "text": "all BBC programmes are financed by the public sector" },
+        { "letter": "B", "text": "the BBC is the most popular broadcaster in the UK" },
+        { "letter": "C", "text": "the consumption of these programmes is non-rivalrous" },
+        { "letter": "D", "text": "there are external benefits from the consumption of many BBC programmes" }
+      ],
+      "usesFigure": false,
       "context": null,
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2018-question-paper.pdf", "page": 9 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2018-mark-scheme.pdf", "page": 9, "verified": true },

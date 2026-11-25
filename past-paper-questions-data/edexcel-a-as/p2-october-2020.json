@@ -43,6 +43,29 @@
       "extractionNotes": []
     },
     {
+      "id": "edexcel-as-p2-2020-oct-q1c",
+      "section": "A",
+      "questionNumber": "1(c)",
+      "parentQuestion": "1",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "In October 2019 the annual rate of inflation in the UK was 1.5%, as measured by the Consumer Prices Index (CPI), and 2.1%, as measured by the Retail Prices Index (RPI). From the above data, it can be deduced that the percentage point difference between CPI and RPI was:",
+      "options": [
+        { "letter": "A", "text": "0.0" },
+        { "letter": "B", "text": "0.2" },
+        { "letter": "C", "text": "0.4" },
+        { "letter": "D", "text": "0.6" }
+      ],
+      "usesFigure": false,
+      "context": { "type": "question", "label": "Question 1 as printed", "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-october-2020-question-paper.pdf", "page": 2 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-october-2020-question-paper.pdf", "page": 3 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-october-2020-mark-scheme.pdf", "page": 4, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-as-p2-2020-oct-q2a",
       "section": "A",
       "questionNumber": "2(a)",
@@ -71,6 +94,52 @@
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": ["no stem text found above the parts", "figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-as-p2-2020-oct-q2c",
+      "section": "A",
+      "questionNumber": "2(c)",
+      "parentQuestion": "2",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following is an example of a market-based supply-side policy?",
+      "options": [
+        { "letter": "A", "text": "A reduction in unemployment benefits" },
+        { "letter": "B", "text": "Construction of new transportation links" },
+        { "letter": "C", "text": "Government-funded apprenticeship schemes" },
+        { "letter": "D", "text": "Increased government spending on healthcare" }
+      ],
+      "usesFigure": false,
+      "context": { "type": "question", "label": "Question 2 as printed", "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-october-2020-question-paper.pdf", "page": 4 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-october-2020-question-paper.pdf", "page": 5 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-october-2020-mark-scheme.pdf", "page": 6, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "edexcel-as-p2-2020-oct-q3a",
+      "section": "A",
+      "questionNumber": "3(a)",
+      "parentQuestion": "3",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The UK’s net monthly balance of trade in goods and services, by value, January 2014 to January 2018, is shown in the chart below. Which one of the following can be inferred from the above chart over the period shown?",
+      "options": [
+        { "letter": "A", "text": "The government was spending more than it received in taxation" },
+        { "letter": "B", "text": "The UK’s balance of trade, by value, was always in equilibrium" },
+        { "letter": "C", "text": "The value of imports was greater than the value of exports" },
+        { "letter": "D", "text": "The value of inflows was greater than the value of outflows" }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-october-2020-question-paper.pdf", "page": 6 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-october-2020-mark-scheme.pdf", "page": 7, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
       "id": "edexcel-as-p2-2020-oct-q3b",
@@ -119,6 +188,29 @@
       "extractionNotes": []
     },
     {
+      "id": "edexcel-as-p2-2020-oct-q4c",
+      "section": "A",
+      "questionNumber": "4(c)",
+      "parentQuestion": "4",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "In August 2018 the Monetary Policy Committee of the Bank of England raised the UK’s base interest rate from 0.5% to 0.75%. Which one of the following demand-side policies best explains a rise in the base interest rate?",
+      "options": [
+        { "letter": "A", "text": "Contractionary fiscal policy" },
+        { "letter": "B", "text": "Contractionary monetary policy" },
+        { "letter": "C", "text": "Expansionary fiscal policy" },
+        { "letter": "D", "text": "Expansionary monetary policy" }
+      ],
+      "usesFigure": false,
+      "context": { "type": "question", "label": "Question 4 as printed", "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-october-2020-question-paper.pdf", "page": 8 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-october-2020-question-paper.pdf", "page": 9 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-october-2020-mark-scheme.pdf", "page": 9, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-as-p2-2020-oct-q5a",
       "section": "A",
       "questionNumber": "5(a)",
@@ -127,6 +219,30 @@
       "marks": 1,
       "questionText": "The table below shows the UK’s Gross National Income (GNI) between 2014 and 2017. Define the term ‘Gross National Income’.",
       "sourceAttribution": "(Source: adapted from www.ons.gov.uk/economy/ © Crown Copyright)",
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-october-2020-question-paper.pdf", "page": 10 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-october-2020-mark-scheme.pdf", "page": 10, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-as-p2-2020-oct-q5b",
+      "section": "A",
+      "questionNumber": "5(b)",
+      "parentQuestion": "5",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The table below shows the UK’s Gross National Income (GNI) between 2014 and 2017. Which one of the following represents the ratio of Gross National Income in 2015 to Gross National Income in 2017?",
+      "sourceAttribution": "(Source: adapted from www.ons.gov.uk/economy/ © Crown Copyright)",
+      "options": [
+        { "letter": "A", "text": "1 : 1.03" },
+        { "letter": "B", "text": "1 : 1.05" },
+        { "letter": "C", "text": "1 : 1.08" },
+        { "letter": "D", "text": "1 : 1.11" }
+      ],
+      "usesFigure": true,
       "context": null,
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-october-2020-question-paper.pdf", "page": 10 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-october-2020-mark-scheme.pdf", "page": 10, "verified": true },

@@ -29,6 +29,30 @@
       "extractionNotes": []
     },
     {
+      "id": "edexcel-a-p1-2020-oct-q1b",
+      "section": "A",
+      "questionNumber": "1(b)",
+      "parentQuestion": "1",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Fuel duty is an excise tax imposed on the sale of petrol, included in the price paid by consumers, set at 58 pence per litre. The indirect tax on fuel is increased in a market in which the price elasticity of demand is −0.1. Which one of the following is the most likely effect on consumer and producer surplus?",
+      "sourceAttribution": "(Source: https://www.gov.uk/tax-on-shopping/fuel-duty)",
+      "options": [
+        { "letter": "A", "text": "Consumer surplus and producer surplus both decrease" },
+        { "letter": "B", "text": "Consumer surplus and producer surplus both increase" },
+        { "letter": "C", "text": "Consumer surplus decreases and producer surplus increases" },
+        { "letter": "D", "text": "Consumer surplus increases and producer surplus decreases" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-october-2020-question-paper.pdf", "page": 2 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-october-2020-mark-scheme.pdf", "page": 5, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-a-p1-2020-oct-q2a",
       "section": "A",
       "questionNumber": "2(a)",
@@ -40,6 +64,30 @@
       "context": null,
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-october-2020-question-paper.pdf", "page": 3 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-october-2020-mark-scheme.pdf", "page": 5, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "edexcel-a-p1-2020-oct-q2b",
+      "section": "A",
+      "questionNumber": "2(b)",
+      "parentQuestion": "2",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The external benefits of higher education include increased tax revenue, faster economic growth, greater innovation and labour market flexibility. On average, in the UK, a working-age graduate earns approximately £10 000 more per year than a non-graduate. This suggests a university degree provides a substantial",
+      "sourceAttribution": "(Source adapted from: https://www.timeshighereducation.com/news/higher-education-its-good-for-you-and-society/2008681.article#survey-answer)",
+      "options": [
+        { "letter": "A", "text": "external benefit" },
+        { "letter": "B", "text": "external cost" },
+        { "letter": "C", "text": "private benefit" },
+        { "letter": "D", "text": "social cost" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-october-2020-question-paper.pdf", "page": 3 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-october-2020-mark-scheme.pdf", "page": 6, "verified": true },
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": []
@@ -61,6 +109,30 @@
       "extractionNotes": []
     },
     {
+      "id": "edexcel-a-p1-2020-oct-q3b",
+      "section": "A",
+      "questionNumber": "3(b)",
+      "parentQuestion": "3",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The EU tradable pollution permits scheme is expected to become more effective by 2020, due to recent reductions in the number of tradable pollution permits. Regulation of firms that pollute is likely to be a problem because it",
+      "sourceAttribution": "(Source adapted from: https://ec.europa.eu/clima/policies/ets_en)",
+      "options": [
+        { "letter": "A", "text": "allows firms to use price signals" },
+        { "letter": "B", "text": "creates unintended consequences" },
+        { "letter": "C", "text": "fills information gaps for businesses" },
+        { "letter": "D", "text": "means lower administrative costs" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-october-2020-question-paper.pdf", "page": 4 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-october-2020-mark-scheme.pdf", "page": 7, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-a-p1-2020-oct-q4a",
       "section": "A",
       "questionNumber": "4(a)",
@@ -74,6 +146,24 @@
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-a-p1-2020-oct-q4b",
+      "section": "A",
+      "questionNumber": "4(b)",
+      "parentQuestion": "4",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The following illustrates the daily average cost curve for a doughnut producer: At output levels greater than Z, which one of the following correctly identifies what will happen to the cost?",
+      "options": null,
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-october-2020-question-paper.pdf", "page": 5 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-october-2020-mark-scheme.pdf", "page": 8, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["the options are the rows of a table under the heads 'Average fixed cost Average variable cost Marginal cost'; not reproduced", "figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
       "id": "edexcel-a-p1-2020-oct-q4c",
@@ -118,6 +208,30 @@
       "context": null,
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-october-2020-question-paper.pdf", "page": 7 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-october-2020-mark-scheme.pdf", "page": 9, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "edexcel-a-p1-2020-oct-q5c",
+      "section": "A",
+      "questionNumber": "5(c)",
+      "parentQuestion": "5",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "‘Bettys’ is a luxury café, first opened in Harrogate in 1919 specialising in afternoon tea service. Since then it has opened a further five branches in Yorkshire. It has no plans to increase the number of cafés. The six branches have 2 million customers a year. Assume ‘Bettys’ merges with a major tea leaf supplier. Which one of the following is most likely to be an advantage as a result of this merger?",
+      "sourceAttribution": "(Source adapted from: https://www.forbes.com/sites/sarahturner/2018/03/22/the-famed-yorkshire-cafe-that-blends-nostalgia-with-profits-and-conservation/#7eb50cec7a4e)",
+      "options": [
+        { "letter": "A", "text": "External economies of scale will increase efficiency" },
+        { "letter": "B", "text": "Greater control to lower prices of tea" },
+        { "letter": "C", "text": "Industrial diversification increases risks" },
+        { "letter": "D", "text": "Lower monopoly power in the café market" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-october-2020-question-paper.pdf", "page": 7 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-october-2020-mark-scheme.pdf", "page": 10, "verified": true },
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": []
