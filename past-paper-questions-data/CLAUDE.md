@@ -16,7 +16,8 @@ Widened by D67 (2026-10-24). Each change lands with the code that implements it.
 
 | In scope | Out of scope |
 | --- | --- |
-| Edexcel A **A Level** (9EC0), Papers 1–3 | **The multiple-choice / short-answer Section A**: Edexcel A Papers 1–2 (9EC0 and 8EC0) and AQA Paper 3. Not yet: D67 brings Edexcel A's short answers in (Phase 6) and real MCQs as search-only cards with no key (Phase 7). Until each phase, do not extract it |
+| Edexcel A **A Level** (9EC0), Papers 1–3 | **Multiple-choice questions**: the one MCQ in each Edexcel A Papers 1–2 Section A question (9EC0 and 8EC0), and AQA Paper 3 Section A. Not yet: D67 brings them in as search-only cards with no key (Phase 7). Until then, do not extract them |
+| Edexcel A Papers 1–2 **Section A written parts** (9EC0 and 8EC0), every part that prints no A–D answer boxes: 259 parts from 36 papers (counts: `build_past_paper_questions.py --check`). Brought in by D67, Phase 6; tags settled in `review/section-a-tags.md` and built 2026-11-24 | |
 | Edexcel A **AS Level** (8EC0), Papers 1–2 | **AQA AS papers**, permanently. When AQA extends, A Level only |
 | AQA A Level (7136) | OCR and AQA specimen papers, permanently |
 | Edexcel B **A Level** (9EB0), Papers 1–3, and **AS Level** (8EB0), Papers 1–2, **every section**: B has no MCQs and no optional questions. Extracted into `edexcel-b/` and `edexcel-b-as/`. The build reads them by `boards.json`'s flag (`BANK_DIRS`, `paper_dirs()`). **Live** since `/launch-feature edexcel-b pastPaperBank` (2026-11-17) | |
@@ -29,6 +30,21 @@ verbatim, at the start of `questionText`. A figure printed inside a question
 question, approved wording from the 9EB0 specification (Phase 4 Q5). It lives
 once, in `build_past_paper_questions.PAPER_NOTES`, and reaches the card
 through the paper record's `note`, which no other paper carries.
+
+**Edexcel A Papers 1–2 Section A** is five questions: 5 marks each on 9EC0,
+4 on 8EC0. Every question has exactly one 1-mark MCQ beside its written
+parts, so a question's cards always run one mark short of its printed total
+(the verifier's check A5). A part is an MCQ **if and only if it prints A–D
+answer boxes**, never by its mark — AS sets 1-mark "Define the term" parts.
+Each card carries, verbatim: its question's opening stem, every lead-in
+printed above it within the question, then its own text; sub-parts (i)/(ii)
+stay inside their part, marks summed. Charts, tables and diagrams are not
+reproduced. The context link is `type: "question"`, labelled "Question N as
+printed" (approved 2026-11-24), and points at the question's first page — only
+when the part is on a later page. Text printed after a part's label belongs to
+that part, not the question (AS Paper 1 June 2025 Q3, Q4). Decisions in
+`review/phase-6-section-a.md`; the PDF text-layer quirks the parser repairs
+are listed in `extractSectionA()`.
 
 **8EC0 has no Section C** — verified from all 16 papers, not from the
 specification. Section B is `Q6(a)–(g)`: (a)–(e) compulsory then **(f) OR (g)**,

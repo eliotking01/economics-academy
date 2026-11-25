@@ -1,7 +1,8 @@
 // Extract past-paper questions into JSON, one file per paper:
 //
-//   Edexcel A (9EC0 / 8EC0): Section B and Section C of Papers 1 and 2, and
-//     both sections of Paper 3, into edexcel-a/ and edexcel-a-as/.
+//   Edexcel A (9EC0 / 8EC0): every section of Papers 1 and 2 - Section A's
+//     written parts only, its MCQs being Phase 7's - and both sections of
+//     Paper 3, into edexcel-a/ and edexcel-a-as/. See extractSectionA().
 //   Edexcel B (9EB0 / 8EB0): every question of every paper - B has no
 //     multiple choice and no optional questions - into edexcel-b/ and
 //     edexcel-b-as/. See extractB().
@@ -195,6 +196,9 @@ struct QuestionOut {
     /// so it stays out of the card and out of the search index.
     var sourceAttribution: String?
     var contextPage: Int?
+    /// "extracts" (Section B's extract block, and every record before Phase 6)
+    /// or "question" (Section A: the page the question's stem is printed on).
+    var contextType: String = "extracts"
     var qpPage: Int
     var msPage: Int?
     var msVerified: Bool
@@ -712,6 +716,493 @@ func extractPaper3(pages: [String], meta: PaperMeta, msPages: [String])
     return (out, problems)
 }
 
+// ------------------------------------------------------------ section A
+
+// Edexcel A Papers 1 and 2, Section A, 9EC0 and 8EC0. Read from all 36
+// papers, not assumed (review sheet phase-6-section-a.md, approved by Eliot
+// 2026-11-24):
+//
+//   A Level  Q1-Q5, 5 marks each = 25.   AS  Q1-Q5, 4 marks each = 20.
+//
+// Every question has exactly one multiple-choice part - 1 mark, A-D answer
+// boxes - beside its written parts. Phase 6 extracts the written parts only;
+// the MCQs wait for Phase 7. A part is an MCQ if and only if it prints A-D
+// boxes, never by its mark: AS sets 1-mark "Define the term" parts.
+//
+// Each card carries its question's opening stem, then every lead-in printed
+// above it within the question, then its own text - all verbatim (decision
+// 2A). A chart, table or diagram printed with the question is not reproduced:
+// PDFKit returns its labels and cells as stray short lines, which keepProse()
+// drops, and the card links to the question's first page instead.
+// Sub-parts (i)/(ii) stay inside their lettered part, marks summed (decision 3).
+
+/// Section A's candidate instructions, from the heading to the last sentence
+/// every one of the 36 papers prints ("... include diagrams in your answers.").
+let sectionAPreamble = rx("SECTION A\\b[\\s\\S]{0,600}?diagrams\\s+in\\s+your\\s+answers\\.")
+
+/// Pearson's citation, bounded: no nested brackets, at most 400 characters.
+/// The unbounded `attribution` is safe on one question's text, but Section A
+/// is parsed as one stream, where a citation whose closing bracket PDFKit has
+/// moved (Paper 2 June 2023 Q2) would run on through every balanced "(b)" and
+/// "(4)" to the next citation. No URL is required, because Section A prints
+/// citations without one ("(Source: adapted from 'Flower Struggles', Matthew
+/// Wilson, ...)", "(Source: adapted from www.gov.uk/...)"); the colon within
+/// the opening words - "(Source:", "(Source adapted from:" - is what no prose
+/// bracket carries. Whatever survives is caught by the checks on the text.
+let attributionA = rx("\\(\\s*Sources?\\b[^():]{0,30}:[^()]{0,400}?\\)")
+
+/// A part label PDFKit has set on an answer option of the MCQ above it:
+/// "(b) A 35 %" (AS Paper 1 June 2023), "(c) A maximum price of 0P1 per unit"
+/// (AS Paper 1 June 2016), "(b) B A subsidy to coffee bean producers" (AS
+/// Paper 1 June 2025). Moved only off A, B or C, and only when the next option
+/// line is the next letter: a part whose own text begins "A manufacturer ..."
+/// is followed by its own "A 0.15%", and a label on D followed by C (Paper 2
+/// June 2022 2(a)) is an MCQ's own label on options read in reverse.
+let gluedLabelA = rx("^\\s*\\(([a-h])\\)\\s+(([ABC])\\s+\\S.*)$")
+
+/// Table cells the text layer sets between a part label and its own text, on
+/// the label's line, where no reading rule can tell them apart: id -> the exact
+/// leading text to remove. Each checked against the rendered page. A missing
+/// prefix is a problem, so an entry cannot outlive the layout it describes.
+///   AS Paper 2 June 2016 2(a): "(a) Italy Define the term ..." - "Italy" is
+///   the last row label of the table above the part.
+let cellLeaksA: [String: String] = [
+    "edexcel-as-p2-2016-jun-q2a": "Italy ",
+]
+
+/// Diagram options labelled in pairs: "A B" above two diagrams, "C D" below.
+let optionPairA = rx("^[A-D](?:\\s+[A-D])+$")
+
+/// A tariff alone on its line.
+let tariffLineA = rx("^\\(\\d{1,2}\\)$")
+
+/// A tariff closing its line: "(4)".
+let tariffA = rx("\\((\\d{1,2})\\)[ \\t]*$", [.anchorsMatchLines])
+
+/// An answer-box line: "A level of demand pull inflation", "Option C", a bare
+/// "D" under a diagram, "A B" above two diagram options.
+let optionLineA = rx("^(?:Option\\s+)?([A-D])(?:\\s|$)")
+
+/// "(i) consumers", "(ii) government." - a sub-part inside a lettered part.
+let subPartA = rx("^\\((i{1,3}|iv)\\)\\s*(.*)$")
+
+/// Words of two or more letters, for telling a sentence from a chart label.
+func letterWords(_ s: String) -> Int {
+    return s.split(separator: " ").filter { $0.filter { $0.isLetter }.count >= 2 }.count
+}
+
+/// Ends a sentence, looking past a closing quote or bracket: "price’." "(EU)."
+func endsSentence(_ s: String) -> Bool {
+    let t = s.reversed().drop(while: { "’”\"')".contains($0) })
+    return t.first.map { ".?!:".contains($0) } ?? false
+}
+
+let functionWordsA: Set<String> = [
+    "a", "an", "and", "as", "at", "between", "by", "for", "from", "in", "its", "of",
+    "on", "or", "per", "than", "that", "the", "their", "to", "with",
+]
+func endsOnFunctionWord(_ s: String) -> Bool {
+    return s.split(separator: " ").last.map { functionWordsA.contains($0.lowercased()) } ?? false
+}
+
+/// The prose in a run of Section A lines, with the figure text dropped.
+///
+/// What PDFKit returns between a question's sentences is the cell and label
+/// text of whatever was printed there: "Year Quantity of UK new house builds",
+/// "2016 134 612", "Price of / wheat / Supply / H / J". Printed prose is either
+/// a full-width wrapped line or a line that ends a sentence, so a line is kept
+/// when it is long, ends a sentence, or (inside an unfinished sentence) starts
+/// lower case; anything else is dropped, and counted. Nothing is rewritten -
+/// lines are kept whole or not at all.
+///
+/// `title`: the first line is the text on the question-number line, kept
+/// whatever it is, because it is the question's opening as printed - for a
+/// data question it is the chart's title ("UK real GDP, 2020-2022").
+/// `open`: keep a sentence still unfinished at the end (a part's own text,
+/// which runs up to its tariff: "... the amount spent ... by the EU / would be").
+func keepProse(_ raw: String, title: Bool, open: Bool) -> (text: String, dropped: Int) {
+    let lines = raw.components(separatedBy: .newlines)
+        .map { $0.trimmingCharacters(in: .whitespaces) }
+        .filter { !$0.isEmpty }
+    var kept: [String] = []
+    var para: [String] = []
+    // The open run is one that must be kept even if no sentence end follows:
+    // the question-number line, or a bullet item ("• Private dental treatment
+    // £95–£700", AS Paper 1 June 2018), which prints without a full stop.
+    var keepOpen = false
+    var bulletNext = false
+    var dropped = 0
+    for (i, line) in lines.enumerated() {
+        let long = line.count >= 45 && letterWords(line) >= 4
+        let ends = endsSentence(line)
+        if i == 0 && title {
+            if ends || !long { kept.append(line) } else { para = [line]; keepOpen = true }
+            continue
+        }
+        // PDFKit returns a bullet as a lone "•" line ahead of its item.
+        if line == "•" {
+            if keepOpen || !para.isEmpty { kept += para }
+            para = []
+            keepOpen = false
+            bulletNext = true
+            continue
+        }
+        if bulletNext {
+            bulletNext = false
+            if ends { kept.append("• " + line) } else { para = ["• " + line]; keepOpen = true }
+            continue
+        }
+        // A data heading printed on its own line ("Statement 2", AS Paper 1
+        // June 2024 Q4): kept, and the line above it with it - "Finland has
+        // schools with an average class size of 19.6" prints no full stop.
+        if rx("^Statement \\d+$").matches(line) {
+            kept += para + [line]
+            para = []
+            keepOpen = false
+            continue
+        }
+        // A line ending on a word no sentence ends with ("... seasonally
+        // adjusted, from" / "2008 to 2015", Paper 2 June 2017) was wrapped, so
+        // the next line continues it whatever it starts with.
+        let wrapped = para.last.map { endsOnFunctionWord($0) } ?? false
+        if ends && (!para.isEmpty || letterWords(line) >= 3) {
+            kept += para + [line]
+            para = []
+            keepOpen = false
+        } else if wrapped {
+            para.append(line)
+        } else if long {
+            para.append(line)
+        } else if !para.isEmpty, let f = line.first, f.isLowercase {
+            para.append(line)
+        } else {
+            if keepOpen {
+                kept += para
+                para = []
+                keepOpen = false
+            } else if let l = para.last?.last, l.isNumber || "%£$€".contains(l) {
+                // A long line cut off by figure text and ending on a figure
+                // is a table row, not the start of a sentence: dropped rather
+                // than glued to whatever sentence comes next.
+                dropped += para.count
+                para = []
+            }
+            dropped += 1
+        }
+    }
+    if !para.isEmpty {
+        if open || keepOpen { kept += para } else { dropped += para.count }
+    }
+    return (normalise(kept.joined(separator: "\n")), dropped)
+}
+
+func extractSectionA(pages: [String], meta: PaperMeta, msPages: [String])
+    -> ([QuestionOut], [String])
+{
+    var problems: [String] = []
+    let questionCount = 5
+    let perQuestion = meta.isAS ? 4 : 5
+
+    guard let first = pages.firstIndex(where: { $0.contains("SECTION A") }) else {
+        return ([], ["Section A heading not found"])
+    }
+    guard let last = (first..<pages.count).first(where: { pages[$0].contains("TOTAL FOR SECTION A") })
+    else {
+        return ([], ["no 'TOTAL FOR SECTION A' line"])
+    }
+
+    // The section's lines, furniture stripped, each with its page.
+    var tagged: [(page: Int, line: String)] = []
+    for i in first...last {
+        var text = pages[i]
+        if i == first {
+            if let m = sectionAPreamble.firstMatch(in: text, range: NSRange(location: 0, length: (text as NSString).length)) {
+                text = (text as NSString).substring(from: m.range.location + m.range.length)
+            } else {
+                problems.append("Section A preamble not recognised")
+            }
+        }
+        if i == last, let r = text.range(of: "TOTAL FOR SECTION A") {
+            text = String(text[..<r.lowerBound])
+        }
+        // The answer boxes are private-use glyphs (U+F0A2); a line of nothing
+        // else would otherwise count as text and pin a stem to the wrong page.
+        for raw in stripFurniture(text).components(separatedBy: .newlines) {
+            let l = String(String.UnicodeScalarView(raw.unicodeScalars.filter { !(0xE000...0xF8FF).contains($0.value) }))
+                .trimmingCharacters(in: .whitespaces)
+            // The publication line some pages print at the foot ("1 D63211A
+            // ©2020 Pearson Education Ltd.", AS Paper 2 October 2020).
+            if l.contains("Pearson Education Ltd") { continue }
+            if !l.isEmpty { tagged.append((i + 1, l)) }
+        }
+    }
+
+    // A label glued to option A is moved to the first line after the options
+    // - which may be on the next page. Reading order repaired; no word changes.
+    var movedTo = Set<Int>()
+    func optionLetter(_ l: String) -> String? { optionLineA.firstMatch(l)?[1] ?? nil }
+    for i in tagged.indices {
+        guard let m = gluedLabelA.firstMatch(tagged[i].line), let label = m[1], let rest = m[2],
+            let on = m[3], let nextLetter = ["A": "B", "B": "C", "C": "D"][on]
+        else { continue }
+        var j = i + 1
+        while j < tagged.count, tagged[j].line.first?.isLowercase == true { j += 1 }
+        guard j < tagged.count, optionLetter(tagged[j].line) == nextLetter else { continue }
+        guard let d = (j..<tagged.count).first(where: { optionLetter(tagged[$0].line) == "D" }) else { continue }
+        var target = d + 1
+        while target < tagged.count, tagged[target].line.first?.isLowercase == true { target += 1 }
+        guard target < tagged.count else { continue }
+        tagged[i].line = rest
+        tagged[target].line = "(\(label)) " + tagged[target].line
+        movedTo.insert(target)
+    }
+
+    // One stream, with the offset each line starts at so every match can be
+    // traced back to its page.
+    var stream = ""
+    var lineStarts: [(offset: Int, page: Int, moved: Bool)] = []
+    for (k, t) in tagged.enumerated() {
+        lineStarts.append(((stream as NSString).length, t.page, movedTo.contains(k)))
+        stream += t.line + "\n"
+    }
+    func lineAt(_ offset: Int) -> (offset: Int, page: Int, moved: Bool) {
+        lineStarts.last(where: { $0.offset <= offset })!
+    }
+    func pageAt(_ offset: Int) -> Int { lineAt(offset).page }
+
+    // Citations are blanked in place - same length, newlines kept - so every
+    // offset above still holds, and remembered by position, so a part carries
+    // only those printed above its own tariff.
+    var units = Array(stream.utf16)
+    var citations: [(offset: Int, text: String)] = []
+    for m in attributionA.matches(in: stream, range: NSRange(location: 0, length: units.count)) {
+        citations.append((m.range.location, normalise((stream as NSString).substring(with: m.range))))
+        for k in m.range.location..<(m.range.location + m.range.length) where units[k] != 0x0A {
+            units[k] = 0x20
+        }
+    }
+    let ns = String(decoding: units, as: UTF16.self) as NSString
+    func text(_ a: Int, _ b: Int) -> String { b > a ? ns.substring(with: NSRange(location: a, length: b - a)) : "" }
+    func lines(_ s: String) -> [String] {
+        s.components(separatedBy: .newlines).map { $0.trimmingCharacters(in: .whitespaces) }.filter { !$0.isEmpty }
+    }
+
+    let totals = rx("\\(Total for Question (\\d+) = (\\d+) marks\\)").matches(
+        in: ns as String, range: NSRange(location: 0, length: ns.length))
+    if totals.count != questionCount {
+        problems.append("expected \(questionCount) questions, found \(totals.count) total lines")
+    }
+
+    var out: [QuestionOut] = []
+    var segStart = 0
+    for (qi, t) in totals.enumerated() {
+        let qnum = ns.substring(with: t.range(at: 1))
+        let printed = Int(ns.substring(with: t.range(at: 2)))!
+        let segEnd = t.range.location
+        defer { segStart = t.range.location + t.range.length }
+        if qnum != String(qi + 1) { problems.append("question \(qi + 1) printed as \(qnum)") }
+        if printed != perQuestion { problems.append("Q\(qnum): printed total \(printed), expected \(perQuestion)") }
+
+        let seg = NSRange(location: segStart, length: segEnd - segStart)
+        // A question number printed on a line of its own is taken out with the
+        // page numbers by stripFurniture, and AS Paper 2 June 2019 has no "1"
+        // in its text layer at all. The stem then starts where the question
+        // does, and its first line is not assumed to be a title.
+        let opener = rx("(?m)^[ \\t]*\(qnum)[ \\t]+(?=\\S)").firstMatch(in: ns as String, range: seg)
+        let stemStart = opener.map { $0.range.location + $0.range.length } ?? segStart
+        let openerAt = opener?.range.location ?? segStart
+
+        // Part openers, in order from (a), each searched for after the last.
+        var openers: [(letter: String, at: Int, end: Int)] = []
+        var cursor = stemStart
+        for letter in ["a", "b", "c", "d", "e", "f", "g", "h"] {
+            let r = ns.range(of: "(\(letter))", options: [], range: NSRange(location: cursor, length: segEnd - cursor))
+            if r.location == NSNotFound { break }
+            openers.append((letter, r.location, r.location + r.length))
+            cursor = r.location + r.length
+        }
+        if openers.isEmpty { problems.append("Q\(qnum): no parts found"); continue }
+
+        struct Part { var letter: String; var at: Int; var marks: Int; var isMCQ: Bool
+                      var body: String; var subs: [String]; var bodyEnd: Int; var after: Int; var dropped: Int
+                      var notes: [String] }
+        // Each label's region runs to the next label, and holds its tariffs.
+        let regionEnds = openers.indices.map { $0 + 1 < openers.count ? openers[$0 + 1].at : segEnd }
+        var tariffs = openers.indices.map {
+            tariffA.matches(in: ns as String, range: NSRange(location: openers[$0].end, length: regionEnds[$0] - openers[$0].end))
+        }
+        let subLines = openers.indices.map {
+            lines(text(openers[$0].end, regionEnds[$0])).filter { subPartA.matches($0) }
+        }
+        // A tariff can come out of the text layer away from its own label.
+        // Re-homed only from a neighbour that holds more than its share, and
+        // never from a part with sub-parts, whose extra tariffs are its own:
+        //   ahead of the label - AS Paper 1 June 2017 Q1, "(3)" above the
+        //     table and "(a)" below it: exactly one tariff between the
+        //     previous region (or the question's start) and this label;
+        //   after the next part - AS Paper 1 June 2017 Q2, "(a) ... (b) ...
+        //     (1) (2)": the next region holds two and no sub-parts.
+        var homed: [Int: String] = [:]
+        for j in openers.indices where tariffs[j].isEmpty {
+            let from = j == 0 ? stemStart : (tariffs[j - 1].last.map { $0.range.location + $0.range.length } ?? openers[j].at)
+            let before = tariffA.matches(in: ns as String, range: NSRange(location: from, length: openers[j].at - from))
+            if before.count == 1 {
+                tariffs[j] = before
+                homed[j] = "the text layer prints this part's tariff before its label"
+            } else if j + 1 < openers.count, tariffs[j + 1].count >= 2, subLines[j + 1].isEmpty {
+                tariffs[j] = [tariffs[j + 1].removeFirst()]
+                homed[j] = "the text layer prints this part's tariff after the next part's text"
+            }
+        }
+
+        var parts: [Part] = []
+        for (j, o) in openers.enumerated() {
+            let regionEnd = regionEnds[j]
+            var notes: [String] = []
+            if lineAt(o.at).moved {
+                notes.append("the text layer sets this label on an option of the MCQ above; read from after that MCQ's options")
+            }
+            let marks = tariffs[j]
+            guard !marks.isEmpty else {
+                problems.append("Q\(qnum)(\(o.letter)): no tariff found")
+                continue
+            }
+            // A re-homed tariff is not inside the region, so the text runs to
+            // the next label.
+            let inside = marks[0].range.location > o.end && marks[0].range.location < regionEnd
+            let bodyEnd = inside ? marks[0].range.location : regionEnd
+            let after = inside ? marks.last!.range.location + marks.last!.range.length : regionEnd
+            if let h = homed[j] { notes.append(h) }
+            let tariff = marks.reduce(0) { $0 + Int(ns.substring(with: $1.range(at: 1)))! }
+
+            // An MCQ prints answer boxes B, C and D each opening a line. A is
+            // not required: PDFKit can run it onto the end of the question
+            // ("... circular flow of income? A Imports", Paper 2 June 2022), and
+            // can return the four in reverse (D, C, B, A). Diagram options
+            // labelled in pairs ("A B", "C D") count every letter of the pair.
+            var letters = Set<String>()
+            for l in lines(text(o.end, regionEnd)) {
+                if optionPairA.matches(l) {
+                    l.split(separator: " ").forEach { letters.insert(String($0)) }
+                } else if let x = optionLetter(l) {
+                    letters.insert(x)
+                }
+            }
+            let isMCQ = ["B", "C", "D"].allSatisfy { letters.contains($0) }
+
+            // Sub-part lines anywhere before the next label - AS Paper 2 June
+            // 2019 5(b) prints its one tariff above (i) and (ii); the rest of
+            // the text up to the FIRST tariff is the part's own wording.
+            let subs = subLines[j]
+            let ownRaw = lines(text(o.end, bodyEnd))
+                .filter { !subPartA.matches($0) && !tariffLineA.matches($0) }.joined(separator: "\n")
+            let own = keepProse(ownRaw, title: false, open: true)
+            parts.append(Part(
+                letter: o.letter, at: o.at, marks: tariff, isMCQ: isMCQ,
+                body: own.text, subs: subs.map { normalise($0) }, bodyEnd: bodyEnd,
+                after: after, dropped: own.dropped, notes: notes))
+        }
+        if parts.isEmpty { continue }
+
+        // Stem, then the lead-in printed above each later part.
+        let stem = keepProse(text(stemStart, openers[0].at), title: opener != nil, open: false)
+        var leads: [String] = [stem.text]
+        var dropped = [stem.dropped]
+        for j in 1..<max(parts.count, 1) where j < parts.count {
+            var between = lines(text(parts[j - 1].after, parts[j].at))
+            if parts[j - 1].isMCQ {
+                // The answer options of the MCQ above, and any wrapped
+                // continuation of the last one, are not a lead-in.
+                if let lastOpt = between.lastIndex(where: { optionLineA.matches($0) }) {
+                    between = Array(between[(lastOpt + 1)...])
+                    while let f = between.first?.first, f.isLowercase { between.removeFirst() }
+                }
+            }
+            let lead = keepProse(between.joined(separator: "\n"), title: false, open: false)
+            leads.append(lead.text)
+            dropped.append(lead.dropped)
+        }
+
+        // Independent structure checks: one MCQ worth 1 mark, tariffs summing
+        // to the printed total, letters running from (a) without a gap.
+        let mcqs = parts.filter { $0.isMCQ }
+        if mcqs.count != 1 {
+            problems.append("Q\(qnum): \(mcqs.count) multiple-choice parts, expected 1 (\(mcqs.map { $0.letter }.joined()))")
+        }
+        for m in mcqs where m.marks != 1 { problems.append("Q\(qnum)(\(m.letter)): MCQ worth \(m.marks)") }
+        let sum = parts.reduce(0) { $0 + $1.marks }
+        if sum != printed { problems.append("Q\(qnum): tariffs sum to \(sum), paper prints \(printed)") }
+        let run = "abcdefgh".prefix(parts.count).map { String($0) }
+        if parts.map({ $0.letter }) != run { problems.append("Q\(qnum): parts are not a run from (a)") }
+
+        // Without a printed number the question starts on the first line after
+        // the previous question's total, not on the total's own line.
+        let stemPage = opener != nil
+            ? pageAt(openerAt)
+            : (lineStarts.first(where: { $0.offset >= segStart })?.page ?? pageAt(segStart))
+        for (j, p) in parts.enumerated() where !p.isMCQ {
+            var notes = p.notes
+            var confidence = "high"
+            if opener == nil { notes.append("the question number is not in the text layer; the stem is read from the start of the question") }
+            let carried = leads[0...j].filter { !$0.isEmpty }
+            var body = p.body
+            if let leak = cellLeaksA["\(meta.idStem)-q\(qnum)\(p.letter)"] {
+                if body.hasPrefix(leak) {
+                    body = String(body.dropFirst(leak.count))
+                    notes.append("a table cell the text layer sets on the label's line is removed: '\(leak.trimmingCharacters(in: .whitespaces))'")
+                } else {
+                    problems.append("Q\(qnum)(\(p.letter)): expected table-cell leak '\(leak)' not found")
+                }
+            }
+            if !p.subs.isEmpty {
+                body += " " + p.subs.joined(separator: " ")
+                notes.append("sub-parts \(p.subs.count == 2 ? "(i) and (ii)" : "(i)-(\(p.subs.count))") kept inside the part, marks summed")
+            }
+            if p.body.count < 15 {
+                confidence = "low"
+                notes.append("the part's own text is suspiciously short (\(p.body.count) chars)")
+            }
+            if leads[0].isEmpty { notes.append("no stem text found above the parts") }
+            if j > 0 && leads[1...j].contains(where: { !$0.isEmpty }) {
+                notes.append("lead-in printed between parts is included")
+            }
+            if dropped[0...min(j, dropped.count - 1)].reduce(0, +) + p.dropped > 0 {
+                notes.append("figure or table text printed with the question is not reproduced; see the question paper")
+            }
+            let full = stripAttribution(normalise((carried + [body]).joined(separator: "\n")))
+            if full.attribution != nil || full.text.contains("(Source") || full.text.contains("http")
+                || full.text.contains("www.")
+            {
+                confidence = "low"
+                notes.append("a citation or URL survived the strip")
+            }
+            let cites = citations.filter { $0.offset >= segStart && $0.offset < p.bodyEnd }.map { $0.text }
+            let partPage = pageAt(p.at)
+            let label = "\(qnum)(\(p.letter))"
+            let hit = markSchemePage(msPages, question: qnum, part: p.letter)
+            if hit == nil {
+                confidence = "low"
+                notes.append("mark scheme page for \(label) could not be verified")
+            } else if hit!.exact == false {
+                notes.append("mark scheme heading for \(label) omits the question number; matched on the bare part label")
+            }
+            out.append(QuestionOut(
+                id: "\(meta.idStem)-q\(qnum)\(p.letter)", section: "A",
+                questionNumber: label, parentQuestion: qnum, choiceGroup: nil,
+                marks: p.marks, questionText: full.text,
+                sourceAttribution: cites.isEmpty ? nil : cites.joined(separator: " "),
+                // The question's opening page, where the stem and its data are
+                // printed - only when the part itself is on a later page, so a
+                // card never carries two links to the same page.
+                contextPage: stemPage < partPage ? stemPage : nil,
+                contextType: "question",
+                qpPage: partPage, msPage: hit?.page, msVerified: hit != nil,
+                confidence: confidence, notes: notes))
+        }
+    }
+    return (out, problems)
+}
+
 // ------------------------------------------------------------ edexcel b
 
 // Edexcel B (9EB0 A Level, 8EB0 AS). Read from all 37 papers, June 2016 to
@@ -1013,7 +1504,13 @@ func emit(meta: PaperMeta, questions: [QuestionOut], problems: [String]) -> Stri
         if let attr = q.sourceAttribution {
             f.append("      \"sourceAttribution\": \"\(jsonEscape(attr))\"")
         }
-        if let cp = q.contextPage {
+        if let cp = q.contextPage, q.contextType == "question" {
+            // Wording approved by Eliot, 2026-11-24 (phase-6 Q4).
+            f.append(
+                "      \"context\": { \"type\": \"question\", "
+                    + "\"label\": \"Question \(q.parentQuestion ?? q.questionNumber) as printed\", "
+                    + "\"pdfUrl\": \"\(jsonEscape(qpUrl))\", \"page\": \(cp) }")
+        } else if let cp = q.contextPage {
             f.append(
                 "      \"context\": { \"type\": \"extracts\", "
                     + "\"label\": \"Extracts and figures for Question \(q.parentQuestion ?? q.questionNumber)\", "
@@ -1147,13 +1644,16 @@ for path in args {
     } else if meta.isAS {
         // 8EC0 has no Section C at all. Its Section B carries the whole of the
         // paper bar Section A: Q6(a) to (g), 60 of the 80 marks.
-        (questions, problems) = extractSectionB(
-            pages: qpPages, meta: meta, msPages: msPages)
+        let (a, aProblems) = extractSectionA(pages: qpPages, meta: meta, msPages: msPages)
+        let (b, bProblems) = extractSectionB(pages: qpPages, meta: meta, msPages: msPages)
+        questions = a + b
+        problems = aProblems + bProblems
     } else {
+        let (a, aProblems) = extractSectionA(pages: qpPages, meta: meta, msPages: msPages)
         let (b, bProblems) = extractSectionB(pages: qpPages, meta: meta, msPages: msPages)
         let (c, cProblems) = extractSectionC(pages: qpPages, meta: meta, msPages: msPages)
-        questions = b + c
-        problems = bProblems + cProblems
+        questions = a + b + c
+        problems = aProblems + bProblems + cProblems
     }
 
     if let t = transcript {

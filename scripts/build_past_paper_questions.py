@@ -312,6 +312,14 @@ def build(taxonomy, tags, papers):
                 # "View the extract" link. Null for Section C, which has none.
                 "ctxPage": q["context"]["page"] if q["context"] else None,
                 "modelAnswer": q["modelAnswer"],
+                # Edexcel A Papers 1-2 Section A (Phase 6): the link goes to
+                # the page the question's stem is printed on, not an extract,
+                # so it carries its own label - "Question 3 as printed",
+                # approved by Eliot 2026-11-24. Emitted only for those
+                # records, which leaves every other card's payload unchanged.
+                **({"ctxLabel": q["context"]["label"]}
+                   if q["context"] and q["context"].get("type") == "question"
+                   else {}),
             }
             questions.append(entry)
 
@@ -399,6 +407,31 @@ BOARDS_PHRASE = {
         "Edexcel A, Edexcel B & AQA", "Edexcel A, Edexcel B and AQA"),
 }
 TITLE = "A-Level Economics Past Paper Questions | {} | Economics Academy"
+
+# How the bank names a board's qualification where boards.json's single
+# A Level string would be wrong: the Edexcel A and Edexcel B banks hold AS
+# cards as well (8EC0, 8EB0). Wording approved by Eliot, 2026-11-25
+# (review/launch-section-a.md W2 A, W3). Three slots: the board hub's meta and
+# JSON-LD description, its hero intro, and its heading on the master page.
+# boards.json is left alone - the notes, practice and flashcard families read
+# it too. A board not listed (AQA, no AS cards) keeps that string everywhere.
+QUALIFICATION_PHRASE = {
+    "edexcel": {
+        "meta": "A Level 9EC0 and AS Level 8EC0",
+        "intro": "A Level (9EC0) and AS Level (8EC0)",
+        "heading": "A Level (9EC0) and AS Level (8EC0) Economics A",
+    },
+    "edexcel-b": {
+        "meta": "A Level 9EB0 and AS Level 8EB0",
+        "intro": "A Level (9EB0) and AS Level (8EB0)",
+        "heading": "A Level (9EB0) and AS Level (8EB0) Economics B",
+    },
+}
+
+
+def qualification_phrase(board, slot):
+    """The board's qualification as the bank names it in `slot`."""
+    return QUALIFICATION_PHRASE.get(board["board"], {}).get(slot, board["qualification"])
 
 # The description is derived, not written down. The hard-coded one it replaced
 # was authored before AQA and the Edexcel AS papers joined the bank and still
@@ -601,7 +634,11 @@ def render_card(q, index):
         f'{e(paper["levelLabel"])}</span>',
         f'<span class="ppq-badge ppq-badge-paper">Paper {paper["paper"]}</span>',
         f'<span class="ppq-badge">{e(paper["series"] + " " + str(paper["year"]))}</span>',
-        f'<span class="ppq-badge ppq-badge-marks">{q["marks"]} marks</span>',
+        # "1 mark", singular: Section A brought the bank's first 1-mark
+        # cards (Eliot, 2026-11-25, review/launch-section-a.md W1). Kept
+        # character-equal with cardHtml() in question-search.js.
+        f'<span class="ppq-badge ppq-badge-marks">{q["marks"]} '
+        f'{"mark" if q["marks"] == 1 else "marks"}</span>',
     ]
     # Keyed (board, slug): Edexcel A and Edexcel B both have a theme-1.
     groups = {(b["board"], g["slug"]): g
@@ -632,9 +669,10 @@ def render_card(q, index):
     ]
     if q["ctxPage"]:
         ctx = e(paper["questionPaperUrl"] + "#page=" + str(q["ctxPage"]))
+        ctx_label = e(q["ctxLabel"]) if q.get("ctxLabel") else "View the extract"
         actions.append(
             f'<a class="ppq-action" href="{ctx}" target="_blank" '
-            f'rel="noopener noreferrer">View the extract &mdash; p.{q["ctxPage"]}</a>'
+            f'rel="noopener noreferrer">{ctx_label} &mdash; p.{q["ctxPage"]}</a>'
         )
     ms = e(paper["markSchemeUrl"] + "#page=" + str(q["msPage"]))
     actions.append(
@@ -958,7 +996,7 @@ def render_index(index):
         n_board = len(questions_for(index, board=b["board"]))
         blocks.append(
             f"""          <div class="ppq-theme-block">
-            <h3><a href="{e(b["url"])}">{e(b["name"])}</a> &mdash; {e(b["qualification"])}</h3>
+            <h3><a href="{e(b["url"])}">{e(b["name"])}</a> &mdash; {e(qualification_phrase(b, "heading"))}</h3>
             <p>{question_count_phrase(n_board)} across {len(rows)} sections.</p>
             <ul class="ppq-topic-list">
 {chr(10).join(rows)}
@@ -1024,7 +1062,7 @@ def render_board_page(index, board):
     )
     desc = (
         f'{len(qs)} {board["name"]} A-Level Economics past paper questions '
-        f'({board["qualification"]}), {span.replace("&ndash;", " to ")}. '
+        f'({qualification_phrase(board, "meta")}), {span.replace("&ndash;", " to ")}. '
         "Each links straight to the right page of the official mark scheme."
     )
 
@@ -1045,7 +1083,7 @@ def render_board_page(index, board):
             </h1>
             <p class="ppq-intro">
               {question_count_phrase(len(qs))} from the {e(board["name"])}
-              {e(board["qualification"])} papers, {span}. Every question links to
+              {e(qualification_phrase(board, "intro"))} papers, {span}. Every question links to
               the official mark scheme at the page its answer begins on.
             </p>
             <p class="ppq-hero-meta">
