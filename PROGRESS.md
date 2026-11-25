@@ -23,7 +23,7 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| All-boards parity (D67) — Phase 9: AQA AS (7135) Section A MCQs in the past-paper bank (360 questions, about 3 new pages) | in progress: design approved (D71), 360 extracted and verified (untagged, unpublished); tagging next (branch `feature/aqa-as-mcqs`) | — | — |
+| All-boards parity (D67) — Phase 9: AQA AS (7135) Section A MCQs in the past-paper bank (360 questions, about 3 new pages) | in progress: 360 extracted and tagged (first pass + blind pass); awaiting answers on `review/aqa-as-mcq-tags.md`; bank pages not rebuilt (branch `feature/aqa-as-mcqs`) | — | — |
 | All-boards parity (D67) — Phase 7: real exam MCQs in the past-paper bank, AQA and Edexcel A (450 questions, 15 new pages) | live (PR #56) | 2026-11-25 | `ed377dc7` |
 | All-boards parity (D67) — Phase 6: Edexcel A Papers 1–2 Section A written parts in the past-paper bank (259 questions, 13 new pages) | live (PR #54) | 2026-11-25 | `96439950` |
 | All-boards parity (D67) — Phase 5: twin links across three boards (185 pages reworded, no new URLs) | live (PR #53) | 2026-11-24 | `f1110a8a` |
@@ -249,7 +249,16 @@ records, is `review/phase-9-dry-run.html`.
   higher / exchange rate") continues the option above when it sits between
   two option rows. The 27 A-level files are still byte-identical. Untagged,
   so nothing publishes.
-- **Next.** Tag: a first pass, a blind
+- **Done: tagging (2026-11-25).** First pass committed (`273df531`), then a
+  blind `cold-solver` pass per paper: 260 of 360 match. The 100
+  disagreements, the page list (1.1.2, 1.1.3, 1.4.2, all MCQ-only) and the
+  measured payloads (AQA board 431 to 703 KB, 76 to 124 KB gzipped) are
+  in `review/aqa-as-mcq-tags.md`, awaiting answers. The blind pass found one
+  more extractor defect (a 7pt space, "Q2,the"), fixed in `5ef39fb9`; a
+  dropped-line audit found three (`57513bd7`, `75210df9`). The tree is
+  deliberately stale until the rebuild: `verify_generated` and two unit
+  tests fail on it.
+- **Before tagging (kept for the record).** Tag: a first pass, a blind
   `cold-solver` pass, a disagreements sheet, and the page list
   (1.1.2, 1.1.3, 1.4.2 are the only AQA topics left below the gate). At
   launch, `QUALIFICATION_PHRASE` gains its `aqa` entry (W1–W3, "A Level
