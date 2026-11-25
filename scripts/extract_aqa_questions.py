@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
-"""Extract AQA A-level Economics (7136) questions into JSON, one file per paper.
+"""Extract AQA A-level (7136) and AS (7135) Economics questions into JSON, one
+file per paper.
 
-    .venv/bin/python scripts/extract_aqa_questions.py
+    .venv/bin/python scripts/extract_aqa_questions.py [question-paper.pdf ...]
 
-Writes past-paper-questions-data/aqa/<paper>-<series>.json.
+Writes past-paper-questions-data/aqa/<paper>-<series>.json for A-level and
+past-paper-questions-data/aqa-as/<paper>-<series>.json for AS. With no
+arguments it reads every A-level June paper and every non-specimen AS paper.
 
 Why this is not the Swift extractor
 -----------------------------------
@@ -32,6 +35,21 @@ Paper 3          Section A  Q1-Q30 multiple choice, 1 mark each (Phase 7)
 The tariff sequence is fixed, so it doubles as the acceptance test: a paper whose
 extracted tariffs do not match exactly is reported and written with low
 confidence rather than passed off as correct.
+
+AS (7135), confirmed against all 18 non-specimen papers (D71, 2026-11-25)
+-------------------------------------------------------------------------
+Papers 1 and 2   Section A  Q1-Q20 multiple choice, 1 mark each
+                 Section B  two data-response contexts, choose one:
+                            Q21-Q26 or Q27-Q32, each 3, 4, 4, 4, 10, 25
+
+Only Section A is extracted; Section B and the specimens are out of scope
+(D71). The whole-paper tariff check does not apply: the hosted AS PDFs bundle
+the Insert inconsistently - before the paper, after it, both, or not at all -
+and the Insert reprints the Section B questions with their tariffs. An AS
+paper is accepted on its own Section A instead: number cells 1-20 in order,
+each question closed by "[1 mark]", and the mark scheme's key-list page.
+Every qpPage is the PDF's page index, so a link lands on the right page
+whatever is bundled in front of the paper.
 
 Paper 3 Section A is read by extract_mcqs(), at the level of characters rather
 than words, because its stems print subscripts (SRAS1, E2) as 7pt glyphs set
@@ -62,11 +80,23 @@ except ImportError:
 ROOT = Path(__file__).resolve().parent.parent
 PAPERS = ROOT / "past-papers" / "aqa" / "a-level"
 OUT_DIR = ROOT / "past-paper-questions-data" / "aqa"
+AS_PAPERS = ROOT / "past-papers" / "aqa" / "as-level"
+AS_OUT_DIR = ROOT / "past-paper-questions-data" / "aqa-as"
 
 PAPER_NAMES = {
     1: "Markets and Market Failure",
     2: "The National and International Economy",
     3: "Economic Principles and Issues",
+}
+# As printed on the 2025 covers. The 2016 covers set the same titles in
+# sentence case; title case matches PAPER_NAMES above.
+AS_PAPER_NAMES = {
+    1: "The Operation of Markets and Market Failure",
+    2: "The National Economy in a Global Context",
+}
+QUALIFICATION = {
+    "a-level": "A-level Economics (7136)",
+    "as-level": "AS Economics (7135)",
 }
 
 # The tariff for every question, in order. Also the acceptance test.
@@ -124,17 +154,22 @@ def parse_meta(path: Path):
     if not m:
         return None
     paper, series, year = int(m.group(1)), m.group(2), int(m.group(3))
-    if paper not in PAPER_NAMES:
+    level = "as-level" if path.name.startswith("aqa-as-level-") else "a-level"
+    names = AS_PAPER_NAMES if level == "as-level" else PAPER_NAMES
+    if paper not in names:
         return None
     return {
+        "level": level,
+        "qualification": QUALIFICATION[level],
+        "outDir": AS_OUT_DIR if level == "as-level" else OUT_DIR,
         "paper": paper,
-        "paperName": PAPER_NAMES[paper],
+        "paperName": names[paper],
         "year": year,
         "series": series.capitalize(),
         "seriesSlug": f"{series}-{year}",
         "qpPath": path,
         "msPath": Path(str(path).replace("-question-paper.pdf", "-mark-scheme.pdf")),
-        "idStem": f"aqa-p{paper}-{year}-{series[:3]}",
+        "idStem": f"aqa{'-as' if level == 'as-level' else ''}-p{paper}-{year}-{series[:3]}",
     }
 
 
@@ -360,7 +395,9 @@ def context_pages(pdf, paper: int):
 
 # ---------------------------------------------------------------- Paper 3 MCQs
 
+# Section A's length: Paper 3 sets thirty, each AS paper twenty.
 MCQ_COUNT = 30
+AS_MCQ_COUNT = 20
 OPTION_LETTERS = "ABCD"
 # Body text is 11pt. A glyph this small inside the body column is either a
 # subscript or superscript (SRAS1, E2) or a label inside a figure.
@@ -375,10 +412,19 @@ ALIGN_TOLERANCE = 2.0
 STEM_TOLERANCE = 5.0
 CELL_GAP = 15.0
 WORD_GAP = 0.2
+# How far inside an inked glyph a space must start to be discarded: well past
+# the rounding (~0.05pt) by which a real word space can overlap the glyph
+# before it.
+SPACE_OVERLAP = 1.0
 MCQ_TARIFF_RE = re.compile(r"^\[1 mark\]$")
+# The AS papers of 2016-2019 close Section A over two lines, "QUESTION 20 IS
+# THE LAST" / "QUESTION IN SECTION A", where Paper 3 and later AS papers print
+# "END OF SECTION A". Unmatched, the two lines read as figure text and set a
+# false usesFigure on Q20 (Phase 9 dry run, AS Paper 1 June 2016).
 MCQ_FURNITURE_RE = re.compile(
     r"^(?:Turn over for (?:the next question|Section B)|Turn over ►?|Do not write outside the box|"
-    r"END OF SECTION A|Section [AB]|\d{1,3}|\*.*|IB/[A-Z]/\S+)$"
+    r"END OF SECTION A|QUESTION \d+ IS THE LAST|QUESTION IN SECTION A|"
+    r"Section [AB]|\d{1,3}|\*.*|IB/[A-Z]/\S+)$"
 )
 
 
@@ -440,6 +486,19 @@ def _lines_from_chars(chars):
     out = []
     for ln in lines:
         cs = sorted(ln["chars"], key=lambda c: c["x0"])
+        # A space glyph that starts inside an inked glyph is not a word break.
+        # The AS papers from 2022 set a run of spaces from the number cell
+        # whose last one starts 0.4pt right of the F of "Figure" - sorted by
+        # x it lands between F and i, and the text read "F igure 1" (Phase 9
+        # dry run, AS Paper 2 June 2025 Q4). A real word space starts where
+        # the glyph before it ends.
+        inked_spans = [(c["x0"], c["x1"]) for c in cs if c["text"].strip()]
+        cs = [
+            c
+            for c in cs
+            if c["text"].strip()
+            or not any(a < c["x0"] < b - SPACE_OVERLAP for a, b in inked_spans)
+        ]
         # A word break the PDF prints as a gap with no space glyph (2018 Q2,
         # "financial year the") gets its space, as pdfplumber's own text
         # extraction gives it: a gap wider than a fifth of the type size.
@@ -542,8 +601,9 @@ def _images_in(page, top, bottom):
     ]
 
 
-def extract_mcqs(pdf):
-    """Paper 3 Section A, Q1-Q30: stem and options A-D, as printed.
+def extract_mcqs(pdf, count=MCQ_COUNT):
+    """Section A, Q1-Q<count>: stem and options A-D, as printed. Thirty on
+    Paper 3, twenty on each AS paper.
 
     Each question is the body column between its number cell and the next (or
     the foot of the page). Its lines are read by position:
@@ -567,12 +627,12 @@ def extract_mcqs(pdf):
         (pi, top, n)
         for pi, p in enumerate(pdf.pages)
         for top, n, _r in number_cells(p)
-        if 1 <= n <= MCQ_COUNT
+        if 1 <= n <= count
     ]
     problems = []
     seen = [n for _pi, _t, n in cells]
-    if seen != list(range(1, MCQ_COUNT + 1)):
-        problems.append(f"Section A number cells read {seen}, expected 1-{MCQ_COUNT}")
+    if seen != list(range(1, count + 1)):
+        problems.append(f"Section A number cells read {seen}, expected 1-{count}")
     all_cells = sorted(
         (pi, top) for pi, p in enumerate(pdf.pages) for top, _n, _r in number_cells(p)
     )
@@ -737,11 +797,11 @@ def extract_mcqs(pdf):
     return out, problems
 
 
-def mcq_key_page(ms_path: Path):
+def mcq_key_page(ms_path: Path, count=MCQ_COUNT):
     """The mark-scheme page holding the Section A key list.
 
     Verified by content, not position: the page must say SECTION A and KEY
-    LIST and print every question number 1-30. From 2021 the list reprints each
+    LIST and print every question number 1-<count>. From 2021 the list reprints each
     answer's wording beside its letter, so a number and its letter are no
     longer neighbours in the text; only the numbers are required. The key
     itself is never read into the data - only the page number is kept, as for
@@ -755,7 +815,7 @@ def mcq_key_page(ms_path: Path):
             if "KEY LIST" not in text.upper() or "SECTION A" not in text.upper():
                 continue
             numbers = {int(a) for a in re.findall(r"(?<![\d£.,%])\b(\d{1,2})\b(?![\d.,%])", text)}
-            if set(range(1, MCQ_COUNT + 1)) <= numbers:
+            if set(range(1, count + 1)) <= numbers:
                 return i + 1
     return None
 
@@ -789,35 +849,10 @@ def mark_scheme_pages(ms_path: Path, numbers: list[int]):
     return out
 
 
-def extract_paper(meta):
-    problems = []
-    expected = EXPECTED[meta["paper"]]
-    first = FIRST_Q[meta["paper"]]
-
-    with pdfplumber.open(meta["qpPath"]) as pdf:
-        pairs = extract_questions(pdf, first, expected)
-        contexts = context_pages(pdf, meta["paper"])
-        found_tariffs = tariffs_in_order(pdf)
-        mcqs = []
-        # Paper 3's 30 one-mark MCQs come first: Section A, read separately.
-        if meta["paper"] == 3:
-            ones = found_tariffs[:MCQ_COUNT]
-            if ones != [1] * MCQ_COUNT:
-                problems.append(f"Section A tariffs {ones} are not thirty 1-mark questions")
-            found_tariffs = found_tariffs[MCQ_COUNT:]
-            mcqs, mcq_problems = extract_mcqs(pdf)
-            problems.extend(mcq_problems)
-        page_count = len(pdf.pages)
-
-    if found_tariffs != expected:
-        problems.append(
-            f"tariff sequence {found_tariffs} does not match expected {expected}"
-        )
-
-    ms_pages = mark_scheme_pages(meta["msPath"], [n for n, _ in pairs])
-
+def mcq_records(meta, mcqs, key_page):
+    """The Section A records, in the shape approved in review/phase-7-mcqs.md:
+    no answer field, the key-list page as the mark-scheme link."""
     questions = []
-    key_page = mcq_key_page(meta["msPath"]) if mcqs else None
     for m in mcqs:
         notes = list(m["notes"])
         confidence = "high"
@@ -848,6 +883,53 @@ def extract_paper(meta):
                 "notes": notes,
             }
         )
+    return questions
+
+
+def extract_as_paper(meta):
+    """An AS paper: Section A only (D71). See the module docstring for why
+    the whole-paper tariff check does not apply."""
+    with pdfplumber.open(meta["qpPath"]) as pdf:
+        mcqs, problems = extract_mcqs(pdf, AS_MCQ_COUNT)
+        page_count = len(pdf.pages)
+    if len(mcqs) != AS_MCQ_COUNT:
+        problems.append(f"read {len(mcqs)} Section A questions, expected {AS_MCQ_COUNT}")
+    key_page = mcq_key_page(meta["msPath"], AS_MCQ_COUNT)
+    return mcq_records(meta, mcqs, key_page), problems, page_count
+
+
+def extract_paper(meta):
+    if meta["level"] == "as-level":
+        return extract_as_paper(meta)
+
+    problems = []
+    expected = EXPECTED[meta["paper"]]
+    first = FIRST_Q[meta["paper"]]
+
+    with pdfplumber.open(meta["qpPath"]) as pdf:
+        pairs = extract_questions(pdf, first, expected)
+        contexts = context_pages(pdf, meta["paper"])
+        found_tariffs = tariffs_in_order(pdf)
+        mcqs = []
+        # Paper 3's 30 one-mark MCQs come first: Section A, read separately.
+        if meta["paper"] == 3:
+            ones = found_tariffs[:MCQ_COUNT]
+            if ones != [1] * MCQ_COUNT:
+                problems.append(f"Section A tariffs {ones} are not thirty 1-mark questions")
+            found_tariffs = found_tariffs[MCQ_COUNT:]
+            mcqs, mcq_problems = extract_mcqs(pdf)
+            problems.extend(mcq_problems)
+        page_count = len(pdf.pages)
+
+    if found_tariffs != expected:
+        problems.append(
+            f"tariff sequence {found_tariffs} does not match expected {expected}"
+        )
+
+    ms_pages = mark_scheme_pages(meta["msPath"], [n for n, _ in pairs])
+
+    key_page = mcq_key_page(meta["msPath"]) if mcqs else None
+    questions = mcq_records(meta, mcqs, key_page)
     for i, (num, hit) in enumerate(pairs):
         marks = expected[i]
         notes = []
@@ -914,10 +996,10 @@ def emit(meta, questions, problems):
     qp_url = url_for(meta["qpPath"])
     ms_url = url_for(meta["msPath"])
     doc = {
-        "qualification": "A-level Economics (7136)",
+        "qualification": meta["qualification"],
         "board": "aqa",
         "boardName": "AQA",
-        "level": "a-level",
+        "level": meta["level"],
         "paper": meta["paper"],
         "paperName": meta["paperName"],
         "year": meta["year"],
@@ -966,7 +1048,7 @@ def emit(meta, questions, problems):
             for q in questions
         ],
     }
-    dest = OUT_DIR / f"p{meta['paper']}-{meta['seriesSlug']}.json"
+    dest = meta["outDir"] / f"p{meta['paper']}-{meta['seriesSlug']}.json"
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(
         json.dumps(doc, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
@@ -975,8 +1057,13 @@ def emit(meta, questions, problems):
 
 
 def main(argv):
+    # AS: every series but the specimens, which are out of scope (D71).
     paths = [Path(a) for a in argv] if argv else sorted(
         PAPERS.glob("paper-*/aqa-a-level-economics-paper-*-june-*-question-paper.pdf")
+    ) + sorted(
+        p
+        for p in AS_PAPERS.glob("paper-*/aqa-as-level-economics-paper-*-question-paper.pdf")
+        if "-specimen-" not in p.name
     )
     if not paths:
         sys.exit("no AQA question papers found")

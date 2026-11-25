@@ -108,9 +108,15 @@ HUB_CARDS = 20
 # each board's directories in the order below, which keeps the paper table -
 # and so every q.p index in the published payloads - stable as a board joins:
 # a new board's papers append after the existing ones.
+#
+# AQA's AS papers (7135) joined by D71 (2026-11-25): Section A's MCQs only,
+# in aqa-as/. Their records reach a page only once tagged, which is the gate
+# that holds them back until launch - no family of their own. They read after
+# aqa/, so in the master payload every Edexcel B paper's q.p moves up by the
+# number of AS papers; each payload is self-consistent, so nothing breaks.
 BANK_DIRS = {
     "edexcel-a": ("edexcel-a", "edexcel-a-as"),
-    "aqa": ("aqa",),
+    "aqa": ("aqa", "aqa-as"),
     "edexcel-b": ("edexcel-b", "edexcel-b-as"),
 }
 
