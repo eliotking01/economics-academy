@@ -23,6 +23,7 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
+| All-boards parity (D67) — Phase 7: real exam MCQs in the past-paper bank, AQA and Edexcel A (450 questions, 15 new pages) | live (PR #56) | 2026-11-25 | `ed377dc7` |
 | All-boards parity (D67) — Phase 6: Edexcel A Papers 1–2 Section A written parts in the past-paper bank (259 questions, 13 new pages) | live (PR #54) | 2026-11-25 | `96439950` |
 | All-boards parity (D67) — Phase 5: twin links across three boards (185 pages reworded, no new URLs) | live (PR #53) | 2026-11-24 | `f1110a8a` |
 | All-boards parity (D67) — Phase 4: Edexcel B past-paper bank, launched (84 new pages, 362 questions) | live (PR #51) | 2026-11-17 | `ce9369ed` |
@@ -143,6 +144,7 @@ are **carried over and not independently re-verified**, except where stated.
 | **`404.html` has no canonical and no Open Graph tags** | Confirmed: 0 matches | Defensible for a 404. Listed so it stays a decision |
 | **`.year-header h4` in `css/pages/past-papers-list.css`** | Still present at line 45 while line 196 styles `.year-header h2` | Likely dead. Read the markup before deleting |
 | **Web-font layout shift** | Not re-measured. CLS was 0.078 on a notes page and 0.154 on a questions page | Self-host with `size-adjust`, or preload the woff2 the fold needs |
+| **Past-paper bank payload size** | Added 2026-11-25 (Phase 7). The master `/past-paper-questions/questions.json` went from 877 KB to 1,246 KB (204 KB gzipped) when the 450 MCQs went live; AQA's board payload is 441 KB. Nothing caps either | Decide whether a budget is wanted. If so, measure what the search page actually loads before choosing what to trim or split |
 | **OCR A Level Paper 3, June 2023** | **The question paper is missing.** Both PDFs at that path are the mark scheme, byte-identical, md5 `35b8975c…`. Confirmed by Eliot and verified independently; a sweep of all 281 PDFs found no other case | Download H460/03 June 2023 from OCR and save it over the existing filename. No URL, link or sitemap change |
 
 ### Still open — Edexcel B follow-ups
@@ -218,7 +220,7 @@ session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
 
-### All-boards parity — Phase 7, real exam MCQs (2026-11-25) — AQA AND EDEXCEL A LAUNCHED ON THE BRANCH, NOT MERGED (branch `feature/bank-mcqs`, pushed)
+### All-boards parity — Phase 7, real exam MCQs (2026-11-25) — LIVE, MERGED 2026-11-25 AS PR #56 (`ed377dc7`, branch `feature/bank-mcqs`)
 
 Brief §13, D67. The review sheets are `review/phase-7-mcqs.md` (the design,
 answered 1-5 A and W1-W4), `review/mcq-tags.md` (the tags, T1-T3 A) and
@@ -266,11 +268,10 @@ Edexcel A launch, N1 A).
     covering both launches. The AQA commit missed it: `pages()` counts
     tracked files only, so the check passed while the new pages were
     untracked. **Reseed in the same commit that adds pages.**
-- **Still open.**
-  - Check the pages in Live Server; the lists are in the two hand-overs.
-  - Merge both launches into `main` in one PR, with a merge commit.
-  - Payload size: the master `questions.json` went from 877 KB before
-    Phase 7 to 1,246 KB (204 KB gzipped). Nothing caps it.
+- **Merged 2026-11-25 as PR #56 (`ed377dc7`)**, both launches in one PR,
+  with a merge commit. CI passed on the PR.
+- **Left open:** the bank's payload size, under "Still open —
+  housekeeping".
 
 ### All-boards parity — Phase 6, Edexcel A Section A written parts (2026-11-24 to 2026-11-25) — LIVE, MERGED 2026-11-25 AS PR #54 (`96439950`, branch `feature/edexcel-a-section-a`)
 
