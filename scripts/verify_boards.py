@@ -151,7 +151,7 @@ PINNED = {
     "aqa.features.2": "flashcards",
     "aqa.features.3": "glossary",
     "aqa.features.4": "pastPaperBank",
-    "aqa.staged.0": "pastPaperMcqs",
+    "aqa.features.5": "pastPaperMcqs",
     "aqa.names.short": "AQA",
     "aqa.names.display": "AQA",
     "aqa.names.long": "AQA A-Level Economics",

@@ -181,7 +181,8 @@ check(
 //   Edexcel  Papers 1-2  Section B has extracts, Section C does not
 //            Paper 3     both sections are case studies
 //   AQA      Papers 1-2  Section A has extracts, Section B is free-standing essays
-//            Paper 3     Section B is a case study
+//            Paper 3     Section A is multiple choice with no extract, Section
+//                        B is a case study
 //   Edexcel B every paper, every section: each question sits under data, and
 //            the 20-mark essay is set on Section C's own extract
 //   Edexcel A Papers 1-2 Section A has no extract: its link goes to the page
@@ -195,7 +196,7 @@ function expectsExtract(q) {
   const paper = data.papers[q.p];
   if (paper.board === "edexcel-b") return true;
   if (paper.board === "edexcel") return q.section !== "C";
-  if (paper.paper === 3) return true;
+  if (paper.paper === 3) return q.section === "B";
   return q.section === "A";
 }
 check(
@@ -235,7 +236,7 @@ check(
 check(
   "extracts: Paper 3 case-study questions all carry one",
   data.questions
-    .filter((q) => data.papers[q.p].paper === 3)
+    .filter((q) => data.papers[q.p].paper === 3 && q.type !== "mcq")
     .every((q) => q.ctxPage !== null),
 );
 
@@ -409,9 +410,11 @@ function searchableBody(s) {
 // A hit is legitimate when the term is in the question's own wording, in one of
 // its topic titles, or in a hand-written keyword. Topic and keyword matches are
 // the point of tagging: "tax" should reach the indirect-taxes questions even
-// where the word itself never appears in the stem.
+// where the word itself never appears in the stem. An MCQ's option text is
+// searchable by design (Phase 7, phase-7-mcqs.md 3 A), so it counts too.
 function legitimateHit(q, term) {
   const fields = [searchableBody(q.questionText)]
+    .concat(q.options || [])
     .concat(q.keywords)
     .concat(
       q.topics.map(
@@ -795,8 +798,8 @@ const FILTERS = [];
 const fre = /data-ppq-filter="([^"]+)"[^>]*data-ppq-all="([^"]+)"/g;
 for (let m; (m = fre.exec(pageHtml));) FILTERS.push({ name: m[1], all: m[2] });
 check(
-  "harness: the master page carries the eight filter selects",
-  FILTERS.length === 8,
+  "harness: the master page carries the nine filter selects",
+  FILTERS.length === 9,
   FILTERS.map((f) => f.name).join(","),
 );
 

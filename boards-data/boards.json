@@ -88,8 +88,7 @@
     },
 
     "aqa": {
-      "features": ["notes", "practiceQuestions", "flashcards", "glossary", "pastPaperBank"],
-      "staged": ["pastPaperMcqs"],
+      "features": ["notes", "practiceQuestions", "flashcards", "glossary", "pastPaperBank", "pastPaperMcqs"],
       "names": {
         "short": "AQA",
         "display": "AQA",
