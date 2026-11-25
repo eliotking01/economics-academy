@@ -63,6 +63,10 @@ def main():
     }
 
     live = {b["slugs"]["taxonomy"] for b in board_data.load("pastPaperBank").values()}
+    # Multiple-choice records (Phase 7) count towards a page only where the
+    # board's pastPaperMcqs family is live; staged ones count as "would".
+    mcq_live = {b["slugs"]["taxonomy"]
+                for b in board_data.load("pastPaperMcqs").values()}
 
     questions = {}
     board_of = {}
@@ -107,18 +111,34 @@ def main():
         if qid in questions
         for slug in entry.get("topics", [])
     )
+    # What the live build publishes: a board in the bank, and an MCQ only
+    # once its board's MCQs are live.
+    published = collections.Counter(
+        slug
+        for qid, entry in tags.items()
+        if qid in questions and board_of[qid] in live
+        and (questions[qid].get("type") != "mcq" or board_of[qid] in mcq_live)
+        for slug in entry.get("topics", [])
+    )
 
     print(f"{len(questions)} questions, {len(tags)} tagged")
     print(f"{len(counts)} of {len(valid)} topics have at least one question")
-    print(f"{sum(1 for s, n in counts.items() if n >= GATE and valid[s]['board'] in live)} "
+    print(f"{sum(1 for n in published.values() if n >= GATE)} "
           f"topics reach the gate of {GATE} and have their own page")
+    staged_mcqs = sum(1 for qid, q in questions.items()
+                      if q.get("type") == "mcq" and board_of[qid] not in mcq_live)
+    if staged_mcqs:
+        n = sum(1 for s, c in counts.items()
+                if c >= GATE and published[s] < GATE and valid[s]["board"] in live)
+        print(f"  {staged_mcqs} multiple-choice questions are staged: "
+              f"{n} more topics would reach the gate once they launch")
     for board in sorted({valid[s]["board"] for s in counts} - live):
         n = sum(1 for s, c in counts.items() if c >= GATE and valid[s]["board"] == board)
         print(f"  {board} is not in the bank yet: {n} of its topics would reach the gate")
     print()
     print("Topic coverage, most-tagged first (* = has its own page, + = would, once launched):")
     for slug, n in counts.most_common():
-        mark = " " if n < GATE else ("*" if valid[slug]["board"] in live else "+")
+        mark = " " if n < GATE else ("*" if published[slug] >= GATE else "+")
         print(f"  {mark} {n:2}  {valid[slug]['board']:9} {valid[slug]['spec']:7} {valid[slug]['title']}")
 
     untagged = [s for s in valid if s not in counts]

@@ -158,10 +158,24 @@ def load_bank(*, staged=False):
     """
     tags = json.loads((DATA / "tags.json").read_text(encoding="utf-8"))
     tags.pop("_comment", None)
+    mcq_boards = {key: BANK_DIRS.get(key, ())
+                  for key in board_data.load("pastPaperMcqs", staged=staged)}
+    mcq_dirs = {d for dirs in mcq_boards.values() for d in dirs}
     papers = []
     for board_dir in paper_dirs(staged=staged):
         for path in sorted((DATA / board_dir).glob("*.json")):
-            papers.append(json.loads(path.read_text(encoding="utf-8")))
+            paper = json.loads(path.read_text(encoding="utf-8"))
+            # A board's multiple-choice records (Phase 7) reach the bank only
+            # once it has the pastPaperMcqs family - live, or staged when
+            # validating. Dropped here, at the one door every reader comes
+            # through (this index, the notes tail's counts), and question by
+            # question rather than paper by paper: the paper itself stays in
+            # the list, so the paper table and every q.p index into it are
+            # the same with the MCQs on or off.
+            if board_dir not in mcq_dirs:
+                paper["questions"] = [q for q in paper["questions"]
+                                      if q.get("type") != "mcq"]
+            papers.append(paper)
     return tags, papers
 
 
@@ -288,6 +302,26 @@ def build(taxonomy, tags, papers):
                 errors.append(f"{q['id']}: no mark scheme recorded")
                 continue
 
+            mcq = {}
+            if q.get("type") == "mcq":
+                # Phase 7. The extraction verifier owns these checks; they
+                # are restated here because this is the door to the payload,
+                # and a key must never get through it (D67: search-only).
+                if any(k in q for k in ("answer", "key", "correct")):
+                    errors.append(f"{q['id']}: an MCQ record carries a key")
+                opts = q.get("options")
+                if opts is not None and [o["letter"] for o in opts] != list("ABCD"):
+                    errors.append(f"{q['id']}: options are not A-D in order")
+                if opts is None and not q.get("usesFigure"):
+                    errors.append(f"{q['id']}: options not text, but no figure")
+                # Options as a plain list: the letters are A-D in order, so
+                # they are the list position, not 7 bytes each in the payload.
+                mcq = {
+                    "type": "mcq",
+                    "options": [o["text"] for o in opts] if opts else None,
+                    "usesFigure": bool(q.get("usesFigure")),
+                }
+
             # Whitelist, not a copy. `sourceAttribution` is deliberately absent:
             # Pearson's citation for a Section C stimulus is provenance, not
             # question wording, so it stays in the extraction data and out of
@@ -320,6 +354,9 @@ def build(taxonomy, tags, papers):
                 **({"ctxLabel": q["context"]["label"]}
                    if q["context"] and q["context"].get("type") == "question"
                    else {}),
+                # Multiple-choice cards only (Phase 7): a written card's
+                # payload is unchanged by a byte, as ctxLabel's was.
+                **mcq,
             }
             questions.append(entry)
 
@@ -429,6 +466,20 @@ QUALIFICATION_PHRASE = {
 }
 
 
+# The notes a multiple-choice card prints when the paper's figure or options
+# cannot be shown (Phase 7). FIGURE_NOTE is W2, approved by Eliot 2026-11-25
+# (review/phase-7-mcqs.md). OPTIONS_NOTE replaces it when the options
+# themselves are not text - a table's rows, diagrams, fractions or bare
+# letters on a figure - and is a DRAFT until review/mcq-tags.md W3 is
+# answered. Restated character for character in question-search.js;
+# scripts/test_question_search.js holds the two together.
+FIGURE_NOTE = ("Uses a table or diagram printed in the paper: open the "
+               "question paper to see it.")
+OPTIONS_NOTE = ("The four options are printed in the paper and are not shown "
+                "here: open the question paper to see them.")
+MCQ_BADGE = "Multiple choice"
+
+
 def qualification_phrase(board, slot):
     """The board's qualification as the bank names it in `slot`."""
     return QUALIFICATION_PHRASE.get(board["board"], {}).get(slot, board["qualification"])
@@ -457,7 +508,8 @@ def e(s):
     )
 
 
-def search_component(topic="", board="", group="", src="", hub=False):
+def search_component(topic="", board="", group="", src="", hub=False,
+                     mixed=None):
     """The search UI skeleton.
 
     Rendered identically on the master page, the board and section pages and the
@@ -469,6 +521,13 @@ def search_component(topic="", board="", group="", src="", hub=False):
     the board and section pages point at their board's payload, which carries
     every topic on the board - what their Topic filter lists. Only the master
     page leaves it empty and gets the full index.
+
+    `mixed` is the Question type filter (Phase 7): None leaves the field out
+    of the page entirely - the state of every page while no MCQ is live, so
+    staging them changed no byte - and otherwise it is present, and hidden
+    in the served HTML unless the page's payload holds both types. Every
+    Edexcel B page and every topic page with no MCQ keeps today's height
+    (PH08-035). See type_mix().
 
     `hub` marks a board hub, which bakes HUB_CARDS cards rather than all of
     them, so its <noscript> note says where the rest are instead of claiming
@@ -526,9 +585,14 @@ def search_component(topic="", board="", group="", src="", hub=False):
         ("paper", "Paper", "All papers"),
         ("topic", "Topic", "All topics"),
         ("marks", "Marks", "All marks"),
+        ("type", "Question type", "All types"),
         ("year", "Year", "All years"),
         ("section", "Paper section", "All sections"),
     ]
+    if mixed is None:
+        fields = [f for f in fields if f[0] != "type"]
+    elif not mixed:
+        fixed.add("type")
     field_html = "\n".join(
         f"""              <div class="ppq-field"{' hidden' if k in fixed else ''}>
                 <label for="ppq-{k}">{lbl}</label>
@@ -611,6 +675,14 @@ def search_component(topic="", board="", group="", src="", hub=False):
           </div>"""
 
 
+def type_mix(index, questions):
+    """search_component()'s `mixed`: None while no MCQ is in the build, else
+    whether `questions` - the page's payload - holds both types."""
+    if not any(q.get("type") == "mcq" for q in index["questions"]):
+        return None
+    return len({q.get("type", "written") for q in questions}) > 1
+
+
 def render_card(q, index):
     """Server-rendered question card.
 
@@ -640,6 +712,10 @@ def render_card(q, index):
         f'<span class="ppq-badge ppq-badge-marks">{q["marks"]} '
         f'{"mark" if q["marks"] == 1 else "marks"}</span>',
     ]
+    # Phase 7: the type badge follows the marks, on multiple-choice cards
+    # only. Neutral grey, so it does not compete with the qualification.
+    if q.get("type") == "mcq":
+        badges.append(f'<span class="ppq-badge ppq-badge-type">{MCQ_BADGE}</span>')
     # Keyed (board, slug): Edexcel A and Edexcel B both have a theme-1.
     groups = {(b["board"], g["slug"]): g
               for b in index["boards"] for g in b["groups"]}
@@ -695,6 +771,21 @@ def render_card(q, index):
     if paper.get("note"):
         note = f'<p class="ppq-note">{e(paper["note"])}</p>'
 
+    # The options as printed, lettered as text, with nothing to click: there
+    # is no answer to reveal (D67). When the options are not text, the list
+    # is left out and OPTIONS_NOTE says where they are.
+    options = ""
+    figure = ""
+    if q.get("type") == "mcq":
+        if q["options"]:
+            options = '<ol class="ppq-options">' + "".join(
+                f'<li><span class="ppq-option-letter">{letter}</span> {e(text)}</li>'
+                for letter, text in zip("ABCD", q["options"])) + "</ol>"
+            if q["usesFigure"]:
+                figure = f'<p class="ppq-figure">{e(FIGURE_NOTE)}</p>'
+        else:
+            figure = f'<p class="ppq-figure">{e(OPTIONS_NOTE)}</p>'
+
     choice = ""
     if q["choiceGroup"]:
         choice = (
@@ -706,6 +797,8 @@ def render_card(q, index):
         f'<article class="ppq-card" id="{e(q["id"])}">'
         f'<div class="ppq-badges">{"".join(badges)}</div>'
         f'<p class="ppq-question">{e(q["questionText"])}</p>'
+        f"{options}"
+        f"{figure}"
         f"{note}"
         f"{choice}"
         + (f'<p class="ppq-topics">{topic_links}</p>' if topic_links else "")
@@ -856,13 +949,16 @@ def newest_first(index, questions):
     """The component's default order: year descending, then question number.
 
     question-search.js run() sorts by paper year descending and then by
-    questionNumber as a STRING ("10" before "2"), so this sorts the same way -
-    the hub's baked cards are the ones the live list shows first, in that
-    order. Ties on both keys are left in index order.
+    compareQuestionNumbers(): the number first, then the label as a string
+    (Phase 7 - AQA's MCQs are Q1-Q30, and as strings "10" sorts before "2").
+    This sorts the same way, so the hub's baked cards are the ones the live
+    list shows first, in that order. Ties on all keys are left in index order.
     """
     return sorted(
         questions,
-        key=lambda q: (-index["papers"][q["p"]]["year"], q["questionNumber"]),
+        key=lambda q: (-index["papers"][q["p"]]["year"],
+                       int(re.sub(r"\D", "", q["questionNumber"]) or 0),
+                       q["questionNumber"]),
     )
 
 
@@ -1015,7 +1111,7 @@ def render_index(index):
             <p class="ppq-hero-meta">{meta}</p>
           </section>
 
-{search_component()}
+{search_component(mixed=type_mix(index, index["questions"]))}
 
           <noscript>
             <p>
@@ -1093,7 +1189,7 @@ def render_board_page(index, board):
             </p>
           </section>
 
-{search_component(board=board["board"], src=path + "questions.json", hub=True)}
+{search_component(board=board["board"], src=path + "questions.json", hub=True, mixed=type_mix(index, questions_for(index, board=board["board"])))}
 
           <header class="major">
             <h2>Browse by section</h2>
@@ -1176,7 +1272,7 @@ def render_group_page(index, board, group):
             </p>
           </section>
 
-{search_component(board=board["board"], group=group["slug"], src=board["url"] + "questions.json")}
+{search_component(board=board["board"], group=group["slug"], src=board["url"] + "questions.json", mixed=type_mix(index, questions_for(index, board=board["board"])))}
 
           <header class="major">
             <h2>Topics in {e(group["label"])}</h2>
@@ -1351,7 +1447,7 @@ def render_topic_page(index, slug, collisions=frozenset()):
             </p>
           </section>
 
-{search_component(topic=slug, src=path + "questions.json")}
+{search_component(topic=slug, src=path + "questions.json", mixed=type_mix(index, questions_for(index, topic=slug)))}
 {related_html}
 {CTA}"""
 
@@ -1450,26 +1546,44 @@ def staged_boards():
                   - set(board_data.load("pastPaperBank")))
 
 
-def validate_staged():
-    """Build the bank WITH its staged boards, in memory, and write nothing.
+def staged_mcq_boards():
+    """Board keys whose multiple-choice questions are staged (Phase 7)."""
+    return sorted(set(board_data.load("pastPaperMcqs", staged=True))
+                  - set(board_data.load("pastPaperMcqs")))
 
-    Runs every check build() runs on a live board - unknown or cross-board
-    tags, a missing mark scheme - and renders every page the staged board
-    would publish, so a fault that would stop a launch stops this build
-    instead. Exits 1 on any error. Returns the summary lines to print.
+
+def validate_staged(live_gated=()):
+    """Build the bank WITH its staged boards and staged MCQs, in memory, and
+    write nothing.
+
+    Runs every check build() runs on live data - unknown or cross-board
+    tags, a missing mark scheme, an MCQ's options - and renders every page
+    the staged data would change, so a fault that would stop a launch stops
+    this build instead. Exits 1 on any error. Returns the summary lines to
+    print. `live_gated` is the live build's gated topics, so the report can
+    name the topic pages the staged data would add: each is a permanent URL.
     """
     keys = staged_boards()
-    if not keys:
+    mcq_keys = staged_mcq_boards()
+    if not keys and not mcq_keys:
         return []
     taxonomy, tags, papers = load(staged=True)
     index, _counts, gated, errors, untagged = build(taxonomy, tags, papers)
-    slugs = {board_data.load("pastPaperBank", staged=True)[k]["slugs"]["taxonomy"]
-             for k in keys}
+    staged = board_data.load("pastPaperBank", staged=True)
+    slugs = {staged[k]["slugs"]["taxonomy"] for k in keys}
+    mcq_slugs = {staged[k]["slugs"]["taxonomy"] for k in mcq_keys}
     own = [u for u in untagged
            if any(u.startswith(s + "-") for s in slugs)]
     if own:
         errors.append(f"staged board has {len(own)} untagged question(s), "
                       f"e.g. {own[0]} - every question is tagged before launch")
+    # load(staged=True) brought in the staged boards' MCQs and no others, so
+    # any untagged MCQ here is one a launch would leave out.
+    loose = [q["id"] for p in papers for q in p["questions"]
+             if q.get("type") == "mcq" and q["id"] not in tags]
+    if loose:
+        errors.append(f"staged multiple-choice questions have {len(loose)} "
+                      f"untagged, e.g. {loose[0]} - every MCQ is tagged first")
     if errors:
         for err in errors:
             print(f"ERROR (staged) {err}", file=sys.stderr)
@@ -1477,7 +1591,7 @@ def validate_staged():
     lines = []
     collisions = title_collisions(index)
     for board in index["boards"]:
-        if board["board"] not in slugs:
+        if board["board"] not in slugs | mcq_slugs:
             continue
         qs = questions_for(index, board=board["board"])
         pages = [render_board_page(index, board)]
@@ -1485,11 +1599,24 @@ def validate_staged():
                   if questions_for(index, board=board["board"], group=g["slug"])]
         topics = [s for s in gated if index["topics"][s]["board"] == board["board"]]
         pages += [render_topic_page(index, s, collisions) for s in topics]
+        if board["board"] in slugs:
+            lines.append(
+                f"  STAGED {board['board']}: {len(qs)} questions, "
+                f"{len(pages) - 1 - len(topics)} section pages and "
+                f"{len(topics)} topic pages at the gate of {GATE}, rendered "
+                f"in memory - nothing written "
+                f"(EA_PREVIEW={keys[0]}:pastPaperBank to preview)")
+            continue
+        mcqs = sum(1 for q in qs if q.get("type") == "mcq")
+        new = [s for s in topics if s not in set(live_gated)]
         lines.append(
-            f"  STAGED {board['board']}: {len(qs)} questions, "
-            f"{len(pages) - 1 - len(topics)} section pages and {len(topics)} "
-            f"topic pages at the gate of {GATE}, rendered in memory - nothing "
-            f"written (EA_PREVIEW={keys[0]}:pastPaperBank to preview)")
+            f"  STAGED {board['board']} multiple choice: {mcqs} questions, "
+            f"{len(new)} new topic page(s) at the gate of {GATE}, rendered "
+            f"in memory - nothing written")
+        lines += [f"    new page: {index['topics'][s]['url']}" for s in new]
+    if mcq_keys:
+        lines.append("  preview: EA_PREVIEW="
+                     + ",".join(f"{k}:pastPaperMcqs" for k in mcq_keys))
     return lines
 
 
@@ -1509,7 +1636,7 @@ def main():
         for e in errors:
             print(f"ERROR {e}", file=sys.stderr)
         sys.exit(1)
-    staged_report = validate_staged()
+    staged_report = validate_staged(gated)
 
     years = sorted({p["year"] for p in index["papers"]})
     marks = sorted({q["marks"] for q in index["questions"]})

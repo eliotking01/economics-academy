@@ -521,6 +521,98 @@ if (pythonCards) {
   );
 }
 
+// ---- multiple-choice cards (Phase 7)
+//
+// The committed payload has no MCQ while the family is staged, so the check
+// above cannot see one. Build the STAGED index in memory - the same records a
+// launch or an EA_PREVIEW run publishes - and hold the two renderers together
+// over every MCQ in it, then the strings both copies spell out.
+
+let staged = null;
+try {
+  staged = JSON.parse(
+    execFileSync(
+      "python3",
+      [
+        "-c",
+        [
+          "import json,sys,io,contextlib",
+          "sys.path.insert(0,'scripts')",
+          "import build_past_paper_questions as m",
+          "t,tags,papers=m.load(staged=True)",
+          "i=m.build(t,tags,papers)[0]",
+          "qs=[q for q in i['questions'] if q.get('type')=='mcq']",
+          "print(json.dumps({'index':dict(i,questions=qs),",
+          " 'cards':{q['id']:m.render_card(q,i) for q in qs},",
+          " 'strings':[m.MCQ_BADGE,m.FIGURE_NOTE,m.OPTIONS_NOTE]}))",
+        ].join("\n"),
+      ],
+      { cwd: ROOT, encoding: "utf8", maxBuffer: 64 * 1024 * 1024 },
+    ),
+  );
+} catch (err) {
+  check("mcq: staged index builds", false, String(err).slice(0, 120));
+}
+
+if (staged) {
+  const mcqIndex = M.buildIndex(staged.index);
+  const mcqs = mcqIndex.length;
+  check("mcq: the staged index holds multiple-choice cards", mcqs > 0);
+  const differing = mcqIndex.filter(
+    (r) => M.cardHtml(r, staged.index.topics) !== staged.cards[r.q.id],
+  );
+  check(
+    "mcq: every MCQ card is byte-identical between Python and JavaScript",
+    differing.length === 0,
+    differing
+      .slice(0, 3)
+      .map((r) => r.q.id)
+      .join(", "),
+  );
+  staged.strings.forEach((s) => {
+    check(
+      "mcq: question-search.js spells out " + JSON.stringify(s.slice(0, 30)),
+      source.indexOf(JSON.stringify(s)) !== -1,
+    );
+  });
+  const cards = mcqIndex.map((r) => M.cardHtml(r, staged.index.topics));
+  check(
+    "mcq: no card carries a key or anything to click",
+    cards.every((c) => !/answer|<input|<button|data-correct/i.test(c)),
+  );
+  check(
+    "mcq: a card with options lists all four, lettered A-D",
+    mcqIndex.some(
+      (r, i) =>
+        r.q.options &&
+        (cards[i].match(/class="ppq-option-letter">[ABCD]</g) || [])
+          .length === 4,
+    ),
+  );
+  check(
+    "mcq: a card whose options are not text says so and lists none",
+    mcqIndex.some(
+      (r, i) =>
+        r.q.options === null &&
+        cards[i].indexOf(staged.strings[2]) !== -1 &&
+        cards[i].indexOf("ppq-options") === -1,
+    ),
+  );
+  const hits = (q) =>
+    mcqIndex.filter((r) => M.score(r, M.tokenise(q)) >= 0).length;
+  check(
+    'mcq: "multiple choice" finds every MCQ',
+    hits("multiple choice") === mcqs,
+    hits("multiple choice") + " of " + mcqs,
+  );
+  check(
+    "mcq: an option's words find its question",
+    mcqIndex
+      .filter((r) => M.score(r, M.tokenise("inelastic throughout its length")) >= 0)
+      .some((r) => r.q.id === "aqa-p3-2019-jun-q1"),
+  );
+}
+
 // ---- the board hubs bake PAGE_SIZE cards and fetch their board's payload
 //
 // Performance pass, 2026-08-23. scripts/build_past_paper_questions.py bakes

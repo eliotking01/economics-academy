@@ -259,7 +259,32 @@
   color: #252122;
 }
 
+/* Multiple-choice cards (Phase 7). The options as printed, one per line, the
+   letter as text: nothing to tick and nothing to reveal, because the bank
+   never carries a key (D67). The "Multiple choice" badge keeps the default
+   grey .ppq-badge, so it does not compete with the qualification badge. */
+.past-paper-questions-page .ppq-options {
+  list-style: none;
+  margin: 0 0 0.8rem;
+  padding: 0;
+  color: #252122;
+}
+
+.past-paper-questions-page .ppq-options li {
+  display: flex;
+  gap: 0.7em;
+  line-height: 1.5;
+  margin-bottom: 0.3rem;
+}
+
+.past-paper-questions-page .ppq-option-letter {
+  flex: none;
+  min-width: 1.1em;
+  font-weight: 700;
+}
+
 .past-paper-questions-page .ppq-choice,
+.past-paper-questions-page .ppq-figure,
 .past-paper-questions-page .ppq-note {
   font-size: 0.85em;
   color: var(--ppq-muted);

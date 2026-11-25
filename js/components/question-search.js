@@ -60,6 +60,29 @@
     return n + (Number(n) === 1 ? " mark" : " marks");
   }
 
+  // Multiple-choice cards (Phase 7). Character-equal with MCQ_BADGE,
+  // FIGURE_NOTE and OPTIONS_NOTE in build_past_paper_questions.py;
+  // scripts/test_question_search.js holds the two copies together.
+  var MCQ_BADGE = "Multiple choice";
+  var FIGURE_NOTE =
+    "Uses a table or diagram printed in the paper: open the question paper to see it.";
+  var OPTIONS_NOTE =
+    "The four options are printed in the paper and are not shown here: open the question paper to see them.";
+
+  // "Question type" filter values. A written card carries no `type`.
+  function typeOf(q) {
+    return q.type === "mcq" ? "mcq" : "written";
+  }
+
+  /* Question numbers compare as the build sorts them: the number first, then
+   * the label. AQA's MCQs are Q1-Q30, and as strings "10" sorts before "2". */
+  function compareQuestionNumbers(a, b) {
+    var na = parseInt(String(a).replace(/\D/g, ""), 10) || 0;
+    var nb = parseInt(String(b).replace(/\D/g, ""), 10) || 0;
+    if (na !== nb) return na - nb;
+    return a > b ? 1 : a < b ? -1 : 0;
+  }
+
   /* Bounded Levenshtein: returns true when a and b are within max edits.
    * Bailing out on the row minimum keeps this cheap on long non-matches. */
   function withinDistance(a, b, max) {
@@ -169,6 +192,12 @@
         paper.levelLabel,
       );
       parts.push(markTokens(q.marks).join(" "));
+      // An MCQ is found by its type and by its options, so searching
+      // "multiple choice" or an option's words finds it.
+      if (q.type === "mcq") {
+        parts.push("mcq multiple choice multiple-choice");
+        if (q.options) parts.push(searchableText(q.options.join(" ")));
+      }
 
       var hay = normalise(parts.join(" "));
       var tokens = tokenise(hay);
@@ -264,6 +293,9 @@
         marksLabel(q.marks) +
         "</span>",
     ];
+    if (q.type === "mcq") {
+      badges.push('<span class="ppq-badge ppq-badge-type">' + MCQ_BADGE + "</span>");
+    }
     q.groups.forEach(function (slug) {
       var g = groupLabels[groupKey(q.board, slug)];
       badges.push(
@@ -340,6 +372,33 @@
       ? '<p class="ppq-note">' + escapeHtml(paper.note) + "</p>"
       : "";
 
+    // The options as printed, lettered as text, with nothing to click: there
+    // is no answer to reveal (D67). Mirrors render_card().
+    var options = "";
+    var figure = "";
+    if (q.type === "mcq") {
+      if (q.options) {
+        options =
+          '<ol class="ppq-options">' +
+          q.options
+            .map(function (text, i) {
+              return (
+                '<li><span class="ppq-option-letter">' +
+                "ABCD".charAt(i) +
+                "</span> " +
+                escapeHtml(text) +
+                "</li>"
+              );
+            })
+            .join("") +
+          "</ol>";
+        if (q.usesFigure)
+          figure = '<p class="ppq-figure">' + escapeHtml(FIGURE_NOTE) + "</p>";
+      } else {
+        figure = '<p class="ppq-figure">' + escapeHtml(OPTIONS_NOTE) + "</p>";
+      }
+    }
+
     var choice = q.choiceGroup
       ? '<p class="ppq-choice">One of two options in Section ' +
         escapeHtml(q.section) +
@@ -356,6 +415,8 @@
       '<p class="ppq-question">' +
       escapeHtml(q.questionText) +
       "</p>" +
+      options +
+      figure +
       note +
       choice +
       (topicLinks ? '<p class="ppq-topics">' + topicLinks + "</p>" : "") +
@@ -660,12 +721,16 @@
       var papers = [];
       var years = [];
       var marks = [];
+      var types = [];
       data.questions.forEach(function (q) {
         var p = data.papers[q.p];
         if (papers.indexOf(p.paper) === -1) papers.push(p.paper);
         if (years.indexOf(p.year) === -1) years.push(p.year);
         if (marks.indexOf(q.marks) === -1) marks.push(q.marks);
+        if (types.indexOf(typeOf(q)) === -1) types.push(typeOf(q));
       });
+      // Written first, as the bank was before Phase 7.
+      types.sort().reverse();
       papers.sort();
       years.sort().reverse();
       marks.sort(function (a, b) {
@@ -683,6 +748,10 @@
       if (filters.marks)
         optionList(filters.marks, marks, function (v) {
           return marksLabel(v);
+        });
+      if (filters.type)
+        optionList(filters.type, types, function (v) {
+          return v === "mcq" ? MCQ_BADGE : "Written";
         });
       if (filters.board)
         optionList(
@@ -722,6 +791,12 @@
         filters.marks &&
         filters.marks.value &&
         String(q.marks) !== filters.marks.value
+      )
+        return false;
+      if (
+        filters.type &&
+        filters.type.value &&
+        typeOf(q) !== filters.type.value
       )
         return false;
       if (
@@ -779,7 +854,10 @@
         ) {
           if (b.record.paper.year !== a.record.paper.year)
             return b.record.paper.year - a.record.paper.year;
-          return a.record.q.questionNumber > b.record.q.questionNumber ? 1 : -1;
+          return compareQuestionNumbers(
+            a.record.q.questionNumber,
+            b.record.q.questionNumber,
+          );
         }
         return b.score - a.score;
       });
