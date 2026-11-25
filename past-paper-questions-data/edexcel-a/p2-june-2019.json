@@ -13,6 +13,29 @@
   "problems": [],
   "questions": [
     {
+      "id": "edexcel-a-p2-2019-jun-q1a",
+      "section": "A",
+      "questionNumber": "1(a)",
+      "parentQuestion": "1",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Monthly additions to UK credit card lending, £ billions, 2015 – 2017 Which one of the following would be most likely to cause an increase in credit card lending?",
+      "options": [
+        { "letter": "A", "text": "A fall in interest rates" },
+        { "letter": "B", "text": "A fall in investment" },
+        { "letter": "C", "text": "An increase in the deficit on the current account of the balance of payments" },
+        { "letter": "D", "text": "An increase in savings" }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2019-question-paper.pdf", "page": 2 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2019-mark-scheme.pdf", "page": 4, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
       "id": "edexcel-a-p2-2019-jun-q1b",
       "section": "A",
       "questionNumber": "1(b)",
@@ -61,6 +84,30 @@
       "extractionNotes": []
     },
     {
+      "id": "edexcel-a-p2-2019-jun-q2b",
+      "section": "A",
+      "questionNumber": "2(b)",
+      "parentQuestion": "2",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The International Monetary Fund has called on the G20 group of large industrialised countries to boost government spending on infrastructure. Which one of the following would be an example of government spending on infrastructure? An increase in:",
+      "sourceAttribution": "(Source: https://www.theguardian.com/business/2016/jul/23/imf-calls-for-more-government-spending-as-rate-cuts-lose-their-impact)",
+      "options": [
+        { "letter": "A", "text": "construction work on new railway lines" },
+        { "letter": "B", "text": "interest payments on the national debt" },
+        { "letter": "C", "text": "salaries for teachers" },
+        { "letter": "D", "text": "unemployment benefit payments" }
+      ],
+      "usesFigure": false,
+      "context": { "type": "question", "label": "Question 2 as printed", "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2019-question-paper.pdf", "page": 4 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2019-question-paper.pdf", "page": 5 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2019-mark-scheme.pdf", "page": 6, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-a-p2-2019-jun-q3a",
       "section": "A",
       "questionNumber": "3(a)",
@@ -91,6 +138,54 @@
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-a-p2-2019-jun-q3c",
+      "section": "A",
+      "questionNumber": "3(c)",
+      "parentQuestion": "3",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Unit labour costs for selected European countries, 2017, base year 2010 = 100. The increase in Austria’s unit labour costs between 2010 and 2017 is:",
+      "sourceAttribution": "(Source: http://www.oecd-ilibrary.org/economics/data/labour/unit-labour-cost-quarterly-indicators-early-estimates_data-00607-en)",
+      "options": [
+        { "letter": "A", "text": "3%" },
+        { "letter": "B", "text": "11.3%" },
+        { "letter": "C", "text": "13%" },
+        { "letter": "D", "text": "113%" }
+      ],
+      "usesFigure": true,
+      "context": { "type": "question", "label": "Question 3 as printed", "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2019-question-paper.pdf", "page": 6 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2019-question-paper.pdf", "page": 7 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2019-mark-scheme.pdf", "page": 7, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-a-p2-2019-jun-q4a",
+      "section": "A",
+      "questionNumber": "4(a)",
+      "parentQuestion": "4",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The UK Government is planning to cut the rate of corporation tax on all pre-tax profits of companies to 17% by 2020. This would be an example of:",
+      "sourceAttribution": "(Source: adapted from https://www.ft.com/content/7579f124-5742-11e7-9fed-c19e2700005f)",
+      "options": [
+        { "letter": "A", "text": "a contractionary monetary policy" },
+        { "letter": "B", "text": "an exchange rate policy" },
+        { "letter": "C", "text": "an expansionary monetary policy" },
+        { "letter": "D", "text": "a supply-side policy" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2019-question-paper.pdf", "page": 8 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2019-mark-scheme.pdf", "page": 8, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
     },
     {
       "id": "edexcel-a-p2-2019-jun-q4b",
@@ -151,6 +246,30 @@
       "sourceAttribution": "(Source: adapted from https://www.oxfam.org/en/pressroom/pressreleases /2016-01-18/62-people-own-same-half-world-reveals-oxfam-davos-report)",
       "context": null,
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2019-question-paper.pdf", "page": 10 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2019-mark-scheme.pdf", "page": 9, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "edexcel-a-p2-2019-jun-q5c",
+      "section": "A",
+      "questionNumber": "5(c)",
+      "parentQuestion": "5",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "According to the charity Oxfam, the combined wealth of the 62 richest people in the world is the same as the wealth of the poorest half of the world’s population. The value of the combined wealth of the poorest half of the world’s population has fallen by 38% between 2010 and 2016. Which one of the following would be most likely to reduce a country’s Gini coefficient? An increase in:",
+      "sourceAttribution": "(Source: adapted from https://www.oxfam.org/en/pressroom/pressreleases /2016-01-18/62-people-own-same-half-world-reveals-oxfam-davos-report)",
+      "options": [
+        { "letter": "A", "text": "import tariffs" },
+        { "letter": "B", "text": "progressive taxes" },
+        { "letter": "C", "text": "regressive taxes" },
+        { "letter": "D", "text": "value added tax" }
+      ],
+      "usesFigure": false,
+      "context": { "type": "question", "label": "Question 5 as printed", "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2019-question-paper.pdf", "page": 10 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2019-question-paper.pdf", "page": 11 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2019-mark-scheme.pdf", "page": 9, "verified": true },
       "modelAnswer": null,
       "extractionConfidence": "high",

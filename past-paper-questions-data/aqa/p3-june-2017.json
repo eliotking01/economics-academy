@@ -13,6 +13,1261 @@
   "problems": [],
   "questions": [
     {
+      "id": "aqa-p3-2017-jun-q1",
+      "section": "A",
+      "questionNumber": "1",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Economic decision making and policies are influenced by value judgements because",
+      "options": [
+        {
+          "letter": "A",
+          "text": "all people are motivated by the desire to maximise their incomes."
+        },
+        {
+          "letter": "B",
+          "text": "economic analysis and decision making is assumed to be based on complete information."
+        },
+        {
+          "letter": "C",
+          "text": "they are based on the same methodology as the natural sciences."
+        },
+        {
+          "letter": "D",
+          "text": "they involve moral and political considerations as well as positive analysis."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 2
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2017-jun-q2",
+      "section": "A",
+      "questionNumber": "2",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The diagram below shows the original market demand and supply curves (D1 and S) for loft insulation. Loft insulation reduces energy consumption. The government wishes to meet its energy efficiency target by shifting the market demand curve for loft insulation from D1 to D2. Which one of the following policies is most likely to enable the government to achieve its objective?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A decrease in the rate of VAT on domestic gas and electricity used for home heating"
+        },
+        {
+          "letter": "B",
+          "text": "A ‘nudge’ to households to install loft insulation by offering to clear lofts of unwanted items if insulation is installed"
+        },
+        {
+          "letter": "C",
+          "text": "The introduction of a maximum price for loft insulation"
+        },
+        {
+          "letter": "D",
+          "text": "The introduction of a subsidy paid to the firms installing loft insulation"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 3
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "the question prints a diagram or chart (an image)",
+        "3 subscript or superscript glyph(s) set flush against their base"
+      ]
+    },
+    {
+      "id": "aqa-p3-2017-jun-q3",
+      "section": "A",
+      "questionNumber": "3",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The law of diminishing marginal utility states that",
+      "options": [
+        {
+          "letter": "A",
+          "text": "as more of a product is consumed, the extra satisfaction will decline."
+        },
+        {
+          "letter": "B",
+          "text": "as more of all factors are employed, the additional output produced will fall."
+        },
+        {
+          "letter": "C",
+          "text": "as more variable factors are added to a fixed factor, the additional output produced will decline."
+        },
+        {
+          "letter": "D",
+          "text": "the total satisfaction from consuming a product will be maximised when marginal utility starts to fall."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 3
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2017-jun-q4",
+      "section": "A",
+      "questionNumber": "4",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The diagram below shows the market for bricklayers. The original equilibrium wage is W1 and the number of bricklayers employed is N1. Which one of the following events is most likely to increase the wage paid to bricklayers to W2 and increase employment to N2?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A cut in bank rate leading to a fall in mortgage interest rates"
+        },
+        {
+          "letter": "B",
+          "text": "A fall in the number of young people training as apprentice bricklayers"
+        },
+        {
+          "letter": "C",
+          "text": "An improvement in working conditions in the construction industry"
+        },
+        {
+          "letter": "D",
+          "text": "An increase in the wages paid to electricians in the construction industry"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 4
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "the question prints a diagram or chart (an image)",
+        "4 subscript or superscript glyph(s) set flush against their base"
+      ]
+    },
+    {
+      "id": "aqa-p3-2017-jun-q5",
+      "section": "A",
+      "questionNumber": "5",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "A firm employs three factors of production: capital, land and labour. The table below shows how the firm’s output is affected by changing the amount employed of these factor inputs. The firm experiences constant returns to scale when it increases its output from",
+      "options": [
+        {
+          "letter": "A",
+          "text": "500 to 1000 units."
+        },
+        {
+          "letter": "B",
+          "text": "1000 to 2000 units."
+        },
+        {
+          "letter": "C",
+          "text": "2000 to 3000 units."
+        },
+        {
+          "letter": "D",
+          "text": "3000 to 4000 units."
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 5
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "8 line(s) of figure or table text printed with the question are not reproduced; see the question paper"
+      ]
+    },
+    {
+      "id": "aqa-p3-2017-jun-q6",
+      "section": "A",
+      "questionNumber": "6",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The table below shows possible differences between the meanings of the terms invention and innovation. Which combination, A, B, C or D, correctly identifies the difference between the meanings of these terms?",
+      "options": null,
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 5
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "9 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the options are a table or formulae beside bare letters; only the letters are text"
+      ]
+    },
+    {
+      "id": "aqa-p3-2017-jun-q7",
+      "section": "A",
+      "questionNumber": "7",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The table below shows the output, average total cost and average revenue for a firm. At which one of the following levels of output will the firm maximise its profits?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "10 units"
+        },
+        {
+          "letter": "B",
+          "text": "11 units"
+        },
+        {
+          "letter": "C",
+          "text": "12 units"
+        },
+        {
+          "letter": "D",
+          "text": "13 units"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 6
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "5 line(s) of figure or table text printed with the question are not reproduced; see the question paper"
+      ]
+    },
+    {
+      "id": "aqa-p3-2017-jun-q8",
+      "section": "A",
+      "questionNumber": "8",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The diagram below shows the cost and revenue curves for a monopoly. At which one of the following levels of output would the firm be productively efficient?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "OW"
+        },
+        {
+          "letter": "B",
+          "text": "OX"
+        },
+        {
+          "letter": "C",
+          "text": "OY"
+        },
+        {
+          "letter": "D",
+          "text": "OZ"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 7
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "the question prints a diagram or chart (an image)"
+      ]
+    },
+    {
+      "id": "aqa-p3-2017-jun-q9",
+      "section": "A",
+      "questionNumber": "9",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The marginal revenue product of labour is the",
+      "options": [
+        {
+          "letter": "A",
+          "text": "addition to total revenue when the firm produces and sells an extra unit of output."
+        },
+        {
+          "letter": "B",
+          "text": "amount produced per worker per time period."
+        },
+        {
+          "letter": "C",
+          "text": "change in total output that is produced when one extra worker is employed."
+        },
+        {
+          "letter": "D",
+          "text": "revenue gained by selling the extra output produced by employing one more worker."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 7
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2017-jun-q10",
+      "section": "A",
+      "questionNumber": "10",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The diagram below shows the demand curves (D1 and D2) and the supply curve (S) in the market for good X. The initial market equilibrium is at E1. The increase in market demand from D1 to D2 results in a new market equilibrium at E2. The market mechanism that leads to the establishment of the new equilibrium is based on",
+      "options": [
+        {
+          "letter": "A",
+          "text": "excess demand for good X at the initial price of P1."
+        },
+        {
+          "letter": "B",
+          "text": "excess demand for good X at the new price P2."
+        },
+        {
+          "letter": "C",
+          "text": "excess supply of good X at the initial price of P1."
+        },
+        {
+          "letter": "D",
+          "text": "excess supply for good X at the new price P2."
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 8
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "the question prints a diagram or chart (an image)",
+        "10 subscript or superscript glyph(s) set flush against their base"
+      ]
+    },
+    {
+      "id": "aqa-p3-2017-jun-q11",
+      "section": "A",
+      "questionNumber": "11",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following values for the Gini coefficient shows the greatest inequality?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "-0.5"
+        },
+        {
+          "letter": "B",
+          "text": "0"
+        },
+        {
+          "letter": "C",
+          "text": "0.5"
+        },
+        {
+          "letter": "D",
+          "text": "1"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 8
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2017-jun-q12",
+      "section": "A",
+      "questionNumber": "12",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The tragedy of the commons can be applied to the fishing industry. What is the nature of this market failure?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Over-fishing resulting in declining fish populations"
+        },
+        {
+          "letter": "B",
+          "text": "The imposition of fishing quotas by the European Union"
+        },
+        {
+          "letter": "C",
+          "text": "The positive externalities associated with fish consumption"
+        },
+        {
+          "letter": "D",
+          "text": "The third-party effects on dolphins as a result of tuna fishing"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 9
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2017-jun-q13",
+      "section": "A",
+      "questionNumber": "13",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Immobility of labour may lead to a misallocation of resources and market failure because",
+      "options": [
+        {
+          "letter": "A",
+          "text": "a change in the pattern of demand results in structural unemployment."
+        },
+        {
+          "letter": "B",
+          "text": "the education and training needed to reduce labour immobility is a public good."
+        },
+        {
+          "letter": "C",
+          "text": "the government’s target for the rate of inflation is too high."
+        },
+        {
+          "letter": "D",
+          "text": "the immobility of factors of production is a negative externality in production."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 9
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2017-jun-q14",
+      "section": "A",
+      "questionNumber": "14",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The following table shows the real GDP of an economy from 2012 to 2016. If the figures were converted to index form with 2013 as the base year, what would be the value of the index (to the nearest whole number) in 2016?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "124"
+        },
+        {
+          "letter": "B",
+          "text": "125"
+        },
+        {
+          "letter": "C",
+          "text": "126"
+        },
+        {
+          "letter": "D",
+          "text": "127"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 9
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "4 line(s) of figure or table text printed with the question are not reproduced; see the question paper"
+      ]
+    },
+    {
+      "id": "aqa-p3-2017-jun-q15",
+      "section": "A",
+      "questionNumber": "15",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The information below shows the changes in key economic indicators for a country over a period of one year. Which one of the following can be concluded from the data?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "External costs generated from economic activity have reduced the quality of life"
+        },
+        {
+          "letter": "B",
+          "text": "Real GDP per capita has fallen"
+        },
+        {
+          "letter": "C",
+          "text": "The distribution of income has become more unequal"
+        },
+        {
+          "letter": "D",
+          "text": "The standard of living of typical residents in the country has probably improved"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 10
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "4 line(s) of figure or table text printed with the question are not reproduced; see the question paper"
+      ]
+    },
+    {
+      "id": "aqa-p3-2017-jun-q16",
+      "section": "A",
+      "questionNumber": "16",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Assuming that the value of the marginal propensity to consume is 0.6, which of the following changes in national income would result from an increase in exports of £19bn?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "£31.7bn"
+        },
+        {
+          "letter": "B",
+          "text": "£47.5bn"
+        },
+        {
+          "letter": "C",
+          "text": "£76bn"
+        },
+        {
+          "letter": "D",
+          "text": "£114bn"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 10
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2017-jun-q17",
+      "section": "A",
+      "questionNumber": "17",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The primary measure of unemployment in the UK is based on the",
+      "options": [
+        {
+          "letter": "A",
+          "text": "number of people joining the labour force minus the number of people leaving the labour force."
+        },
+        {
+          "letter": "B",
+          "text": "number of people not working who are of working age."
+        },
+        {
+          "letter": "C",
+          "text": "the number of people actively seeking work and available to start work."
+        },
+        {
+          "letter": "D",
+          "text": "proportion of the population of working age without a job."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 11
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2017-jun-q18",
+      "section": "A",
+      "questionNumber": "18",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The diagram below depicts an aggregate demand (AD) curve and two long-run aggregate supply (LRAS) curves for an economy. The economy’s initial equilibrium is at E1. All other things being equal, the movement of the economy from its initial equilibrium at E1 to E2 is most likely to be caused by an increase in",
+      "options": [
+        {
+          "letter": "A",
+          "text": "government borrowing."
+        },
+        {
+          "letter": "B",
+          "text": "labour productivity."
+        },
+        {
+          "letter": "C",
+          "text": "the rate of deflation."
+        },
+        {
+          "letter": "D",
+          "text": "money wage rates."
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 11
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "the question prints a diagram or chart (an image)",
+        "3 subscript or superscript glyph(s) set flush against their base"
+      ]
+    },
+    {
+      "id": "aqa-p3-2017-jun-q19",
+      "section": "A",
+      "questionNumber": "19",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The diagram below represents the market for unskilled agricultural labourers where the demand for agricultural labourers is DL and the supply is SL. The trade union representing agricultural labourers has negotiated a minimum wage of OWmin for its members. The effect of implementing a minimum wage of OWmin is that",
+      "options": [
+        {
+          "letter": "A",
+          "text": "cyclical unemployment increases by (ON3 – ON1)."
+        },
+        {
+          "letter": "B",
+          "text": "frictional unemployment increases by (ON2 – ON1)."
+        },
+        {
+          "letter": "C",
+          "text": "real wage unemployment increases by (ON3 – ON1)."
+        },
+        {
+          "letter": "D",
+          "text": "the natural rate of unemployment increases by (ON2 – ON1)."
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 12
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "the question prints a diagram or chart (an image)",
+        "16 subscript or superscript glyph(s) set flush against their base"
+      ]
+    },
+    {
+      "id": "aqa-p3-2017-jun-q20",
+      "section": "A",
+      "questionNumber": "20",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "A bank makes a new loan to a customer. All other things being equal, which combination of events, A, B, C or D, shows what will happen?",
+      "options": null,
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 12
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "7 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the options are the rows of a table; not reproduced"
+      ]
+    },
+    {
+      "id": "aqa-p3-2017-jun-q21",
+      "section": "A",
+      "questionNumber": "21",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "A government issued bond has a nominal value of £100 and the annual coupon is £6. The bond has 35 years until maturity. Its current yield is 5%. The current market price of the bond is",
+      "options": [
+        {
+          "letter": "A",
+          "text": "£100"
+        },
+        {
+          "letter": "B",
+          "text": "£105"
+        },
+        {
+          "letter": "C",
+          "text": "£106"
+        },
+        {
+          "letter": "D",
+          "text": "£120"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 13
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2017-jun-q22",
+      "section": "A",
+      "questionNumber": "22",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following combinations, A, B, C or D, best distinguishes between the functions of the money market and the capital market?",
+      "options": null,
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 13
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "21 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the options are the rows of a table; not reproduced"
+      ]
+    },
+    {
+      "id": "aqa-p3-2017-jun-q23",
+      "section": "A",
+      "questionNumber": "23",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The table below shows the marginal income tax rates in an economy for 2016. Table: Marginal income tax rates for every $1 of income How much income tax would be payable by someone earning $40 000 in 2016?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "$5 000"
+        },
+        {
+          "letter": "B",
+          "text": "$5 500"
+        },
+        {
+          "letter": "C",
+          "text": "$10 000"
+        },
+        {
+          "letter": "D",
+          "text": "$12 000"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 14
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "5 line(s) of figure or table text printed with the question are not reproduced; see the question paper"
+      ]
+    },
+    {
+      "id": "aqa-p3-2017-jun-q24",
+      "section": "A",
+      "questionNumber": "24",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The national debt is the",
+      "options": [
+        {
+          "letter": "A",
+          "text": "annual budget deficit plus the external trade deficit."
+        },
+        {
+          "letter": "B",
+          "text": "amount by which the budget deficit increases each year."
+        },
+        {
+          "letter": "C",
+          "text": "annual difference between government spending and tax receipts."
+        },
+        {
+          "letter": "D",
+          "text": "the cumulative stock of outstanding central government borrowing."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 14
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2017-jun-q25",
+      "section": "A",
+      "questionNumber": "25",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The table below shows how much of each of two products can be produced by two countries with the same amount of resources. Which one of the following statements is correct?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Brazil has a comparative advantage in the production of both motorbikes and cars."
+        },
+        {
+          "letter": "B",
+          "text": "Brazil has a comparative advantage in the production of cars."
+        },
+        {
+          "letter": "C",
+          "text": "The opportunity cost of producing motorbikes is higher in the United States than Brazil."
+        },
+        {
+          "letter": "D",
+          "text": "Trade will not take place because Brazil is better at producing both goods."
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 15
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "3 line(s) of figure or table text printed with the question are not reproduced; see the question paper"
+      ]
+    },
+    {
+      "id": "aqa-p3-2017-jun-q26",
+      "section": "A",
+      "questionNumber": "26",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "A country has a Human Development Index of 0.91. This country is most likely to have",
+      "options": [
+        {
+          "letter": "A",
+          "text": "a high dependence on its primary sector."
+        },
+        {
+          "letter": "B",
+          "text": "a low level of life expectancy."
+        },
+        {
+          "letter": "C",
+          "text": "rapid population growth."
+        },
+        {
+          "letter": "D",
+          "text": "relatively low levels of illiteracy."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 15
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2017-jun-q27",
+      "section": "A",
+      "questionNumber": "27",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The table below shows the Consumer Prices Index for a country over a number of years. Which one of the following can be concluded from the table?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "The country suffered disinflation in Year 5"
+        },
+        {
+          "letter": "B",
+          "text": "The inflation rate was highest in Year 7"
+        },
+        {
+          "letter": "C",
+          "text": "The only time the country suffered deflation was in Year 2"
+        },
+        {
+          "letter": "D",
+          "text": "Real incomes fell between Year 1 and Year 7"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 16
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "10 line(s) of figure or table text printed with the question are not reproduced; see the question paper"
+      ]
+    },
+    {
+      "id": "aqa-p3-2017-jun-q28",
+      "section": "A",
+      "questionNumber": "28",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The diagram below shows the aggregate demand (AD) and two short-run aggregate supply (SRAS) curves for an economy. All other things being equal, which one of the following is most likely to cause the short-run aggregate supply curve to shift from SRAS1 to SRAS2?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A fall in the size of the labour force"
+        },
+        {
+          "letter": "B",
+          "text": "An increase in imports"
+        },
+        {
+          "letter": "C",
+          "text": "An increase in the value of the multiplier"
+        },
+        {
+          "letter": "D",
+          "text": "Lower world commodity prices"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 17
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "the question prints a diagram or chart (an image)",
+        "2 subscript or superscript glyph(s) set flush against their base"
+      ]
+    },
+    {
+      "id": "aqa-p3-2017-jun-q29",
+      "section": "A",
+      "questionNumber": "29",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The diagram below shows the marginal private and social benefit (MPB and MSB) curves and the marginal private and social cost (MPC and MSC) curves in a market where there are positive externalities in production. At the free market equilibrium, market failure occurs. Which one of the following is correct?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "As a result of this market failure, consumer surplus is reduced by ZXY"
+        },
+        {
+          "letter": "B",
+          "text": "As a result of this market failure, there is a deadweight loss to society of P3P1XZ"
+        },
+        {
+          "letter": "C",
+          "text": "P1 minus P3 is the subsidy per unit that is required to correct the market failure and achieve the social optimum"
+        },
+        {
+          "letter": "D",
+          "text": "The diagonal distance XY shows the amount by which marginal private cost exceeds marginal social cost at OQ2"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 18
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "the question prints a diagram or chart (an image)",
+        "5 subscript or superscript glyph(s) set flush against their base"
+      ]
+    },
+    {
+      "id": "aqa-p3-2017-jun-q30",
+      "section": "A",
+      "questionNumber": "30",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The price elasticity of demand for games consoles is -1.2. It can be concluded that a 10% reduction in their price would lead to a percentage change in demand of",
+      "options": [
+        {
+          "letter": "A",
+          "text": "−8.3%"
+        },
+        {
+          "letter": "B",
+          "text": "−12.0%"
+        },
+        {
+          "letter": "C",
+          "text": "+8.3%"
+        },
+        {
+          "letter": "D",
+          "text": "+12.0%"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-question-paper.pdf",
+        "page": 18
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "aqa-p3-2017-jun-q31",
       "section": "B",
       "questionNumber": "31",

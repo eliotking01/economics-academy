@@ -29,6 +29,30 @@
       "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
+      "id": "edexcel-a-p1-2024-jun-q1b",
+      "section": "A",
+      "questionNumber": "1(b)",
+      "parentQuestion": "1",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The table below shows price elasticity of demand for bus tickets in London 2021 In 2021, the adult 7-day bus ticket was £21.90. Bus ticket prices in London in 2022 increased by 4.8%. Ceteris paribus, which one of the following is the percentage decrease in the 7-day bus ticket demand by adults?",
+      "sourceAttribution": "(Source adapted from: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/669090/youth-travel-concessions-price-elasticity.pdf and https://tfl.gov.uk/fares/find-fares/bus-and-tram-fares#on-this-page-4)",
+      "options": [
+        { "letter": "A", "text": "0.08" },
+        { "letter": "B", "text": "1.92" },
+        { "letter": "C", "text": "3.36" },
+        { "letter": "D", "text": "12.00" }
+      ],
+      "usesFigure": true,
+      "context": { "type": "question", "label": "Question 1 as printed", "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2024-question-paper.pdf", "page": 2 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2024-question-paper.pdf", "page": 3 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2024-mark-scheme.pdf", "page": 6, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
       "id": "edexcel-a-p1-2024-jun-q2a",
       "section": "A",
       "questionNumber": "2(a)",
@@ -40,6 +64,30 @@
       "context": null,
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2024-question-paper.pdf", "page": 4 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2024-mark-scheme.pdf", "page": 7, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-a-p1-2024-jun-q2b",
+      "section": "A",
+      "questionNumber": "2(b)",
+      "parentQuestion": "2",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The table below shows price elasticity of supply for housing in the US in 2020. In Texas the price elasticity of supply is +1.8. Which one of the following is the percentage increase in price if the quantity of housing supplied in Texas is increased by 12%?",
+      "sourceAttribution": "(Source adapted from: https://bankunderground.co.uk/2020/02/25/the-declining-elasticity-of-us-housing-supply/)",
+      "options": [
+        { "letter": "A", "text": "0.15" },
+        { "letter": "B", "text": "1.50" },
+        { "letter": "C", "text": "6.67" },
+        { "letter": "D", "text": "21.60" }
+      ],
+      "usesFigure": true,
+      "context": { "type": "question", "label": "Question 2 as printed", "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2024-question-paper.pdf", "page": 4 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2024-question-paper.pdf", "page": 5 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2024-mark-scheme.pdf", "page": 8, "verified": true },
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
@@ -61,6 +109,30 @@
       "extractionNotes": []
     },
     {
+      "id": "edexcel-a-p1-2024-jun-q3b",
+      "section": "A",
+      "questionNumber": "3(b)",
+      "parentQuestion": "3",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Peloton is a firm which makes exercise bikes. Peloton’s objective is to prioritise selling fitness services rather than to achieve short-term profit maximisation. If Peloton changes its objective to sales maximisation, then without making a loss, it operates at an output where:",
+      "sourceAttribution": "(Source adapted from: https://www.forbes.com/sites/shelleykohan/2022/01/26/peloton-prioritizes-access-and-acquisition-over-profits/?sh=13d8ee474f40 )",
+      "options": [
+        { "letter": "A", "text": "average cost equals average revenue" },
+        { "letter": "B", "text": "average cost is minimised" },
+        { "letter": "C", "text": "price elasticity of demand is equal to -1" },
+        { "letter": "D", "text": "price equals marginal cost" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2024-question-paper.pdf", "page": 6 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2024-mark-scheme.pdf", "page": 9, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-a-p1-2024-jun-q4a",
       "section": "A",
       "questionNumber": "4(a)",
@@ -77,6 +149,30 @@
       "extractionNotes": []
     },
     {
+      "id": "edexcel-a-p1-2024-jun-q4b",
+      "section": "A",
+      "questionNumber": "4(b)",
+      "parentQuestion": "4",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "In 2022 the government announced that the maximum undergraduate tuition fee for universities in England will remain at £9 250 per year for the next two years. Which one of the following is an example of government failure associated with the maximum price?",
+      "sourceAttribution": "(Source adapted from: https://questions-statements.parliament.uk/written-statements/detail/2021-10-21/HCWS339)",
+      "options": [
+        { "letter": "A", "text": "Contraction in demand" },
+        { "letter": "B", "text": "Distortion of price signals" },
+        { "letter": "C", "text": "Excess supply" },
+        { "letter": "D", "text": "Extension in supply" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2024-question-paper.pdf", "page": 7 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2024-mark-scheme.pdf", "page": 11, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-a-p1-2024-jun-q5a",
       "section": "A",
       "questionNumber": "5(a)",
@@ -85,6 +181,30 @@
       "marks": 4,
       "questionText": "The graph below shows the largest mortgage lenders in the United Kingdom (UK) in 2020, by market share. With reference to the information on the preceding page, explain the market structure of mortgage lending in the UK.",
       "sourceAttribution": "(Source adapted from: https://www.statista.com/statistics/727348/uk-banks-gross-lending-market-share/)",
+      "context": { "type": "question", "label": "Question 5 as printed", "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2024-question-paper.pdf", "page": 8 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2024-question-paper.pdf", "page": 9 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2024-mark-scheme.pdf", "page": 12, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-a-p1-2024-jun-q5b",
+      "section": "A",
+      "questionNumber": "5(b)",
+      "parentQuestion": "5",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The graph below shows the largest mortgage lenders in the United Kingdom (UK) in 2020, by market share. The value of all mortgage loans was £1 601 billion at the end of 2020. Which one of the following is the value of Lloyds’ market share?",
+      "sourceAttribution": "(Source adapted from: https://www.statista.com/statistics/727348/uk-banks-gross-lending-market-share/)",
+      "options": [
+        { "letter": "A", "text": "£82 billion" },
+        { "letter": "B", "text": "£126 billion" },
+        { "letter": "C", "text": "£312 billion" },
+        { "letter": "D", "text": "£8 210 billion" }
+      ],
+      "usesFigure": true,
       "context": { "type": "question", "label": "Question 5 as printed", "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2024-question-paper.pdf", "page": 8 },
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2024-question-paper.pdf", "page": 9 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2024-mark-scheme.pdf", "page": 12, "verified": true },

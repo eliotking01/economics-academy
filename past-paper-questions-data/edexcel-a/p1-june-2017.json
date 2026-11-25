@@ -28,6 +28,29 @@
       "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
+      "id": "edexcel-a-p1-2017-jun-q1b",
+      "section": "A",
+      "questionNumber": "1(b)",
+      "parentQuestion": "1",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The table shows market data for e-cigarette kits. The original equilibrium price is £23. As a result of a successful advertising campaign, demand increased by 3 000 e-cigarette kits at all prices. At the same time production costs fell leading to an increase in supply of 1 000 e-cigarette kits at all prices. Research conducted in New Zealand in 2014 estimated the cross elasticity of demand for e-cigarettes to be 0.16 in response to changes in the price of tobacco. This implies that a 5% increase in the price of tobacco will cause the percentage change in demand for e-cigarettes to be:",
+      "options": [
+        { "letter": "A", "text": "-31.25" },
+        { "letter": "B", "text": "-0.16" },
+        { "letter": "C", "text": "0.8" },
+        { "letter": "D", "text": "31.25" }
+      ],
+      "usesFigure": true,
+      "context": { "type": "question", "label": "Question 1 as printed", "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2017-question-paper.pdf", "page": 2 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2017-question-paper.pdf", "page": 3 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2017-mark-scheme.pdf", "page": 4, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
       "id": "edexcel-a-p1-2017-jun-q2a",
       "section": "A",
       "questionNumber": "2(a)",
@@ -55,6 +78,30 @@
       "context": null,
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2017-question-paper.pdf", "page": 4 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2017-mark-scheme.pdf", "page": 5, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "edexcel-a-p1-2017-jun-q2c",
+      "section": "A",
+      "questionNumber": "2(c)",
+      "parentQuestion": "2",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Between 2010 and 2015 the average price of tea in the UK increased from £7.20 per kilo to £8.48 per kilo. Over the same period the quantity of tea purchased fell from 97 million kilos to 76 million kilos. Estimates for the demand for black tea in the UK suggest that it is an inferior good. This implies it has a negative:",
+      "sourceAttribution": "(Source: http://www.theguardian.com/lifeandstyle/shortcuts/2015/aug/05/brew-do-you-think-you-are-why-tea-needs-to-copy-coffee-in-order-to-survive)",
+      "options": [
+        { "letter": "A", "text": "cross elasticity of demand" },
+        { "letter": "B", "text": "income elasticity of demand" },
+        { "letter": "C", "text": "price elasticity of demand" },
+        { "letter": "D", "text": "price elasticity of supply" }
+      ],
+      "usesFigure": false,
+      "context": { "type": "question", "label": "Question 2 as printed", "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2017-question-paper.pdf", "page": 4 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2017-question-paper.pdf", "page": 5 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2017-mark-scheme.pdf", "page": 6, "verified": true },
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": []
@@ -92,6 +139,30 @@
       "extractionNotes": ["sub-parts (i) and (ii) kept inside the part, marks summed", "figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
+      "id": "edexcel-a-p1-2017-jun-q3c",
+      "section": "A",
+      "questionNumber": "3(c)",
+      "parentQuestion": "3",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The Indian government has introduced a subsidy on domestic cooking gas cylinders in the city of Mumbai. The diagram below shows the effect following the introduction of the subsidy. One effect of the subsidy is to increase:",
+      "sourceAttribution": "(Source: https://www.iocl.com/products/indanegas.aspx and http://indianexpress.com/article/business/business-others/lpg-subsidy-fixed-at-rs-568-price-to-change-after-march/)",
+      "options": [
+        { "letter": "A", "text": "consumer surplus" },
+        { "letter": "B", "text": "market failure" },
+        { "letter": "C", "text": "public good provision" },
+        { "letter": "D", "text": "tax revenue" }
+      ],
+      "usesFigure": true,
+      "context": { "type": "question", "label": "Question 3 as printed", "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2017-question-paper.pdf", "page": 6 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2017-question-paper.pdf", "page": 7 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2017-mark-scheme.pdf", "page": 7, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
       "id": "edexcel-a-p1-2017-jun-q4a",
       "section": "A",
       "questionNumber": "4(a)",
@@ -105,6 +176,53 @@
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": []
+    },
+    {
+      "id": "edexcel-a-p1-2017-jun-q4b",
+      "section": "A",
+      "questionNumber": "4(b)",
+      "parentQuestion": "4",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "In 2015 JCB, the construction equipment manufacturer, experienced a 6% fall in revenue. This resulted from a reduction in sales of construction equipment to emerging markets. In India JCB has a strong brand image and a 50% share of the market for construction equipment. This means the construction equipment market in India is likely to have a low level of:",
+      "options": [
+        { "letter": "A", "text": "concentration" },
+        { "letter": "B", "text": "contestability" },
+        { "letter": "C", "text": "private ownership" },
+        { "letter": "D", "text": "specialisation" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2017-question-paper.pdf", "page": 8 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2017-mark-scheme.pdf", "page": 9, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "edexcel-a-p1-2017-jun-q5a",
+      "section": "A",
+      "questionNumber": "5(a)",
+      "parentQuestion": "5",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Figure 1 shows the distribution of the revenue received from the sale of a Starbucks cappuccino drink priced at £2.27 in 2015. Which one of the following is a fixed cost to Starbucks?",
+      "sourceAttribution": "(Source: adapted from Allegra strategies research and analysis, reported in The Times, 27th January 2015)",
+      "options": [
+        { "letter": "A", "text": "Coffee" },
+        { "letter": "B", "text": "Milk" },
+        { "letter": "C", "text": "Packaging" },
+        { "letter": "D", "text": "Rent" }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2017-question-paper.pdf", "page": 9 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2017-mark-scheme.pdf", "page": 9, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
       "id": "edexcel-a-p1-2017-jun-q5b",

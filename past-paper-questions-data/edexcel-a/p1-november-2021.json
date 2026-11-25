@@ -13,6 +13,24 @@
   "problems": [],
   "questions": [
     {
+      "id": "edexcel-a-p1-2021-nov-q1a",
+      "section": "A",
+      "questionNumber": "1(a)",
+      "parentQuestion": "1",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Statement 1: Since Poland joined the European Union (EU) in 2004, over one million of its workforce have migrated to other countries in the EU. Statement 2: Many engineers have left Poland for higher paid jobs in other countries in the EU. Which one of the following best describes the two statements above?",
+      "options": null,
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-november-2021-question-paper.pdf", "page": 2 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-november-2021-mark-scheme.pdf", "page": 4, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["the options are the rows of a table under the heads 'Statement 1 Statement 2'; not reproduced", "figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
       "id": "edexcel-a-p1-2021-nov-q1b",
       "section": "A",
       "questionNumber": "1(b)",
@@ -44,6 +62,29 @@
       "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
+      "id": "edexcel-a-p1-2021-nov-q2b",
+      "section": "A",
+      "questionNumber": "2(b)",
+      "parentQuestion": "2",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Cobalt is a key metal used in the batteries of electric cars. China is the world’s largest producer of electric cars but has recently cut subsidies to its manufacturers. The Democratic Republic of the Congo (DRC) produces more than 60% of the world’s supply of cobalt, from its small-scale mines. Many new small mines opened in 2018 as a result of improved expectations of profit. The following graph shows the price of cobalt between June 2018 and June 2019. Between June 2018 and June 2019 the price of cobalt fell by:",
+      "options": [
+        { "letter": "A", "text": "25%" },
+        { "letter": "B", "text": "37.5%" },
+        { "letter": "C", "text": "62.5%" },
+        { "letter": "D", "text": "166.7%" }
+      ],
+      "usesFigure": true,
+      "context": { "type": "question", "label": "Question 2 as printed", "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-november-2021-question-paper.pdf", "page": 4 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-november-2021-question-paper.pdf", "page": 5 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-november-2021-mark-scheme.pdf", "page": 6, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
       "id": "edexcel-a-p1-2021-nov-q3a",
       "section": "A",
       "questionNumber": "3(a)",
@@ -54,6 +95,29 @@
       "context": null,
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-november-2021-question-paper.pdf", "page": 6 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-november-2021-mark-scheme.pdf", "page": 7, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "edexcel-a-p1-2021-nov-q3b",
+      "section": "A",
+      "questionNumber": "3(b)",
+      "parentQuestion": "3",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "River Island is a clothing retailer. Students are offered a River Island student discount code to benefit from a 10% price reduction as an attempt by the firm to increase profit. Which one of the following is necessary for a firm to be able to practise price discrimination?",
+      "options": [
+        { "letter": "A", "text": "It has some degree of market power" },
+        { "letter": "B", "text": "It is able to store its product" },
+        { "letter": "C", "text": "Its product has different features in different markets" },
+        { "letter": "D", "text": "The costs of supplying some customers are higher" }
+      ],
+      "usesFigure": false,
+      "context": { "type": "question", "label": "Question 3 as printed", "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-november-2021-question-paper.pdf", "page": 6 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-november-2021-question-paper.pdf", "page": 7 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-november-2021-mark-scheme.pdf", "page": 8, "verified": true },
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": []
@@ -91,6 +155,30 @@
       "extractionNotes": []
     },
     {
+      "id": "edexcel-a-p1-2021-nov-q4c",
+      "section": "A",
+      "questionNumber": "4(c)",
+      "parentQuestion": "4",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Patrick Street Productions produces musicals. Its latest production is ‘It’s a Wonderful Life’ and the total cost of this production is $200 000. The ticket price is $40. The theatre has a capacity of 300 seats. The company aims for revenue maximisation. If this is achieved, revenue from ticket sales will cover 30% of total costs. Charitable donations contribute 12.5% towards total cost and a government subsidy ensures the production covers all of its costs. Which one of the following conditions is necessary for revenue maximisation to occur?",
+      "sourceAttribution": "(Source adapted from: https://www.cbc.ca/news/canada/british-columbia/a-bit-of-a-desperate-time-as-costs-rise-professional-theatre-companies-survive-rather-than-thrive-1.5489733)",
+      "options": [
+        { "letter": "A", "text": "Average revenue equals average cost" },
+        { "letter": "B", "text": "Average revenue equals marginal cost" },
+        { "letter": "C", "text": "Marginal revenue equals average revenue" },
+        { "letter": "D", "text": "Marginal revenue equals zero" }
+      ],
+      "usesFigure": false,
+      "context": { "type": "question", "label": "Question 4 as printed", "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-november-2021-question-paper.pdf", "page": 8 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-november-2021-question-paper.pdf", "page": 9 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-november-2021-mark-scheme.pdf", "page": 9, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-a-p1-2021-nov-q5a",
       "section": "A",
       "questionNumber": "5(a)",
@@ -98,6 +186,29 @@
       "choiceGroup": null,
       "marks": 4,
       "questionText": "In Sicily, many households can grow lemons of the same quality as each other. Chiara decides to sell lemons at her local market, expecting to make a normal profit. She notices that all of the many lemon sellers are charging exactly the same price. Draw diagrams showing the equilibrium positions for both the lemon market and a typical firm in the long run.",
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-november-2021-question-paper.pdf", "page": 10 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-november-2021-mark-scheme.pdf", "page": 10, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "edexcel-a-p1-2021-nov-q5b",
+      "section": "A",
+      "questionNumber": "5(b)",
+      "parentQuestion": "5",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "In Sicily, many households can grow lemons of the same quality as each other. Chiara decides to sell lemons at her local market, expecting to make a normal profit. She notices that all of the many lemon sellers are charging exactly the same price. Which one of the following will exist in the short run if Chiara makes a loss?",
+      "options": [
+        { "letter": "A", "text": "Allocative efficiency and productive efficiency" },
+        { "letter": "B", "text": "Allocative efficiency and productive inefficiency" },
+        { "letter": "C", "text": "Allocative inefficiency and productive efficiency" },
+        { "letter": "D", "text": "Allocative inefficiency and productive inefficiency" }
+      ],
+      "usesFigure": false,
       "context": null,
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-november-2021-question-paper.pdf", "page": 10 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-november-2021-mark-scheme.pdf", "page": 10, "verified": true },

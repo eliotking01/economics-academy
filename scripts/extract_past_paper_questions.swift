@@ -1,8 +1,9 @@
 // Extract past-paper questions into JSON, one file per paper:
 //
 //   Edexcel A (9EC0 / 8EC0): every section of Papers 1 and 2 - Section A's
-//     written parts only, its MCQs being Phase 7's - and both sections of
-//     Paper 3, into edexcel-a/ and edexcel-a-as/. See extractSectionA().
+//     written parts (Phase 6) and its one MCQ per question (Phase 7, options
+//     read by position: see mcqGeometry()) - and both sections of Paper 3,
+//     into edexcel-a/ and edexcel-a-as/. See extractSectionA().
 //   Edexcel B (9EB0 / 8EB0): every question of every paper - B has no
 //     multiple choice and no optional questions - into edexcel-b/ and
 //     edexcel-b-as/. See extractB().
@@ -204,6 +205,14 @@ struct QuestionOut {
     var msVerified: Bool
     var confidence: String
     var notes: [String]
+    /// Phase 7 multiple choice (approved 2026-11-25, review/phase-7-mcqs.md).
+    /// Only an MCQ sets these, so every written record keeps its shape on disk:
+    /// `type` "mcq", the options A-D as printed (nil when they are diagrams or
+    /// a table), and whether the card leans on a figure it cannot show. There
+    /// is no answer field, by design (D67).
+    var type: String? = nil
+    var options: [(letter: String, text: String)]? = nil
+    var usesFigure: Bool = false
 }
 
 struct PaperMeta {
@@ -725,9 +734,10 @@ func extractPaper3(pages: [String], meta: PaperMeta, msPages: [String])
 //   A Level  Q1-Q5, 5 marks each = 25.   AS  Q1-Q5, 4 marks each = 20.
 //
 // Every question has exactly one multiple-choice part - 1 mark, A-D answer
-// boxes - beside its written parts. Phase 6 extracts the written parts only;
-// the MCQs wait for Phase 7. A part is an MCQ if and only if it prints A-D
-// boxes, never by its mark: AS sets 1-mark "Define the term" parts.
+// boxes - beside its written parts. Phase 6 extracted the written parts;
+// Phase 7 adds the MCQ as a card of its own (type "mcq", see mcqGeometry()).
+// A part is an MCQ if and only if it prints A-D boxes, never by its mark: AS
+// sets 1-mark "Define the term" parts.
 //
 // Each card carries its question's opening stem, then every lead-in printed
 // above it within the question, then its own text - all verbatim (decision
@@ -896,7 +906,260 @@ func keepProse(_ raw: String, title: Bool, open: Bool) -> (text: String, dropped
     return (normalise(kept.joined(separator: "\n")), dropped)
 }
 
-func extractSectionA(pages: [String], meta: PaperMeta, msPages: [String])
+// ------------------------------------------------- Section A MCQs (Phase 7)
+//
+// The text stream PDFKit returns for an MCQ is unreliable about order: the
+// options can come back reversed (D, C, B, A: Paper 2 June 2022 2(a)), option
+// A can run onto the end of the question ("... income? A Imports", Paper 2
+// June 2022 1(b)), and chart labels land between options ("AR=D", Paper 1
+// June 2019 3(a)). Its line geometry is reliable: the four options are lines
+// lettered A-D at one x, top to bottom, and wrapped option text is indented
+// past that x. So the options, and the MCQ's own question sentence above
+// them, are read by position from PDFPage.selectionsByLine(). The question's
+// stem and lead-ins still come from the stream, exactly as for the written
+// parts (Phase 6), so an MCQ card and its written neighbours carry the same
+// stem. Nothing is rewritten: lines are kept whole or not at all.
+
+struct GLine {
+    let x: CGFloat
+    let y: CGFloat
+    let text: String
+}
+
+/// A page's lines, top to bottom, answer-box glyphs removed.
+func geomLines(_ doc: PDFDocument, _ index: Int) -> [GLine] {
+    guard index >= 0, index < doc.pageCount, let page = doc.page(at: index),
+        let sel = page.selection(for: page.bounds(for: .mediaBox))
+    else { return [] }
+    let lines: [GLine] = sel.selectionsByLine().compactMap { l in
+        let b = l.bounds(for: page)
+        let raw = (l.string ?? "").replacingOccurrences(of: "\u{00A0}", with: " ")
+        // Answer boxes are private-use glyphs; some option lines also carry a
+        // BEL control character after the letter (U+0007, Paper 1 June 2025
+        // 3(a)). Neither is printed text.
+        let t = String(String.UnicodeScalarView(raw.unicodeScalars.filter {
+            !(0xE000...0xF8FF).contains($0.value) && !($0.value < 0x20 && $0 != "\n")
+        }))
+            .components(separatedBy: .newlines).joined(separator: " ")
+            .trimmingCharacters(in: .whitespaces)
+        return t.isEmpty ? nil : GLine(x: b.minX, y: b.minY, text: t)
+    }
+    // Top to bottom; a line within 3pt of another's baseline is on the same
+    // row and is read left to right.
+    return lines.sorted { a, b in abs(a.y - b.y) > 3 ? a.y > b.y : a.x < b.x }
+}
+
+struct MCQRead {
+    /// The part's own question sentence, label removed, as printed.
+    var own: String
+    /// A-D as printed, or nil when the options are diagrams, a table or bare
+    /// letters naming points on a figure.
+    var options: [(letter: String, text: String)]?
+    /// Lines between the label and the last option that are neither the
+    /// question nor an option: figure labels or table cells.
+    var dropped: Int
+    var notes: [String]
+}
+
+let mcqTariff = rx("^\\(\\d{1,2}\\)$")
+let mcqOption = rx("^([A-D])(?:\\s+(\\S.*))?$")
+let mcqPair = rx("^[A-D](?:\\s+[A-D])+$")
+let mcqOptionTitle = rx("^Option\\s+[A-D]$")
+/// Wrapped option text starts this far right of the option letter (19pt on
+/// every paper measured).
+let mcqContinuation: ClosedRange<CGFloat> = 10...30
+/// The tariff column ("(1)" at x=524) and the page number sit right of this.
+let mcqRightMargin: CGFloat = 515
+
+func mcqGeometry(doc: PDFDocument, page: Int, letter: String) -> (MCQRead?, String?, Int) {
+    // The label opens its line, after the question number when the part is
+    // the question's first ("2 (a) Which one ...", Paper 2 June 2018).
+    let labelRx = rx("^(?:\\d{1,2}\\s+)?\\(\(letter)\\)\\s*(.*)$")
+    let ends = rx("^(?:(?:\\d{1,2}\\s+)?\\([a-h]\\)|\\(Total for Question|TOTAL FOR SECTION)")
+    // The stream can place a label a page early, when a chart prints the same
+    // letters ("Non-students (b)", Paper 1 November 2021 Q3): the label is
+    // looked for on the stream's page, then the next.
+    var page = page
+    var first = geomLines(doc, page - 1)
+    var labels = first.indices.filter { labelRx.matches(first[$0].text) }
+    if labels.isEmpty {
+        let next = geomLines(doc, page)
+        let there = next.indices.filter { labelRx.matches(next[$0].text) }
+        if !there.isEmpty { page += 1; first = next; labels = there }
+    }
+    guard labels.count == 1, let li = labels.first else {
+        return (nil, "\(labels.count) lines labelled (\(letter)) on p\(page)", page)
+    }
+    let label = first[li]
+    // The part's lines: from its label to the next label or the question's
+    // total, running onto the next page when the options are set there.
+    var region: [GLine] = []
+    var closed = false
+    for (k, l) in first.enumerated() where k > li {
+        if ends.matches(l.text) { closed = true; break }
+        region.append(l)
+    }
+    let onLabelPage = region.count
+    if !closed {
+        for l in geomLines(doc, page) {
+            if ends.matches(l.text) { break }
+            region.append(GLine(x: l.x, y: l.y - 10_000, text: l.text))
+        }
+    }
+    // Lines from the next page carry y shifted down by 10 000 so the order
+    // and every "below" comparison run across the page break.
+    _ = onLabelPage
+    region = region.filter {
+        $0.x < mcqRightMargin && !mcqTariff.matches($0.text) && !rx("^\\.{4,}").matches($0.text)
+            && !$0.text.hasPrefix("*P") && !$0.text.contains("Pearson Education Ltd")
+            && !$0.text.contains("DO NOT WRITE IN THIS AREA")
+    }
+
+    // The options: lines lettered A, B, C, D in that order down the page, at
+    // one x. "Option A" titles and "A B" pairs label diagram options.
+    var rows: [Int] = []
+    for a in region.indices where mcqOption.firstMatch(region[a].text)?[1] == "A" {
+        var found = [a]
+        for want in ["B", "C", "D"] {
+            guard let n = region.indices.first(where: {
+                $0 > found.last! && mcqOption.firstMatch(region[$0].text)?[1] == want
+                    && abs(region[$0].x - region[a].x) <= 2
+            }) else { break }
+            found.append(n)
+        }
+        if found.count == 4 { rows = found; break }
+    }
+    var notes: [String] = []
+    if let a = rows.first, region[a].y < -5_000 {
+        notes.append("the options are printed on the next page")
+    }
+
+    // The question's own text: the label line's words, then lines set at the
+    // text column above option A.
+    let labelOwn = labelRx.firstMatch(label.text)?[1] ?? ""
+    let optionStart = rows.first ?? region.firstIndex(where: {
+        mcqPair.matches($0.text) || mcqOptionTitle.matches($0.text)
+    }) ?? region.count
+    // The text column: the line set beside the label on its own row, else
+    // the first line indented past the label below it.
+    let besideLabel = region.first(where: { abs($0.y - label.y) <= 3 && $0.x > label.x + 5 })
+    let textX: CGFloat = besideLabel?.x
+        ?? region[..<optionStart].first(where: { $0.x > label.x + 5 && $0.x < label.x + 45 })?.x
+        ?? label.x + 18.4
+    var own: [String] = labelOwn.isEmpty ? [] : [labelOwn]
+    var dropped = 0
+    var ownAt: [Int] = []
+    // A citation printed above the options ("(Source: adapted from https://
+    // ...)", Paper 1 June 2025 4(b)) is neither the question nor a figure: it
+    // is skipped, line by line to its closing bracket, and not counted.
+    var citing = false
+    for (i, l) in region[..<optionStart].enumerated() {
+        if l.text.hasPrefix("(Source") { citing = true }
+        if citing {
+            if l.text.hasSuffix(")") { citing = false }
+            continue
+        }
+        if abs(l.x - textX) <= 3 { own.append(l.text); ownAt.append(i) } else { dropped += 1 }
+    }
+    // A figure's axis label can sit at the text column ("Price of loft /
+    // insulation", AS Paper 1 October 2020 3(a)): a run of short lines that
+    // end no sentence, after a line that ends one and before a line that
+    // begins one, is not prose.
+    // own[0] is the label line's text when it has any; ownAt indexes only
+    // the lines after it.
+    let offset = labelOwn.isEmpty ? 0 : 1
+    var k = 1
+    while k < own.count {
+        guard endsSentence(own[k - 1]) else { k += 1; continue }
+        var m = k
+        while m < own.count, own[m].count < 45, !endsSentence(own[m]) { m += 1 }
+        if m > k, m < own.count, own[m].first?.isUppercase ?? false {
+            dropped += m - k
+            own.removeSubrange(k..<m)
+            ownAt.removeSubrange(max(k - offset, 0)..<max(m - offset, 0))
+        }
+        k += 1
+    }
+
+    guard !rows.isEmpty else {
+        // No lettered rows with text: diagrams labelled in pairs or titled
+        // "Option A", or bare letters beside a table's rows.
+        let pairs = region.contains { mcqPair.matches($0.text) || mcqOptionTitle.matches($0.text) }
+        if pairs {
+            // The question's last words can be set among the diagram titles
+            // ("... such as Hurricane" / "Option A" / "Harvey?", Paper 1 June
+            // 2019 2(b)): an unfinished sentence takes the next lines at the
+            // text column until it ends.
+            var i = optionStart
+            while let last = own.last, !endsSentence(last), i < region.count {
+                if abs(region[i].x - textX) <= 3 { own.append(region[i].text); dropped -= 1 }
+                i += 1
+            }
+            notes.append("the options are diagrams; only their letters are text")
+            return (MCQRead(own: normalise(own.joined(separator: "\n")), options: nil,
+                            dropped: dropped + region.count - optionStart, notes: notes), nil, page)
+        }
+        return (nil, "no options lettered A-D at one x below the label", page)
+    }
+
+    // Each option, with any line indented beneath it before the next option.
+    let optX = region[rows[0]].x
+    var opts: [(letter: String, text: String)] = []
+    for (k, r) in rows.enumerated() {
+        let m = mcqOption.firstMatch(region[r].text)!
+        var text = [m[2] ?? ""]
+        let stop = k + 1 < rows.count ? rows[k + 1] : region.count
+        for i in (r + 1)..<stop {
+            let l = region[i]
+            let after = k + 1 < rows.count || region[r].y - l.y < 20
+            // Anything else set between two options is left out and not
+            // counted as the card's figure: on Paper 1 June 2019 3(a) it is
+            // "AR=D" and "MR", unprinted labels inside part (b)'s blank
+            // answer frame, which no candidate ever sees.
+            if after && mcqContinuation.contains(l.x - optX) && !(l.text.first?.isNumber ?? false && l.text.count < 4) {
+                text.append(l.text)
+            }
+        }
+        // Whitespace joined only: normalise() strips a line that is just a
+        // number as a page number, and "0" and "1" are options (Paper 2 June
+        // 2017 4(b)).
+        let joined = text.joined(separator: " ").components(separatedBy: .whitespaces)
+            .filter { !$0.isEmpty }.joined(separator: " ")
+        opts.append((m[1]!, joined))
+    }
+    // Bare letters: the options are a table's rows (Paper 1 June 2022 2(c))
+    // or points named on a figure (Paper 2 June 2024 4(a)).
+    if opts.allSatisfy({ $0.text.isEmpty }) {
+        notes.append("the options are bare letters beside a table or figure; only the letters are text")
+        return (MCQRead(own: normalise(own.joined(separator: "\n")), options: nil, dropped: dropped, notes: notes), nil, page)
+    }
+    if opts.contains(where: { $0.text.isEmpty }) {
+        return (nil, "options \(opts.filter { $0.text.isEmpty }.map { $0.letter }.joined()) have no text but the others do", page)
+    }
+    // Column heads set between the question's last line and option A, off
+    // the text column ("Statement 1 Statement 2", AS Paper 1 June 2018 1(a);
+    // "Average fixed cost Average variable cost Marginal cost", Paper 1
+    // October 2020 4(b)) make the options the rows of a table: each is a run
+    // of cells that means nothing without its heads, so they are not
+    // reproduced. A citation printed there is not a head, and a figure's
+    // labels are many short lines, not one or two.
+    let lastOwn = ownAt.last.map { region[$0].y } ?? label.y
+    var inCitation = false
+    var heads: [GLine] = []
+    for l in region[..<rows[0]] where l.y < lastOwn - 1 && abs(l.x - textX) > 3 {
+        if l.text.hasPrefix("(Source") { inCitation = true }
+        if !inCitation { heads.append(l) }
+        if inCitation && l.text.hasSuffix(")") { inCitation = false }
+    }
+    let short = opts.allSatisfy { $0.text.split(separator: " ").count <= 4 }
+    if !heads.isEmpty && heads.count <= 3 && short {
+        notes.append("the options are the rows of a table under the heads '\(heads.map { $0.text }.joined(separator: " / "))'; not reproduced")
+        return (MCQRead(own: normalise(own.joined(separator: "\n")), options: nil, dropped: dropped + 4, notes: notes), nil, page)
+    }
+    return (MCQRead(own: normalise(own.joined(separator: "\n")), options: opts, dropped: dropped, notes: notes), nil, page)
+}
+
+func extractSectionA(pages: [String], meta: PaperMeta, msPages: [String], doc: PDFDocument?)
     -> ([QuestionOut], [String])
 {
     var problems: [String] = []
@@ -1140,7 +1403,69 @@ func extractSectionA(pages: [String], meta: PaperMeta, msPages: [String])
         let stemPage = opener != nil
             ? pageAt(openerAt)
             : (lineStarts.first(where: { $0.offset >= segStart })?.page ?? pageAt(segStart))
-        for (j, p) in parts.enumerated() where !p.isMCQ {
+        for (j, p) in parts.enumerated() {
+            if p.isMCQ {
+                // Phase 7: the MCQ, stem and lead-ins from the stream as for
+                // every part, its own sentence and options by position.
+                guard let doc = doc else { problems.append("Q\(qnum)(\(p.letter)): no document for the MCQ"); continue }
+                let (read, err, partPage) = mcqGeometry(doc: doc, page: pageAt(p.at), letter: p.letter)
+                guard let g = read else {
+                    problems.append("Q\(qnum)(\(p.letter)): MCQ \(err ?? "not read")")
+                    continue
+                }
+                var notes = p.notes + g.notes
+                var confidence = "high"
+                if opener == nil { notes.append("the question number is not in the text layer; the stem is read from the start of the question") }
+                let carried = leads[0...j].filter { !$0.isEmpty }
+                if j > 0 && leads[1...j].contains(where: { !$0.isEmpty }) {
+                    notes.append("lead-in printed between parts is included")
+                }
+                // Figure text dropped from the stem, from a lead-in carried
+                // onto this card, and from the MCQ itself. A gap with no
+                // lead-in is an earlier part's answer space, whose drawing
+                // frame ("Market", "Firm", Paper 1 November 2021 5(a)) is the
+                // student's to fill, not a figure this card needs.
+                let figure = (0...min(j, dropped.count - 1))
+                    .filter { $0 == 0 || !leads[$0].isEmpty }
+                    .reduce(0) { $0 + dropped[$1] } + g.dropped
+                if figure > 0 {
+                    notes.append("figure or table text printed with the question is not reproduced; see the question paper")
+                }
+                if g.own.count < 3 && carried.isEmpty {
+                    confidence = "low"
+                    notes.append("no question text found for the MCQ")
+                }
+                let full = stripAttribution(normalise((carried + [g.own]).joined(separator: "\n")))
+                if full.attribution != nil || full.text.contains("(Source") || full.text.contains("http")
+                    || full.text.contains("www.")
+                {
+                    confidence = "low"
+                    notes.append("a citation or URL survived the strip")
+                }
+                let cites = citations.filter { $0.offset >= segStart && $0.offset < p.at }.map { $0.text }
+                let label = "\(qnum)(\(p.letter))"
+                let hit = markSchemePage(msPages, question: qnum, part: p.letter)
+                if hit == nil {
+                    confidence = "low"
+                    notes.append("mark scheme page for \(label) could not be verified")
+                } else if hit!.exact == false {
+                    notes.append("mark scheme heading for \(label) omits the question number; matched on the bare part label")
+                }
+                var q = QuestionOut(
+                    id: "\(meta.idStem)-q\(qnum)\(p.letter)", section: "A",
+                    questionNumber: label, parentQuestion: qnum, choiceGroup: nil,
+                    marks: p.marks, questionText: full.text,
+                    sourceAttribution: cites.isEmpty ? nil : cites.joined(separator: " "),
+                    contextPage: stemPage < partPage ? stemPage : nil,
+                    contextType: "question",
+                    qpPage: partPage, msPage: hit?.page, msVerified: hit != nil,
+                    confidence: confidence, notes: notes)
+                q.type = "mcq"
+                q.options = g.options
+                q.usesFigure = figure > 0 || g.options == nil
+                out.append(q)
+                continue
+            }
             var notes = p.notes
             var confidence = "high"
             if opener == nil { notes.append("the question number is not in the text layer; the stem is read from the start of the question") }
@@ -1498,11 +1823,23 @@ func emit(meta: PaperMeta, questions: [QuestionOut], problems: [String]) -> Stri
                 + (q.parentQuestion.map { "\"\($0)\"" } ?? "null"))
         f.append("      \"choiceGroup\": " + (q.choiceGroup.map { "\"\($0)\"" } ?? "null"))
         f.append("      \"marks\": \(q.marks)")
+        if let t = q.type { f.append("      \"type\": \"\(t)\"") }
         f.append("      \"questionText\": \"\(jsonEscape(q.questionText))\"")
         // Omitted entirely when there is no citation, so the 420 questions that
         // never had one keep the shape they already have on disk.
         if let attr = q.sourceAttribution {
             f.append("      \"sourceAttribution\": \"\(jsonEscape(attr))\"")
+        }
+        if q.type != nil {
+            if let opts = q.options {
+                let rows = opts.map {
+                    "        { \"letter\": \"\($0.letter)\", \"text\": \"\(jsonEscape($0.text))\" }"
+                }
+                f.append("      \"options\": [\n" + rows.joined(separator: ",\n") + "\n      ]")
+            } else {
+                f.append("      \"options\": null")
+            }
+            f.append("      \"usesFigure\": \(q.usesFigure)")
         }
         if let cp = q.contextPage, q.contextType == "question" {
             // Wording approved by Eliot, 2026-11-24 (phase-6 Q4).
@@ -1607,6 +1944,9 @@ for path in args {
         exitCode = 1
         continue
     }
+    // Section A's MCQ options are read by position on the page (see
+    // mcqGeometry), which needs the document as well as its text.
+    let qpDoc = PDFDocument(url: URL(fileURLWithPath: meta.qpPath))
     // A question paper with no text layer at all (one today: Edexcel B AS
     // Paper 2 June 2019, a scan) is read from its reviewed OCR transcript.
     // Without one it fails loudly rather than writing an empty paper.
@@ -1644,12 +1984,12 @@ for path in args {
     } else if meta.isAS {
         // 8EC0 has no Section C at all. Its Section B carries the whole of the
         // paper bar Section A: Q6(a) to (g), 60 of the 80 marks.
-        let (a, aProblems) = extractSectionA(pages: qpPages, meta: meta, msPages: msPages)
+        let (a, aProblems) = extractSectionA(pages: qpPages, meta: meta, msPages: msPages, doc: qpDoc)
         let (b, bProblems) = extractSectionB(pages: qpPages, meta: meta, msPages: msPages)
         questions = a + b
         problems = aProblems + bProblems
     } else {
-        let (a, aProblems) = extractSectionA(pages: qpPages, meta: meta, msPages: msPages)
+        let (a, aProblems) = extractSectionA(pages: qpPages, meta: meta, msPages: msPages, doc: qpDoc)
         let (b, bProblems) = extractSectionB(pages: qpPages, meta: meta, msPages: msPages)
         let (c, cProblems) = extractSectionC(pages: qpPages, meta: meta, msPages: msPages)
         questions = a + b + c

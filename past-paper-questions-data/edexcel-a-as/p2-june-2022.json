@@ -13,6 +13,29 @@
   "problems": [],
   "questions": [
     {
+      "id": "edexcel-as-p2-2022-jun-q1a",
+      "section": "A",
+      "questionNumber": "1(a)",
+      "parentQuestion": "1",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "In March 2020 the Monetary Policy Committee (MPC) of the Bank of England reintroduced its quantitative easing programme. Which one of the following is the most likely effect of this quantitative easing?",
+      "options": [
+        { "letter": "A", "text": "A fall in economic growth" },
+        { "letter": "B", "text": "A fall in the rate of inflation" },
+        { "letter": "C", "text": "An increase in the money supply" },
+        { "letter": "D", "text": "An increase in unemployment" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2022-question-paper.pdf", "page": 2 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2022-mark-scheme.pdf", "page": 4, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["the question number is not in the text layer; the stem is read from the start of the question"]
+    },
+    {
       "id": "edexcel-as-p2-2022-jun-q1b",
       "section": "A",
       "questionNumber": "1(b)",
@@ -44,6 +67,30 @@
       "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
+      "id": "edexcel-as-p2-2022-jun-q2b",
+      "section": "A",
+      "questionNumber": "2(b)",
+      "parentQuestion": "2",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The table below shows the UK’s nominal Gross Domestic Product (GDP) and population, 2016 to 2018. Using the above GDP data, which one of the following represents the index number for 2016, if 2017 is the base year?",
+      "sourceAttribution": "(Source: ONS, https://www.ons.gov.uk/)",
+      "options": [
+        { "letter": "A", "text": "96.8" },
+        { "letter": "B", "text": "98.1" },
+        { "letter": "C", "text": "101.9" },
+        { "letter": "D", "text": "103.3" }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2022-question-paper.pdf", "page": 3 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2022-mark-scheme.pdf", "page": 5, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
       "id": "edexcel-as-p2-2022-jun-q2c",
       "section": "A",
       "questionNumber": "2(c)",
@@ -55,6 +102,30 @@
       "context": null,
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2022-question-paper.pdf", "page": 3 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2022-mark-scheme.pdf", "page": 5, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-as-p2-2022-jun-q3a",
+      "section": "A",
+      "questionNumber": "3(a)",
+      "parentQuestion": "3",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "UK average weekly earnings, January 2007 to January 2019 Which one of the following can be inferred from the above chart? Between 2007 and 2019,",
+      "sourceAttribution": "(Source adapted from: https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/averageweeklyearningsingreatbritain/march2019)",
+      "options": [
+        { "letter": "A", "text": "earnings adjusted for interest rates were lower than earnings not adjusted for interest rates" },
+        { "letter": "B", "text": "nominal earnings increased by nearly 125 percentage points" },
+        { "letter": "C", "text": "the increase in earnings not adjusted for inflation was greater than earnings adjusted for inflation" },
+        { "letter": "D", "text": "there were significant increases in real earnings each year" }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2022-question-paper.pdf", "page": 4 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2022-mark-scheme.pdf", "page": 6, "verified": true },
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
@@ -91,6 +162,29 @@
       "extractionNotes": []
     },
     {
+      "id": "edexcel-as-p2-2022-jun-q4b",
+      "section": "A",
+      "questionNumber": "4(b)",
+      "parentQuestion": "4",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The UK exchange rate changed from £1 = $1.53 in January 2015 to £1 = $1.22 in October 2019. Which one of the following represents the percentage change in the £ sterling and US$ exchange rate?",
+      "options": [
+        { "letter": "A", "text": "0.31%" },
+        { "letter": "B", "text": "20.26%" },
+        { "letter": "C", "text": "25.41%" },
+        { "letter": "D", "text": "79.74%" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2022-question-paper.pdf", "page": 6 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2022-mark-scheme.pdf", "page": 7, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-as-p2-2022-jun-q4c",
       "section": "A",
       "questionNumber": "4(c)",
@@ -104,6 +198,29 @@
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": []
+    },
+    {
+      "id": "edexcel-as-p2-2022-jun-q5a",
+      "section": "A",
+      "questionNumber": "5(a)",
+      "parentQuestion": "5",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Annual rate of UK inflation, as measured by the Consumer Prices Index (CPI), January 2016 to September 2019. Which one of the following can be deduced from the chart?",
+      "options": [
+        { "letter": "A", "text": "The average price level was lower in January 2018 than in January 2019" },
+        { "letter": "B", "text": "The average price level was unchanged between January 2017 and January 2019" },
+        { "letter": "C", "text": "There was deflation from January 2018 to January 2019" },
+        { "letter": "D", "text": "There was disinflation from January 2016 to January 2017" }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2022-question-paper.pdf", "page": 8 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2022-mark-scheme.pdf", "page": 8, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
       "id": "edexcel-as-p2-2022-jun-q5b",

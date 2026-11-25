@@ -45,6 +45,30 @@
       "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
+      "id": "edexcel-as-p2-2018-jun-q1c",
+      "section": "A",
+      "questionNumber": "1(c)",
+      "parentQuestion": "1",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The table below shows the UK Gross Domestic Product (GDP) and population, 2013 to 2015. Which one of the following is the most likely effect of an increase in real GDP per capita?",
+      "sourceAttribution": "(Source: ONS, https://www.ons.gov.uk/)",
+      "options": [
+        { "letter": "A", "text": "Increase in living standards" },
+        { "letter": "B", "text": "Increase in unemployment" },
+        { "letter": "C", "text": "Lower consumer confidence" },
+        { "letter": "D", "text": "Lower purchasing power" }
+      ],
+      "usesFigure": true,
+      "context": { "type": "question", "label": "Question 1 as printed", "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2018-question-paper.pdf", "page": 2 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2018-question-paper.pdf", "page": 3 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2018-mark-scheme.pdf", "page": 4, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
       "id": "edexcel-as-p2-2018-jun-q2a",
       "section": "A",
       "questionNumber": "2(a)",
@@ -75,6 +99,24 @@
       "extractionNotes": ["no stem text found above the parts"]
     },
     {
+      "id": "edexcel-as-p2-2018-jun-q2c",
+      "section": "A",
+      "questionNumber": "2(c)",
+      "parentQuestion": "2",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which point on the trade cycle diagram illustrates a negative output gap?",
+      "options": null,
+      "usesFigure": true,
+      "context": { "type": "question", "label": "Question 2 as printed", "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2018-question-paper.pdf", "page": 4 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2018-question-paper.pdf", "page": 5 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2018-mark-scheme.pdf", "page": 5, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["the options are bare letters beside a table or figure; only the letters are text", "figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
       "id": "edexcel-as-p2-2018-jun-q3a",
       "section": "A",
       "questionNumber": "3(a)",
@@ -89,6 +131,30 @@
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-as-p2-2018-jun-q3b",
+      "section": "A",
+      "questionNumber": "3(b)",
+      "parentQuestion": "3",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "UK base interest rate, January 2008 to January 2017 In August 2016 the Bank of England extended its existing asset purchases (quantitative easing) programme, from a total of £375 billion to £435 billion. Which one of the following is the most likely effect of the Bank of England’s quantitative easing?",
+      "sourceAttribution": "(Source: Bank of England, http://www.bankofengland.co.uk/boeapps/iadb/Repo.asp)",
+      "options": [
+        { "letter": "A", "text": "A fall in economic growth" },
+        { "letter": "B", "text": "A fall in the money supply" },
+        { "letter": "C", "text": "An increase in the rate of inflation" },
+        { "letter": "D", "text": "An increase in unemployment" }
+      ],
+      "usesFigure": true,
+      "context": { "type": "question", "label": "Question 3 as printed", "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2018-question-paper.pdf", "page": 6 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2018-question-paper.pdf", "page": 7 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2018-mark-scheme.pdf", "page": 6, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["lead-in printed between parts is included", "figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
       "id": "edexcel-as-p2-2018-jun-q4a",
@@ -116,6 +182,53 @@
       "context": null,
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2018-question-paper.pdf", "page": 8 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2018-mark-scheme.pdf", "page": 7, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-as-p2-2018-jun-q4c",
+      "section": "A",
+      "questionNumber": "4(c)",
+      "parentQuestion": "4",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The diagram below shows the aggregate demand (AD) and short-run aggregate supply (SRAS) for the UK. Which one of the following factors is most likely to cause an increase in the long-run aggregate supply?",
+      "options": [
+        { "letter": "A", "text": "Decrease in investment" },
+        { "letter": "B", "text": "Increase in relative productivity" },
+        { "letter": "C", "text": "Increase in the level of unemployment benefits" },
+        { "letter": "D", "text": "Reduced access to credit for consumers and businesses" }
+      ],
+      "usesFigure": true,
+      "context": { "type": "question", "label": "Question 4 as printed", "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2018-question-paper.pdf", "page": 8 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2018-question-paper.pdf", "page": 9 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2018-mark-scheme.pdf", "page": 7, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-as-p2-2018-jun-q5a",
+      "section": "A",
+      "questionNumber": "5(a)",
+      "parentQuestion": "5",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The chart below shows selected areas of forecast UK government spending for 2015/16 and 2016/17. Which one of the following can be inferred from the chart? In 2016/17:",
+      "sourceAttribution": "(Source: Budget 2015, https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/416330/47881_Budget_2015_Web_Accessible.pdf; Budget 2016, https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/508193/HMT_Budget_2016_Web_Accessible.pdf)",
+      "options": [
+        { "letter": "A", "text": "the change in forecast UK government spending is highest on education" },
+        { "letter": "B", "text": "the forecast UK government spending in all areas has fallen from 2015/16" },
+        { "letter": "C", "text": "the forecast UK government spending on defence is twice as much as the forecast spending on housing" },
+        { "letter": "D", "text": "the percentage change in forecast UK government spending on health, from 2015/16, is 2.84%" }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2018-question-paper.pdf", "page": 10 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2018-mark-scheme.pdf", "page": 8, "verified": true },
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]

@@ -1,5 +1,6 @@
 // Independently verify the Edexcel A and Edexcel B extraction data
-// (past-paper-questions-data/edexcel-{a,a-as,b,b-as}/*.json) against the PDFs.
+// (past-paper-questions-data/edexcel-{a,a-as,b,b-as}/*.json), and AQA's
+// Paper 3 multiple choice (aqa/p3-*.json), against the PDFs.
 //
 //   swift scripts/verify_past_paper_extraction.swift
 //
@@ -45,6 +46,32 @@
 // (check 9) - so a mistake in the transcript fails here. On those pages quotes
 // and dashes are folded (‘ ’ “ ” – to ' " -) on both sides, because OCR does
 // not see the difference and the transcript was corrected to the printed glyph.
+//
+// Phase 7 adds the multiple-choice cards (type "mcq"): Edexcel A Papers 1-2
+// Section A, one per question, and AQA Paper 3 Section A, thirty per paper -
+// the only AQA records this script reads. Both extractors place an MCQ's
+// options by geometry (PDFKit line positions for Edexcel, pdfplumber
+// characters for AQA); this script never does. It searches the plain page
+// text PDFKit returns, in which options can come out reversed or split from
+// their letters, so a misplaced or invented option shows up as words the page
+// does not hold:
+//
+//   M1. Shape: marks 1; options null or exactly A, B, C, D in order, each
+//       {letter, text} with text; usesFigure a boolean, and true whenever
+//       options is null; and NO answer key - no field of the record or of an
+//       option names one (D67: search-only cards).
+//   M2. The question text comes off the pages in runs (A1's rule), on the
+//       question's page for AQA, from the stem's page to the part's for
+//       Edexcel (checks A1 and A2 run for Edexcel as for every Section A card).
+//   M3. Each option's letter and text are printed together, whole, on the
+//       part's page or the next. Letters glued to digits are compared with
+//       the digits removed on both sides, because AQA sets subscripts below
+//       the line and PDFKit returns them detached ("SRAS1" against "SRAS ...
+//       1"); a word is never dropped, only a subscript's position.
+//   M4. Counts: thirty AQA MCQs numbered 1-30 in Section A; exactly one MCQ
+//       in each Edexcel Section A question, and the question's cards now sum
+//       to its printed total (A5, tightened from "one mark short").
+//   M5. The AQA mark-scheme page holds the SECTION A KEY LIST.
 //
 // Exit status is non-zero if any check fails. Nothing is written.
 
@@ -145,22 +172,44 @@ func bSchemeNames(_ page: String, label: String) -> Bool {
 //       the part's own page, tariffs and answer lines taken out (a
 //       sub-part's "(2)" sits between "(i) workers" and "(ii)").
 //   A3. (folded into A1 and A2: the page claims are the run claims.)
-//   A4. No card is a multiple-choice question ("which one of the following").
-//   A5. For each question, the printed total less the recorded marks is
-//       exactly 1: the one MCQ every Section A question sets, left to Phase 7.
+//   A4. No written card is a multiple-choice question ("which one of the
+//       following"); the MCQ itself is its own card since Phase 7.
+//   A5. For each question, the recorded marks equal the printed total: the
+//       written parts plus the one MCQ (Phase 7; in Phase 6, total less 1).
 
 /// A page squashed for the run search: margin warnings, answer boxes (private
 /// use glyphs), answer-line leaders, barcode references and tariffs removed.
 func runPage(_ s: String) -> String {
     var o = squashedPage(s)
-    o = String(String.UnicodeScalarView(o.unicodeScalars.filter { !(0xE000...0xF8FF).contains($0.value) }))
+    // AQA's margin warning, set in the reading order the same way (Paper 3
+    // June 2018 Q30: "over six" / "Do not write outside the box" / "quarters.").
+    o = o.replacingOccurrences(of: "Donotwriteoutsidethebox", with: "")
+    // Answer boxes (private use) and the BEL control character some option
+    // lines carry after their letter (Paper 1 June 2025 3(a)): neither prints.
+    o = String(String.UnicodeScalarView(o.unicodeScalars.filter {
+        !(0xE000...0xF8FF).contains($0.value) && $0.value >= 0x20
+    }))
     for p in ["\\.{4,}", "\\*[A-Z]\\d{5,6}[A-Z]?\\d{4,6}\\*", "\\(\\d{1,2}\\)"] {
         o = o.replacingOccurrences(of: p, with: "", options: .regularExpression)
     }
     return o
 }
 
-func sectionACheck(id: String, text: String, pages: [String], from: Int, to: Int) {
+/// Cards whose closing words the text layer prints out of order, so no run
+/// of three ends the text on the page. Each was read against the rendered
+/// page (2026-11-25) and prints exactly as the card does; A1 still holds
+/// every word to its runs.
+///   Paper 1 June 2019 2(b): "... such as Hurricane" / "Harvey?" - the last
+///     word is set among the four diagrams' titles ("Option A", "A B").
+///   Paper 2 June 2019 1(a): "... an increase in credit" / "card lending?" -
+///     the second line comes out of the layer before the first.
+var closingStillOut = Set<String>()
+let closingOutOfOrder: Set<String> = [
+    "edexcel-a-p1-2019-jun-q2b",
+    "edexcel-a-p2-2019-jun-q1a",
+]
+
+func sectionACheck(id: String, text: String, pages: [String], from: Int, to: Int, mcq: Bool = false) {
     guard from >= 1, to <= pages.count, from <= to else {
         failures.append(Failure(id: id, check: "a-page-order", detail: "stem p\(from), part p\(to)"))
         return
@@ -174,10 +223,13 @@ func sectionACheck(id: String, text: String, pages: [String], from: Int, to: Int
     let partPage = runPage(pages[to - 1])
     var k = words.count
     while k > 0 && on(partPage, squashed(words[(k - 1)...].joined())) { k -= 1 }
-    if words.count - k < min(3, words.count) {
+    if words.count - k < min(3, words.count) && closingOutOfOrder.contains(id) {
+        closingStillOut.insert(id)
+    }
+    if words.count - k < min(3, words.count) && !closingOutOfOrder.contains(id) {
         failures.append(Failure(id: id, check: "a-closing-not-on-page", detail: "p\(to) lacks: \(closing(text, words: 3))"))
     }
-    if text.lowercased().contains("which one of the following") {
+    if !mcq && text.lowercased().contains("which one of the following") {
         failures.append(Failure(id: id, check: "a-mcq-text", detail: "card reads as a multiple-choice question"))
     }
     let hay = (from...to).map { runPage(pages[$0 - 1]) }.joined()
@@ -198,6 +250,72 @@ func sectionACheck(id: String, text: String, pages: [String], from: Int, to: Int
     }
 }
 
+/// Digits set straight after a letter taken out, on both sides of a
+/// comparison: AQA's subscripts (SRAS1, OWmin's "min" is letters and stays).
+func unscripted(_ s: String) -> String {
+    return s.replacingOccurrences(of: "(?<=[A-Za-z])[0-9]+", with: "", options: .regularExpression)
+}
+
+/// M2 for AQA: every word of the stem is on the page, in runs of two or more.
+func runCheck(id: String, text: String, hay: String) -> String? {
+    let words = text.split(separator: " ").map(String.init)
+    var i = 0
+    while i < words.count {
+        var j = i
+        while j < words.count && hay.contains(unscripted(squashed(words[i...j].joined()))) { j += 1 }
+        if j == i { return "'\(words[i])' is not on the page" }
+        if j - i < 2 && j < words.count && words.count > 1 { return "'\(words[i])' is joined to text it is not printed beside" }
+        i = j
+    }
+    return nil
+}
+
+let keyFields: Set<String> = ["answer", "answers", "key", "correct", "correctAnswer", "correctOption", "answerKey", "solution"]
+
+/// M1 and M3 for one MCQ record. `hay` is the squashed, unscripted text of
+/// the part's page and the next.
+func mcqCheck(id: String, q: [String: Any], hay: String) {
+    if let k = q.keys.first(where: { keyFields.contains($0) }) {
+        failures.append(Failure(id: id, check: "mcq-has-key", detail: "field '\(k)'"))
+    }
+    if (q["marks"] as? Int) != 1 {
+        failures.append(Failure(id: id, check: "mcq-marks", detail: "\(q["marks"] ?? "nil")"))
+    }
+    guard let fig = q["usesFigure"] as? Bool else {
+        failures.append(Failure(id: id, check: "mcq-usesFigure", detail: "missing or not a boolean"))
+        return
+    }
+    if q["options"] is NSNull {
+        if !fig { failures.append(Failure(id: id, check: "mcq-null-options", detail: "options null but usesFigure false")) }
+        return
+    }
+    guard let opts = q["options"] as? [[String: Any]] else {
+        failures.append(Failure(id: id, check: "mcq-options-shape", detail: "options is neither null nor a list"))
+        return
+    }
+    let letters = opts.compactMap { $0["letter"] as? String }
+    if letters != ["A", "B", "C", "D"] {
+        failures.append(Failure(id: id, check: "mcq-letters", detail: letters.joined()))
+    }
+    var seen = Set<String>()
+    for o in opts {
+        if Set(o.keys) != ["letter", "text"] {
+            failures.append(Failure(id: id, check: "mcq-option-fields", detail: o.keys.sorted().joined(separator: ",")))
+        }
+        let letter = o["letter"] as? String ?? "?"
+        guard let text = o["text"] as? String, !text.isEmpty else {
+            failures.append(Failure(id: id, check: "mcq-option-empty", detail: letter))
+            continue
+        }
+        if !seen.insert(text).inserted {
+            failures.append(Failure(id: id, check: "mcq-option-repeated", detail: "\(letter): \(text)"))
+        }
+        if !hay.contains(unscripted(squashed(letter + text))) {
+            failures.append(Failure(id: id, check: "mcq-option-not-on-page", detail: "\(letter) \(text)"))
+        }
+    }
+}
+
 /// The context page of a Section A record, whose context is its stem's page.
 func ctxOf(_ q: [String: Any]) -> Int? {
     guard let c = q["context"] as? [String: Any], (c["type"] as? String) == "question" else { return nil }
@@ -212,6 +330,9 @@ let dataDirs = [
     "past-paper-questions-data/edexcel-a-as",
     "past-paper-questions-data/edexcel-b",
     "past-paper-questions-data/edexcel-b-as",
+    // Phase 7: AQA's Paper 3 MCQs only. Its written records are not checked
+    // here (see the AQA guard in the loop).
+    "past-paper-questions-data/aqa",
 ]
 var files: [(dir: String, name: String)] = []
 for dir in dataDirs {
@@ -219,7 +340,9 @@ for dir in dataDirs {
         FileHandle.standardError.write("cannot read \(dir)\n".data(using: .utf8)!)
         exit(2)
     }
-    files += names.filter { $0.hasSuffix(".json") }.sorted().map { (dir, $0) }
+    // AQA: Paper 3 only, the one paper with multiple choice.
+    let wanted = names.filter { $0.hasSuffix(".json") && (!dir.hasSuffix("/aqa") || $0.hasPrefix("p3-")) }
+    files += wanted.sorted().map { (dir, $0) }
 }
 
 var failures: [Failure] = []
@@ -266,7 +389,10 @@ for (dir, file) in files {
     var paperUrl: String? = nil
     let isEdexcelAP12 = (root["board"] as? String) == "edexcel" && (root["paper"] as? Int) != 3
     var marksByQuestionA: [String: Int] = [:]
+    var mcqsByQuestionA: [String: Int] = [:]
     var paperUrlA: String? = nil
+    let isAQA = (root["board"] as? String) == "aqa"
+    var aqaMCQNumbers: [String] = []
 
     for q in questions {
         guard let id = q["id"] as? String,
@@ -278,6 +404,12 @@ for (dir, file) in files {
         else {
             failures.append(Failure(id: file, check: "shape", detail: "missing fields"))
             continue
+        }
+        let isMCQ = (q["type"] as? String) == "mcq"
+        // AQA's written records are outside this script (see the header).
+        if isAQA && !isMCQ { continue }
+        if !isMCQ && (q["options"] != nil || q["usesFigure"] != nil) {
+            failures.append(Failure(id: id, check: "written-has-mcq-fields", detail: "options or usesFigure on a written card"))
         }
         checked += 1
         let isSectionA = isEdexcelAP12 && (q["section"] as? String) == "A"
@@ -299,17 +431,38 @@ for (dir, file) in files {
             // run; A1-A3 check it run by run instead.
             let openPage = isSectionA ? (ctxOf(q) ?? qpPage) : qpPage
             let needle = fold(squashed(opening(text, words: 6)))
-            if !isSectionA && !fold(squashed(qpPages[qpPage - 1])).contains(needle) {
+            // ---- M2, M3 (AQA): the stem in runs, and the options, on the page
+            if isAQA {
+                let hay = unscripted(runPage(qpPages[qpPage - 1]))
+                if let why = runCheck(id: id, text: text, hay: hay) {
+                    failures.append(Failure(id: id, check: "mcq-stem-not-on-page", detail: "p\(qpPage): \(why)"))
+                }
+                let both = (qpPage...min(qpPage + 1, qpPages.count)).map { unscripted(runPage(qpPages[$0 - 1])) }.joined()
+                mcqCheck(id: id, q: q, hay: both)
+                if (q["section"] as? String) != "A" {
+                    failures.append(Failure(id: id, check: "mcq-section", detail: "\(q["section"] ?? "nil")"))
+                }
+                aqaMCQNumbers.append(number)
+            }
+            if !isSectionA && !isAQA && !fold(squashed(qpPages[qpPage - 1])).contains(needle) {
                 failures.append(
                     Failure(
                         id: id, check: "qp-text-not-on-page",
                         detail: "p\(openPage) lacks: \(opening(text, words: 6))"))
             }
             if isSectionA {
-                sectionACheck(id: id, text: text, pages: qpPages, from: openPage, to: qpPage)
+                sectionACheck(id: id, text: text, pages: qpPages, from: openPage, to: qpPage, mcq: isMCQ)
                 let parent = (q["parentQuestion"] as? String) ?? number
                 marksByQuestionA[parent, default: 0] += (q["marks"] as? Int) ?? 0
                 paperUrlA = qpUrl
+                // ---- M1, M3 (Edexcel): shape, and options on the page
+                if isMCQ {
+                    mcqsByQuestionA[parent, default: 0] += 1
+                    let both = (qpPage...min(qpPage + 1, qpPages.count)).map { unscripted(runPage(qpPages[$0 - 1])) }.joined()
+                    mcqCheck(id: id, q: q, hay: both)
+                }
+            } else if isMCQ && !isAQA {
+                failures.append(Failure(id: id, check: "mcq-outside-section-a", detail: "an MCQ outside Edexcel A Papers 1-2 Section A"))
             }
             // ---- 5 (B): and its closing words
             // ---- 9 (OCR): on a scanned paper the WHOLE text must be in this
@@ -356,6 +509,12 @@ for (dir, file) in files {
                 failures.append(
                     Failure(
                         id: id, check: "ms-page-range", detail: "p\(msPage) of \(msPages.count)"))
+            } else if isAQA {
+                // ---- M5 (AQA): the page holding the Section A key list
+                let page = squashed(msPages[msPage - 1]).uppercased()
+                if !page.contains("KEYLIST") || !page.contains("SECTIONA") {
+                    failures.append(Failure(id: id, check: "mcq-ms-not-key-list", detail: "p\(msPage)"))
+                }
             } else if isB {
                 // ---- 6 (B): the label heads a row on that page
                 let label = squashed(number)
@@ -456,16 +615,25 @@ for (dir, file) in files {
                 failures.append(Failure(id: file, check: "a-total-missing", detail: "Q\(n)"))
                 continue
             }
-            if printed - sum != 1 {
+            if printed != sum {
                 failures.append(
                     Failure(
-                        id: file, check: "a-mcq-gap",
-                        detail: "Q\(n) records \(sum) of \(printed) marks; expected all but the 1-mark MCQ"))
+                        id: file, check: "a-total",
+                        detail: "Q\(n) records \(sum) of \(printed) marks; expected all of them, the MCQ included"))
+            }
+            // ---- M4 (Edexcel): exactly one MCQ per question
+            if mcqsByQuestionA[n, default: 0] != 1 {
+                failures.append(Failure(id: file, check: "a-mcq-count", detail: "Q\(n) has \(mcqsByQuestionA[n, default: 0]) MCQ cards"))
             }
         }
         if marksByQuestionA.count != 5 {
             failures.append(Failure(id: file, check: "a-question-count", detail: "\(marksByQuestionA.count) of 5 questions have a written part"))
         }
+    }
+
+    // ---- M4 (AQA): thirty MCQs, numbered 1-30, in order
+    if isAQA && aqaMCQNumbers != (1...30).map(String.init) {
+        failures.append(Failure(id: file, check: "aqa-mcq-count", detail: "numbers \(aqaMCQNumbers.joined(separator: ","))"))
     }
 
     // ---- 7 (B): marks per question match the printed total
@@ -490,6 +658,10 @@ for (dir, file) in files {
 }
 
 print("checked \(checked) questions across \(files.count) papers")
+// An exception that no longer fails is stale: the layout it describes changed.
+for id in closingOutOfOrder.sorted() where !closingStillOut.contains(id) {
+    failures.append(Failure(id: id, check: "stale-exception", detail: "closingOutOfOrder entry no longer needed"))
+}
 for path in ocrRead.sorted() {
     print("OCR   \(path) has no text layer; checked against this script's own OCR")
 }

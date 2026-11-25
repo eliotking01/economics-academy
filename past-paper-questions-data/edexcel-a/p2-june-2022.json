@@ -29,6 +29,53 @@
       "extractionNotes": []
     },
     {
+      "id": "edexcel-a-p2-2022-jun-q1b",
+      "section": "A",
+      "questionNumber": "1(b)",
+      "parentQuestion": "1",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "According to the Bank of England, the UK’s marginal propensity to consume is estimated to be 0.64. Which one of the following is an injection into the circular flow of income?",
+      "sourceAttribution": "(Source: adapted from https://www.bankofengland.co.uk/-/media/boe/files/working-paper/2017/the-consumption-response-to-positive-and-negative-income-changes.pdf?)",
+      "options": [
+        { "letter": "A", "text": "Imports" },
+        { "letter": "B", "text": "Investment" },
+        { "letter": "C", "text": "Savings" },
+        { "letter": "D", "text": "Taxation" }
+      ],
+      "usesFigure": false,
+      "context": { "type": "question", "label": "Question 1 as printed", "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2022-question-paper.pdf", "page": 2 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2022-question-paper.pdf", "page": 3 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2022-mark-scheme.pdf", "page": 4, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "edexcel-a-p2-2022-jun-q2a",
+      "section": "A",
+      "questionNumber": "2(a)",
+      "parentQuestion": "2",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Annual percentage change in average UK house prices With reference to the chart, which one of the following is true? Average UK house prices:",
+      "options": [
+        { "letter": "A", "text": "fell in August 2020" },
+        { "letter": "B", "text": "fell in November 2018" },
+        { "letter": "C", "text": "rose the fastest in May 2021" },
+        { "letter": "D", "text": "stayed constant in 2018" }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2022-question-paper.pdf", "page": 4 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2022-mark-scheme.pdf", "page": 5, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
       "id": "edexcel-a-p2-2022-jun-q2b",
       "section": "A",
       "questionNumber": "2(b)",
@@ -60,6 +107,53 @@
       "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
+      "id": "edexcel-a-p2-2022-jun-q3b",
+      "section": "A",
+      "questionNumber": "3(b)",
+      "parentQuestion": "3",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Bank of England base interest rate, 2016–2020 Which one of the following would be most likely to result from lower base interest rates? A fall in:",
+      "sourceAttribution": "(Source: adapted from https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate)",
+      "options": [
+        { "letter": "A", "text": "the average price of houses" },
+        { "letter": "B", "text": "the external value of the pound" },
+        { "letter": "C", "text": "the level of employment" },
+        { "letter": "D", "text": "the rate of economic growth" }
+      ],
+      "usesFigure": true,
+      "context": { "type": "question", "label": "Question 3 as printed", "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2022-question-paper.pdf", "page": 6 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2022-question-paper.pdf", "page": 7 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2022-mark-scheme.pdf", "page": 6, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-a-p2-2022-jun-q4a",
+      "section": "A",
+      "questionNumber": "4(a)",
+      "parentQuestion": "4",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The trade cycle At point Z on the diagram, which one of the following is likely to occur? An increase in:",
+      "options": [
+        { "letter": "A", "text": "absolute poverty" },
+        { "letter": "B", "text": "budget deficit" },
+        { "letter": "C", "text": "cyclical unemployment" },
+        { "letter": "D", "text": "inflation" }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2022-question-paper.pdf", "page": 8 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2022-mark-scheme.pdf", "page": 7, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
       "id": "edexcel-a-p2-2022-jun-q4b",
       "section": "A",
       "questionNumber": "4(b)",
@@ -86,6 +180,30 @@
       "context": null,
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2022-question-paper.pdf", "page": 10 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2022-mark-scheme.pdf", "page": 8, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "edexcel-a-p2-2022-jun-q5b",
+      "section": "A",
+      "questionNumber": "5(b)",
+      "parentQuestion": "5",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "In May 2020, the UK government introduced a loan scheme to help small businesses survive the downturn in the economy. Small businesses could borrow up to £50 000 at an interest rate of 2.5% for up to 6 years from a bank. The government guaranteed 100% of the loans, to enable banks to issue them quickly, and only minimal checks were made on borrowers. Which one of the following would be a risk if ‘only minimal checks were made on borrowers’ in this loan scheme?",
+      "sourceAttribution": "(Source: adapted from https://www.ft.com/content/1ca15db2-93e4-4e34-877d-110309cd9716)",
+      "options": [
+        { "letter": "A", "text": "Asymmetric information" },
+        { "letter": "B", "text": "Crowding out" },
+        { "letter": "C", "text": "Market rigging" },
+        { "letter": "D", "text": "Speculation" }
+      ],
+      "usesFigure": false,
+      "context": { "type": "question", "label": "Question 5 as printed", "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2022-question-paper.pdf", "page": 10 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2022-question-paper.pdf", "page": 11 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-2/edexcel-a-level-economics-paper-2-june-2022-mark-scheme.pdf", "page": 9, "verified": true },
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": []

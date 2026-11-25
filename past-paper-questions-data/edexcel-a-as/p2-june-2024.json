@@ -13,6 +13,30 @@
   "problems": [],
   "questions": [
     {
+      "id": "edexcel-as-p2-2024-jun-q1a",
+      "section": "A",
+      "questionNumber": "1(a)",
+      "parentQuestion": "1",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "In 2019 the average annual percentage increase in real Gross Domestic Product (GDP) was 1.7% in developed countries and it was 4.6% in developing countries. Which one of the following best describes an increase in real GDP?",
+      "sourceAttribution": "(Source: adapted from IMF, World Economic Outlook 2019)",
+      "options": [
+        { "letter": "A", "text": "Actual economic growth" },
+        { "letter": "B", "text": "Negative output gap" },
+        { "letter": "C", "text": "Positive output gap" },
+        { "letter": "D", "text": "Potential economic growth" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2024-question-paper.pdf", "page": 2 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2024-mark-scheme.pdf", "page": 3, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-as-p2-2024-jun-q1b",
       "section": "A",
       "questionNumber": "1(b)",
@@ -57,6 +81,53 @@
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": []
+    },
+    {
+      "id": "edexcel-as-p2-2024-jun-q2c",
+      "section": "A",
+      "questionNumber": "2(c)",
+      "parentQuestion": "2",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "In 2019 the marginal propensity to consume in the UK was estimated to be 0.8. Using the above data, which one of the following represents the value of the multiplier?",
+      "options": [
+        { "letter": "A", "text": "0.2" },
+        { "letter": "B", "text": "0.8" },
+        { "letter": "C", "text": "1.3" },
+        { "letter": "D", "text": "5.0" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2024-question-paper.pdf", "page": 4 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2024-mark-scheme.pdf", "page": 5, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "edexcel-as-p2-2024-jun-q3a",
+      "section": "A",
+      "questionNumber": "3(a)",
+      "parentQuestion": "3",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The graph below shows UK long-term migration trends, September 2013 to September 2019. Immigration refers to the number of people entering the country to live there and emigration refers to the number of people leaving the country. Which one of the following can be inferred from the above chart?",
+      "sourceAttribution": "(Source: adapted from https://www.ons.gov.uk)",
+      "options": [
+        { "letter": "A", "text": "Between September 2013 and September 2016, there were nearly 100 000 more people leaving the UK than entering the UK" },
+        { "letter": "B", "text": "Immigration to the UK is likely to decrease the short-run AS curve" },
+        { "letter": "C", "text": "Since the EU referendum, net migration has fallen by around 80 000" },
+        { "letter": "D", "text": "There has been a significant decrease in emigration throughout the given period" }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2024-question-paper.pdf", "page": 6 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2024-mark-scheme.pdf", "page": 6, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
       "id": "edexcel-as-p2-2024-jun-q3b",
@@ -107,6 +178,30 @@
       "extractionNotes": []
     },
     {
+      "id": "edexcel-as-p2-2024-jun-q4c",
+      "section": "A",
+      "questionNumber": "4(c)",
+      "parentQuestion": "4",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Business investment fell by 0.5% between Quarter 3 2019 and Quarter 4 2019. Which one of the following factors might have caused business investment in the UK to fall?",
+      "sourceAttribution": "(Source: adapted from https://www.ons.gov.uk)",
+      "options": [
+        { "letter": "A", "text": "A decrease in business expectations" },
+        { "letter": "B", "text": "A decrease in government regulations" },
+        { "letter": "C", "text": "An increase in the demand for exports" },
+        { "letter": "D", "text": "An increase in the rate of economic growth" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2024-question-paper.pdf", "page": 8 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2024-mark-scheme.pdf", "page": 7, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-as-p2-2024-jun-q5a",
       "section": "A",
       "questionNumber": "5(a)",
@@ -131,6 +226,30 @@
       "marks": 2,
       "questionText": "The table below shows the UK’s budget deficit between March 2016 and March 2019. Using the above table, calculate the percentage decrease in budget deficit between March 2016 and March 2019. You are advised to show your working.",
       "sourceAttribution": "(Source: adapted from https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicspending/bulletins/ukgovernmentdebtanddeficitforeurostatmaast/september2019)",
+      "context": { "type": "question", "label": "Question 5 as printed", "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2024-question-paper.pdf", "page": 10 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2024-question-paper.pdf", "page": 11 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2024-mark-scheme.pdf", "page": 8, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-as-p2-2024-jun-q5c",
+      "section": "A",
+      "questionNumber": "5(c)",
+      "parentQuestion": "5",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The table below shows the UK’s budget deficit between March 2016 and March 2019. Which one of the following will most likely lead to a reduction in the budget deficit?",
+      "sourceAttribution": "(Source: adapted from https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicspending/bulletins/ukgovernmentdebtanddeficitforeurostatmaast/september2019)",
+      "options": [
+        { "letter": "A", "text": "An increase in government spending and a decrease in taxation" },
+        { "letter": "B", "text": "An increase in taxation and a decrease in government spending" },
+        { "letter": "C", "text": "An increase in the value of exports and a decrease in the value of imports" },
+        { "letter": "D", "text": "An increase in the value of imports and a decrease in the value of exports" }
+      ],
+      "usesFigure": true,
       "context": { "type": "question", "label": "Question 5 as printed", "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2024-question-paper.pdf", "page": 10 },
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2024-question-paper.pdf", "page": 11 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-2/edexcel-as-level-economics-paper-2-june-2024-mark-scheme.pdf", "page": 8, "verified": true },

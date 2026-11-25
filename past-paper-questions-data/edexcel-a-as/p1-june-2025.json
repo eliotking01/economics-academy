@@ -13,6 +13,29 @@
   "problems": [],
   "questions": [
     {
+      "id": "edexcel-as-p1-2025-jun-q1a",
+      "section": "A",
+      "questionNumber": "1(a)",
+      "parentQuestion": "1",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Spending on capital goods in the UK rose by 4.8% in Quarter 4, 2022. Which one of the following is an example of a capital good?",
+      "options": [
+        { "letter": "A", "text": "A computer" },
+        { "letter": "B", "text": "Savings in the bank" },
+        { "letter": "C", "text": "Shares in a company" },
+        { "letter": "D", "text": "Underground reserves of oil" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2025-question-paper.pdf", "page": 2 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2025-mark-scheme.pdf", "page": 4, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-as-p1-2025-jun-q1b",
       "section": "A",
       "questionNumber": "1(b)",
@@ -43,6 +66,29 @@
       "extractionNotes": ["no stem text found above the parts"]
     },
     {
+      "id": "edexcel-as-p1-2025-jun-q2b",
+      "section": "A",
+      "questionNumber": "2(b)",
+      "parentQuestion": "2",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following is the most appropriate description of the price elasticity of demand of −0.2?",
+      "options": [
+        { "letter": "A", "text": "Perfectly inelastic" },
+        { "letter": "B", "text": "Relatively elastic" },
+        { "letter": "C", "text": "Relatively inelastic" },
+        { "letter": "D", "text": "Unitary elastic" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2025-question-paper.pdf", "page": 3 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2025-mark-scheme.pdf", "page": 5, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-as-p1-2025-jun-q3a",
       "section": "A",
       "questionNumber": "3(a)",
@@ -56,6 +102,29 @@
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": ["no stem text found above the parts"]
+    },
+    {
+      "id": "edexcel-as-p1-2025-jun-q3b",
+      "section": "A",
+      "questionNumber": "3(b)",
+      "parentQuestion": "3",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following is the most likely reason why a free market fails to achieve the social optimum position?",
+      "options": [
+        { "letter": "A", "text": "Public goods are provided free of charge to users" },
+        { "letter": "B", "text": "There is overproduction of goods with external benefits" },
+        { "letter": "C", "text": "There is underconsumption of goods with external benefits" },
+        { "letter": "D", "text": "There is underproduction of goods with external costs" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2025-question-paper.pdf", "page": 4 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2025-mark-scheme.pdf", "page": 6, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
     },
     {
       "id": "edexcel-as-p1-2025-jun-q3c",
@@ -73,6 +142,29 @@
       "extractionNotes": ["the text layer sets this label on an option of the MCQ above; read from after that MCQ's options", "no stem text found above the parts"]
     },
     {
+      "id": "edexcel-as-p1-2025-jun-q4a",
+      "section": "A",
+      "questionNumber": "4(a)",
+      "parentQuestion": "4",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "During the period from October to December 2022, production of coffee beans in the Philippines increased by 2.7% from the same quarter in 2021. Which one of the following is most likely to cause a shift to the right of the supply curve?",
+      "options": [
+        { "letter": "A", "text": "A decrease in the demand for coffee" },
+        { "letter": "B", "text": "A subsidy to coffee bean producers" },
+        { "letter": "C", "text": "A tax on coffee bean production" },
+        { "letter": "D", "text": "The cost of production rises" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2025-question-paper.pdf", "page": 5 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2025-mark-scheme.pdf", "page": 7, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-as-p1-2025-jun-q4b",
       "section": "A",
       "questionNumber": "4(b)",
@@ -86,6 +178,30 @@
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": ["the text layer sets this label on an option of the MCQ above; read from after that MCQ's options", "no stem text found above the parts"]
+    },
+    {
+      "id": "edexcel-as-p1-2025-jun-q5a",
+      "section": "A",
+      "questionNumber": "5(a)",
+      "parentQuestion": "5",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "In March 2019, 458 054 new car registrations were made, which subsequently fell by 44% in March 2020 due to the impact of the global health crisis. Demand for new vehicles can change quickly and can be caused by a variety of factors. Which one of the following factors may cause a shift in demand for new cars?",
+      "sourceAttribution": "(Source: adapted from https://fleetworld.co.uk/uk-new-car-registrations-slump-44-in-march/)",
+      "options": [
+        { "letter": "A", "text": "Advertising" },
+        { "letter": "B", "text": "Cost of production" },
+        { "letter": "C", "text": "Indirect taxes" },
+        { "letter": "D", "text": "Subsidy to producers" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2025-question-paper.pdf", "page": 6 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2025-mark-scheme.pdf", "page": 8, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
     },
     {
       "id": "edexcel-as-p1-2025-jun-q5b",

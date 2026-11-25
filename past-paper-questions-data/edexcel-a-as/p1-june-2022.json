@@ -13,6 +13,30 @@
   "problems": [],
   "questions": [
     {
+      "id": "edexcel-as-p1-2022-jun-q1a",
+      "section": "A",
+      "questionNumber": "1(a)",
+      "parentQuestion": "1",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Since 2015, the government has invested £74 million on a flood defence scheme in the Calder Valley. The scheme will protect homes, businesses and jobs. What are the characteristics of a private good?",
+      "sourceAttribution": "(Source: https://www.theguardian.com/uk-news/2020/feb/10/yorkshire-residents-criticise-delays-to-flood-defence-scheme)",
+      "options": [
+        { "letter": "A", "text": "Non-rivalrous and excludable" },
+        { "letter": "B", "text": "Non-rivalrous and non-excludable" },
+        { "letter": "C", "text": "Rivalrous and excludable" },
+        { "letter": "D", "text": "Rivalrous and non-excludable" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2022-question-paper.pdf", "page": 2 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2022-mark-scheme.pdf", "page": 4, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-as-p1-2022-jun-q1b",
       "section": "A",
       "questionNumber": "1(b)",
@@ -45,6 +69,30 @@
       "extractionNotes": []
     },
     {
+      "id": "edexcel-as-p1-2022-jun-q2b",
+      "section": "A",
+      "questionNumber": "2(b)",
+      "parentQuestion": "2",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The Common Agricultural Policy (CAP) is a system of minimum prices and other programmes covering farming, environmental measures and rural development. The CAP applied to British farmers before the UK left the EU in January 2020. The diagram below shows the demand and supply curves for wheat in the European Union (EU). The free market price of wheat is P1. It had been agreed as part of the CAP to maintain a price of P2 within the EU and to do so through intervention buying. In achieving a price of P2 , the amount spent on intervention buying by the EU would be",
+      "sourceAttribution": "(Source adapted from: https://www.gov.uk/government/collections/common-agricultural-policy-reform)",
+      "options": [
+        { "letter": "A", "text": "HKL" },
+        { "letter": "B", "text": "JHQ2Q3" },
+        { "letter": "C", "text": "LKJH" },
+        { "letter": "D", "text": "Q1Q2LK" }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2022-question-paper.pdf", "page": 3 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2022-mark-scheme.pdf", "page": 5, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["lead-in printed between parts is included", "figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
       "id": "edexcel-as-p1-2022-jun-q2c",
       "section": "A",
       "questionNumber": "2(c)",
@@ -59,6 +107,29 @@
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": ["lead-in printed between parts is included", "figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-as-p1-2022-jun-q3a",
+      "section": "A",
+      "questionNumber": "3(a)",
+      "parentQuestion": "3",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The world’s first cryptocurrency, Bitcoin is stored and exchanged securely on the internet through a digital ledger known as a blockchain. Bitcoins are divisible into smaller units known as satoshis. Which one of the following would be most likely to cause a country’s currency to no longer be acceptable as a medium of exchange?",
+      "options": [
+        { "letter": "A", "text": "It becomes harder to counterfeit" },
+        { "letter": "B", "text": "It becomes unlimited in supply" },
+        { "letter": "C", "text": "It is issued in smaller denominations" },
+        { "letter": "D", "text": "It is more long lasting" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2022-question-paper.pdf", "page": 5 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2022-mark-scheme.pdf", "page": 6, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
     },
     {
       "id": "edexcel-as-p1-2022-jun-q3b",
@@ -92,6 +163,29 @@
       "extractionNotes": []
     },
     {
+      "id": "edexcel-as-p1-2022-jun-q4b",
+      "section": "A",
+      "questionNumber": "4(b)",
+      "parentQuestion": "4",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "A large number of people should be vaccinated against a new virus, so that even those who are not vaccinated will benefit. Which one of the following explains how market failure might occur in a free market economy?",
+      "options": [
+        { "letter": "A", "text": "A net welfare loss results from intervention by the government" },
+        { "letter": "B", "text": "Firms enter the market in response to higher prices" },
+        { "letter": "C", "text": "Goods with positive externalities are underprovided" },
+        { "letter": "D", "text": "Prices rise when there is excess demand" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2022-question-paper.pdf", "page": 6 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2022-mark-scheme.pdf", "page": 7, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-as-p1-2022-jun-q5a",
       "section": "A",
       "questionNumber": "5(a)",
@@ -99,6 +193,29 @@
       "choiceGroup": null,
       "marks": 3,
       "questionText": "In March 2020, a substantial increase in the demand for flour resulted in the retail price of flour increasing. Despite the price rises, the supply of flour failed to keep up with the increased demand. Explain one reason why flour producers might find it difficult to increase quantity supplied in the short run.",
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2022-question-paper.pdf", "page": 7 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2022-mark-scheme.pdf", "page": 8, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "edexcel-as-p1-2022-jun-q5b",
+      "section": "A",
+      "questionNumber": "5(b)",
+      "parentQuestion": "5",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "In March 2020, a substantial increase in the demand for flour resulted in the retail price of flour increasing. Despite the price rises, the supply of flour failed to keep up with the increased demand. A manufacturer has estimated that the price elasticity of supply of ice cream is +1.5. If the demand for ice cream rises and the price increases by 10%, which one of the following is the resulting percentage change in supply?",
+      "options": [
+        { "letter": "A", "text": "0.15%" },
+        { "letter": "B", "text": "1.5%" },
+        { "letter": "C", "text": "6.67%" },
+        { "letter": "D", "text": "15%" }
+      ],
+      "usesFigure": false,
       "context": null,
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2022-question-paper.pdf", "page": 7 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2022-mark-scheme.pdf", "page": 8, "verified": true },

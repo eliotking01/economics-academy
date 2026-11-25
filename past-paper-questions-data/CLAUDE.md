@@ -16,8 +16,9 @@ Widened by D67 (2026-10-24). Each change lands with the code that implements it.
 
 | In scope | Out of scope |
 | --- | --- |
-| Edexcel A **A Level** (9EC0), Papers 1–3 | **Multiple-choice questions**: the one MCQ in each Edexcel A Papers 1–2 Section A question (9EC0 and 8EC0), and AQA Paper 3 Section A. Not yet: D67 brings them in as search-only cards with no key (Phase 7). Until then, do not extract them |
+| Edexcel A **A Level** (9EC0), Papers 1–3 | **An answer key for any multiple-choice card**, permanently (D67: search-only). No record carries one; the verifier fails if a field names one |
 | Edexcel A Papers 1–2 **Section A written parts** (9EC0 and 8EC0), every part that prints no A–D answer boxes: 259 parts from 36 papers (counts: `build_past_paper_questions.py --check`). Brought in by D67, Phase 6; tags settled in `review/section-a-tags.md` and built 2026-11-24 | |
+| **Multiple-choice questions** (D67, Phase 7): the one MCQ in each Edexcel A Papers 1–2 Section A question (9EC0 and 8EC0, 36 papers), and AQA Paper 3 Section A, Q1–Q30 (9 papers). Extracted 2026-11-25 in the shape approved in `review/phase-7-mcqs.md`; **not yet published** - the build skips them until they are tagged (step 3). Counts: `build_past_paper_questions.py --check` | |
 | Edexcel A **AS Level** (8EC0), Papers 1–2 | **AQA AS papers**, permanently. When AQA extends, A Level only |
 | AQA A Level (7136) | OCR and AQA specimen papers, permanently |
 | Edexcel B **A Level** (9EB0), Papers 1–3, and **AS Level** (8EB0), Papers 1–2, **every section**: B has no MCQs and no optional questions. Extracted into `edexcel-b/` and `edexcel-b-as/`. The build reads them by `boards.json`'s flag (`BANK_DIRS`, `paper_dirs()`). **Live** since `/launch-feature edexcel-b pastPaperBank` (2026-11-17) | |
@@ -33,8 +34,8 @@ through the paper record's `note`, which no other paper carries.
 
 **Edexcel A Papers 1–2 Section A** is five questions: 5 marks each on 9EC0,
 4 on 8EC0. Every question has exactly one 1-mark MCQ beside its written
-parts, so a question's cards always run one mark short of its printed total
-(the verifier's check A5). A part is an MCQ **if and only if it prints A–D
+parts, so a question's cards sum to its printed total, the MCQ included (the
+verifier's checks A5 and M4). A part is an MCQ **if and only if it prints A–D
 answer boxes**, never by its mark — AS sets 1-mark "Define the term" parts.
 Each card carries, verbatim: its question's opening stem, every lead-in
 printed above it within the question, then its own text; sub-parts (i)/(ii)
@@ -45,6 +46,23 @@ when the part is on a later page. Text printed after a part's label belongs to
 that part, not the question (AS Paper 1 June 2025 Q3, Q4). Decisions in
 `review/phase-6-section-a.md`; the PDF text-layer quirks the parser repairs
 are listed in `extractSectionA()`.
+
+**Multiple-choice records** (Phase 7) are the written record plus three
+fields only they carry, so no written record changed by a byte: `"type":
+"mcq"`; `options`, A–D as printed, or `null` when the options are diagrams,
+the rows of a table, fractions, or bare letters naming points on a figure; and
+`usesFigure`, true when the question prints a figure, chart or table the card
+cannot show (always true when `options` is null). **There is no answer field
+and there never will be** — `markScheme.page` is the page holding the key, as
+for every card. An Edexcel MCQ carries its question's stem and lead-ins from
+the stream, exactly as a written part does; its own sentence and its options
+are read by line position (`mcqGeometry()`), because the text stream returns
+options reversed, glued to the question or split by chart labels. AQA's are
+read by character position (`extract_mcqs()`): its subscripts (SRAS1, E2) are
+7pt glyphs set below the line, joined to their base as plain digits, the way
+PDFKit returns Edexcel's "P1". Figure and table text is never reproduced.
+`verify_past_paper_extraction.swift` checks every MCQ against PDFKit's plain
+page text, which neither extractor reads options from (checks M1–M5).
 
 **8EC0 has no Section C** — verified from all 16 papers, not from the
 specification. Section B is `Q6(a)–(g)`: (a)–(e) compulsory then **(f) OR (g)**,
@@ -66,7 +84,8 @@ HTML, never applied by script, so it is never optional.
   `extract_aqa_questions.py`). **Never hand-edit.** Two directories per
   Edexcel board because both qualifications have a Paper 1 in the same
   series. `verify_past_paper_extraction.swift` checks all four Edexcel
-  directories against the PDFs.
+  directories against the PDFs, and AQA's Paper 3 MCQs (not its written
+  records).
 - `ocr/` — reviewed OCR transcripts, one per question paper that has no text
   layer. Today there's one: Edexcel B AS Paper 2 June 2019, which Pearson
   publishes only as a scan. **A transcript is a checked source, not generated

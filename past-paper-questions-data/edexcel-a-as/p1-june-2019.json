@@ -13,6 +13,30 @@
   "problems": [],
   "questions": [
     {
+      "id": "edexcel-as-p1-2019-jun-q1a",
+      "section": "A",
+      "questionNumber": "1(a)",
+      "parentQuestion": "1",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Henry Ford designed his first moving assembly line in 1913, and revolutionised the car production process of the Ford Model T. This assembly line, at the first Ford factory, became the benchmark for mass production methods around the world. The benefits of specialisation and division of labour are mostly associated with:",
+      "sourceAttribution": "(Source: adapted from https://www.ford.co.uk/experience-ford/history-and-heritage)",
+      "options": [
+        { "letter": "A", "text": "Adam Smith" },
+        { "letter": "B", "text": "Friedrich Hayek" },
+        { "letter": "C", "text": "John Maynard Keynes" },
+        { "letter": "D", "text": "Karl Marx" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2019-question-paper.pdf", "page": 2 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2019-mark-scheme.pdf", "page": 4, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-as-p1-2019-jun-q1b",
       "section": "A",
       "questionNumber": "1(b)",
@@ -45,6 +69,30 @@
       "extractionNotes": []
     },
     {
+      "id": "edexcel-as-p1-2019-jun-q2b",
+      "section": "A",
+      "questionNumber": "2(b)",
+      "parentQuestion": "2",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The consensus that diesel emissions are bad for health has led to many cities planning to ban diesel vehicles from their centres. The mayors of Paris, Mexico City, Madrid and Athens have said they intend to ban these vehicles by 2025. A ban on diesel vehicles in city centres will reduce the demand for diesel fuel. This is because:",
+      "sourceAttribution": "(Source: adapted from http://www.autoexpress.co.uk/car-news/consumer-news/98747/diesel-ban-clean-air-zone-expansion-could-see-diesel-cars-charged-to)",
+      "options": [
+        { "letter": "A", "text": "consumers are irrational" },
+        { "letter": "B", "text": "consumers expect the price of diesel to rise" },
+        { "letter": "C", "text": "the goods are complements" },
+        { "letter": "D", "text": "the goods are substitutes" }
+      ],
+      "usesFigure": false,
+      "context": { "type": "question", "label": "Question 2 as printed", "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2019-question-paper.pdf", "page": 4 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2019-question-paper.pdf", "page": 5 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2019-mark-scheme.pdf", "page": 5, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-as-p1-2019-jun-q2c",
       "section": "A",
       "questionNumber": "2(c)",
@@ -61,6 +109,29 @@
       "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
+      "id": "edexcel-as-p1-2019-jun-q3a",
+      "section": "A",
+      "questionNumber": "3(a)",
+      "parentQuestion": "3",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Amazon Prime, Netflix and NowTV all charge £7.99 per month for streaming very similar film and television services. The most likely cross price elasticity of demand for close substitutes is:",
+      "options": [
+        { "letter": "A", "text": "– 2.1" },
+        { "letter": "B", "text": "– 0.1" },
+        { "letter": "C", "text": "+ 0.1" },
+        { "letter": "D", "text": "+ 2.1" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2019-question-paper.pdf", "page": 6 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2019-mark-scheme.pdf", "page": 7, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-as-p1-2019-jun-q3b",
       "section": "A",
       "questionNumber": "3(b)",
@@ -74,6 +145,29 @@
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": ["lead-in printed between parts is included"]
+    },
+    {
+      "id": "edexcel-as-p1-2019-jun-q4a",
+      "section": "A",
+      "questionNumber": "4(a)",
+      "parentQuestion": "4",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "In 2016 the average energy bill per household was £1 070 per year, excluding VAT, an indirect tax charged at 5%. The amount of VAT paid per year from energy bills by an average household in 2016 was:",
+      "options": [
+        { "letter": "A", "text": "£53.50" },
+        { "letter": "B", "text": "£214.00" },
+        { "letter": "C", "text": "£1 019.00" },
+        { "letter": "D", "text": "£1 123.50" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2019-question-paper.pdf", "page": 8 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2019-mark-scheme.pdf", "page": 8, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
     },
     {
       "id": "edexcel-as-p1-2019-jun-q4b",
@@ -106,6 +200,29 @@
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-as-p1-2019-jun-q5a",
+      "section": "A",
+      "questionNumber": "5(a)",
+      "parentQuestion": "5",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "In the UK, Freddo is a popular chocolate snack bought by children who are under 10 years old. Freddo’s income elasticity of demand is estimated to be –0.1. Calculate the percentage change in quantity demanded for Freddos between 2015 and 2017, ceteris paribus:",
+      "options": [
+        { "letter": "A", "text": "–0.8%" },
+        { "letter": "B", "text": "–2%" },
+        { "letter": "C", "text": "–2.5%" },
+        { "letter": "D", "text": "–25%" }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2019-question-paper.pdf", "page": 10 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2019-mark-scheme.pdf", "page": 9, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["the question number is not in the text layer; the stem is read from the start of the question", "figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
       "id": "edexcel-as-p1-2019-jun-q5b",

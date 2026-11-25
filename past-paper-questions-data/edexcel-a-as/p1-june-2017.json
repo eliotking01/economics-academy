@@ -28,6 +28,29 @@
       "extractionNotes": ["the text layer prints this part's tariff before its label", "figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
+      "id": "edexcel-as-p1-2017-jun-q1b",
+      "section": "A",
+      "questionNumber": "1(b)",
+      "parentQuestion": "1",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The production possibility frontier for an economy is shown in the table below. Which one of the following is the most likely effect of an economy producing more capital goods?",
+      "options": [
+        { "letter": "A", "text": "Reduced specialisation of labour" },
+        { "letter": "B", "text": "A shift in the production possibility frontier" },
+        { "letter": "C", "text": "A reduction in marginal utility" },
+        { "letter": "D", "text": "A shift in demand for consumer goods" }
+      ],
+      "usesFigure": true,
+      "context": { "type": "question", "label": "Question 1 as printed", "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2017-question-paper.pdf", "page": 2 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2017-question-paper.pdf", "page": 3 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2017-mark-scheme.pdf", "page": 5, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
       "id": "edexcel-as-p1-2017-jun-q2a",
       "section": "A",
       "questionNumber": "2(a)",
@@ -59,6 +82,30 @@
       "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
+      "id": "edexcel-as-p1-2017-jun-q2c",
+      "section": "A",
+      "questionNumber": "2(c)",
+      "parentQuestion": "2",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The table below shows UK wheat production between 2010 and 2015. The percentage change in wheat production from 2014 to 2015 was:",
+      "sourceAttribution": "(Source: adapted from https://www.gov.uk/government/uploads/system/uploadsattachment_data/file/466383/farming-statistics-2015-wheat-and-barley-production-uk.pdf)",
+      "options": [
+        { "letter": "A", "text": "0.03" },
+        { "letter": "B", "text": "–2.87" },
+        { "letter": "C", "text": "–2.95" },
+        { "letter": "D", "text": "–477" }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2017-question-paper.pdf", "page": 4 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2017-mark-scheme.pdf", "page": 6, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
       "id": "edexcel-as-p1-2017-jun-q3a",
       "section": "A",
       "questionNumber": "3(a)",
@@ -66,6 +113,29 @@
       "choiceGroup": null,
       "marks": 1,
       "questionText": "In 2015 the UK government cut subsidies for the installation of solar energy panels. Define the term ‘subsidies’.",
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2017-question-paper.pdf", "page": 5 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2017-mark-scheme.pdf", "page": 7, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "edexcel-as-p1-2017-jun-q3b",
+      "section": "A",
+      "questionNumber": "3(b)",
+      "parentQuestion": "3",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "In 2015 the UK government cut subsidies for the installation of solar energy panels. The most likely effect of cutting subsidies for the installation of solar panels is to:",
+      "options": [
+        { "letter": "A", "text": "increase producer surplus" },
+        { "letter": "B", "text": "decrease the provision of public goods" },
+        { "letter": "C", "text": "decrease consumer surplus" },
+        { "letter": "D", "text": "increase government expenditure" }
+      ],
+      "usesFigure": false,
       "context": null,
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2017-question-paper.pdf", "page": 5 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2017-mark-scheme.pdf", "page": 7, "verified": true },
@@ -105,6 +175,30 @@
       "extractionNotes": []
     },
     {
+      "id": "edexcel-as-p1-2017-jun-q4b",
+      "section": "A",
+      "questionNumber": "4(b)",
+      "parentQuestion": "4",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The excess supply of carbon steel has recently caused its global price to fall below $530 per tonne. Steel production leads to high levels of carbon emissions. Which one of the following is likely to result in an increase in carbon emissions?",
+      "sourceAttribution": "(Source: adapted from http://www.meps.co.uk/allproducts%20steel%20price.htm)",
+      "options": [
+        { "letter": "A", "text": "Introducing a tradable pollution permits scheme" },
+        { "letter": "B", "text": "Shutting down steel factories" },
+        { "letter": "C", "text": "Subsidising the steel industry to install cleaner technology" },
+        { "letter": "D", "text": "Reducing indirect taxes on steel products" }
+      ],
+      "usesFigure": false,
+      "context": { "type": "question", "label": "Question 4 as printed", "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2017-question-paper.pdf", "page": 6 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2017-question-paper.pdf", "page": 7 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2017-mark-scheme.pdf", "page": 10, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["lead-in printed between parts is included"]
+    },
+    {
       "id": "edexcel-as-p1-2017-jun-q5a",
       "section": "A",
       "questionNumber": "5(a)",
@@ -115,6 +209,30 @@
       "sourceAttribution": "(Source: adapted from tuition fees 2015 Times letter Universities UK http://www.universitiesuk.ac.uk/highereducation/Pages/UUKboardFeesLetter.aspx#.VjoQRbfhDIU)",
       "context": null,
       "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2017-question-paper.pdf", "page": 8 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2017-mark-scheme.pdf", "page": 11, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "edexcel-as-p1-2017-jun-q5b",
+      "section": "A",
+      "questionNumber": "5(b)",
+      "parentQuestion": "5",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Universities UK raised concerns about the proposal to reduce the maximum tuition fees (fee cap) for undergraduate courses in England from £9 000 to £6 000. It stated “This unfunded proposal to reduce the fee cap would damage the quality of experience our universities could deliver to students and remove opportunities for those seeking to benefit from a university education”. Which one of the following statements is correct?",
+      "sourceAttribution": "(Source: adapted from tuition fees 2015 Times letter Universities UK http://www.universitiesuk.ac.uk/highereducation/Pages/UUKboardFeesLetter.aspx#.VjoQRbfhDIU)",
+      "options": [
+        { "letter": "A", "text": "The marginal social benefits exceed the marginal private benefits from university education" },
+        { "letter": "B", "text": "University education is an inferior good" },
+        { "letter": "C", "text": "University education is a public good" },
+        { "letter": "D", "text": "The social optimum equilibrium quantity is less than the market equilibrium quantity for university education" }
+      ],
+      "usesFigure": false,
+      "context": { "type": "question", "label": "Question 5 as printed", "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2017-question-paper.pdf", "page": 8 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2017-question-paper.pdf", "page": 9 },
       "markScheme": { "pdfUrl": "/past-papers/edexcel/as-level/paper-1/edexcel-as-level-economics-paper-1-june-2017-mark-scheme.pdf", "page": 11, "verified": true },
       "modelAnswer": null,
       "extractionConfidence": "high",

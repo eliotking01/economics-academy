@@ -29,6 +29,30 @@
       "extractionNotes": []
     },
     {
+      "id": "edexcel-a-p1-2023-jun-q1b",
+      "section": "A",
+      "questionNumber": "1(b)",
+      "parentQuestion": "1",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "In a major reform of its command economy, the Cuban government will allow small private businesses to operate in most fields. Free market economists have long called for the role of small business to be expanded to help jump‑start the economy and to create jobs. Which one of the following economic thinkers supported the idea of a command economy?",
+      "sourceAttribution": "(Source adapted from: https://www.telegraph.co.uk/news/2021/02/07/cuba-allows-massive-expansion-private-businesses/)",
+      "options": [
+        { "letter": "A", "text": "Adam Smith" },
+        { "letter": "B", "text": "Friedrich Hayek" },
+        { "letter": "C", "text": "John Maynard Keynes" },
+        { "letter": "D", "text": "Karl Marx" }
+      ],
+      "usesFigure": false,
+      "context": { "type": "question", "label": "Question 1 as printed", "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2023-question-paper.pdf", "page": 2 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2023-question-paper.pdf", "page": 3 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2023-mark-scheme.pdf", "page": 5, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
       "id": "edexcel-a-p1-2023-jun-q2a",
       "section": "A",
       "questionNumber": "2(a)",
@@ -57,6 +81,52 @@
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-a-p1-2023-jun-q2c",
+      "section": "A",
+      "questionNumber": "2(c)",
+      "parentQuestion": "2",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The production possibility frontier shows last year’s harvest for a UK farmer at point X. Which one of the following would be most likely to help the farmer reach point Z? An increase in",
+      "options": [
+        { "letter": "A", "text": "investment in milk production machinery" },
+        { "letter": "B", "text": "investment in modern farming technology" },
+        { "letter": "C", "text": "the demand for wheat" },
+        { "letter": "D", "text": "the price of oats" }
+      ],
+      "usesFigure": true,
+      "context": { "type": "question", "label": "Question 2 as printed", "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2023-question-paper.pdf", "page": 4 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2023-question-paper.pdf", "page": 5 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2023-mark-scheme.pdf", "page": 6, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-a-p1-2023-jun-q3a",
+      "section": "A",
+      "questionNumber": "3(a)",
+      "parentQuestion": "3",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "A luxury brownie baker is faced with falling demand as incomes fall. The likely income elasticity of demand for a luxury good is:",
+      "options": [
+        { "letter": "A", "text": "–3.40" },
+        { "letter": "B", "text": "–0.74" },
+        { "letter": "C", "text": "+0.74" },
+        { "letter": "D", "text": "+3.40" }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2023-question-paper.pdf", "page": 6 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2023-mark-scheme.pdf", "page": 7, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
     },
     {
       "id": "edexcel-a-p1-2023-jun-q3b",
@@ -104,6 +174,53 @@
       "modelAnswer": null,
       "extractionConfidence": "high",
       "extractionNotes": []
+    },
+    {
+      "id": "edexcel-a-p1-2023-jun-q4c",
+      "section": "A",
+      "questionNumber": "4(c)",
+      "parentQuestion": "4",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "An annual season ticket for a train journey between London and Reading is planned to increase from £5 044 to £5 664 in 2023. The diagram below shows the demand and supply for sugary drinks. Which one of the following areas represents the change in producer surplus when a minimum price is imposed?",
+      "sourceAttribution": "(Source adapted from: https://commonslibrary.parliament.uk/how-much-could-rail-fares-increase-by-in-2023-and-why)",
+      "options": [
+        { "letter": "A", "text": "FEPeP1" },
+        { "letter": "B", "text": "FMP1" },
+        { "letter": "C", "text": "GEPeP1" },
+        { "letter": "D", "text": "GKP1" }
+      ],
+      "usesFigure": true,
+      "context": { "type": "question", "label": "Question 4 as printed", "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2023-question-paper.pdf", "page": 8 },
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2023-question-paper.pdf", "page": 9 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2023-mark-scheme.pdf", "page": 8, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["lead-in printed between parts is included", "figure or table text printed with the question is not reproduced; see the question paper"]
+    },
+    {
+      "id": "edexcel-a-p1-2023-jun-q5a",
+      "section": "A",
+      "questionNumber": "5(a)",
+      "parentQuestion": "5",
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Index of pay in the public and private sector. Which one of the following is the ratio of public sector pay relative to private sector pay in 2022?",
+      "options": [
+        { "letter": "A", "text": "1 : 0.97" },
+        { "letter": "B", "text": "1 : 1.04" },
+        { "letter": "C", "text": "1 : 4.0" },
+        { "letter": "D", "text": "1 : 14.0" }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2023-question-paper.pdf", "page": 10 },
+      "markScheme": { "pdfUrl": "/past-papers/edexcel/a-level/paper-1/edexcel-a-level-economics-paper-1-june-2023-mark-scheme.pdf", "page": 9, "verified": true },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": ["figure or table text printed with the question is not reproduced; see the question paper"]
     },
     {
       "id": "edexcel-a-p1-2023-jun-q5b",
