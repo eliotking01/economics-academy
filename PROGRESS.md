@@ -23,7 +23,7 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| All-boards parity (D67) — Phase 9: AQA AS (7135) Section A MCQs in the past-paper bank (360 questions, about 3 new pages) | in progress: 360 extracted and tagged (first pass + blind pass); awaiting answers on `review/aqa-as-mcq-tags.md`; bank pages not rebuilt (branch `feature/aqa-as-mcqs`) | — | — |
+| All-boards parity (D67) — Phase 9: AQA AS (7135) Section A MCQs in the past-paper bank (360 questions, about 3 new pages) | built, awaiting merge: tags settled (`review/aqa-as-mcq-tags.md`, T1–T3 A, 2026-11-26), 3 new pages, suite green (branch `feature/aqa-as-mcqs`) | — | — |
 | All-boards parity (D67) — Phase 7: real exam MCQs in the past-paper bank, AQA and Edexcel A (450 questions, 15 new pages) | live (PR #56) | 2026-11-25 | `ed377dc7` |
 | All-boards parity (D67) — Phase 6: Edexcel A Papers 1–2 Section A written parts in the past-paper bank (259 questions, 13 new pages) | live (PR #54) | 2026-11-25 | `96439950` |
 | All-boards parity (D67) — Phase 5: twin links across three boards (185 pages reworded, no new URLs) | live (PR #53) | 2026-11-24 | `f1110a8a` |
@@ -258,6 +258,11 @@ records, is `review/phase-9-dry-run.html`.
   dropped-line audit found three (`57513bd7`, `75210df9`). The tree is
   deliberately stale until the rebuild: `verify_generated` and two unit
   tests fail on it.
+- **Done: build (2026-11-26).** Eliot answered T1 A, T2 A, T3 A: 46 tag
+  changes applied; 1.1.2, 1.1.3 and 1.4.2 built (all MCQ-only);
+  `QUALIFICATION_PHRASE["aqa"]` (W1–W3); `verify_page_shell` ppq 253 to 256.
+  `test_question_search.js` needed two fixes on its first run against AQA
+  AS data (`cedfd666`). Next: Live Server check, PR, merge on approval.
 - **Before tagging (kept for the record).** Tag: a first pass, a blind
   `cold-solver` pass, a disagreements sheet, and the page list
   (1.1.2, 1.1.3, 1.4.2 are the only AQA topics left below the gate). At
