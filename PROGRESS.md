@@ -23,6 +23,7 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
+| All-boards parity (D67) — Phase 9: AQA AS (7135) Section A MCQs in the past-paper bank (360 questions, about 3 new pages) | built, awaiting merge: tags settled (`review/aqa-as-mcq-tags.md`, T1–T3 A, 2026-11-26), 3 new pages, suite green (branch `feature/aqa-as-mcqs`) | — | — |
 | All-boards parity (D67) — Phase 7: real exam MCQs in the past-paper bank, AQA and Edexcel A (450 questions, 15 new pages) | live (PR #56) | 2026-11-25 | `ed377dc7` |
 | All-boards parity (D67) — Phase 6: Edexcel A Papers 1–2 Section A written parts in the past-paper bank (259 questions, 13 new pages) | live (PR #54) | 2026-11-25 | `96439950` |
 | All-boards parity (D67) — Phase 5: twin links across three boards (185 pages reworded, no new URLs) | live (PR #53) | 2026-11-24 | `f1110a8a` |
@@ -219,6 +220,55 @@ what changed file by file, how it was verified, and its "things a future
 session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
+
+### All-boards parity — Phase 9, AQA AS Section A MCQs (2026-11-25) — IN PROGRESS (branch `feature/aqa-as-mcqs`)
+
+D71. The design sheet is `review/phase-9-aqa-as-mcqs.md` (every
+recommendation approved 2026-11-25). The dry run, page images beside
+records, is `review/phase-9-dry-run.html`.
+
+- **Scope.** Section A of the 18 non-specimen AQA AS Paper 1 and 2 papers
+  (June 2016–2019, November 2020, June 2022–2025): 20 one-mark MCQs each,
+  360 cards. Section B and the specimens stay out. No reuse was found
+  against Paper 3's 270 MCQs or between AS papers.
+- **Done: the extractor and its checks.** `extract_aqa_questions.py` reads
+  AS Section A into `aqa-as/`: the question count is a parameter (30 or 20);
+  the 2016–2019 closing line "QUESTION 20 IS THE LAST QUESTION IN SECTION A"
+  is furniture (it set a false `usesFigure`); a space glyph starting inside a
+  letter is dropped (it split "F igure" in six 2022–2025 papers); an AS paper
+  is accepted on its own Section A, because the hosted PDFs bundle the
+  Insert inconsistently. All 27 A-level files re-extract byte-identical.
+  The verifier's M4 counts twenty on AS. `aqa-as` is in `BANK_DIRS`.
+  `test_question_search.js` holds AS as shared once every board sets it,
+  and gains an AQA AS block that runs once the data has one.
+- **Done: extraction (2026-11-25).** All 18 papers, 20 records each, every
+  one high confidence with its key-list page and no answer field;
+  `verify_past_paper_extraction.swift` reads `aqa-as/` (M1–M5, M4 at
+  twenty) and passes. One more extractor fix: an option that wraps back to
+  the letter column rather than the indent (AS P2 June 2016 Q4 "…and a
+  higher / exchange rate") continues the option above when it sits between
+  two option rows. The 27 A-level files are still byte-identical. Untagged,
+  so nothing publishes.
+- **Done: tagging (2026-11-25).** First pass committed (`273df531`), then a
+  blind `cold-solver` pass per paper: 260 of 360 match. The 100
+  disagreements, the page list (1.1.2, 1.1.3, 1.4.2, all MCQ-only) and the
+  measured payloads (AQA board 431 to 703 KB, 76 to 124 KB gzipped) are
+  in `review/aqa-as-mcq-tags.md`, awaiting answers. The blind pass found one
+  more extractor defect (a 7pt space, "Q2,the"), fixed in `5ef39fb9`; a
+  dropped-line audit found three (`57513bd7`, `75210df9`). The tree is
+  deliberately stale until the rebuild: `verify_generated` and two unit
+  tests fail on it.
+- **Done: build (2026-11-26).** Eliot answered T1 A, T2 A, T3 A: 46 tag
+  changes applied; 1.1.2, 1.1.3 and 1.4.2 built (all MCQ-only);
+  `QUALIFICATION_PHRASE["aqa"]` (W1–W3); `verify_page_shell` ppq 253 to 256.
+  `test_question_search.js` needed two fixes on its first run against AQA
+  AS data (`cedfd666`). Next: Live Server check, PR, merge on approval.
+- **Before tagging (kept for the record).** Tag: a first pass, a blind
+  `cold-solver` pass, a disagreements sheet, and the page list
+  (1.1.2, 1.1.3, 1.4.2 are the only AQA topics left below the gate). At
+  launch, `QUALIFICATION_PHRASE` gains its `aqa` entry (W1–W3, "A Level
+  (7136) and AS Level (7135)"), and `verify_page_shell.py` is reseeded in
+  the same commit that adds pages.
 
 ### All-boards parity — Phase 7, real exam MCQs (2026-11-25) — LIVE, MERGED 2026-11-25 AS PR #56 (`ed377dc7`, branch `feature/bank-mcqs`)
 

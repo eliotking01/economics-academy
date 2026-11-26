@@ -1,0 +1,810 @@
+{
+  "qualification": "AS Economics (7135)",
+  "board": "aqa",
+  "boardName": "AQA",
+  "level": "as-level",
+  "paper": 2,
+  "paperName": "The National Economy in a Global Context",
+  "year": 2017,
+  "series": "June",
+  "seriesSlug": "june-2017",
+  "questionPaperUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-question-paper.pdf",
+  "markSchemeUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-mark-scheme.pdf",
+  "problems": [],
+  "questions": [
+    {
+      "id": "aqa-as-p2-2017-jun-q1",
+      "section": "A",
+      "questionNumber": "1",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "In the circular flow of income model, which one of the following is an injection?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Consumer spending"
+        },
+        {
+          "letter": "B",
+          "text": "Government spending"
+        },
+        {
+          "letter": "C",
+          "text": "Imports"
+        },
+        {
+          "letter": "D",
+          "text": "Wages"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-question-paper.pdf",
+        "page": 2
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p2-2017-jun-q2",
+      "section": "A",
+      "questionNumber": "2",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The diagrams below show the aggregate demand (AD) and short run aggregate supply (SRAS) curves for an economy. AD1 and SRAS1 show the initial positions of the curves and AD2 and SRAS2 the new positions. Which one of the following diagrams, A, B, C or D, illustrates a fall in world commodity prices as well as a fall in government spending?",
+      "options": null,
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-question-paper.pdf",
+        "page": 3
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "the question prints a diagram or chart (an image)",
+        "the options are diagrams; only the letters are text",
+        "4 subscript or superscript glyph(s) set flush against their base"
+      ]
+    },
+    {
+      "id": "aqa-as-p2-2017-jun-q3",
+      "section": "A",
+      "questionNumber": "3",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following is not part of the role of the Monetary Policy Committee of the Bank of England?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Achieving the target rate of inflation"
+        },
+        {
+          "letter": "B",
+          "text": "Changing Bank Rate"
+        },
+        {
+          "letter": "C",
+          "text": "Reviewing various pieces of macroeconomic data"
+        },
+        {
+          "letter": "D",
+          "text": "Setting the target rate for inflation"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-question-paper.pdf",
+        "page": 4
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p2-2017-jun-q4",
+      "section": "A",
+      "questionNumber": "4",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The table below shows the components of gross domestic product (GDP) for an economy in 2016. Aggregate demand in the economy is",
+      "options": [
+        {
+          "letter": "A",
+          "text": "£1310bn"
+        },
+        {
+          "letter": "B",
+          "text": "£1350bn"
+        },
+        {
+          "letter": "C",
+          "text": "£1560bn"
+        },
+        {
+          "letter": "D",
+          "text": "£1770bn"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-question-paper.pdf",
+        "page": 4
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "6 line(s) of figure or table text printed with the question are not reproduced; see the question paper"
+      ]
+    },
+    {
+      "id": "aqa-as-p2-2017-jun-q5",
+      "section": "A",
+      "questionNumber": "5",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following would be most likely to generate growth in an economy without producing an increase in inflation?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A decrease in the exchange rate"
+        },
+        {
+          "letter": "B",
+          "text": "An increase in labour productivity"
+        },
+        {
+          "letter": "C",
+          "text": "An increase in the budget surplus"
+        },
+        {
+          "letter": "D",
+          "text": "An increase in the rate of interest"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-question-paper.pdf",
+        "page": 5
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p2-2017-jun-q6",
+      "section": "A",
+      "questionNumber": "6",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following is an objective of UK government macroeconomic policy?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A fall in the supply of money"
+        },
+        {
+          "letter": "B",
+          "text": "A stable labour force"
+        },
+        {
+          "letter": "C",
+          "text": "An increase in real GDP per head"
+        },
+        {
+          "letter": "D",
+          "text": "Low interest rates"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-question-paper.pdf",
+        "page": 5
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p2-2017-jun-q7",
+      "section": "A",
+      "questionNumber": "7",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The table below shows annual income before tax for three different households and the total annual amount of income tax that each household pays. This income tax is",
+      "options": [
+        {
+          "letter": "A",
+          "text": "flat rate."
+        },
+        {
+          "letter": "B",
+          "text": "progressive."
+        },
+        {
+          "letter": "C",
+          "text": "proportional."
+        },
+        {
+          "letter": "D",
+          "text": "regressive."
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-question-paper.pdf",
+        "page": 6
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "6 line(s) of figure or table text printed with the question are not reproduced; see the question paper"
+      ]
+    },
+    {
+      "id": "aqa-as-p2-2017-jun-q8",
+      "section": "A",
+      "questionNumber": "8",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The annual rate of change in the consumer prices index for an economy falls from 6% to 3%. All other things being equal, this economy is best described as",
+      "options": [
+        {
+          "letter": "A",
+          "text": "entering a positive output gap."
+        },
+        {
+          "letter": "B",
+          "text": "entering a recovery period."
+        },
+        {
+          "letter": "C",
+          "text": "experiencing deflation."
+        },
+        {
+          "letter": "D",
+          "text": "experiencing disinflation."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-question-paper.pdf",
+        "page": 6
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p2-2017-jun-q9",
+      "section": "A",
+      "questionNumber": "9",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following represents investment expenditure?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A firm spends £7m on new computer software"
+        },
+        {
+          "letter": "B",
+          "text": "A government spends £10m more on nurses wages"
+        },
+        {
+          "letter": "C",
+          "text": "A household puts £10 000 into an interest paying account"
+        },
+        {
+          "letter": "D",
+          "text": "An individual spends £28 000 buying company shares"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-question-paper.pdf",
+        "page": 7
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p2-2017-jun-q10",
+      "section": "A",
+      "questionNumber": "10",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The diagram below shows the initial short run aggregate supply curve (SRAS1) and long run aggregate supply curve (LRAS1) for an economy. SRAS2 and LRAS2 are the new positions of the two aggregate supply curves. The most likely combination of causes of the shifts in the short run and long run aggregate supply curves is",
+      "options": [
+        {
+          "letter": "A",
+          "text": "a fall in indirect tax and a fall in skill levels."
+        },
+        {
+          "letter": "B",
+          "text": "a fall in money wages and a rise in immigration."
+        },
+        {
+          "letter": "C",
+          "text": "a fall in productivity and a rise in emigration."
+        },
+        {
+          "letter": "D",
+          "text": "an increase in oil prices and more investment in renewable energy."
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-question-paper.pdf",
+        "page": 7
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "the question prints a diagram or chart (an image)",
+        "4 subscript or superscript glyph(s) set flush against their base"
+      ]
+    },
+    {
+      "id": "aqa-as-p2-2017-jun-q11",
+      "section": "A",
+      "questionNumber": "11",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "All other things being equal, under which of the following circumstances is an economy most likely to experience deflation?",
+      "options": null,
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-question-paper.pdf",
+        "page": 8
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "7 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the options are the rows of a table; not reproduced"
+      ]
+    },
+    {
+      "id": "aqa-as-p2-2017-jun-q12",
+      "section": "A",
+      "questionNumber": "12",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "In an economy, the government reduced its spending by £4bn at the same time as exports rose by £20bn. As a result of these changes, national income rose by £20bn. The size of the multiplier is",
+      "options": [
+        {
+          "letter": "A",
+          "text": "0.75"
+        },
+        {
+          "letter": "B",
+          "text": "1"
+        },
+        {
+          "letter": "C",
+          "text": "1.2"
+        },
+        {
+          "letter": "D",
+          "text": "1.25"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-question-paper.pdf",
+        "page": 8
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p2-2017-jun-q13",
+      "section": "A",
+      "questionNumber": "13",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "An economy has a surplus on the current account of its balance of payments. Under which of the following circumstances is the economy most likely to experience a reduction in its current account surplus?",
+      "options": null,
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-question-paper.pdf",
+        "page": 8
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "6 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the options are the rows of a table; not reproduced"
+      ]
+    },
+    {
+      "id": "aqa-as-p2-2017-jun-q14",
+      "section": "A",
+      "questionNumber": "14",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following policy changes represents a contractionary fiscal policy?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A decrease in income tax"
+        },
+        {
+          "letter": "B",
+          "text": "A decrease in the budget deficit"
+        },
+        {
+          "letter": "C",
+          "text": "An increase in government spending"
+        },
+        {
+          "letter": "D",
+          "text": "An increase in the rate of interest"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-question-paper.pdf",
+        "page": 9
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p2-2017-jun-q15",
+      "section": "A",
+      "questionNumber": "15",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Changes are regularly made to the weights used in the UK’s Consumer Prices Index. This means that the index takes account of changes in",
+      "options": [
+        {
+          "letter": "A",
+          "text": "month on month increases in the general price level."
+        },
+        {
+          "letter": "B",
+          "text": "spending patterns throughout the economy."
+        },
+        {
+          "letter": "C",
+          "text": "the growth of real output in the economy."
+        },
+        {
+          "letter": "D",
+          "text": "total spending on all domestic goods and services."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-question-paper.pdf",
+        "page": 9
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p2-2017-jun-q16",
+      "section": "A",
+      "questionNumber": "16",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The diagram below shows two production possibility frontiers (PPF) for an economy. Which one of the following movements represents an economy that has experienced short-run but not long-run economic growth?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A to B"
+        },
+        {
+          "letter": "B",
+          "text": "A to C"
+        },
+        {
+          "letter": "C",
+          "text": "B to C"
+        },
+        {
+          "letter": "D",
+          "text": "C to D"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-question-paper.pdf",
+        "page": 10
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "the question prints a diagram or chart (an image)"
+      ]
+    },
+    {
+      "id": "aqa-as-p2-2017-jun-q17",
+      "section": "A",
+      "questionNumber": "17",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The table below shows four possible combinations of circumstances facing the UK economy. All other things being equal, which one of the following combinations is most likely to lead the Monetary Policy Committee of the Bank of England to lower Bank Rate?",
+      "options": null,
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-question-paper.pdf",
+        "page": 10
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "5 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the options are the rows of a table; not reproduced"
+      ]
+    },
+    {
+      "id": "aqa-as-p2-2017-jun-q18",
+      "section": "A",
+      "questionNumber": "18",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following is most likely to reduce cyclical unemployment in the UK?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A cut in the UK budget deficit"
+        },
+        {
+          "letter": "B",
+          "text": "An increase in the pound sterling exchange rate"
+        },
+        {
+          "letter": "C",
+          "text": "An increase in the UK retirement age"
+        },
+        {
+          "letter": "D",
+          "text": "Higher economic growth in the Eurozone"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-question-paper.pdf",
+        "page": 11
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p2-2017-jun-q19",
+      "section": "A",
+      "questionNumber": "19",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "All other things remaining the same, which one of the following events would directly increase the size of the UK’s national debt? An increase in",
+      "options": [
+        {
+          "letter": "A",
+          "text": "mortgage borrowing from UK banks."
+        },
+        {
+          "letter": "B",
+          "text": "overseas lending to UK firms."
+        },
+        {
+          "letter": "C",
+          "text": "the UK’s current account deficit."
+        },
+        {
+          "letter": "D",
+          "text": "the UK government’s budget deficit."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-question-paper.pdf",
+        "page": 11
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p2-2017-jun-q20",
+      "section": "A",
+      "questionNumber": "20",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following is most likely to improve the supply-side performance of an economy? An increase in",
+      "options": [
+        {
+          "letter": "A",
+          "text": "government spending on welfare benefits."
+        },
+        {
+          "letter": "B",
+          "text": "growth in the rest of the world."
+        },
+        {
+          "letter": "C",
+          "text": "labour productivity."
+        },
+        {
+          "letter": "D",
+          "text": "the basic rate of income tax."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-question-paper.pdf",
+        "page": 11
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-2/aqa-as-level-economics-paper-2-june-2017-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    }
+  ]
+}

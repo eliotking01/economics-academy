@@ -2492,3 +2492,33 @@ Q1-Q9 (all recommendations accepted).**
   AQA hubs keep their sentence (with "Edexcel A" on the AQA two) and gain
   *"On Edexcel B, the [Theme N] notes cover much of it."* `verify_seo`'s
   `HUB_TWINS` goes from 8 pairs to 27.
+
+### D71 — AQA AS Section A MCQs join the past-paper bank
+
+**2026-11-25, Eliot, answering `05-website/drafts/all-boards-parity/review/phase-9-aqa-as-mcqs.md`
+(every recommendation approved).**
+
+- **Partly reverses D67's "Still out of scope: AQA AS papers".** The 20
+  Section A MCQs of every non-specimen AQA AS (7135) Paper 1 and 2 come in,
+  from 18 papers (June 2016–2019, November 2020, June 2022–2025): 360
+  cards. They are search-only, exactly as D67 and Phase 7 set for real MCQs:
+  stem and options as printed, `usesFigure`, `options: null` when the
+  options are not text, deep links to the question-paper page and the
+  mark-scheme key page, and **no answer key anywhere**.
+- **Still out of scope:** AQA AS Section B (the data-response contexts),
+  the AQA AS specimens, and OCR in the bank.
+- **Phase 7 superseded D68 Q10** (`review/phase-7-mcqs.md` answer 4 A,
+  2026-11-25). Real MCQs count toward the D60 gate, and a topic they lift
+  over it gets a page; fifteen such pages went live with Phase 7
+  (`review/mcq-tags.md` T2). AQA AS MCQs count the same way, and any page
+  they mint is listed for approval before it builds.
+- **Data in `past-paper-questions-data/aqa-as/`**, one file per paper,
+  Section A records only; ids `aqa-as-p<N>-<year>-<ser>-q<n>`;
+  qualification "AS Economics (7135)". The cards carry the existing "AS
+  Level" badge and the existing Qualification filter.
+- **No new family.** `aqa-as` joins `BANK_DIRS["aqa"]`; a record publishes
+  only once it is tagged, so the untagged extraction publishes nothing, and
+  the tags land with the rebuild after the page list is approved.
+- **The AQA bank names its qualifications in the bank's form:** "A Level
+  (7136) and AS Level (7135)" (W1–W3), matching the badge and the "AS Level
+  only" filter on the same page. Applied when the cards launch, never before.

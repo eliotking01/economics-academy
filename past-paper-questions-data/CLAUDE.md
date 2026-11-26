@@ -19,8 +19,9 @@ Widened by D67 (2026-10-24). Each change lands with the code that implements it.
 | Edexcel A **A Level** (9EC0), Papers 1–3 | **An answer key for any multiple-choice card**, permanently (D67: search-only). No record carries one; the verifier fails if a field names one |
 | Edexcel A Papers 1–2 **Section A written parts** (9EC0 and 8EC0), every part that prints no A–D answer boxes: 259 parts from 36 papers (counts: `build_past_paper_questions.py --check`). Brought in by D67, Phase 6; tags settled in `review/section-a-tags.md` and built 2026-11-24 | |
 | **Multiple-choice questions** (D67, Phase 7): the one MCQ in each Edexcel A Papers 1–2 Section A question (9EC0 and 8EC0, 36 papers), and AQA Paper 3 Section A, Q1–Q30 (9 papers). Extracted 2026-11-25 in the shape approved in `review/phase-7-mcqs.md` and tagged the same day (`review/mcq-tags.md`). **Not yet published: staged** as the `pastPaperMcqs` family on `aqa` and `edexcel-a` in `boards.json`, so `load_bank()` drops them from every live build; `EA_PREVIEW=aqa:pastPaperMcqs,edexcel-a:pastPaperMcqs` previews them and `/launch-feature` launches them. Counts: `build_past_paper_questions.py --check` | |
-| Edexcel A **AS Level** (8EC0), Papers 1–2 | **AQA AS papers**, permanently. When AQA extends, A Level only |
-| AQA A Level (7136) | OCR and AQA specimen papers, permanently |
+| Edexcel A **AS Level** (8EC0), Papers 1–2 | **AQA AS Section B** (the data-response contexts, Q21–Q32), permanently (D71; D67 had ruled out AQA AS whole) |
+| AQA A Level (7136) | OCR and AQA specimen papers, permanently (AS specimens included, D71) |
+| **AQA AS Level (7135), Papers 1–2, Section A only** (D71, Phase 9): Q01–Q20, twenty 1-mark MCQs from each of the 18 non-specimen papers (June 2016–2019, November 2020, June 2022–2025), in the Phase 7 MCQ shape with no answer field. Extracted 2026-11-25 into `aqa-as/`; tags settled in `review/aqa-as-mcq-tags.md` and built 2026-11-26 (on the branch; live when it merges). Counts: `build_past_paper_questions.py --check` | |
 | Edexcel B **A Level** (9EB0), Papers 1–3, and **AS Level** (8EB0), Papers 1–2, **every section**: B has no MCQs and no optional questions. Extracted into `edexcel-b/` and `edexcel-b-as/`. The build reads them by `boards.json`'s flag (`BANK_DIRS`, `paper_dirs()`). **Live** since `/launch-feature edexcel-b pastPaperBank` (2026-11-17) | |
 
 **Edexcel B prints a lead-in above many parts** ("New Balance operates in a
@@ -79,13 +80,13 @@ HTML, never applied by script, so it is never optional.
 ## Files
 
 - `edexcel-a/*.json`, `edexcel-a-as/*.json`, `edexcel-b/*.json`,
-  `edexcel-b-as/*.json`, `aqa/*.json` — one per paper, machine-written by
-  `scripts/extract_past_paper_questions.swift` (Swift + PDFKit; AQA by
-  `extract_aqa_questions.py`). **Never hand-edit.** Two directories per
-  Edexcel board because both qualifications have a Paper 1 in the same
-  series. `verify_past_paper_extraction.swift` checks all four Edexcel
-  directories against the PDFs, and AQA's Paper 3 MCQs (not its written
-  records).
+  `edexcel-b-as/*.json`, `aqa/*.json`, `aqa-as/*.json` — one per paper,
+  machine-written by `scripts/extract_past_paper_questions.swift` (Swift +
+  PDFKit; AQA by `extract_aqa_questions.py`). **Never hand-edit.** Two
+  directories per board because both qualifications have a Paper 1 in the
+  same series. `verify_past_paper_extraction.swift` checks all four Edexcel
+  directories against the PDFs, AQA's Paper 3 MCQs (not its written
+  records) and every AQA AS record (all are MCQs).
 - `ocr/` — reviewed OCR transcripts, one per question paper that has no text
   layer. Today there's one: Edexcel B AS Paper 2 June 2019, which Pearson
   publishes only as a scan. **A transcript is a checked source, not generated

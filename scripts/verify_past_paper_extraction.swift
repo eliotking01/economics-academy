@@ -1,6 +1,7 @@
 // Independently verify the Edexcel A and Edexcel B extraction data
 // (past-paper-questions-data/edexcel-{a,a-as,b,b-as}/*.json), and AQA's
-// Paper 3 multiple choice (aqa/p3-*.json), against the PDFs.
+// Paper 3 multiple choice (aqa/p3-*.json) and its AS Section A multiple
+// choice (aqa-as/*.json, D71), against the PDFs.
 //
 //   swift scripts/verify_past_paper_extraction.swift
 //
@@ -68,7 +69,8 @@
 //       the digits removed on both sides, because AQA sets subscripts below
 //       the line and PDFKit returns them detached ("SRAS1" against "SRAS ...
 //       1"); a word is never dropped, only a subscript's position.
-//   M4. Counts: thirty AQA MCQs numbered 1-30 in Section A; exactly one MCQ
+//   M4. Counts: thirty AQA Paper 3 MCQs numbered 1-30 in Section A, twenty
+//       on each AQA AS paper (D71: Q1-Q20, read from aqa-as/); exactly one MCQ
 //       in each Edexcel Section A question, and the question's cards now sum
 //       to its printed total (A5, tightened from "one mark short").
 //   M5. The AQA mark-scheme page holds the SECTION A KEY LIST.
@@ -333,6 +335,9 @@ let dataDirs = [
     // Phase 7: AQA's Paper 3 MCQs only. Its written records are not checked
     // here (see the AQA guard in the loop).
     "past-paper-questions-data/aqa",
+    // Phase 9 (D71): AQA AS Section A, twenty MCQs per paper. Every record in
+    // these files is an MCQ, so every file is read.
+    "past-paper-questions-data/aqa-as",
 ]
 var files: [(dir: String, name: String)] = []
 for dir in dataDirs {
@@ -392,6 +397,8 @@ for (dir, file) in files {
     var mcqsByQuestionA: [String: Int] = [:]
     var paperUrlA: String? = nil
     let isAQA = (root["board"] as? String) == "aqa"
+    // Section A's length: thirty on Paper 3, twenty on each AS paper (D71).
+    let aqaMCQCount = (root["level"] as? String) == "as-level" ? 20 : 30
     var aqaMCQNumbers: [String] = []
 
     for q in questions {
@@ -631,8 +638,8 @@ for (dir, file) in files {
         }
     }
 
-    // ---- M4 (AQA): thirty MCQs, numbered 1-30, in order
-    if isAQA && aqaMCQNumbers != (1...30).map(String.init) {
+    // ---- M4 (AQA): thirty MCQs (twenty on AS), numbered from 1, in order
+    if isAQA && aqaMCQNumbers != (1...aqaMCQCount).map(String.init) {
         failures.append(Failure(id: file, check: "aqa-mcq-count", detail: "numbers \(aqaMCQNumbers.joined(separator: ","))"))
     }
 

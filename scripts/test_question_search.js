@@ -183,6 +183,8 @@ check(
 //   AQA      Papers 1-2  Section A has extracts, Section B is free-standing essays
 //            Paper 3     Section A is multiple choice with no extract, Section
 //                        B is a case study
+//            AS (7135)   Papers 1-2 Section A only, multiple choice with no
+//                        extract (D71); Section B is not in the bank
 //   Edexcel B every paper, every section: each question sits under data, and
 //            the 20-mark essay is set on Section C's own extract
 //   Edexcel A Papers 1-2 Section A has no extract: its link goes to the page
@@ -196,6 +198,7 @@ function expectsExtract(q) {
   const paper = data.papers[q.p];
   if (paper.board === "edexcel-b") return true;
   if (paper.board === "edexcel") return q.section !== "C";
+  if (paper.level === "as-level") return false;
   if (paper.paper === 3) return q.section === "B";
   return q.section === "A";
 }
@@ -925,12 +928,20 @@ const boardShaped = ["level", "group", "section", "topic"];
         .filter((o) => o.value === "C")
         .every((o) => o.group === cLabel),
   );
+  // Once every board sets AS (AQA's 7135 MCQs, D71) the value is shared, and
+  // a shared value sits outside any optgroup, as Sections A and B do.
+  const asEverywhere = data.boards.every((b) =>
+    data.questions.some(
+      (q) => q.board === b.board && data.papers[q.p].level === "as-level",
+    ),
+  );
   check(
-    "both boards: AS Level is listed once, under " + asLabel,
+    "both boards: AS Level is listed once, " +
+      (asEverywhere ? "outside any optgroup" : "under " + asLabel),
     opts(h.sel.level).filter((o) => o.value === "as-level").length === 1 &&
       opts(h.sel.level)
         .filter((o) => o.value === "as-level")
-        .every((o) => o.group === asLabel),
+        .every((o) => o.group === (asEverywhere ? null : asLabel)),
   );
 
   // -- the cascade: Board narrows the four board-shaped selects
@@ -1016,7 +1027,7 @@ const boardShaped = ["level", "group", "section", "topic"];
     h.sel.group.value === "" && h.sel.section.value === "",
   );
   check(
-    "cascade: AQA offers only its own areas and only A Level",
+    "cascade: AQA offers only its own areas and its own qualifications",
     opts(h.sel.group).every((o) => edexcelGroups.indexOf(o.value) === -1) &&
       opts(h.sel.level)
         .map((o) => o.value)
@@ -1238,6 +1249,52 @@ if (data.boards.some((b) => b.board === "edexcel-b")) {
   check(
     "prefiltered topic page: no select carries an optgroup",
     FILTERS.every((f) => !hasOptgroup(h2.sel[f.name])),
+  );
+}
+
+// ---- AQA AS (D71, Phase 9): runs whenever the data carries an AQA AS paper,
+// so from the launch on. Section A's MCQs are the only AQA AS records in
+// scope; the renderer and key checks above already cover every card. It sits
+// here, after the filter harness (makeRoot, opts), because it drives the
+// selects; above it, its first real run threw on FILTERS.
+
+const aqaAs = index.filter(
+  (r) => r.paper.board === "aqa" && r.paper.level === "as-level",
+);
+if (aqaAs.length) {
+  check(
+    "aqa-as: every card is a 1-mark Section A MCQ with an aqa-as id",
+    aqaAs.every(
+      (r) =>
+        r.q.type === "mcq" &&
+        r.q.section === "A" &&
+        r.q.marks === 1 &&
+        r.q.id.indexOf("aqa-as-") === 0,
+    ),
+  );
+  check(
+    "aqa-as: no paper holds more than twenty",
+    Object.values(
+      aqaAs.reduce((n, r) => {
+        n[r.q.p] = (n[r.q.p] || 0) + 1;
+        return n;
+      }, {}),
+    ).every((n) => n <= 20),
+  );
+  const h = makeRoot();
+  M.init(h.root, data);
+  h.sel.board.change("aqa");
+  check(
+    "aqa-as: with AQA chosen, Qualification offers A Level and AS Level",
+    opts(h.sel.level)
+      .map((o) => o.value)
+      .join(",") === "a-level,as-level",
+  );
+  h.sel.level.change("as-level");
+  check(
+    "aqa-as: AQA and AS Level show exactly the AQA AS cards",
+    h.count.textContent.indexOf(String(aqaAs.length)) === 0,
+    h.count.textContent + " for " + aqaAs.length,
   );
 }
 

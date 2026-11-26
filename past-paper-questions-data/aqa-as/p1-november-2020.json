@@ -1,0 +1,873 @@
+{
+  "qualification": "AS Economics (7135)",
+  "board": "aqa",
+  "boardName": "AQA",
+  "level": "as-level",
+  "paper": 1,
+  "paperName": "The Operation of Markets and Market Failure",
+  "year": 2020,
+  "series": "November",
+  "seriesSlug": "november-2020",
+  "questionPaperUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-question-paper.pdf",
+  "markSchemeUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-mark-scheme.pdf",
+  "problems": [],
+  "questions": [
+    {
+      "id": "aqa-as-p1-2020-nov-q1",
+      "section": "A",
+      "questionNumber": "1",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "A resource must be scarce if",
+      "options": [
+        {
+          "letter": "A",
+          "text": "it has an opportunity cost."
+        },
+        {
+          "letter": "B",
+          "text": "it is non-renewable."
+        },
+        {
+          "letter": "C",
+          "text": "there is a high demand for it."
+        },
+        {
+          "letter": "D",
+          "text": "there is a small quantity supplied."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-question-paper.pdf",
+        "page": 2
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p1-2020-nov-q2",
+      "section": "A",
+      "questionNumber": "2",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Figure 1 shows demand (D) and supply (S) in the market for electric cars. Demand is initially at D1 and supply at S1. Other things remaining the same, which one of the following combination of events could have caused demand to shift from D1 to D2 and supply from S1 to S2?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Greater availability of roadside chargers for electric cars and a rise in workers’ wages"
+        },
+        {
+          "letter": "B",
+          "text": "Higher petrol prices and an increase in workers’ productivity"
+        },
+        {
+          "letter": "C",
+          "text": "Introduction of a road pricing scheme for all vehicles and higher diesel fuel prices"
+        },
+        {
+          "letter": "D",
+          "text": "Lower rail and bus fares and the use of new technology for electric car production"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-question-paper.pdf",
+        "page": 3
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "1 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the question prints a diagram or chart (an image)",
+        "6 subscript or superscript glyph(s) set flush against their base"
+      ]
+    },
+    {
+      "id": "aqa-as-p1-2020-nov-q3",
+      "section": "A",
+      "questionNumber": "3",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Government failure must have occurred when government intervention",
+      "options": [
+        {
+          "letter": "A",
+          "text": "causes income inequality to increase."
+        },
+        {
+          "letter": "B",
+          "text": "has unintended consequences."
+        },
+        {
+          "letter": "C",
+          "text": "is based on imperfect information."
+        },
+        {
+          "letter": "D",
+          "text": "reduces total welfare in the economy."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-question-paper.pdf",
+        "page": 3
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p1-2020-nov-q4",
+      "section": "A",
+      "questionNumber": "4",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Table 1 shows the prices and quantities of rice and pasta sold in a supermarket in one month. When the price of rice rises from £2.00 to £2.25, the cross elasticity of demand for pasta with respect to the price of rice is",
+      "options": [
+        {
+          "letter": "A",
+          "text": "–2.0"
+        },
+        {
+          "letter": "B",
+          "text": "–0.5"
+        },
+        {
+          "letter": "C",
+          "text": "+0.5"
+        },
+        {
+          "letter": "D",
+          "text": "+2.0"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-question-paper.pdf",
+        "page": 4
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "6 line(s) of figure or table text printed with the question are not reproduced; see the question paper"
+      ]
+    },
+    {
+      "id": "aqa-as-p1-2020-nov-q5",
+      "section": "A",
+      "questionNumber": "5",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The number of film production companies in a city increases. As a result, the pool of workers skilled in making films grows. Companies experience a reduction in their average costs. The fall in average costs results from",
+      "options": [
+        {
+          "letter": "A",
+          "text": "a reduction in diseconomies of scale."
+        },
+        {
+          "letter": "B",
+          "text": "an increase in managerial economies of scale."
+        },
+        {
+          "letter": "C",
+          "text": "the existence of external economies of scale."
+        },
+        {
+          "letter": "D",
+          "text": "the presence of technical economies of scale."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-question-paper.pdf",
+        "page": 4
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p1-2020-nov-q6",
+      "section": "A",
+      "questionNumber": "6",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Table 2 shows total costs and profit for different levels of output produced by a firm. When the firm increases its output from",
+      "options": [
+        {
+          "letter": "A",
+          "text": "50 to 100, the price falls by £2"
+        },
+        {
+          "letter": "B",
+          "text": "50 to 100, the price falls by £3"
+        },
+        {
+          "letter": "C",
+          "text": "100 to 150, the price falls by £2"
+        },
+        {
+          "letter": "D",
+          "text": "100 to 150, the price falls by £3"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-question-paper.pdf",
+        "page": 5
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "5 line(s) of figure or table text printed with the question are not reproduced; see the question paper"
+      ]
+    },
+    {
+      "id": "aqa-as-p1-2020-nov-q7",
+      "section": "A",
+      "questionNumber": "7",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Figure 2 shows the production possibility frontier for an economy producing only two goods: chickens and cabbages. Which one of the following statements is true?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "From the information given, it is impossible to determine whether point E is allocatively efficient"
+        },
+        {
+          "letter": "B",
+          "text": "From the information given, it is impossible to determine whether point E is productively efficient"
+        },
+        {
+          "letter": "C",
+          "text": "Point E is productively and allocatively efficient"
+        },
+        {
+          "letter": "D",
+          "text": "Point E is productively efficient but allocatively inefficient"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-question-paper.pdf",
+        "page": 5
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "1 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the question prints a diagram or chart (an image)"
+      ]
+    },
+    {
+      "id": "aqa-as-p1-2020-nov-q8",
+      "section": "A",
+      "questionNumber": "8",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "In the market for apples, at the current market price of £3 per kilo, consumers buy 5000 kilos and farmers produce 6000 kilos each week. It can be concluded that",
+      "options": [
+        {
+          "letter": "A",
+          "text": "consumers are unaware of the positive externalities from eating apples."
+        },
+        {
+          "letter": "B",
+          "text": "the government must have set a maximum price for apples."
+        },
+        {
+          "letter": "C",
+          "text": "the prices of substitute fruit such as oranges and pears have risen."
+        },
+        {
+          "letter": "D",
+          "text": "there is disequilibrium in the apple market and the price is likely to fall."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-question-paper.pdf",
+        "page": 6
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p1-2020-nov-q9",
+      "section": "A",
+      "questionNumber": "9",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "An online streaming firm increased its paying subscribers by 300% over a 4-year period. The firm’s share of the total time people spent watching television doubled and profits grew rapidly. Which one of the following is the most likely explanation for the firm’s success?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A low concentration ratio in the industry meant that the firm faced little competition"
+        },
+        {
+          "letter": "B",
+          "text": "A low income elasticity of demand enabled the firm to raise the price of its subscription and increase its profits"
+        },
+        {
+          "letter": "C",
+          "text": "The firm was able to cut average costs by producing and selling a homogeneous product"
+        },
+        {
+          "letter": "D",
+          "text": "The firm was innovative and this increased barriers to entry for firms wishing to join the industry"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-question-paper.pdf",
+        "page": 6
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p1-2020-nov-q10",
+      "section": "A",
+      "questionNumber": "10",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following statements about price elasticity of supply is correct? Price elasticity of supply",
+      "options": [
+        {
+          "letter": "A",
+          "text": "increases when a firm’s labour costs increase."
+        },
+        {
+          "letter": "B",
+          "text": "is affected by the amount of spare capacity."
+        },
+        {
+          "letter": "C",
+          "text": "measures the responsiveness of price to a change in supply."
+        },
+        {
+          "letter": "D",
+          "text": "tends to be lower in the long run than in the short run."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-question-paper.pdf",
+        "page": 6
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p1-2020-nov-q11",
+      "section": "A",
+      "questionNumber": "11",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Antonio sells ice creams in the local park. In a typical week, he sells 500 ice creams at £2 each and his total costs are £700. One week he does not work, so he sells no ice creams but his total costs are £200. What are his variable costs in a typical week?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "£200"
+        },
+        {
+          "letter": "B",
+          "text": "£300"
+        },
+        {
+          "letter": "C",
+          "text": "£500"
+        },
+        {
+          "letter": "D",
+          "text": "£700"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-question-paper.pdf",
+        "page": 7
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p1-2020-nov-q12",
+      "section": "A",
+      "questionNumber": "12",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Figure 3 shows the market demand (D1) and supply (S) of loft insulation material. If consumers have full information about the benefits of insulating their lofts, demand will be D2. There is underproduction, Q2 – Q1, of loft insulation material because",
+      "options": [
+        {
+          "letter": "A",
+          "text": "at the social optimum, Q2, the price would be too high."
+        },
+        {
+          "letter": "B",
+          "text": "firms have no incentive to increase output beyond Q1."
+        },
+        {
+          "letter": "C",
+          "text": "firms lack information about the external benefits of loft insulation."
+        },
+        {
+          "letter": "D",
+          "text": "the government has failed to set a minimum price for loft insulation."
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-question-paper.pdf",
+        "page": 7
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "1 line(s) of figure or table text printed with the question are not reproduced; see the question paper",
+        "the question prints a diagram or chart (an image)",
+        "6 subscript or superscript glyph(s) set flush against their base"
+      ]
+    },
+    {
+      "id": "aqa-as-p1-2020-nov-q13",
+      "section": "A",
+      "questionNumber": "13",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "A firm producing frozen foods has collected statistics on recent trends in sales of oven chips, as shown in Table 3. These statistics suggest that oven chips",
+      "options": [
+        {
+          "letter": "A",
+          "text": "are a normal good."
+        },
+        {
+          "letter": "B",
+          "text": "are an inferior good."
+        },
+        {
+          "letter": "C",
+          "text": "have an income elasticity of demand greater than 1."
+        },
+        {
+          "letter": "D",
+          "text": "have an income elasticity of demand less than 0."
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-question-paper.pdf",
+        "page": 8
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "8 line(s) of figure or table text printed with the question are not reproduced; see the question paper"
+      ]
+    },
+    {
+      "id": "aqa-as-p1-2020-nov-q14",
+      "section": "A",
+      "questionNumber": "14",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following helps to explain why profits are likely to be lower in a perfectly competitive market than in a monopoly market?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A firm with monopoly power doesn’t need to spend money on research and development to improve its products"
+        },
+        {
+          "letter": "B",
+          "text": "Firms in a perfectly competitive market are more likely to experience diseconomies of scale"
+        },
+        {
+          "letter": "C",
+          "text": "In a monopoly, a firm can increase the price of the product by limiting its output"
+        },
+        {
+          "letter": "D",
+          "text": "In a perfectly competitive market, firms differentiate their products to compete with rivals and achieve brand loyalty"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-question-paper.pdf",
+        "page": 8
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p1-2020-nov-q15",
+      "section": "A",
+      "questionNumber": "15",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Land is in composite demand and can be used to build houses or to provide playing fields. When the demand for playing fields increases, there will be",
+      "options": [
+        {
+          "letter": "A",
+          "text": "a decrease in the price of new houses."
+        },
+        {
+          "letter": "B",
+          "text": "a decrease in the supply of new houses."
+        },
+        {
+          "letter": "C",
+          "text": "an increase in demand for new houses."
+        },
+        {
+          "letter": "D",
+          "text": "an increase in output of new houses."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-question-paper.pdf",
+        "page": 9
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p1-2020-nov-q16",
+      "section": "A",
+      "questionNumber": "16",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "A government decides to set a minimum price for plastic bottles of water above the current market price. The most likely impact of the scheme will be",
+      "options": [
+        {
+          "letter": "A",
+          "text": "a rise in consumption of plastic bottles of water."
+        },
+        {
+          "letter": "B",
+          "text": "a shortage of plastic bottles of water if the price elasticity of supply is zero."
+        },
+        {
+          "letter": "C",
+          "text": "excess stocks of plastic bottles of water."
+        },
+        {
+          "letter": "D",
+          "text": "no excess supply of plastic bottles of water if the price elasticity of demand is zero."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-question-paper.pdf",
+        "page": 9
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p1-2020-nov-q17",
+      "section": "A",
+      "questionNumber": "17",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The production of a good generates positive externalities. This means that at the free market equilibrium",
+      "options": [
+        {
+          "letter": "A",
+          "text": "the good will be under-produced."
+        },
+        {
+          "letter": "B",
+          "text": "the price of the good will be too low."
+        },
+        {
+          "letter": "C",
+          "text": "there will be excess demand for the good."
+        },
+        {
+          "letter": "D",
+          "text": "the supply of the good will be inelastic."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-question-paper.pdf",
+        "page": 9
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p1-2020-nov-q18",
+      "section": "A",
+      "questionNumber": "18",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The percentage share of total income received by the poorest 20% of households in an economy rose over one year. Over the same period, the share received by the richest 20% of households fell whilst national income and population remained constant. It can be concluded that",
+      "options": [
+        {
+          "letter": "A",
+          "text": "in this economy, the distribution of income became more equitable."
+        },
+        {
+          "letter": "B",
+          "text": "the incomes of some households moved closer to the average income of the economy."
+        },
+        {
+          "letter": "C",
+          "text": "the incomes of the middle 20% of households in the income distribution did not change."
+        },
+        {
+          "letter": "D",
+          "text": "the gap between the income of the richest household and the poorest household became smaller."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-question-paper.pdf",
+        "page": 10
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p1-2020-nov-q19",
+      "section": "A",
+      "questionNumber": "19",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "A firm makes more use of division of labour when organising its workforce. The most likely result will be",
+      "options": [
+        {
+          "letter": "A",
+          "text": "higher labour productivity."
+        },
+        {
+          "letter": "B",
+          "text": "less capital equipment per worker."
+        },
+        {
+          "letter": "C",
+          "text": "lower labour turnover."
+        },
+        {
+          "letter": "D",
+          "text": "lower wage rates."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-question-paper.pdf",
+        "page": 10
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p1-2020-nov-q20",
+      "section": "A",
+      "questionNumber": "20",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "In a free market, the consumption of a good leads to negative externalities. If left to the free market, how would price and output compare to the social optimum?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "The price and output would be higher"
+        },
+        {
+          "letter": "B",
+          "text": "The price and output would be lower"
+        },
+        {
+          "letter": "C",
+          "text": "The price would be higher and the output lower"
+        },
+        {
+          "letter": "D",
+          "text": "The price would be lower and the output higher"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-question-paper.pdf",
+        "page": 10
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-november-2020-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    }
+  ]
+}

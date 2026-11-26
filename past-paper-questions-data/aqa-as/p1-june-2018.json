@@ -1,0 +1,865 @@
+{
+  "qualification": "AS Economics (7135)",
+  "board": "aqa",
+  "boardName": "AQA",
+  "level": "as-level",
+  "paper": 1,
+  "paperName": "The Operation of Markets and Market Failure",
+  "year": 2018,
+  "series": "June",
+  "seriesSlug": "june-2018",
+  "questionPaperUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-question-paper.pdf",
+  "markSchemeUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-mark-scheme.pdf",
+  "problems": [],
+  "questions": [
+    {
+      "id": "aqa-as-p1-2018-jun-q1",
+      "section": "A",
+      "questionNumber": "1",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The central purpose of the production of goods and services is to",
+      "options": [
+        {
+          "letter": "A",
+          "text": "achieve more technological innovation."
+        },
+        {
+          "letter": "B",
+          "text": "maximise exports."
+        },
+        {
+          "letter": "C",
+          "text": "maximise profits."
+        },
+        {
+          "letter": "D",
+          "text": "satisfy consumer wants."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 2
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p1-2018-jun-q2",
+      "section": "A",
+      "questionNumber": "2",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "In an economy, competitive firms supply electricity that is generated using coal-fired power stations. If the government tries to reduce pollution by imposing an indirect tax on the firms, this would",
+      "options": [
+        {
+          "letter": "A",
+          "text": "shift the market demand curve to the left."
+        },
+        {
+          "letter": "B",
+          "text": "shift the market demand curve to the right."
+        },
+        {
+          "letter": "C",
+          "text": "shift the market supply curve to the left."
+        },
+        {
+          "letter": "D",
+          "text": "shift the market supply curve to the right."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 2
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p1-2018-jun-q3",
+      "section": "A",
+      "questionNumber": "3",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The price elasticity of demand (PED) for petrol used by car drivers in an economy is estimated to be –0.2. Which one of the following is the most likely reason for the low PED?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A tax on petrol"
+        },
+        {
+          "letter": "B",
+          "text": "Cycle lanes on many roads"
+        },
+        {
+          "letter": "C",
+          "text": "Few bus and rail services"
+        },
+        {
+          "letter": "D",
+          "text": "Low household incomes"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 3
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p1-2018-jun-q4",
+      "section": "A",
+      "questionNumber": "4",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The diagram below shows the demand curve (D) and the supply curve (S) in the market for tomatoes. Which one of the following would result in a higher quantity consumed and a lower price charged for tomatoes?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A fall in the price of the fertiliser used to grow tomatoes"
+        },
+        {
+          "letter": "B",
+          "text": "A hot summer causes consumers to eat more tomato salad"
+        },
+        {
+          "letter": "C",
+          "text": "The minimum wage for farm workers is increased"
+        },
+        {
+          "letter": "D",
+          "text": "The price of cucumbers falls"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 3
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "the question prints a diagram or chart (an image)"
+      ]
+    },
+    {
+      "id": "aqa-as-p1-2018-jun-q5",
+      "section": "A",
+      "questionNumber": "5",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Ben owns a small business that makes hand-made guitars. One year he sells 160 guitars, his total revenue is £78 400, and his total costs are £59 200. The average profit that Ben earns on each guitar is",
+      "options": [
+        {
+          "letter": "A",
+          "text": "£120"
+        },
+        {
+          "letter": "B",
+          "text": "£370"
+        },
+        {
+          "letter": "C",
+          "text": "£490"
+        },
+        {
+          "letter": "D",
+          "text": "£860"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 4
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p1-2018-jun-q6",
+      "section": "A",
+      "questionNumber": "6",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following is most likely to reduce the benefits of specialisation?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A reduction in government regulations"
+        },
+        {
+          "letter": "B",
+          "text": "An increase in competition"
+        },
+        {
+          "letter": "C",
+          "text": "Taxes on pollution"
+        },
+        {
+          "letter": "D",
+          "text": "Trade conducted by bartering"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 4
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p1-2018-jun-q7",
+      "section": "A",
+      "questionNumber": "7",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Smoking cigarettes generates negative consumption externalities. This means that",
+      "options": [
+        {
+          "letter": "A",
+          "text": "the private benefit from smoking includes the consumption externalities."
+        },
+        {
+          "letter": "B",
+          "text": "the social benefit from smoking is less than the private benefit."
+        },
+        {
+          "letter": "C",
+          "text": "the social benefit from smoking is negative."
+        },
+        {
+          "letter": "D",
+          "text": "the social optimum level of smoking is zero."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 4
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p1-2018-jun-q8",
+      "section": "A",
+      "questionNumber": "8",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following is an example of the economic resource capital?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A bank loan to a small business"
+        },
+        {
+          "letter": "B",
+          "text": "A scientific research laboratory"
+        },
+        {
+          "letter": "C",
+          "text": "Government subsidies for wind power"
+        },
+        {
+          "letter": "D",
+          "text": "Money in a savings account"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 5
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p1-2018-jun-q9",
+      "section": "A",
+      "questionNumber": "9",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Training provided by firms in a free market economy may be underprovided because some of the benefits from training may be captured by other firms when the workers change jobs. Which one of the following best describes this situation?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A negative production externality and a missing market"
+        },
+        {
+          "letter": "B",
+          "text": "A negative production externality and partial market failure"
+        },
+        {
+          "letter": "C",
+          "text": "A positive production externality and a missing market"
+        },
+        {
+          "letter": "D",
+          "text": "A positive production externality and partial market failure"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 5
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p1-2018-jun-q10",
+      "section": "A",
+      "questionNumber": "10",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The income elasticity of demand for baked beans is –0.4. Weekly sales of baked beans are 73 000 tins. If household incomes fall by 5%, then the new weekly sales of baked bean tins would be",
+      "options": [
+        {
+          "letter": "A",
+          "text": "63 875"
+        },
+        {
+          "letter": "B",
+          "text": "71 540"
+        },
+        {
+          "letter": "C",
+          "text": "74 460"
+        },
+        {
+          "letter": "D",
+          "text": "82 125"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 5
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p1-2018-jun-q11",
+      "section": "A",
+      "questionNumber": "11",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "There is a large increase in the number of different models of bicycles produced by the bicycle industry. The most likely impact of this would be",
+      "options": [
+        {
+          "letter": "A",
+          "text": "a decrease in advertising expenditure by bicycle firms."
+        },
+        {
+          "letter": "B",
+          "text": "a fall in the price elasticity of demand for any one model of bicycle."
+        },
+        {
+          "letter": "C",
+          "text": "an increase in barriers to entry to the bicycle industry."
+        },
+        {
+          "letter": "D",
+          "text": "an increase in productivity of manufacturing bicycles."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 6
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p1-2018-jun-q12",
+      "section": "A",
+      "questionNumber": "12",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "In the following diagram D1 shows the market demand for smoke alarms when consumers have imperfect information about the benefits of installing a smoke alarm. If consumers had full information, the market demand for smoke alarms would be D2. Which one of the following policies is most likely to ensure that consumption and production of smoke alarms are at the social optimum level?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A maximum price set at P0"
+        },
+        {
+          "letter": "B",
+          "text": "A maximum price set at P2"
+        },
+        {
+          "letter": "C",
+          "text": "A subsidy per unit equal to P1 – P0"
+        },
+        {
+          "letter": "D",
+          "text": "A subsidy per unit equal to P2 – P0"
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 7
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "the question prints a diagram or chart (an image)",
+        "8 subscript or superscript glyph(s) set flush against their base"
+      ]
+    },
+    {
+      "id": "aqa-as-p1-2018-jun-q13",
+      "section": "A",
+      "questionNumber": "13",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "In an economy hit by a recession, the owner of a small firm decides to continue to operate despite making losses. This decision suggests that",
+      "options": [
+        {
+          "letter": "A",
+          "text": "firms may have objectives other than profit maximisation."
+        },
+        {
+          "letter": "B",
+          "text": "monopoly power is widespread in the economy."
+        },
+        {
+          "letter": "C",
+          "text": "some small firms produce merit goods."
+        },
+        {
+          "letter": "D",
+          "text": "the firm’s average revenue is greater than its average cost."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 7
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p1-2018-jun-q14",
+      "section": "A",
+      "questionNumber": "14",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The table below shows the relationship between a firm’s output and its production costs. When the firm increases its output from",
+      "options": [
+        {
+          "letter": "A",
+          "text": "10 to 20 units, average fixed costs do not change."
+        },
+        {
+          "letter": "B",
+          "text": "10 to 20 units, average fixed costs fall by £15."
+        },
+        {
+          "letter": "C",
+          "text": "20 to 30 units, average fixed costs fall by £10."
+        },
+        {
+          "letter": "D",
+          "text": "20 to 30 units, average fixed costs fall by £15."
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 8
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "6 line(s) of figure or table text printed with the question are not reproduced; see the question paper"
+      ]
+    },
+    {
+      "id": "aqa-as-p1-2018-jun-q15",
+      "section": "A",
+      "questionNumber": "15",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "The diagrams below show the impact of an increase in demand for good G and the resulting change in the related market for good H. These changes imply that goods G and H are in",
+      "options": [
+        {
+          "letter": "A",
+          "text": "composite demand."
+        },
+        {
+          "letter": "B",
+          "text": "derived demand."
+        },
+        {
+          "letter": "C",
+          "text": "joint demand."
+        },
+        {
+          "letter": "D",
+          "text": "joint supply."
+        }
+      ],
+      "usesFigure": true,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 9
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": [
+        "the question prints a diagram or chart (an image)"
+      ]
+    },
+    {
+      "id": "aqa-as-p1-2018-jun-q16",
+      "section": "A",
+      "questionNumber": "16",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following statements about the distribution of income must be correct?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "An unequal distribution of income has to be inequitable"
+        },
+        {
+          "letter": "B",
+          "text": "‘The distribution of income is equitable’ is a positive statement"
+        },
+        {
+          "letter": "C",
+          "text": "The distribution of income is equitable when everyone has the same income"
+        },
+        {
+          "letter": "D",
+          "text": "Whether the distribution of income is equitable is a value judgement"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 9
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p1-2018-jun-q17",
+      "section": "A",
+      "questionNumber": "17",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Which one of the following would generate a short-run disequilibrium with excess supply in the market for Cornish pasties?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A minimum price for Cornish pasties is set above the current market price"
+        },
+        {
+          "letter": "B",
+          "text": "Higher meat prices increase the cost of producing Cornish pasties"
+        },
+        {
+          "letter": "C",
+          "text": "More advertising increases the demand for Cornish pasties"
+        },
+        {
+          "letter": "D",
+          "text": "The government levies a new indirect tax on Cornish pasties"
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 10
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p1-2018-jun-q18",
+      "section": "A",
+      "questionNumber": "18",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "One way to allocate road space in a congested city would be to charge drivers to use the roads. One reason why this policy is likely to result in a more efficient allocation of resources is because",
+      "options": [
+        {
+          "letter": "A",
+          "text": "incentives to build new roads would be higher."
+        },
+        {
+          "letter": "B",
+          "text": "only higher income drivers would choose to use the roads."
+        },
+        {
+          "letter": "C",
+          "text": "road use would be rationed to drivers who benefit from it the most."
+        },
+        {
+          "letter": "D",
+          "text": "the government would raise a large amount of revenue from drivers."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 10
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p1-2018-jun-q19",
+      "section": "A",
+      "questionNumber": "19",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Firms in an industry with a high concentration ratio will typically experience",
+      "options": [
+        {
+          "letter": "A",
+          "text": "a large amount of competition."
+        },
+        {
+          "letter": "B",
+          "text": "a large degree of monopoly power."
+        },
+        {
+          "letter": "C",
+          "text": "few economies of scale."
+        },
+        {
+          "letter": "D",
+          "text": "low prices and profits."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 10
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-as-p1-2018-jun-q20",
+      "section": "A",
+      "questionNumber": "20",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 1,
+      "type": "mcq",
+      "questionText": "Online clothes retailers invest in new warehouses to enable them to hold larger stocks of clothes. Other things remaining the same, this is most likely to result in",
+      "options": [
+        {
+          "letter": "A",
+          "text": "a higher price elasticity of supply of clothes sold online."
+        },
+        {
+          "letter": "B",
+          "text": "an increase in demand for clothes sold online."
+        },
+        {
+          "letter": "C",
+          "text": "diseconomies of scale in the online clothes industry."
+        },
+        {
+          "letter": "D",
+          "text": "lower barriers to entry to the online clothes industry."
+        }
+      ],
+      "usesFigure": false,
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 11
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/as-level/paper-1/aqa-as-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 3,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    }
+  ]
+}

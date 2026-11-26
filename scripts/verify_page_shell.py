@@ -148,7 +148,7 @@ PINNED_PAGE_COUNTS = {
     "root":          9,
     "past-papers":   5,
     "notes-other":   3,
-    "ppq":           253,
+    "ppq":           256,
 }
 
 
