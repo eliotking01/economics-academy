@@ -6784,7 +6784,10 @@
     "keywords": ["average cost", "fixed costs", "variable costs"]
   },
   "aqa-as-p1-2017-jun-q11": {
-    "topics": ["1-3-5-the-determination-of-equilibrium-market-prices"],
+    "topics": [
+      "1-3-5-the-determination-of-equilibrium-market-prices",
+      "1-3-1-the-determinants-of-the-demand-for-goods-and-services"
+    ],
     "keywords": ["equilibrium price", "excess demand"]
   },
   "aqa-as-p1-2017-jun-q12": {
@@ -6894,8 +6897,8 @@
   },
   "aqa-as-p1-2018-jun-q11": {
     "topics": [
-      "1-3-2-price-income-and-cross-elasticities-of-demand",
-      "1-5-4-monopolistic-competition"
+      "1-5-6-monopoly-and-monopoly-power",
+      "1-3-2-price-income-and-cross-elasticities-of-demand"
     ],
     "keywords": [
       "product differentiation",
@@ -6906,7 +6909,8 @@
   "aqa-as-p1-2018-jun-q12": {
     "topics": [
       "1-8-9-government-intervention-in-markets",
-      "1-8-5-merit-and-demerit-goods"
+      "1-8-5-merit-and-demerit-goods",
+      "1-2-2-imperfect-information"
     ],
     "keywords": ["imperfect information", "subsidy", "merit good"]
   },
@@ -6966,7 +6970,8 @@
   "aqa-as-p1-2019-jun-q3": {
     "topics": [
       "1-8-9-government-intervention-in-markets",
-      "1-8-5-merit-and-demerit-goods"
+      "1-8-5-merit-and-demerit-goods",
+      "1-2-2-imperfect-information"
     ],
     "keywords": [
       "imperfect information",
@@ -7120,7 +7125,8 @@
   "aqa-as-p1-2022-jun-q10": {
     "topics": [
       "1-3-6-the-interrelationship-between-markets",
-      "1-3-1-the-determinants-of-the-demand-for-goods-and-services"
+      "1-3-1-the-determinants-of-the-demand-for-goods-and-services",
+      "1-6-1-the-demand-for-labour-marginal-productivity-theory"
     ],
     "keywords": ["derived demand", "shift in demand"]
   },
@@ -7138,8 +7144,8 @@
   },
   "aqa-as-p1-2022-jun-q13": {
     "topics": [
-      "1-4-3-the-law-of-diminishing-returns-and-returns-to-scale",
-      "1-4-4-costs-of-production"
+      "1-4-4-costs-of-production",
+      "1-4-3-the-law-of-diminishing-returns-and-returns-to-scale"
     ],
     "keywords": ["fixed costs", "variable costs", "long run"]
   },
@@ -7232,7 +7238,7 @@
     "keywords": ["supply curve", "profit incentive"]
   },
   "aqa-as-p1-2023-jun-q12": {
-    "topics": ["1-5-5-oligopoly"],
+    "topics": ["1-5-5-oligopoly", "1-5-6-monopoly-and-monopoly-power"],
     "keywords": ["concentration ratio", "market share"]
   },
   "aqa-as-p1-2023-jun-q13": {
@@ -7295,7 +7301,10 @@
     "keywords": ["movement along the demand curve", "demand curve"]
   },
   "aqa-as-p1-2024-jun-q4": {
-    "topics": ["1-8-2-the-meaning-of-market-failure"],
+    "topics": [
+      "1-8-2-the-meaning-of-market-failure",
+      "1-8-6-market-imperfections"
+    ],
     "keywords": ["partial market failure", "missing market", "market failure"]
   },
   "aqa-as-p1-2024-jun-q5": {
@@ -7307,7 +7316,7 @@
     "keywords": ["perfect competition", "price taker"]
   },
   "aqa-as-p1-2024-jun-q7": {
-    "topics": ["1-5-2-the-objectives-of-firms", "1-4-7-profit"],
+    "topics": ["1-4-7-profit", "1-5-2-the-objectives-of-firms"],
     "keywords": ["profit maximisation", "total revenue", "total cost"]
   },
   "aqa-as-p1-2024-jun-q8": {
@@ -7369,7 +7378,10 @@
     "keywords": ["labour productivity", "index numbers"]
   },
   "aqa-as-p1-2024-jun-q18": {
-    "topics": ["1-3-6-the-interrelationship-between-markets"],
+    "topics": [
+      "1-3-6-the-interrelationship-between-markets",
+      "1-6-1-the-demand-for-labour-marginal-productivity-theory"
+    ],
     "keywords": ["derived demand"]
   },
   "aqa-as-p1-2024-jun-q19": {
@@ -7408,7 +7420,7 @@
     "keywords": ["average cost", "fixed costs", "variable costs"]
   },
   "aqa-as-p1-2025-jun-q6": {
-    "topics": ["1-8-5-merit-and-demerit-goods"],
+    "topics": ["1-8-5-merit-and-demerit-goods", "1-2-2-imperfect-information"],
     "keywords": ["merit goods", "imperfect information"]
   },
   "aqa-as-p1-2025-jun-q7": {
@@ -7452,7 +7464,7 @@
     "keywords": ["production possibility boundary", "shift"]
   },
   "aqa-as-p1-2025-jun-q14": {
-    "topics": ["1-2-2-imperfect-information"],
+    "topics": ["1-2-2-imperfect-information", "1-8-6-market-imperfections"],
     "keywords": ["asymmetric information", "imperfect information"]
   },
   "aqa-as-p1-2025-jun-q15": {
@@ -7544,7 +7556,7 @@
     "keywords": ["variable costs", "fixed costs"]
   },
   "aqa-as-p1-2020-nov-q12": {
-    "topics": ["1-8-5-merit-and-demerit-goods", "1-8-6-market-imperfections"],
+    "topics": ["1-8-5-merit-and-demerit-goods", "1-2-2-imperfect-information"],
     "keywords": ["imperfect information", "merit goods", "underproduction"]
   },
   "aqa-as-p1-2020-nov-q13": {
@@ -7559,7 +7571,10 @@
     "keywords": ["monopoly", "perfect competition", "profits"]
   },
   "aqa-as-p1-2020-nov-q15": {
-    "topics": ["1-3-6-the-interrelationship-between-markets"],
+    "topics": [
+      "1-3-6-the-interrelationship-between-markets",
+      "1-3-3-the-determinants-of-the-supply-of-goods-and-services"
+    ],
     "keywords": ["composite demand", "land"]
   },
   "aqa-as-p1-2020-nov-q16": {
@@ -7635,8 +7650,7 @@
   "aqa-as-p2-2016-jun-q7": {
     "topics": [
       "2-3-1-economic-growth-and-the-economic-cycle",
-      "2-3-2-employment-and-unemployment",
-      "2-3-3-inflation-and-deflation"
+      "2-3-4-possible-conflicts-between-macroeconomic-policy-objectives"
     ],
     "keywords": ["demand-side shock", "trend growth", "unemployment"]
   },
@@ -7676,8 +7690,8 @@
   },
   "aqa-as-p2-2016-jun-q15": {
     "topics": [
-      "2-6-4-exchange-rate-systems",
-      "2-4-3-central-banks-and-monetary-policy"
+      "2-4-3-central-banks-and-monetary-policy",
+      "2-6-4-exchange-rate-systems"
     ],
     "keywords": ["exchange rate", "appreciation", "interest rates"]
   },
@@ -7732,7 +7746,8 @@
   "aqa-as-p2-2017-jun-q5": {
     "topics": [
       "2-3-1-economic-growth-and-the-economic-cycle",
-      "2-2-6-determinants-of-long-run-aggregate-supply"
+      "2-2-6-determinants-of-long-run-aggregate-supply",
+      "2-3-4-possible-conflicts-between-macroeconomic-policy-objectives"
     ],
     "keywords": ["economic growth", "labour productivity", "inflation"]
   },
@@ -7800,7 +7815,10 @@
     "keywords": ["Bank Rate", "Monetary Policy Committee", "output gap"]
   },
   "aqa-as-p2-2017-jun-q18": {
-    "topics": ["2-3-2-employment-and-unemployment"],
+    "topics": [
+      "2-3-2-employment-and-unemployment",
+      "2-2-3-the-determinants-of-aggregate-demand"
+    ],
     "keywords": ["cyclical unemployment"]
   },
   "aqa-as-p2-2017-jun-q19": {
@@ -7827,7 +7845,7 @@
     "keywords": ["supply-side policies", "competition"]
   },
   "aqa-as-p2-2018-jun-q4": {
-    "topics": ["2-5-1-fiscal-policy"],
+    "topics": ["2-5-1-fiscal-policy", "2-6-3-the-balance-of-payments"],
     "keywords": ["budget deficit", "fiscal policy"]
   },
   "aqa-as-p2-2018-jun-q5": {
@@ -7851,7 +7869,7 @@
   },
   "aqa-as-p2-2018-jun-q9": {
     "topics": [
-      "2-3-3-inflation-and-deflation",
+      "2-3-4-possible-conflicts-between-macroeconomic-policy-objectives",
       "2-3-1-economic-growth-and-the-economic-cycle"
     ],
     "keywords": [
@@ -7897,7 +7915,7 @@
   },
   "aqa-as-p2-2018-jun-q15": {
     "topics": [
-      "2-6-4-exchange-rate-systems",
+      "2-4-3-central-banks-and-monetary-policy",
       "2-2-5-determinants-of-short-run-aggregate-supply",
       "2-2-2-aggregate-demand-and-aggregate-supply-analysis"
     ],
@@ -7928,8 +7946,8 @@
   },
   "aqa-as-p2-2018-jun-q19": {
     "topics": [
-      "2-2-5-determinants-of-short-run-aggregate-supply",
-      "2-3-3-inflation-and-deflation"
+      "2-3-3-inflation-and-deflation",
+      "2-2-5-determinants-of-short-run-aggregate-supply"
     ],
     "keywords": ["oil prices", "disinflation", "supply-side shock"]
   },
@@ -7947,7 +7965,7 @@
   "aqa-as-p2-2019-jun-q2": {
     "topics": [
       "2-2-2-aggregate-demand-and-aggregate-supply-analysis",
-      "2-2-3-the-determinants-of-aggregate-demand"
+      "2-3-1-economic-growth-and-the-economic-cycle"
     ],
     "keywords": ["demand-side shock", "exports"]
   },
@@ -7979,7 +7997,10 @@
     "keywords": ["investment", "interest rates", "retained profits"]
   },
   "aqa-as-p2-2019-jun-q8": {
-    "topics": ["2-6-4-exchange-rate-systems"],
+    "topics": [
+      "2-2-3-the-determinants-of-aggregate-demand",
+      "2-4-3-central-banks-and-monetary-policy"
+    ],
     "keywords": ["depreciation", "exports"]
   },
   "aqa-as-p2-2019-jun-q9": {
@@ -8046,7 +8067,7 @@
   },
   "aqa-as-p2-2019-jun-q20": {
     "topics": [
-      "2-5-1-fiscal-policy",
+      "2-2-3-the-determinants-of-aggregate-demand",
       "2-2-2-aggregate-demand-and-aggregate-supply-analysis",
       "2-3-1-economic-growth-and-the-economic-cycle"
     ],
@@ -8079,7 +8100,7 @@
   "aqa-as-p2-2022-jun-q5": {
     "topics": [
       "2-3-1-economic-growth-and-the-economic-cycle",
-      "2-3-2-employment-and-unemployment"
+      "2-3-4-possible-conflicts-between-macroeconomic-policy-objectives"
     ],
     "keywords": ["negative output gap", "unemployment", "inflationary pressure"]
   },
@@ -8094,7 +8115,8 @@
   "aqa-as-p2-2022-jun-q8": {
     "topics": [
       "2-2-1-the-circular-flow-of-income",
-      "2-1-2-macroeconomic-indicators"
+      "2-1-2-macroeconomic-indicators",
+      "2-3-3-inflation-and-deflation"
     ],
     "keywords": ["nominal GDP", "real GDP", "deflation"]
   },
@@ -8111,12 +8133,16 @@
     "keywords": ["indirect tax"]
   },
   "aqa-as-p2-2022-jun-q12": {
-    "topics": ["2-4-3-central-banks-and-monetary-policy"],
+    "topics": [
+      "2-4-3-central-banks-and-monetary-policy",
+      "2-5-1-fiscal-policy"
+    ],
     "keywords": ["interest rates", "Bank of England", "inflation target"]
   },
   "aqa-as-p2-2022-jun-q13": {
     "topics": [
       "2-2-6-determinants-of-long-run-aggregate-supply",
+      "2-2-5-determinants-of-short-run-aggregate-supply",
       "2-2-2-aggregate-demand-and-aggregate-supply-analysis"
     ],
     "keywords": [
@@ -8156,7 +8182,10 @@
     "keywords": ["government borrowing", "unemployment"]
   },
   "aqa-as-p2-2022-jun-q20": {
-    "topics": ["2-4-3-central-banks-and-monetary-policy"],
+    "topics": [
+      "2-4-3-central-banks-and-monetary-policy",
+      "2-3-3-inflation-and-deflation"
+    ],
     "keywords": ["monetary policy", "deflation", "exchange rate"]
   },
   "aqa-as-p2-2023-jun-q1": {
@@ -8171,10 +8200,7 @@
     "keywords": ["demand-pull inflation", "full employment", "aggregate demand"]
   },
   "aqa-as-p2-2023-jun-q3": {
-    "topics": [
-      "2-3-3-inflation-and-deflation",
-      "2-1-2-macroeconomic-indicators"
-    ],
+    "topics": ["2-3-3-inflation-and-deflation", "2-1-3-uses-of-index-numbers"],
     "keywords": ["consumer prices index", "inflation", "value of money"]
   },
   "aqa-as-p2-2023-jun-q4": {
@@ -8246,7 +8272,10 @@
     "keywords": ["trend rate of growth", "output gap", "labour productivity"]
   },
   "aqa-as-p2-2023-jun-q16": {
-    "topics": ["2-6-4-exchange-rate-systems"],
+    "topics": [
+      "2-4-3-central-banks-and-monetary-policy",
+      "2-6-4-exchange-rate-systems"
+    ],
     "keywords": ["exchange rate", "appreciation"]
   },
   "aqa-as-p2-2023-jun-q17": {
@@ -8340,7 +8369,7 @@
   },
   "aqa-as-p2-2024-jun-q13": {
     "topics": [
-      "2-5-1-fiscal-policy",
+      "2-3-1-economic-growth-and-the-economic-cycle",
       "2-2-2-aggregate-demand-and-aggregate-supply-analysis"
     ],
     "keywords": ["government spending", "spare capacity", "AD/AS diagram"]
@@ -8369,7 +8398,7 @@
     "keywords": ["subsidy", "budget surplus", "pattern of economic activity"]
   },
   "aqa-as-p2-2024-jun-q18": {
-    "topics": ["2-6-4-exchange-rate-systems"],
+    "topics": ["2-6-4-exchange-rate-systems", "2-6-3-the-balance-of-payments"],
     "keywords": ["exchange rate", "depreciation", "exports"]
   },
   "aqa-as-p2-2024-jun-q19": {
@@ -8386,13 +8415,17 @@
   },
   "aqa-as-p2-2025-jun-q2": {
     "topics": [
-      "2-3-1-economic-growth-and-the-economic-cycle",
-      "2-1-2-macroeconomic-indicators"
+      "1-4-1-production-and-productivity",
+      "2-1-2-macroeconomic-indicators",
+      "2-3-1-economic-growth-and-the-economic-cycle"
     ],
     "keywords": ["labour productivity", "national income", "output gap"]
   },
   "aqa-as-p2-2025-jun-q3": {
-    "topics": ["2-2-1-the-circular-flow-of-income"],
+    "topics": [
+      "2-2-1-the-circular-flow-of-income",
+      "2-3-3-inflation-and-deflation"
+    ],
     "keywords": ["nominal national income", "real national income", "inflation"]
   },
   "aqa-as-p2-2025-jun-q4": {
@@ -8436,8 +8469,9 @@
   },
   "aqa-as-p2-2025-jun-q11": {
     "topics": [
-      "2-6-4-exchange-rate-systems",
-      "1-1-5-production-possibility-diagrams"
+      "2-4-3-central-banks-and-monetary-policy",
+      "1-1-5-production-possibility-diagrams",
+      "2-3-1-economic-growth-and-the-economic-cycle"
     ],
     "keywords": [
       "production possibility curve",
@@ -8460,6 +8494,7 @@
   "aqa-as-p2-2025-jun-q15": {
     "topics": [
       "2-5-1-fiscal-policy",
+      "2-2-5-determinants-of-short-run-aggregate-supply",
       "2-2-2-aggregate-demand-and-aggregate-supply-analysis"
     ],
     "keywords": ["indirect taxes", "inflation", "AD/AS diagram"]
@@ -8494,13 +8529,16 @@
   },
   "aqa-as-p2-2020-nov-q2": {
     "topics": [
-      "2-6-3-the-balance-of-payments",
-      "2-2-3-the-determinants-of-aggregate-demand"
+      "2-2-3-the-determinants-of-aggregate-demand",
+      "2-6-3-the-balance-of-payments"
     ],
     "keywords": ["imports", "exchange rate"]
   },
   "aqa-as-p2-2020-nov-q3": {
-    "topics": ["2-2-3-the-determinants-of-aggregate-demand"],
+    "topics": [
+      "2-2-3-the-determinants-of-aggregate-demand",
+      "2-2-2-aggregate-demand-and-aggregate-supply-analysis"
+    ],
     "keywords": ["aggregate demand", "shift in AD"]
   },
   "aqa-as-p2-2020-nov-q4": {
@@ -8519,7 +8557,11 @@
     "keywords": ["multiplier", "multiplier calculation"]
   },
   "aqa-as-p2-2020-nov-q7": {
-    "topics": ["2-3-3-inflation-and-deflation", "2-6-4-exchange-rate-systems"],
+    "topics": [
+      "2-3-3-inflation-and-deflation",
+      "2-4-3-central-banks-and-monetary-policy",
+      "2-2-5-determinants-of-short-run-aggregate-supply"
+    ],
     "keywords": ["inflation", "exchange rate", "productivity"]
   },
   "aqa-as-p2-2020-nov-q8": {
@@ -8539,7 +8581,10 @@
     "keywords": ["current account surplus", "exchange rate", "budget"]
   },
   "aqa-as-p2-2020-nov-q10": {
-    "topics": ["2-3-2-employment-and-unemployment"],
+    "topics": [
+      "2-3-2-employment-and-unemployment",
+      "2-3-1-economic-growth-and-the-economic-cycle"
+    ],
     "keywords": ["cyclical unemployment", "excess capacity"]
   },
   "aqa-as-p2-2020-nov-q11": {
@@ -8547,7 +8592,11 @@
     "keywords": ["national debt", "budget deficit"]
   },
   "aqa-as-p2-2020-nov-q12": {
-    "topics": ["2-3-3-inflation-and-deflation", "2-6-4-exchange-rate-systems"],
+    "topics": [
+      "2-4-3-central-banks-and-monetary-policy",
+      "2-2-2-aggregate-demand-and-aggregate-supply-analysis",
+      "2-3-3-inflation-and-deflation"
+    ],
     "keywords": [
       "cost-push inflation",
       "demand-pull inflation",
@@ -8569,15 +8618,12 @@
   "aqa-as-p2-2020-nov-q16": {
     "topics": [
       "2-4-3-central-banks-and-monetary-policy",
-      "2-4-4-the-regulation-of-the-financial-system"
+      "2-3-3-inflation-and-deflation"
     ],
     "keywords": ["credit", "Bank of England", "normal capacity"]
   },
   "aqa-as-p2-2020-nov-q17": {
-    "topics": [
-      "2-1-3-uses-of-index-numbers",
-      "2-2-1-the-circular-flow-of-income"
-    ],
+    "topics": ["2-1-3-uses-of-index-numbers", "2-6-3-the-balance-of-payments"],
     "keywords": ["index numbers", "export prices", "constant prices"]
   },
   "aqa-as-p2-2020-nov-q18": {
@@ -8597,7 +8643,10 @@
     "keywords": ["current account surplus", "balance of payments"]
   },
   "aqa-as-p2-2020-nov-q20": {
-    "topics": ["2-3-2-employment-and-unemployment"],
+    "topics": [
+      "2-3-2-employment-and-unemployment",
+      "2-4-3-central-banks-and-monetary-policy"
+    ],
     "keywords": ["unemployment", "interest rates"]
   },
   "edexcel-as-p1-2016-jun-q1a": {

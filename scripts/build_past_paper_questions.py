@@ -457,7 +457,9 @@ TITLE = "A-Level Economics Past Paper Questions | {} | Economics Academy"
 # (review/launch-section-a.md W2 A, W3). Three slots: the board hub's meta and
 # JSON-LD description, its hero intro, and its heading on the master page.
 # boards.json is left alone - the notes, practice and flashcard families read
-# it too. A board not listed (AQA, no AS cards) keeps that string everywhere.
+# it too. A board not listed keeps that string everywhere. AQA joined with its
+# AS Section A MCQs (7135), in the bank's form rather than AQA's own "AS":
+# approved by Eliot, 2026-11-25 (D71, review/phase-9-aqa-as-mcqs.md W1-W3).
 QUALIFICATION_PHRASE = {
     "edexcel": {
         "meta": "A Level 9EC0 and AS Level 8EC0",
@@ -468,6 +470,11 @@ QUALIFICATION_PHRASE = {
         "meta": "A Level 9EB0 and AS Level 8EB0",
         "intro": "A Level (9EB0) and AS Level (8EB0)",
         "heading": "A Level (9EB0) and AS Level (8EB0) Economics B",
+    },
+    "aqa": {
+        "meta": "A Level 7136 and AS Level 7135",
+        "intro": "A Level (7136) and AS Level (7135)",
+        "heading": "A Level (7136) and AS Level (7135) Economics",
     },
 }
 
