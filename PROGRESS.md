@@ -23,7 +23,7 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| All-boards parity (D67) — Phase 9: AQA AS (7135) Section A MCQs in the past-paper bank (360 questions, about 3 new pages) | built, awaiting merge: tags settled (`review/aqa-as-mcq-tags.md`, T1–T3 A, 2026-11-26), 3 new pages, suite green (branch `feature/aqa-as-mcqs`) | — | — |
+| All-boards parity (D67) — Phase 9: AQA AS (7135) Section A MCQs in the past-paper bank (360 questions, 3 new pages) | live (PR #58) | 2026-11-26 | `1dadc8c2` |
 | All-boards parity (D67) — Phase 7: real exam MCQs in the past-paper bank, AQA and Edexcel A (450 questions, 15 new pages) | live (PR #56) | 2026-11-25 | `ed377dc7` |
 | All-boards parity (D67) — Phase 6: Edexcel A Papers 1–2 Section A written parts in the past-paper bank (259 questions, 13 new pages) | live (PR #54) | 2026-11-25 | `96439950` |
 | All-boards parity (D67) — Phase 5: twin links across three boards (185 pages reworded, no new URLs) | live (PR #53) | 2026-11-24 | `f1110a8a` |
@@ -145,7 +145,7 @@ are **carried over and not independently re-verified**, except where stated.
 | **`404.html` has no canonical and no Open Graph tags** | Confirmed: 0 matches | Defensible for a 404. Listed so it stays a decision |
 | **`.year-header h4` in `css/pages/past-papers-list.css`** | Still present at line 45 while line 196 styles `.year-header h2` | Likely dead. Read the markup before deleting |
 | **Web-font layout shift** | Not re-measured. CLS was 0.078 on a notes page and 0.154 on a questions page | Self-host with `size-adjust`, or preload the woff2 the fold needs |
-| **Past-paper bank payload size** | Added 2026-11-25 (Phase 7). The master `/past-paper-questions/questions.json` went from 877 KB to 1,246 KB (204 KB gzipped) when the 450 MCQs went live; AQA's board payload is 441 KB. Nothing caps either | Decide whether a budget is wanted. If so, measure what the search page actually loads before choosing what to trim or split |
+| **Past-paper bank payload size** | Added 2026-11-25 (Phase 7). The master `/past-paper-questions/questions.json` went from 877 KB to 1,246 KB (204 KB gzipped) when the 450 MCQs went live; AQA's board payload is 441 KB. Phase 9 (2026-11-26) took the master to 1,526 KB (253 KB gzipped) and AQA's board payload to 721 KB (127 KB gzipped), shipped as measured (`aqa-as-mcq-tags.md` T3 A). Nothing caps either | Decide whether a budget is wanted. If so, measure what the search page actually loads before choosing what to trim or split |
 | **OCR A Level Paper 3, June 2023** | **The question paper is missing.** Both PDFs at that path are the mark scheme, byte-identical, md5 `35b8975c…`. Confirmed by Eliot and verified independently; a sweep of all 281 PDFs found no other case | Download H460/03 June 2023 from OCR and save it over the existing filename. No URL, link or sitemap change |
 
 ### Still open — Edexcel B follow-ups
@@ -221,16 +221,19 @@ session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
 
-### All-boards parity — Phase 9, AQA AS Section A MCQs (2026-11-25) — IN PROGRESS (branch `feature/aqa-as-mcqs`)
+### All-boards parity — Phase 9, AQA AS Section A MCQs (2026-11-25 to 2026-11-26) — LIVE, MERGED 2026-11-26 AS PR #58 (`1dadc8c2`, branch `feature/aqa-as-mcqs`)
 
 D71. The design sheet is `review/phase-9-aqa-as-mcqs.md` (every
-recommendation approved 2026-11-25). The dry run, page images beside
-records, is `review/phase-9-dry-run.html`.
+recommendation approved 2026-11-25), the tags sheet `review/aqa-as-mcq-tags.md`
+(T1–T3 A, 2026-11-26). The dry run, page images beside records, is
+`review/phase-9-dry-run.html`.
 
 - **Scope.** Section A of the 18 non-specimen AQA AS Paper 1 and 2 papers
   (June 2016–2019, November 2020, June 2022–2025): 20 one-mark MCQs each,
-  360 cards. Section B and the specimens stay out. No reuse was found
-  against Paper 3's 270 MCQs or between AS papers.
+  360 cards. Section B and the specimens stay out. No reuse against Paper
+  3's 270 MCQs. Between AS papers one question was set twice (P1 June 2016
+  Q20, P1 June 2018 Q16), which the design sheet's §5 missed; per the
+  bank's rule both stay, each card labelled by its series.
 - **Done: the extractor and its checks.** `extract_aqa_questions.py` reads
   AS Section A into `aqa-as/`: the question count is a parameter (30 or 20);
   the 2016–2019 closing line "QUESTION 20 IS THE LAST QUESTION IN SECTION A"
@@ -252,23 +255,19 @@ records, is `review/phase-9-dry-run.html`.
 - **Done: tagging (2026-11-25).** First pass committed (`273df531`), then a
   blind `cold-solver` pass per paper: 260 of 360 match. The 100
   disagreements, the page list (1.1.2, 1.1.3, 1.4.2, all MCQ-only) and the
-  measured payloads (AQA board 431 to 703 KB, 76 to 124 KB gzipped) are
-  in `review/aqa-as-mcq-tags.md`, awaiting answers. The blind pass found one
-  more extractor defect (a 7pt space, "Q2,the"), fixed in `5ef39fb9`; a
-  dropped-line audit found three (`57513bd7`, `75210df9`). The tree is
-  deliberately stale until the rebuild: `verify_generated` and two unit
-  tests fail on it.
+  measured payloads went to Eliot in `review/aqa-as-mcq-tags.md`. The blind
+  pass found one more extractor defect (a 7pt space, "Q2,the"), fixed in
+  `5ef39fb9`; a dropped-line audit found three (`57513bd7`, `75210df9`).
 - **Done: build (2026-11-26).** Eliot answered T1 A, T2 A, T3 A: 46 tag
   changes applied; 1.1.2, 1.1.3 and 1.4.2 built (all MCQ-only);
   `QUALIFICATION_PHRASE["aqa"]` (W1–W3); `verify_page_shell` ppq 253 to 256.
   `test_question_search.js` needed two fixes on its first run against AQA
-  AS data (`cedfd666`). Next: Live Server check, PR, merge on approval.
-- **Before tagging (kept for the record).** Tag: a first pass, a blind
-  `cold-solver` pass, a disagreements sheet, and the page list
-  (1.1.2, 1.1.3, 1.4.2 are the only AQA topics left below the gate). At
-  launch, `QUALIFICATION_PHRASE` gains its `aqa` entry (W1–W3, "A Level
-  (7136) and AS Level (7135)"), and `verify_page_shell.py` is reseeded in
-  the same commit that adds pages.
+  AS data (`cedfd666`): an AS-aware extract rule, and the AQA AS block
+  moved below the filter harness it calls.
+- **Merged 2026-11-26 as PR #58 (`1dadc8c2`)**, with a merge commit. CI
+  passed on the PR. The bank holds 2,052 questions; the AQA hub 909.
+- **Left open:** the bank's payload size, under "Still open —
+  housekeeping".
 
 ### All-boards parity — Phase 7, real exam MCQs (2026-11-25) — LIVE, MERGED 2026-11-25 AS PR #56 (`ed377dc7`, branch `feature/bank-mcqs`)
 
