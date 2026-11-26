@@ -183,6 +183,8 @@ check(
 //   AQA      Papers 1-2  Section A has extracts, Section B is free-standing essays
 //            Paper 3     Section A is multiple choice with no extract, Section
 //                        B is a case study
+//            AS (7135)   Papers 1-2 Section A only, multiple choice with no
+//                        extract (D71); Section B is not in the bank
 //   Edexcel B every paper, every section: each question sits under data, and
 //            the 20-mark essay is set on Section C's own extract
 //   Edexcel A Papers 1-2 Section A has no extract: its link goes to the page
@@ -196,6 +198,7 @@ function expectsExtract(q) {
   const paper = data.papers[q.p];
   if (paper.board === "edexcel-b") return true;
   if (paper.board === "edexcel") return q.section !== "C";
+  if (paper.level === "as-level") return false;
   if (paper.paper === 3) return q.section === "B";
   return q.section === "A";
 }
@@ -613,44 +616,6 @@ if (staged) {
     mcqIndex
       .filter((r) => M.score(r, M.tokenise("inelastic throughout its length")) >= 0)
       .some((r) => r.q.id === "aqa-p3-2019-jun-q1"),
-  );
-}
-
-// ---- AQA AS (D71, Phase 9): runs whenever the data carries an AQA AS paper,
-// so from the launch on. Section A's MCQs are the only AQA AS records in
-// scope; the renderer and key checks above already cover every card.
-
-const aqaAs = index.filter(
-  (r) => r.paper.board === "aqa" && r.paper.level === "as-level",
-);
-if (aqaAs.length) {
-  check(
-    "aqa-as: every card is a 1-mark Section A MCQ with an aqa-as id",
-    aqaAs.every(
-      (r) =>
-        r.q.type === "mcq" &&
-        r.q.section === "A" &&
-        r.q.marks === 1 &&
-        r.q.id.indexOf("aqa-as-") === 0,
-    ),
-  );
-  check(
-    "aqa-as: no paper holds more than twenty",
-    Object.values(
-      aqaAs.reduce((n, r) => {
-        n[r.q.p] = (n[r.q.p] || 0) + 1;
-        return n;
-      }, {}),
-    ).every((n) => n <= 20),
-  );
-  const h = makeRoot();
-  M.init(h.root, data);
-  h.sel.board.change("aqa");
-  check(
-    "aqa-as: with AQA chosen, Qualification offers A Level and AS Level",
-    opts(h.sel.level)
-      .map((o) => o.value)
-      .join(",") === "a-level,as-level",
   );
 }
 
@@ -1284,6 +1249,52 @@ if (data.boards.some((b) => b.board === "edexcel-b")) {
   check(
     "prefiltered topic page: no select carries an optgroup",
     FILTERS.every((f) => !hasOptgroup(h2.sel[f.name])),
+  );
+}
+
+// ---- AQA AS (D71, Phase 9): runs whenever the data carries an AQA AS paper,
+// so from the launch on. Section A's MCQs are the only AQA AS records in
+// scope; the renderer and key checks above already cover every card. It sits
+// here, after the filter harness (makeRoot, opts), because it drives the
+// selects; above it, its first real run threw on FILTERS.
+
+const aqaAs = index.filter(
+  (r) => r.paper.board === "aqa" && r.paper.level === "as-level",
+);
+if (aqaAs.length) {
+  check(
+    "aqa-as: every card is a 1-mark Section A MCQ with an aqa-as id",
+    aqaAs.every(
+      (r) =>
+        r.q.type === "mcq" &&
+        r.q.section === "A" &&
+        r.q.marks === 1 &&
+        r.q.id.indexOf("aqa-as-") === 0,
+    ),
+  );
+  check(
+    "aqa-as: no paper holds more than twenty",
+    Object.values(
+      aqaAs.reduce((n, r) => {
+        n[r.q.p] = (n[r.q.p] || 0) + 1;
+        return n;
+      }, {}),
+    ).every((n) => n <= 20),
+  );
+  const h = makeRoot();
+  M.init(h.root, data);
+  h.sel.board.change("aqa");
+  check(
+    "aqa-as: with AQA chosen, Qualification offers A Level and AS Level",
+    opts(h.sel.level)
+      .map((o) => o.value)
+      .join(",") === "a-level,as-level",
+  );
+  h.sel.level.change("as-level");
+  check(
+    "aqa-as: AQA and AS Level show exactly the AQA AS cards",
+    h.count.textContent.indexOf(String(aqaAs.length)) === 0,
+    h.count.textContent + " for " + aqaAs.length,
   );
 }
 
