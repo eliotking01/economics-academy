@@ -64,18 +64,28 @@ aqa-a2-macro/2-6-2-trade, logged in docs/REVIEW-NOTES.md). The topic pages
 also load notes.js as their family's extra script, the same per-family
 mechanism as quiz.js and flashcards.js.
 
-MATHJAX IS DECIDED FROM THE BODY, NOT FROM THE RECORD (2026-08-23)
-------------------------------------------------------------------
-Until the performance pass every record carried a stored `head.mathjax`
-value inherited from the hand-written page it was lifted from, and 126 of
-166 topic pages loaded MathJax 3 from jsDelivr - 67 of them with no maths
-anywhere in the body. The flag is now derived: a page loads MathJax if and
-only if its rendered body contains one of the three delimiters the config
-declares (backslash-paren, backslash-bracket, double dollar - see
-page_shell.MATHJAX_CONFIG_BODY), and the
-same page gets a preconnect to cdn.jsdelivr.net so the script's connection
-opens early. The stored fields were removed from the records; no page needs
-an override. verify_page_shell.py check 5 asserts the iff independently.
+MATHS IS PRE-RENDERED WITH KATEX AT BUILD TIME (2026-11-27)
+-----------------------------------------------------------
+The notes are written in TeX between the delimiters MathJax used:
+backslash-paren for inline, backslash-bracket for display (the notes use no
+double-dollar). Until 2026-11-27 the 78 pages with maths loaded MathJax 3
+from jsDelivr to typeset it in the browser. Now this generator renders every
+formula on every page in ONE node run of the vendored KaTeX
+(katex_render.render(), the call the glossary and flashcards already used),
+after the extras, navigation and picture wrappers are in place, so the
+published page carries finished HTML and MathML: no maths JavaScript, no
+third-party origin, and formulae that display with JavaScript off. A page
+with maths links /css/vendor/katex/katex.min.css after its own stylesheet;
+the sizing that matches MathJax's (1.257em in Merriweather text, 1.1em in
+Source Sans Pro tables and captions, measured on all 295 formulae) is in
+revision-notes-topic.css. The notes-data slices keep their TeX: the source
+never changes, only the output. katex_render.to_tex() reads a page back to
+that TeX for extract_glossary.py, verify_glossary.py and
+verify_text_integrity.py. Health check, seo/23 Phase B.
+
+Delimiters inside script, style, noscript, textarea and pre are left alone,
+as MathJax's skipHtmlTags left them; a delimiter with a tag inside it, or an
+unclosed one, stops the build rather than shipping raw TeX.
 
 WHAT THIS DELIBERATELY DOES NOT DO
 ----------------------------------
@@ -101,6 +111,7 @@ Standard library only.
 from __future__ import annotations
 
 import argparse
+from html import unescape as html_unescape
 import json
 import pathlib
 import re
@@ -108,6 +119,7 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
+import katex_render  # noqa: E402
 import notes_extras  # noqa: E402
 import notes_sequence  # noqa: E402
 import page_shell  # noqa: E402
@@ -130,12 +142,15 @@ CONTAINER_OPEN = '          <div class="notes-container">\n'
 # first; restating it here would be a second copy of the same anchor.
 CONTAINER_CLOSE = notes_extras.CONTAINER_CLOSE
 
-# The three delimiters page_shell.MATHJAX_CONFIG_BODY tells MathJax to typeset.
-# Anything else - a lone `$`, a `\frac` outside delimiters - is not maths to
-# MathJax either, so it is not maths to this test. verify_page_shell.py
-# restates the pattern rather than importing it, on purpose.
+# The delimiters the notes write maths between - the three MathJax was
+# configured with. Anything else - a lone `$`, a `\frac` outside delimiters -
+# was never maths. verify_page_shell.py restates the pattern rather than
+# importing it, on purpose, and asserts no published body still carries one.
 MATHS_DELIMITER = re.compile(r"\\\(|\\\[|\$\$")
-MATHJAX_ORIGIN = "https://cdn.jsdelivr.net"
+MATHS = re.compile(r"\\\((.+?)\\\)|\\\[(.+?)\\\]|\$\$(.+?)\$\$", re.S)
+# MathJax's skipHtmlTags: maths inside these was never typeset.
+SKIP_BLOCK = re.compile(r"<(script|style|noscript|textarea|pre)\b.*?</\1>",
+                        re.S | re.I)
 
 
 # A diagram <img> in a slice: its own line, indented, self-closing, src under
@@ -196,23 +211,53 @@ def with_webp_pictures(html: str, zoom: bool = False) -> str:
     return DIAGRAM_IMG.sub(wrap, html)
 
 
-def head_for(rec: dict, body_html: str) -> dict:
-    """The page's head values, with MathJax decided by the body it will carry.
+def head_for(rec: dict, has_maths: bool) -> dict:
+    """The page's head values: KaTeX's stylesheet if and only if it has maths.
 
-    `body_html` is the final body - slice, extras and previous/next rows - so
-    the decision is about what the page actually contains. A page with maths
-    loads MathJax (the one canonical form, `id="MathJax-script" async`, the
-    `<!-- MathJax Configuration -->` comment above the config) and preconnects
-    to its CDN; a page without does neither. The record's own `extraPreconnects`
-    are kept and the CDN appended, so a future record can still name one.
+    Decided from the body before its maths was rendered, so the question is
+    what the page contains. No page loads MathJax (since 2026-11-27); the
+    stylesheet goes after the page's own, as on the glossary pages.
     """
     head = dict(rec["head"])
-    has_maths = bool(MATHS_DELIMITER.search(body_html))
-    head["mathjax"] = "with-id" if has_maths else None
-    head["mathjaxComment"] = has_maths
-    extra = [h for h in head.get("extraPreconnects", []) if h != MATHJAX_ORIGIN]
-    head["extraPreconnects"] = extra + [MATHJAX_ORIGIN] if has_maths else extra
+    head["mathjax"] = None
+    head["mathjaxComment"] = False
+    if has_maths:
+        head["pageStylesheets"] = [*head.get("pageStylesheets", []),
+                                   katex_render.KATEX_CSS]
     return head
+
+
+def maths_in(html: str) -> list[tuple[int, int, str, bool]]:
+    """Every formula MathJax would have typeset: (start, end, tex, display).
+
+    The TeX is entity-decoded - it was read out of HTML - before KaTeX sees it.
+    """
+    skip = [m.span() for m in SKIP_BLOCK.finditer(html)]
+    found = []
+    for m in MATHS.finditer(html):
+        if any(a <= m.start() < b for a, b in skip):
+            continue
+        tex = next(g for g in m.groups() if g is not None)
+        if "<" in tex:
+            raise SystemExit(f"a maths delimiter spans an HTML tag: {m.group()[:80]!r}")
+        found.append((m.start(), m.end(), html_unescape(tex), m.group(1) is None))
+    return found
+
+
+def with_rendered_maths(html: str, spans, rendered) -> str:
+    out, pos = [], 0
+    for (start, end, _tex, _display), markup in zip(spans, rendered):
+        out += [html[pos:start], markup]
+        pos = end
+    out.append(html[pos:])
+    rest = "".join(out)
+    leftover = [m for m in MATHS_DELIMITER.finditer(rest)
+                if not any(a <= m.start() < b
+                           for a, b in (s.span() for s in SKIP_BLOCK.finditer(rest)))]
+    if leftover:
+        raise SystemExit(f"an unclosed maths delimiter survived rendering: "
+                         f"{rest[leftover[0].start():leftover[0].start() + 80]!r}")
+    return rest
 
 
 def topic_key(meta: pathlib.Path) -> tuple[str, str] | None:
@@ -292,7 +337,8 @@ def with_topic_nav(slice_html: str, key: tuple[str, str]) -> str:
             + CONTAINER_CLOSE.lstrip("\n"))
 
 
-def render(rec: dict, slice_html: str, extra_scripts: tuple = ()) -> str:
+def render(rec: dict, slice_html: str, extra_scripts: tuple = (),
+           has_maths: bool = False) -> str:
     b = rec["body"]
     end_container = b.get("endContainerComment") or ""
     end_main = b.get("endMainComment") or ""
@@ -304,7 +350,7 @@ def render(rec: dict, slice_html: str, extra_scripts: tuple = ()) -> str:
         "<!doctype html>\n"
         '<html lang="en-GB">\n'
         "  <head>\n"
-        f"{page_shell.render_head(head_for(rec, slice_html))}\n"
+        f"{page_shell.render_head(head_for(rec, has_maths))}\n"
         "  </head>\n"
         '  <body class="is-preload">\n'
         f"{b['beforeMain']}"
@@ -323,6 +369,7 @@ def render(rec: dict, slice_html: str, extra_scripts: tuple = ()) -> str:
 def build() -> dict[str, str]:
     """Every page this generator owns, path -> rendered bytes."""
     pages: dict[str, str] = {}
+    built = []  # (rec, slice_html, extra_scripts), maths still in TeX
     for meta in sorted(DATA.rglob("*.json")):
         # notes-data/hubs/drafts/ holds the hubs of themes not opened yet
         # (Edexcel B, D66). Written and awaiting approval, never built.
@@ -341,8 +388,17 @@ def build() -> dict[str, str]:
                 slice_html, notes_dir, slug, unit.group(1), date_modified(rec))
             slice_html = with_topic_nav(slice_html, key)
         slice_html = with_webp_pictures(slice_html, zoom=key is not None)
+        built.append((rec, slice_html, NOTES_JS if key is not None else ()))
+
+    # Every formula on every page, typeset in one node run.
+    spans = [maths_in(slice_html) for _rec, slice_html, _js in built]
+    rendered = iter(katex_render.render(
+        [(tex, display) for page in spans for _s, _e, tex, display in page]))
+    for (rec, slice_html, js), page_spans in zip(built, spans):
+        markup = [next(rendered) for _ in page_spans]
         pages[rec["path"]] = render(
-            rec, slice_html, NOTES_JS if key is not None else ())
+            rec, with_rendered_maths(slice_html, page_spans, markup), js,
+            has_maths=bool(page_spans))
     return pages
 
 

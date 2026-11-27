@@ -49,6 +49,7 @@ from html.parser import HTMLParser
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 import board_data  # noqa: E402
+import katex_render  # noqa: E402
 
 NOTES = ROOT / "revision-notes"
 DATA = ROOT / "glossary-data"
@@ -221,6 +222,12 @@ class TreeBuilder(HTMLParser):
 
 
 def parse(source: str) -> Node:
+    # The notes pages carry pre-rendered KaTeX since 2026-11-27. Reading them
+    # back to the TeX they were written in, first, means every definition and
+    # formula is extracted exactly as before - glossary-data/terms.json did
+    # not change by a byte when the notes were converted. Also what
+    # verify_glossary.py and check_glossary_capitalisation.py read through.
+    source = katex_render.to_tex(source)
     b = TreeBuilder()
     b.feed(source)
     b.close()

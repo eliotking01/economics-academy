@@ -129,7 +129,6 @@
          request could not start until main.css had parsed. The fonts are
          self-hosted under /webfonts/ and declared in the stylesheets; the body
          face is preloaded here. See seo/09-web-vitals-baseline.md. -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link
       rel="preload"
       href="/webfonts/source-sans-pro-300.woff2"
@@ -154,33 +153,7 @@
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
-    <!-- MathJax Configuration -->
-    <script>
-      window.MathJax = {
-        tex: {
-          inlineMath: [
-            ["\\(", "\\)"],
-          ], // \(...\) only - the $...$ delimiter was removed, D23
-          displayMath: [
-            ["$$", "$$"],
-            ["\\[", "\\]"],
-          ],
-          processEscapes: true, // Allows \_ in text
-          autoload: {
-            color: [],
-            ams: ["boldsymbol"], // For \mathbf{}
-          },
-        },
-        options: {
-          skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
-        },
-      };
-    </script>
-    <script
-      id="MathJax-script"
-      async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-    ></script>
+    <link rel="stylesheet" href="/css/vendor/katex/katex.min.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -610,23 +583,23 @@
               </p>
               <p class="topic-definition">
                 <span class="key-definition">Total Cost (TC):</span>
-                <strong>\( TC = TFC + TVC \)</strong>
+                <strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mi>C</mi><mo>=</mo><mi>T</mi><mi>F</mi><mi>C</mi><mo>+</mo><mi>T</mi><mi>V</mi><mi>C</mi></mrow><annotation encoding="application/x-tex"> TC = TFC + TVC </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">TC</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">TFC</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span></strong>
               </p>
               <p class="topic-definition">
                 <span class="key-definition">Average Cost (AC):</span>
-                <strong>\( AC = \frac{TC}{Q} \)</strong>
+                <strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>C</mi><mo>=</mo><mfrac><mrow><mi>T</mi><mi>C</mi></mrow><mi>Q</mi></mfrac></mrow><annotation encoding="application/x-tex"> AC = \frac{TC}{Q} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.3534em;vertical-align:-0.4811em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8723em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">Q</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">TC</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4811em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></strong>
               </p>
               <p class="topic-definition">
                 <span class="key-definition">Average Fixed Cost (AFC):</span>
-                <strong>\( AFC = \frac{TFC}{Q} \)</strong>
+                <strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>F</mi><mi>C</mi><mo>=</mo><mfrac><mrow><mi>T</mi><mi>F</mi><mi>C</mi></mrow><mi>Q</mi></mfrac></mrow><annotation encoding="application/x-tex"> AFC = \frac{TFC}{Q} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.07153em;">FC</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.3534em;vertical-align:-0.4811em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8723em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">Q</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">TFC</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4811em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></strong>
               </p>
               <p class="topic-definition">
                 <span class="key-definition">Average Variable Cost (AVC):</span>
-                <strong>\( AVC = \frac{TVC}{Q} \)</strong>
+                <strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>V</mi><mi>C</mi><mo>=</mo><mfrac><mrow><mi>T</mi><mi>V</mi><mi>C</mi></mrow><mi>Q</mi></mfrac></mrow><annotation encoding="application/x-tex"> AVC = \frac{TVC}{Q} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.3534em;vertical-align:-0.4811em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8723em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">Q</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span><span class="mord mathnormal mtight" style="margin-right:0.22222em;">V</span><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4811em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></strong>
               </p>
               <p class="topic-definition">
                 <span class="key-definition">Marginal Cost (MC):</span>
-                <strong>\( \frac{\Delta TC}{\Delta Q} \)</strong>, which is the
+                <strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>T</mi><mi>C</mi></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>Q</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex"> \frac{\Delta TC}{\Delta Q} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.3534em;vertical-align:-0.4811em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8723em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">Δ</span><span class="mord mathnormal mtight">Q</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">Δ</span><span class="mord mathnormal mtight" style="margin-right:0.07153em;">TC</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4811em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></strong>, which is the
                 additional cost incurred when producing
                 <strong>one more unit</strong>.
               </p>
@@ -688,7 +661,7 @@
                 <p>
                   TC is TFC plus TVC, AC is TC divided by output, and MC is the
                   change in TC divided by the change in output - so between 30
-                  and 40 units MC is \( \frac{360 - 260}{40 - 30} = £10 \).
+                  and 40 units MC is <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>360</mn><mo>−</mo><mn>260</mn></mrow><mrow><mn>40</mn><mo>−</mo><mn>30</mn></mrow></mfrac><mo>=</mo><mi mathvariant="normal">£</mi><mn>10</mn></mrow><annotation encoding="application/x-tex"> \frac{360 - 260}{40 - 30} = £10 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2484em;vertical-align:-0.4033em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">40</span><span class="mbin mtight">−</span><span class="mord mtight">30</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">360</span><span class="mbin mtight">−</span><span class="mord mtight">260</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4033em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">£10</span></span></span></span>.
                   Notice that AC bottoms out at <strong>£8.67</strong> and then
                   rises: AC turns upward exactly where
                   <strong>MC rises above it</strong>.
@@ -767,11 +740,11 @@
             <section>
               <h2 id="the-relationship-between-mc-avc-and-ac">The Relationship Between MC, AVC, and AC</h2>
               <p>
-                When <strong>\( MC &lt; AVC \)</strong>, marginal cost pulls
+                When <strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>C</mi><mo>&lt;</mo><mi>A</mi><mi>V</mi><mi>C</mi></mrow><annotation encoding="application/x-tex"> MC &lt; AVC </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7224em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">MC</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span></strong>, marginal cost pulls
                 <strong>AVC down</strong>.
               </p>
               <p>
-                When <strong>\( MC > AVC \)</strong>, marginal cost pulls
+                When <strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>C</mi><mo>&gt;</mo><mi>A</mi><mi>V</mi><mi>C</mi></mrow><annotation encoding="application/x-tex"> MC &gt; AVC </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7224em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">MC</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span></strong>, marginal cost pulls
                 <strong>AVC up</strong>.
               </p>
               <p>

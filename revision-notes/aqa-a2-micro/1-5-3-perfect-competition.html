@@ -129,7 +129,6 @@
          request could not start until main.css had parsed. The fonts are
          self-hosted under /webfonts/ and declared in the stylesheets; the body
          face is preloaded here. See seo/09-web-vitals-baseline.md. -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link
       rel="preload"
       href="/webfonts/source-sans-pro-300.woff2"
@@ -154,33 +153,7 @@
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
-    <!-- MathJax Configuration -->
-    <script>
-      window.MathJax = {
-        tex: {
-          inlineMath: [
-            ["\\(", "\\)"],
-          ], // \(...\) only - the $...$ delimiter was removed, D23
-          displayMath: [
-            ["$$", "$$"],
-            ["\\[", "\\]"],
-          ],
-          processEscapes: true, // Allows \_ in text
-          autoload: {
-            color: [],
-            ams: ["boldsymbol"], // For \mathbf{}
-          },
-        },
-        options: {
-          skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
-        },
-      };
-    </script>
-    <script
-      id="MathJax-script"
-      async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-    ></script>
+    <link rel="stylesheet" href="/css/vendor/katex/katex.min.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -630,7 +603,7 @@
                 individual firm is <strong>perfectly elastic</strong>, so it is
                 horizontal.
               </p>
-              <p>This means <strong>\( P = MR = AR \)</strong>.</p>
+              <p>This means <strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mi>M</mi><mi>R</mi><mo>=</mo><mi>A</mi><mi>R</mi></mrow><annotation encoding="application/x-tex"> P = MR = AR </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">MR</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span></strong>.</p>
               <p>
                 The market price itself is determined by
                 <strong>market supply and demand</strong>.
@@ -660,7 +633,7 @@
             <section>
               <h2 id="short-run-equilibrium-profit-and-loss">Short-Run Equilibrium: Profit and Loss</h2>
               <p>
-                The firm maximises profit where <strong>\( MC = MR \)</strong>.
+                The firm maximises profit where <strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>C</mi><mo>=</mo><mi>M</mi><mi>R</mi></mrow><annotation encoding="application/x-tex"> MC = MR </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">MC</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">MR</span></span></span></span></strong>.
               </p>
 
               <h3>Short run, Supernormal Profit</h3>
@@ -716,7 +689,7 @@
                 Because there is <strong>freedom of entry and exit</strong>,
                 perfect competition moves to a long-run equilibrium where firms
                 earn only <strong>normal profit</strong>, so
-                <strong>\( AR = AC \)</strong>.
+                <strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>R</mi><mo>=</mo><mi>A</mi><mi>C</mi></mrow><annotation encoding="application/x-tex"> AR = AC </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span></strong>.
               </p>
 
               <h3>From Short-Run Supernormal Profit to Long-Run Equilibrium</h3>
@@ -733,7 +706,7 @@
                   <strong>tangent to the minimum point of the AC curve</strong>.
                 </li>
                 <li>
-                  At this point, <strong>\( P = AR = AC = MC \)</strong> and
+                  At this point, <strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mi>A</mi><mi>R</mi><mo>=</mo><mi>A</mi><mi>C</mi><mo>=</mo><mi>M</mi><mi>C</mi></mrow><annotation encoding="application/x-tex"> P = AR = AC = MC </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">MC</span></span></span></span></strong> and
                   firms earn normal profit.
                 </li>
               </ul>
@@ -757,7 +730,7 @@
                   profit to long-run equilibrium in perfect competition. The
                   firm's demand curve shifts down as new firms enter,
                   eliminating supernormal profit and reaching the long-run
-                  equilibrium where \( P = AR = AC = MC \).
+                  equilibrium where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mi>A</mi><mi>R</mi><mo>=</mo><mi>A</mi><mi>C</mi><mo>=</mo><mi>M</mi><mi>C</mi></mrow><annotation encoding="application/x-tex"> P = AR = AC = MC </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">MC</span></span></span></span>.
                 </figcaption>
               </figure>
 
@@ -772,7 +745,7 @@
                   <strong>tangent to the minimum point of the AC curve</strong>.
                 </li>
                 <li>
-                  At this point, <strong>\( P = AR = AC = MC \)</strong> and
+                  At this point, <strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mi>A</mi><mi>R</mi><mo>=</mo><mi>A</mi><mi>C</mi><mo>=</mo><mi>M</mi><mi>C</mi></mrow><annotation encoding="application/x-tex"> P = AR = AC = MC </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">MC</span></span></span></span></strong> and
                   firms earn normal profit.
                 </li>
               </ul>
@@ -795,7 +768,7 @@
                   Figure 5: The adjustment process from short-run loss to
                   long-run equilibrium in perfect competition. The firm's demand
                   curve shifts up as firms exit, eliminating losses and reaching
-                  the long-run equilibrium where \( P = AR = AC = MC \).
+                  the long-run equilibrium where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mi>A</mi><mi>R</mi><mo>=</mo><mi>A</mi><mi>C</mi><mo>=</mo><mi>M</mi><mi>C</mi></mrow><annotation encoding="application/x-tex"> P = AR = AC = MC </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">MC</span></span></span></span>.
                 </figcaption>
               </figure>
             </section>
@@ -805,7 +778,7 @@
               <p class="topic-definition">
                 <span class="key-definition">Productive efficiency:</span> Yes -
                 Firms in perfect competition produce at the minimum point of the
-                average cost curve, where \( AC = MC \).
+                average cost curve, where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>C</mi><mo>=</mo><mi>M</mi><mi>C</mi></mrow><annotation encoding="application/x-tex"> AC = MC </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">MC</span></span></span></span>.
               </p>
               <p class="topic-definition">
                 <span class="key-definition"
@@ -814,7 +787,7 @@
                     >Allocative efficiency</a
                   >:</span
                 >
-                Yes - Firms in perfect competition produce where \( MC = AR \),
+                Yes - Firms in perfect competition produce where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>C</mi><mo>=</mo><mi>A</mi><mi>R</mi></mrow><annotation encoding="application/x-tex"> MC = AR </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">MC</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>,
                 ensuring that resources are allocated efficiently.
               </p>
               <p class="topic-definition">

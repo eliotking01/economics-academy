@@ -55,8 +55,11 @@ not describe the glossary as word-for-word without that qualification.
 Formulae are **KaTeX pre-rendered to static HTML at build time**, CSS and woff2
 self-hosted in `css/vendor/katex/`. Every emitted KaTeX block needs
 `<!-- prettier-ignore -->` before it or Prettier reflows it and the build stops
-being idempotent. The notes pages still use MathJax 3, so the same formula looks
-slightly different in the two places.
+being idempotent. Since 2026-11-27 the notes pages pre-render with the same
+KaTeX call (`scripts/katex_render.py`), so a formula looks the same in both
+places; `extract_glossary.py` reads the notes back to their TeX through
+`katex_render.to_tex()` before extracting, which is why `terms.json` did not
+change when they were converted.
 
 The full glossary is real HTML in the page, not fetched — it must be readable
 with JavaScript off. `js/components/glossary-filter.js` only enhances.

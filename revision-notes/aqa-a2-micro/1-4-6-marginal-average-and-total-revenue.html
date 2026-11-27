@@ -129,7 +129,6 @@
          request could not start until main.css had parsed. The fonts are
          self-hosted under /webfonts/ and declared in the stylesheets; the body
          face is preloaded here. See seo/09-web-vitals-baseline.md. -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link
       rel="preload"
       href="/webfonts/source-sans-pro-300.woff2"
@@ -154,33 +153,7 @@
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
-    <!-- MathJax Configuration -->
-    <script>
-      window.MathJax = {
-        tex: {
-          inlineMath: [
-            ["\\(", "\\)"],
-          ], // \(...\) only - the $...$ delimiter was removed, D23
-          displayMath: [
-            ["$$", "$$"],
-            ["\\[", "\\]"],
-          ],
-          processEscapes: true, // Allows \_ in text
-          autoload: {
-            color: [],
-            ams: ["boldsymbol"], // For \mathbf{}
-          },
-        },
-        options: {
-          skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
-        },
-      };
-    </script>
-    <script
-      id="MathJax-script"
-      async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-    ></script>
+    <link rel="stylesheet" href="/css/vendor/katex/katex.min.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -595,17 +568,17 @@
               <h2 id="key-definitions">Key Definitions</h2>
               <p class="topic-definition">
                 <span class="key-definition">Total Revenue (TR):</span>
-                <strong>\( P \times Q \)</strong>
+                <strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>×</mo><mi>Q</mi></mrow><annotation encoding="application/x-tex"> P \times Q </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">Q</span></span></span></span></strong>
               </p>
               <p class="topic-definition">
                 <span class="key-definition">Average Revenue (AR):</span>
-                <strong>\( \frac{TR}{Q} \)</strong>. This is the
+                <strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>T</mi><mi>R</mi></mrow><mi>Q</mi></mfrac></mrow><annotation encoding="application/x-tex"> \frac{TR}{Q} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.3534em;vertical-align:-0.4811em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8723em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">Q</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.00773em;">TR</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4811em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></strong>. This is the
                 <strong>price per unit</strong> and also the firm's
                 <strong>demand curve</strong>.
               </p>
               <p class="topic-definition">
                 <span class="key-definition">Marginal Revenue (MR):</span>
-                <strong>\( \frac{\Delta TR}{\Delta Q} \)</strong>. This is the
+                <strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>T</mi><mi>R</mi></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>Q</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex"> \frac{\Delta TR}{\Delta Q} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.3534em;vertical-align:-0.4811em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8723em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">Δ</span><span class="mord mathnormal mtight">Q</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">Δ</span><span class="mord mathnormal mtight" style="margin-right:0.00773em;">TR</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4811em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></strong>. This is the
                 <strong>additional revenue</strong> from selling one more unit.
               </p>
             </section>
@@ -622,7 +595,7 @@
                 <strong>market price</strong>.
               </p>
               <p>
-                This means <strong>\( AR = MR = Price \)</strong>, and the
+                This means <strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>R</mi><mo>=</mo><mi>M</mi><mi>R</mi><mo>=</mo><mi>P</mi><mi>r</mi><mi>i</mi><mi>c</mi><mi>e</mi></mrow><annotation encoding="application/x-tex"> AR = MR = Price </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">MR</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">i</span><span class="mord mathnormal">ce</span></span></span></span></strong>, and the
                 demand curve facing the firm is
                 <strong>perfectly elastic</strong>, so it is horizontal.
               </p>
@@ -687,7 +660,7 @@
                 A key point is that in a linear diagram the
                 <strong>MR curve is twice as steep as the AR curve</strong>. The
                 right hand diagram shows that total revenue is maximised when
-                <strong>\( MR = 0 \)</strong>.
+                <strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>R</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex"> MR = 0 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">MR</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></strong>.
               </p>
 
               <div class="worked-example">

@@ -368,3 +368,50 @@ past-paper tags step and in `/verify`. Measured at gzip level 6 on the
 branch: master 251 KB, board 126, section 70, topic 11, section HTML 112 -
 all inside their ceilings. A ceiling lowered below the largest topic file
 fails and names every file over it.
+
+## B3. MathJax to pre-rendered KaTeX on the notes (item 4, 2026-11-27)
+
+Approved by Eliot after the five-page review (the "KaTeX Formula Review"
+artifact: 71 formulae, 134 block pairs, phone and desktop).
+
+**What changed.** `build_notes_pages.py` renders every formula on the 78
+pages in one node run of the vendored KaTeX 0.16.11, through
+`scripts/katex_render.py`, now the one call the glossary, flashcards and
+notes share. The pages carry finished HTML and MathML, link
+`/css/vendor/katex/katex.min.css`, and no longer load MathJax or connect to
+cdn.jsdelivr.net - the site's last third-party origin. The notes-data
+slices keep their TeX; only the output changed. Sizing in
+`revision-notes-topic.css` reproduces MathJax's x-height matching, measured
+on all 295 formulae: 1.257em in Merriweather, 1.1em in Source Sans Pro.
+
+**How it was proved to change no wording and no glossary entry.**
+
+- `katex_render.to_tex()` reads a rendered formula back to `\(TeX\)` /
+  `\[TeX\]` from its own TeX annotation. `extract_glossary.parse()` reads
+  the notes through it: **`glossary-data/terms.json` is byte-identical**
+  after re-extraction (with the inverse switched off it loses 1,405 lines).
+- `verify_text_integrity.py` compares formulae as TeX: **0 visible-text
+  differences across 279 pages**; changing one character of one formula's
+  TeX is caught.
+- The rendered markup on the five review pages is identical to the
+  prototype Eliot approved (71 of 71 formulae), and the computed sizes match
+  in the real build. With JavaScript off, every formula renders.
+
+**Checks updated:** `verify_page_shell.py` check 5 (KaTeX stylesheet iff
+rendered maths, no raw delimiter, no jsDelivr; MathJax is now a zero
+tripwire; the notes-topic stylesheet-set pin reseeded 1 -> 2);
+`verify_inline_styles.py` pins the 78 pages' KaTeX offsets (3,380).
+`page_shell.render_head()` still has its MathJax branch, now unused; removing
+it means reworking page_shell's selftest, so it is left for a follow-up.
+
+**Local Lighthouse, notes-topic, 5 runs, before -> after:** TBT 151 -> **0 ms**;
+weight 552 -> **347 KB** (the Edexcel B MathJax page 515 -> 309 KB, TBT 144 ->
+0); CLS unchanged at 0.002. Simulated FCP/LCP median **+150 ms** (LCP 2.25 ->
+2.40 s), one round trip. Traced: it is not the extra stylesheet (folding
+`katex.min.css` into the notes sheet left the median at 2.40 s), and not the
+HTML (+0.3 to +1.7 KB gzip). The browser's own observed first paint is
+unchanged (median 71 -> 79 ms, folded 73 ms, inside noise). The simulator
+places KaTeX's two fonts, discovered early from the stylesheet, before first
+paint; MathJax's fonts were only requested after its script ran, after first
+paint, so they never counted. Kept as built; the live re-run after deploy is
+the check that matters.

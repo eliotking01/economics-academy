@@ -121,6 +121,10 @@ pages = site_layout.pages
 #   notes-topic: 4 head shapes until 2026-08-13, 3 after PH08-039's MathJax
 #     convergence, 2 after PH08-042 moved 1-5-1's <style> block out. Declared
 #     here AND at check 5 on purpose - measured by different code.
+#     Still 2 heads after 2026-11-27, but now KaTeX-stylesheet / no-maths
+#     rather than MathJax / no-MathJax; css sets 1 -> 2 the same day, because
+#     the 78 pages with maths link /css/vendor/katex/katex.min.css after
+#     revision-notes-topic.css (seo/23 Phase B).
 #   mcq-hub: 2 head shapes until 2026-08-23, 1 after the hub redesign removed
 #     the <noscript><style> block from the six board index pages.
 #
@@ -128,7 +132,7 @@ pages = site_layout.pages
 # --reseed rewrites it wholesale.
 EXPECTED_SHAPES = {
     "root":          (9, 9, 2, 9),
-    "notes-topic":   (2, 1, 1, 1),
+    "notes-topic":   (2, 1, 1, 2),
     "notes-hub":     (3, 2, 1, 2),
     "notes-other":   (2, 3, 2, 2),
     "past-papers":   (2, 2, 1, 2),
@@ -456,21 +460,29 @@ UNGATED_GTAG = re.compile(
 # and prints the split. The ZERO labels are invariants, tripwires for a shape
 # coming back: the <style> block (the live example above) and MathJax without
 # an id (PH08-039). Either going above 0 fails.
-NOTES_HEAD_LABELS_LIVE = ("mathjax with id", "no mathjax")
-NOTES_HEAD_LABELS_ZERO = ("mathjax with id + a <style> block",
-                          "mathjax without id")
+#
+# AND SINCE 2026-11-27 (health check, seo/23 Phase B) the maths is pre-rendered
+# KaTeX and no page loads MathJax at all. The two live labels became "katex
+# stylesheet" and "no maths"; MathJax in any form joined the zero tripwires,
+# beside the <style> block, so a MathJax script coming back fails here.
+NOTES_HEAD_LABELS_LIVE = ("katex stylesheet", "no maths")
+NOTES_HEAD_LABELS_ZERO = ("a <style> block", "mathjax")
 
-# Since the performance pass of 2026-08-23 the split between the two live
-# labels is not a free cardinality either: build_notes_pages.py loads MathJax
-# if and only if the body contains one of the three delimiters the config
-# typesets, and this is the independent restatement of that rule. The
-# pattern is written out here rather than imported from the generator for the
-# same reason check 2 restates the script tail - a check that imports the
-# thing it is checking agrees with any value. A page loading MathJax with no
-# maths wastes ~300 KB of third-party script; a page with maths and no
-# MathJax shows raw TeX. Both fail. The preconnect to the CDN goes with the
-# script: present on exactly the pages that load it.
+# The split between the two live labels is not a free cardinality either:
+# build_notes_pages.py links KaTeX's stylesheet if and only if the page has
+# maths, which it has rendered. This is the independent restatement: the
+# stylesheet iff a rendered `class="katex"` in the body, and NO maths
+# delimiter left in any body outside script/style/noscript/textarea/pre - a
+# leftover would show the reader raw TeX now that nothing typesets it in the
+# browser. The pattern is written out here rather than imported from the
+# generator for the same reason check 2 restates the script tail - a check
+# that imports the thing it is checking agrees with any value. And no notes
+# head connects to cdn.jsdelivr.net, MathJax's CDN and the site's last
+# third-party origin, any more.
 MATHS_DELIMITER = re.compile(r"\\\(|\\\[|\$\$")
+MATHS_SKIP_BLOCK = re.compile(r"<(script|style|noscript|textarea|pre)\b.*?</\1>",
+                              re.S | re.I)
+KATEX_CSS = "/css/vendor/katex/katex.min.css"
 MATHJAX_ORIGIN = "https://cdn.jsdelivr.net"
 
 # The content spine is the ordered list of direct children of
@@ -1029,22 +1041,20 @@ def main() -> int:
              f"loads only after consent)")
 
     # ---------------------------------------------------------- check 5
-    r.section("\n=== 5. notes-topic: the four <head> shapes ===")
+    r.section("\n=== 5. notes-topic: the <head> shapes and the maths ===")
     nt = sorted(fam["notes-topic"])
     labels = collections.Counter()
     for p in nt:
         s = parsed[p]
-        has_mj = any("mathjax" in t.lower() for t in s.head)
-        with_id = any("mathjax" in t.lower() and "#MathJax-script" in t
-                      for t in s.head)
-        if not has_mj:
-            labels["no mathjax"] += 1
-        elif not with_id:
-            labels["mathjax without id"] += 1
+        head_src = src[p].split("</head>", 1)[0]
+        if "mathjax" in head_src.lower():
+            labels["mathjax"] += 1
         elif s.head_style_blocks:
-            labels["mathjax with id + a <style> block"] += 1
+            labels["a <style> block"] += 1
+        elif KATEX_CSS in head_src:
+            labels["katex stylesheet"] += 1
         else:
-            labels["mathjax with id"] += 1
+            labels["no maths"] += 1
     if args.show:
         print("   ", dict(labels))
     # The zero labels are tripwires for a shape coming BACK - the <style>
@@ -1068,36 +1078,43 @@ def main() -> int:
         split = ", ".join(f"{labels.get(l, 0)} {l}" for l in NOTES_HEAD_LABELS_LIVE)
         r.ok(f"{'live labels':36} {live_total:4} pages = all of them ({split})")
 
-    # MathJax if and only if the body has maths, and the CDN preconnect if and
-    # only if MathJax. Decided from the SOURCE, head against body, not from the
-    # parsed token lists: the delimiters are text, which the tokens drop.
-    unneeded, missing, pc_bad = [], [], []
+    # KaTeX's stylesheet if and only if the body carries rendered maths; no
+    # raw delimiter anywhere; no MathJax CDN. Decided from the SOURCE, head
+    # against body, not from the parsed token lists: the delimiters are text,
+    # which the tokens drop.
+    unneeded, missing, raw, cdn = [], [], [], []
     for p in nt:
         head_src, body_src = src[p].split("</head>", 1)
-        has_mj = "mathjax" in head_src.lower()
-        has_maths = bool(MATHS_DELIMITER.search(body_src))
-        has_pc = f'rel="preconnect" href="{MATHJAX_ORIGIN}"' in head_src
-        if has_mj and not has_maths:
+        has_css = KATEX_CSS in head_src
+        has_katex = 'class="katex' in body_src
+        if has_css and not has_katex:
             unneeded.append(p)
-        elif has_maths and not has_mj:
+        elif has_katex and not has_css:
             missing.append(p)
-        if has_pc != has_mj:
-            pc_bad.append(p)
+        if MATHS_DELIMITER.search(MATHS_SKIP_BLOCK.sub("", body_src)):
+            raw.append(p)
+        if MATHJAX_ORIGIN in head_src:
+            cdn.append(p)
     if unneeded:
-        r.bad(f"{len(unneeded)} notes-topic page(s) load MathJax with no maths "
-              f"in the body", *unneeded[:8],
+        r.bad(f"{len(unneeded)} notes-topic page(s) link KaTeX's stylesheet "
+              f"with no rendered maths", *unneeded[:8],
               "build_notes_pages.py decides from the body; rebuild.")
     if missing:
-        r.bad(f"{len(missing)} notes-topic page(s) contain maths and do not "
-              f"load MathJax", *missing[:8],
+        r.bad(f"{len(missing)} notes-topic page(s) carry rendered maths "
+              f"without KaTeX's stylesheet", *missing[:8],
               "build_notes_pages.py decides from the body; rebuild.")
-    if pc_bad:
-        r.bad(f"{len(pc_bad)} notes-topic page(s) have the cdn.jsdelivr.net "
-              f"preconnect without MathJax, or MathJax without it", *pc_bad[:8])
-    if not (unneeded or missing or pc_bad):
-        n_mj = sum(1 for p in nt if "mathjax" in src[p].split("</head>", 1)[0].lower())
-        r.ok(f"{'mathjax iff maths in body':36} {n_mj:4} pages load it, "
-             f"{len(nt) - n_mj} do not, 0 mismatches; CDN preconnect on the {n_mj}")
+    if raw:
+        r.bad(f"{len(raw)} notes-topic page(s) still show raw TeX between "
+              f"maths delimiters", *raw[:8],
+              "Nothing typesets in the browser any more; rebuild with "
+              "build_notes_pages.py, which renders every formula.")
+    if cdn:
+        r.bad(f"{len(cdn)} notes-topic page(s) still reference cdn.jsdelivr.net",
+              *cdn[:8])
+    if not (unneeded or missing or raw or cdn):
+        n_k = sum(1 for p in nt if KATEX_CSS in src[p].split("</head>", 1)[0])
+        r.ok(f"{'katex stylesheet iff rendered maths':36} {n_k:4} pages, "
+             f"{len(nt) - n_k} without; 0 raw delimiters, 0 jsDelivr")
 
     # ---------------------------------------------------------- check 6
     r.section("\n=== 6. notes-topic: the content spine ===")

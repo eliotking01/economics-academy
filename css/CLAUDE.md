@@ -13,8 +13,10 @@ notes sheet `revision-notes-topic.css` plus `revision-notes-diagrams.css`
   is the exemplar.
 - **`main.css` must be linked before every page stylesheet.** Enforced.
 - **No inline `style` attributes.** 0 authored ones remain and
-  `verify_inline_styles.py` holds it there. The ~1,187 in a grep are KaTeX build
-  output on 7 pages and must never be touched.
+  `verify_inline_styles.py` holds it there. Every other inline style in a grep is
+  KaTeX build output (glossaries, flashcards and, since 2026-11-27, the notes
+  pages with maths - `verify_inline_styles.py` pins which and how many) and
+  must never be touched.
   **Extracting an inline style is not a rename:** an inline style outranks every
   class selector, so the class can lose to a rule the attribute was beating. Two
   real cases here were a `(0,1,1)` `section > :last-child` reset and a `(1,2,1)`

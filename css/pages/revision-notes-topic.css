@@ -600,12 +600,28 @@
   color: var(--nt-navy);
 }
 
-/* Display maths written inside a <p>, outside any formula-box, had no
-   scroll container: on a 390px phone a long formula ran off the screen
-   (1.6.2's contribution formula was the case found, 2026-10-18). It now
-   scrolls sideways like a table. The small vertical padding keeps
-   overflow-y: hidden from clipping a fraction's descenders. */
-.revision-notes-content mjx-container[display="true"] {
+/* Maths is pre-rendered KaTeX since 2026-11-27 (seo/23 Phase B), with
+   katex.min.css linked after this sheet. MathJax used to scale every formula
+   to the x-height of the text around it; measured on all 295 formulae in the
+   78 pages, that came to exactly two sizes, which these reproduce: 1.257em in
+   Merriweather (prose, formula boxes, worked examples) and 1.1em in Source
+   Sans Pro (table cells, figure captions). KaTeX's own default is 1.21em. */
+.revision-notes-content .katex {
+  font-size: 1.257em;
+}
+
+.revision-notes-content td .katex,
+.revision-notes-content th .katex,
+.revision-notes-content figcaption .katex {
+  font-size: 1.1em;
+}
+
+/* Display maths scrolls sideways inside its own box rather than widening
+   the page: on a 390px phone a long formula used to run off the screen
+   (1.6.2's contribution formula was the case found, 2026-10-18). The small
+   vertical padding keeps overflow-y: hidden from clipping a fraction's
+   descenders. */
+.revision-notes-content .katex-display {
   overflow-x: auto;
   overflow-y: hidden;
   padding: 0.1em 0;

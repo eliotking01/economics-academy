@@ -21,8 +21,9 @@ headings: listing every term twice under two orderings would double the page
 and give each term two anchors.
 
 Formulae are pre-rendered with KaTeX at build time, so the published pages carry
-no maths JavaScript. The notes pages still use MathJax, so the same formula
-looks slightly different in the two places - recorded in _archive/ROADMAP.md.
+no maths JavaScript. Since 2026-11-27 the notes pages pre-render theirs the
+same way (katex_render.py, one shared call), so a formula looks the same in
+both places.
 
 Standard library only, plus node for KaTeX and npx for Prettier. Neither is
 needed to view the site.
@@ -36,19 +37,18 @@ import html
 import json
 import pathlib
 import re
-import subprocess
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 import board_data  # noqa: E402
+import katex_render  # noqa: E402
 # Wave 2 Phase 6. page_shell.py owns the <head> for every family now.
 import page_shell as shell  # noqa: E402
 import prettier_util  # noqa: E402
 DATA = ROOT / "glossary-data" / "terms.json"
 TAXONOMY = ROOT / "past-paper-questions-data" / "taxonomy.json"
 OUT_DIR = ROOT / "revision-notes" / "glossary"
-KATEX_JS = ROOT / "scripts" / "vendor" / "katex.min.js"
 
 SITE = "https://economicsacademy.co.uk"
 GTAG = "G-YVCNRW4QH6"
@@ -393,35 +393,12 @@ def render_inline_maths(definition: str, inline_map, display_map=None) -> str:
 
 
 def _katex(latex_list, display):
-    if not latex_list:
-        return []
-    script = (
-        'const katex=require(process.argv[1]);'
-        'const display=process.argv[2]==="1";'
-        'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{'
-        'try{'
-        'const out=JSON.parse(s).map(t=>katex.renderToString(t,'
-        '{displayMode:display,throwOnError:true,strict:false}));'
-        'process.stdout.write(JSON.stringify({ok:true,html:out}));'
-        '}catch(err){'
-        'process.stdout.write(JSON.stringify({ok:false,error:String(err.message||err)}));'
-        '}});'
-    )
+    # The one call lives in katex_render.py since 2026-11-27, shared with the
+    # flashcards and the notes pages; this keeps the glossary's error type.
     try:
-        r = subprocess.run(
-            ["node", "-e", script, str(KATEX_JS), "1" if display else "0"],
-            input=json.dumps(latex_list), capture_output=True,
-            text=True, check=True, cwd=ROOT,
-        )
-    except (OSError, subprocess.CalledProcessError) as exc:
-        raise BuildError(
-            f"could not run node to pre-render formulae: {exc}. "
-            f"node is needed at build time only; see scripts/vendor/README.md"
-        ) from None
-    out = json.loads(r.stdout)
-    if not out["ok"]:
-        raise BuildError(f"KaTeX could not render a formula: {out['error']}")
-    return out["html"]
+        return katex_render.render([(t, display) for t in latex_list])
+    except katex_render.KatexError as exc:
+        raise BuildError(str(exc)) from None
 
 
 def slug_ok(s: str) -> bool:

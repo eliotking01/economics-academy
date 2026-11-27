@@ -109,6 +109,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 # the same import verify_liquid.py and verify_css_load_order.py use, so all
 # three agree with the sitemap about what Jekyll actually builds.
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import katex_render  # noqa: E402
 import site_layout  # noqa: E402  - the publish rules
 
 SKIP = {"script", "style"}
@@ -147,6 +148,13 @@ class TextExtractor(HTMLParser):
 
 
 def extract(source):
+    # A formula is compared as the TeX it was written in. Since 2026-11-27 the
+    # notes pages carry pre-rendered KaTeX, whose visible text (glyph spans
+    # and hidden MathML) is not the TeX MathJax showed before typesetting;
+    # reading it back through its own annotation makes a pure conversion
+    # report no wording change - which is the proof that it moved none -
+    # while any changed formula still shows as one.
+    source = katex_render.to_tex(source)
     p = TextExtractor()
     p.feed(source)
     p.close()

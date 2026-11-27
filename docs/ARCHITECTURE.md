@@ -65,12 +65,12 @@ the baked header and footer blocks. Add it to the sitemap by running
 `bake_templates.py`'s `EXPECTED` count in the same commit or that script refuses
 to run.
 
-Topic pages carry two JSON-LD blocks — `LearningResource` and `BreadcrumbList` —
-and load MathJax 3 from jsDelivr if and only if the body contains one of
-`\( … \)`, `\[ … \]` or `$$ … $$` — decided by `build_notes_pages.py` from a
-body scan (since 2026-08-23; the record used to carry the flag), asserted by
-`verify_page_shell.py` check 5, with a `cdn.jsdelivr.net` preconnect on
-exactly those pages.
+Topic pages carry two JSON-LD blocks — `LearningResource` and `BreadcrumbList`.
+Maths written between `\( … \)` or `\[ … \]` in the notes-data slice is
+**pre-rendered to KaTeX HTML at build time** by `build_notes_pages.py` (since
+2026-11-27; MathJax 3 from jsDelivr before that), and exactly those pages link
+`/css/vendor/katex/katex.min.css` — asserted by `verify_page_shell.py` check 5,
+which also fails on any raw delimiter left in a page.
 
 ## Board identity is recorded once
 
