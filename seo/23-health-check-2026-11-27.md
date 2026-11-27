@@ -257,3 +257,50 @@ other section's questions on every section page.
 The master search page is the opposite shape: light HTML (7 KB served) and
 the heaviest single fetch in the bank (258 KB served, 1.49 MB to parse),
 because it has no static list and searches every board.
+
+---
+
+# Phase B
+
+## B1. The layout-shift fixes (2026-11-27)
+
+Approved by Eliot at Gate A. Diagnosed with a DevTools-protocol script
+(PerformanceObserver `layout-shift` sources, 412 px, throttled to 1.6 Mbps
+so a font swap lands after first paint), then confirmed with
+`run_lighthouse.py` against `serve_h2.js`: the committed tree (`fa7bfbc1`)
+on one port, the working tree on another, same Chrome 158.
+
+**Three causes, three changes:**
+
+| Shift | Cause | Change |
+| --- | --- | --- |
+| ~0.045, every page | `nav.js` lifts the baked "Menu" row out of the flow at DOMContentLoaded; `<main>` moves up ~50 px | `css/main.css`: under `(max-width: 767px) and (scripting: enabled)`, the row is out of the flow from the first paint. JS off (`scripting: none`) is untouched |
+| +0.07, the glossaries | `glossary-filter.js` un-hides the `hidden` search form; the A to Z and formulae move down | `css/pages/glossary.css`: under `(scripting: enabled)`, the form shows from the first paint. JS off still never sees it |
+| 0.13, `/revision-notes/` | The 400 (`<strong>`) and 700 (h1) cuts arrive after first paint; the swap moves words between lines of the intro | `scripts/page_shell.py` `HERO_FONTS`: 400 and 700 preloaded beside the body face, all 812 pages |
+
+**Tried and rejected:** a fallback face per weight (real Arial Bold for
+600-900, each `size-adjust` measured with canvas `measureText` over three
+pages' `<main>` text). Measured across nine pages at 412 and 360 px it was
+no better on balance - the hub stayed 0.12-0.13 and others moved either
+way - because size-adjust matches average advance width, not where a given
+line breaks. Only having the cut at first paint is reliable.
+
+**Local Lighthouse, 3 runs, before → after:**
+
+| Page | Score | LCP | CLS | TBT |
+| --- | --- | --- | --- | --- |
+| homepage | 99 → 100 | 1.50 → 1.50 s | 0.049 → 0.001 | 0 → 0 |
+| `/revision-notes/` | 88 → 100 | 1.50 → 1.50 s | 0.232 → 0.001 | 0 → 0 |
+| Edexcel B glossary | 83 → 99 | 2.14 → 1.99 s | 0.273 → 0.003 | 0 → 0 |
+| tutoring | 97 → 99 | 2.25 → 1.91 s | 0.069 → 0.001 | 0 → 0 |
+
+The notes topic and AQA micro looked slower in the 3-run pass (1.21 → 2.25
+s, 1.80 → 2.10 s). Removing each change in turn did not move them, and a
+**5-run** re-measure gives identical medians: notes 2.25 / 2.25 s, AQA micro
+1.95 / 1.95 s, CLS 0.048 → 0.002 and 0.049 → 0.001. The "before" set had two
+fast runs (1.2 s, 1.8 s) the "after" set did not; five runs cannot say
+whether that is chance. The live re-run after deploy is the check.
+
+**Trade-off, stated in the CSS:** if `nav.js` fails to load with
+JavaScript on, the phone menu stays hidden; the desktop bar and footer
+links are unaffected.

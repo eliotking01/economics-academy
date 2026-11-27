@@ -3352,6 +3352,29 @@ ul.divided li:first-child {
   }
 }
 
+/* The first paint, when JavaScript is on but nav.js has not run yet
+   (2026-11-27, health check). Without this the baked "Menu" row paints in
+   the page flow and nav.js then lifts it into the fixed drawer, so all of
+   <main> jumps up ~50px at DOMContentLoaded: CLS ~0.045 on every page under
+   Chrome 158, 0.254 on the glossaries where their own enhancement lands in
+   the same frame (seo/23 §1). Taking the block out of the flow from the
+   first paint leaves nothing to move. JavaScript off reports
+   `scripting: none`, so the no-JS menu is untouched; a browser that does
+   not know the feature ignores the block and behaves as before. The
+   trade-off: if nav.js itself fails to load with JavaScript on, the phone
+   menu stays hidden (the desktop bar and the footer links are unaffected). */
+@media screen and (max-width: 767px) and (scripting: enabled) {
+  body:not(.mnav-enhanced) #mobileNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: min(320px, 88vw);
+    margin: 0;
+    transform: translateX(-105%);
+    visibility: hidden;
+  }
+}
+
 /* The mobile nav block exists in every page's markup; at desktop widths the
    #nav bar above it is the navigation and this must not render. */
 @media screen and (min-width: 768px) {
