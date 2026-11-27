@@ -53,6 +53,15 @@ PAGES = [
     # before/after across them stays comparable with every earlier run.
     ("ppq-board-hub", "/past-paper-questions/edexcel/"),
     ("tutoring", "/tutoring.html"),
+    # Added 2026-11-27 for the health check: the four heaviest page types the
+    # November launches created. Appended, so the eight above stay comparable
+    # with every earlier run. The Edexcel B topic is a MathJax page on
+    # purpose - a second sample of the loading pattern Phase B would remove.
+    ("ppq-aqa-micro", "/past-paper-questions/aqa/microeconomics/"),
+    ("ppq-edexcel-theme-2", "/past-paper-questions/edexcel/theme-2/"),
+    ("glossary-edexcel-b", "/revision-notes/glossary/edexcel-b/"),
+    ("notes-edexcel-b",
+     "/revision-notes/edexcel-b-theme-2/2-2-1-price-elasticity-of-demand.html"),
 ]
 
 # Lighthouse 12 defaults to mobile form factor and simulated throttling, but
@@ -104,6 +113,8 @@ def summarise(report: dict) -> dict:
     # Transfer size of everything the page pulled, and the render-blocking list.
     total = audits.get("total-byte-weight", {}).get("numericValue")
     row["bytes"] = total
+    # Element count (added 2026-11-27): the November bank pages carry ~11,000.
+    row["dom"] = audits.get("dom-size", {}).get("numericValue")
     blocking = audits.get("render-blocking-resources", {})
     row["blocking_ms"] = blocking.get("numericValue")
     row["blocking"] = [
@@ -157,7 +168,7 @@ def main() -> int:
         if not rows:
             continue
         med: dict = {"url": path, "runs": len(rows)}
-        for key in ("score", "LCP", "CLS", "TBT", "FCP", "SI", "bytes",
+        for key in ("score", "LCP", "CLS", "TBT", "FCP", "SI", "bytes", "dom",
                     "blocking_ms", "chain_len", "chain_ms"):
             vals = [r[key] for r in rows if r.get(key) is not None]
             med[key] = statistics.median(vals) if vals else None

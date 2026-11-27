@@ -111,6 +111,17 @@ class HeadValueTests(unittest.TestCase):
         self.assertLess(head.index("fontawesome-all"), head.index("/css/main.css"))
         self.assertLess(head.index("https://cdn.example"), head.index(ps.BODY_FONT))
 
+    def test_render_head_preloads_the_hero_fonts(self):
+        # Health check, 2026-11-27: the 400 and 700 cuts are preloaded after
+        # the body face and before any stylesheet, each exactly once, so a
+        # font swap cannot re-wrap the first screen (seo/23 Phase B).
+        head = ps.render_head(ps.head_values("T", "D", "https://economicsacademy.co.uk/p/", []))
+        self.assertEqual(len(ps.HERO_FONTS), 2)
+        for href in ps.HERO_FONTS:
+            self.assertEqual(head.count(href), 1)
+            self.assertLess(head.index(ps.BODY_FONT), head.index(href))
+            self.assertLess(head.index(href), head.index("fontawesome-all"))
+
     def test_tag_wraps_at_print_width(self):
         short = ps.tag("meta", [("name", "x"), ("content", "y")])
         self.assertEqual(short, '    <meta name="x" content="y" />')

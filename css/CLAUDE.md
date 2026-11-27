@@ -56,7 +56,9 @@ reintroduce a third family. The two `… Fallback`
 `size-adjust` faces in `main.css` still match — same files, same metrics. No
 page may link `fonts.googleapis.com` or `fonts.gstatic.com`
 (`verify_css_load_order.py` holds it at 0/463) and every head preloads the
-body face, `page_shell.BODY_FONT`. Do not swap Source Sans Pro for Source
+body face, `page_shell.BODY_FONT`, and the 400 and 700 cuts the first screen
+uses, `page_shell.HERO_FONTS` (2026-11-27: their swap re-wrapped the
+`/revision-notes/` intro, CLS 0.13 - `seo/23` Phase B). Do not swap Source Sans Pro for Source
 Sans 3: it is a visual change and needs approval. Adding a weight means
 adding the file and the `@font-face`, not a Google link.
 

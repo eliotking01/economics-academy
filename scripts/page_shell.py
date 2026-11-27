@@ -231,6 +231,18 @@ HOIST_COMMENT = '''    <!-- Linked here rather than @imported from main.css: an 
 
 BODY_FONT = "/webfonts/source-sans-pro-300.woff2"
 
+# The two cuts the first screen sets in besides the body face: 400 (<strong>
+# runs in intros) and 700 (h1/h2). Preloaded since 2026-11-27 (health check,
+# seo/23 §1): left to @font-face discovery they arrived after first paint,
+# and the swap re-wrapped the /revision-notes/ intro, CLS 0.13. A metric-
+# matched fallback cannot prevent that - it matches average width, not every
+# line break - so the cut has to be there at first paint. ~29 KB, fetched
+# by every page anyway; measured LCP-neutral (seo/23 §Phase B).
+HERO_FONTS = (
+    "/webfonts/source-sans-pro-400.woff2",
+    "/webfonts/source-sans-pro-700.woff2",
+)
+
 # The brand accent, css/main.css's most-used colour (23 rules) and the nav's
 # current-item background. <meta name="theme-color"> paints the browser UI
 # around the page with it on mobile; site.webmanifest carries the same value.
@@ -245,16 +257,17 @@ OG_IMAGE = f"{SITE}/og-image.png?v=1"
 # --------------------------------------------------------------------------
 
 def stylesheet_block(extra_preconnects=()) -> str:
-    """The hoist comment, any extra preconnect, the body-face preload,
-    FontAwesome, main.css - in that order, on all 463 pages. render_head()
+    """The hoist comment, any extra preconnect, the body-face and hero-font
+    preloads, FontAwesome, main.css - in that order, on all 463 pages. render_head()
     emits it for the 446 generated pages and bake_templates.sync_fonts()
     writes the same bytes into the 17 hand-written ones. One literal."""
     out = [HOIST_COMMENT]
     for href in extra_preconnects:
         out.append(tag("link", [("rel", "preconnect"), ("href", href)]))
-    out.append(tag("link", [("rel", "preload"), ("href", BODY_FONT),
-                            ("as", "font"), ("type", "font/woff2"),
-                            ("crossorigin", None)]))
+    for href in (BODY_FONT, *HERO_FONTS):
+        out.append(tag("link", [("rel", "preload"), ("href", href),
+                                ("as", "font"), ("type", "font/woff2"),
+                                ("crossorigin", None)]))
     out.append(tag("link", [("rel", "stylesheet"),
                             ("href", "/css/fontawesome-all.min.css")]))
     out.append(tag("link", [("rel", "stylesheet"), ("href", "/css/main.css")]))

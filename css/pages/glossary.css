@@ -93,6 +93,22 @@
   border-radius: 4px;
 }
 
+/*
+ * The controls ship `hidden` so a JavaScript-off reader never sees a search
+ * box that cannot work. With JavaScript on, they are shown from the first
+ * paint instead of when glossary-filter.js un-hides them: that reveal pushed
+ * the A to Z and the formulae down at DOMContentLoaded, CLS 0.07 on its own
+ * and 0.254 with the phone-nav shift in the same frame (2026-11-27,
+ * seo/23 §1). Typing before the script runs is not lost - init() applies
+ * whatever is already in the box. The selector outranks the [hidden] rule
+ * above, which is also !important.
+ */
+@media (scripting: enabled) {
+  .glossary-page .gl-search .gl-controls[hidden] {
+    display: flex !important;
+  }
+}
+
 .glossary-page .gl-field {
   display: flex;
   flex: 1 1 16em;
