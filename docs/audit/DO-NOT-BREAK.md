@@ -548,6 +548,18 @@ index. PH08-046.
 >   recent cards plus a static note (the section and topic pages still bake
 >   every card and are the no-JS list): `edexcel/` went 799 KB → 88 KB.
 >   `scripts/test_question_search.js` holds all of it.
+>
+>   **Amended again 2026-11-27, health check Phase B (`seo/23` §3): each
+>   SECTION page now fetches its own payload,**
+>   `past-paper-questions/<board>/<section>/questions.json`
+>   (`section_payload()`): the section's questions and papers, and **the
+>   whole board's `topics`, unnarrowed** — so the Topic filter still lists
+>   every topic on the board, and the reason above is honoured again. The
+>   page already dropped every question outside its section
+>   (`data-prefilter-group`), so no result changes; the board hub keeps the
+>   per-board payload. `scripts/test_question_search.js` proves, for all ten
+>   section pages, that the default view and every Topic choice render the
+>   same cards from either file. Saves 15–67 KB gzipped per section page.
 > - **`papers` in a per-topic payload is a sparse list, and the nulls are
 >   load-bearing.** `question-search.js` reads `data.papers[q.p]` where `q.p`
 >   is an index into it (`:136`, `:393`). Re-packing the list to drop the nulls

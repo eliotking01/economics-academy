@@ -108,9 +108,11 @@ purpose: a `json.dumps` round-trip would reformat all 64 files and break build
 idempotence.
 
 In a per-topic payload — and, since 2026-08-23, in the per-board payload at
-`past-paper-questions/<board>/questions.json` that the board hub and section
-pages fetch instead of the 414 KB master — `papers` is a **sparse list with
-nulls**: the search component indexes into it with `q.p`, so re-packing it
+`past-paper-questions/<board>/questions.json` that the board hub fetches
+instead of the master, and since 2026-11-27 in the per-section payload at
+`past-paper-questions/<board>/<section>/questions.json` that each section page
+fetches (its own questions, the whole board's `topics`) — `papers` is a
+**sparse list with nulls**: the search component indexes into it with `q.p`, so re-packing it
 would silently re-point every question at the wrong paper. The master
 `questions.json` is unchanged by either; the master page and
 `build_questions.py` still read it.

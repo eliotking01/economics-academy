@@ -304,3 +304,60 @@ whether that is chance. The live re-run after deploy is the check.
 **Trade-off, stated in the CSS:** if `nav.js` fails to load with
 JavaScript on, the phone menu stays hidden; the desktop bar and footer
 links are unaffected.
+
+## B2. A payload per section page (item 5, 2026-11-27)
+
+**Change.** `build_past_paper_questions.section_payload()` writes
+`past-paper-questions/<board>/<section>/questions.json` beside each of the
+ten section pages, and each page's `data-src` points at it (one line per
+page; nothing else in the HTML moves). The file holds the section's
+questions and papers (`papers` stays sparse) and **the board's full
+`topics`**, so the Topic filter still lists the whole board (DO-NOT-BREAK,
+PH08-046, amended). The no-JS page is untouched.
+
+| Section | Raw before → after | gzip before → after |
+| --- | ---: | ---: |
+| AQA micro | 705 → 402 KB | 126 → 70 KB |
+| AQA macro | 705 → 381 KB | 126 → 60 KB |
+| Edexcel A Theme 1 | 544 → 244 KB | 85 → 35 KB |
+| Edexcel A Theme 2 | 544 → 241 KB | 85 → 31 KB |
+| Edexcel A Theme 3 | 544 → 130 KB | 85 → 18 KB |
+| Edexcel A Theme 4 | 544 → 144 KB | 85 → 19 KB |
+| Edexcel B Themes 1–4 | 243 → 93–139 KB | 32 → 11–17 KB |
+
+**Proof of no visible change:** `scripts/test_question_search.js` initialises
+every section page from the board file and from its own file and requires
+identical cards and counts in the default view and for every Topic option,
+the same Topic list, and the full board `topics`. A mutation (one question
+dropped from Theme 3's file) fails three of those checks.
+
+**One behaviour change, JS-only:** the Qualification, Paper, Year and
+Section dropdowns are built from the payload's questions, so on a section
+page they now offer only values that occur in that section - the options
+removed returned zero results (e.g. "AS Level only" where the section has
+none). The same narrowing `topic_payload()` made on topic pages in PH08-046.
+
+### Proposal: a byte budget in CI (for Eliot to decide)
+
+Nothing caps any of these today (PROGRESS "Still open - housekeeping").
+Options:
+
+1. **No budget** - leave it to the next health check. Costs nothing; the
+   next launch that doubles a payload ships unnoticed, as Phases 7 and 9 did.
+2. **A warning-only report** in `build.py`'s output. Visible, never blocks.
+3. **(Recommended) A failing CI check, `verify_payload_budget.py`**, stdlib,
+   gzip-measured, with one ceiling per payload type set at roughly 1.5x
+   today so normal growth passes and a step change fails:
+
+   | Payload | Largest today (gzip) | Ceiling |
+   | --- | ---: | ---: |
+   | master `questions.json` | 253 KB | 384 KB |
+   | board `questions.json` | 126 KB | 192 KB |
+   | section `questions.json` | 70 KB | 112 KB |
+   | topic `questions.json` | 11 KB | 24 KB |
+   | section page HTML | 108 KB | 160 KB |
+
+   A failure is a prompt to decide, not a bug: raise the ceiling in the same
+   commit with a reason, or split the payload. It would be the only
+   verifier that fails on growth rather than on a defect, which is the
+   argument against it.
