@@ -361,3 +361,10 @@ Options:
    commit with a reason, or split the payload. It would be the only
    verifier that fails on growth rather than on a defect, which is the
    argument against it.
+
+**Decided by Eliot, 2026-11-27: option 3.** Built as
+`scripts/verify_payload_budget.py` with the ceilings above, in CI after the
+past-paper tags step and in `/verify`. Measured at gzip level 6 on the
+branch: master 251 KB, board 126, section 70, topic 11, section HTML 112 -
+all inside their ceilings. A ceiling lowered below the largest topic file
+fails and names every file over it.

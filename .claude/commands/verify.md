@@ -22,6 +22,7 @@ python3 scripts/verify_html.py
 python3 scripts/verify_links.py
 python3 scripts/verify_glossary.py
 python3 scripts/verify_past_paper_tags.py
+python3 scripts/verify_payload_budget.py
 python3 scripts/verify_diagram_geometry.py
 python3 scripts/verify_icons.py
 python3 scripts/verify_image_dimensions.py
