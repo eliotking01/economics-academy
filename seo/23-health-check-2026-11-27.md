@@ -149,3 +149,62 @@ two-to-four-word queries (August 62%).
 
 The Pages-side picture above says the same thing: the old notes pages
 ranking around position 6 now carry the site.
+
+## 3. Payload map for the past-paper bank
+
+Measured on the committed tree at `8f37df16`. "Served" is the gzip transfer
+GitHub Pages actually sends (`curl -H 'Accept-Encoding: gzip'`, 27 Nov);
+"gz" is local gzip -9, about 10% smaller than served. Elements are start
+tags counted by `html.parser`. The fetch is chosen in
+`js/components/question-search.js` `boot()`: the first
+`[data-question-search]`'s `data-src`, else `/past-paper-questions/questions.json`.
+It fires at `DOMContentLoaded` on every page, whether or not the visitor
+touches the filters.
+
+| Page type | Example | HTML raw | HTML served | Elements | Fetches | JSON raw | JSON served | Questions in JSON |
+| --- | --- | ---: | ---: | ---: | --- | ---: | ---: | ---: |
+| Master search | `/past-paper-questions/` | 33 KB | 7 KB | 344 | master `questions.json` (default, no `data-src`) | 1,490 KB | 258 KB | all boards |
+| Board hub | `/aqa/` | 108 KB | 14 KB | 982 | `aqa/questions.json` | 705 KB | 129 KB | 909 |
+| Board hub | `/edexcel/` | 108 KB | — | 984 | `edexcel/questions.json` | 544 KB | 88 KB | 781 |
+| Board hub | `/edexcel-b/` | 104 KB | — | 908 | `edexcel-b/questions.json` | 243 KB | 34 KB | 362 |
+| Section | `/aqa/microeconomics/` | 1,383 KB | 120 KB | 11,189 | **whole AQA board** | 705 KB | 129 KB | 909 (471 its own) |
+| Section | `/aqa/macroeconomics/` | 1,321 KB | — | 10,703 | **whole AQA board** | 705 KB | 129 KB | 909 (462 its own) |
+| Section | `/edexcel/theme-1/` | 768 KB | — | 5,627 | **whole Edexcel A board** | 544 KB | 88 KB | 781 (280) |
+| Section | `/edexcel/theme-2/` | 824 KB | 56 KB | 6,212 | **whole Edexcel A board** | 544 KB | 88 KB | 781 (305) |
+| Section | `/edexcel/theme-3/` | 330 KB | — | 2,456 | **whole Edexcel A board** | 544 KB | 88 KB | 781 (115) |
+| Section | `/edexcel/theme-4/` | 401 KB | — | 2,990 | **whole Edexcel A board** | 544 KB | 88 KB | 781 (140) |
+| Section | `/edexcel-b/theme-1/` … `theme-4/` | 210–411 KB | — | 1,540–2,915 | **whole Edexcel B board** | 243 KB | 34 KB | 362 (67–149) |
+| Topic (242 pages) | median | 56 KB | — | 499 | its own `<topic>/questions.json` | — | — | its own |
+| Topic | largest, `/aqa/2-5-1-fiscal-policy/` | 223 KB | 21 KB | 1,885 | its own | 73 KB | 11 KB | 71 |
+
+**What a per-section JSON would weigh** (the board file filtered to the
+section's `groups` and `topics`, every other key kept, compact JSON):
+
+| Section | Questions | Today raw / gz | Per-section raw / gz | Saved gz |
+| --- | ---: | ---: | ---: | ---: |
+| AQA micro | 471 | 705 / 124 KB | ~393 / 68 KB | ~56 KB |
+| AQA macro | 462 | 705 / 124 KB | ~352 / 55 KB | ~69 KB |
+| Edexcel A Theme 1 | 280 | 544 / 84 KB | ~215 / 31 KB | ~53 KB |
+| Edexcel A Theme 2 | 305 | 544 / 84 KB | ~214 / 27 KB | ~57 KB |
+| Edexcel A Theme 3 | 115 | 544 / 84 KB | ~105 / 15 KB | ~69 KB |
+| Edexcel A Theme 4 | 140 | 544 / 84 KB | ~117 / 16 KB | ~68 KB |
+| Edexcel B Themes 1–4 | 67–149 | 243 / 32 KB | ~64–106 / 8–13 KB | ~19–24 KB |
+
+AQA's sections overlap by 24 questions (471 + 462 = 933 > 909); a question
+tagged to both groups would appear in both files.
+
+**Where the weight actually is.** On the heaviest page (AQA micro) the
+static HTML, not the JSON, is the bigger cost: 1.38 MB raw, 120 KB served,
+11,189 elements for 471 cards of about 2.9 KB each. 39% of the raw bytes are
+Prettier's indentation, but gzip absorbs most of that: stripping it saves
+~15% of the gzipped transfer, so whitespace is not the lever. The element
+count is the lever, and only a change to what the no-JS page shows moves
+it (the brief rules that out without asking). Wrapping cards in `<details>`
+would not help, since collapsed content is still parsed; splitting the page
+would mint new, permanent URLs. The JSON
+fetch duplicates the static cards in data form; about half of it is the
+other section's questions on every section page.
+
+The master search page is the opposite shape: light HTML (7 KB served) and
+the heaviest single fetch in the bank (258 KB served, 1.49 MB to parse),
+because it has no static list and searches every board.
