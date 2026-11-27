@@ -35,7 +35,6 @@ import html
 import itertools
 import json
 import re
-import subprocess
 import sys
 from pathlib import Path
 
@@ -45,12 +44,12 @@ sys.path.insert(0, str(ROOT / "scripts"))
 # for every family, so a change to the social cards or the script tail is one
 # edit rather than five. What stays local is everything below </head>.
 import board_data  # noqa: E402
+import katex_render  # noqa: E402
 import page_shell as shell  # noqa: E402
 import prettier_util  # noqa: E402
 
 DATA_DIR = ROOT / "flashcards-data"
 OUT_DIR = ROOT / "flashcards"
-KATEX_JS = ROOT / "scripts" / "vendor" / "katex.min.js"
 
 SITE = "https://economicsacademy.co.uk"
 GTAG = "G-YVCNRW4QH6"
@@ -163,35 +162,12 @@ def page_h1(path: Path) -> str:
 # screen readers get, the HTML half is marked aria-hidden.
 
 def katex(latex_list, display):
-    if not latex_list:
-        return []
-    script = (
-        'const katex=require(process.argv[1]);'
-        'const display=process.argv[2]==="1";'
-        'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{'
-        'try{'
-        'const out=JSON.parse(s).map(t=>katex.renderToString(t,'
-        '{displayMode:display,throwOnError:true,strict:false}));'
-        'process.stdout.write(JSON.stringify({ok:true,html:out}));'
-        '}catch(err){'
-        'process.stdout.write(JSON.stringify({ok:false,error:String(err.message||err)}));'
-        '}});'
-    )
+    # The one call lives in katex_render.py since 2026-11-27, shared with the
+    # glossary and the notes pages; this keeps the deck's error type.
     try:
-        r = subprocess.run(
-            ["node", "-e", script, str(KATEX_JS), "1" if display else "0"],
-            input=json.dumps(latex_list), capture_output=True,
-            text=True, check=True, cwd=ROOT,
-        )
-    except (OSError, subprocess.CalledProcessError) as exc:
-        raise BuildError(
-            f"could not run node to pre-render formulae: {exc}. "
-            f"node is needed at build time only; see scripts/vendor/README.md"
-        ) from None
-    out = json.loads(r.stdout)
-    if not out["ok"]:
-        raise BuildError(f"KaTeX could not render a formula: {out['error']}")
-    return out["html"]
+        return katex_render.render([(t, display) for t in latex_list])
+    except katex_render.KatexError as exc:
+        raise BuildError(str(exc)) from None
 
 
 # -------------------------------------------------------------- validation

@@ -125,8 +125,9 @@ scrolls on phones):
 ```
 
 **A formula** — the comment line stops the formatter mangling the maths;
-`\[ … \]` for a displayed formula, `\( … \)` inline. A page with maths
-loads MathJax by itself:
+`\[ … \]` for a displayed formula, `\( … \)` inline. The build turns it into
+finished KaTeX and links the stylesheet by itself; a formula KaTeX cannot
+typeset stops the build with its error, rather than shipping raw TeX:
 
 ```html
 <!-- prettier-ignore -->
