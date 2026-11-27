@@ -694,14 +694,16 @@ data.boards.forEach((b) => {
       );
     }
   }
-  // Every section page of the board points at the same payload.
+  // Every section page of the board points at its OWN payload beside it
+  // (2026-11-27, section_payload()), not the board's; the equivalence block
+  // after the filter harness proves the narrower file shows the same results.
   b.groups.forEach((g) => {
     const gp = path.join(ROOT, g.url.replace(/^\//, ""), "index.html");
     if (!fs.existsSync(gp)) return;
     const m = /data-src="([^"]+)"/.exec(fs.readFileSync(gp, "utf8"));
     check(
-      "section: " + g.slug + " fetches the " + b.board + " payload",
-      m && src && m[1] === src[1],
+      "section: " + g.slug + " fetches its own " + b.board + " section payload",
+      m && m[1] === g.url + "questions.json" && (!src || m[1] !== src[1]),
       m && m[1],
     );
   });
@@ -1250,6 +1252,73 @@ if (data.boards.some((b) => b.board === "edexcel-b")) {
     "prefiltered topic page: no select carries an optgroup",
     FILTERS.every((f) => !hasOptgroup(h2.sel[f.name])),
   );
+}
+
+// -- section pages fetch their own payload and show exactly what the board
+// payload showed them (2026-11-27, section_payload()). The page drops every
+// question outside its section, so the other section's questions in the
+// board file were never visible; this proves the narrower file changes no
+// result, for the default view and for every Topic the list offers.
+
+{
+  const PPQ = path.join(ROOT, "past-paper-questions");
+  let sections = 0;
+  for (const board of fs.readdirSync(PPQ)) {
+    const boardJson = path.join(PPQ, board, "questions.json");
+    if (!fs.existsSync(boardJson)) continue;
+    const boardData = JSON.parse(fs.readFileSync(boardJson, "utf8"));
+    for (const g of boardData.boards[0].groups) {
+      const pageFile = path.join(PPQ, board, g.slug, "index.html");
+      if (!fs.existsSync(pageFile)) continue;
+      sections++;
+      const label = "section " + board + "/" + g.slug;
+      const src = (fs.readFileSync(pageFile, "utf8").match(/data-src="([^"]+)"/) || [])[1];
+      check(
+        label + ": data-src points at its own payload",
+        src === "/past-paper-questions/" + board + "/" + g.slug + "/questions.json",
+        src,
+      );
+      const own = JSON.parse(
+        fs.readFileSync(path.join(PPQ, board, g.slug, "questions.json"), "utf8"),
+      );
+      check(
+        label + ": payload holds exactly the section's questions",
+        own.questions.length ===
+          boardData.questions.filter((q) => q.groups.indexOf(g.slug) !== -1).length &&
+          own.questions.every((q) => q.groups.indexOf(g.slug) !== -1),
+      );
+      check(
+        label + ": topics is the whole board's list (DO-NOT-BREAK, PH08-046)",
+        JSON.stringify(own.topics) === JSON.stringify(boardData.topics),
+      );
+      const pre = { "data-prefilter-board": board, "data-prefilter-group": g.slug };
+      const a = makeRoot(pre);
+      M.init(a.root, boardData);
+      const b = makeRoot(pre);
+      M.init(b.root, own);
+      const results = (h) => h.root.querySelector("[data-ppq-results]").innerHTML;
+      check(
+        label + ": default view identical to the board payload's",
+        a.count.textContent === b.count.textContent && results(a) === results(b),
+        a.count.textContent + " vs " + b.count.textContent,
+      );
+      check(
+        label + ": the Topic list is unchanged",
+        a.sel.topic.innerHTML === b.sel.topic.innerHTML,
+      );
+      let same = true;
+      for (const o of opts(a.sel.topic)) {
+        a.sel.topic.change(o.value);
+        b.sel.topic.change(o.value);
+        if (a.count.textContent !== b.count.textContent || results(a) !== results(b)) {
+          same = false;
+          console.log("    differs on topic " + o.value);
+        }
+      }
+      check(label + ": every Topic choice gives the same results", same);
+    }
+  }
+  check("section pages: all ten found", sections === 10, String(sections));
 }
 
 // ---- AQA AS (D71, Phase 9): runs whenever the data carries an AQA AS paper,

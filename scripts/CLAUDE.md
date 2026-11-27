@@ -102,7 +102,8 @@ verify_generated  verify_published_surface  verify_liquid  verify_icons
 verify_image_dimensions  verify_css_load_order  verify_inline_styles
 verify_page_shell  verify_boards  verify_glossary  verify_links  verify_html
 verify_notes_sequence
-verify_past_paper_tags  verify_diagram_geometry  check_glossary_capitalisation
+verify_past_paper_tags  verify_payload_budget  verify_diagram_geometry
+check_glossary_capitalisation
 verify_text_integrity <base>  verify_markup_integrity <base> --strict
 build_sitemap.py --check  strip_source_attributions
 node test_question_search.js  node test_glossary_filter.js  node test_site_search.js

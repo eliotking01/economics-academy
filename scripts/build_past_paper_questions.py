@@ -32,12 +32,14 @@ filter worked. Two changes, both below:
   container's contents when it initialises, so the note is gone the moment
   the live list takes over, and the error path leaves the page as served.
   Section and topic pages still bake every card: they ARE the no-JS list.
-- Every board and section page fetches a per-board payload,
+- Every board page fetches a per-board payload,
   past-paper-questions/<board>/questions.json - board_payload() - instead of
   the master index. It carries every topic on the board, which is what their
   live Topic filter lists (DO-NOT-BREAK, PH08-046), and roughly half the
-  bytes. The master index is unchanged and still what the master page and
-  build_questions.py read.
+  bytes. Since 2026-11-27 each section page fetches its own,
+  past-paper-questions/<board>/<section>/questions.json - section_payload() -
+  the section's questions with the board's full topic list. The master index
+  is unchanged and still what the master page and build_questions.py read.
 
 Standard library only, in keeping with the rest of scripts/.
 """
@@ -533,9 +535,11 @@ def search_component(topic="", board="", group="", src="", hub=False,
     `src` overrides the payload the component fetches. A topic page has no use
     for the other 537 questions and fetching them cost it 413.7 KB, so it
     points at its own payload instead - a median of 9.6 KB. Since 2026-08-23
-    the board and section pages point at their board's payload, which carries
-    every topic on the board - what their Topic filter lists. Only the master
-    page leaves it empty and gets the full index.
+    the board pages point at their board's payload, which carries every topic
+    on the board - what their Topic filter lists - and since 2026-11-27 each
+    section page at its own (section_payload()), which carries the same topic
+    list and only the section's questions. Only the master page leaves it
+    empty and gets the full index.
 
     `mixed` is the Question type filter (Phase 7): None leaves the field out
     of the page entirely - the state of every page while no MCQ is live, so
@@ -1030,6 +1034,46 @@ def board_payload(index, board_slug):
     }
 
 
+def section_payload(index, board_slug, group_slug):
+    """The search payload for one section page (a Theme, or AQA Micro/Macro).
+
+    board_payload()'s shape with two fields narrowed to the section, added
+    2026-11-27 (health check, seo/23 §3): until then every section page
+    fetched its whole board's payload, so the AQA Microeconomics page
+    downloaded every Macroeconomics question too - about half of each fetch,
+    for questions the page can never show, because `data-prefilter-group`
+    drops every question outside the section (question-search.js
+    passesFilters()).
+
+    - `questions` and `papers` are the section's own. `papers` stays sparse,
+      nulls kept, for the reason topic_payload() gives.
+    - `topics` is deliberately NOT narrowed: it is every topic on the board,
+      exactly as board_payload() carries it, because a section page's live
+      Topic filter lists the whole board (DO-NOT-BREAK, PH08-046). The cards'
+      per-tag links need no more than that - a question's tags are all on
+      its own board.
+
+    The results a section page shows are therefore unchanged for any filter
+    choice; scripts/test_question_search.js proves it against the board
+    payload. The Qualification, Paper, Year and Section dropdowns, which
+    populate() builds from the payload's questions, now offer only values
+    that occur in the section - the same narrowing topic_payload() made on
+    topic pages, and the options it removes returned nothing.
+    """
+    questions = questions_for(index, board=board_slug, group=group_slug)
+    used_papers = {q["p"] for q in questions}
+    board_topics = board_payload(index, board_slug)["topics"]
+    return {
+        "count": len(questions),
+        "gate": index["gate"],
+        "boards": [b for b in index["boards"] if b["board"] == board_slug],
+        "papers": [p if i in used_papers else None
+                   for i, p in enumerate(index["papers"])],
+        "topics": board_topics,
+        "questions": questions,
+    }
+
+
 # ---------------------------------------------------------------- master page
 
 
@@ -1303,7 +1347,7 @@ def render_group_page(index, board, group):
             </p>
           </section>
 
-{search_component(board=board["board"], group=group["slug"], src=board["url"] + "questions.json", mixed=type_mix(index, questions_for(index, board=board["board"])))}
+{search_component(board=board["board"], group=group["slug"], src=path + "questions.json", mixed=type_mix(index, qs))}
 
           <header class="major">
             <h2>Topics in {e(group["label"])}</h2>
@@ -1701,6 +1745,7 @@ def main():
     written = [INDEX]
     payloads = []
     board_payloads = []
+    section_payloads = []
     paths = ["/past-paper-questions/"]
 
     INDEX.write_text(render_index(index), encoding="utf-8")
@@ -1733,6 +1778,16 @@ def main():
             if not questions_for(index, board=board["board"], group=group["slug"]):
                 continue
             emit(*render_group_page(index, board, group))
+            # The section's own payload, beside its page (section_payload()).
+            rel = group["url"].strip("/").split("/")[1:]
+            dest = PAGE_DIR.joinpath(*rel, "questions.json")
+            dest.write_text(
+                json.dumps(section_payload(index, board["board"], group["slug"]),
+                           ensure_ascii=False, separators=(",", ":")) + "\n",
+                encoding="utf-8",
+            )
+            section_payloads.append(dest)
+            print(f"wrote {dest.relative_to(ROOT)} ({dest.stat().st_size / 1024:.0f} KB)")
 
     payload_bytes = 0
     collisions = title_collisions(index)
@@ -1767,7 +1822,7 @@ def main():
     # PAGE_DIR is what keeps the master past-paper-questions/questions.json,
     # which is not one of these and must stay published - it is what the
     # master, board and section pages fetch.
-    kept_payloads = set(payloads) | set(board_payloads)
+    kept_payloads = set(payloads) | set(board_payloads) | set(section_payloads)
     for child in sorted(PAGE_DIR.rglob("questions.json"), reverse=True):
         if child in kept_payloads or child.parent == PAGE_DIR:
             continue

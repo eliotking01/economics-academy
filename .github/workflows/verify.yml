@@ -70,6 +70,13 @@ jobs:
         run: python3 scripts/verify_glossary.py
       - name: Past-paper tags
         run: python3 scripts/verify_past_paper_tags.py
+      # Nothing capped the bank's payloads until 2026-11-27: the master
+      # questions.json grew 877 -> 1,526 KB over two launches unnoticed. One
+      # gzip ceiling per class (master, board, section, topic, section HTML)
+      # at ~1.5x the 2026-11-27 size; a failure means decide - raise the
+      # ceiling with a dated reason, or split the payload. seo/23 §B2.
+      - name: Past-paper payloads within budget
+        run: python3 scripts/verify_payload_budget.py
       - name: Diagram geometry
         run: python3 scripts/verify_diagram_geometry.py
       # The Font Awesome stylesheet and font are both subsets, and a subset
