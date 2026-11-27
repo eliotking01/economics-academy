@@ -1,0 +1,311 @@
+{
+  "homepage": {
+    "url": "/",
+    "runs": 3,
+    "score": 1,
+    "LCP": 1211.905,
+    "CLS": 0.04512420118841445,
+    "TBT": 0,
+    "FCP": 1061.905,
+    "SI": 1061.905,
+    "bytes": 194165,
+    "dom": 405,
+    "blocking_ms": 92,
+    "chain_len": 3,
+    "chain_ms": 185.85300001502037,
+    "blocking": [
+      [
+        "https://economicsacademy.co.uk/css/pages/home.css",
+        2424,
+        150
+      ],
+      [
+        "https://economicsacademy.co.uk/css/main.css",
+        23407,
+        150
+      ]
+    ]
+  },
+  "section-hub": {
+    "url": "/revision-notes/",
+    "runs": 3,
+    "score": 0.93,
+    "LCP": 1354.7355,
+    "CLS": 0.15282649424433956,
+    "TBT": 0,
+    "FCP": 1204.7355,
+    "SI": 1363.025,
+    "bytes": 140662,
+    "dom": 329,
+    "blocking_ms": 261,
+    "chain_len": 3,
+    "chain_ms": 337.5489999949932,
+    "blocking": [
+      [
+        "https://economicsacademy.co.uk/css/main.css",
+        23441,
+        300
+      ]
+    ]
+  },
+  "notes-topic": {
+    "url": "/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html",
+    "runs": 3,
+    "score": 0.98,
+    "LCP": 1276.054,
+    "CLS": 0.0476676728867919,
+    "TBT": 151,
+    "FCP": 1065.863,
+    "SI": 1697.1498238523327,
+    "bytes": 569853,
+    "dom": 1118,
+    "blocking_ms": 94,
+    "chain_len": 2,
+    "chain_ms": 498.8060000240803,
+    "blocking": [
+      [
+        "https://economicsacademy.co.uk/css/main.css",
+        23399,
+        150
+      ],
+      [
+        "https://economicsacademy.co.uk/css/pages/revision-notes-topic.css",
+        10446,
+        150
+      ]
+    ]
+  },
+  "practice-questions": {
+    "url": "/practice-questions/edexcel-theme-1/1-1-1-economics-as-a-social-science.html",
+    "runs": 3,
+    "score": 1,
+    "LCP": 1230.1925,
+    "CLS": 0.044377473692460805,
+    "TBT": 0,
+    "FCP": 1080.1925,
+    "SI": 1152.4144999999999,
+    "bytes": 306249,
+    "dom": 521,
+    "blocking_ms": 89,
+    "chain_len": 3,
+    "chain_ms": 1232.5659999847412,
+    "blocking": [
+      [
+        "https://economicsacademy.co.uk/css/pages/quiz.css",
+        4171,
+        150
+      ],
+      [
+        "https://economicsacademy.co.uk/css/fontawesome-all.min.css",
+        1716,
+        150
+      ]
+    ]
+  },
+  "past-paper-questions": {
+    "url": "/past-paper-questions/edexcel/1-2-3-price-income-cross-elasticities-of-demand/",
+    "runs": 3,
+    "score": 1,
+    "LCP": 1229.493,
+    "CLS": 0.048390829360728416,
+    "TBT": 0,
+    "FCP": 1062.493,
+    "SI": 1273.254,
+    "bytes": 171785,
+    "dom": 740,
+    "blocking_ms": 80,
+    "chain_len": 3,
+    "chain_ms": 301.22900000214577,
+    "blocking": [
+      [
+        "https://economicsacademy.co.uk/css/pages/past-paper-questions.css",
+        3908,
+        150
+      ]
+    ]
+  },
+  "flashcards": {
+    "url": "/flashcards/edexcel-a/theme-1/",
+    "runs": 3,
+    "score": 1,
+    "LCP": 1246.786,
+    "CLS": 0.047911793834232115,
+    "TBT": 0,
+    "FCP": 1082.786,
+    "SI": 1082.786,
+    "bytes": 201039,
+    "dom": 433,
+    "blocking_ms": 95,
+    "chain_len": 3,
+    "chain_ms": 485.908999979496,
+    "blocking": [
+      [
+        "https://economicsacademy.co.uk/css/pages/flashcards.css",
+        4334,
+        150
+      ],
+      [
+        "https://economicsacademy.co.uk/css/main.css",
+        23433,
+        150
+      ]
+    ]
+  },
+  "ppq-board-hub": {
+    "url": "/past-paper-questions/edexcel/",
+    "runs": 3,
+    "score": 0.99,
+    "LCP": 1226.955,
+    "CLS": 0.04394370605803462,
+    "TBT": 111,
+    "FCP": 1059.941,
+    "SI": 1100.1358751036828,
+    "bytes": 267560,
+    "dom": 1099,
+    "blocking_ms": 85,
+    "chain_len": 3,
+    "chain_ms": 285.95900002121925,
+    "blocking": [
+      [
+        "https://economicsacademy.co.uk/css/pages/past-paper-questions.css",
+        3821,
+        150
+      ],
+      [
+        "https://economicsacademy.co.uk/css/fontawesome-all.min.css",
+        1716,
+        150
+      ]
+    ]
+  },
+  "tutoring": {
+    "url": "/tutoring.html",
+    "runs": 3,
+    "score": 0.98,
+    "LCP": 2024.8790000000001,
+    "CLS": 0.0702656560554237,
+    "TBT": 0,
+    "FCP": 1079.949,
+    "SI": 1258.0291459796192,
+    "bytes": 235070,
+    "dom": 523,
+    "blocking_ms": 16,
+    "chain_len": 3,
+    "chain_ms": 412.1259999871254,
+    "blocking": [
+      [
+        "https://economicsacademy.co.uk/css/pages/tutoring.css",
+        4965,
+        150
+      ]
+    ]
+  },
+  "ppq-aqa-micro": {
+    "url": "/past-paper-questions/aqa/microeconomics/",
+    "runs": 3,
+    "score": 0.97,
+    "LCP": 1808.1135,
+    "CLS": 0.044588414781636505,
+    "TBT": 153,
+    "FCP": 1658.998,
+    "SI": 1658.998,
+    "bytes": 404641,
+    "dom": 1018,
+    "blocking_ms": 14,
+    "chain_len": 3,
+    "chain_ms": 279.21200001239777,
+    "blocking": [
+      [
+        "https://economicsacademy.co.uk/js/components/nav.js",
+        3705,
+        150
+      ],
+      [
+        "https://economicsacademy.co.uk/css/main.css",
+        23380,
+        150
+      ]
+    ]
+  },
+  "ppq-edexcel-theme-2": {
+    "url": "/past-paper-questions/edexcel/theme-2/",
+    "runs": 3,
+    "score": 0.99,
+    "LCP": 1525.0819999999999,
+    "CLS": 0.044531394021680284,
+    "TBT": 82.5,
+    "FCP": 1360.826,
+    "SI": 1360.826,
+    "bytes": 310808,
+    "dom": 900,
+    "blocking_ms": 113,
+    "chain_len": 3,
+    "chain_ms": 226.45299997925758,
+    "blocking": [
+      [
+        "https://economicsacademy.co.uk/css/main.css",
+        23557,
+        150
+      ],
+      [
+        "https://economicsacademy.co.uk/js/components/nav.js",
+        3704,
+        150
+      ]
+    ]
+  },
+  "glossary-edexcel-b": {
+    "url": "/revision-notes/glossary/edexcel-b/",
+    "runs": 3,
+    "score": 0.86,
+    "LCP": 1840.272,
+    "CLS": 0.2581282385023429,
+    "TBT": 0,
+    "FCP": 1658.272,
+    "SI": 1658.272,
+    "bytes": 284888,
+    "dom": 5516,
+    "blocking_ms": 321,
+    "chain_len": 3,
+    "chain_ms": 545.1899999976158,
+    "blocking": [
+      [
+        "https://economicsacademy.co.uk/css/main.css",
+        23471,
+        300
+      ],
+      [
+        "https://economicsacademy.co.uk/js/components/track.js",
+        4379,
+        150
+      ]
+    ]
+  },
+  "notes-edexcel-b": {
+    "url": "/revision-notes/edexcel-b-theme-2/2-2-1-price-elasticity-of-demand.html",
+    "runs": 3,
+    "score": 0.98,
+    "LCP": 1279.3640000000003,
+    "CLS": 0.0613868108447592,
+    "TBT": 132,
+    "FCP": 1068.156,
+    "SI": 1429.7856830949588,
+    "bytes": 532057,
+    "dom": 570,
+    "blocking_ms": 78,
+    "chain_len": 2,
+    "chain_ms": 378.25300002098083,
+    "blocking": [
+      [
+        "https://economicsacademy.co.uk/css/main.css",
+        23390,
+        150
+      ],
+      [
+        "https://economicsacademy.co.uk/css/pages/revision-notes-topic.css",
+        10434,
+        150
+      ]
+    ]
+  }
+}

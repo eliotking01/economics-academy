@@ -4,6 +4,55 @@ Branch `chore/health-check-2026-11`, cut from `main` at `8f37df16`. Measure
 only: nothing on a published page changed in Phase A. One section per brief
 item, each committed with its evidence.
 
+## 1. Live Lighthouse re-run (27 November 2026)
+
+`python3 seo/tools/run_lighthouse.py --out seo/lh-live-2026-11-27`: same
+script, flags and Lighthouse version (12.8.2) as `seo/lh-live-2026-08-26/`,
+three runs per page, medians. The eight August samples are unchanged; four
+were appended for the November launches, and the runner now records
+`dom-size` (August's DOM figures below are read from its raw reports).
+**Headless Chrome moved from 151 to 158 between the two runs.**
+
+| Page | Aug score | LCP | CLS | TBT | Bytes | DOM | Nov score | LCP | CLS | TBT | Bytes | DOM |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| homepage | 99 | 1.75 s | 0.000 | 0 ms | 189 KB | 371 | 100 | 1.21 s | 0.045 | 0 ms | 190 KB | 405 |
+| section-hub (`/revision-notes/`) | 100 | 1.52 s | 0.000 | 0 ms | 136 KB | 263 | **93** | 1.35 s | **0.153** | 0 ms | 137 KB | 329 |
+| notes-topic (MathJax) | 70 | 4.77 s | 0.000 | 106 ms | 606 KB | 1,084 | 98 | 1.28 s | 0.048 | 151 ms | 556 KB | 1,118 |
+| practice-questions | 96 | 1.98 s | 0.000 | 0 ms | 247 KB | 487 | 100 | 1.23 s | 0.044 | 0 ms | 299 KB | 521 |
+| past-paper-questions (topic) | 98 | 1.57 s | 0.000 | 0 ms | 152 KB | 537 | 100 | 1.23 s | 0.048 | 0 ms | 168 KB | 740 |
+| flashcards | 99 | 1.88 s | 0.000 | 0 ms | 195 KB | 401 | 100 | 1.25 s | 0.048 | 0 ms | 196 KB | 433 |
+| ppq-board-hub (`/edexcel/`) | 97 | 1.86 s | 0.000 | 19 ms | 199 KB | 938 | 99 | 1.23 s | 0.044 | 111 ms | 261 KB | 1,099 |
+| tutoring | 97 | 1.93 s | 0.000 | 65 ms | 197 KB | 485 | 98 | 2.02 s | 0.070 | 0 ms | 230 KB | 523 |
+| ppq-aqa-micro | — | — | — | — | — | — | 97 | 1.81 s | 0.045 | 153 ms | 395 KB | 1,018* |
+| ppq-edexcel-theme-2 | — | — | — | — | — | — | 99 | 1.53 s | 0.045 | 82 ms | 304 KB | 900* |
+| glossary-edexcel-b | — | — | — | — | — | — | **86** | 1.84 s | **0.258** | 0 ms | 278 KB | 5,516 |
+| notes-edexcel-b (MathJax) | — | — | — | — | — | — | 98 | 1.28 s | 0.061 | 132 ms | 520 KB | 570 |
+
+\* DOM after `question-search.js` has replaced the static cards with its
+first 20 results. The parser still builds the full static list first
+(11,189 and 6,212 elements, §3); TBT is where that shows.
+
+**Three readings, one of them checked by A/B:**
+
+- **The ~0.045 CLS on every page is the Chrome upgrade, not the site.** A
+  local A/B (`serve_h2.js`, today's Chrome) of the 26 August tree
+  (`ae030240`) against today's tree gives the same ~0.045 shift on
+  `main#main` on both, on the homepage and the notes hub. The shifting
+  node is `main` under `body.mnav-enhanced`, i.e. the mobile-nav
+  enhancement in `js/components/nav.js`. Inside "good" (< 0.1), but it is
+  on every page and is now visible to the measurement.
+- **The `/revision-notes/` hub regressed for real:** 0.05 on the August
+  tree against 0.16–0.23 on today's under the same Chrome, with
+  `div.exam-board-section` shifting on the web-font swap. The hub gained
+  its Edexcel B section in October. Score 100 → 93.
+- **The Edexcel B glossary is the worst page sampled:** CLS 0.258 ("poor"
+  is > 0.25), a single shift of `main.glossary-page`, with 5,516 elements.
+- **The MathJax LCP problem did not reproduce.** August's notes sample was
+  bimodal at ~4.8 s; today it is 2.77 / 1.28 / 1.22 s (median 1.28 s), and
+  the Edexcel B MathJax page is 1.22–1.36 s. MathJax still carries ~130–150
+  ms of TBT on both and is the last third-party origin, but the LCP case
+  for item 4 is much weaker than `seo/20` §2 recorded.
+
 ## 2. The Search Console read (export of 26–27 November 2026)
 
 **Export:** `seo/gsc-exports/27-11-2026/`. The brief expected `26-11-2026/`;
