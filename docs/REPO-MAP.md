@@ -108,7 +108,7 @@ inside it.
 | Folder | Files | What it is | Matters? |
 | --- | ---: | --- | --- |
 | `scripts/` | ~50 | The 8 builders (`build.py` runs them all), ~17 checkers and the shared helpers. The machinery. | **Yes** — without it nothing can be rebuilt |
-| `templates/` | 2 | The menu and footer, written once and stamped into all 463 pages at build time. **Not fetched by the browser** and no longer published — but ten scripts read it, so **deleting it means the navigation can never be changed again.** | **Yes** |
+| `templates/` | 2 | The menu and footer, written once and stamped into every page at build time. **Not fetched by the browser** and no longer published — but ten scripts read it, so **deleting it means the navigation can never be changed again.** | **Yes** |
 | `docs/` | 51 | The known-errors logs, reference guides and the eleven-phase audit; the finished build logs moved to `_archive/` on 2026-08-26 | Yes, as reference |
 | `.github/` | 1 | Tells GitHub to run every check automatically on each push | Yes, quietly |
 | `.claude/` | 4 | Claude's settings, the generated-file hook, and the `/verify` and `/rebuild-nav` shortcuts | Yes |
