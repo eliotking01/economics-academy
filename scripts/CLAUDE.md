@@ -7,7 +7,7 @@ must stay that way.
 
 Each owns its output. Never hand-edit what a generator writes; edit the source
 and re-run. **`python3 scripts/build.py` runs them all, in order, then bakes
-the 17 hand-written pages and runs `verify_page_shell.py`**; `build.py
+the hand-written pages and runs `verify_page_shell.py`**; `build.py
 --sitemap` runs the sitemap afterwards, once the content is committed. The
 list and its order are declared once, in `site_layout.py`, which both
 `build.py` and `verify_generated.py` import — never restate it. The table
@@ -57,7 +57,7 @@ that the derived counts agree with the committed index.
 2026-08-23) the `<head>` analytics loader (`sync_gtag()`, from `page_shell.GTAG`)
 and the stylesheet block (`sync_fonts()`, from `page_shell.stylesheet_block()` -
 the hoist comment, the body-face preload, fontawesome, main.css)
-on the 17 hand-written pages; the other 446 take theirs from `page_shell.py`, which all
+on the hand-written pages (`bake_templates.py` lists them); every other page takes its own from `page_shell.py`, which all
 five page generators import. Since 2026-08-23 `page_shell.py` also owns the
 page skeleton (`page()`, `container()`), the shared head values
 (`head_values()`, `social()`) and the breadcrumb builders (`breadcrumb_ld()`,
